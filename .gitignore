@@ -1,0 +1,38 @@
+# Environment
+.env
+
+# Database
+data/esports.db
+data/*.db
+data/raw/
+data/processed/
+
+# Saved models (binary, large)
+data/models_saved/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
