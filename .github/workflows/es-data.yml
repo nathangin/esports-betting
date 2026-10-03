@@ -1,11 +1,14 @@
-# Occasional data jobs: endpoint probe, history download and the historical (fake-money)
-# backtest. Results are committed to the paper-trading branch.
+# Data jobs: history download, the walk-forward backtest (which also refits the parameters
+# the paper trader uses) and the endpoint probe. Results go to the paper-trading branch.
 #
-# Run from the Actions tab (Run workflow -> pick a task), or by pushing a commit to the
-# esalpha branch whose message contains [probe], [history], [backtest] or [paper].
+# Scheduled: daily history refresh; on Mondays also the backtest.
+# By hand: Actions tab -> Data jobs -> Run workflow, or push a commit to the esalpha branch
+# whose message contains [probe], [history], [backtest] or [paper].
 name: Data jobs
 
 on:
+  schedule:
+    - cron: "17 9 * * *"
   workflow_dispatch:
     inputs:
       tasks:
@@ -23,13 +26,13 @@ permissions:
   contents: write
 
 concurrency:
-  group: es-state
+  group: es-data
   cancel-in-progress: false
 
 jobs:
   run:
     if: >-
-      github.event_name == 'workflow_dispatch' ||
+      github.event_name != 'push' ||
       contains(github.event.head_commit.message, '[probe]') ||
       contains(github.event.head_commit.message, '[history]') ||
       contains(github.event.head_commit.message, '[backtest]') ||
@@ -51,21 +54,29 @@ jobs:
       - name: Pick tasks
         id: pick
         env:
+          EVENT: ${{ github.event_name }}
           MSG: ${{ github.event.head_commit.message }}
           INPUT_TASKS: ${{ github.event.inputs.tasks }}
+          INPUT_ARGS: ${{ github.event.inputs.args }}
         run: |
           tasks="$INPUT_TASKS"
-          if [ -z "$tasks" ]; then
+          args="$INPUT_ARGS"
+          if [ "$EVENT" = "schedule" ]; then
+            tasks="history"
+            args="--days 14 --minutes 40"
+            if [ "$(date -u +%u)" = "1" ]; then tasks="history backtest"; fi
+          elif [ -z "$tasks" ]; then
             for t in probe history backtest paper; do
               case "$MSG" in *"[$t]"*) tasks="$tasks $t";; esac
             done
           fi
           echo "tasks=$tasks" >> "$GITHUB_OUTPUT"
-          echo "Tasks: $tasks"
+          echo "args=$args" >> "$GITHUB_OUTPUT"
+          echo "Tasks: $tasks / history args: $args"
       - name: Run tasks
         env:
           TASKS: ${{ steps.pick.outputs.tasks }}
-          HISTORY_ARGS: ${{ github.event.inputs.args }}
+          HISTORY_ARGS: ${{ steps.pick.outputs.args }}
         run: |
           mkdir -p state-branch/state/logs
           ts=$(date -u +%Y%m%dT%H%M%SZ)
@@ -84,4 +95,4 @@ jobs:
         env:
           TASKS: ${{ steps.pick.outputs.tasks }}
         run: |
-          bash scripts/state_branch.sh commit "data:${TASKS} (run ${{ github.run_id }})"
+          bash scripts/state_branch.sh commit "data jobs ${TASKS} (run ${{ github.run_id }})"

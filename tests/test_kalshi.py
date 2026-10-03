@@ -44,3 +44,20 @@ def test_parse_candles_dollar_fields():
     c = parse_candles(rows)
     assert c[0] == {"ts": 100, "bid": 0.45, "ask": 0.47, "price": 0.46, "volume": 12.0}
     assert c[1]["bid"] is None and c[1]["ask"] is None
+
+
+def test_history_tables_are_monthly_shards(tmp_path):
+    from esalpha.history import read_table, write_table
+
+    df = pd.DataFrame({"event_ticker": ["A", "B", "C"], "ts": [1756684800, 1759276800, 1759363200],
+                       "bid": [0.4, 0.5, 0.6]})                     # 2025-09-01, 2025-10-01, 2025-10-02
+    (tmp_path / "candles.parquet").write_bytes(b"")                 # an old single-file table is replaced
+    write_table(tmp_path, "candles", df, "ts")
+    assert sorted(p.name for p in (tmp_path / "candles").iterdir()) == ["2025-09.parquet", "2025-10.parquet"]
+    assert not (tmp_path / "candles.parquet").exists()
+    before = (tmp_path / "candles" / "2025-09.parquet").stat().st_mtime_ns
+    write_table(tmp_path, "candles", pd.concat([df, df.iloc[[2]].assign(event_ticker="D", ts=1759370000)],
+                                               ignore_index=True), "ts")
+    assert (tmp_path / "candles" / "2025-09.parquet").stat().st_mtime_ns == before   # untouched month
+    out = read_table(tmp_path, "candles")
+    assert list(out["event_ticker"]) == ["A", "B", "C", "D"]

@@ -25,7 +25,7 @@ import numpy as np
 import pandas as pd
 
 from . import ratings as rt
-from .history import MATCH_TITLE, build_matches
+from .history import MATCH_TITLE, build_matches, read_table
 from .kalshi import Kalshi, Market
 from .model import Params
 from .net import Http
@@ -104,8 +104,8 @@ class State:
 
     # ---- match tables
     def history_matches(self) -> pd.DataFrame:
-        p = self.state_root / "history" / "matches.parquet"
-        return pd.read_parquet(p) if p.exists() else pd.DataFrame(columns=MATCH_COLS)
+        m = read_table(self.state_root / "history", "matches")
+        return m if len(m) else pd.DataFrame(columns=MATCH_COLS)
 
     def paper_matches(self) -> pd.DataFrame:
         p = self.root / "matches.parquet"

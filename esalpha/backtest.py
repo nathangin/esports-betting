@@ -18,6 +18,7 @@ import numpy as np
 import pandas as pd
 
 from . import ratings as rt
+from .history import read_table
 from .model import Params
 from .strategy import Rules, default_rules, flat_candidates, flat_rules, match_candidates, market_prob, settle_pnl, size
 
@@ -50,10 +51,10 @@ def quotes_at(c: pd.DataFrame | None, ts: int, max_age: int = 3600) -> tuple[flo
 
 
 def build_events(hist: Path, minutes_before: float = 60.0, tune_until=None) -> tuple[pd.DataFrame, dict]:
-    matches = pd.read_parquet(hist / "matches.parquet")
+    matches = read_table(hist, "matches")
     matches["start_time"] = pd.to_datetime(matches["start_time"], utc=True)
     matches = matches.dropna(subset=["start_time"])
-    candles = pd.read_parquet(hist / "candles.parquet")
+    candles = read_table(hist, "candles")
     by_ticker = {t: g.sort_values("ts")[["ts", "bid", "ask"]].reset_index(drop=True) for t, g in candles.groupby("ticker")}
     priced_events = set(candles["event_ticker"].unique())
     first_priced = matches.loc[matches["event_ticker"].isin(priced_events), "start_time"].min()

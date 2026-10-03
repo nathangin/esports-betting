@@ -3,10 +3,13 @@ candles for recent matches (for the fake-money backtest).
 
 Writes into ``<state>/history``:
   series.json        all esports series Kalshi lists, with fee settings
-  markets.parquet    one row per settled market (team, competitor id, result, times)
-  matches.parquet    one row per two-team match event (team A/B, winner, scheduled start)
-  candles.parquet    1-minute bid/ask candles for the last hours before each recent match
+  markets/           one row per settled market (team, competitor id, result, times)
+  matches/           one row per two-team match event (team A/B, winner, scheduled start)
+  candles/           1-minute bid/ask candles for the last hours before each recent match
   manifest.json      counts and any errors
+
+Tables are stored as monthly parquet shards (``matches/2026-09.parquet``) and a shard is only
+rewritten when its rows change, so the daily refresh adds little to the state branch.
 """
 
 from __future__ import annotations
@@ -30,9 +33,37 @@ MARKET_COLS = ["ticker", "event_ticker", "series_ticker", "game", "team", "compe
                "result", "winner_name", "volume", "last_price", "open_time", "close_time", "start_time", "tournament"]
 
 
-def _write(df: pd.DataFrame, path: Path) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    df.to_parquet(path, index=False)
+def write_table(hist: Path, name: str, df: pd.DataFrame, time_col: str) -> None:
+    """Save ``df`` as monthly shards ``<hist>/<name>/YYYY-MM.parquet`` (by ``time_col``)."""
+    d = hist / name
+    d.mkdir(parents=True, exist_ok=True)
+    t = df[time_col]
+    t = pd.to_datetime(t, unit="s", utc=True) if pd.api.types.is_numeric_dtype(t) else pd.to_datetime(t, utc=True)
+    month = t.dt.strftime("%Y-%m").fillna("unknown")
+    for mo, g in df.groupby(month, sort=True):
+        g = g.reset_index(drop=True)
+        path = d / f"{mo}.parquet"
+        if path.exists():
+            try:
+                if pd.read_parquet(path).equals(g):
+                    continue
+            except Exception:  # noqa: BLE001 - unreadable shard: rewrite it
+                pass
+        g.to_parquet(path, index=False)
+    legacy = hist / f"{name}.parquet"
+    if legacy.exists():
+        legacy.unlink()
+
+
+def read_table(hist: Path, name: str) -> pd.DataFrame:
+    """All shards of a history table (also reads an older single-file ``<name>.parquet``)."""
+    hist = Path(hist)
+    frames = [pd.read_parquet(p) for p in sorted((hist / name).glob("*.parquet"))] if (hist / name).is_dir() else []
+    legacy = hist / f"{name}.parquet"
+    if legacy.exists():
+        frames.append(pd.read_parquet(legacy))
+    frames = [f for f in frames if len(f)]
+    return pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
 
 
 def fetch_series(k: Kalshi, hist: Path, manifest: dict) -> list[dict]:
@@ -61,7 +92,7 @@ def fetch_markets(k: Kalshi, series: list[dict], hist: Path, manifest: dict, max
         if len(rows) > n0:
             log.info("%s: %d match markets", tk, len(rows) - n0)
     df = pd.DataFrame(rows, columns=MARKET_COLS).drop_duplicates("ticker")
-    _write(df, hist / "markets.parquet")
+    write_table(hist, "markets", df.sort_values(["close_time", "ticker"]), "close_time")
     manifest["markets"] = {"rows": int(len(df)), "events": int(df["event_ticker"].nunique()),
                            "by_game": df.groupby("game")["event_ticker"].nunique().to_dict()}
     return df
@@ -93,9 +124,9 @@ def build_matches(markets: pd.DataFrame) -> pd.DataFrame:
 def fetch_candles(k: Kalshi, hist: Path, matches: pd.DataFrame, days: int, hours_before: float,
                   manifest: dict, minutes: float) -> pd.DataFrame:
     """1-minute candles for the ``hours_before`` hours up to each match's scheduled start."""
-    path = hist / "candles.parquet"
-    old = pd.read_parquet(path) if path.exists() else None
-    done = set(old["event_ticker"].unique()) if old is not None and len(old) else set()
+    old = read_table(hist, "candles")
+    old = old if len(old) else None
+    done = set(old["event_ticker"].unique()) if old is not None else set()
     t_end = time.monotonic() + minutes * 60
     cutoff = pd.Timestamp(datetime.now(timezone.utc) - timedelta(days=days))
     todo = matches[(pd.to_datetime(matches["start_time"], utc=True) >= cutoff) & matches["winner"].notna()
@@ -128,18 +159,19 @@ def fetch_candles(k: Kalshi, hist: Path, matches: pd.DataFrame, days: int, hours
                 rows.append({"event_ticker": r.event_ticker, "ticker": tkr, **c})
         if n % 250 == 0:
             log.info("candles: %d events", n)
-            _save(old, rows, path)
-    df = _save(old, rows, path)
+            old, rows = _save(old, rows, hist), []
+    df = _save(old, rows, hist)
     manifest["candles"] = {"rows": int(len(df)), "events": int(df["event_ticker"].nunique()) if len(df) else 0,
                            "fetched_now": n, "empty": empty}
     return df
 
 
-def _save(old, rows, path):
+def _save(old, rows, hist: Path) -> pd.DataFrame:
     new = pd.DataFrame(rows, columns=["event_ticker", "ticker", "ts", "bid", "ask", "price", "volume"])
-    df = pd.concat([old, new], ignore_index=True) if old is not None else new
-    df = df.drop_duplicates(["ticker", "ts"], keep="last")
-    _write(df, path)
+    df = pd.concat([old, new], ignore_index=True) if old is not None and len(new) else (old if old is not None else new)
+    df = df.drop_duplicates(["ticker", "ts"], keep="last").reset_index(drop=True)
+    if len(df):
+        write_table(hist, "candles", df, "ts")
     return df
 
 
@@ -155,7 +187,8 @@ def build(state_dir: str, days: int = 150, hours_before: float = 6.0, minutes: f
     markets = fetch_markets(k, series, hist, manifest)
     log.info("markets done (%.0fs)", time.time() - t0)
     matches = build_matches(markets)
-    _write(matches, hist / "matches.parquet")
+    if len(matches):
+        write_table(hist, "matches", matches, "start_time")
     manifest["matches"] = {"rows": int(len(matches)),
                            "by_game": matches.groupby("game").size().to_dict() if len(matches) else {},
                            "first": str(matches["start_time"].min()) if len(matches) else None,

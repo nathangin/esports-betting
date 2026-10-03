@@ -43,4 +43,5 @@ jobs:
         run: python -m esalpha report --state state-branch/state
       - name: Save state
         if: always()
-        run: bash scripts/state_branch.sh commit "paper: run ${{ github.run_id }}"
+        run: |
+          bash scripts/state_branch.sh commit "paper run ${{ github.run_id }}"
