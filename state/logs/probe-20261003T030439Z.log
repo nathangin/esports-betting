@@ -1,0 +1,8 @@
+{
+ "checks": 24,
+ "failed": [
+  "polymarket closed esports depth",
+  "liquipedia api (cs)"
+ ],
+ "http_calls": 54
+}

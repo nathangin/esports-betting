@@ -1,0 +1,3843 @@
+{
+ "started": "2026-10-03T03:04:39.933251+00:00",
+ "checks": [
+  {
+   "name": "kalshi esports series",
+   "ok": true,
+   "secs": 0.54,
+   "result": [
+    {
+     "category": "Sports",
+     "n_series": 3957,
+     "esports": [
+      {
+       "ticker": "KXEWCRENNSPORT",
+       "title": "2025 Mid-Season Invitational",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXROCKETLEAGUE",
+       "title": "Rocket League Tournament Winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXWORLDSMVP",
+       "title": "Worlds MVP?",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXLEAGUEWORLDS",
+       "title": "League of Legends Worlds",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXDOTA2GAME3WAY",
+       "title": "Dota 2 Game",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXLOLTOTALMAPS",
+       "title": "League of Legends Total Maps",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCS2MAPWINNER",
+       "title": "CS2 Map Winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXVALORANT",
+       "title": "Valorant Tournament Winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXLOLGAME",
+       "title": "League of Legends Game",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCHOVYMVP",
+       "title": "Will Chovy be the MVP of the Worlds finals",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXLOLGAMES",
+       "title": "League of Legends Games",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXRANKLISTCS2PLAYER",
+       "title": "HLTV Player of Year",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXLCKAHRIPICK",
+       "title": "LCK finals Ahri",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCSGOADVANCE",
+       "title": "CSGO Advance",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXVALORANTGAME",
+       "title": "Valorant game winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXDOTA2TOTALMAPS",
+       "title": "Dota 2 Total Maps",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXBLASTRIVALS2",
+       "title": "BLAST Rivals 2025 Season 2",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCDOTA2",
+       "title": "Dota 2 at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCFATALFURY",
+       "title": "FATAL FURY: City of the Wolves at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXZYWOOMVP",
+       "title": "Will ZywOo be the MVP at the Budapest Major",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXVALORANTMASTERSFINALS",
+       "title": "Who will win the VALORANT Masters Finals",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCPUBGBATTLEG",
+       "title": "PUBG: BATTLEGROUNDS at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXESPORTSTEST",
+       "title": "TESTING",
+       "tags": [
+        "Esports",
+        "Video games"
+       ]
+      },
+      {
+       "ticker": "KXVALORANTSPREAD",
+       "title": "Valorant Spread",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCCS2",
+       "title": "ESPORTS WORLD CUP COUNTER STRIKE 2",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCODSPREAD",
+       "title": "COD Spread",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXVALORANTREGION",
+       "title": "Valorant Tournament Winning Region",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXAUSTINMAJOR",
+       "title": "Rennsport at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXPGLMASTERSBUCHAREST",
+       "title": "Who will win the PGL Masters Bucharest 2025",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCODGAME",
+       "title": "Call of Duty Games",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCS2QUALIFIERS",
+       "title": "CS2 Qualifier",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXBRAWLSTARS",
+       "title": "Brawl Stars Tournament Winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCS2QUALIFY",
+       "title": "CS2 Qualifier",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXROSTERT1",
+       "title": "Roster T1",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCLEAGUEOFLEGENDS",
+       "title": "League of Legends featured at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCMLBB",
+       "title": "Mobile Legends: Bang Bang Mid Season Cup at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXLEAGUE",
+       "title": "League of Legends World Championship",
+       "tags": [
+        "Video games"
+       ]
+      },
+      {
+       "ticker": "KXCSGOGAME",
+       "title": "Counter-Strike 2 Games",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCFREEFIRE",
+       "title": "Free Fire at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCROSSFIRE",
+       "title": "Crossfire Tournament Winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXVALORANTAWARD",
+       "title": "Valorant Award",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXR6MAP",
+       "title": "R6 Map Winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCSTARCRAFTII",
+       "title": "StarCraft II at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCODMAP",
+       "title": "COD Map Winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXMIDSEASONINVITATIONALB",
+       "title": "2025 Mid-Season Invitational",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCHONOROFKINGS",
+       "title": "Honor of Kings World Cup at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXVALORANTTOTALMAPS",
+       "title": "Valorant Total Maps",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCCHESS2025",
+       "title": "Chess \u2013 Esports World Cup Winner?",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXDOTA2MBH",
+       "title": "Most Banned Hero",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXTORONTOULTRACHAMPIONSHIP",
+       "title": "Dota 2 at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXRANKLISTCS2TEAM",
+       "title": "HLTV Team of the Year",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXVALGCSEOUL",
+       "title": "Game Changers : Championship Seoul",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCS2IEMCOLOGNE",
+       "title": "CS2: IEM Cologne",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXLOLSPREAD",
+       "title": "League of Legends Spread",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXLOLTOTAL",
+       "title": "League of Legends Total Maps Played",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCODTOTALMAPS",
+       "title": "COD Maps",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCMOBILELEGENDSBBWOMENS",
+       "title": "Mobile Legends: Bang Bang Women's Invitational at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXLOLQUALIFIERS",
+       "title": "League of Legends Qualifiers",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXVALORANTMAP",
+       "title": "Valorant Map Winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXDOTA2",
+       "title": "Dota 2 Tournament Winner",
+       "tags": [
+        "Esports"
+       ]
+      }
+     ]
+    },
+    {
+     "category": "Esports",
+     "n_series": 0,
+     "esports": []
+    },
+    {
+     "category": "E-Sports",
+     "n_series": 0,
+     "esports": []
+    }
+   ]
+  },
+  {
+   "name": "kalshi esports markets",
+   "ok": true,
+   "secs": 0.96,
+   "result": {
+    "KXEWCRENNSPORT": {
+     "n": 0,
+     "examples": []
+    },
+    "KXROCKETLEAGUE": {
+     "n": 14,
+     "examples": [
+      {
+       "ticker": "KXROCKETLEAGUE-EWC26-VIT",
+       "title": "Will Team Vitality win Rocket League Esports World Cup?",
+       "yes_sub_title": "Team Vitality",
+       "status": "finalized",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "1.0000",
+       "result": "no",
+       "volume_fp": "944.23",
+       "close_time": "2026-08-17T15:39:57Z"
+      },
+      {
+       "ticker": "KXROCKETLEAGUE-EWC26-TWIS",
+       "title": "Will Twisted Minds win Rocket League Esports World Cup?",
+       "yes_sub_title": "Twisted Minds",
+       "status": "finalized",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "1.0000",
+       "result": "no",
+       "volume_fp": "486.28",
+       "close_time": "2026-08-17T15:39:57Z"
+      },
+      {
+       "ticker": "KXROCKETLEAGUE-EWC26-TSM",
+       "title": "Will TSM win Rocket League Esports World Cup?",
+       "yes_sub_title": "TSM",
+       "status": "finalized",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "1.0000",
+       "result": "no",
+       "volume_fp": "0.00",
+       "close_time": "2026-08-17T15:39:57Z"
+      },
+      {
+       "ticker": "KXROCKETLEAGUE-EWC26-SSG",
+       "title": "Will Spacestation Gaming win Rocket League Esports World Cup?",
+       "yes_sub_title": "Spacestation Gaming",
+       "status": "finalized",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "1.0000",
+       "result": "no",
+       "volume_fp": "1765.88",
+       "close_time": "2026-08-17T15:39:57Z"
+      }
+     ]
+    },
+    "KXWORLDSMVP": {
+     "n": 0,
+     "examples": []
+    },
+    "KXLEAGUEWORLDS": {
+     "n": 0,
+     "examples": []
+    },
+    "KXDOTA2GAME3WAY": {
+     "n": 0,
+     "examples": []
+    },
+    "KXLOLTOTALMAPS": {
+     "n": 20,
+     "examples": [
+      {
+       "ticker": "KXLOLTOTALMAPS-26OCT061600FUECPD-5",
+       "title": "Will over 4.5 maps be played in the Fuego vs. Cupid Esports League of Legends match?",
+       "yes_sub_title": "Over 4.5 maps",
+       "status": "active",
+       "yes_bid_dollars": "0.0300",
+       "yes_ask_dollars": "0.6500",
+       "result": "",
+       "volume_fp": "0.00",
+       "close_time": "2026-10-08T20:00:00Z"
+      },
+      {
+       "ticker": "KXLOLTOTALMAPS-26OCT061600FUECPD-4",
+       "title": "Will over 3.5 maps be played in the Fuego vs. Cupid Esports League of Legends match?",
+       "yes_sub_title": "Over 3.5 maps",
+       "status": "active",
+       "yes_bid_dollars": "0.0100",
+       "yes_ask_dollars": "0.6500",
+       "result": "",
+       "volume_fp": "0.00",
+       "close_time": "2026-10-08T20:00:00Z"
+      },
+      {
+       "ticker": "KXLOLTOTALMAPS-26OCT041200UCAMKOIA-5",
+       "title": "Will over 4.5 maps be played in the UCAM Esports Club vs. Movistar KOI F\u00e9nix League of Legends match?",
+       "yes_sub_title": "Over 4.5 maps",
+       "status": "active",
+       "yes_bid_dollars": "0.0100",
+       "yes_ask_dollars": "0.6500",
+       "result": "",
+       "volume_fp": "0.00",
+       "close_time": "2026-10-06T16:00:00Z"
+      },
+      {
+       "ticker": "KXLOLTOTALMAPS-26OCT041200UCAMKOIA-4",
+       "title": "Will over 3.5 maps be played in the UCAM Esports Club vs. Movistar KOI F\u00e9nix League of Legends match?",
+       "yes_sub_title": "Over 3.5 maps",
+       "status": "active",
+       "yes_bid_dollars": "0.0100",
+       "yes_ask_dollars": "0.6500",
+       "result": "",
+       "volume_fp": "0.00",
+       "close_time": "2026-10-06T16:00:00Z"
+      }
+     ]
+    },
+    "KXCS2MAPWINNER": {
+     "n": 0,
+     "examples": []
+    },
+    "KXVALORANT": {
+     "n": 16,
+     "examples": [
+      {
+       "ticker": "KXVALORANT-CHAMPSH26-XLG",
+       "title": "Will Xi Lai Gaming win VALORANT Champions Shanghai?",
+       "yes_sub_title": "Xi Lai Gaming",
+       "status": "active",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "0.0100",
+       "result": "",
+       "volume_fp": "637.34",
+       "close_time": "2026-11-02T02:00:00Z"
+      },
+      {
+       "ticker": "KXVALORANT-CHAMPSH26-VIT",
+       "title": "Will Team Vitality win VALORANT Champions Shanghai?",
+       "yes_sub_title": "Team Vitality",
+       "status": "active",
+       "yes_bid_dollars": "0.0700",
+       "yes_ask_dollars": "0.0800",
+       "result": "",
+       "volume_fp": "6530.81",
+       "close_time": "2026-11-02T02:00:00Z"
+      },
+      {
+       "ticker": "KXVALORANT-CHAMPSH26-TYLOO",
+       "title": "Will TYLOO win VALORANT Champions Shanghai?",
+       "yes_sub_title": "TYLOO",
+       "status": "active",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "0.0100",
+       "result": "",
+       "volume_fp": "13761.91",
+       "close_time": "2026-11-02T02:00:00Z"
+      },
+      {
+       "ticker": "KXVALORANT-CHAMPSH26-TL",
+       "title": "Will Team Liquid win VALORANT Champions Shanghai?",
+       "yes_sub_title": "Team Liquid",
+       "status": "active",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "0.0300",
+       "result": "",
+       "volume_fp": "3644.77",
+       "close_time": "2026-11-02T02:00:00Z"
+      }
+     ]
+    }
+   }
+  },
+  {
+   "name": "polymarket /sports",
+   "ok": true,
+   "secs": 0.23,
+   "result": [
+    {
+     "id": 39,
+     "sport": "lol",
+     "name": "LoL",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-icons/lol-cf27b4a0.png",
+     "resolution": "https://liquipedia.net/leagueoflegends/Main_Page",
+     "ordering": "home",
+     "tags": "1,64,65,100639",
+     "primaryTagId": 65,
+     "series": "10311",
+     "createdAt": "2025-11-07T21:06:11.103175Z"
+    },
+    {
+     "id": 38,
+     "sport": "dota2",
+     "name": "Dota 2",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/dota2-1d288592aa.png",
+     "resolution": "https://www.liquipedia.net/dota2/Main_Page",
+     "ordering": "home",
+     "tags": "1,64,102366,100639",
+     "primaryTagId": 102366,
+     "series": "10309",
+     "createdAt": "2025-11-07T21:05:44.789306Z"
+    },
+    {
+     "id": 53,
+     "sport": "codmw",
+     "name": "Call of Duty",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-icons/codmw.png",
+     "resolution": "https://liquipedia.net/callofduty/Main_Page",
+     "ordering": "home",
+     "tags": "1,64,100230,100639",
+     "primaryTagId": 100230,
+     "series": "10427",
+     "createdAt": "2025-11-21T15:51:22.638597Z"
+    },
+    {
+     "id": 57,
+     "sport": "r6siege",
+     "name": "Rainbow Six Siege",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-icons/r6siege.png",
+     "resolution": "https://liquipedia.net/rainbowsix/Main_Page",
+     "ordering": "home",
+     "tags": "1,64,102755,100639",
+     "primaryTagId": 102755,
+     "series": "10432",
+     "createdAt": "2025-11-21T15:51:25.341644Z"
+    },
+    {
+     "id": 58,
+     "sport": "rl",
+     "name": "Rocket League",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-icons/rl.png",
+     "resolution": "https://liquipedia.net/rocketleague/Main_Page",
+     "ordering": "home",
+     "tags": "1,64,102756,100639",
+     "primaryTagId": 102756,
+     "series": "10433",
+     "createdAt": "2025-11-21T15:51:26.026759Z"
+    },
+    {
+     "id": 51,
+     "sport": "ow",
+     "name": "Overwatch",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-icons/ow-e437715b.png",
+     "resolution": "https://liquipedia.net/overwatch/Main_Page",
+     "ordering": "home",
+     "tags": "1,64,102753,100639",
+     "primaryTagId": 102753,
+     "series": "10430",
+     "createdAt": "2025-11-21T15:51:21.270947Z"
+    },
+    {
+     "id": 40,
+     "sport": "val",
+     "name": "Valorant",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-icons/val-41c5e64a.png",
+     "resolution": "https://liquipedia.net/valorant/Main_Page",
+     "ordering": "home",
+     "tags": "1,64,101672,100639",
+     "primaryTagId": 101672,
+     "series": "10369",
+     "createdAt": "2025-11-07T21:06:39.167877Z"
+    },
+    {
+     "id": 37,
+     "sport": "cs2",
+     "name": "CS2",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-icons/cs2.png",
+     "resolution": "https://hltv.org",
+     "ordering": "home",
+     "tags": "1,64,100780,100639",
+     "primaryTagId": 100780,
+     "series": "10310",
+     "createdAt": "2025-11-07T21:05:17.813558Z"
+    },
+    {
+     "id": 281,
+     "sport": "lol-wild-rift",
+     "name": "League of Legends: Wild Rift",
+     "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/league-icons/lol-wild-rift.png",
+     "resolution": "https://liquipedia.net/wildrift/Main_Page",
+     "ordering": "home",
+     "tags": "64,102752,100639,1",
+     "primaryTagId": 102752,
+     "series": "10429",
+     "createdAt": "2026-06-04T16:20:49.640496Z"
+    }
+   ]
+  },
+  {
+   "name": "polymarket esports tags",
+   "ok": true,
+   "secs": 0.04,
+   "result": []
+  },
+  {
+   "name": "polymarket events tag=esports open",
+   "ok": true,
+   "secs": 0.32,
+   "result": {
+    "n": 50,
+    "examples": [
+     {
+      "title": "Worlds 2026 Winning Region",
+      "slug": "lol-worlds-2026-winning-region-226",
+      "start": "2025-12-30T15:15:49.335Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 7,
+      "markets": [
+       {
+        "question": "Will a team from LCK (South Korea) win LoL Worlds 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.685\", \"0.315\"]",
+        "clobTokenIds": "[\"71142357229322422344089572678224125547687709803011207827324848262016351952627\", \"41852539340970627294572261541672153709430009321845187893526698172238523925204\"]",
+        "volume": "126066.510083",
+        "liquidity": "23451.5644",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.68,
+        "bestAsk": 0.69,
+        "spread": 0.01,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Will a team from LPL (China) win LoL Worlds 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.255\", \"0.745\"]",
+        "clobTokenIds": "[\"63553648568153764734764671568095102122288246900552333991766030067701843832429\", \"45993050615878682688227575860255511835379389831434793742769053348825525182248\"]",
+        "volume": "117520.99925599998",
+        "liquidity": "19876.6367",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.25,
+        "bestAsk": 0.26,
+        "spread": 0.01,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Will a team from LEC (Europe / EMEA) win LoL Worlds 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.0535\", \"0.9465\"]",
+        "clobTokenIds": "[\"8075586814258215407911549328821150398632147457489902941671175151004761484297\", \"30669271320870251893129736156586825338211544209888851524967241257282084382538\"]",
+        "volume": "54471.158367999975",
+        "liquidity": "7751.70609",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.049,
+        "bestAsk": 0.058,
+        "spread": 0.009,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will MoistCr1TiKaL get a haircut in 2026? ",
+      "slug": "will-moistcr1tikal-get-a-haircut-in-2026",
+      "start": "2026-01-21T23:20:01.775Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will MoistCr1TiKaL get a haircut in 2026? ",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.5\", \"0.5\"]",
+        "clobTokenIds": "[\"80916985333217962742378268668696595226613629905520566954989310905764377688006\", \"78100529408263698547039082710348189550334233977731047071120810151207510070925\"]",
+        "volume": "62.070644",
+        "liquidity": "2.762",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.02,
+        "bestAsk": 0.98,
+        "spread": 0.96,
+        "umaResolutionStatus": null,
+        "feeType": "culture_fees",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will Grok AI beat T1 in 2026? ",
+      "slug": "will-t1-beat-grok-ai-in-2026",
+      "start": "2026-02-13T01:41:03.520297Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will Grok AI beat T1 in 2026? ",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.0155\", \"0.9845\"]",
+        "clobTokenIds": "[\"104282291059413542365063689338883743489763941813522234045325493604544843033020\", \"15619368674597786927927838221549203995057480242722179772151412069589429137920\"]",
+        "volume": "87370.55687600003",
+        "liquidity": "46410.07882",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.013,
+        "bestAsk": 0.018,
+        "spread": 0.005,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will Faker win a Finals MVP Award at an international event in 2026?",
+      "slug": "will-faker-win-a-finals-mvp-award-at-an-international-event-in-2026",
+      "start": "2026-03-03T21:42:59.437256Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will Faker win a Finals MVP Award at an international event in 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.0545\", \"0.9455\"]",
+        "clobTokenIds": "[\"107447321736958001331291285876045469730039741023700731311287919712891910829120\", \"45444190086616885039317752201415657721176543075037325119478141230222670911007\"]",
+        "volume": "107911.57110100001",
+        "liquidity": "31051.83537",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.05,
+        "bestAsk": 0.059,
+        "spread": 0.009,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will FaZe win a Tier 1 event in 2026? ",
+      "slug": "will-faze-win-a-tier-1-event-in-2026",
+      "start": "2026-03-03T23:37:33.283556Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will FaZe win a Tier 1 event in 2026? ",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.048\", \"0.952\"]",
+        "clobTokenIds": "[\"63010139968443726554698863038804793867289135404366358483235179597139821369733\", \"109294604043346086721916144967232602282021095067452423620736645513760961401876\"]",
+        "volume": "42531.07330399999",
+        "liquidity": "2494.02115",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.039,
+        "bestAsk": 0.057,
+        "spread": 0.018,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Counter-Strike: against All authority vs INFURITY Gaming (BO3) - United21 Group A",
+      "slug": "cs2-aaa-inf1-2026-03-10",
+      "start": "2026-03-09T21:21:45.809096Z",
+      "end": "2026-03-18T03:59:00Z",
+      "closed": false,
+      "n_markets": 11,
+      "markets": [
+       {
+        "question": "Counter-Strike: against All authority vs INFURITY Gaming (BO3) - United21 Group A",
+        "outcomes": "[\"against All authority\", \"INFURITY Gaming\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"56351191903168982107965664097689764618339110221881766011392356609261314227782\", \"94302443707320863444280727855742218343840669692357083496640050061557456460910\"]",
+        "volume": null,
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-03-10 11:40:00+00",
+        "sportsMarketType": "moneyline",
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Counter-Strike: against All authority vs INFURITY Gaming - Map 1 Winner",
+        "outcomes": "[\"against All authority\", \"INFURITY Gaming\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"67014388944610500244104044837540309222870187315805961159380894037618752075531\", \"63240382820208445286864419974186077684105565580908613210512521070108242267870\"]",
+        "volume": null,
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-03-10 11:40:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Counter-Strike: against All authority vs INFURITY Gaming - Map 2 Winner",
+        "outcomes": "[\"against All authority\", \"INFURITY Gaming\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"89826633386483785775369502001713909604238010534788952780519051954607096302679\", \"82553073610255746253931238345088869099591213612471072110250704796697259085483\"]",
+        "volume": null,
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-03-10 11:40:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "polymarket events tag=esports closed",
+   "ok": true,
+   "secs": 0.22,
+   "result": {
+    "n": 50,
+    "examples": [
+     {
+      "title": "Founding Fathers LAN Winner",
+      "slug": "founding-fathers-lan-winner",
+      "start": "2024-05-24T21:04:39.82969Z",
+      "end": "2024-05-30T12:00:00Z",
+      "closed": true,
+      "n_markets": 4,
+      "markets": [
+       {
+        "question": "Will Nadeshot win the Founding Fathers Lan?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"55974974933932022028686046629228567803703521076325401791293929515622514030258\", \"35615853744042815855308521497477294679919943662452124639692728137723577078661\"]",
+        "volume": "8255.529755",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0,
+        "bestAsk": 1,
+        "spread": 0.76,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will H3CZ win the Founding Fathers Lan?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"98064983588800326926552220073180321845099351174016349293537638782905465256026\", \"61867092470970026199636997529468544769739677880585602160493878560829677278459\"]",
+        "volume": "6722.605661",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will FaZe Banks win the Founding Fathers Lan?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"56472243625231554429512467024500411969627513993756292976673761216894442199788\", \"102610640743612656114937665152508074670447946898751224763264591693266185287812\"]",
+        "volume": "3345.139384",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0,
+        "bestAsk": 1,
+        "spread": 0.99,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "Will Speed stream with Ronaldo before October?",
+      "slug": "will-speed-stream-with-ronaldo-before-october",
+      "start": "2024-08-22T19:25:09.091462Z",
+      "end": "2024-09-30T12:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will Speed stream with Ronaldo before October?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"23426289562828613058207660717541547131659467073064534427941862010085636242424\", \"2444803925859911319717057602172134253729499226666599407096802344048798862765\"]",
+        "volume": "15615.671437",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.009,
+        "spread": 0.009,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "DOTA 2: The International Champions",
+      "slug": "dota-2-the-international-champions",
+      "start": "2024-09-12T03:25:08.45674Z",
+      "end": "2024-09-15T12:00:00Z",
+      "closed": true,
+      "n_markets": 9,
+      "markets": [
+       {
+        "question": "Will Team Liquid win The International 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"102960194677738311627726710066230079657365058019766738402820455584636872703732\", \"37558454222106642971334614891656900532052875669312374529538728927197741094241\"]",
+        "volume": "55733.226089",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.992,
+        "bestAsk": 1,
+        "spread": 0.008,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Cloud9 win The International 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"62065588473617026807044932359082779276865659866808398737358015303298398170262\", \"109217228433647195120271904545607383765027218573611978593297595256591886968874\"]",
+        "volume": "32696.096618",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.002,
+        "spread": 0.002,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Tundra Esports win The International 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"51668214087603624548582234008338859298282714419157038359840565950845284103419\", \"35356313559668354926295174876363423515720411328717990029490652174140796751375\"]",
+        "volume": "39495.250797",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "ESL Counter-strike Champion 2024",
+      "slug": "esl-counterstrike-champion-2024",
+      "start": "2024-09-20T00:08:47.468805Z",
+      "end": "2024-09-22T12:00:00Z",
+      "closed": true,
+      "n_markets": 8,
+      "markets": [
+       {
+        "question": "Will Team Vitality win ESL Counter-Strike Champion 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"4525611745165411426029522380597142860206929069636801979704225588738533287867\", \"66062113276044566779557371794892430562773807332583746407922558821059250239437\"]",
+        "volume": "16715.83045",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Eternal Fire win ESL Counter-Strike Champion 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"7832522608404580296800707163912205729756640027886076557433341572182653764945\", \"78312466762582983242763626526728868251449982330535931342010980149839311037445\"]",
+        "volume": "39809.904702",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will MIBR win ESL Counter-Strike Champion 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"12106282103442894073267738168191864047019177032185071840496907150189215513411\", \"63658978489786570171295609394931965170160164378217086018469469129845186334828\"]",
+        "volume": "10803.001219",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "ESL Counter-Strike Quarterfinals: G2 vs Liquid",
+      "slug": "esl-counter-strike-quarterfinals-g2-vs-liquid",
+      "start": "2024-09-20T02:12:54.855622Z",
+      "end": "2024-09-20T12:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "ESL Counter-Strike Quarterfinals: G2 vs Liquid",
+        "outcomes": "[\"G2\", \"Liquid\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"21866825856950150307355093691421377309746173350875995180045420544431085816243\", \"115354239356886838154961713293174097055043181118308462355832899762660593248050\"]",
+        "volume": "50674.81881",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "ESL Counter-Strike Quarterfinals: Spirit vs Natus Vincere",
+      "slug": "esl-counter-strike-quarterfinals-spirit-vs-natus-vincere",
+      "start": "2024-09-20T02:14:49.420647Z",
+      "end": "2024-09-20T12:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "ESL Counter-Strike Quarterfinals: Spirit vs Natus Vincere",
+        "outcomes": "[\"Spirit\", \"Natus\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"33550782183090064247469778162016077774166725219369644759063460137437092283475\", \"93589426728913650616224884396037332215502207217998726194108844318918342546426\"]",
+        "volume": "31604.831558",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "polymarket events tag=counter-strike open",
+   "ok": true,
+   "secs": 0.18,
+   "result": {
+    "n": 2,
+    "examples": [
+     {
+      "title": "Will Valve add sticker trade-ups before November?",
+      "slug": "will-valve-add-sticker-trade-ups-before-november-20260608173609897",
+      "start": "2026-06-08T22:24:12.899439Z",
+      "end": "2026-11-01T03:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will Valve add sticker trade-ups before November?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.095\", \"0.905\"]",
+        "clobTokenIds": "[\"91483002320217346479245918626215160352064356808305094765765517208459323714716\", \"33088954510156262410339806549893131577175909352496493437481171164884448691816\"]",
+        "volume": "487.06086200000004",
+        "liquidity": "117.8981",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.03,
+        "bestAsk": 0.16,
+        "spread": 0.13,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will Valve add sticker trade-ups by...?",
+      "slug": "will-valve-add-sticker-trade-ups-by",
+      "start": "2026-09-30T20:37:34Z",
+      "end": "2027-07-01T03:59:00Z",
+      "closed": false,
+      "n_markets": 4,
+      "markets": [
+       {
+        "question": "Will Valve add sticker trade-ups by November 30, 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.205\", \"0.795\"]",
+        "clobTokenIds": "[\"96443457263412932289535167737959210287731702514255639413456032294493041515463\", \"11405284805127716839841243541376704040937541215587636454959283679110682730214\"]",
+        "volume": null,
+        "liquidity": "1176.451",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.2,
+        "bestAsk": 0.21,
+        "spread": 0.01,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Will Valve add sticker trade-ups by December 31, 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.245\", \"0.755\"]",
+        "clobTokenIds": "[\"11304837130932268411951822840927437631953658799653011216879940609551001499007\", \"85054409298658618773676578297992792570045612269598558462185778632905267988506\"]",
+        "volume": null,
+        "liquidity": "920.2977",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.22,
+        "bestAsk": 0.27,
+        "spread": 0.05,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Will Valve add sticker trade-ups by March 31, 2027?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.325\", \"0.675\"]",
+        "clobTokenIds": "[\"45176875092093696824438865974271877700272252254169705027716323931799992824808\", \"38739683773597409448444022838124188549120539824687428032516049262016742409958\"]",
+        "volume": null,
+        "liquidity": "589.9638",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.32,
+        "bestAsk": 0.33,
+        "spread": 0.01,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "polymarket events tag=counter-strike closed",
+   "ok": true,
+   "secs": 0.42,
+   "result": {
+    "n": 50,
+    "examples": [
+     {
+      "title": "ESL Counter-Strike Quarterfinals: G2 vs Liquid",
+      "slug": "esl-counter-strike-quarterfinals-g2-vs-liquid",
+      "start": "2024-09-20T02:12:54.855622Z",
+      "end": "2024-09-20T12:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "ESL Counter-Strike Quarterfinals: G2 vs Liquid",
+        "outcomes": "[\"G2\", \"Liquid\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"21866825856950150307355093691421377309746173350875995180045420544431085816243\", \"115354239356886838154961713293174097055043181118308462355832899762660593248050\"]",
+        "volume": "50674.81881",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "ESL Counter-Strike Quarterfinals: Spirit vs Natus Vincere",
+      "slug": "esl-counter-strike-quarterfinals-spirit-vs-natus-vincere",
+      "start": "2024-09-20T02:14:49.420647Z",
+      "end": "2024-09-20T12:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "ESL Counter-Strike Quarterfinals: Spirit vs Natus Vincere",
+        "outcomes": "[\"Spirit\", \"Natus\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"33550782183090064247469778162016077774166725219369644759063460137437092283475\", \"93589426728913650616224884396037332215502207217998726194108844318918342546426\"]",
+        "volume": "31604.831558",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "ESL Counter-Strike Semifinals: Eternal Fire vs MIBR",
+      "slug": "esl-counter-strike-semifinals-eternal-fire-vs-mibr",
+      "start": "2024-09-20T20:36:51.282821Z",
+      "end": "2024-09-21T12:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "ESL Counter-Strike Semifinals: Eternal Fire vs MIBR",
+        "outcomes": "[\"EF\", \"MIBR\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"105034439933574380797368738465736873436576471417480128166785169955373878307680\", \"30951462910046953840881645659745051784664229665122422405080013813973312853297\"]",
+        "volume": "25539.421434",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.992,
+        "bestAsk": 0.999,
+        "spread": 0.007,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "ESL Counter-Strike Semifinals: G2 vs Natus Vincere",
+      "slug": "esl-counter-strike-semifinals-g2-vs-natus-vincere",
+      "start": "2024-09-20T20:34:52.151219Z",
+      "end": "2024-09-21T12:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "ESL Counter-Strike Semifinals: G2 vs Natus Vincere",
+        "outcomes": "[\"G2\", \"NaVi\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"44362180644101551914495476703497130127022807240545035400748717462824560045388\", \"83109365993904244225942941412912932114318715685365559075562803537524800591458\"]",
+        "volume": "34316.497215",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "CS:GO BLAST Premier Fall Final Winner",
+      "slug": "csgo-blast-premier-fall-final-winner",
+      "start": "2024-09-24T20:54:47.077627Z",
+      "end": "2024-09-29T12:00:00Z",
+      "closed": true,
+      "n_markets": 9,
+      "markets": [
+       {
+        "question": "Will Spirit win CS:GO BLAST Premier Fall Final 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"39056623124940444302067850951526086230282260244607285116520592594294694012594\", \"70609806699797287463971340532748017923775431996962361151381879877163375693460\"]",
+        "volume": "68870.7229",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Vitality win CS:GO BLAST Premier Fall Final 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"56597962343706312114163293430579614934396010044492733589898157862819847203044\", \"29562076377176382763031077213687255417302209066078215003196217267786930322191\"]",
+        "volume": "20047.354646",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will G2 win CS:GO BLAST Premier Fall Final 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"66716855443112633035740855704412439611911169630424030858954319367605276754445\", \"12691810592206480704469337660873558088903060451325358631277360708315005121041\"]",
+        "volume": "40466.410665",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "Counter-Strike 2 ESL Challenger Atlanta Winner",
+      "slug": "counter-strike-2-esl-challenger-atlanta-winner",
+      "start": "2024-10-02T21:44:40.624702Z",
+      "end": "2024-10-06T12:00:00Z",
+      "closed": true,
+      "n_markets": 9,
+      "markets": [
+       {
+        "question": "Will M80 win ESL Challenger Atlanta 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"111542228808518683970094763108074800014776858002333685950802782059326181595263\", \"38122895828115681168192090007645119634475486551381470066244087544652828332605\"]",
+        "volume": "6040.299462",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will FlyQuest win ESL Challenger Atlanta 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"51105128359087490996622181042178265392075378541983816234150984090013813528447\", \"92786267428668434636837145902411338292476440385861399906479945406637705268294\"]",
+        "volume": "3314.916093",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.997,
+        "bestAsk": 1,
+        "spread": 0.003,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will BIG win ESL Challenger Atlanta 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"22744097069456636488095363905849361639850905417231763915911419152482525990009\", \"111900753227642592510701129423166720450346968816871592809524537785975700781036\"]",
+        "volume": "8896.836103",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "polymarket events tag=cs2 open",
+   "ok": true,
+   "secs": 0.23,
+   "result": {
+    "n": 24,
+    "examples": [
+     {
+      "title": "Will FaZe win a Tier 1 event in 2026? ",
+      "slug": "will-faze-win-a-tier-1-event-in-2026",
+      "start": "2026-03-03T23:37:33.283556Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will FaZe win a Tier 1 event in 2026? ",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.048\", \"0.952\"]",
+        "clobTokenIds": "[\"63010139968443726554698863038804793867289135404366358483235179597139821369733\", \"109294604043346086721916144967232602282021095067452423620736645513760961401876\"]",
+        "volume": "42531.07330399999",
+        "liquidity": "2494.02115",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.039,
+        "bestAsk": 0.057,
+        "spread": 0.018,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will Valve add sticker trade-ups before November?",
+      "slug": "will-valve-add-sticker-trade-ups-before-november-20260608173609897",
+      "start": "2026-06-08T22:24:12.899439Z",
+      "end": "2026-11-01T03:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will Valve add sticker trade-ups before November?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.095\", \"0.905\"]",
+        "clobTokenIds": "[\"91483002320217346479245918626215160352064356808305094765765517208459323714716\", \"33088954510156262410339806549893131577175909352496493437481171164884448691816\"]",
+        "volume": "487.06086200000004",
+        "liquidity": "117.8981",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.03,
+        "bestAsk": 0.16,
+        "spread": 0.13,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Nocries signs for a pro CS2 Organization by September?",
+      "slug": "nocries-signs-for-a-pro-cs2-organization-by-september-20260715173731682",
+      "start": "2026-07-15T17:40:52.935689Z",
+      "end": "2026-09-01T03:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Nocries signs for a pro CS2 Organization by September?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.495\", \"0.505\"]",
+        "clobTokenIds": "[\"44650950835837936960958325555700867099149151955954366190247195820865855173203\", \"102231014769489649734528431120418995202874090300887861924449308779642422226254\"]",
+        "volume": "97.9",
+        "liquidity": "1.5679",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.99,
+        "spread": 0.99,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will CS2 Add a Shootout OT by December 31?",
+      "slug": "will-cs2-add-a-shootout-ot-by-december-31-20260716151243553",
+      "start": "2026-07-16T20:28:45.044848Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will CS2 Add a Shootout OT by December 31?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.06\", \"0.94\"]",
+        "clobTokenIds": "[\"80510034022481421791096921978936420839155796948410998802662173767586483699127\", \"97980994222323509320887409587142405249529105499318289141143761302621957940724\"]",
+        "volume": "420",
+        "liquidity": "959.5134",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.05,
+        "bestAsk": 0.07,
+        "spread": 0.02,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will ArrowCS eat a bug on stream by December 31?",
+      "slug": "will-arrowcs-eat-a-bug-on-stream-by-december-31-20260715213055256",
+      "start": "2026-07-17T19:56:11.049427Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will ArrowCS eat a bug on stream by December 31?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.1\", \"0.9\"]",
+        "clobTokenIds": "[\"97317421400078258324393867101568593593353864552675117357386914306600338233717\", \"104676424594546718950819656833182811745087748665456756344424464259200147221944\"]",
+        "volume": "1795.581334",
+        "liquidity": "100.81933",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.099,
+        "bestAsk": 0.101,
+        "spread": 0.002,
+        "umaResolutionStatus": null,
+        "feeType": "culture_fees",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will ropz Get Pulled Over Again in 2026?",
+      "slug": "will-ropz-get-pulled-over-again-in-2026",
+      "start": "2026-08-14T16:08:35Z",
+      "end": "2027-01-15T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will ropz Get Pulled Over Again in 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.085\", \"0.915\"]",
+        "clobTokenIds": "[\"56407754678784211220217713047886072876201886933308176770599085287957398867609\", \"102539979434765083017777689502028966259362316430951996161534752385634592382293\"]",
+        "volume": "347.18236999999993",
+        "liquidity": "155.2206",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.04,
+        "bestAsk": 0.13,
+        "spread": 0.09,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "polymarket events tag=cs2 closed",
+   "ok": true,
+   "secs": 0.22,
+   "result": {
+    "n": 50,
+    "examples": [
+     {
+      "title": "Counter-Strike 2 ESL Challenger Atlanta Winner",
+      "slug": "counter-strike-2-esl-challenger-atlanta-winner",
+      "start": "2024-10-02T21:44:40.624702Z",
+      "end": "2024-10-06T12:00:00Z",
+      "closed": true,
+      "n_markets": 9,
+      "markets": [
+       {
+        "question": "Will M80 win ESL Challenger Atlanta 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"111542228808518683970094763108074800014776858002333685950802782059326181595263\", \"38122895828115681168192090007645119634475486551381470066244087544652828332605\"]",
+        "volume": "6040.299462",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will FlyQuest win ESL Challenger Atlanta 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"51105128359087490996622181042178265392075378541983816234150984090013813528447\", \"92786267428668434636837145902411338292476440385861399906479945406637705268294\"]",
+        "volume": "3314.916093",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.997,
+        "bestAsk": 1,
+        "spread": 0.003,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will BIG win ESL Challenger Atlanta 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"22744097069456636488095363905849361639850905417231763915911419152482525990009\", \"111900753227642592510701129423166720450346968816871592809524537785975700781036\"]",
+        "volume": "8896.836103",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "CS2: IEM Rio 2024 Winner",
+      "slug": "cs2-iem-rio-2024-winner",
+      "start": "2024-10-02T21:54:41.604121Z",
+      "end": "2024-10-13T12:00:00Z",
+      "closed": true,
+      "n_markets": 17,
+      "markets": [
+       {
+        "question": "Will G2 Esports win IEM Rio 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"89974224732538357270358831008208977722682679869562262869561330052033699890845\", \"81959205011346267938207367098194715209057727162756601059127531566177792944291\"]",
+        "volume": "15007.480437",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Natus Vincere win IEM Rio 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"53365435834410312114819597698857422684922480826265328778284523721071815174579\", \"36915130437899574827693563661754988089785469059086524726144700205210046153206\"]",
+        "volume": "47807.573915",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Team Vitality win IEM Rio 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"18510789636384431684235823555161695298708714886516244737979525580892201983735\", \"113600821205497442396697354008009588190895770565299612467807802631389655075\"]",
+        "volume": "8483.491795",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "CS2: Elisa Masters Espoo 2024 Winner",
+      "slug": "cs2-elisa-masters-espoo-2024-winner",
+      "start": "2024-10-09T21:16:46.973512Z",
+      "end": "2024-10-20T12:00:00Z",
+      "closed": true,
+      "n_markets": 9,
+      "markets": [
+       {
+        "question": "Will 9z win the Elisa Masters Espoo 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"101333833906483748906580755526687448965273628256464610828998509250677853393056\", \"77363236157623566452545815482202914886138232447733009564026797352839528653161\"]",
+        "volume": "1271.34654",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will ENCE win the Elisa Masters Espoo 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"38136509034861456458374394672334179306086069634763953738839285311601050338649\", \"92582202029566639102735097281502085351633445115077414654894000322572431268002\"]",
+        "volume": "111004.247008",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.992,
+        "bestAsk": 0.999,
+        "spread": 0.007,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will The MongolZ win the Elisa Masters Espoo 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"102300677358805340351742499162242298206959402230885572510574561775824328906206\", \"91721292960813214079935907382780021456375502767803854536808720384478820923065\"]",
+        "volume": "54381.955284",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.002,
+        "spread": 0.002,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "CS2: ESL Challenger Katowice 2024 Winner",
+      "slug": "cs2-esl-challenger-katowice-2024-winner",
+      "start": "2024-10-23T20:17:21.440003Z",
+      "end": "2024-10-27T12:00:00Z",
+      "closed": true,
+      "n_markets": 9,
+      "markets": [
+       {
+        "question": "Will MIBR win ESL Challenger Katowice 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"18684043528582997472999684746406482789041983896366844839956586265974198486373\", \"45387939706047629317441887484320922998676872186616800589144469390135371654387\"]",
+        "volume": "901.291837",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.009,
+        "spread": 0.009,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Eternal Fire win ESL Challenger Katowice 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"31505858296470432958050582759016045282554272577942525446054069139777266989222\", \"82811775752618054074700904513311918713065954034096626915111990699700299726698\"]",
+        "volume": "4994.885763",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Falcons win ESL Challenger Katowice 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"18372402092877162721811101154361679764227176659102866688628968033460967570922\", \"86316967417696613724696330983600555248689093584285020118713169588916675411706\"]",
+        "volume": "5020.382114",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.006,
+        "spread": 0.006,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "CS2: Blast Premier World Final Winner 2024",
+      "slug": "cs2-blast-premier-world-final-winner-2024",
+      "start": "2024-10-28T15:51:01.697262Z",
+      "end": "2024-11-03T12:00:00Z",
+      "closed": true,
+      "n_markets": 9,
+      "markets": [
+       {
+        "question": "Will NaVi win Blast Premier World Final 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"111312931287095949969847746072147281224085992017898491375354159294385678390684\", \"13314102180248131939793025184970649899720837990358925948942453833298886332030\"]",
+        "volume": "10247.416612",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Vitality win Blast Premier World Final 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"9670545783659060604531585520119503843352632384687376454954760070236070565415\", \"43982800571234907834767462056921722260339882191942686240956311134307956852284\"]",
+        "volume": "13090.251333",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.005,
+        "spread": 0.005,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Spirit win Blast Premier World Final 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"16224347159664779522469897432348626793004492380823553068719547795346066113108\", \"48727512257114861829950233285764525104679184311266380844208828805449239923773\"]",
+        "volume": "40845.461721",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "CS2: Perfect World Shanghai Major 2024 Winner",
+      "slug": "cs2-perfect-world-shanghai-majors-winner",
+      "start": "2024-12-06T21:21:26.819303Z",
+      "end": "2024-12-15T12:00:00Z",
+      "closed": true,
+      "n_markets": 21,
+      "markets": [
+       {
+        "question": "Will Natus Vincere win the Perfect World Shanghai Major 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"80966082403752217461246333877832932441771903035473802131960654791780996027111\", \"42050996690009189084621362949014694486199401934719055600885126149616630546129\"]",
+        "volume": "2399.890038",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will G2 Esports win the Perfect World Shanghai Major 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"4515289443423039603192852250811959557366996100945011728704054015504285472526\", \"77829885805355942248230547178730386241476661646271747401041356742110453704523\"]",
+        "volume": "25859.139278",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Team Vitality win the Perfect World Shanghai Major 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"10798083812935209397884738912094450700567123295582145839984269146455918319165\", \"2273149248353308627479000394881748227123261373338544465539424196513471238046\"]",
+        "volume": "18611.722351",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "polymarket events tag=league-of-legends open",
+   "ok": true,
+   "secs": 0.39,
+   "result": {
+    "n": 50,
+    "examples": [
+     {
+      "title": "Worlds 2026 Winning Region",
+      "slug": "lol-worlds-2026-winning-region-226",
+      "start": "2025-12-30T15:15:49.335Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 7,
+      "markets": [
+       {
+        "question": "Will a team from LCK (South Korea) win LoL Worlds 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.685\", \"0.315\"]",
+        "clobTokenIds": "[\"71142357229322422344089572678224125547687709803011207827324848262016351952627\", \"41852539340970627294572261541672153709430009321845187893526698172238523925204\"]",
+        "volume": "126066.510083",
+        "liquidity": "23403.0644",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.68,
+        "bestAsk": 0.69,
+        "spread": 0.01,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Will a team from LPL (China) win LoL Worlds 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.255\", \"0.745\"]",
+        "clobTokenIds": "[\"63553648568153764734764671568095102122288246900552333991766030067701843832429\", \"45993050615878682688227575860255511835379389831434793742769053348825525182248\"]",
+        "volume": "117520.99925599998",
+        "liquidity": "19876.6367",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.25,
+        "bestAsk": 0.26,
+        "spread": 0.01,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Will a team from LEC (Europe / EMEA) win LoL Worlds 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.0535\", \"0.9465\"]",
+        "clobTokenIds": "[\"8075586814258215407911549328821150398632147457489902941671175151004761484297\", \"30669271320870251893129736156586825338211544209888851524967241257282084382538\"]",
+        "volume": "54471.158367999975",
+        "liquidity": "8818.88423",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.049,
+        "bestAsk": 0.058,
+        "spread": 0.009,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will Grok AI beat T1 in 2026? ",
+      "slug": "will-t1-beat-grok-ai-in-2026",
+      "start": "2026-02-13T01:41:03.520297Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will Grok AI beat T1 in 2026? ",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.0155\", \"0.9845\"]",
+        "clobTokenIds": "[\"104282291059413542365063689338883743489763941813522234045325493604544843033020\", \"15619368674597786927927838221549203995057480242722179772151412069589429137920\"]",
+        "volume": "87370.55687600003",
+        "liquidity": "46410.07882",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.013,
+        "bestAsk": 0.018,
+        "spread": 0.005,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will Faker win a Finals MVP Award at an international event in 2026?",
+      "slug": "will-faker-win-a-finals-mvp-award-at-an-international-event-in-2026",
+      "start": "2026-03-03T21:42:59.437256Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will Faker win a Finals MVP Award at an international event in 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.0545\", \"0.9455\"]",
+        "clobTokenIds": "[\"107447321736958001331291285876045469730039741023700731311287919712891910829120\", \"45444190086616885039317752201415657721176543075037325119478141230222670911007\"]",
+        "volume": "107911.57110100001",
+        "liquidity": "31003.18537",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.05,
+        "bestAsk": 0.059,
+        "spread": 0.009,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "LoL: Myth Esports vs The Bandits (BO3) - Road Of Legends Regular Season",
+      "slug": "lol-myth-ban2-2026-05-14",
+      "start": "2026-05-09T05:32:53.448036Z",
+      "end": "2026-05-22T03:59:00Z",
+      "closed": false,
+      "n_markets": 23,
+      "markets": [
+       {
+        "question": "LoL: Myth Esports vs The Bandits (BO3) - Road Of Legends Regular Season",
+        "outcomes": "[\"Myth Esports\", \"The Bandits\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"61590097994753986496234724425782565351330895491153885711133184412029721086865\", \"63886213612469015898868229495751193591334081679749094583272138972268109224293\"]",
+        "volume": "32439.28786099999",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-05-14 17:30:00+00",
+        "sportsMarketType": "moneyline",
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "LoL: Myth Esports vs The Bandits - Game 1 Winner",
+        "outcomes": "[\"Myth Esports\", \"The Bandits\"]",
+        "outcomePrices": "[\"0.5\", \"0.5\"]",
+        "clobTokenIds": "[\"49766164031583870057476916792951251155898050557988378099689123221556884955463\", \"18549661586081483285483666965349473010300150840165890348895213489929768468423\"]",
+        "volume": "68216.04003799999",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-05-14 17:30:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": 0.5,
+        "bestAsk": 0.51,
+        "spread": 0.01,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "LoL: Myth Esports vs The Bandits - Game 2 Winner",
+        "outcomes": "[\"Myth Esports\", \"The Bandits\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"49465225240451007292617837308676467770904778882897844033070480630861902668485\", \"66610586712194247315981471361419641767758987152104716041610815908711324740598\"]",
+        "volume": "862.8049549999998",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-05-14 17:30:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Fnatic merger/acquisition announced by...?",
+      "slug": "fnatic-mergeracquisition-announced-by",
+      "start": "2026-05-20T16:10:19.776265Z",
+      "end": "2026-09-02T03:59:00Z",
+      "closed": false,
+      "n_markets": 8,
+      "markets": [
+       {
+        "question": "archFnatic merger/acquisition announced by June 1, 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.42\", \"0.58\"]",
+        "clobTokenIds": "[\"60016361100928019582394612773334330055477788797649163282249973373660783340569\", \"63355012363733764733569068809482074192220429027507308046001476185108333317764\"]",
+        "volume": "1646.3461830000003",
+        "liquidity": "27.1291",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.06,
+        "bestAsk": 0.78,
+        "spread": 0.72,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Fnatic merger/acquisition announced by July 1, 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"12509614547968126421435646336571398202561398351421225384245394242062508991204\", \"80535620439823455761288144405577043957110647204118468946839675660052766954\"]",
+        "volume": "2278.216377",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Fnatic merger/acquisition announced by September 1, 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"35313449708686118646780132950995783228107208693068460360361383056495847122576\", \"15008896777364957831854139323337683070449862804068179944484974109246193957446\"]",
+        "volume": "10269.572156",
+        "liquidity": "0",
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.009,
+        "spread": 0.009,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "LoL: Bilibili Gaming Junior vs KT Rolster Challengers (BO3) - Asia Masters Group B",
+      "slug": "lol-blgj-ktc-2026-06-11",
+      "start": "2026-06-10T18:54:43.437857Z",
+      "end": "2026-06-19T03:59:00Z",
+      "closed": false,
+      "n_markets": 23,
+      "markets": [
+       {
+        "question": "LoL: Bilibili Gaming Junior vs KT Rolster Challengers - Game 1 Winner",
+        "outcomes": "[\"Bilibili Gaming Junior\", \"KT Rolster Challengers\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"9822491570528643714443754224443922021217073228815612441278462961837017508503\", \"88413330492969931388074471003362987323792302299216267171902061457752267023596\"]",
+        "volume": "79684.19004300001",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-06-11 08:20:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "LoL: Bilibili Gaming Junior vs KT Rolster Challengers - Game 2 Winner",
+        "outcomes": "[\"Bilibili Gaming Junior\", \"KT Rolster Challengers\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"68918921545870824247006742435683021979078838132725481896062896448656385449817\", \"13440628114512291155098962759734093822503702226178999518180309028646007914725\"]",
+        "volume": "148654.32041200012",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-06-11 08:20:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "LoL: Bilibili Gaming Junior vs KT Rolster Challengers (BO3) - Asia Masters Group B",
+        "outcomes": "[\"Bilibili Gaming Junior\", \"KT Rolster Challengers\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"114271220799159374407547467361235430031261142176132036171822000720898973023533\", \"83097067195718125521267469421236674017310905192769377640959883477285202628431\"]",
+        "volume": "117500.55792600001",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-06-11 08:20:00+00",
+        "sportsMarketType": "moneyline",
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "polymarket events tag=league-of-legends closed",
+   "ok": true,
+   "secs": 0.18,
+   "result": {
+    "n": 50,
+    "examples": [
+     {
+      "title": "League of Legends: Worlds Winner 2024",
+      "slug": "worlds-2024-lol-winner",
+      "start": "2024-09-25T17:22:47.235874Z",
+      "end": "2024-11-02T12:00:00Z",
+      "closed": true,
+      "n_markets": 13,
+      "markets": [
+       {
+        "question": "Will Hanwha Life Esports win LoL Worlds 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"82382787139677103174193762245402593640379889520480216754150713881769218482390\", \"54402802295149899339246464834916193038322428592288151574904077314505036799657\"]",
+        "volume": "124596.741319",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Gen.G win LoL Worlds 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"6876454996614058497970898388972318432764469883881290036242391047124674498709\", \"40329593072513727003987655282212633057314359757077208818012495314869285179874\"]",
+        "volume": "438454.5917",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Dplus KIA win LoL Worlds 2024?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"14188284193525574347945783471400910629157146778145773870691332399584608373456\", \"39381867046816374659480203749465421691580693056142949603227713005578739438231\"]",
+        "volume": "79603.585379",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "LEC: G2 Esports vs. GIANTX",
+      "slug": "lec-g2-esports-vs-giantx",
+      "start": "2025-04-24T17:10:33.412361Z",
+      "end": "2025-04-26T12:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "LEC: G2 Esports vs. GIANTX",
+        "outcomes": "[\"G2 Esports\", \"GIANTX\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"32423297698376793481910937915516989848415512042408167914130065487905243890819\", \"62886209575190919082232946357036479072580778382100983910700496959302889819233\"]",
+        "volume": "2776.649041",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2025-04-26 13:00:00+00",
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "LEC: Movistar vs. Fnatic",
+      "slug": "lec-movistar-vs-fnatic",
+      "start": "2025-04-24T17:12:31.873608Z",
+      "end": "2025-04-26T12:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "LEC: Movistar vs. Fnatic",
+        "outcomes": "[\" Movistar \", \"Fnatic\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"106046998795241953748722385246658104775462783960657984299003281928244500881329\", \"34283001791038814694392784366034545659980221278747572194140026247860827580288\"]",
+        "volume": "3177.060093",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2025-04-26 15:00:00+00",
+        "sportsMarketType": null,
+        "bestBid": 0.991,
+        "bestAsk": 1,
+        "spread": 0.009,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "LEC: G2 vs. Fnatic",
+      "slug": "lec-g2-vs-fnatic",
+      "start": "2025-04-26T17:50:30.466782Z",
+      "end": "2025-04-27T12:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "LEC: G2 vs. Fnatic",
+        "outcomes": "[\"G2\", \"Fnatic\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"107886236362351909155405516113650573547818984416021620247363383347581292343417\", \"59664355104830451453902326176646701633535464329942577482125521225067363100965\"]",
+        "volume": "3233.082381",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2025-04-27 13:00:00+00",
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.008,
+        "spread": 0.008,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "LEC: GIANTX vs. Movistar ",
+      "slug": "lec-giantx-vs-movistar",
+      "start": "2025-04-26T17:50:33.926828Z",
+      "end": "2025-04-27T12:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "LEC: GIANTX vs. Movistar ",
+        "outcomes": "[\"GIANTX\", \"Movistar\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"56744352123636114156805223496437253050022834034628140267063090095284605194534\", \"100202132909203836613755205649558516786571072389839035939776717738104145142859\"]",
+        "volume": "1900.66737",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2025-04-27 15:00:00+00",
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "LoL: JDG vs AL",
+      "slug": "lol-blg-vs-tes",
+      "start": "2025-09-15T01:57:04.175632Z",
+      "end": "2025-09-15T00:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "LoL: JDG vs AL",
+        "outcomes": "[\"JDG\", \"AL\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"100731489655947091144044015980316490130981736425213221926965986687130668086888\", \"392423682265026091900271479700652859349868604844781446412193550985107374992\"]",
+        "volume": "241344.605154",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2025-09-16 09:00:00+00",
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "polymarket events tag=valorant open",
+   "ok": true,
+   "secs": 0.33,
+   "result": {
+    "n": 50,
+    "examples": [
+     {
+      "title": "Valorant Team to Win an International in 2026",
+      "slug": "valorant-team-to-win-an-international-in-2026-20260630153803890",
+      "start": "2026-06-30T16:58:33.835801Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 46,
+      "markets": [
+       {
+        "question": "Will Evil Geniuses Win an International Event in 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.0215\", \"0.9785\"]",
+        "clobTokenIds": "[\"43335172744329070118358516139674738078024058481683941658061026963324094647108\", \"1808448516457201588364791647461530362650036978826695646311211640520029428697\"]",
+        "volume": "29.86",
+        "liquidity": "27.24149",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.005,
+        "bestAsk": 0.038,
+        "spread": 0.033,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Will FURIA Win an International Event in 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.02\", \"0.98\"]",
+        "clobTokenIds": "[\"14633980913886816102572963604507991534614605907907039885275326868694069820384\", \"27932519499571158192796000235048352170623803007800629640928461178027542510102\"]",
+        "volume": "192.88",
+        "liquidity": "182.91125",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.002,
+        "bestAsk": 0.038,
+        "spread": 0.036,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Will MIBR Win an International Event in 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.021\", \"0.979\"]",
+        "clobTokenIds": "[\"108520368301872671162496083346658118648303186333430289817498142177080039893567\", \"58467035882311366709149280130651053571020779959768173904353962492555744859749\"]",
+        "volume": "29.85",
+        "liquidity": "29.27995",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.004,
+        "bestAsk": 0.038,
+        "spread": 0.034,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will VALORANT Viewership Surpass CS2 Viewership at a Major in 2026?",
+      "slug": "will-valorant-viewership-surpass-cs2-viewership-at-a-major-in-2026-20260630155452900",
+      "start": "2026-06-30T17:00:45.668068Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will VALORANT Viewership Surpass CS2 Viewership at a Major in 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.0345\", \"0.9655\"]",
+        "clobTokenIds": "[\"23586651495562452149471282448159254598309564370402917528347833961451183826236\", \"84023559882163774103865727324410098572159629288781009724909796328870886735639\"]",
+        "volume": "449.51395",
+        "liquidity": "28.97096",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.009,
+        "bestAsk": 0.06,
+        "spread": 0.051,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will Tarik have a boxing fight with FNS in 2026?",
+      "slug": "will-tarik-have-a-boxing-fight-with-fns-in-2026-20260630175008083",
+      "start": "2026-07-01T15:52:51.60982Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will Tarik have a boxing fight with FNS in 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.504\", \"0.496\"]",
+        "clobTokenIds": "[\"44421608950169221361620961847062438879358330441234821955756099314933779726083\", \"56225994249730977574203464143741799424602304166215818051618102072694896067653\"]",
+        "volume": "804.13",
+        "liquidity": "1.77739",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.01,
+        "bestAsk": 0.998,
+        "spread": 0.988,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v2",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will TenZ be elected the new Riot Games CEO in 2026?",
+      "slug": "will-tenz-be-elected-the-new-riot-games-ceo-in-2026-20260715203936418",
+      "start": "2026-07-17T22:15:19.617311Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will TenZ be elected the new Riot Games CEO in 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.006\", \"0.994\"]",
+        "clobTokenIds": "[\"54959662444024287014070624535098494160182173614814332501316577253633419531528\", \"89536367527448786770305949364377502938716555478094998243284460619893207613243\"]",
+        "volume": "2438.394085",
+        "liquidity": "136.03623",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.002,
+        "bestAsk": 0.01,
+        "spread": 0.008,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will Zekken Leave MIBR in 2026?",
+      "slug": "will-zekken-leave-mibr-in-2026-20260715205615632",
+      "start": "2026-07-17T22:15:57.382048Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will Zekken Leave MIBR in 2026?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.52\", \"0.48\"]",
+        "clobTokenIds": "[\"1841493687687765596590838538808750294576566740789948045702740353222524887585\", \"95373769366452690437309786510438958930535931463589630875900218138303071093582\"]",
+        "volume": "719.39",
+        "liquidity": "23.5635",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.08,
+        "bestAsk": 0.96,
+        "spread": 0.88,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Will FNS Announce a 2028 Presidential Run by the End of the Year?",
+      "slug": "will-fns-announce-a-2028-presidential-run-by-the-end-of-the-year-20260715211830939",
+      "start": "2026-07-29T16:44:30.905663Z",
+      "end": "2027-01-01T04:59:00Z",
+      "closed": false,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Will FNS Announce a 2028 Presidential Run by the End of the Year?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.5\", \"0.5\"]",
+        "clobTokenIds": "[\"28504445396552451377342302809382878049166696851960938188769838329878168327493\", \"11847073604297254273830540115272214145170982731543394912865815782191805652832\"]",
+        "volume": "12.940000000000001",
+        "liquidity": "2.5962",
+        "closed": false,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.02,
+        "bestAsk": 0.98,
+        "spread": 0.96,
+        "umaResolutionStatus": null,
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "polymarket events tag=valorant closed",
+   "ok": true,
+   "secs": 0.2,
+   "result": {
+    "n": 50,
+    "examples": [
+     {
+      "title": "VCT 2025: Americas Kickoff Winner",
+      "slug": "vct-2025-americas-kickoff-winner",
+      "start": "2025-01-13T22:27:26.605398Z",
+      "end": "2025-02-08T12:00:00Z",
+      "closed": true,
+      "n_markets": 13,
+      "markets": [
+       {
+        "question": "Will 100 Thieves win the VCT 2025 Americas Kickoff?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"57342821512542782739416755806484640866350218693593808258506810891499573777339\", \"58163136598167637027150633100953300078540584833749555880513936523657199890756\"]",
+        "volume": "2090.052612",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Cloud9 win the VCT 2025 Americas Kickoff?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"71200829619749002848607314584871718246976508803476790965473439847435470278703\", \"71699633326270237783279205182996175957419351812205059290541841355060621472406\"]",
+        "volume": "2973.730065",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Evil Geniuses win the VCT 2025 Americas Kickoff?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"10364648807250899263336923229214682388014204494103933444987528337070000301804\", \"8297537147420649639918909855313778377301408411424646604964882661018572021017\"]",
+        "volume": "1565.554472",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "VALORANT Masters Toronto 2025",
+      "slug": "valorant-masters-toronto-2025",
+      "start": "2025-06-08T12:40:23.952515Z",
+      "end": "2025-06-23T00:00:00Z",
+      "closed": true,
+      "n_markets": 13,
+      "markets": [
+       {
+        "question": "Will G2 Esports win the 2025 VALORANT Masters Toronto Tournament?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"78966445993005939069564856513417326600800963026763227487119643204993663608873\", \"1594679243925433653029489739896256182645100828743996506957807274845514719914\"]",
+        "volume": "1656.673332",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Sentinels win the 2025 VALORANT Masters Toronto Tournament?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"51547009989839809120041894015632931449024511370309803851539331980924096005677\", \"110278329898211920019296349424256803735157194873494304720993314010239524234951\"]",
+        "volume": "296.649339",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will MIBR win the 2025 VALORANT Masters Toronto Tournament?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"83934786484039264605563265110274450047032822930793046738051294198081683267339\", \"25523445271028801046733158804460636866709173083085249127684355538974282606964\"]",
+        "volume": "91.88775",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.001,
+        "bestAsk": 0.009,
+        "spread": 0.008,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "Esports World Cup: Valorant",
+      "slug": "esports-world-cup-valorant",
+      "start": "2025-07-08T14:50:13.823805Z",
+      "end": "2025-07-14T00:00:00Z",
+      "closed": true,
+      "n_markets": 17,
+      "markets": [
+       {
+        "question": "Will Fnatic win the 2025 Valorant Esports World Cup Tournament?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"73609019125390399066431198720934280256172039384696428992914504338895812256387\", \"72795219323062379805998321992559639912262066056446693734589481091134160159731\"]",
+        "volume": "15338.480148",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Team Heretics win the 2025 Valorant Esports World Cup Tournament?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"2878437129008187141310830388746621514946855449064084763382699425866218346942\", \"100367492309379080373602500195606087185066415993771438458273240362035495938347\"]",
+        "volume": "21973.810739",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will G2 Esports win the 2025 Valorant Esports World Cup Tournament?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"84523384299737870130462114372853765782408636053443406074102108795449046337878\", \"33205413183639988720465965545200436509577563640808177509699656556303138284094\"]",
+        "volume": "2844.59886",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "Valorant: SLT Seongnam vs. T1 Academy",
+      "slug": "valorant-slt-seongnam-vs-t1-academy",
+      "start": "2025-08-19T06:05:19.33568Z",
+      "end": "2025-08-20T00:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Valorant: SLT Seongnam vs. T1 Academy",
+        "outcomes": "[\"SLT Seongnam\", \"T1 Academy\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"61945535784916540517193522939652933210846782298901878244276234877355804200692\", \"25645966420838875027395896770387822080006849749665085299049749073014926324750\"]",
+        "volume": "2836",
+        "liquidity": "0",
+        "closed": true,
+        "gameStartTime": "2025-08-19 08:00:00+00",
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "Valorant: DRX Academy vs. FEARX",
+      "slug": "valorant-drx-academy-vs-fearx",
+      "start": "2025-08-19T06:05:20.387709Z",
+      "end": "2025-08-20T00:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Valorant: DRX Academy vs. FEARX",
+        "outcomes": "[\"DRX Academy\", \"FEARX\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"83029043703059267314247229576739247504481172407645779945541344309132622811810\", \"56812661807190101624207800673873931330431258100058965890497481678180883707872\"]",
+        "volume": "3163.522559",
+        "liquidity": "0",
+        "closed": true,
+        "gameStartTime": "2025-08-19 10:00:00+00",
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "Valorant: Fancy United Esports and Team Secret Academy",
+      "slug": "valorant-fancy-united-esports-and-team-secret-academy",
+      "start": "2025-08-19T06:24:44.243969Z",
+      "end": "2025-08-20T00:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Valorant: Fancy United Esports and Team Secret Academy",
+        "outcomes": "[\"Fancy United Esports\", \"Team Secret Academy\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"16685276204780650905405774121347172882724798862067988381021798715632307634514\", \"79214002843973767463897184644856780510690396532177653080470258745952588895629\"]",
+        "volume": "1540.465954",
+        "liquidity": "0",
+        "closed": true,
+        "gameStartTime": "2025-08-19 11:00:00+00",
+        "sportsMarketType": null,
+        "bestBid": 0.991,
+        "bestAsk": 1,
+        "spread": 0.009,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "polymarket events tag=dota-2 open",
+   "ok": true,
+   "secs": 0.43,
+   "result": {
+    "n": 27,
+    "examples": [
+     {
+      "title": "Dota 2: REKONIX vs Team Nemesis - More Markets",
+      "slug": "dota2-rnx-nem-2026-07-12-more-markets",
+      "start": "2026-07-11T17:31:44.154333Z",
+      "end": "2026-07-20T03:59:00Z",
+      "closed": false,
+      "n_markets": 29,
+      "markets": [
+       {
+        "question": "Dota 2: REKONIX vs Team Nemesis - Game 1 Winner",
+        "outcomes": "[\"REKONIX\", \"Team Nemesis\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"90912190630175200805827076506881962170030344593208497487958283062556067846899\", \"45280196732223750989767984101465690442391116346771016128184193629867669221370\"]",
+        "volume": "296705.439122",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-07-12 09:10:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Dota 2: REKONIX vs Team Nemesis - Game 2 Winner",
+        "outcomes": "[\"REKONIX\", \"Team Nemesis\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"56756661591231024232293612307766574619510235695228033895614049910615833094309\", \"78125786151785200946199561856263166317758543583013910529478121705083224661337\"]",
+        "volume": "32773.43104200001",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-07-12 09:10:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Game 1: Ends in Daytime?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"26915157774944453872981341084836354723987526072458309334950806682337324247906\", \"29859797522427179316245808854883989151159068186038188935292710003134728369587\"]",
+        "volume": null,
+        "liquidity": "0",
+        "closed": true,
+        "gameStartTime": "2026-07-12 09:10:00+00",
+        "sportsMarketType": "dota2_game_ends_daytime",
+        "bestBid": 0.8,
+        "bestAsk": 1,
+        "spread": 0.2,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Dota 2: Nemiga Gaming vs Spirit Academy (BO3) - European Pro League Playoffs",
+      "slug": "dota2-nemiga-spirit1-2026-07-11",
+      "start": "2026-07-11T17:12:28.254646Z",
+      "end": "2026-07-11T22:25:57.99Z",
+      "closed": false,
+      "n_markets": 20,
+      "markets": [
+       {
+        "question": "Dota 2: Nemiga Gaming vs Spirit Academy - Game 1 Winner",
+        "outcomes": "[\"Nemiga Gaming\", \"Spirit Academy\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"71313752705772733342400558902540023377274942382118558396622218620491257749256\", \"36126251321835207672031608862931582256524372724835418602895406145923178605215\"]",
+        "volume": null,
+        "liquidity": "0",
+        "closed": true,
+        "gameStartTime": "2026-07-11 16:25:57.99+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": null,
+        "bestAsk": 0.18,
+        "spread": 0.18,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Dota 2: Nemiga Gaming vs Spirit Academy - Game 2 Winner",
+        "outcomes": "[\"Nemiga Gaming\", \"Spirit Academy\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"87652218258329108710575624541960615498766417231148075958932062368700116289330\", \"103939631529018699764247928672319541710140496068941225551313987424494678123403\"]",
+        "volume": null,
+        "liquidity": "0",
+        "closed": true,
+        "gameStartTime": "2026-07-11 16:25:57.99+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": 0.82,
+        "bestAsk": 1,
+        "spread": 0.18,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Dota 2: Nemiga Gaming vs Spirit Academy (BO3) - European Pro League Playoffs",
+        "outcomes": "[\"Nemiga Gaming\", \"Spirit Academy\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"3578132594194667822538091727832251941542212265225928251272857474010884576187\", \"68034629646370726252434550592757354338295196291056011031045235896306341372529\"]",
+        "volume": null,
+        "liquidity": "0",
+        "closed": true,
+        "gameStartTime": "2026-07-11 16:25:57.99+00",
+        "sportsMarketType": "moneyline",
+        "bestBid": 0.82,
+        "bestAsk": 1,
+        "spread": 0.18,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Dota 2: Stray Team vs Rostik Team (BO3) - BetBoom Streamers Battle Group A",
+      "slug": "dota2-st1-rt-2026-07-28",
+      "start": "2026-07-26T20:42:00Z",
+      "end": "2026-08-05T03:59:00Z",
+      "closed": false,
+      "n_markets": 19,
+      "markets": [
+       {
+        "question": "Dota 2: Stray Team vs Rostik Team - Game 1 Winner",
+        "outcomes": "[\"Stray Team\", \"Rostik Team\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"43929062479515409038748623022552710024563830508306744572853256932109274472722\", \"111831877399947123597306472080010263731173554494467259661029885904033580071374\"]",
+        "volume": "4604.330071",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-07-28 15:15:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Dota 2: Stray Team vs Rostik Team - Game 2 Winner",
+        "outcomes": "[\"Stray Team\", \"Rostik Team\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"6173177747161674767725085867347249050998752722028613903299861676765367662756\", \"83811597834357553191997970922151859314488693364562512777752735833397716898936\"]",
+        "volume": "18551.132502000004",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-07-28 15:15:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Dota 2: Stray Team vs Rostik Team (BO3) - BetBoom Streamers Battle Group A",
+        "outcomes": "[\"Stray Team\", \"Rostik Team\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"102901988879931465840384712263665756046040535693860131585853600211645153231048\", \"3133903991445071671602163275956542764414451753570877919026551820300113165323\"]",
+        "volume": "31532.867092999993",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-07-28 15:15:00+00",
+        "sportsMarketType": "moneyline",
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Dota 2: VooDooSh Team vs Daxak Team (BO3) - BetBoom Streamers Battle Group B",
+      "slug": "dota2-vds-dxk-2026-07-28",
+      "start": "2026-07-26T20:42:19Z",
+      "end": "2026-08-05T03:59:00Z",
+      "closed": false,
+      "n_markets": 19,
+      "markets": [
+       {
+        "question": "Dota 2: VooDooSh Team vs Daxak Team - Game 1 Winner",
+        "outcomes": "[\"VooDooSh Team\", \"Daxak Team\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"74571528986059992472484866223299853827296897819341764103334321391732605995957\", \"53994202720488324250679281885210200118245131607313237353180895519103370132950\"]",
+        "volume": "9948.581597999999",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-07-28 15:15:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Dota 2: VooDooSh Team vs Daxak Team - Game 2 Winner",
+        "outcomes": "[\"VooDooSh Team\", \"Daxak Team\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"8922763412555886338974426414923622336397428106579557438082053342321568598949\", \"111267561875811604854997988770685957570085230024638091942648565631193275308114\"]",
+        "volume": "14030.888230000002",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-07-28 15:15:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Dota 2: VooDooSh Team vs Daxak Team (BO3) - BetBoom Streamers Battle Group B",
+        "outcomes": "[\"VooDooSh Team\", \"Daxak Team\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"35569019116554440686871978475552812027989883921078073372503355692764971383071\", \"87599920556484651618696124631263957226187771777640627332487166104652149187446\"]",
+        "volume": "16195.456265999997",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-07-28 15:15:00+00",
+        "sportsMarketType": "moneyline",
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Dota 2: YBN Team vs VooDooSh Team (BO3) - BetBoom Streamers Battle Group B",
+      "slug": "dota2-ybn-vds-2026-07-29",
+      "start": "2026-07-26T20:42:41Z",
+      "end": "2026-08-06T03:59:00Z",
+      "closed": false,
+      "n_markets": 19,
+      "markets": [
+       {
+        "question": "Dota 2: YBN Team vs VooDooSh Team - Game 1 Winner",
+        "outcomes": "[\"YBN Team\", \"VooDooSh Team\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"96228973320828968839629394725851638214053307692866408223934374767787112409510\", \"9468102740351844357265121670226340599205583904147345242972880252668692528494\"]",
+        "volume": "14560.315322",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-07-29 12:10:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Dota 2: YBN Team vs VooDooSh Team - Game 2 Winner",
+        "outcomes": "[\"YBN Team\", \"VooDooSh Team\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"89057959066450430250584585167810814620580863417271676749902249869309721942132\", \"107136057430216439238215563547452986840706032096731763389860407046437217837045\"]",
+        "volume": "12085.012806000002",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-07-29 12:10:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Dota 2: YBN Team vs VooDooSh Team (BO3) - BetBoom Streamers Battle Group B",
+        "outcomes": "[\"YBN Team\", \"VooDooSh Team\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"17139813170145776220817918385644319951648589930660115982279925467022892438619\", \"79986706738582764852590895113523587937448048527920422989113349630367873695467\"]",
+        "volume": "30806.27525899999",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-07-29 12:10:00+00",
+        "sportsMarketType": "moneyline",
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       }
+      ]
+     },
+     {
+      "title": "Dota 2: Stray Team vs Travoman Team (BO3) - BetBoom Streamers Battle Group A",
+      "slug": "dota2-st1-tt1-2026-07-30",
+      "start": "2026-07-26T20:43:19Z",
+      "end": "2026-08-07T03:59:00Z",
+      "closed": false,
+      "n_markets": 19,
+      "markets": [
+       {
+        "question": "Dota 2: Stray Team vs Travoman Team - Game 1 Winner",
+        "outcomes": "[\"Stray Team\", \"Travoman Team\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"72707690221324266566296592173508888748937066738194806733954737081960012058789\", \"61618752426849420980112864656434097110980410514114384453195403697572462139432\"]",
+        "volume": "9614.472743",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-07-30 15:15:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Dota 2: Stray Team vs Travoman Team - Game 2 Winner",
+        "outcomes": "[\"Stray Team\", \"Travoman Team\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"80061347693229328219300422873877642413797358601042594051101035559877809442671\", \"5901721049252615445023572334767231661621716733133105758640797835901053533849\"]",
+        "volume": "874.7885080000001",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-07-30 15:15:00+00",
+        "sportsMarketType": "child_moneyline",
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       },
+       {
+        "question": "Dota 2: Stray Team vs Travoman Team (BO3) - BetBoom Streamers Battle Group A",
+        "outcomes": "[\"Stray Team\", \"Travoman Team\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"49967598887676483467058644779989418674882834618156416684718464643732668254209\", \"80429496621433139679924492983431373600668385144233912468728032279894737208519\"]",
+        "volume": "1334.1765289999998",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2026-07-30 15:15:00+00",
+        "sportsMarketType": "moneyline",
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": "sports_fees_v3",
+        "takerBaseFee": 1000
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "polymarket events tag=dota-2 closed",
+   "ok": true,
+   "secs": 0.18,
+   "result": {
+    "n": 50,
+    "examples": [
+     {
+      "title": "Esports World Cup: Dota 2",
+      "slug": "esports-world-cup-dota-2",
+      "start": "2025-07-08T16:18:29.073373Z",
+      "end": "2025-07-24T00:00:00Z",
+      "closed": true,
+      "n_markets": 17,
+      "markets": [
+       {
+        "question": "Will Gaimin Gladiators win the 2025 Dota 2 Esports World Cup Tournament?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"77957047379922572559067141895028099909390578088000443045594536584934161382158\", \"87597076524053879428938926166529726341895488594095133617708181146923290305017\"]",
+        "volume": "2749.007116",
+        "liquidity": "0",
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will Xtreme Gaming win the 2025 Dota 2 Esports World Cup Tournament?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"14021929168517603226796761912853032200153667084094396823510898572312052966295\", \"66518246128533531970240312408864993556280611509592864837860567040305186576134\"]",
+        "volume": "7326",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       },
+       {
+        "question": "Will PVISION win the 2025 Dota 2 Esports World Cup Tournament?",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"101286752777635450895888424257957086546137419948549711997284626459384806370033\", \"28779558462805106279342631267901194177597897065680807736721262432882665690833\"]",
+        "volume": "10816.344608",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": null,
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "Dota 2: Natus Vincere vs. Xtreme Gaming",
+      "slug": "dota-2-natus-vincere-vs-xtreme-gaming",
+      "start": "2025-07-08T23:38:38.991292Z",
+      "end": "2025-07-10T00:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Dota 2: Natus Vincere vs. Xtreme Gaming",
+        "outcomes": "[\"Natus Vincere\", \"Xtreme Gaming\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"78551470641116880356924752863746930395599335552270042732349699757357143163926\", \"96885473044656718018928730672392716843652614409373933036720633331879294139924\"]",
+        "volume": "2440.326665",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2025-07-09 09:00:00+00",
+        "sportsMarketType": null,
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "Dota 2: Team Spirit vs. TALON",
+      "slug": "dota-2-team-spirit-vs-talon",
+      "start": "2025-07-08T23:33:49.780973Z",
+      "end": "2025-07-10T00:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Dota 2: Team Spirit vs. TALON",
+        "outcomes": "[\"Team Spirit\", \"TALON\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"83751083425182822158049452319562674943125031409862784824287180425117146095271\", \"21122890787117091860568215501758929091986068274878692245880277754827154015161\"]",
+        "volume": "7742.084139",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2025-07-09 09:00:00+00",
+        "sportsMarketType": null,
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "Dota 2: Gaimin Gladiators vs. Execration",
+      "slug": "dota-2-gaimin-gladiators-vs-execration",
+      "start": "2025-07-08T23:33:49.374734Z",
+      "end": "2025-07-10T00:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Dota 2: Gaimin Gladiators vs. Execration",
+        "outcomes": "[\"Gaimin Gladiators\", \"Execration\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"84203130354390626553237118185768941753738558545287766011383264395058596767398\", \"60879386996039058858678212509445010298773817718360877335953479157654633270471\"]",
+        "volume": "2024.393098",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2025-07-09 11:30:00+00",
+        "sportsMarketType": null,
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "Dota 2: BB Team vs. Team Falcons",
+      "slug": "dota-2-bb-team-vs-team-falcons",
+      "start": "2025-07-08T23:33:49.389977Z",
+      "end": "2025-07-10T00:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Dota 2: BB Team vs. Team Falcons",
+        "outcomes": "[\"BB Team\", \"Team Falcons\"]",
+        "outcomePrices": "[\"1\", \"0\"]",
+        "clobTokenIds": "[\"28875345107317338575917817271864127599177639888442440871920986321316196569070\", \"79584846436558138027865941882820804433393964730100681626022906434893305221079\"]",
+        "volume": "3017.422075",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2025-07-09 11:30:00+00",
+        "sportsMarketType": null,
+        "bestBid": 0.999,
+        "bestAsk": 1,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     },
+     {
+      "title": "Dota 2: Virtus.pro vs. Team Yandex",
+      "slug": "dota-2-virtuspro-vs-team-yandex",
+      "start": "2025-07-08T23:38:38.785539Z",
+      "end": "2025-07-10T00:00:00Z",
+      "closed": true,
+      "n_markets": 1,
+      "markets": [
+       {
+        "question": "Dota 2: Virtus.pro vs. Team Yandex",
+        "outcomes": "[\"Virtus.pro\", \"Team Yandex\"]",
+        "outcomePrices": "[\"0\", \"1\"]",
+        "clobTokenIds": "[\"35213674595241037645380530952134372768741422709811509125625984938580264190280\", \"29059690045867715503474446550822904444048969828958494715387018107083474083459\"]",
+        "volume": "1125.71428",
+        "liquidity": null,
+        "closed": true,
+        "gameStartTime": "2025-07-09 14:00:00+00",
+        "sportsMarketType": null,
+        "bestBid": null,
+        "bestAsk": 0.001,
+        "spread": 0.001,
+        "umaResolutionStatus": "resolved",
+        "feeType": null,
+        "takerBaseFee": null
+       }
+      ]
+     }
+    ]
+   }
+  },
+  {
+   "name": "polymarket price history (closed market)",
+   "ok": true,
+   "secs": 0.29,
+   "result": {
+    "n": 0,
+    "first": null,
+    "last": null,
+    "keys": [
+     "history"
+    ]
+   }
+  },
+  {
+   "name": "polymarket price history (open market)",
+   "ok": true,
+   "secs": 0.02,
+   "result": {
+    "n": 168,
+    "first": {
+     "t": 1790395218,
+     "p": 0.695
+    },
+    "last": {
+     "t": 1790996533,
+     "p": 0.685
+    },
+    "keys": [
+     "history"
+    ]
+   }
+  },
+  {
+   "name": "polymarket order book",
+   "ok": true,
+   "secs": 0.25,
+   "result": {
+    "keys": [
+     "asks",
+     "asset_id",
+     "bids",
+     "hash",
+     "last_trade_price",
+     "market",
+     "min_order_size",
+     "neg_risk",
+     "tick_size",
+     "timestamp"
+    ],
+    "bids": [
+     {
+      "price": "0.66",
+      "size": "1173"
+     },
+     {
+      "price": "0.67",
+      "size": "1634.44"
+     },
+     {
+      "price": "0.68",
+      "size": "10452.85"
+     }
+    ],
+    "asks": [
+     {
+      "price": "0.71",
+      "size": "15072.19"
+     },
+     {
+      "price": "0.7",
+      "size": "3101.97"
+     },
+     {
+      "price": "0.69",
+      "size": "21523.59"
+     }
+    ],
+    "tick_size": "0.01",
+    "min_order_size": "5"
+   }
+  },
+  {
+   "name": "polymarket closed esports depth",
+   "ok": false,
+   "secs": 38.68,
+   "error": "HttpError: HTTP 422 for https://gamma-api.polymarket.com/events?tag_slug=esports&closed=true&limit=500&offset=2100&order=endDate&ascending=false: {\"type\":\"validation error\",\"error\":\"offset too large, use /events/keyset for deeper pagination\"}\n",
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/esports-betting/esports-betting/esalpha/probe.py\", line 30, in check\n    res = fn()\n          ^^^^\n  File \"/home/runner/work/esports-betting/esports-betting/esalpha/probe.py\", line 124, in pm_closed_depth\n    js = http.get_json(f\"{GAMMA}/events\", {\"tag_slug\": \"esports\", \"closed\": \"true\", \"limit\": 500,\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/esports-betting/esports-betting/esalpha/net.py\", line 78, in get_json\n    raise HttpError(resp.url, resp.status_code, resp.text)\nesalpha.net.HttpError: HTTP 422 for https://gamma-api.polymarket.com/events?tag_slug=esports&closed=true&limit=500&offset=2100&order=endDate&ascending=false: {\"type\":\"validation error\",\"error\":\"offset too large, use /events/keyset for deeper pagination\"}\n\n"
+  },
+  {
+   "name": "leaguepedia cargo",
+   "ok": true,
+   "secs": 0.3,
+   "result": "{\"error\": {\"code\": \"ratelimited\", \"info\": \"You've exceeded your rate limit. Please wait some time and try again.\", \"*\": \"See https://lol.fandom.com/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes.\"}}"
+  },
+  {
+   "name": "liquipedia api (cs)",
+   "ok": false,
+   "secs": 47.84,
+   "error": "HttpError: HTTP 429 for https://liquipedia.net/counterstrike/api.php?action=query&list=search&srsearch=Major&srlimit=3&format=json: <!DOCTYPE HTML><title>Rate Limited - Liquipedia</title><meta charset=utf-8><meta name=viewport content=\"width=device-width,initial-scale=1\"><style type=text/css>body{margin:40px auto;max-width:700px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1{line-height:1.2}.reason{display:none}</st",
+   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/esports-betting/esports-betting/esalpha/probe.py\", line 30, in check\n    res = fn()\n          ^^^^\n  File \"/home/runner/work/esports-betting/esports-betting/esalpha/probe.py\", line 139, in <lambda>\n    check(\"liquipedia api (cs)\", lambda: _short(http.get_json(\"https://liquipedia.net/counterstrike/api.php\", {\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/esports-betting/esports-betting/esalpha/net.py\", line 78, in get_json\n    raise HttpError(resp.url, resp.status_code, resp.text)\nesalpha.net.HttpError: HTTP 429 for https://liquipedia.net/counterstrike/api.php?action=query&list=search&srsearch=Major&srlimit=3&format=json: <!DOCTYPE HTML><title>Rate Limited - Liquipedia</title><meta charset=utf-8><meta name=viewport content=\"width=device-width,initial-scale=1\"><style type=text/css>body{margin:40px auto;max-width:700px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1{line-height:1.2}.reason{display:none}</st\n"
+  },
+  {
+   "name": "vlr.gg results page (honest UA)",
+   "ok": true,
+   "secs": 0.18,
+   "result": {
+    "status": 200,
+    "bytes": 138139,
+    "head": "<!DOCTYPE html>\n<html lang=\"en\" data-theme=\"light\">\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<title>\n\t\t\tValorant esports Match Results | VLR.gg\t\t</title>\n\n\t\t\t\t\t<meta name=\"description\" content=\"Match results and VOD archive for Valorant esports matches\">\n\t\t\n\t\t\n\t\t<meta property=\"og:title\" content=\"Valorant"
+   }
+  },
+  {
+   "name": "hltv results page (honest UA)",
+   "ok": true,
+   "secs": 0.31,
+   "result": {
+    "status": 200,
+    "bytes": 271230,
+    "head": "<!DOCTYPE html>\n<html lang=\"en\" data-client-country-iso=\"US-IA\" data-impression-tracking-endpoint=\"https://ncuxt.hltv.org\" data-ad-tag-allowed-cookies=\"mobile-bottom-ad,desktop-bottom-ad\" data-bc-content-allowed=\"true\"><!--\n        --Worker debug info-- \n        Ads API URL from origin: https://www."
+   }
+  }
+ ],
+ "finished": "2026-10-03T03:06:12.864281+00:00",
+ "http_calls": 54
+}

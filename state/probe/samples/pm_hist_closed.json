@@ -1,0 +1,7 @@
+{
+ "url": "https://clob.polymarket.com/prices-history?market=55974974933932022028686046629228567803703521076325401791293929515622514030258&interval=max&fidelity=60",
+ "status": 200,
+ "body": {
+  "history": []
+ }
+}
