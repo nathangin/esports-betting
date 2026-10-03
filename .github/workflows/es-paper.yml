@@ -1,14 +1,15 @@
 # Fake-money paper trading on live Kalshi esports match markets.
 #
-# Every 30 minutes: settle finished bets, pick up new results, and decide on every match
-# starting in the next 15-75 minutes. Kalshi is only read through its public market-data
+# Every 15 minutes: settle finished bets, pick up new results, and decide once on every match
+# starting in the next 10-70 minutes. (GitHub can start scheduled runs late; a match whose
+# start passes without a decision is skipped and counted as missed in state/paper/runs.jsonl.) Kalshi is only read through its public market-data
 # API; nothing here can place an order and no API key is used.
 # Results: state/reports/summary.md on the paper-trading branch.
 name: Paper trading
 
 on:
   schedule:
-    - cron: "7,37 * * * *"
+    - cron: "4,19,34,49 * * * *"
   workflow_dispatch:
 
 permissions:

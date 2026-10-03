@@ -6,8 +6,8 @@ Books (each starts with its own fake bankroll):
   model-only  the Elo win model on its own, to show what ignoring the market does
   favourite   1% flat on the market favourite, a no-skill baseline
 
-Each match is decided once, in the first run that finds it 15-75 minutes before its scheduled
-start (the backtest decides 60 minutes before). Fills are at the displayed ask (or 1 - bid for
+Each match is decided once, in the first run that finds it 10-70 minutes before its scheduled
+start (runs every 15 minutes, so usually 55-70 minutes before; the backtest uses 60). Fills are at the displayed ask (or 1 - bid for
 NO), capped at the size shown at that price, with Kalshi's taker fee.
 
 Nothing here places real orders: Kalshi is only read through its public market-data API.
@@ -44,7 +44,7 @@ TEXT_COLS = ["bet_id", "book", "model_version", "placed_at", "event_ticker", "se
              "settled_at"]
 DEFAULT_CONFIG = {
     "bankroll": 1000.0,
-    "lead_minutes": [15, 75],
+    "lead_minutes": [10, 70],
     "flat_frac": 0.01,
     "rules": {"blend": {}, "model-only": {}, "favourite": {}},
 }
@@ -234,9 +234,11 @@ def scan(state: State, k: Kalshi, now: datetime, series: list[str]) -> tuple[lis
     up = upcoming(k.open_markets(series))
     if up.empty:
         return [], []
-    lo, hi = state.config.get("lead_minutes", [15, 75])
+    lo, hi = state.config.get("lead_minutes", [10, 70])
     up["minutes_to_start"] = (up["start_time"] - pd.Timestamp(now)).dt.total_seconds() / 60.0
     decided = state.decided()
+    # matches already under way that this trader never decided on (late runs, late markets)
+    state.missed = int(((up["minutes_to_start"] < lo) & ~up["event_ticker"].isin(decided)).sum())
     todo = up[(up["minutes_to_start"] >= lo) & (up["minutes_to_start"] <= hi) & ~up["event_ticker"].isin(decided)]
     if todo.empty:
         return [], []
@@ -346,6 +348,7 @@ def run(state_dir: str, now: datetime | None = None, until: str | None = None) -
         else:
             scans, placed = scan(state, k, now, series)
             summary["matches_decided"] = len(scans)
+            summary["open_matches_missed"] = getattr(state, "missed", 0)
             summary["bets_placed"] = {b: sum(1 for p in placed if p["book"] == b) for b in BOOKS}
             if scans:
                 sp = state.root / "scans" / f"{now:%Y-%m-%d}.parquet"

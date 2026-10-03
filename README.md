@@ -48,9 +48,9 @@ are skipped: that is usually news (a stand-in, a roster change) the model has no
 bid/ask before that moment, and settle on Kalshi's recorded result. Nothing in a decision uses
 information from after it.
 
-**Paper trading.** `.github/workflows/es-paper.yml` runs every 30 minutes: it settles finished
+**Paper trading.** `.github/workflows/es-paper.yml` runs every 15 minutes: it settles finished
 bets, adds new results to the ratings, and decides once on every match that starts in the next
-15-75 minutes, in three fake $1,000 books:
+10-70 minutes, in three fake $1,000 books:
 
 | Book | What it does |
 |---|---|
