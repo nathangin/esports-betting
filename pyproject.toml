@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "esalpha"
+version = "0.1.0"
+description = "Esports match-market model, honest backtests and fake-money paper trading"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.31",
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "scipy>=1.11",
+    "pyarrow>=14",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+esalpha = "esalpha.cli:main"
+
+[tool.setuptools]
+packages = ["esalpha"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
