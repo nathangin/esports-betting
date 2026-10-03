@@ -1,0 +1,45 @@
+{
+ "url": "https://liquipedia.net/counterstrike/api.php?action=query&list=search&srsearch=Major&srlimit=3&format=json",
+ "status": 200,
+ "body": {
+  "batchcomplete": "",
+  "continue": {
+   "sroffset": 3,
+   "continue": "-||"
+  },
+  "query": {
+   "searchinfo": {
+    "totalhits": 6376
+   },
+   "search": [
+    {
+     "ns": 0,
+     "title": "A-Tier Tournaments",
+     "pageid": 2440,
+     "size": 68,
+     "wordcount": 38,
+     "snippet": "known as <span class=\"searchmatch\">Major</span> Tournaments) feature a large prize pool and a good number of top-tier teams. Highlighted tournaments are special Regional <span class=\"searchmatch\">Major</span> Ranking events",
+     "timestamp": "2024-09-01T16:34:56Z"
+    },
+    {
+     "ns": 0,
+     "title": "S-Tier Tournaments",
+     "pageid": 2863,
+     "size": 68,
+     "wordcount": 109,
+     "snippet": "prestigious amongst the community. Highlighted tournaments are special CS2 <span class=\"searchmatch\">Major</span> Championship events which feature a large prize pool and are sponsored by",
+     "timestamp": "2024-04-19T13:15:39Z"
+    },
+    {
+     "ns": 0,
+     "title": "Points Rankings",
+     "pageid": 2502,
+     "size": 274,
+     "wordcount": 17,
+     "snippet": "Regional <span class=\"searchmatch\">Major</span> Rankings: Rio <span class=\"searchmatch\">Major</span> 2020 - CIS Apr 30 \u2013 Oct 25, 2020 \u00a0CIS - Team Spirit Natus Vincere Points\u00a0(S-Tier) Regional <span class=\"searchmatch\">Major</span> Rankings: Rio <span class=\"searchmatch\">Major</span> 2020",
+     "timestamp": "2026-04-27T10:17:39Z"
+    }
+   ]
+  }
+ }
+}

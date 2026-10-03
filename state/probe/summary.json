@@ -1,397 +1,25 @@
 {
- "started": "2026-10-03T03:04:39.933251+00:00",
+ "started": "2026-10-03T03:06:51.213919+00:00",
  "checks": [
   {
    "name": "kalshi esports series",
    "ok": true,
-   "secs": 0.54,
+   "secs": 0.86,
    "result": [
     {
      "category": "Sports",
      "n_series": 3957,
      "esports": [
       {
-       "ticker": "KXEWCRENNSPORT",
-       "title": "2025 Mid-Season Invitational",
+       "ticker": "KXSPORTSIGNINSPIRED",
+       "title": "Inspired",
        "tags": [
         "Esports"
        ]
       },
       {
-       "ticker": "KXROCKETLEAGUE",
-       "title": "Rocket League Tournament Winner",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXWORLDSMVP",
-       "title": "Worlds MVP?",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXLEAGUEWORLDS",
-       "title": "League of Legends Worlds",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXDOTA2GAME3WAY",
-       "title": "Dota 2 Game",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXLOLTOTALMAPS",
-       "title": "League of Legends Total Maps",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXCS2MAPWINNER",
-       "title": "CS2 Map Winner",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXVALORANT",
-       "title": "Valorant Tournament Winner",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXLOLGAME",
-       "title": "League of Legends Game",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXCHOVYMVP",
-       "title": "Will Chovy be the MVP of the Worlds finals",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXLOLGAMES",
-       "title": "League of Legends Games",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXRANKLISTCS2PLAYER",
-       "title": "HLTV Player of Year",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXLCKAHRIPICK",
-       "title": "LCK finals Ahri",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXCSGOADVANCE",
-       "title": "CSGO Advance",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXVALORANTGAME",
-       "title": "Valorant game winner",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXDOTA2TOTALMAPS",
-       "title": "Dota 2 Total Maps",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXBLASTRIVALS2",
-       "title": "BLAST Rivals 2025 Season 2",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXEWCDOTA2",
-       "title": "Dota 2 at 2025 Esports World Cup",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXEWCFATALFURY",
-       "title": "FATAL FURY: City of the Wolves at 2025 Esports World Cup",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXZYWOOMVP",
-       "title": "Will ZywOo be the MVP at the Budapest Major",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXVALORANTMASTERSFINALS",
-       "title": "Who will win the VALORANT Masters Finals",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXEWCPUBGBATTLEG",
-       "title": "PUBG: BATTLEGROUNDS at 2025 Esports World Cup",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXESPORTSTEST",
-       "title": "TESTING",
-       "tags": [
-        "Esports",
-        "Video games"
-       ]
-      },
-      {
-       "ticker": "KXVALORANTSPREAD",
-       "title": "Valorant Spread",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXEWCCS2",
-       "title": "ESPORTS WORLD CUP COUNTER STRIKE 2",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXCODSPREAD",
-       "title": "COD Spread",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXVALORANTREGION",
-       "title": "Valorant Tournament Winning Region",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXAUSTINMAJOR",
-       "title": "Rennsport at 2025 Esports World Cup",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXPGLMASTERSBUCHAREST",
-       "title": "Who will win the PGL Masters Bucharest 2025",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXCODGAME",
-       "title": "Call of Duty Games",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXCS2QUALIFIERS",
-       "title": "CS2 Qualifier",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXBRAWLSTARS",
-       "title": "Brawl Stars Tournament Winner",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXCS2QUALIFY",
-       "title": "CS2 Qualifier",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXROSTERT1",
-       "title": "Roster T1",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXEWCLEAGUEOFLEGENDS",
-       "title": "League of Legends featured at 2025 Esports World Cup",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXEWCMLBB",
-       "title": "Mobile Legends: Bang Bang Mid Season Cup at 2025 Esports World Cup",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXLEAGUE",
-       "title": "League of Legends World Championship",
-       "tags": [
-        "Video games"
-       ]
-      },
-      {
-       "ticker": "KXCSGOGAME",
-       "title": "Counter-Strike 2 Games",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXEWCFREEFIRE",
-       "title": "Free Fire at 2025 Esports World Cup",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXCROSSFIRE",
-       "title": "Crossfire Tournament Winner",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXVALORANTAWARD",
-       "title": "Valorant Award",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXR6MAP",
-       "title": "R6 Map Winner",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXEWCSTARCRAFTII",
-       "title": "StarCraft II at 2025 Esports World Cup",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXCODMAP",
-       "title": "COD Map Winner",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXMIDSEASONINVITATIONALB",
-       "title": "2025 Mid-Season Invitational",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXEWCHONOROFKINGS",
-       "title": "Honor of Kings World Cup at 2025 Esports World Cup",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXVALORANTTOTALMAPS",
-       "title": "Valorant Total Maps",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXEWCCHESS2025",
-       "title": "Chess \u2013 Esports World Cup Winner?",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXDOTA2MBH",
-       "title": "Most Banned Hero",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXTORONTOULTRACHAMPIONSHIP",
-       "title": "Dota 2 at 2025 Esports World Cup",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXRANKLISTCS2TEAM",
-       "title": "HLTV Team of the Year",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXVALGCSEOUL",
-       "title": "Game Changers : Championship Seoul",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXCS2IEMCOLOGNE",
-       "title": "CS2: IEM Cologne",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXLOLSPREAD",
-       "title": "League of Legends Spread",
-       "tags": [
-        "Esports"
-       ]
-      },
-      {
-       "ticker": "KXLOLTOTAL",
-       "title": "League of Legends Total Maps Played",
+       "ticker": "KXPUBG",
+       "title": "PUBG Tournament Winner",
        "tags": [
         "Esports"
        ]
@@ -404,8 +32,78 @@
        ]
       },
       {
-       "ticker": "KXEWCMOBILELEGENDSBBWOMENS",
-       "title": "Mobile Legends: Bang Bang Women's Invitational at 2025 Esports World Cup",
+       "ticker": "KXCODGAME",
+       "title": "Call of Duty Games",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXPGLBUCH",
+       "title": "Who will win the PGL Masters Bucharest 2025",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCS2IEMCOLOGNE",
+       "title": "CS2: IEM Cologne",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCFREEFIRE",
+       "title": "Free Fire at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCODMAP",
+       "title": "COD Map Winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXDOTA2MPH",
+       "title": "Most Picked Hero",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCSGOADVANCE",
+       "title": "CSGO Advance",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCS2QUALIFIERS",
+       "title": "CS2 Qualifier",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXROCKETLEAGUEGAME",
+       "title": "Rocket League Game",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCS2MAP",
+       "title": "Counter-Strike 2 Map Winner ",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCS2",
+       "title": "CS2 Tournament Winner",
        "tags": [
         "Esports"
        ]
@@ -418,15 +116,314 @@
        ]
       },
       {
-       "ticker": "KXVALORANTMAP",
-       "title": "Valorant Map Winner",
+       "ticker": "KXVALORANTGAMETEAMVSMIBR",
+       "title": "TEAM VS. MIBR",
        "tags": [
         "Esports"
        ]
       },
       {
-       "ticker": "KXDOTA2",
-       "title": "Dota 2 Tournament Winner",
+       "ticker": "KXCS2TOTALMAPS",
+       "title": "CS2 Total Maps",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXSTARLADDERBUDAPESTMAJOR",
+       "title": "Who wil win the StarLadder Budapest Major 2025",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXDOTA2TOTALMAPS",
+       "title": "Dota 2 Total Maps",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXNIKOAWPMAJOR",
+       "title": "NiKo AWP Major",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXDOTA2MAP",
+       "title": "Dota 2 Map Winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCSGOGAME",
+       "title": "Counter-Strike 2 Games",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXZYWOOMVPBP",
+       "title": "Will ZywOo be the MVP at the Budapest Major",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCMLBB",
+       "title": "Mobile Legends: Bang Bang Mid Season Cup at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCROSSFIRE",
+       "title": "Crossfire Tournament Winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXLOLREGION",
+       "title": "Region of Champion",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCODSPREAD",
+       "title": "COD Spread",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXPUBGGC",
+       "title": "PUBG Global Championship 2025",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCSTARCRAFTII",
+       "title": "StarCraft II at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCAPEXLEGENDS",
+       "title": "Apex Legends at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXRANKLISTCS2TEAM",
+       "title": "HLTV Team of the Year",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXR6TOTALMAPS",
+       "title": "R6 Total Maps",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXOWTOTALMAPS",
+       "title": "Overwatch Total Maps",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXLEAGUEWORLDS",
+       "title": "League of Legends Worlds",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXVALORANTQUALIFIERS",
+       "title": "Valorant Qualifiers",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXDOTA2SPREAD",
+       "title": "Dota 2 Spread",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXROSTERT1",
+       "title": "Roster T1",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXLOL1STTIMEWIN",
+       "title": "LOL First time winner",
+       "tags": null
+      },
+      {
+       "ticker": "KXVALORANTTOTALMAPS",
+       "title": "Valorant Total Maps",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXVALORANTAWARD",
+       "title": "Valorant Award",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCTEAMFIGHTTACTICS",
+       "title": "Teamfight Tactics featured at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCSGOMAP",
+       "title": "CSGO Map Winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXWORLDSMVP",
+       "title": "Worlds MVP?",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXMIDSEASONINVITATIONALB",
+       "title": "2025 Mid-Season Invitational",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCHARCOUNTLOLWORLDS",
+       "title": "LOL worlds",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXVALPLIND",
+       "title": "Valorant Predator League Indonesia",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCCALLOFDUTYBLOPS6",
+       "title": "Call of Duty: Black Ops 6 at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXR6SPREAD",
+       "title": "R6 Spread",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCDOTA2",
+       "title": "Dota 2 at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXVCCHAMPIONSPARIS",
+       "title": "VALORANT Champions 2025 PARIS",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCS2GAMES",
+       "title": "Cs2 Games",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCS2GAME",
+       "title": "Counter-Strike 2 Game",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCFATALFURY",
+       "title": "FATAL FURY: City of the Wolves at 2025 Esports World Cup",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXBOUNTY2025S2",
+       "title": "Bounty 2025 Season 2",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXROCKETLEAGUE",
+       "title": "Rocket League Tournament Winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXLOLTOTAL",
+       "title": "League of Legends Total Maps Played",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXLOLTOTALMAPS",
+       "title": "League of Legends Total Maps",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXEWCCHESS",
+       "title": "Chess \u2013 Esports World Cup winner",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXODINVCTFINALS",
+       "title": "Odin VCT finals",
+       "tags": [
+        "Esports"
+       ]
+      },
+      {
+       "ticker": "KXCS2SPREAD",
+       "title": "CS2 Spread",
        "tags": [
         "Esports"
        ]
@@ -448,172 +445,172 @@
   {
    "name": "kalshi esports markets",
    "ok": true,
-   "secs": 0.96,
+   "secs": 0.99,
    "result": {
-    "KXEWCRENNSPORT": {
+    "KXSPORTSIGNINSPIRED": {
      "n": 0,
      "examples": []
     },
-    "KXROCKETLEAGUE": {
-     "n": 14,
-     "examples": [
-      {
-       "ticker": "KXROCKETLEAGUE-EWC26-VIT",
-       "title": "Will Team Vitality win Rocket League Esports World Cup?",
-       "yes_sub_title": "Team Vitality",
-       "status": "finalized",
-       "yes_bid_dollars": "0.0000",
-       "yes_ask_dollars": "1.0000",
-       "result": "no",
-       "volume_fp": "944.23",
-       "close_time": "2026-08-17T15:39:57Z"
-      },
-      {
-       "ticker": "KXROCKETLEAGUE-EWC26-TWIS",
-       "title": "Will Twisted Minds win Rocket League Esports World Cup?",
-       "yes_sub_title": "Twisted Minds",
-       "status": "finalized",
-       "yes_bid_dollars": "0.0000",
-       "yes_ask_dollars": "1.0000",
-       "result": "no",
-       "volume_fp": "486.28",
-       "close_time": "2026-08-17T15:39:57Z"
-      },
-      {
-       "ticker": "KXROCKETLEAGUE-EWC26-TSM",
-       "title": "Will TSM win Rocket League Esports World Cup?",
-       "yes_sub_title": "TSM",
-       "status": "finalized",
-       "yes_bid_dollars": "0.0000",
-       "yes_ask_dollars": "1.0000",
-       "result": "no",
-       "volume_fp": "0.00",
-       "close_time": "2026-08-17T15:39:57Z"
-      },
-      {
-       "ticker": "KXROCKETLEAGUE-EWC26-SSG",
-       "title": "Will Spacestation Gaming win Rocket League Esports World Cup?",
-       "yes_sub_title": "Spacestation Gaming",
-       "status": "finalized",
-       "yes_bid_dollars": "0.0000",
-       "yes_ask_dollars": "1.0000",
-       "result": "no",
-       "volume_fp": "1765.88",
-       "close_time": "2026-08-17T15:39:57Z"
-      }
-     ]
-    },
-    "KXWORLDSMVP": {
+    "KXPUBG": {
      "n": 0,
      "examples": []
     },
-    "KXLEAGUEWORLDS": {
-     "n": 0,
-     "examples": []
-    },
-    "KXDOTA2GAME3WAY": {
-     "n": 0,
-     "examples": []
-    },
-    "KXLOLTOTALMAPS": {
+    "KXCODTOTALMAPS": {
      "n": 20,
      "examples": [
       {
-       "ticker": "KXLOLTOTALMAPS-26OCT061600FUECPD-5",
-       "title": "Will over 4.5 maps be played in the Fuego vs. Cupid Esports League of Legends match?",
-       "yes_sub_title": "Over 4.5 maps",
-       "status": "active",
-       "yes_bid_dollars": "0.0300",
-       "yes_ask_dollars": "0.6500",
-       "result": "",
-       "volume_fp": "0.00",
-       "close_time": "2026-10-08T20:00:00Z"
+       "ticker": "KXCODTOTALMAPS-26AUG091500OGHTCS-9",
+       "title": "Will over 8.5 maps be played in the OpTic Gaming vs. Team Heretics Call of Duty match?",
+       "yes_sub_title": "Over 8.5 maps",
+       "status": "finalized",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "1.0000",
+       "result": "no",
+       "volume_fp": "18572.46",
+       "close_time": "2026-08-09T22:14:51Z"
       },
       {
-       "ticker": "KXLOLTOTALMAPS-26OCT061600FUECPD-4",
-       "title": "Will over 3.5 maps be played in the Fuego vs. Cupid Esports League of Legends match?",
-       "yes_sub_title": "Over 3.5 maps",
-       "status": "active",
-       "yes_bid_dollars": "0.0100",
-       "yes_ask_dollars": "0.6500",
-       "result": "",
-       "volume_fp": "0.00",
-       "close_time": "2026-10-08T20:00:00Z"
+       "ticker": "KXCODTOTALMAPS-26AUG091500OGHTCS-8",
+       "title": "Will over 7.5 maps be played in the OpTic Gaming vs. Team Heretics Call of Duty match?",
+       "yes_sub_title": "Over 7.5 maps",
+       "status": "finalized",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "1.0000",
+       "result": "yes",
+       "volume_fp": "31753.40",
+       "close_time": "2026-08-09T22:14:50Z"
       },
       {
-       "ticker": "KXLOLTOTALMAPS-26OCT041200UCAMKOIA-5",
-       "title": "Will over 4.5 maps be played in the UCAM Esports Club vs. Movistar KOI F\u00e9nix League of Legends match?",
-       "yes_sub_title": "Over 4.5 maps",
-       "status": "active",
-       "yes_bid_dollars": "0.0100",
-       "yes_ask_dollars": "0.6500",
-       "result": "",
-       "volume_fp": "0.00",
-       "close_time": "2026-10-06T16:00:00Z"
+       "ticker": "KXCODTOTALMAPS-26AUG091500OGHTCS-7",
+       "title": "Will over 6.5 maps be played in the OpTic Gaming vs. Team Heretics Call of Duty match?",
+       "yes_sub_title": "Over 6.5 maps",
+       "status": "finalized",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "1.0000",
+       "result": "yes",
+       "volume_fp": "23160.68",
+       "close_time": "2026-08-09T22:14:50Z"
       },
       {
-       "ticker": "KXLOLTOTALMAPS-26OCT041200UCAMKOIA-4",
-       "title": "Will over 3.5 maps be played in the UCAM Esports Club vs. Movistar KOI F\u00e9nix League of Legends match?",
-       "yes_sub_title": "Over 3.5 maps",
-       "status": "active",
-       "yes_bid_dollars": "0.0100",
-       "yes_ask_dollars": "0.6500",
-       "result": "",
-       "volume_fp": "0.00",
-       "close_time": "2026-10-06T16:00:00Z"
+       "ticker": "KXCODTOTALMAPS-26AUG091500OGHTCS-6",
+       "title": "Will over 5.5 maps be played in the OpTic Gaming vs. Team Heretics Call of Duty match?",
+       "yes_sub_title": "Over 5.5 maps",
+       "status": "finalized",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "1.0000",
+       "result": "yes",
+       "volume_fp": "21399.63",
+       "close_time": "2026-08-09T22:14:50Z"
       }
      ]
     },
-    "KXCS2MAPWINNER": {
+    "KXCODGAME": {
+     "n": 20,
+     "examples": [
+      {
+       "ticker": "KXCODGAME-26AUG091500OGHTCS-OG",
+       "title": "Will OpTic Gaming win the OpTic Gaming vs. Team Heretics match?",
+       "yes_sub_title": "OpTic Gaming",
+       "status": "finalized",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "1.0000",
+       "result": "yes",
+       "volume_fp": "141005.81",
+       "close_time": "2026-08-09T22:19:28Z"
+      },
+      {
+       "ticker": "KXCODGAME-26AUG091500OGHTCS-HTCS",
+       "title": "Will Team Heretics win the OpTic Gaming vs. Team Heretics match?",
+       "yes_sub_title": "Team Heretics",
+       "status": "finalized",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "1.0000",
+       "result": "no",
+       "volume_fp": "178931.26",
+       "close_time": "2026-08-09T22:19:28Z"
+      },
+      {
+       "ticker": "KXCODGAME-26AUG091320100TFAL-FAL",
+       "title": "Will Team Falcons win the 100 Thieves vs. Team Falcons match?",
+       "yes_sub_title": "Team Falcons",
+       "status": "finalized",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "1.0000",
+       "result": "no",
+       "volume_fp": "222554.61",
+       "close_time": "2026-08-09T19:41:26Z"
+      },
+      {
+       "ticker": "KXCODGAME-26AUG091320100TFAL-100T",
+       "title": "Will 100 Thieves win the 100 Thieves vs. Team Falcons match?",
+       "yes_sub_title": "100 Thieves",
+       "status": "finalized",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "1.0000",
+       "result": "yes",
+       "volume_fp": "210137.12",
+       "close_time": "2026-08-09T19:41:26Z"
+      }
+     ]
+    },
+    "KXPGLBUCH": {
      "n": 0,
      "examples": []
     },
-    "KXVALORANT": {
-     "n": 16,
+    "KXCS2IEMCOLOGNE": {
+     "n": 0,
+     "examples": []
+    },
+    "KXEWCFREEFIRE": {
+     "n": 0,
+     "examples": []
+    },
+    "KXCODMAP": {
+     "n": 20,
      "examples": [
       {
-       "ticker": "KXVALORANT-CHAMPSH26-XLG",
-       "title": "Will Xi Lai Gaming win VALORANT Champions Shanghai?",
-       "yes_sub_title": "Xi Lai Gaming",
-       "status": "active",
+       "ticker": "KXCODMAP-26AUG091500OGHTCS-5-OG",
+       "title": "Will OpTic Gaming win map 5 in the OpTic Gaming vs. Team Heretics match?",
+       "yes_sub_title": "OpTic Gaming",
+       "status": "finalized",
        "yes_bid_dollars": "0.0000",
-       "yes_ask_dollars": "0.0100",
-       "result": "",
-       "volume_fp": "637.34",
-       "close_time": "2026-11-02T02:00:00Z"
+       "yes_ask_dollars": "1.0000",
+       "result": "yes",
+       "volume_fp": "19948.92",
+       "close_time": "2026-08-09T20:55:06Z"
       },
       {
-       "ticker": "KXVALORANT-CHAMPSH26-VIT",
-       "title": "Will Team Vitality win VALORANT Champions Shanghai?",
-       "yes_sub_title": "Team Vitality",
-       "status": "active",
-       "yes_bid_dollars": "0.0700",
-       "yes_ask_dollars": "0.0800",
-       "result": "",
-       "volume_fp": "6530.81",
-       "close_time": "2026-11-02T02:00:00Z"
+       "ticker": "KXCODMAP-26AUG091500OGHTCS-5-HTCS",
+       "title": "Will Team Heretics win map 5 in the OpTic Gaming vs. Team Heretics match?",
+       "yes_sub_title": "Team Heretics",
+       "status": "finalized",
+       "yes_bid_dollars": "0.0000",
+       "yes_ask_dollars": "1.0000",
+       "result": "no",
+       "volume_fp": "12438.67",
+       "close_time": "2026-08-09T20:55:06Z"
       },
       {
-       "ticker": "KXVALORANT-CHAMPSH26-TYLOO",
-       "title": "Will TYLOO win VALORANT Champions Shanghai?",
-       "yes_sub_title": "TYLOO",
-       "status": "active",
+       "ticker": "KXCODMAP-26AUG091500OGHTCS-4-OG",
+       "title": "Will OpTic Gaming win map 4 in the OpTic Gaming vs. Team Heretics match?",
+       "yes_sub_title": "OpTic Gaming",
+       "status": "finalized",
        "yes_bid_dollars": "0.0000",
-       "yes_ask_dollars": "0.0100",
-       "result": "",
-       "volume_fp": "13761.91",
-       "close_time": "2026-11-02T02:00:00Z"
+       "yes_ask_dollars": "1.0000",
+       "result": "no",
+       "volume_fp": "21556.34",
+       "close_time": "2026-08-09T20:40:20Z"
       },
       {
-       "ticker": "KXVALORANT-CHAMPSH26-TL",
-       "title": "Will Team Liquid win VALORANT Champions Shanghai?",
-       "yes_sub_title": "Team Liquid",
-       "status": "active",
+       "ticker": "KXCODMAP-26AUG091500OGHTCS-4-HTCS",
+       "title": "Will Team Heretics win map 4 in the OpTic Gaming vs. Team Heretics match?",
+       "yes_sub_title": "Team Heretics",
+       "status": "finalized",
        "yes_bid_dollars": "0.0000",
-       "yes_ask_dollars": "0.0300",
-       "result": "",
-       "volume_fp": "3644.77",
-       "close_time": "2026-11-02T02:00:00Z"
+       "yes_ask_dollars": "1.0000",
+       "result": "yes",
+       "volume_fp": "24100.31",
+       "close_time": "2026-08-09T20:40:20Z"
       }
      ]
     }
@@ -622,7 +619,7 @@
   {
    "name": "polymarket /sports",
    "ok": true,
-   "secs": 0.23,
+   "secs": 0.13,
    "result": [
     {
      "id": 39,
@@ -737,13 +734,13 @@
   {
    "name": "polymarket esports tags",
    "ok": true,
-   "secs": 0.04,
+   "secs": 0.06,
    "result": []
   },
   {
    "name": "polymarket events tag=esports open",
    "ok": true,
-   "secs": 0.32,
+   "secs": 0.56,
    "result": {
     "n": 50,
     "examples": [
@@ -983,7 +980,7 @@
   {
    "name": "polymarket events tag=esports closed",
    "ok": true,
-   "secs": 0.22,
+   "secs": 0.23,
    "result": {
     "n": 50,
     "examples": [
@@ -1257,7 +1254,7 @@
   {
    "name": "polymarket events tag=counter-strike open",
    "ok": true,
-   "secs": 0.18,
+   "secs": 0.21,
    "result": {
     "n": 2,
     "examples": [
@@ -1355,7 +1352,7 @@
   {
    "name": "polymarket events tag=counter-strike closed",
    "ok": true,
-   "secs": 0.42,
+   "secs": 0.5,
    "result": {
     "n": 50,
     "examples": [
@@ -1595,7 +1592,7 @@
   {
    "name": "polymarket events tag=cs2 open",
    "ok": true,
-   "secs": 0.23,
+   "secs": 0.19,
    "result": {
     "n": 24,
     "examples": [
@@ -1767,7 +1764,7 @@
   {
    "name": "polymarket events tag=cs2 closed",
    "ok": true,
-   "secs": 0.22,
+   "secs": 0.36,
    "result": {
     "n": 50,
     "examples": [
@@ -2143,7 +2140,7 @@
   {
    "name": "polymarket events tag=league-of-legends open",
    "ok": true,
-   "secs": 0.39,
+   "secs": 0.3,
    "result": {
     "n": 50,
     "examples": [
@@ -2451,7 +2448,7 @@
   {
    "name": "polymarket events tag=league-of-legends closed",
    "ok": true,
-   "secs": 0.18,
+   "secs": 0.19,
    "result": {
     "n": 50,
     "examples": [
@@ -2657,7 +2654,7 @@
   {
    "name": "polymarket events tag=valorant open",
    "ok": true,
-   "secs": 0.33,
+   "secs": 0.57,
    "result": {
     "n": 50,
     "examples": [
@@ -2863,7 +2860,7 @@
   {
    "name": "polymarket events tag=valorant closed",
    "ok": true,
-   "secs": 0.2,
+   "secs": 0.23,
    "result": {
     "n": 50,
     "examples": [
@@ -3137,7 +3134,7 @@
   {
    "name": "polymarket events tag=dota-2 open",
    "ok": true,
-   "secs": 0.43,
+   "secs": 0.24,
    "result": {
     "n": 27,
     "examples": [
@@ -3513,7 +3510,7 @@
   {
    "name": "polymarket events tag=dota-2 closed",
    "ok": true,
-   "secs": 0.18,
+   "secs": 0.21,
    "result": {
     "n": 50,
     "examples": [
@@ -3719,7 +3716,7 @@
   {
    "name": "polymarket price history (closed market)",
    "ok": true,
-   "secs": 0.29,
+   "secs": 0.47,
    "result": {
     "n": 0,
     "first": null,
@@ -3732,7 +3729,7 @@
   {
    "name": "polymarket price history (open market)",
    "ok": true,
-   "secs": 0.02,
+   "secs": 0.19,
    "result": {
     "n": 168,
     "first": {
@@ -3751,7 +3748,7 @@
   {
    "name": "polymarket order book",
    "ok": true,
-   "secs": 0.25,
+   "secs": 0.17,
    "result": {
     "keys": [
      "asks",
@@ -3782,11 +3779,11 @@
     "asks": [
      {
       "price": "0.71",
-      "size": "15072.19"
+      "size": "15063.85"
      },
      {
       "price": "0.7",
-      "size": "3101.97"
+      "size": "3001.97"
      },
      {
       "price": "0.69",
@@ -3800,44 +3797,43 @@
   {
    "name": "polymarket closed esports depth",
    "ok": false,
-   "secs": 38.68,
+   "secs": 7.56,
    "error": "HttpError: HTTP 422 for https://gamma-api.polymarket.com/events?tag_slug=esports&closed=true&limit=500&offset=2100&order=endDate&ascending=false: {\"type\":\"validation error\",\"error\":\"offset too large, use /events/keyset for deeper pagination\"}\n",
    "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/esports-betting/esports-betting/esalpha/probe.py\", line 30, in check\n    res = fn()\n          ^^^^\n  File \"/home/runner/work/esports-betting/esports-betting/esalpha/probe.py\", line 124, in pm_closed_depth\n    js = http.get_json(f\"{GAMMA}/events\", {\"tag_slug\": \"esports\", \"closed\": \"true\", \"limit\": 500,\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/esports-betting/esports-betting/esalpha/net.py\", line 78, in get_json\n    raise HttpError(resp.url, resp.status_code, resp.text)\nesalpha.net.HttpError: HTTP 422 for https://gamma-api.polymarket.com/events?tag_slug=esports&closed=true&limit=500&offset=2100&order=endDate&ascending=false: {\"type\":\"validation error\",\"error\":\"offset too large, use /events/keyset for deeper pagination\"}\n\n"
   },
   {
    "name": "leaguepedia cargo",
    "ok": true,
-   "secs": 0.3,
+   "secs": 0.33,
    "result": "{\"error\": {\"code\": \"ratelimited\", \"info\": \"You've exceeded your rate limit. Please wait some time and try again.\", \"*\": \"See https://lol.fandom.com/api.php for API usage. Subscribe to the mediawiki-api-announce mailing list at &lt;https://lists.wikimedia.org/postorius/lists/mediawiki-api-announce.lists.wikimedia.org/&gt; for notice of API deprecations and breaking changes.\"}}"
   },
   {
    "name": "liquipedia api (cs)",
-   "ok": false,
-   "secs": 47.84,
-   "error": "HttpError: HTTP 429 for https://liquipedia.net/counterstrike/api.php?action=query&list=search&srsearch=Major&srlimit=3&format=json: <!DOCTYPE HTML><title>Rate Limited - Liquipedia</title><meta charset=utf-8><meta name=viewport content=\"width=device-width,initial-scale=1\"><style type=text/css>body{margin:40px auto;max-width:700px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1{line-height:1.2}.reason{display:none}</st",
-   "trace": "Traceback (most recent call last):\n  File \"/home/runner/work/esports-betting/esports-betting/esalpha/probe.py\", line 30, in check\n    res = fn()\n          ^^^^\n  File \"/home/runner/work/esports-betting/esports-betting/esalpha/probe.py\", line 139, in <lambda>\n    check(\"liquipedia api (cs)\", lambda: _short(http.get_json(\"https://liquipedia.net/counterstrike/api.php\", {\n                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/work/esports-betting/esports-betting/esalpha/net.py\", line 78, in get_json\n    raise HttpError(resp.url, resp.status_code, resp.text)\nesalpha.net.HttpError: HTTP 429 for https://liquipedia.net/counterstrike/api.php?action=query&list=search&srsearch=Major&srlimit=3&format=json: <!DOCTYPE HTML><title>Rate Limited - Liquipedia</title><meta charset=utf-8><meta name=viewport content=\"width=device-width,initial-scale=1\"><style type=text/css>body{margin:40px auto;max-width:700px;line-height:1.6;font-size:18px;color:#444;padding:0 10px}h1{line-height:1.2}.reason{display:none}</st\n"
+   "ok": true,
+   "secs": 0.64,
+   "result": "{\"batchcomplete\": \"\", \"continue\": {\"sroffset\": 3, \"continue\": \"-||\"}, \"query\": {\"searchinfo\": {\"totalhits\": 6376}, \"search\": [{\"ns\": 0, \"title\": \"A-Tier Tournaments\", \"pageid\": 2440, \"size\": 68, \"wordcount\": 38, \"snippet\": \"known as <span class=\\\"searchmatch\\\">Major</span> Tournaments) feature a large prize pool and a good number of top-tier teams. Highlighted tournaments are special Regional <span class=\\\"searchmatch\\\">Major</span> Ranking events\", \"timestamp\": \"2024-09-01T16:34:56Z\"}, {\"ns\": 0, \"title\": \"S-Tier Tournaments\", \"pageid\": 2863, \"size\": 68, \"wordcount\": 109, \"snippet\": \"prestigious amongst the community. Highlighted tournaments are special CS2 <span class=\\\"searchmatch\\\">Major</span> Championship events which feature a large prize pool and are sponsored by\", \"timestamp\": \"2024-04-19T13:15:39Z\"}, {\"ns\": 0, \"title\": \"Points Rankings\", \"pageid\": 2502, \"size\": 274, \"wordcount\": 17, \"snippet\": \"Regional <span class=\\\"searchmatch\\\">Major</span> Rankings: Rio <span class=\\\"searchmatch\\\">Major</span> 2020 - CIS Apr 30 \\u2013 Oct 25, 2020 \\u00a0CIS - Team Spirit Natus Vincere Points\\u00a0(S-Tier) Regional <span class=\\\"searchmatch\\\">Major</span> Rankings: Rio <span class=\\\"searchmatch\\\">Major</span> 2020\", \"timestamp\": \"2026-04-27T10:17:39Z\"}]}}"
   },
   {
    "name": "vlr.gg results page (honest UA)",
    "ok": true,
-   "secs": 0.18,
+   "secs": 0.35,
    "result": {
     "status": 200,
-    "bytes": 138139,
+    "bytes": 138145,
     "head": "<!DOCTYPE html>\n<html lang=\"en\" data-theme=\"light\">\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<title>\n\t\t\tValorant esports Match Results | VLR.gg\t\t</title>\n\n\t\t\t\t\t<meta name=\"description\" content=\"Match results and VOD archive for Valorant esports matches\">\n\t\t\n\t\t\n\t\t<meta property=\"og:title\" content=\"Valorant"
    }
   },
   {
    "name": "hltv results page (honest UA)",
    "ok": true,
-   "secs": 0.31,
+   "secs": 0.52,
    "result": {
     "status": 200,
-    "bytes": 271230,
-    "head": "<!DOCTYPE html>\n<html lang=\"en\" data-client-country-iso=\"US-IA\" data-impression-tracking-endpoint=\"https://ncuxt.hltv.org\" data-ad-tag-allowed-cookies=\"mobile-bottom-ad,desktop-bottom-ad\" data-bc-content-allowed=\"true\"><!--\n        --Worker debug info-- \n        Ads API URL from origin: https://www."
+    "bytes": 268811,
+    "head": "<!DOCTYPE html>\n<html lang=\"en\" data-client-country-iso=\"US-AZ\" data-impression-tracking-endpoint=\"https://ncuxt.hltv.org\" data-ad-tag-allowed-cookies=\"mobile-bottom-ad,desktop-bottom-ad\" data-bc-content-allowed=\"true\"><!--\n        --Worker debug info-- \n        Ads API URL from origin: https://www."
    }
   }
  ],
- "finished": "2026-10-03T03:06:12.864281+00:00",
+ "finished": "2026-10-03T03:07:07.311821+00:00",
  "http_calls": 54
 }
