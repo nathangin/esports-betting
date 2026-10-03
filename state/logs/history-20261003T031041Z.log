@@ -1,0 +1,82 @@
+2026-10-03 03:10:46,152 INFO esalpha.history: KXCS2GAME: 9284 match markets
+2026-10-03 03:10:56,661 INFO esalpha.history: KXCODGAME: 606 match markets
+2026-10-03 03:11:07,138 INFO esalpha.history: KXRLGAME: 218 match markets
+2026-10-03 03:11:07,977 INFO esalpha.history: KXVALORANTGAME: 3003 match markets
+2026-10-03 03:11:24,086 INFO esalpha.history: KXOWGAME: 754 match markets
+2026-10-03 03:11:24,833 INFO esalpha.history: KXR6GAME: 1336 match markets
+2026-10-03 03:11:45,259 INFO esalpha.history: KXLOLGAME: 5044 match markets
+2026-10-03 03:11:51,380 INFO esalpha.history: KXDOTA2GAME: 2849 match markets
+2026-10-03 03:11:52,329 INFO esalpha.history: KXCSGOGAME: 206 match markets
+2026-10-03 03:12:03,375 INFO esalpha.history: markets done (82s)
+2026-10-03 03:13:21,585 INFO esalpha.history: candles: 250 events
+2026-10-03 03:14:27,363 INFO esalpha.history: candles: 500 events
+2026-10-03 03:15:49,184 INFO esalpha.history: candles: 750 events
+2026-10-03 03:16:55,057 INFO esalpha.history: candles: 1000 events
+2026-10-03 03:18:01,153 INFO esalpha.history: candles: 1250 events
+2026-10-03 03:19:07,295 INFO esalpha.history: candles: 1500 events
+2026-10-03 03:20:10,496 INFO esalpha.history: candles: 1750 events
+2026-10-03 03:21:16,630 INFO esalpha.history: candles: 2000 events
+2026-10-03 03:22:24,326 INFO esalpha.history: candles: 2250 events
+2026-10-03 03:27:52,925 INFO esalpha.history: candles: 2500 events
+2026-10-03 03:33:18,686 INFO esalpha.history: candles: 2750 events
+2026-10-03 03:38:44,406 INFO esalpha.history: candles: 3000 events
+2026-10-03 03:44:10,262 INFO esalpha.history: candles: 3250 events
+2026-10-03 03:49:47,903 INFO esalpha.history: candles: 3500 events
+2026-10-03 03:55:14,106 INFO esalpha.history: candles: 3750 events
+2026-10-03 04:00:40,901 INFO esalpha.history: candles: 4000 events
+2026-10-03 04:06:07,380 INFO esalpha.history: candles: 4250 events
+2026-10-03 04:11:34,022 INFO esalpha.history: candles: 4500 events
+2026-10-03 04:17:00,559 INFO esalpha.history: candles: 4750 events
+2026-10-03 04:22:27,457 INFO esalpha.history: candles: 5000 events
+2026-10-03 04:27:57,176 INFO esalpha.history: candles: 5250 events
+2026-10-03 04:33:24,229 INFO esalpha.history: candles: 5500 events
+2026-10-03 04:38:51,410 INFO esalpha.history: candles: 5750 events
+2026-10-03 04:42:20,850 INFO esalpha.history: candles done (5499s)
+{
+ "started": "2026-10-03T03:10:41.693747+00:00",
+ "args": {
+  "days": 150,
+  "hours_before": 6.0
+ },
+ "series": 126,
+ "markets": {
+  "rows": 22061,
+  "events": 10932,
+  "by_game": {
+   "cod": 303,
+   "cs2": 4474,
+   "dota2": 1253,
+   "lol": 2327,
+   "ow": 351,
+   "r6": 668,
+   "rlgame": 109,
+   "valorant": 1447
+  }
+ },
+ "matches": {
+  "rows": 10735,
+  "by_game": {
+   "cod": 303,
+   "cs2": 4473,
+   "dota2": 1086,
+   "lol": 2299,
+   "ow": 351,
+   "r6": 668,
+   "rlgame": 109,
+   "valorant": 1446
+  },
+  "first": "2026-02-20 21:00:00+00:00",
+  "last": "2026-10-02 22:00:00+00:00",
+  "decided": 10506
+ },
+ "candles": {
+  "rows": 1664586,
+  "events": 5886,
+  "fetched_now": 5910,
+  "empty": 24
+ },
+ "finished": "2026-10-03T04:42:20.850245+00:00",
+ "http_calls": 20884
+}
+1 errors
+  candles stopped by time budget, 60 events left
