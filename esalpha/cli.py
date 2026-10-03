@@ -22,6 +22,19 @@ def main(argv=None) -> int:
     p.add_argument("--hours-before", type=float, default=6.0, help="hours of candles before each start")
     p.add_argument("--minutes", type=float, default=90, help="time budget for candles")
 
+    p = sub.add_parser("backtest", help="walk-forward fake-money backtest on real Kalshi prices; refits the model")
+    p.add_argument("--state", default="state")
+    p.add_argument("--minutes-before", type=float, default=60.0, help="decide this long before the scheduled start")
+    p.add_argument("--name", default="backtest")
+    p.add_argument("--no-save-params", action="store_true", help="do not overwrite state/params/fitted.json")
+
+    p = sub.add_parser("paper", help="one paper-trading pass (settle, scan upcoming matches, fake bets)")
+    p.add_argument("--state", default="state")
+    p.add_argument("--until", default=None, help="last day (YYYY-MM-DD) of the paper trial")
+
+    p = sub.add_parser("report", help="write state/reports/summary.md from the paper ledger and backtest")
+    p.add_argument("--state", default="state")
+
     args = ap.parse_args(argv)
     logging.basicConfig(level=logging.DEBUG if args.verbose else logging.INFO,
                         format="%(asctime)s %(levelname)s %(name)s: %(message)s")
@@ -37,6 +50,23 @@ def main(argv=None) -> int:
         man = history.build(args.state, days=args.days, hours_before=args.hours_before, minutes=args.minutes)
         print(json.dumps({k: v for k, v in man.items() if k != "errors"}, indent=1, default=str))
         print(f"{len(man['errors'])} errors", *man["errors"][:20], sep="\n  ")
+    elif args.cmd == "backtest":
+        from . import backtest
+
+        rep = backtest.run(args.state, minutes_before=args.minutes_before, name=args.name,
+                           save_params=not args.no_save_params)
+        print(json.dumps({k: rep[k] for k in ("decision", "matches_all", "matches_priced", "matches_tested", "period",
+                                              "by_game", "scores", "results", "params") if k in rep},
+                         indent=1, default=str))
+    elif args.cmd == "paper":
+        from . import paper
+
+        print(json.dumps(paper.run(args.state, until=args.until), indent=1, default=str))
+    elif args.cmd == "report":
+        from . import report
+
+        rep = report.write(args.state)
+        print(json.dumps(rep.get("books", {}), indent=1, default=str))
     return 0
 
 

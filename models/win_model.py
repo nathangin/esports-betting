@@ -61,6 +61,11 @@ MAP_FEATURE_COLS = [
 ]
 
 
+def _logit(p) -> np.ndarray:
+    p = np.clip(np.asarray(p, dtype=float), 1e-6, 1 - 1e-6)
+    return np.log(p / (1 - p))
+
+
 class WinModel:
     """
     Binary classifier: P(team1 wins the match).
@@ -74,6 +79,8 @@ class WinModel:
         self.feature_cols: list[str] = []
         self.best_params: dict = {}
         self.metrics: dict = {}
+        self.fill_values: dict = {}
+        self.cal_on_logit = False
 
     # ------------------------------------------------------------------
     # Training
@@ -126,36 +133,52 @@ class WinModel:
         logger.info(f"Best log-loss: {study.best_value:.4f} | params: {self.best_params}")
         return self.best_params
 
-    def fit(self, df: pd.DataFrame, calibrate: bool = True) -> "WinModel":
-        """Train on full dataset (after tuning)."""
-        self.feature_cols = self._select_features(df)
-        X, y = self._prepare(df)
-
+    def _params(self) -> dict:
         params = {**self.best_params, "random_state": RANDOM_STATE}
-        if not params:
-            params = {
-                "n_estimators": 300,
-                "max_depth": 5,
-                "learning_rate": 0.05,
-                "subsample": 0.8,
-                "colsample_bytree": 0.8,
-                "random_state": RANDOM_STATE,
-            }
+        if len(params) == 1:   # nothing tuned yet
+            params.update({"n_estimators": 300, "max_depth": 5, "learning_rate": 0.05,
+                           "subsample": 0.8, "colsample_bytree": 0.8})
+        return params
+
+    def fit(self, df: pd.DataFrame, calibrate: bool = True) -> "WinModel":
+        """Train on the full dataset (after tuning).
+
+        Calibration is fitted on out-of-fold predictions: each fold's model only saw
+        earlier matches. (It used to be fitted on the training predictions of the model
+        itself, which are overconfident, so the "calibrated" output stayed overconfident.)
+        """
+        if "match_date" in df.columns:
+            df = df.sort_values("match_date", kind="stable").reset_index(drop=True)
+        self.feature_cols = self._select_features(df)
+        self.fill_values = df[self.feature_cols].median().to_dict()
+        X, y = self._prepare(df)
+        params = self._params()
+
+        if calibrate:
+            oof_p, oof_y = [], []
+            for train_idx, val_idx in TimeSeriesSplit(n_splits=CV_FOLDS).split(X):
+                clf = xgb.XGBClassifier(**params)
+                clf.fit(X[train_idx], y[train_idx])
+                oof_p.extend(clf.predict_proba(X[val_idx])[:, 1])
+                oof_y.extend(y[val_idx])
+            oof_p, oof_y = np.asarray(oof_p), np.asarray(oof_y)
+            self.calibrator = LogisticRegression()
+            self.calibrator.fit(_logit(oof_p).reshape(-1, 1), oof_y)
+            self.cal_on_logit = True
+            cal = self.calibrator.predict_proba(_logit(oof_p).reshape(-1, 1))[:, 1]
+            self.metrics["oof_logloss_raw"] = log_loss(oof_y, np.clip(oof_p, 1e-6, 1 - 1e-6))
+            self.metrics["oof_logloss_calibrated_in_sample"] = log_loss(oof_y, cal)
+            self.metrics["oof_auc"] = roc_auc_score(oof_y, oof_p)
+            logger.info("Platt scaling fitted on out-of-fold predictions")
 
         self.model = xgb.XGBClassifier(**params)
         self.model.fit(X, y)
-
-        if calibrate:
-            raw_probs = self.model.predict_proba(X)[:, 1]
-            self.calibrator = LogisticRegression()
-            self.calibrator.fit(raw_probs.reshape(-1, 1), y)
-            logger.info("Platt scaling calibration fitted")
 
         train_probs = self.predict_proba(df)
         self.metrics["train_logloss"] = log_loss(y, train_probs)
         self.metrics["train_auc"] = roc_auc_score(y, train_probs)
         self.metrics["train_brier"] = brier_score_loss(y, train_probs)
-        logger.info(f"Train metrics: {self.metrics}")
+        logger.info(f"Metrics (train_* are in-sample and optimistic): {self.metrics}")
         return self
 
     def walk_forward_eval(self, df: pd.DataFrame, n_splits: int = CV_FOLDS) -> dict:
@@ -167,9 +190,7 @@ class WinModel:
 
         all_probs, all_labels = [], []
         for fold, (train_idx, val_idx) in enumerate(tscv.split(X)):
-            clf = xgb.XGBClassifier(
-                **{**self.best_params, "random_state": RANDOM_STATE}
-            )
+            clf = xgb.XGBClassifier(**self._params())
             clf.fit(X[train_idx], y[train_idx])
             probs = clf.predict_proba(X[val_idx])[:, 1]
             all_probs.extend(probs)
@@ -191,18 +212,23 @@ class WinModel:
 
     def predict_proba(self, df: pd.DataFrame) -> np.ndarray:
         """Return P(team1 wins) for each row."""
-        X = df[self.feature_cols].fillna(df[self.feature_cols].median()).values
+        fill = getattr(self, "fill_values", None) or df[self.feature_cols].median()
+        X = df[self.feature_cols].astype(float).fillna(fill).values
         raw = self.model.predict_proba(X)[:, 1]
         if self.calibrator is not None:
-            return self.calibrator.predict_proba(raw.reshape(-1, 1))[:, 1]
+            z = _logit(raw) if getattr(self, "cal_on_logit", False) else raw
+            return self.calibrator.predict_proba(z.reshape(-1, 1))[:, 1]
         return raw
 
     def predict_single(self, feature_dict: dict) -> float:
-        """Predict a single match. Returns P(team1 wins)."""
+        """Predict a single match. Returns P(team1 wins).
+
+        Missing features are filled with the training medians (they used to be set to 0.5,
+        which is a strange value for an Elo difference or a map count)."""
         df = pd.DataFrame([feature_dict])
         for col in self.feature_cols:
             if col not in df.columns:
-                df[col] = 0.5
+                df[col] = np.nan
         return float(self.predict_proba(df)[0])
 
     def feature_importance(self) -> pd.DataFrame:

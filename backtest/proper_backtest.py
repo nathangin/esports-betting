@@ -6,6 +6,12 @@ then evaluates on the most recent 20%. Zero data leakage.
 
 Also backtests props models by predicting per-player kill/death lines
 against simulated book lines set at the player's rolling mean.
+
+Oct 2026: training features no longer leak (``build_training_dataset`` replays Elo in time
+order; it used to hand every training row the final ratings), the AUC printed is the one
+measured on the test matches (it was a hard-coded 0.694), and the made-up P&L "at -110" is
+gone: there are no real odds in this database. For P&L on real prices run
+``python -m esalpha backtest``. Prop lines here are synthetic.
 """
 import sys
 from pathlib import Path
@@ -22,7 +28,7 @@ from features.elo import EloSystem
 from features.rolling_stats import build_training_dataset, build_match_features, compute_player_rolling_stats, compute_team_rolling_stats
 from models.win_model import WinModel
 from models.props_model import PropsModel, build_player_prop_features, MAP_SIDE_BIAS
-from backtest.backtest import load_cs2_data, calibration_report, confidence_accuracy, pnl_simulation, props_by_confidence, prizepicks_simulation
+from backtest.backtest import load_cs2_data, calibration_report, confidence_accuracy, oos_metrics, props_by_confidence, prizepicks_simulation
 from config import GAME_CONFIGS
 
 STAT_COLS = GAME_CONFIGS["cs2"]["stat_cols"]
@@ -204,28 +210,11 @@ def run_proper_backtest():
     print(f"\n  Mean calibration error: {active['calibration_error'].mean():.3f}")
     print(f"  (0.00 = perfect, 0.50 = random)")
 
-    # At -110 juice you need >52.4% to break even
-    print(f"\n  Break-even at -110 juice: 52.4%")
-    print(f"  Profitable confidence buckets (>52.4%):")
-    profitable = conf[conf["accuracy"] > 0.524]
-    if profitable.empty:
-        print("    None found at this threshold")
-    else:
-        print(profitable.to_string(index=False))
-
-    # P&L
-    pnl = pnl_simulation(win_results)
-    total_staked = len(pnl)
-    wins = pnl["won"].sum()
-    flat_roi = pnl["pnl_flat"].sum() / total_staked
-    kelly_final = pnl["bankroll_kelly"].iloc[-1] if not pnl.empty else 100
-    print(f"\n  P&L simulation at -110 (flat $1/bet):")
-    print(f"    Record        : {wins}-{total_staked-wins}")
-    print(f"    Flat ROI/bet  : {flat_roi:+.4f}")
-    print(f"    Kelly end bank: ${kelly_final:.2f} (started $100)")
-    # Rough annual estimate: assume ~5 bettable matches/day * 365 days
-    annual_bets = 365 * 5
-    print(f"    Est. annual P&L (flat $10/bet, ~5 bets/day): ${flat_roi * 10 * annual_bets:+.0f}")
+    m = oos_metrics(win_results)
+    print(f"\n  Out-of-sample log loss: {m['log_loss']:.4f} (coin flip {m['coin_flip_log_loss']:.4f}), "
+          f"Brier {m['brier']:.4f}, AUC {m['auc'] if m['auc'] is None else round(m['auc'], 3)}")
+    print("  No P&L: the database has no real odds, and accuracy alone does not say whether a")
+    print("  bet beats its price. Real-price backtest: `python -m esalpha backtest`.")
 
     # Props
     all_props = {}
@@ -238,7 +227,7 @@ def run_proper_backtest():
         all_props[stat] = df
         ou_acc = df["correct"].mean()
         mae = (df["actual"] - df["expected"]).abs().mean()
-        print(f"  O/U accuracy: {ou_acc:.1%}  MAE: {mae:.2f}")
+        print(f"  O/U accuracy vs synthetic lines: {ou_acc:.1%}  MAE: {mae:.2f}")
         by_conf = props_by_confidence(df)
         print(f"\n  By confidence bucket:")
         print(by_conf.to_string(index=False))
@@ -246,7 +235,7 @@ def run_proper_backtest():
     # PrizePicks power play simulation
     if all_props:
         combined = pd.concat(all_props.values(), ignore_index=True)
-        print(f"\nPRIZEPICKS SIMULATION (using confident legs >= 55%)")
+        print(f"\nPRIZEPICKS SIMULATION (synthetic lines, confident legs >= 55%; not a real result)")
         for legs in [2, 3, 4]:
             sim = prizepicks_simulation(combined, legs=legs)
             if "error" not in sim:
@@ -263,7 +252,7 @@ def run_proper_backtest():
     print("\n" + "="*65)
     print("\nSUMMARY FOR BETTING:")
     print(f"  Win model OOS accuracy : {acc:.1%}")
-    print(f"  CV AUC (from training) : 0.694")
+    print(f"  Win model OOS AUC      : {m['auc'] if m['auc'] is None else round(m['auc'], 3)}")
     best_bucket = conf.loc[conf["accuracy"].idxmax()]
     print(f"  Best confidence bucket : {best_bucket['conf_bucket']} ({best_bucket['accuracy']:.1%} acc, {int(best_bucket['bets'])} bets)")
     if all_props:

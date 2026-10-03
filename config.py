@@ -40,7 +40,8 @@ CV_FOLDS = 5
 MIN_MATCHES_FOR_PREDICTION = 5  # minimum team history before predicting
 
 # Betting
-MAX_KELLY_FRACTION = 0.25       # fractional Kelly cap (25% of full Kelly)
+MAX_KELLY_FRACTION = 0.25       # fractional Kelly multiplier (25% of full Kelly)
+MAX_STAKE_FRACTION = 0.02       # never more than 2% of bankroll on one bet
 MIN_EDGE_THRESHOLD = 0.03       # minimum edge to flag a bet (3%)
 
 GAME_CONFIGS = {

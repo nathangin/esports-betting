@@ -225,6 +225,37 @@ class Kalshi:
                 log.warning("could not parse market %s: %s", m.get("ticker"), e)
         return out
 
+    def open_markets(self, series_tickers: list[str]) -> list[Market]:
+        """Every open market in the given series (one or two pages per series)."""
+        out = []
+        for s in series_tickers:
+            try:
+                for m in self.iter_markets(series_ticker=s, status="open", page_size=1000, max_pages=3):
+                    try:
+                        out.append(parse_market(m, s))
+                    except Exception as e:  # noqa: BLE001
+                        log.warning("could not parse market %s: %s", m.get("ticker"), e)
+            except HttpError as e:
+                log.warning("open markets for %s: %s", s, e)
+        return out
+
+    def settled_markets(self, series_tickers: list[str], min_close_ts: int) -> list[Market]:
+        """Markets settled recently (closed after ``min_close_ts``) in the given series."""
+        out = []
+        for s in series_tickers:
+            try:
+                rows = list(self.iter_markets(series_ticker=s, status="settled", min_close_ts=int(min_close_ts),
+                                              page_size=1000, max_pages=3))
+            except HttpError as e:
+                log.warning("settled markets for %s: %s", s, e)
+                continue
+            for m in rows:
+                try:
+                    out.append(parse_market(m, s))
+                except Exception as e:  # noqa: BLE001
+                    log.warning("could not parse market %s: %s", m.get("ticker"), e)
+        return out
+
     def markets_by_ticker(self, tickers: list[str]) -> dict[str, Market]:
         out: dict[str, Market] = {}
         tickers = list(dict.fromkeys(tickers))

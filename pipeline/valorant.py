@@ -24,7 +24,7 @@ from scrapers.vlr import (
     scrape_vlr_all_results, scrape_vlr_match, scrape_vlr_upcoming,
     VlrMatch, VlrMapResult, VlrPlayerStats
 )
-from features.elo import EloSystem
+from features.elo import EloSystem, pre_match_ratings_from_maps
 from features.rolling_stats import (
     build_training_dataset, compute_player_rolling_stats,
     compute_team_rolling_stats, build_match_features
@@ -327,6 +327,8 @@ class ValorantPipeline:
         self, player_df: pd.DataFrame, map_df: pd.DataFrame, stat: str
     ) -> pd.DataFrame:
         rows = []
+        # opponent Elo as it stood before each match (the final ratings would leak results)
+        pre_elo = pre_match_ratings_from_maps(map_df)
         for _, row in player_df.sort_values("match_date").iterrows():
             as_of = pd.Timestamp(row["match_date"])
             pid = row["player_id"]
@@ -345,7 +347,7 @@ class ValorantPipeline:
                 else map_row.iloc[0]["team1_id"]
             )
             opp_stats = compute_team_rolling_stats(map_df, opp_id, as_of_date=as_of)
-            opp_elo = self.elo.get(opp_id)
+            opp_elo = pre_elo.get(row["map_result_id"], {}).get(opp_id, 1500.0)
 
             feats = build_player_prop_features(
                 rolling, map_rolling, opp_stats, opp_elo,

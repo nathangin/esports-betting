@@ -7,13 +7,14 @@ Workflow:
   3. Flag bets where edge >= threshold
   4. Size using fractional Kelly criterion
 """
+import re
 from dataclasses import dataclass, field
 from typing import Optional
 import pandas as pd
 import numpy as np
 from loguru import logger
 
-from config import MIN_EDGE_THRESHOLD, MAX_KELLY_FRACTION
+from config import MIN_EDGE_THRESHOLD, MAX_KELLY_FRACTION, MAX_STAKE_FRACTION
 
 
 # ---------------------------------------------------------------------------
@@ -87,10 +88,20 @@ def kelly_fraction(model_prob: float, decimal_odds: float) -> float:
     return max(f, 0.0)
 
 
-def fractional_kelly(model_prob: float, decimal_odds: float, fraction: float = MAX_KELLY_FRACTION) -> float:
-    """Capped fractional Kelly — reduces variance."""
+def fractional_kelly(
+    model_prob: float,
+    decimal_odds: float,
+    fraction: float = MAX_KELLY_FRACTION,
+    max_stake: float = MAX_STAKE_FRACTION,
+) -> float:
+    """Fractional Kelly stake as a share of bankroll, capped per bet.
+
+    ``fraction`` scales full Kelly (0.25 = quarter Kelly); ``max_stake`` caps any single
+    bet. (The cap used to be ``fraction`` itself, i.e. up to 25% of the bankroll on one
+    match whenever the model was confident.)
+    """
     full = kelly_fraction(model_prob, decimal_odds)
-    return min(full * fraction, fraction)
+    return min(full * fraction, max_stake)
 
 
 # ---------------------------------------------------------------------------
@@ -122,15 +133,58 @@ class BettingLine:
         self.decimal_odds = american_to_decimal(self.american_odds)
         self.implied_prob = american_to_implied(self.american_odds)
 
-    def evaluate(self, vig_pct: float = 0.05) -> "BettingLine":
-        """Compute edge and Kelly given model_prob."""
+    def evaluate(self, vig_pct: float = 0.05, fair_prob: Optional[float] = None) -> "BettingLine":
+        """Compute edge and Kelly given model_prob.
+
+        Pass ``fair_prob`` when both sides of the market are known (``remove_vig_two_way``);
+        otherwise the vig is estimated from ``vig_pct``."""
         if self.model_prob is None:
             return self
-        self.fair_prob = remove_vig_one_side(self.implied_prob, vig_pct)
+        self.fair_prob = fair_prob if fair_prob is not None else remove_vig_one_side(self.implied_prob, vig_pct)
         self.edge_value = edge(self.model_prob, self.fair_prob)
         self.kelly = fractional_kelly(self.model_prob, self.decimal_odds)
         self.flag = self.edge_value >= MIN_EDGE_THRESHOLD
         return self
+
+
+# ---------------------------------------------------------------------------
+# Line matching helpers
+# ---------------------------------------------------------------------------
+
+def _which_team(line: "BettingLine", names: dict[int, str]) -> Optional[int]:
+    """1 or 2 for the team a match-winner line is on, None if unclear."""
+    subj = (line.subject or "").strip().casefold()
+    for side, name in names.items():
+        if name and subj == name.casefold():
+            return side
+    desc = (line.description or "").casefold()
+    if desc.startswith("team1") or desc.startswith("team 1"):
+        return 1
+    if desc.startswith("team2") or desc.startswith("team 2"):
+        return 2
+    hits = [side for side, name in names.items() if name and name.casefold() in desc]
+    return hits[0] if len(hits) == 1 else None
+
+
+_OVER = re.compile(r"(?:\bover\b|\bo\s*\d)", re.I)
+_UNDER = re.compile(r"(?:\bunder\b|\bu\s*\d)", re.I)
+
+
+def prop_direction(line: "BettingLine") -> Optional[bool]:
+    """True for an over, False for an under, None if the line does not say.
+
+    (This used to test ``"o" in description``, which is true for almost any player name,
+    so unders were priced as overs.)"""
+    bt = (line.bet_type or "").lower()
+    if bt.endswith("_over") or bt == "over":
+        return True
+    if bt.endswith("_under") or bt == "under":
+        return False
+    desc = re.sub(r"\bo\s*/\s*u\b", " ", line.description or "", flags=re.I)   # "O/U 18.5" says neither
+    over, under = bool(_OVER.search(desc)), bool(_UNDER.search(desc))
+    if over != under:
+        return over
+    return None
 
 
 # ---------------------------------------------------------------------------
@@ -152,21 +206,45 @@ class SlateAnalyzer:
         lines: list[BettingLine],
         match_features: dict,
         vig_pct: float = 0.05,
+        team1_name: Optional[str] = None,
+        team2_name: Optional[str] = None,
     ) -> list[BettingLine]:
-        """Assign model probs to match-winner lines and evaluate."""
+        """Assign model probs to match-winner lines and evaluate.
+
+        Each line is matched to a team by its ``subject`` (or, failing that, its
+        description). Lines that name neither team, or both, are left unpriced instead of
+        being given team 1's probability. When both teams' lines are present the vig is
+        removed from the pair.
+        """
         if self.win_model is None:
             return lines
 
         team1_win_prob = self.win_model.predict_single(match_features)
-        team2_win_prob = 1.0 - team1_win_prob
+        names = {
+            1: str(team1_name if team1_name is not None else match_features.get("team1_name", "") or "").strip(),
+            2: str(team2_name if team2_name is not None else match_features.get("team2_name", "") or "").strip(),
+        }
 
-        for line in lines:
-            if line.bet_type == "match_winner":
-                if "team1" in line.description.lower() or match_features.get("team1_name", "").lower() in line.description.lower():
-                    line.model_prob = team1_win_prob
-                else:
-                    line.model_prob = team2_win_prob
-                line.evaluate(vig_pct)
+        side_of: dict[int, int] = {}
+        for i, line in enumerate(lines):
+            if line.bet_type != "match_winner":
+                continue
+            side = _which_team(line, names)
+            if side is None:
+                logger.warning(f"Line '{line.description}' does not name either team; skipped")
+                continue
+            side_of[i] = side
+
+        fair = {}
+        by_side = {s: i for i, s in side_of.items()}
+        if len(by_side) == 2:
+            f1, f2 = remove_vig_two_way(lines[by_side[1]].implied_prob, lines[by_side[2]].implied_prob)
+            fair = {by_side[1]: f1, by_side[2]: f2}
+
+        for i, side in side_of.items():
+            line = lines[i]
+            line.model_prob = team1_win_prob if side == 1 else 1.0 - team1_win_prob
+            line.evaluate(vig_pct, fair_prob=fair.get(i))
 
         return lines
 
@@ -181,11 +259,13 @@ class SlateAnalyzer:
             stat = line.bet_type.replace("_ou", "").replace("_over", "").replace("_under", "")
             if stat not in self.props_models or line.line_value is None:
                 continue
+            is_over = prop_direction(line)
+            if is_over is None:
+                logger.warning(f"Prop '{line.description}': cannot tell over from under; skipped")
+                continue
 
             model = self.props_models[stat]
             pred = model.over_under_prob(player_features, line.line_value)
-
-            is_over = "over" in line.bet_type.lower() or "o" in line.description.lower()
             line.model_prob = pred.over_prob if is_over else pred.under_prob
             line.evaluate(vig_pct)
 

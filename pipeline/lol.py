@@ -25,7 +25,7 @@ from scrapers.lol import (
     scrape_lol_matches_with_stats, scrape_lol_tournaments,
     LoLMatchResult, LoLGameResult, LoLPlayerStats
 )
-from features.elo import EloSystem
+from features.elo import EloSystem, pre_match_ratings_from_maps
 from features.rolling_stats import (
     build_training_dataset, compute_player_rolling_stats,
     compute_team_rolling_stats, compute_h2h_stats,
@@ -309,6 +309,8 @@ class LoLPipeline:
         role: str,
     ) -> pd.DataFrame:
         rows = []
+        # opponent Elo as it stood before each match (the final ratings would leak results)
+        pre_elo = pre_match_ratings_from_maps(map_df)
         for _, row in player_df.sort_values("match_date").iterrows():
             as_of = pd.Timestamp(row["match_date"])
             pid = row["player_id"]
@@ -326,7 +328,7 @@ class LoLPipeline:
                 else map_row.iloc[0]["team1_id"]
             )
             opp_stats = compute_team_rolling_stats(map_df, opp_id, as_of_date=as_of)
-            opp_elo = self.elo.get(opp_id)
+            opp_elo = pre_elo.get(row["map_result_id"], {}).get(opp_id, 1500.0)
 
             feats = build_player_prop_features(
                 rolling, map_rolling, opp_stats, opp_elo,

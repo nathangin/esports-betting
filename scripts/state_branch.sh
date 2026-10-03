@@ -11,7 +11,7 @@ DIR="${STATE_DIR:-state-branch}"
 
 case "${1:-}" in
   checkout)
-    git config --global user.name "wxalpha-bot"
+    git config --global user.name "esalpha-bot"
     git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
     if git ls-remote --exit-code --heads origin "$BRANCH" >/dev/null 2>&1; then
       git fetch --depth=1 origin "$BRANCH:refs/remotes/origin/$BRANCH"
@@ -19,7 +19,7 @@ case "${1:-}" in
     else
       git worktree add --detach "$DIR"
       (cd "$DIR" && git checkout -q --orphan "$BRANCH" && git rm -rfq . && git clean -fdxq)
-      printf '# Paper-trading state\n\nWritten by the GitHub Actions workflows on main. See state/reports/summary.md.\n' > "$DIR/README.md"
+      printf '# Paper-trading state\n\nWritten by the GitHub Actions workflows on the default branch. See state/reports/summary.md.\n' > "$DIR/README.md"
     fi
     mkdir -p "$DIR/state"
     ;;
