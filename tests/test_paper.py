@@ -10,7 +10,7 @@ from synth import make_history
 
 NOW = datetime(2026, 10, 2, 18, 0, tzinfo=timezone.utc)
 EV = "KXCS2GAME-26OCT021445T01T02"        # 2:45 PM EDT = 18:45 UTC, 45 minutes after NOW
-LATER = "KXCS2GAME-26OCT021700T03T04"     # 21:00 UTC, outside the decision window
+LATER = "KXCS2GAME-26OCT021800T03T04"     # 22:00 UTC, four hours out: outside even the late-run window
 
 
 def _setup(tmp_path):
@@ -101,3 +101,23 @@ def test_no_params_means_no_model_bets(tmp_path, monkeypatch):
     (tmp_path / "params" / "fitted.json").unlink()
     out = _run(monkeypatch, tmp_path, FakeKalshiHttp(open_markets=open_ms), NOW)
     assert out["bets_placed"]["blend"] == 0 and out["bets_placed"]["model-only"] == 0
+
+
+def test_decision_window_widens_when_runs_are_late(tmp_path, monkeypatch):
+    open_ms = _setup(tmp_path)
+    soon = "KXCS2GAME-26OCT021630T05T06"     # 20:30 UTC: 150 minutes after NOW
+    open_ms += [market(f"{soon}-T05", "Team 5", "cs2-5", bid=0.48, ask=0.50, new_title=True),
+                market(f"{soon}-T06", "Team 6", "cs2-6", bid=0.50, ask=0.52, new_title=True)]
+    fake = FakeKalshiHttp(open_markets=open_ms)
+    # a run 10 minutes earlier: the normal 10-70 minute window, so only the 18:45 match is decided
+    (tmp_path / "paper").mkdir(parents=True, exist_ok=True)
+    (tmp_path / "paper" / "runs.jsonl").write_text(json.dumps({"run_at": (NOW - timedelta(minutes=10)).isoformat()}) + "\n")
+    out = _run(monkeypatch, tmp_path, fake, NOW)
+    assert out["decision_window"] == [10, 70] and out["matches_decided"] == 1
+    # the next run comes two hours late: the window widens, so the 20:30 match (20 minutes out)
+    # and the 22:00 match (110 minutes out) are both decided now instead of being missed
+    out2 = _run(monkeypatch, tmp_path, fake, NOW + timedelta(hours=2, minutes=10))
+    assert out2["minutes_since_last_run"] == 130.0 and out2["decision_window"] == [10, 180]
+    assert out2["matches_decided"] == 2
+    scans = pd.read_parquet(tmp_path / "paper" / "scans" / "2026-10-02.parquet").set_index("event_ticker")
+    assert abs(scans.loc[soon, "minutes_to_start"] - 20) < 1e-6 and abs(scans.loc[LATER, "minutes_to_start"] - 110) < 1e-6

@@ -111,9 +111,11 @@ are skipped: that is usually news (a stand-in, a roster change) the model has no
 bid/ask before that moment, and settle on Kalshi's recorded result. Nothing in a decision uses
 information from after it.
 
-**Paper trading.** `.github/workflows/es-paper.yml` runs every 15 minutes: it settles finished
-bets, adds new results to the ratings, and decides once on every match that starts in the next
-10-70 minutes, in three fake $1,000 books:
+**Paper trading.** `.github/workflows/es-paper.yml` is scheduled every 15 minutes: it settles
+finished bets, adds new results to the ratings, and decides once on every match that starts in
+the next 10-70 minutes, in three fake $1,000 books. GitHub often starts scheduled runs hours
+late, so when the previous run is more than 30 minutes old the trader decides on every open
+match starting within 3 hours instead (the lead time is logged with each decision):
 
 | Book | What it does |
 |---|---|
