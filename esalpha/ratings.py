@@ -135,12 +135,14 @@ def model_matrix(f: pd.DataFrame) -> np.ndarray:
     ])
 
 
-def fit_logistic(X: np.ndarray, y: np.ndarray, l2: float = 1.0) -> np.ndarray:
-    """Plain L2-regularised logistic regression (Newton steps), intercept first."""
+def fit_logistic(X: np.ndarray, y: np.ndarray, l2: float = 1.0, intercept: bool = True) -> np.ndarray:
+    """Plain L2-regularised logistic regression (Newton steps); weights are returned intercept
+    first. With ``intercept=False`` the intercept is held at 0: right when the features are
+    antisymmetric in the two teams and which team is "A" is arbitrary (smaller ticker)."""
     Xb = np.column_stack([np.ones(len(X)), X])
     w = np.zeros(Xb.shape[1])
     lam = np.full(Xb.shape[1], l2)
-    lam[0] = 0.0
+    lam[0] = 0.0 if intercept else 1e12
     for _ in range(50):
         p = sigmoid(Xb @ w)
         g = Xb.T @ (p - y) + lam * w

@@ -36,12 +36,12 @@ log = logging.getLogger(__name__)
 
 BOOKS = ("blend", "model-only", "favourite")
 LEDGER_COLS = ["bet_id", "book", "model_version", "placed_at", "event_ticker", "series_ticker", "game", "tournament",
-               "start_time", "minutes_to_start", "ticker", "market_team", "backs", "opponent", "side", "contracts",
-               "price", "fee", "cost", "prob", "p_model", "q", "p_blend", "ev", "top_size", "status", "result",
-               "winner", "settled_at", "pnl"]
+               "start_time", "minutes_to_start", "ticker", "market_team", "backs", "backs_side", "opponent", "side",
+               "contracts", "price", "fee", "cost", "prob", "p_model", "q", "p_blend", "ev", "top_size", "status",
+               "result", "winner", "settled_at", "pnl"]
 TEXT_COLS = ["bet_id", "book", "model_version", "placed_at", "event_ticker", "series_ticker", "game", "tournament",
-             "start_time", "ticker", "market_team", "backs", "opponent", "side", "status", "result", "winner",
-             "settled_at"]
+             "start_time", "ticker", "market_team", "backs", "backs_side", "opponent", "side", "status", "result",
+             "winner", "settled_at"]
 DEFAULT_CONFIG = {
     "bankroll": 1000.0,
     "lead_minutes": [10, 70],
@@ -240,6 +240,7 @@ def scan(state: State, k: Kalshi, now: datetime, series: list[str]) -> tuple[lis
     decided = state.decided()
     # matches already under way that this trader never decided on (late runs, late markets)
     state.missed = int(((up["minutes_to_start"] < lo) & ~up["event_ticker"].isin(decided)).sum())
+    record_closes(state, up[up["event_ticker"].isin(decided)], now)
     todo = up[(up["minutes_to_start"] >= lo) & (up["minutes_to_start"] <= hi) & ~up["event_ticker"].isin(decided)]
     if todo.empty:
         return [], []
@@ -302,6 +303,26 @@ def scan(state: State, k: Kalshi, now: datetime, series: list[str]) -> tuple[lis
     return scans, placed
 
 
+def record_closes(state: State, up: pd.DataFrame, now: datetime, window=(-10.0, 15.0)) -> int:
+    """Snapshot the market near the scheduled start of matches already decided on: the
+    closing line used to score bets (closing-line value). Keeps the snapshot nearest the start."""
+    near = up[(up["minutes_to_start"] >= window[0]) & (up["minutes_to_start"] < window[1])]
+    rows = []
+    for r in near.itertuples(index=False):
+        q = market_prob(_nz(r.bid_a), _nz(r.ask_a), _nz(r.bid_b), _nz(r.ask_b))
+        if q is not None:
+            rows.append({"event_ticker": r.event_ticker, "at": now.isoformat(timespec="seconds"),
+                         "minutes_to_start": round(float(r.minutes_to_start), 1), "q_close": round(q, 4)})
+    if not rows:
+        return 0
+    path = state.root / "closes.csv"
+    old = pd.read_csv(path) if path.exists() else None
+    df = pd.concat([old, pd.DataFrame(rows)], ignore_index=True) if old is not None else pd.DataFrame(rows)
+    df = df.assign(dist=df["minutes_to_start"].abs()).sort_values("dist").drop_duplicates("event_ticker")
+    df.drop(columns="dist").sort_values("at").to_csv(path, index=False)
+    return len(rows)
+
+
 def _record(state: State, book: str, now: datetime, r, bt, p_model, q, p_blend) -> dict:
     is_a = bt.ticker == r.ticker_a
     market_team = r.team_a if is_a else r.team_b
@@ -314,7 +335,7 @@ def _record(state: State, book: str, now: datetime, r, bt, p_model, q, p_blend) 
            "placed_at": now.isoformat(timespec="seconds"), "event_ticker": r.event_ticker,
            "series_ticker": r.series_ticker, "game": r.game, "tournament": r.tournament,
            "start_time": r.start_time.isoformat(), "minutes_to_start": round(float(r.minutes_to_start), 1),
-           "ticker": bt.ticker, "market_team": market_team, "backs": backs_team,
+           "ticker": bt.ticker, "market_team": market_team, "backs": backs_team, "backs_side": backs,
            "opponent": r.team_b if backs == "A" else r.team_a, "side": bt.side, "contracts": bt.contracts,
            "price": bt.price, "fee": bt.fee, "cost": bt.cost, "prob": round(float(prob), 4),
            "p_model": round(p_model, 4), "q": round(q, 4), "p_blend": None if p_blend is None else round(p_blend, 4),

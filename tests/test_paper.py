@@ -57,6 +57,16 @@ def test_paper_pass_decides_once_bets_and_settles(tmp_path, monkeypatch):
     out2 = _run(monkeypatch, tmp_path, fake, NOW + timedelta(minutes=10))
     assert out2["matches_decided"] == 0
 
+    # five minutes before the start the market has moved to Team 1 (0.51): that is the closing line
+    moved = [dict(open_ms[0], yes_bid_dollars="0.5000", yes_ask_dollars="0.5200"),
+             dict(open_ms[1], yes_bid_dollars="0.4800", yes_ask_dollars="0.5000")] + open_ms[2:]
+    _run(monkeypatch, tmp_path, FakeKalshiHttp(open_markets=moved), NOW + timedelta(minutes=40))
+    closes = pd.read_csv(tmp_path / "paper" / "closes.csv")
+    assert list(closes["event_ticker"]) == [EV] and abs(closes["q_close"].iloc[0] - 0.51) < 1e-9
+    books = report.book_stats(paper.State(tmp_path))
+    assert abs(books["blend"]["avg_clv"] - (0.51 - 0.46)) < 1e-9          # backed Team 1 at 0.46
+    assert abs(books["favourite"]["avg_clv"] - (0.49 - 0.56)) < 1e-9      # backed Team 2 at 0.56
+
     # the match is over: Team 1 won
     settled = [dict(m, status="finalized", result="yes" if m["ticker"].endswith("T01") else "no",
                     expiration_value="Team 1", close_time="2026-10-02T20:30:00Z") for m in open_ms[:2]]

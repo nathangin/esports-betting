@@ -31,8 +31,25 @@ def _pct(x, digits=1) -> str:
     return f"{100 * x:+.{digits}f}%"
 
 
+def _closes(state: State) -> dict:
+    p = state.root / "closes.csv"
+    if not p.exists():
+        return {}
+    c = pd.read_csv(p)
+    return dict(zip(c["event_ticker"], c["q_close"]))
+
+
 def book_stats(state: State) -> dict:
     led = state.ledger.copy()
+    closes = _closes(state)
+    if len(led) and "backs_side" in led:
+        # closing-line value: the market's probability, near the start, of the team the bet backs,
+        # minus the price paid
+        qc = led["event_ticker"].map(closes).astype(float)
+        side_close = np.where(led["backs_side"] == "A", qc, 1 - qc)
+        led["clv"] = side_close - led["price"].astype(float)
+    else:
+        led["clv"] = np.nan
     out = {}
     for b in BOOKS:
         lb = led[led["book"] == b]
@@ -44,7 +61,9 @@ def book_stats(state: State) -> dict:
                   "open": int((lb["status"] == "open").sum()), "settled": int(len(done)),
                   "won": int((done["status"] == "won").sum()), "void": int((lb["status"] == "void").sum()),
                   "pnl": round(pnl, 2), "outlay": round(outlay, 2), "roi": pnl / outlay if outlay else None,
-                  "fees": round(float(lb["fee"].astype(float).sum()), 2) if len(lb) else 0.0}
+                  "fees": round(float(lb["fee"].astype(float).sum()), 2) if len(lb) else 0.0,
+                  "avg_clv": float(lb["clv"].mean()) if len(lb) and lb["clv"].notna().any() else None,
+                  "clv_n": int(lb["clv"].notna().sum()) if len(lb) else 0}
     return out
 
 
@@ -87,12 +106,15 @@ def write(state_dir: str) -> dict:
          f"Updated {now:%Y-%m-%d %H:%M} UTC. Model fitted {state.params.version}. Every bet below is simulated: "
          "the trader only reads Kalshi's public market data and never places orders.", "",
          "## Books", "",
-         "| Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Equity |",
-         "|---|---|---:|---:|---:|---:|---:|---:|---:|"]
+         "| Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |",
+         "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
     for b, s in books.items():
+        clv = "-" if s.get("avg_clv") is None else f"{100 * s['avg_clv']:+.1f}c ({s['clv_n']})"
         L.append(f"| {b} | {BOOK_NOTES[b]} | {s['bets']} | {s['open']} | {s['settled']} | {s['won']} | "
-                 f"{_money(s['pnl'])} | {_pct(s['roi'])} | {_money(s['equity'])} |")
-    L += ["", "Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets.", ""]
+                 f"{_money(s['pnl'])} | {_pct(s['roi'])} | {clv} | {_money(s['equity'])} |")
+    L += ["", "Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. "
+          "Closing-line value is the market's probability of the backed team near the start minus the price "
+          "paid (bets with a snapshot); it shows skill long before P&L can.", ""]
     L += ["## Forecast scoring on the matches the trader looked at", ""]
     if sc.get("n"):
         L += [f"{sc['n']} finished matches. Lower is better; the market line is the bar to beat.", "",
@@ -132,15 +154,20 @@ def backtest_section(bt: dict) -> list[str]:
          f"{bt['matches_tested']} settled matches from {bt['period'][0][:10]} to {bt['period'][1][:10]}, "
          f"decided {bt['decision']} at the quoted bid/ask, with Kalshi's taker fee. Ratings, the win model "
          "and the blend only ever use earlier matches (weekly walk-forward refits).", "",
-         "| Strategy | Bets | Staked | P&L | ROI | 95% range | Hit rate | Max drawdown |",
-         "|---|---:|---:|---:|---:|---|---:|---:|"]
+         "| Strategy | Bets | Staked | P&L | ROI | 95% range | Hit rate | Closing-line value | Max drawdown |",
+         "|---|---:|---:|---:|---:|---|---:|---:|---:|"]
     for name, r in bt["results"].items():
         if not r.get("bets"):
-            L.append(f"| {name} | 0 | - | - | - | - | - | - |")
+            L.append(f"| {name} | 0 | - | - | - | - | - | - | - |")
             continue
         ci = r.get("roi_ci95") or [None, None]
+        clv = r.get("avg_clv")
         L.append(f"| {name} | {r['bets']} | {_money(r['outlay'])} | {_money(r['pnl'])} | {_pct(r['roi'])} | "
-                 f"{_pct(ci[0])} to {_pct(ci[1])} | {100 * r['hit_rate']:.0f}% | {100 * r['max_drawdown']:.0f}% |")
+                 f"{_pct(ci[0])} to {_pct(ci[1])} | {100 * r['hit_rate']:.0f}% | "
+                 f"{'-' if clv is None or clv != clv else f'{100 * clv:+.1f}c'} | {100 * r['max_drawdown']:.0f}% |")
+    L += ["", "Closing-line value: the market's probability at the scheduled start of the side bought, minus the "
+          "price paid, averaged over bets. Around zero means the bets saw nothing the market did not price in "
+          "by the start."]
     s = bt.get("scores") or {}
     if s.get("n"):
         L += ["", f"Forecast quality on the same {s['n']} matches (lower is better):", "",

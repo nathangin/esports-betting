@@ -54,3 +54,11 @@ def test_tune_k_uses_only_matches_before_cutoff():
     m = _matches(rows)
     k, scores = rt.tune_k(m, "cs2", until=m["start_time"].iloc[300])
     assert k in (16, 24, 32, 48, 64) and scores
+
+
+def test_fit_without_intercept_for_symmetric_features():
+    rng = np.random.default_rng(3)
+    X = rng.normal(size=(5000, 1))
+    y = (rng.random(5000) < rt.sigmoid(0.4 + 1.0 * X[:, 0])).astype(float)
+    w = rt.fit_logistic(X, y, l2=0.0, intercept=False)
+    assert abs(w[0]) < 1e-6 and 0.7 < w[1] < 1.3

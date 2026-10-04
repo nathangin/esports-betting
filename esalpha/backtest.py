@@ -77,8 +77,12 @@ def build_events(hist: Path, minutes_before: float = 60.0, tune_until=None) -> t
         q = market_prob(ba, aa, bb, ab)
         if q is None:
             continue
+        # the closing line: the market at the scheduled start (for closing-line value, never for decisions)
+        t_close = int(pd.Timestamp(r.start_time).timestamp())
+        q_close = market_prob(*quotes_at(by_ticker.get(r.ticker_a), t_close, 900),
+                              *quotes_at(by_ticker.get(r.ticker_b), t_close, 900))
         rows.append({**r._asdict(), "decision_ts": t, "bid_a": ba, "ask_a": aa, "bid_b": bb, "ask_b": ab, "q": q,
-                     "y": 1 if r.winner == "A" else 0})
+                     "q_close": q_close, "y": 1 if r.winner == "A" else 0})
     ev = pd.DataFrame(rows)
     return ev, {"elo": tuning, "all_matches": int(len(f)), "features": f}
 
@@ -102,13 +106,14 @@ def walk_forward(ev: pd.DataFrame, feats: pd.DataFrame, burn_in_days: int = 21) 
         train = hist_res[hist_res["start_time"] < w0]
         if len(train) < 200:
             continue
-        wm = rt.fit_logistic(rt.model_matrix(train), (train["winner"] == "A").to_numpy().astype(float), l2=1.0)
+        wm = rt.fit_logistic(rt.model_matrix(train), (train["winner"] == "A").to_numpy().astype(float), l2=1.0,
+                             intercept=False)
         ev.loc[sel, "p_model"] = rt.predict_logistic(wm, rt.model_matrix(ev.loc[sel]))
         past = ev[(start < w0) & ev["p_model"].notna()]
         blend = None
         if len(past) >= 150:
             Xb = np.column_stack([rt.logit(past["p_model"]), rt.logit(past["q"])])
-            blend = rt.fit_logistic(Xb, past["y"].to_numpy().astype(float), l2=0.5)
+            blend = rt.fit_logistic(Xb, past["y"].to_numpy().astype(float), l2=0.5, intercept=False)
             Xn = np.column_stack([rt.logit(ev.loc[sel, "p_model"]), rt.logit(ev.loc[sel, "q"])])
             ev.loc[sel, "p"] = rt.predict_logistic(blend, Xn)
         log_rows.append({"from": str(w0.date()), "train_results": int(len(train)), "blend_fit_on": int(len(past)),
@@ -160,6 +165,7 @@ def simulate(ev: pd.DataFrame, prob_col: str, rules: Rules, fees: dict, bankroll
             rec = {"strategy": strategy, "event_ticker": r.event_ticker, "game": r.game, "start_time": r.start_time,
                    "ticker": bt.ticker, "side": bt.side, "backs": backs, "price": bt.price, "contracts": bt.contracts,
                    "cost": bt.cost, "fee": bt.fee, "prob": bt.prob, "q": r.q, "result": result,
+                   "clv": _clv(backs, getattr(r, "q_close", None), bt.price),
                    "settle_ts": pd.Timestamp(r.close_time) if pd.notna(r.close_time) else now + pd.Timedelta(hours=6)}
             cash -= bt.cost + bt.fee
             day_budget[day] -= bt.cost + bt.fee
@@ -171,6 +177,14 @@ def simulate(ev: pd.DataFrame, prob_col: str, rules: Rules, fees: dict, bankroll
         ledger.append(b)
     led = pd.DataFrame(ledger)
     return led, summarize(led, bankroll, cash, curve)
+
+
+def _clv(backs, q_close, price) -> float | None:
+    """Closing-line value: the market's probability, at the start, of the side bought, minus
+    the price paid. Positive on average means the bets anticipated where the market went."""
+    if q_close is None or pd.isna(q_close) or backs not in ("A", "B"):
+        return None
+    return float((q_close if backs == "A" else 1 - q_close) - price)
 
 
 def summarize(led: pd.DataFrame, start: float, end_cash: float, curve) -> dict:
@@ -192,6 +206,8 @@ def summarize(led: pd.DataFrame, start: float, end_cash: float, curve) -> dict:
             "roi": float(led["pnl"].sum() / outlay), "roi_ci95": [float(np.percentile(boot, 2.5)), float(np.percentile(boot, 97.5))],
             "hit_rate": float(won), "avg_price": float(led["price"].mean()), "fees": round(float(led["fee"].sum()), 2),
             "max_drawdown": float(np.max((peak - eq) / peak)) if len(eq) else 0.0,
+            "avg_clv": float(pd.to_numeric(led["clv"], errors="coerce").mean()) if "clv" in led else None,
+            "beat_close": float((pd.to_numeric(led["clv"], errors="coerce") > 0).mean()) if "clv" in led else None,
             "by_game": led.assign(o=led["cost"] + led["fee"]).groupby("game").agg(
                 bets=("pnl", "size"), pnl=("pnl", "sum"), outlay=("o", "sum")).round(2).reset_index().to_dict("records")}
 
@@ -211,12 +227,13 @@ def final_params(ev: pd.DataFrame, feats: pd.DataFrame, k: dict, minutes_before:
     """What the paper trader uses: the win model fitted on every result so far and the blend
     fitted on every priced match (with out-of-sample model probabilities)."""
     res = feats[feats["winner"].isin(["A", "B"])]
-    win_w = rt.fit_logistic(rt.model_matrix(res), (res["winner"] == "A").to_numpy().astype(float), l2=1.0)
+    win_w = rt.fit_logistic(rt.model_matrix(res), (res["winner"] == "A").to_numpy().astype(float), l2=1.0,
+                            intercept=False)
     past = ev.dropna(subset=["p_model"])
     blend_w = None
     if len(past) >= 150:
         Xb = np.column_stack([rt.logit(past["p_model"]), rt.logit(past["q"])])
-        blend_w = rt.fit_logistic(Xb, past["y"].to_numpy().astype(float), l2=0.5)
+        blend_w = rt.fit_logistic(Xb, past["y"].to_numpy().astype(float), l2=0.5, intercept=False)
     return Params(k={g: float(v) for g, v in k.items()},
                   win_w=[float(x) for x in win_w], blend_w=None if blend_w is None else [float(x) for x in blend_w],
                   meta={"fitted": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%MZ"), "results": int(len(res)),
