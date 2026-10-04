@@ -1,40 +1,53 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-04 16:52 UTC. Model fitted 2026-10-04T12:10. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-04 20:02 UTC. Model fitted 2026-10-04T12:10. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 6 | 6 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 9 | 8 | 1 | 0 | -$9.86 | -100.0% | -2.0c (1) | $990.14 |
+| model-only | Elo win model alone (control: ignores the market) | 6 | 1 | 5 | 1 | $59.70 | +91.4% | - | $1,059.70 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 10 | 2 | 8 | 6 | $7.82 | +10.1% | -2.0c (1) | $1,007.82 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-No finished matches yet.
+10 finished matches. Lower is better; the market line is the bar to beat.
+
+| Forecast | Log loss | Brier |
+|---|---:|---:|
+| market | 0.5156 | 0.1678 |
+| model | 0.5974 | 0.2027 |
+| blend | 0.5150 | 0.1659 |
+
+| Game | Matches | Market log loss | Model log loss |
+|---|---:|---:|---:|
+| cs2 | 4 | 0.4450 | 0.5386 |
+| lol | 3 | 0.1246 | 0.4360 |
+| r6 | 3 | 1.0008 | 0.8372 |
 
 ## Latest bets
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-04 16:52 | model-only | r6 | LOS | Team Liquid | NO Team Liquid | 7 | 0.34 | 0.41 | 0.68 | open | - |
-| 2026-10-04 16:52 | favourite | r6 | Team Liquid | LOS | YES Team Liquid | 14 | 0.68 | 0.68 | 0.68 | open | - |
+| 2026-10-04 20:02 | favourite | r6 | FURIA Esports | Lucky Five | YES FURIA Esports | 13 | 0.72 | 0.71 | 0.71 | open | - |
+| 2026-10-04 16:52 | model-only | r6 | LOS | Team Liquid | NO Team Liquid | 7 | 0.34 | 0.41 | 0.68 | lost | -$2.49 |
+| 2026-10-04 16:52 | favourite | r6 | Team Liquid | LOS | YES Team Liquid | 14 | 0.68 | 0.68 | 0.68 | won | $4.26 |
 | 2026-10-04 16:52 | model-only | r6 | LOUD | Fluxo W7M | NO Fluxo W7M | 8 | 0.38 | 0.44 | 0.63 | open | - |
 | 2026-10-04 16:52 | favourite | r6 | Fluxo W7M | LOUD | YES Fluxo W7M | 15 | 0.63 | 0.63 | 0.63 | open | - |
-| 2026-10-04 15:23 | model-only | lol | UCAM Esports Club | Movistar KOI Fénix | NO Movistar KOI Fénix | 13 | 0.24 | 0.39 | 0.76 | open | - |
-| 2026-10-04 15:23 | favourite | lol | Movistar KOI Fénix | UCAM Esports Club | YES Movistar KOI Fénix | 12 | 0.77 | 0.76 | 0.76 | open | - |
+| 2026-10-04 15:23 | model-only | lol | UCAM Esports Club | Movistar KOI Fénix | NO Movistar KOI Fénix | 13 | 0.24 | 0.39 | 0.76 | lost | -$3.29 |
+| 2026-10-04 15:23 | favourite | lol | Movistar KOI Fénix | UCAM Esports Club | YES Movistar KOI Fénix | 12 | 0.77 | 0.76 | 0.76 | won | $2.61 |
 | 2026-10-04 15:23 | favourite | r6 | INTZ | Imperial Esports | NO Imperial Esports | 18 | 0.53 | 0.52 | 0.48 | lost | -$9.86 |
-| 2026-10-04 15:23 | model-only | cs2 | M80 | BetBoom Team | YES M80 | 59 | 0.32 | 0.43 | 0.68 | open | - |
-| 2026-10-04 15:23 | favourite | cs2 | BetBoom Team | M80 | YES BetBoom Team | 14 | 0.68 | 0.68 | 0.68 | open | - |
-| 2026-10-04 15:23 | model-only | cs2 | Natus Vincere | Vitality | YES Natus Vincere | 70 | 0.27 | 0.34 | 0.27 | open | - |
-| 2026-10-04 15:23 | favourite | cs2 | Vitality | Natus Vincere | YES Vitality | 13 | 0.73 | 0.73 | 0.27 | open | - |
-| 2026-10-04 15:23 | favourite | cs2 | ex-RUSTEC | ENJOY | NO ENJOY | 15 | 0.64 | 0.64 | 0.36 | open | - |
-| 2026-10-04 15:23 | model-only | r6 | Black Dragons e-Sports | FaZe Clan | YES Black Dragons e-Sports | 125 | 0.15 | 0.30 | 0.15 | open | - |
-| 2026-10-04 15:23 | favourite | r6 | FaZe Clan | Black Dragons e-Sports | YES FaZe Clan | 11 | 0.85 | 0.85 | 0.15 | open | - |
-| 2026-10-04 15:23 | favourite | cs2 | Turma do Pagode | Bounty Hunters Esports | NO Bounty Hunters Esports | 17 | 0.54 | 0.54 | 0.47 | open | - |
+| 2026-10-04 15:23 | model-only | cs2 | M80 | BetBoom Team | YES M80 | 59 | 0.32 | 0.43 | 0.68 | lost | -$19.78 |
+| 2026-10-04 15:23 | favourite | cs2 | BetBoom Team | M80 | YES BetBoom Team | 14 | 0.68 | 0.68 | 0.68 | won | $4.26 |
+| 2026-10-04 15:23 | model-only | cs2 | Natus Vincere | Vitality | YES Natus Vincere | 70 | 0.27 | 0.34 | 0.27 | lost | -$19.87 |
+| 2026-10-04 15:23 | favourite | cs2 | Vitality | Natus Vincere | YES Vitality | 13 | 0.73 | 0.73 | 0.27 | won | $3.33 |
+| 2026-10-04 15:23 | favourite | cs2 | ex-RUSTEC | ENJOY | NO ENJOY | 15 | 0.64 | 0.64 | 0.36 | won | $5.15 |
+| 2026-10-04 15:23 | model-only | r6 | Black Dragons e-Sports | FaZe Clan | YES Black Dragons e-Sports | 125 | 0.15 | 0.30 | 0.15 | won | $105.13 |
+| 2026-10-04 15:23 | favourite | r6 | FaZe Clan | Black Dragons e-Sports | YES FaZe Clan | 11 | 0.85 | 0.85 | 0.15 | lost | -$9.45 |
+| 2026-10-04 15:23 | favourite | cs2 | Turma do Pagode | Bounty Hunters Esports | NO Bounty Hunters Esports | 17 | 0.54 | 0.54 | 0.47 | won | $7.52 |
 
 ## Backtest on real Kalshi prices
 
