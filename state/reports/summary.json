@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-04T15:23:12.360550+00:00",
+ "generated": "2026-10-04T16:52:34.861903+00:00",
  "books": {
   "blend": {
    "start": 1000.0,
@@ -20,34 +20,34 @@
   "model-only": {
    "start": 1000.0,
    "equity": 1000.0,
-   "cash": 937.19,
-   "bets": 4,
-   "open": 4,
+   "cash": 931.52,
+   "bets": 6,
+   "open": 6,
    "settled": 0,
    "won": 0,
    "void": 0,
    "pnl": 0.0,
    "outlay": 0.0,
    "roi": null,
-   "fees": 3.16,
+   "fees": 3.41,
    "avg_clv": null,
    "clv_n": 0
   },
   "favourite": {
    "start": 1000.0,
-   "equity": 1000.0,
-   "cash": 932.56,
-   "bets": 7,
-   "open": 7,
-   "settled": 0,
+   "equity": 990.14,
+   "cash": 913.12,
+   "bets": 9,
+   "open": 8,
+   "settled": 1,
    "won": 0,
    "void": 0,
-   "pnl": 0.0,
-   "outlay": 0.0,
-   "roi": null,
-   "fees": 1.52,
-   "avg_clv": null,
-   "clv_n": 0
+   "pnl": -9.86,
+   "outlay": 9.86,
+   "roi": -1.0,
+   "fees": 1.99,
+   "avg_clv": -0.020000000000000018,
+   "clv_n": 1
   }
  },
  "scoring": {
