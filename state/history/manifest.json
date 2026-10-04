@@ -1,49 +1,48 @@
 {
- "started": "2026-10-03T03:10:41.693747+00:00",
- "errors": [
-  "candles stopped by time budget, 60 events left"
- ],
+ "started": "2026-10-04T11:39:13.011204+00:00",
+ "errors": [],
  "args": {
   "days": 150,
   "hours_before": 6.0
  },
  "series": 126,
  "markets": {
-  "rows": 22061,
-  "events": 10932,
+  "rows": 28387,
+  "events": 14095,
   "by_game": {
    "cod": 303,
-   "cs2": 4474,
-   "dota2": 1253,
-   "lol": 2327,
-   "ow": 351,
+   "cs2": 6662,
+   "dota2": 1572,
+   "lol": 2833,
+   "ow": 362,
    "r6": 668,
-   "rlgame": 109,
-   "valorant": 1447
+   "rl": 109,
+   "valorant": 1586
   }
  },
  "matches": {
-  "rows": 10735,
+  "rows": 13898,
   "by_game": {
    "cod": 303,
-   "cs2": 4473,
-   "dota2": 1086,
-   "lol": 2299,
-   "ow": 351,
+   "cs2": 6661,
+   "dota2": 1405,
+   "lol": 2805,
+   "ow": 362,
    "r6": 668,
-   "rlgame": 109,
-   "valorant": 1446
+   "rl": 109,
+   "valorant": 1585
   },
   "first": "2026-02-20 21:00:00+00:00",
-  "last": "2026-10-02 22:00:00+00:00",
-  "decided": 10506
+  "last": "2026-10-04 11:00:00+00:00",
+  "decided": 13420
  },
+ "candles_rescaled_markets": 7300,
  "candles": {
-  "rows": 1664586,
-  "events": 5886,
-  "fetched_now": 5910,
-  "empty": 24
+  "rows": 2415048,
+  "events": 8776,
+  "fetched_now": 2930,
+  "empty": 40
  },
- "finished": "2026-10-03T04:42:20.850245+00:00",
- "http_calls": 20884
+ "finished": "2026-10-04T11:54:59.831759+00:00",
+ "http_calls": 3030
 }

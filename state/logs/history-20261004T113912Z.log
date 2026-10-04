@@ -1,0 +1,70 @@
+2026-10-04 11:39:15,626 INFO esalpha.history: KXLOLGAME: 6034 match markets
+2026-10-04 11:39:16,447 INFO esalpha.history: KXVALORANTGAME: 3281 match markets
+2026-10-04 11:39:19,395 INFO esalpha.history: KXCS2GAME: 13653 match markets
+2026-10-04 11:39:19,667 INFO esalpha.history: KXOWGAME: 776 match markets
+2026-10-04 11:39:19,861 INFO esalpha.history: KXRLGAME: 218 match markets
+2026-10-04 11:39:20,156 INFO esalpha.history: KXCODGAME: 606 match markets
+2026-10-04 11:39:20,488 INFO esalpha.history: KXR6GAME: 1352 match markets
+2026-10-04 11:39:20,699 INFO esalpha.history: KXCSGOGAME: 206 match markets
+2026-10-04 11:39:21,651 INFO esalpha.history: KXDOTA2GAME: 3485 match markets
+2026-10-04 11:39:22,065 INFO esalpha.history: markets done (9s)
+2026-10-04 11:40:57,221 INFO esalpha.history: candles: 250 events
+2026-10-04 11:42:11,338 INFO esalpha.history: candles: 500 events
+2026-10-04 11:43:26,090 INFO esalpha.history: candles: 750 events
+2026-10-04 11:44:40,625 INFO esalpha.history: candles: 1000 events
+2026-10-04 11:45:55,977 INFO esalpha.history: candles: 1250 events
+2026-10-04 11:47:11,536 INFO esalpha.history: candles: 1500 events
+2026-10-04 11:48:27,164 INFO esalpha.history: candles: 1750 events
+2026-10-04 11:49:43,468 INFO esalpha.history: candles: 2000 events
+2026-10-04 11:50:59,941 INFO esalpha.history: candles: 2250 events
+2026-10-04 11:52:16,660 INFO esalpha.history: candles: 2500 events
+2026-10-04 11:53:33,813 INFO esalpha.history: candles: 2750 events
+2026-10-04 11:54:59,831 INFO esalpha.history: candles done (947s)
+{
+ "started": "2026-10-04T11:39:13.011204+00:00",
+ "args": {
+  "days": 150,
+  "hours_before": 6.0
+ },
+ "series": 126,
+ "markets": {
+  "rows": 28387,
+  "events": 14095,
+  "by_game": {
+   "cod": 303,
+   "cs2": 6662,
+   "dota2": 1572,
+   "lol": 2833,
+   "ow": 362,
+   "r6": 668,
+   "rl": 109,
+   "valorant": 1586
+  }
+ },
+ "matches": {
+  "rows": 13898,
+  "by_game": {
+   "cod": 303,
+   "cs2": 6661,
+   "dota2": 1405,
+   "lol": 2805,
+   "ow": 362,
+   "r6": 668,
+   "rl": 109,
+   "valorant": 1585
+  },
+  "first": "2026-02-20 21:00:00+00:00",
+  "last": "2026-10-04 11:00:00+00:00",
+  "decided": 13420
+ },
+ "candles_rescaled_markets": 7300,
+ "candles": {
+  "rows": 2415048,
+  "events": 8776,
+  "fetched_now": 2930,
+  "empty": 40
+ },
+ "finished": "2026-10-04T11:54:59.831759+00:00",
+ "http_calls": 3030
+}
+0 errors
