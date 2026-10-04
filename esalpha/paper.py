@@ -7,7 +7,11 @@ Books (each starts with its own fake bankroll):
   favourite   1% flat on the market favourite, a no-skill baseline
 
 Each match is decided once, in the first run that finds it 10-70 minutes before its scheduled
-start (runs every 15 minutes, so usually 55-70 minutes before; the backtest uses 60). Fills are at the displayed ask (or 1 - bid for
+start (runs every 15 minutes, so usually 55-70 minutes before; the backtest uses 60). GitHub
+often starts scheduled runs hours late; when the previous run is more than 30 minutes old the
+window widens to every open match starting in the next 3 hours (Kalshi lists matches about two
+hours ahead), so a late run still decides what it can. The lead time is recorded with each
+decision. Fills are at the displayed ask (or 1 - bid for
 NO), capped at the size shown at that price, with Kalshi's taker fee.
 
 Nothing here places real orders: Kalshi is only read through its public market-data API.
@@ -45,6 +49,8 @@ TEXT_COLS = ["bet_id", "book", "model_version", "placed_at", "event_ticker", "se
 DEFAULT_CONFIG = {
     "bankroll": 1000.0,
     "lead_minutes": [10, 70],
+    "late_gap_minutes": 30,        # if the previous run is older than this ...
+    "late_lead_minutes": 180,      # ... decide on any open match starting within this many minutes
     "flat_frac": 0.01,
     "rules": {"blend": {}, "model-only": {}, "favourite": {}},
 }
@@ -234,6 +240,10 @@ def scan(state: State, k: Kalshi, now: datetime, series: list[str]) -> tuple[lis
     if up.empty:
         return [], []
     lo, hi = state.config.get("lead_minutes", [10, 70])
+    gap = getattr(state, "run_gap_minutes", None)
+    if gap is None or gap > state.config.get("late_gap_minutes", 30):
+        hi = max(hi, state.config.get("late_lead_minutes", 180))
+    state.window = [lo, hi]
     up["minutes_to_start"] = (up["start_time"] - pd.Timestamp(now)).dt.total_seconds() / 60.0
     decided = state.decided()
     # matches already under way that this trader never decided on (late runs, late markets)
@@ -353,10 +363,26 @@ def _record(state: State, book: str, now: datetime, r, bt, p_model, q, p_blend) 
 
 # ---------------------------------------------------------------------------
 
+def last_run_at(state: State) -> datetime | None:
+    p = state.root / "runs.jsonl"
+    if not p.exists():
+        return None
+    lines = [ln for ln in p.read_text().splitlines() if ln.strip()]
+    if not lines:
+        return None
+    try:
+        return datetime.fromisoformat(json.loads(lines[-1])["run_at"])
+    except (ValueError, KeyError, TypeError):
+        return None
+
+
 def run(state_dir: str, now: datetime | None = None, until: str | None = None) -> dict:
     now = now or datetime.now(timezone.utc)
     state = State(state_dir)
     summary: dict = {"run_at": now.isoformat(timespec="seconds"), "params": state.params.version}
+    prev = last_run_at(state)
+    state.run_gap_minutes = None if prev is None else round((now - prev).total_seconds() / 60.0, 1)
+    summary["minutes_since_last_run"] = state.run_gap_minutes
     http = Http(sample_dir=state.root / "samples")
     k = Kalshi(http)
     summary["settled"] = settle(state, k, now)
@@ -373,6 +399,7 @@ def run(state_dir: str, now: datetime | None = None, until: str | None = None) -
             summary["matches_decided"] = len(scans)
             summary["open_matches_missed"] = getattr(state, "missed", 0)
             summary["upcoming"] = getattr(state, "upcoming", {})
+            summary["decision_window"] = getattr(state, "window", None)
             summary["bets_placed"] = {b: sum(1 for p in placed if p["book"] == b) for b in BOOKS}
             if scans:
                 sp = state.root / "scans" / f"{now:%Y-%m-%d}.parquet"
