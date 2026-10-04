@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-04 21:05 UTC. Model fitted 2026-10-04T12:10. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-04 23:01 UTC. Model fitted 2026-10-04T12:10. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,25 +8,25 @@ Updated 2026-10-04 21:05 UTC. Model fitted 2026-10-04T12:10. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 6 | 0 | 6 | 1 | $56.52 | +82.5% | +3.5c (6) | $1,056.52 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 10 | 1 | 9 | 7 | $13.12 | +15.1% | -2.4c (10) | $1,013.12 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 10 | 0 | 10 | 7 | $3.57 | +3.7% | -2.6c (10) | $1,003.57 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-10 finished matches. Lower is better; the market line is the bar to beat.
+12 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5156 | 0.1678 |
-| model | 0.5974 | 0.2027 |
-| blend | 0.5150 | 0.1659 |
+| market | 0.5728 | 0.1938 |
+| model | 0.6431 | 0.2244 |
+| blend | 0.5752 | 0.1933 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
+| r6 | 5 | 0.9439 | 0.8509 |
 | cs2 | 4 | 0.4450 | 0.5386 |
 | lol | 3 | 0.1246 | 0.4360 |
-| r6 | 3 | 1.0008 | 0.8372 |
 
 ## Latest bets
 
@@ -34,7 +34,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-04 20:02 | favourite | r6 | FURIA Esports | Lucky Five | YES FURIA Esports | 13 | 0.72 | 0.71 | 0.71 | open | - |
+| 2026-10-04 20:02 | favourite | r6 | FURIA Esports | Lucky Five | YES FURIA Esports | 13 | 0.72 | 0.71 | 0.71 | lost | -$9.55 |
 | 2026-10-04 16:52 | model-only | r6 | LOS | Team Liquid | NO Team Liquid | 7 | 0.34 | 0.41 | 0.32 | lost | -$2.49 |
 | 2026-10-04 16:52 | favourite | r6 | Team Liquid | LOS | YES Team Liquid | 14 | 0.68 | 0.68 | 0.68 | won | $4.26 |
 | 2026-10-04 16:52 | model-only | r6 | LOUD | Fluxo W7M | NO Fluxo W7M | 8 | 0.38 | 0.44 | 0.37 | lost | -$3.18 |
