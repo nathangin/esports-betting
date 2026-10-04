@@ -22,9 +22,10 @@ def market(ticker, team, comp, *, status="active", bid=None, ask=None, result=""
 class FakeKalshiHttp:
     """Serves Kalshi's public market endpoints from in-memory market objects."""
 
-    def __init__(self, open_markets=(), settled_markets=()):
+    def __init__(self, open_markets=(), settled_markets=(), candles=None):
         self.open = {m["ticker"]: m for m in open_markets}
         self.settled = {m["ticker"]: m for m in settled_markets}
+        self.candles = candles or {}      # ticker -> [(end_ts, bid, ask), ...]
         self.calls = 0
         self.urls = []
         self.sample_dir = None
@@ -45,7 +46,22 @@ class FakeKalshiHttp:
             series = params.get("series_ticker")
             src = self.settled if params.get("status") == "settled" else self.open
             return {"markets": [m for m in src.values() if m["ticker"].startswith(series + "-")], "cursor": ""}
+        if url.endswith("/candlesticks"):
+            def candle(ts, bid, ask):
+                return {"end_period_ts": ts, "yes_bid": {"close_dollars": f"{bid:.4f}"},
+                        "yes_ask": {"close_dollars": f"{ask:.4f}"}, "price": {}, "volume_fp": "0.00"}
+            lo, hi = int(params["start_ts"]), int(params["end_ts"])
+            if "/events/" in url:
+                event = url.split("/events/")[1].split("/")[0]
+                tks = sorted(t for t in self.candles if t.startswith(event + "-"))
+                return {"market_tickers": tks, "market_candlesticks": [
+                    [candle(*c) for c in self.candles[t] if lo <= c[0] <= hi] for t in tks]}
+            t = url.split("/markets/")[1].split("/")[0]
+            return {"candlesticks": [candle(*c) for c in self.candles.get(t, []) if lo <= c[0] <= hi]}
         if "/markets/" in url:
             t = url.rsplit("/", 1)[1]
+            if t not in allm:
+                from esalpha.net import HttpError
+                raise HttpError(url, 404, '{"error":{"code":"not_found"}}')
             return {"market": allm[t]}
         raise AssertionError(f"unexpected Kalshi path {url}")
