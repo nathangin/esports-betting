@@ -36,3 +36,7 @@ Thumbs.db
 # Logs
 *.log
 logs/
+
+# esalpha local state (on GitHub it lives on the paper-trading branch)
+state/
+state-branch/

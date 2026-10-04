@@ -2,14 +2,26 @@
 Walk-forward backtest for win model and props models.
 
 Splits data chronologically: train on everything before a cutoff, evaluate on
-everything after. Simulates real betting conditions — no future leakage.
+everything after.
+
+Fixed in Oct 2026 (the earlier version leaked the future into the test):
+  - Elo features now come from a replay in time order (each match sees only earlier
+    results). It used to build Elo from ALL matches, test window included, and read the
+    final ratings.
+  - The win model and the props models are trained fresh on pre-cutoff data. It used to
+    load the saved models, which had been trained on the test window too.
+  - The report prints out-of-sample log loss / Brier / AUC instead of a hard-coded AUC.
+  - There are no real odds in this database, so it no longer prints a P&L "at -110"
+    (favourites are never priced at -110, so that number meant nothing). For P&L on real
+    prices see ``python -m esalpha backtest`` (Kalshi esports markets).
+  - Prop lines here are synthetic (the player's own recent average), so O/U "accuracy"
+    against them is not evidence of an edge against a real book or PrizePicks.
 
 Outputs:
   - Calibration curve (model prob vs actual win rate)
   - Accuracy by confidence bucket (60-65%, 65-70%, etc.)
-  - P&L simulation at various Kelly fractions
   - Props: over/under accuracy and MAE by player / confidence bucket
-  - PrizePicks leg win rate analysis
+  - PrizePicks leg win rate analysis (against synthetic lines)
 """
 import json
 import sys
@@ -98,78 +110,64 @@ def backtest_win_model(
     min_stars: int = 0,
 ) -> pd.DataFrame:
     """
-    Walk-forward backtest using the last `test_days` as the test window.
-    Uses the full dataset for Elo (since Elo is cumulative), but only
-    evaluates on test-window matches.
+    Out-of-sample test on the last ``test_days``: features for every match come from
+    data before that match (Elo replayed in time order, rolling stats as of the match
+    date), the model is fitted on matches before the cutoff only.
 
     min_stars: filter to matches with HLTV star_rating >= this value.
                0 = all matches, 1 = tier2+, 2 = tier1 (PrizePicks relevant)
     """
-    all_matches = matches_df.copy()
-    if min_stars > 0 and "star_rating" in all_matches.columns:
-        all_matches = all_matches[all_matches["star_rating"] >= min_stars]
-        logger.info(f"  Filtered to {len(all_matches)} matches with star_rating >= {min_stars}")
+    from features.rolling_stats import build_training_dataset
 
     logger.info(f"Backtesting win model on last {test_days} days...")
-    cutoff = all_matches["match_date"].max() - timedelta(days=test_days)
-    train_df = all_matches[all_matches["match_date"] < cutoff].copy()
-    test_df  = all_matches[all_matches["match_date"] >= cutoff].copy()
-    logger.info(f"  Train: {len(train_df)} matches | Test: {len(test_df)} matches")
-
-    # Build Elo from the full dataset — use get() with as_of to avoid lookahead
-    elo = EloSystem()
-    all_map_df = map_df.copy()
-    map_grouped = all_map_df.groupby("match_id").apply(
-        lambda g: [
-            {"map_name": r["map_name"], "winner_id": r["winner_id"],
-             "loser_id": r["team2_id"] if r["winner_id"]==r["team1_id"] else r["team1_id"]}
-            for _, r in g.iterrows()
-        ], include_groups=False
-    ).reset_index(name="map_results")
-    # Use ALL matches for Elo (sorted by date), but evaluate on test window
-    all_with_maps = matches_df.merge(map_grouped, on="match_id", how="left")
-    elo.build_from_matches(all_with_maps)
-
-    # Load saved model
-    model_path = MODELS_DIR / "cs2_win.pkl"
-    if not model_path.exists():
-        logger.error("No saved win model found — run train first")
+    feats = build_training_dataset(matches_df, map_df, EloSystem(), target="match_winner")
+    if feats.empty:
         return pd.DataFrame()
-    model = WinModel.load(model_path)
+    feats["match_date"] = pd.to_datetime(feats["match_date"])
+    meta = matches_df[["match_id", "star_rating"]] if "star_rating" in matches_df.columns else None
+    if meta is not None:
+        feats = feats.merge(meta, on="match_id", how="left")
+    cutoff = feats["match_date"].max() - timedelta(days=test_days)
+    train = feats[feats["match_date"] < cutoff]
+    test = feats[feats["match_date"] >= cutoff]
+    if min_stars > 0 and "star_rating" in test.columns:
+        test = test[test["star_rating"].fillna(0) >= min_stars]
+        logger.info(f"  Evaluating {len(test)} test matches with star_rating >= {min_stars}")
+    span = (train["match_date"].max() - train["match_date"].min()).days if len(train) else 0
+    if len(train) < 100 or span < min_train_days // 4:
+        logger.error(f"Not enough history before the cutoff ({len(train)} matches over {span} days)")
+        return pd.DataFrame()
+    logger.info(f"  Train: {len(train)} matches | Test: {len(test)} matches")
 
-    records = []
-    map_df_train = map_df[map_df["match_date"] < cutoff]
-
-    for _, match in test_df.iterrows():
-        try:
-            feats = build_match_features(
-                map_df_train, match["team1_id"], match["team2_id"],
-                pd.Timestamp(match["match_date"]), elo_system=elo
-            )
-            feats["is_lan"] = int(match["is_lan"] or 0)
-            feats["best_of"] = int(match["best_of"] or 3)
-            prob_t1 = model.predict_single(feats)
-            actual = 1 if match["winner_id"] == match["team1_id"] else 0
-            records.append({
-                "match_id": match["match_id"],
-                "match_date": match["match_date"],
-                "prob_t1": prob_t1,
-                "actual": actual,
-                "predicted": 1 if prob_t1 >= 0.5 else 0,
-                "correct": int((prob_t1 >= 0.5) == bool(actual)),
-                # Treat favourite's probability as the model confidence
-                "fav_prob": max(prob_t1, 1 - prob_t1),
-                "bet_on_fav": 1,
-            })
-        except Exception as e:
-            logger.debug(f"Backtest skip match {match['match_id']}: {e}")
-
-    results = pd.DataFrame(records)
+    model = WinModel("cs2_win_backtest")
+    model.fit(train)
+    prob = model.predict_proba(test) if len(test) else np.array([])
+    results = pd.DataFrame({
+        "match_id": test["match_id"].to_numpy(),
+        "match_date": test["match_date"].to_numpy(),
+        "prob_t1": prob,
+        "actual": test["label"].to_numpy(),
+    })
     if results.empty:
         return results
-
+    results["predicted"] = (results["prob_t1"] >= 0.5).astype(int)
+    results["correct"] = (results["predicted"] == results["actual"]).astype(int)
+    results["fav_prob"] = np.maximum(results["prob_t1"], 1 - results["prob_t1"])
+    results["bet_on_fav"] = 1
     logger.info(f"Backtest: {len(results)} matches | accuracy={results['correct'].mean():.3f}")
     return results
+
+
+def oos_metrics(results: pd.DataFrame) -> dict:
+    """Log loss, Brier and AUC of the out-of-sample predictions, next to a coin flip."""
+    from sklearn.metrics import brier_score_loss, log_loss, roc_auc_score
+
+    y, p = results["actual"].to_numpy(), results["prob_t1"].clip(1e-6, 1 - 1e-6).to_numpy()
+    out = {"n": int(len(results)), "accuracy": float(results["correct"].mean()),
+           "log_loss": float(log_loss(y, p, labels=[0, 1])), "brier": float(brier_score_loss(y, p)),
+           "coin_flip_log_loss": float(np.log(2))}
+    out["auc"] = float(roc_auc_score(y, p)) if len(set(y)) == 2 else None
+    return out
 
 
 def calibration_report(results: pd.DataFrame) -> pd.DataFrame:
@@ -203,15 +201,18 @@ def confidence_accuracy(results: pd.DataFrame) -> pd.DataFrame:
     return acc
 
 
-def pnl_simulation(results: pd.DataFrame, kelly_fraction: float = 0.25) -> pd.DataFrame:
+def pnl_simulation(results: pd.DataFrame, kelly_fraction: float = 0.25, american_odds: float = -110) -> pd.DataFrame:
     """
-    Simulate flat-bet P&L at -110 American odds (standard book juice),
-    and Kelly-sized P&L, using model confidence as the bet trigger.
+    HYPOTHETICAL flat-bet and Kelly P&L at a single assumed price for every bet.
+
+    Real favourites are priced well above -110, so this is not a backtest of anything you
+    could have bet; it only shows what the accuracy would be worth *if* that price were
+    available. The report no longer prints it. P&L on real prices: ``python -m esalpha backtest``.
     """
     from betting.edge import american_to_decimal, fractional_kelly
 
     results = results.copy().sort_values("match_date")
-    decimal_odds = american_to_decimal(-110)  # ~1.909
+    decimal_odds = american_to_decimal(american_odds)
 
     bankroll_flat = 100.0
     bankroll_kelly = 100.0
@@ -222,34 +223,26 @@ def pnl_simulation(results: pd.DataFrame, kelly_fraction: float = 0.25) -> pd.Da
         won = bool(r["correct"])
 
         stake_flat = 1.0
-        stake_kelly = bankroll_kelly * fractional_kelly(prob, decimal_odds, kelly_fraction)
-        stake_kelly = max(stake_kelly, 0)
+        stake_kelly = max(bankroll_kelly * fractional_kelly(prob, decimal_odds, kelly_fraction), 0)
 
-        pnl_flat  = (decimal_odds - 1) * stake_flat  if won else -stake_flat
+        pnl_flat = (decimal_odds - 1) * stake_flat if won else -stake_flat
         pnl_kelly = (decimal_odds - 1) * stake_kelly if won else -stake_kelly
 
-        bankroll_flat  += pnl_flat
+        bankroll_flat += pnl_flat
         bankroll_kelly += pnl_kelly
 
         rows.append({
-            "match_date":    r["match_date"],
-            "prob":          prob,
-            "won":           won,
-            "pnl_flat":      pnl_flat,
-            "pnl_kelly":     pnl_kelly,
+            "match_date": r["match_date"],
+            "prob": prob,
+            "won": won,
+            "stake_kelly": stake_kelly,
+            "pnl_flat": pnl_flat,
+            "pnl_kelly": pnl_kelly,
             "bankroll_flat": bankroll_flat,
-            "bankroll_kelly":bankroll_kelly,
+            "bankroll_kelly": bankroll_kelly,
         })
 
-    df = pd.DataFrame(rows)
-    total = len(df)
-    wins  = df["won"].sum()
-    logger.info(
-        f"P&L sim ({total} bets): W/L={wins}/{total-wins} "
-        f"flat_roi={df['pnl_flat'].sum()/total:.3f} "
-        f"kelly_roi={df['pnl_kelly'].sum()/df.apply(lambda r: abs(r['pnl_kelly'])/(1 if r['won'] else 1),axis=1).sum():.3f}"
-    )
-    return df
+    return pd.DataFrame(rows)
 
 
 # ---------------------------------------------------------------------------
@@ -261,45 +254,41 @@ def backtest_props(
     map_df: pd.DataFrame,
     stat: str,
     test_days: int = 60,
-    line_offset: float = 0.5,   # simulate line at mean - 0.5 (books set near mean)
+    line_offset: float = 0.5,   # synthetic line at mean - 0.5 (no real lines in the database)
 ) -> pd.DataFrame:
     """
-    For each player-map in the test window, predict expected kills/deaths,
-    simulate a book line at (rolling_mean - 0.5), and check O/U accuracy.
+    Train a props model on maps before the cutoff, then for each player-map in the test
+    window predict the stat and compare it with a SYNTHETIC line at the player's own recent
+    average. Opponent strength comes from ratings before each match.
     """
-    model_path = MODELS_DIR / f"cs2_props_{stat}.pkl"
-    if not model_path.exists():
-        logger.warning(f"No props model for {stat}")
-        return pd.DataFrame()
+    from features.elo import pre_match_ratings_from_maps
+    from pipeline.cs2 import CS2Pipeline
 
-    model = PropsModel.load(model_path)
     cutoff = player_df["match_date"].max() - timedelta(days=test_days)
     test = player_df[player_df["match_date"] >= cutoff].copy()
     train_player = player_df[player_df["match_date"] < cutoff].copy()
     train_map = map_df[map_df["match_date"] < cutoff].copy()
+    if len(train_player.dropna(subset=[stat])) < 50:
+        logger.warning(f"Not enough data before the cutoff to train props [{stat}]")
+        return pd.DataFrame()
 
-    elo = EloSystem()
+    pipe = CS2Pipeline.__new__(CS2Pipeline)       # only for the feature builder
+    pipe.elo = EloSystem()
+    model = PropsModel(stat, game="cs2")
+    model.fit(pipe._build_props_training_df(train_player, train_map, stat))
 
-    # Rebuild elo from map train data
-    map_grouped = train_map.groupby("match_id").apply(
-        lambda g: [
-            {"map_name": r["map_name"], "winner_id": r["winner_id"],
-             "loser_id": r["team2_id"] if r["winner_id"]==r["team1_id"] else r["team1_id"]}
-            for _, r in g.iterrows()
-        ]
-    ).reset_index(name="map_results") if "match_id" in train_map.columns else pd.DataFrame()
-
+    pre_elo = pre_match_ratings_from_maps(map_df)    # each map sees only earlier matches
     records = []
-    map_opp = train_map.rename(columns={"team1_id": "map_t1", "team2_id": "map_t2"})
+    map_opp = map_df.rename(columns={"team1_id": "map_t1", "team2_id": "map_t2"})
 
     for _, row in test.iterrows():
         try:
             pid = row["player_id"]
             as_of = row["match_date"]
 
-            rolling = compute_player_rolling_stats(train_player, pid, STAT_COLS, as_of_date=as_of)
+            rolling = compute_player_rolling_stats(player_df, pid, STAT_COLS, as_of_date=as_of)
             map_rolling = compute_player_rolling_stats(
-                train_player, pid, STAT_COLS, as_of_date=as_of,
+                player_df, pid, STAT_COLS, as_of_date=as_of,
                 specific_map=row.get("map_name")
             )
 
@@ -309,8 +298,8 @@ def backtest_props(
             mr = mr.iloc[0]
             opp_id = int(mr["map_t2"] if row["team_id"] == mr["map_t1"] else mr["map_t1"])
 
-            opp_stats = compute_team_rolling_stats(train_map, opp_id, as_of_date=as_of)
-            opp_elo = elo.get(opp_id)
+            opp_stats = compute_team_rolling_stats(map_df, opp_id, as_of_date=as_of)
+            opp_elo = pre_elo.get(row["map_result_id"], {}).get(opp_id, 1500.0)
 
             feats = build_player_prop_features(
                 rolling, map_rolling, opp_stats, opp_elo,
@@ -323,7 +312,7 @@ def backtest_props(
             if pd.isna(actual):
                 continue
 
-            # Simulate a book line set near the player's rolling mean
+            # synthetic line near the player's recent average (not a real book line)
             rolling_mean = rolling.get(f"ew_{stat}", expected)
             if pd.isna(rolling_mean):
                 rolling_mean = expected
@@ -343,6 +332,7 @@ def backtest_props(
                 "expected":     round(expected, 2),
                 "std":          round(std, 2),
                 "line":         line,
+                "line_source":  "synthetic",
                 "over_prob":    round(pred_result.over_prob, 3),
                 "under_prob":   round(pred_result.under_prob, 3),
                 "bet_over":     bet_over,
@@ -358,7 +348,7 @@ def backtest_props(
         return df
 
     acc = df["correct"].mean()
-    logger.info(f"Props backtest [{stat}]: {len(df)} bets | accuracy={acc:.3f}")
+    logger.info(f"Props backtest [{stat}]: {len(df)} rows | accuracy vs synthetic lines={acc:.3f}")
     return df
 
 
@@ -454,12 +444,13 @@ def run_full_backtest(test_days: int = 60, output_json: bool = True):
         mean_cal_err = active["calibration_error"].mean()
         print(f"\n  Mean calibration error: {mean_cal_err:.3f}")
 
-        pnl = pnl_simulation(win_results)
-        flat_roi  = pnl["pnl_flat"].sum()  / len(pnl)
-        kelly_end = pnl["bankroll_kelly"].iloc[-1]
-        print(f"\n  P&L simulation (starting $100 bankroll):")
-        print(f"    Flat $1/bet ROI : {flat_roi:+.3f} per bet")
-        print(f"    Kelly end bank  : ${kelly_end:.2f}")
+        m = oos_metrics(win_results)
+        print(f"\n  Out-of-sample log loss : {m['log_loss']:.4f}  (coin flip {m['coin_flip_log_loss']:.4f})")
+        print(f"  Out-of-sample Brier    : {m['brier']:.4f}")
+        if m["auc"] is not None:
+            print(f"  Out-of-sample AUC      : {m['auc']:.3f}")
+        print("\n  No P&L here: the database has no real odds. For P&L on real prices run")
+        print("  `python -m esalpha backtest` (Kalshi esports markets, walk-forward).")
 
     # --- Props models ---
     all_props = {}
@@ -472,7 +463,7 @@ def run_full_backtest(test_days: int = 60, output_json: bool = True):
         all_props[stat] = df
 
         print(f"  Bets evaluated  : {len(df)}")
-        print(f"  Overall O/U acc : {df['correct'].mean():.1%}")
+        print(f"  O/U acc vs synthetic lines : {df['correct'].mean():.1%}  (not real book lines)")
         print(f"  Avg MAE         : {(df['actual'] - df['expected']).abs().mean():.2f}")
 
         by_conf = props_by_confidence(df)
@@ -482,7 +473,7 @@ def run_full_backtest(test_days: int = 60, output_json: bool = True):
     # --- PrizePicks simulation ---
     if all_props:
         combined = pd.concat(all_props.values(), ignore_index=True)
-        print(f"\n{'PRIZEPICKS SIMULATION':}")
+        print(f"\n{'PRIZEPICKS SIMULATION (synthetic lines: an upper bound, not a result)':}")
         for legs in [2, 3, 4]:
             sim = prizepicks_simulation(combined, legs=legs)
             if "error" not in sim:
@@ -504,7 +495,8 @@ def run_full_backtest(test_days: int = 60, output_json: bool = True):
         report = {
             "test_days": test_days,
             "win_accuracy": float(win_results["correct"].mean()) if not win_results.empty else None,
-            "win_cv_auc": 0.6937,
+            "win_oos": oos_metrics(win_results) if not win_results.empty else None,
+            "props_lines": "synthetic (player's recent average), not real book lines",
             "props": {
                 stat: {
                     "accuracy": float(df["correct"].mean()),
@@ -513,7 +505,7 @@ def run_full_backtest(test_days: int = 60, output_json: bool = True):
             }
         }
         out = Path("data/processed/backtest_report.json")
-        out.parent.mkdir(exist_ok=True)
+        out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(json.dumps(report, indent=2))
         logger.info(f"Report saved to {out}")
 

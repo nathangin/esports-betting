@@ -318,6 +318,43 @@ def build_match_features(
     return features
 
 
+def pre_match_team_win_rates(map_results_df: pd.DataFrame, decay: float = RECENCY_DECAY) -> dict:
+    """{map_result_id: {team_id: decay-weighted map win rate before that map's match}}.
+
+    Same weighting as ``compute_team_rolling_stats(...)["ew_win_rate"]`` (what the live
+    prediction uses), but computed for every historical map from earlier matches only.
+    Teams with no history get 0.5.
+    """
+    out: dict = {}
+    if map_results_df is None or map_results_df.empty:
+        return out
+    df = map_results_df.dropna(subset=["match_id"]).sort_values("match_date", kind="stable")
+    acc: dict = {}   # team -> [weighted wins, weight]
+    for mid, g in df.groupby("match_id", sort=False):
+        teams = list(dict.fromkeys(list(g["team1_id"]) + list(g["team2_id"])))
+        pre = {t: (acc[t][0] / acc[t][1] if t in acc and acc[t][1] > 0 else 0.5) for t in teams}
+        for mr in g["map_result_id"]:
+            out[mr] = pre
+        for r in g.itertuples(index=False):       # maps of this match enter afterwards
+            for t in (r.team1_id, r.team2_id):
+                num, den = acc.get(t, [0.0, 0.0])
+                acc[t] = [num * decay + float(r.winner_id == t), den * decay + 1.0]
+    return out
+
+
+def _map_results_by_match(map_results_df: pd.DataFrame) -> dict:
+    """{match_id: [{map_name, winner_id, loser_id}, ...]} for per-map Elo updates."""
+    out: dict = {}
+    if map_results_df is None or map_results_df.empty or "match_id" not in map_results_df.columns:
+        return out
+    for r in map_results_df.itertuples(index=False):
+        if pd.isna(r.winner_id):
+            continue
+        loser = r.team2_id if r.winner_id == r.team1_id else r.team1_id
+        out.setdefault(r.match_id, []).append({"map_name": r.map_name, "winner_id": r.winner_id, "loser_id": loser})
+    return out
+
+
 def build_training_dataset(
     matches_df: pd.DataFrame,
     map_results_df: pd.DataFrame,
@@ -327,9 +364,17 @@ def build_training_dataset(
     """
     Build the full historical feature + label dataset for model training.
     Each row is one match (or map) with features computed as_of match_date.
+
+    Elo features are taken from a replay of the matches in time order: each row sees the
+    ratings as they stood *before* that match. (Earlier versions passed the final, fully
+    built ratings into every row, so each training row already contained its own result
+    and every later one: the model looked far better in training than it could be live.)
+    ``elo_system`` only supplies the K factors and starting rating.
     """
     rows = []
-    matches_sorted = matches_df.sort_values("match_date")
+    matches_sorted = matches_df.sort_values("match_date", kind="stable")
+    replay = elo_system.fresh() if elo_system is not None and hasattr(elo_system, "fresh") else None
+    maps_by_match = _map_results_by_match(map_results_df)
 
     for _, match in matches_sorted.iterrows():
         try:
@@ -338,11 +383,11 @@ def build_training_dataset(
                 team1_id=match["team1_id"],
                 team2_id=match["team2_id"],
                 match_date=pd.Timestamp(match["match_date"]),
-                elo_system=elo_system,
+                elo_system=replay,
             )
             feats["match_id"] = match["match_id"]
             feats["match_date"] = match["match_date"]
-            feats["is_lan"] = int(match.get("is_lan", False))
+            feats["is_lan"] = int(match.get("is_lan", False) or 0)
             feats["best_of"] = match.get("best_of", 3)
 
             if target == "match_winner":
@@ -353,6 +398,21 @@ def build_training_dataset(
             rows.append(feats)
         except Exception as e:
             logger.debug(f"Error building features for match {match.get('match_id')}: {e}")
+        finally:
+            # only now does this match's result enter the ratings
+            if replay is not None:
+                s1 = match.get("team1_map_score")
+                s2 = match.get("team2_map_score")
+                if pd.isna(s1) or pd.isna(s2) or (s1 + s2) == 0:
+                    if pd.notna(match.get("winner_id")):
+                        s1, s2 = (1, 0) if match["winner_id"] == match["team1_id"] else (0, 1)
+                    else:
+                        s1 = s2 = 0
+                replay.update_match(
+                    match_id=match["match_id"], team1_id=match["team1_id"], team2_id=match["team2_id"],
+                    team1_maps_won=int(s1), team2_maps_won=int(s2), match_date=match["match_date"],
+                    map_results=maps_by_match.get(match["match_id"]),
+                )
 
     df = pd.DataFrame(rows)
     logger.info(f"Training dataset: {len(df)} rows, {len(df.columns)} features")

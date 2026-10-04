@@ -96,16 +96,21 @@ class EloSystem:
                 self._ratings[loser_id][map_name] = new_rl
 
     def get_all_ratings(self, as_of: Optional[datetime] = None) -> dict[int, dict[str, float]]:
-        """Returns current ratings. If as_of provided, replays history up to that date."""
+        """Returns current ratings. If as_of is given, only matches played strictly before it
+        count (a match on the as_of timestamp itself must not see its own result)."""
         if as_of is None:
             return dict(self._ratings)
 
         # Replay from scratch up to as_of
         snapshot = EloSystem(self.k_overall, self.k_map, self.initial)
         for match_id, team_id, map_name, old, new, date in self._history:
-            if date <= as_of:
+            if date < as_of:
                 snapshot._ratings[team_id][map_name] = new
         return dict(snapshot._ratings)
+
+    def fresh(self) -> "EloSystem":
+        """An empty system with the same settings (for replaying matches in time order)."""
+        return EloSystem(self.k_overall, self.k_map, self.initial)
 
     def to_dataframe(self) -> pd.DataFrame:
         rows = []
@@ -147,3 +152,34 @@ class EloSystem:
         r1 = self.get(team1_id, map_name)
         r2 = self.get(team2_id, map_name)
         return self.expected(r1, r2)
+
+
+def pre_match_ratings_from_maps(
+    map_df: pd.DataFrame, k: float = ELO_K_FACTOR, initial: float = ELO_START
+) -> dict:
+    """{map_result_id: {team_id: overall Elo before that map's match}}.
+
+    Replays matches (maps won per team) in time order, so a training row for a map only
+    sees results from earlier matches. Used for the opponent-strength feature of the props
+    models, which previously read each opponent's *final* rating (look-ahead).
+    """
+    out: dict = {}
+    if map_df is None or map_df.empty:
+        return out
+    elo = EloSystem(k_overall=k, initial=initial)
+    df = map_df.dropna(subset=["match_id"]).sort_values("match_date", kind="stable")
+    order = df.drop_duplicates("match_id")["match_id"].tolist()
+    groups = {mid: g for mid, g in df.groupby("match_id", sort=False)}
+    for mid in order:
+        g = groups[mid]
+        teams = list(dict.fromkeys(list(g["team1_id"]) + list(g["team2_id"])))
+        if len(teams) != 2:
+            continue
+        ta, tb = teams
+        pre = {ta: elo.get(ta), tb: elo.get(tb)}
+        for mr in g["map_result_id"]:
+            out[mr] = pre
+        wins_a = int((g["winner_id"] == ta).sum())
+        wins_b = int((g["winner_id"] == tb).sum())
+        elo.update_match(mid, ta, tb, wins_a, wins_b, g["match_date"].iloc[0])
+    return out

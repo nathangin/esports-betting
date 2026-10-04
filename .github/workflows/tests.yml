@@ -1,0 +1,21 @@
+name: Tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      # esalpha plus the light dependencies of the original app's tested modules
+      # (its model tests are skipped unless xgboost/lightgbm are installed)
+      - run: pip install -q ".[dev]" loguru python-dotenv
+      - run: python -m pytest -q

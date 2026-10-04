@@ -1,0 +1,48 @@
+# Fake-money paper trading on live Kalshi esports match markets.
+#
+# Every 15 minutes: settle finished bets, pick up new results, and decide once on every match
+# starting in the next 10-70 minutes. (GitHub can start scheduled runs late; a match whose
+# start passes without a decision is skipped and counted as missed in state/paper/runs.jsonl.) Kalshi is only read through its public market-data
+# API; nothing here can place an order and no API key is used.
+# Results: state/reports/summary.md on the paper-trading branch.
+name: Paper trading
+
+on:
+  schedule:
+    - cron: "4,19,34,49 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: es-paper
+  cancel-in-progress: false
+
+env:
+  PAPER_UNTIL: "2026-11-15"   # last day new paper bets are placed; settling continues after
+
+jobs:
+  paper:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+      - run: pip install -q .
+      - run: bash scripts/state_branch.sh checkout
+      - name: Paper pass
+        run: python -m esalpha paper --state state-branch/state --until "$PAPER_UNTIL"
+      - name: Report
+        run: python -m esalpha report --state state-branch/state
+      - name: Save state
+        if: always()
+        run: |
+          bash scripts/state_branch.sh commit "paper run ${{ github.run_id }}"

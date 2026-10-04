@@ -168,10 +168,19 @@ class PropsModel:
         self.model = lgb.LGBMRegressor(**params)
         self.model.fit(X, y)
 
-        # Fit a std model on absolute residuals
-        residuals = np.abs(y - self.model.predict(X))
+        # Spread model, fitted on out-of-fold absolute residuals (each fold's model only saw
+        # earlier rows). In-sample residuals of a boosted model are much smaller than the
+        # errors it makes on new matches, which made every over/under look more certain
+        # than it was. sqrt(pi/2) turns a mean absolute error into a normal standard deviation.
+        oof = np.full(len(y), np.nan)
+        for train_idx, val_idx in TimeSeriesSplit(n_splits=CV_FOLDS).split(X):
+            m = lgb.LGBMRegressor(**params)
+            m.fit(X[train_idx], y[train_idx])
+            oof[val_idx] = np.abs(y[val_idx] - m.predict(X[val_idx]))
+        ok = ~np.isnan(oof)
         self.std_model = lgb.LGBMRegressor(**{**params, "n_estimators": 100})
-        self.std_model.fit(X, residuals)
+        self.std_model.fit(X[ok], oof[ok] * np.sqrt(np.pi / 2))
+        self.metrics["oof_mae"] = float(np.nanmean(oof))
 
         preds = self.model.predict(X)
         self.metrics["train_mae"] = mean_absolute_error(y, preds)

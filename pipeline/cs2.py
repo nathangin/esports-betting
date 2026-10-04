@@ -37,12 +37,13 @@ from scrapers.hltv import (
     scrape_results, scrape_match, scrape_upcoming_matches,
     ScrapedMatch, ScrapedMapResult
 )
-from features.elo import EloSystem
+from features.elo import EloSystem, pre_match_ratings_from_maps
 from features.rolling_stats import (
     build_match_features,
     build_training_dataset,
     compute_player_rolling_stats,
     compute_team_rolling_stats,
+    pre_match_team_win_rates,
 )
 from models.win_model import WinModel
 from models.props_model import PropsModel, build_player_prop_features
@@ -418,20 +419,18 @@ class CS2Pipeline:
             if l5 is not None and l20 is not None:
                 result[f"{col}_trend"] = (l5 - l20) / (l20.abs().replace(0, 1))
 
-        # Opponent elo
-        result["opp_elo"] = result["opp_id"].map(
-            lambda oid: self.elo.get(int(oid), "overall") if pd.notna(oid) else 1500.0
-        )
-
-        # Opponent recent win rate (vectorized via pre-computed team stats)
-        team_wr = {}
-        for tid in map_df["team1_id"].unique():
-            rows_t = map_df[(map_df["team1_id"] == tid) | (map_df["team2_id"] == tid)]
-            won = rows_t["winner_id"].apply(lambda w: int(w == tid))
-            team_wr[tid] = won.mean() if len(won) else 0.5
-        result["opp_ew_win_rate"] = result["opp_id"].map(
-            lambda oid: team_wr.get(int(oid), 0.5) if pd.notna(oid) else 0.5
-        )
+        # Opponent strength as it stood before each match. (This used to read the opponent's
+        # final Elo and full-period win rate, i.e. results from after the row being predicted.)
+        pre_elo = pre_match_ratings_from_maps(map_df)
+        pre_wr = pre_match_team_win_rates(map_df)
+        result["opp_elo"] = [
+            pre_elo.get(mr, {}).get(oid, 1500.0) if pd.notna(oid) else 1500.0
+            for mr, oid in zip(result["map_result_id"], result["opp_id"])
+        ]
+        result["opp_ew_win_rate"] = [
+            pre_wr.get(mr, {}).get(oid, 0.5) if pd.notna(oid) else 0.5
+            for mr, oid in zip(result["map_result_id"], result["opp_id"])
+        ]
 
         from models.props_model import MAP_SIDE_BIAS
         result["map_ct_sided"] = result["map_name"].map(
@@ -462,6 +461,9 @@ class CS2Pipeline:
                 UpcomingMatch.scheduled_at >= datetime.utcnow() - timedelta(hours=6),
             ).all()
 
+        with get_session() as session:
+            names = {t.id: t.name for t in session.query(Team).filter(Team.game == Game.cs2).all()}
+
         predictions = []
         for um in upcoming:
             feats = build_match_features(
@@ -479,6 +481,8 @@ class CS2Pipeline:
                 "upcoming_match_id": um.id,
                 "team1_id": um.team1_id,
                 "team2_id": um.team2_id,
+                "team1_name": names.get(um.team1_id, ""),
+                "team2_name": names.get(um.team2_id, ""),
                 "scheduled_at": um.scheduled_at,
                 "event": um.event_name,
                 "team1_win_prob": round(p, 4),
@@ -547,9 +551,12 @@ class CS2Pipeline:
             ]
             if not match_lines:
                 continue
-            pred["features"]["team1_name"] = pred.get("team1_id", "")
+            # (this used to put the numeric team id in team1_name, which crashed on .lower())
             evaluated.extend(
-                analyzer.analyze_match_lines(match_lines, pred["features"], vig_pct)
+                analyzer.analyze_match_lines(
+                    match_lines, pred["features"], vig_pct,
+                    team1_name=pred.get("team1_name"), team2_name=pred.get("team2_name"),
+                )
             )
 
         edges = analyzer.get_edges(evaluated)
