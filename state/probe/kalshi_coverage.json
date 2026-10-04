@@ -1,0 +1,1053 @@
+{
+ "started": "2026-10-04T11:33:47.969217+00:00",
+ "coverage": {
+  "KXCS2GAME": {
+   "all": {
+    "n": 6280,
+    "pages": 7,
+    "more": false,
+    "status": {
+     "active": 78,
+     "finalized": 6188,
+     "closed": 14
+    },
+    "months": {
+     "2026-10": 428,
+     "2026-09": 2824,
+     "2026-08": 2780,
+     "2026-07": 246,
+     "2026-05": 2
+    },
+    "first_rows_close": [
+     "2026-10-08T08:00:00Z",
+     "2026-10-08T08:00:00Z"
+    ],
+    "last_rows_close": [
+     "2026-05-02T15:00:00Z",
+     "2026-05-02T15:00:00Z"
+    ],
+    "match_titles": 1826,
+    "titles": [
+     "100 Thieves wins",
+     "1WIN wins",
+     "2miracll wins",
+     "300FPS wins"
+    ],
+    "events": [
+     "KXCS2GAME-26SEP301500ALKAAREDA",
+     "KXCS2GAME-26SEP301500QUINGRE",
+     "KXCS2GAME-26SEP301730UNDCHAMA",
+     "KXCS2GAME-26SEP301800MEIMW"
+    ]
+   },
+   "settled": {
+    "n": 6188,
+    "pages": 7,
+    "more": false,
+    "status": {
+     "finalized": 6188
+    },
+    "months": {
+     "2026-10": 350,
+     "2026-09": 2824,
+     "2026-08": 2768,
+     "2026-07": 246
+    },
+    "first_rows_close": [
+     "2026-10-04T10:59:45Z",
+     "2026-10-04T10:59:45Z"
+    ],
+    "last_rows_close": [
+     "2026-07-28T23:59:43Z",
+     "2026-07-28T23:59:43Z"
+    ],
+    "match_titles": 1812,
+    "titles": [
+     "100 Thieves wins",
+     "1WIN wins",
+     "2miracll wins",
+     "300FPS wins"
+    ],
+    "events": [
+     "KXCS2GAME-26SEP301500ALKAAREDA",
+     "KXCS2GAME-26SEP301500QUINGRE",
+     "KXCS2GAME-26SEP301730UNDCHAMA",
+     "KXCS2GAME-26SEP301800MEIMW"
+    ]
+   },
+   "closed": {
+    "n": 14,
+    "pages": 1,
+    "more": false,
+    "status": {
+     "closed": 14
+    },
+    "months": {
+     "2026-08": 12,
+     "2026-05": 2
+    },
+    "first_rows_close": [
+     "2026-08-09T14:00:00Z",
+     "2026-08-09T14:00:00Z"
+    ],
+    "last_rows_close": [
+     "2026-05-02T15:00:00Z",
+     "2026-05-02T15:00:00Z"
+    ],
+    "match_titles": 14,
+    "titles": [
+     "Will 1WIN win the 1WIN vs. CYBERSHOKE Prospects CS2 match?",
+     "Will 1WIN win the 1WIN vs. Lazer Cats CS2 match?",
+     "Will 1WIN win the 1WIN vs. Sashi Esport CS2 match?",
+     "Will 33 win the 33 vs. Black Phoenix CS2 match?"
+    ],
+    "events": [
+     "KXCS2GAME-26AUG0504001WINCYB",
+     "KXCS2GAME-26AUG051300BTFEXR",
+     "KXCS2GAME-26AUG0607001WINSASHI",
+     "KXCS2GAME-26AUG071000UNKBLA"
+    ]
+   },
+   "open": {
+    "n": 78,
+    "pages": 1,
+    "more": false,
+    "status": {
+     "active": 78
+    },
+    "months": {
+     "2026-10": 78
+    },
+    "first_rows_close": [
+     "2026-10-08T08:00:00Z",
+     "2026-10-08T08:00:00Z"
+    ],
+    "last_rows_close": [
+     "2026-10-06T10:30:00Z",
+     "2026-10-06T10:30:00Z"
+    ],
+    "match_titles": 0,
+    "titles": [
+     "1WIN wins",
+     "9z wins",
+     "Astralis wins",
+     "Aurora Gaming wins"
+    ],
+    "events": [
+     "KXCS2GAME-26OCT051500LLEACE",
+     "KXCS2GAME-26OCT051500XISTR",
+     "KXCS2GAME-26OCT060400THEEACE",
+     "KXCS2GAME-26OCT061300MSCMASQ"
+    ]
+   },
+   "historical": {
+    "n": 7465,
+    "pages": 8,
+    "more": false,
+    "status": {
+     "finalized": 7465
+    },
+    "months": {
+     "2026-08": 288,
+     "2026-07": 1565,
+     "2026-06": 1222,
+     "2026-05": 1006,
+     "2026-04": 1154,
+     "2026-03": 1446,
+     "2026-02": 604,
+     "2026-01": 180
+    },
+    "first_rows_close": [
+     "2026-08-04T13:19:44Z",
+     "2026-08-04T13:19:44Z"
+    ],
+    "last_rows_close": [
+     "2026-01-10T17:50:50.151515Z",
+     "2026-01-10T17:50:50.151515Z"
+    ],
+    "match_titles": 7465,
+    "titles": [
+     "Will 100 Thieves win the 100 Thieves vs. BetBoom Team CS2 match?",
+     "Will 100 Thieves win the 100 Thieves vs. CYBERSHOKE Esports CS2 match?",
+     "Will 100 Thieves win the 100 Thieves vs. FlyQuest CS2 match?",
+     "Will 100 Thieves win the 100 Thieves vs. GenOne CS2 match?"
+    ],
+    "events": [
+     "KXCS2GAME-26MAY310900ORMKOL",
+     "KXCS2GAME-26MAY310930FOKNEMI",
+     "KXCS2GAME-26MAY311000BWHER",
+     "KXCS2GAME-26MAY311300HAVURBLS"
+    ]
+   },
+   "events": {
+    "error": "HTTP 400 for https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXCS2GAME&limit=1000: {\"error\":{\"code\":\"bad_request\",\"message\":\"bad request\"}}"
+   }
+  },
+  "KXCS2GAMES": {
+   "all": {
+    "n": 0,
+    "pages": 1,
+    "more": false,
+    "status": {},
+    "months": {},
+    "first_rows_close": [],
+    "last_rows_close": [],
+    "match_titles": 0,
+    "titles": [],
+    "events": []
+   },
+   "settled": {
+    "n": 0,
+    "pages": 1,
+    "more": false,
+    "status": {},
+    "months": {},
+    "first_rows_close": [],
+    "last_rows_close": [],
+    "match_titles": 0,
+    "titles": [],
+    "events": []
+   },
+   "closed": {
+    "n": 0,
+    "pages": 1,
+    "more": false,
+    "status": {},
+    "months": {},
+    "first_rows_close": [],
+    "last_rows_close": [],
+    "match_titles": 0,
+    "titles": [],
+    "events": []
+   },
+   "open": {
+    "n": 0,
+    "pages": 1,
+    "more": false,
+    "status": {},
+    "months": {},
+    "first_rows_close": [],
+    "last_rows_close": [],
+    "match_titles": 0,
+    "titles": [],
+    "events": []
+   },
+   "historical": {
+    "n": 0,
+    "pages": 1,
+    "more": false,
+    "status": {},
+    "months": {},
+    "first_rows_close": [],
+    "last_rows_close": [],
+    "match_titles": 0,
+    "titles": [],
+    "events": []
+   },
+   "events": {
+    "error": "HTTP 400 for https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXCS2GAMES&limit=1000: {\"error\":{\"code\":\"bad_request\",\"message\":\"bad request\"}}"
+   }
+  },
+  "KXLOLGAME": {
+   "all": {
+    "n": 2102,
+    "pages": 3,
+    "more": false,
+    "status": {
+     "active": 22,
+     "finalized": 2080
+    },
+    "months": {
+     "2026-10": 82,
+     "2026-09": 716,
+     "2026-08": 1116,
+     "2026-07": 188
+    },
+    "first_rows_close": [
+     "2026-10-06T20:00:00Z",
+     "2026-10-06T20:00:00Z"
+    ],
+    "last_rows_close": [
+     "2026-07-29T00:49:44Z",
+     "2026-07-29T00:49:44Z"
+    ],
+    "match_titles": 1068,
+    "titles": [
+     "1TAP Dino wins",
+     "3v Team wins",
+     "7REX wins",
+     "9Gaming wins"
+    ],
+    "events": [
+     "KXLOLGAME-26SEP301400NBSHRTS",
+     "KXLOLGAME-26SEP301400SUTHE",
+     "KXLOLGAME-26SEP301700KBMLOS",
+     "KXLOLGAME-26SEP302000TPEVIE"
+    ]
+   },
+   "settled": {
+    "n": 2080,
+    "pages": 3,
+    "more": false,
+    "status": {
+     "finalized": 2080
+    },
+    "months": {
+     "2026-10": 60,
+     "2026-09": 716,
+     "2026-08": 1116,
+     "2026-07": 188
+    },
+    "first_rows_close": [
+     "2026-10-04T09:19:34Z",
+     "2026-10-04T09:19:34Z"
+    ],
+    "last_rows_close": [
+     "2026-07-29T00:49:44Z",
+     "2026-07-29T00:49:44Z"
+    ],
+    "match_titles": 1068,
+    "titles": [
+     "1TAP Dino wins",
+     "3v Team wins",
+     "7REX wins",
+     "9Gaming wins"
+    ],
+    "events": [
+     "KXLOLGAME-26SEP301400NBSHRTS",
+     "KXLOLGAME-26SEP301400SUTHE",
+     "KXLOLGAME-26SEP301700KBMLOS",
+     "KXLOLGAME-26SEP302000TPEVIE"
+    ]
+   },
+   "closed": {
+    "n": 0,
+    "pages": 1,
+    "more": false,
+    "status": {},
+    "months": {},
+    "first_rows_close": [],
+    "last_rows_close": [],
+    "match_titles": 0,
+    "titles": [],
+    "events": []
+   },
+   "open": {
+    "n": 22,
+    "pages": 1,
+    "more": false,
+    "status": {
+     "active": 22
+    },
+    "months": {
+     "2026-10": 22
+    },
+    "first_rows_close": [
+     "2026-10-06T20:00:00Z",
+     "2026-10-06T20:00:00Z"
+    ],
+    "last_rows_close": [
+     "2026-10-07T20:00:00Z",
+     "2026-10-07T20:00:00Z"
+    ],
+    "match_titles": 0,
+    "titles": [
+     "9z Globant wins",
+     "Bar\u00e7a eSports wins",
+     "Cupid Esports wins",
+     "FlyQuest wins"
+    ],
+    "events": [
+     "KXLOLGAME-26OCT050700JDGSR",
+     "KXLOLGAME-26OCT051600Z5MVU",
+     "KXLOLGAME-26OCT051700KBM9Z",
+     "KXLOLGAME-26OCT061600FUECPD"
+    ]
+   },
+   "historical": {
+    "n": 3954,
+    "pages": 4,
+    "more": false,
+    "status": {
+     "finalized": 3954
+    },
+    "months": {
+     "2026-08": 152,
+     "2026-07": 867,
+     "2026-06": 296,
+     "2026-05": 710,
+     "2026-04": 928,
+     "2026-03": 325,
+     "2026-02": 326,
+     "2026-01": 346,
+     "2025-12": 4
+    },
+    "first_rows_close": [
+     "2026-08-04T15:49:48Z",
+     "2026-08-04T15:49:48Z"
+    ],
+    "last_rows_close": [
+     "2025-12-11T12:19:42.12217Z",
+     "2025-12-11T12:19:42.12217Z"
+    ],
+    "match_titles": 3954,
+    "titles": [
+     "Will 2 Massive win the 2 Massive vs. DMG Esports League of Legends match?",
+     "Will 2 Massive win the 2 Massive vs. Deer Gaming League of Legends match?",
+     "Will 3BL Esports win the 3BL Esports vs. Baam Esports League of Legends match?",
+     "Will 3BL Esports win the 3BL Esports vs. French Flair League of Legends match?"
+    ],
+    "events": [
+     "KXLOLGAME-26MAY311100BOMFSK",
+     "KXLOLGAME-26MAY311100GXVIT",
+     "KXLOLGAME-26MAY311200LOSRED",
+     "KXLOLGAME-26MAY311600SRTL"
+    ]
+   },
+   "events": {
+    "error": "HTTP 400 for https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXLOLGAME&limit=1000: {\"error\":{\"code\":\"bad_request\",\"message\":\"bad request\"}}"
+   }
+  },
+  "KXLOLGAMES": {
+   "all": {
+    "n": 0,
+    "pages": 1,
+    "more": false,
+    "status": {},
+    "months": {},
+    "first_rows_close": [],
+    "last_rows_close": [],
+    "match_titles": 0,
+    "titles": [],
+    "events": []
+   },
+   "settled": {
+    "n": 0,
+    "pages": 1,
+    "more": false,
+    "status": {},
+    "months": {},
+    "first_rows_close": [],
+    "last_rows_close": [],
+    "match_titles": 0,
+    "titles": [],
+    "events": []
+   },
+   "closed": {
+    "n": 0,
+    "pages": 1,
+    "more": false,
+    "status": {},
+    "months": {},
+    "first_rows_close": [],
+    "last_rows_close": [],
+    "match_titles": 0,
+    "titles": [],
+    "events": []
+   },
+   "open": {
+    "n": 0,
+    "pages": 1,
+    "more": false,
+    "status": {},
+    "months": {},
+    "first_rows_close": [],
+    "last_rows_close": [],
+    "match_titles": 0,
+    "titles": [],
+    "events": []
+   },
+   "historical": {
+    "n": 86,
+    "pages": 1,
+    "more": false,
+    "status": {
+     "finalized": 86
+    },
+    "months": {
+     "2025-11": 4,
+     "2025-10": 74,
+     "2025-12": 8
+    },
+    "first_rows_close": [
+     "2025-11-02T12:36:04.111948Z",
+     "2025-11-02T12:36:04.111948Z"
+    ],
+    "last_rows_close": [
+     "2025-10-14T14:08:31.93492Z",
+     "2025-10-14T14:08:51.895473Z"
+    ],
+    "match_titles": 0,
+    "titles": [
+     "Will 100 Thieves win the LoL: 100 Thieves vs. Hanwha Life Esports?",
+     "Will 100 Thieves win the LoL: 100 Thieves vs. T1?",
+     "Will 100 Thieves win the LoL: Bilibili Gaming vs. 100 Thieves?",
+     "Will 100 Thieves win the LoL: Top Esports vs. 100 Thieves?"
+    ],
+    "events": [
+     "KXLOLGAMES-T1INV25",
+     "KXLOLGAMES-T1TOP25",
+     "KXLOLGAMES-TOP10025",
+     "KXLOLGAMES-TOPBIL25"
+    ]
+   },
+   "events": {
+    "error": "HTTP 400 for https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXLOLGAMES&limit=1000: {\"error\":{\"code\":\"bad_request\",\"message\":\"bad request\"}}"
+   }
+  },
+  "KXVALORANTGAME": {
+   "all": {
+    "n": 734,
+    "pages": 1,
+    "more": false,
+    "status": {
+     "active": 2,
+     "finalized": 728,
+     "closed": 4
+    },
+    "months": {
+     "2026-10": 20,
+     "2026-09": 224,
+     "2026-08": 436,
+     "2026-07": 50,
+     "2026-03": 4
+    },
+    "first_rows_close": [
+     "2026-10-06T12:00:00Z",
+     "2026-10-06T12:00:00Z"
+    ],
+    "last_rows_close": [
+     "2026-03-24T21:00:00Z",
+     "2026-03-24T21:00:00Z"
+    ],
+    "match_titles": 454,
+    "titles": [
+     "100 Thieves wins",
+     "101 Outlaws wins",
+     "A Team wins",
+     "ALTERNATE aTTaX Ruby wins"
+    ],
+    "events": [
+     "KXVALORANTGAME-26SEP290500G2PR",
+     "KXVALORANTGAME-26SEP290800KCNRG",
+     "KXVALORANTGAME-26SEP300500FUT100T",
+     "KXVALORANTGAME-26SEP300800LOUDVIT"
+    ]
+   },
+   "settled": {
+    "n": 728,
+    "pages": 1,
+    "more": false,
+    "status": {
+     "finalized": 728
+    },
+    "months": {
+     "2026-10": 18,
+     "2026-09": 224,
+     "2026-08": 436,
+     "2026-07": 50
+    },
+    "first_rows_close": [
+     "2026-10-04T11:30:10Z",
+     "2026-10-04T11:30:10Z"
+    ],
+    "last_rows_close": [
+     "2026-07-29T01:39:47Z",
+     "2026-07-29T01:39:47Z"
+    ],
+    "match_titles": 450,
+    "titles": [
+     "100 Thieves wins",
+     "101 Outlaws wins",
+     "A Team wins",
+     "ALTERNATE aTTaX Ruby wins"
+    ],
+    "events": [
+     "KXVALORANTGAME-26SEP290500G2PR",
+     "KXVALORANTGAME-26SEP290800KCNRG",
+     "KXVALORANTGAME-26SEP300500FUT100T",
+     "KXVALORANTGAME-26SEP300800LOUDVIT"
+    ]
+   },
+   "closed": {
+    "n": 4,
+    "pages": 1,
+    "more": false,
+    "status": {
+     "closed": 4
+    },
+    "months": {
+     "2026-03": 4
+    },
+    "first_rows_close": [
+     "2026-03-27T17:00:00Z",
+     "2026-03-27T17:00:00Z"
+    ],
+    "last_rows_close": [
+     "2026-03-24T21:00:00Z",
+     "2026-03-24T21:00:00Z"
+    ],
+    "match_titles": 4,
+    "titles": [
+     "Will All Gamers win the TBD-1 vs. All Gamers Valorant match?",
+     "Will Nongshim RedForce win the TBD-1 vs. Nongshim RedForce Valorant match?",
+     "Will TBD-1 win the TBD-1 vs. All Gamers Valorant match?",
+     "Will TBD-1 win the TBD-1 vs. Nongshim RedForce Valorant match?"
+    ],
+    "events": [
+     "KXVALORANTGAME-26MAR10TBDAG",
+     "KXVALORANTGAME-26MAR13TBDNS"
+    ]
+   },
+   "open": {
+    "n": 2,
+    "pages": 1,
+    "more": false,
+    "status": {
+     "active": 2
+    },
+    "months": {
+     "2026-10": 2
+    },
+    "first_rows_close": [
+     "2026-10-06T12:00:00Z",
+     "2026-10-06T12:00:00Z"
+    ],
+    "last_rows_close": [
+     "2026-10-06T12:00:00Z",
+     "2026-10-06T12:00:00Z"
+    ],
+    "match_titles": 0,
+    "titles": [
+     "FUT Esports wins",
+     "T1 wins"
+    ],
+    "events": [
+     "KXVALORANTGAME-26OCT040800T1FUT"
+    ]
+   },
+   "historical": {
+    "n": 2569,
+    "pages": 3,
+    "more": false,
+    "status": {
+     "finalized": 2569
+    },
+    "months": {
+     "2026-08": 58,
+     "2026-07": 558,
+     "2026-06": 290,
+     "2026-05": 452,
+     "2026-04": 612,
+     "2026-03": 260,
+     "2026-02": 203,
+     "2026-01": 120,
+     "2025-10": 4,
+     "2025-09": 12
+    },
+    "first_rows_close": [
+     "2026-08-04T18:51:39Z",
+     "2026-08-04T18:51:39Z"
+    ],
+    "last_rows_close": [
+     "2025-09-26T01:54:46.578711Z",
+     "2025-09-26T01:54:46.578711Z"
+    ],
+    "match_titles": 2553,
+    "titles": [
+     "Will 100 Thieves win the 100 Thieves vs. BBL Esports Valorant match?",
+     "Will 100 Thieves win the 100 Thieves vs. FURIA Esports Valorant match?",
+     "Will 100 Thieves win the 100 Thieves vs. G2 Esports Valorant match?",
+     "Will 100 Thieves win the 100 Thieves vs. KR\u00dc Esports Valorant match?"
+    ],
+    "events": [
+     "KXVALORANTGAME-26MAY310400GENGNS",
+     "KXVALORANTGAME-26MAY310500NOVATEC",
+     "KXVALORANTGAME-26MAY311100BBLNAVI",
+     "KXVALORANTGAME-26MAY312000NRGLOUD"
+    ]
+   },
+   "events": {
+    "error": "HTTP 400 for https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXVALORANTGAME&limit=1000: {\"error\":{\"code\":\"bad_request\",\"message\":\"bad request\"}}"
+   }
+  },
+  "KXDOTA2GAME": {
+   "all": {
+    "n": 1044,
+    "pages": 2,
+    "more": false,
+    "status": {
+     "active": 12,
+     "finalized": 1030,
+     "closed": 2
+    },
+    "months": {
+     "2026-10": 60,
+     "2026-09": 502,
+     "2026-08": 400,
+     "2026-07": 82
+    },
+    "first_rows_close": [
+     "2026-10-07T17:00:00Z",
+     "2026-10-07T17:00:00Z"
+    ],
+    "last_rows_close": [
+     "2026-07-29T15:00:00Z",
+     "2026-07-29T15:00:00Z"
+    ],
+    "match_titles": 392,
+    "titles": [
+     "1win wins",
+     "4ikibamboni wins",
+     "Animals Incoming wins",
+     "Aurora wins"
+    ],
+    "events": [
+     "KXDOTA2GAME-26SEP300900LGDPARI",
+     "KXDOTA2GAME-26SEP301200NAVINEM",
+     "KXDOTA2GAME-26SEP301200XTREMELVLUP",
+     "KXDOTA2GAME-26SEP302300YGIVO"
+    ]
+   },
+   "settled": {
+    "n": 1030,
+    "pages": 2,
+    "more": false,
+    "status": {
+     "finalized": 1030
+    },
+    "months": {
+     "2026-10": 48,
+     "2026-09": 500,
+     "2026-08": 400,
+     "2026-07": 82
+    },
+    "first_rows_close": [
+     "2026-10-03T20:59:44Z",
+     "2026-10-03T20:59:44Z"
+    ],
+    "last_rows_close": [
+     "2026-07-29T15:00:00Z",
+     "2026-07-29T15:00:00Z"
+    ],
+    "match_titles": 392,
+    "titles": [
+     "1win wins",
+     "4ikibamboni wins",
+     "Animals Incoming wins",
+     "Aurora wins"
+    ],
+    "events": [
+     "KXDOTA2GAME-26SEP300900LGDPARI",
+     "KXDOTA2GAME-26SEP301200NAVINEM",
+     "KXDOTA2GAME-26SEP301200XTREMELVLUP",
+     "KXDOTA2GAME-26SEP302300YGIVO"
+    ]
+   },
+   "closed": {
+    "n": 2,
+    "pages": 1,
+    "more": false,
+    "status": {
+     "closed": 2
+    },
+    "months": {
+     "2026-09": 2
+    },
+    "first_rows_close": [
+     "2026-09-08T03:00:00Z",
+     "2026-09-08T03:00:00Z"
+    ],
+    "last_rows_close": [
+     "2026-09-08T03:00:00Z",
+     "2026-09-08T03:00:00Z"
+    ],
+    "match_titles": 0,
+    "titles": [
+     "Cloud Rising wins",
+     "Yangon Galacticos wins"
+    ],
+    "events": [
+     "KXDOTA2GAME-26SEP052300CLOYG"
+    ]
+   },
+   "open": {
+    "n": 12,
+    "pages": 1,
+    "more": false,
+    "status": {
+     "active": 12
+    },
+    "months": {
+     "2026-10": 12
+    },
+    "first_rows_close": [
+     "2026-10-07T17:00:00Z",
+     "2026-10-07T17:00:00Z"
+    ],
+    "last_rows_close": [
+     "2026-10-07T06:00:00Z",
+     "2026-10-07T06:00:00Z"
+    ],
+    "match_titles": 0,
+    "titles": [
+     "Blasterbl wins",
+     "Cloud Dawning wins",
+     "CyberHero wins",
+     "Direborn wins"
+    ],
+    "events": [
+     "KXDOTA2GAME-26OCT050400HULSYN",
+     "KXDOTA2GAME-26OCT050700CHYES",
+     "KXDOTA2GAME-26OCT051000BBLLEG",
+     "KXDOTA2GAME-26OCT051300NEMIGAMOUZ"
+    ]
+   },
+   "historical": {
+    "n": 2457,
+    "pages": 3,
+    "more": false,
+    "status": {
+     "finalized": 2457
+    },
+    "months": {
+     "2026-08": 92,
+     "2026-07": 491,
+     "2026-06": 214,
+     "2026-05": 370,
+     "2026-04": 158,
+     "2026-03": 286,
+     "2026-02": 348,
+     "2026-01": 222,
+     "2025-12": 170,
+     "2025-11": 104,
+     "2025-10": 2
+    },
+    "first_rows_close": [
+     "2026-08-04T18:09:30Z",
+     "2026-08-04T18:09:30Z"
+    ],
+    "last_rows_close": [
+     "2025-10-29T17:11:37.117971Z",
+     "2025-10-29T17:11:37.117971Z"
+    ],
+    "match_titles": 2455,
+    "titles": [
+     "Will 1000 reasons win the L1ga Team vs. 1000 reasons Dota 2 match?",
+     "Will 1win win the 1win vs. Aurora Dota 2 match?",
+     "Will 1win win the 1win vs. Aurora match?",
+     "Will 1win win the 1win vs. BetBoom Team Dota 2 match?"
+    ],
+    "events": [
+     "KXDOTA2GAME-26MAY291210OGLIQUID",
+     "KXDOTA2GAME-26MAY300800OGTS",
+     "KXDOTA2GAME-26MAY300800TUNDRAAUR",
+     "KXDOTA2GAME-TEAMOU25"
+    ]
+   },
+   "events": {
+    "error": "HTTP 400 for https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXDOTA2GAME&limit=1000: {\"error\":{\"code\":\"bad_request\",\"message\":\"bad request\"}}"
+   }
+  },
+  "KXR6GAME": {
+   "all": {
+    "n": 534,
+    "pages": 1,
+    "more": false,
+    "status": {
+     "active": 14,
+     "finalized": 520
+    },
+    "months": {
+     "2026-10": 38,
+     "2026-09": 420,
+     "2026-08": 76
+    },
+    "first_rows_close": [
+     "2026-10-07T19:00:00Z",
+     "2026-10-07T19:00:00Z"
+    ],
+    "last_rows_close": [
+     "2026-08-04T13:09:37Z",
+     "2026-08-04T13:09:37Z"
+    ],
+    "match_titles": 534,
+    "titles": [
+     "Will 100 Thieves win the 100 Thieves vs. Five Fears R6 match?",
+     "Will 100 Thieves win the 100 Thieves vs. M80 R6 match?",
+     "Will 100 Thieves win the 100 Thieves vs. Spacestation Gaming R6 match?",
+     "Will 100 Thieves win the 100 Thieves vs. Wildcard Gaming R6 match?"
+    ],
+    "events": [
+     "KXR6GAME-26SEP301300HERETICSFNC",
+     "KXR6GAME-26SEP301400GEEG2",
+     "KXR6GAME-26SEP301500SHIVP",
+     "KXR6GAME-26SEP301600SECRETRBLS"
+    ]
+   },
+   "settled": {
+    "n": 520,
+    "pages": 1,
+    "more": false,
+    "status": {
+     "finalized": 520
+    },
+    "months": {
+     "2026-10": 24,
+     "2026-09": 420,
+     "2026-08": 76
+    },
+    "first_rows_close": [
+     "2026-10-02T22:39:47Z",
+     "2026-10-02T22:39:47Z"
+    ],
+    "last_rows_close": [
+     "2026-08-04T13:09:37Z",
+     "2026-08-04T13:09:37Z"
+    ],
+    "match_titles": 520,
+    "titles": [
+     "Will 100 Thieves win the 100 Thieves vs. Five Fears R6 match?",
+     "Will 100 Thieves win the 100 Thieves vs. M80 R6 match?",
+     "Will 100 Thieves win the 100 Thieves vs. Spacestation Gaming R6 match?",
+     "Will 100 Thieves win the 100 Thieves vs. Wildcard Gaming R6 match?"
+    ],
+    "events": [
+     "KXR6GAME-26SEP301300HERETICSFNC",
+     "KXR6GAME-26SEP301400GEEG2",
+     "KXR6GAME-26SEP301500SHIVP",
+     "KXR6GAME-26SEP301600SECRETRBLS"
+    ]
+   },
+   "closed": {
+    "n": 0,
+    "pages": 1,
+    "more": false,
+    "status": {},
+    "months": {},
+    "first_rows_close": [],
+    "last_rows_close": [],
+    "match_titles": 0,
+    "titles": [],
+    "events": []
+   },
+   "open": {
+    "n": 14,
+    "pages": 1,
+    "more": false,
+    "status": {
+     "active": 14
+    },
+    "months": {
+     "2026-10": 14
+    },
+    "first_rows_close": [
+     "2026-10-07T19:00:00Z",
+     "2026-10-07T19:00:00Z"
+    ],
+    "last_rows_close": [
+     "2026-10-06T16:00:00Z",
+     "2026-10-06T16:00:00Z"
+    ],
+    "match_titles": 14,
+    "titles": [
+     "Will Black Dragons e-Sports win the Black Dragons e-Sports vs. FaZe Clan R6 match?",
+     "Will FURIA Esports win the Lucky Five vs. FURIA Esports R6 match?",
+     "Will FaZe Clan win the Black Dragons e-Sports vs. FaZe Clan R6 match?",
+     "Will Falcons Esport win the Geekay Esports vs. Falcons Esport R6 match?"
+    ],
+    "events": [
+     "KXR6GAME-26OCT041545LOUDFLU",
+     "KXR6GAME-26OCT041700L5FURIA",
+     "KXR6GAME-26OCT051200GEEFLCS",
+     "KXR6GAME-26OCT051500VPG2"
+    ]
+   },
+   "historical": {
+    "n": 832,
+    "pages": 1,
+    "more": false,
+    "status": {
+     "finalized": 832
+    },
+    "months": {
+     "2026-08": 16,
+     "2026-07": 118,
+     "2026-06": 220,
+     "2026-05": 94,
+     "2026-04": 154,
+     "2026-03": 24,
+     "2026-02": 134,
+     "2026-01": 68,
+     "2025-11": 4
+    },
+    "first_rows_close": [
+     "2026-08-04T21:59:47Z",
+     "2026-08-04T21:59:47Z"
+    ],
+    "last_rows_close": [
+     "2025-11-15T16:18:57.356977Z",
+     "2025-11-15T16:18:57.356977Z"
+    ],
+    "match_titles": 832,
+    "titles": [
+     "Will 1 of 30 win the 1 of 30 vs. DarkZero Esports R6 match?",
+     "Will 1 of 30 win the 1 of 30 vs. Five Fears R6 match?",
+     "Will 1 of 30 win the 1 of 30 vs. M80 R6 match?",
+     "Will 1 of 30 win the 1 of 30 vs. Spacestation Gaming R6 match?"
+    ],
+    "events": [
+     "KXR6GAME-26MAY152100WCGDZ",
+     "KXR6GAME-26MAY161500SRTM",
+     "KXR6GAME-26MAY161830DZFAZE",
+     "KXR6GAME-26MAY171830SRDZ"
+    ]
+   },
+   "events": {
+    "error": "HTTP 400 for https://api.elections.kalshi.com/trade-api/v2/events?series_ticker=KXR6GAME&limit=1000: {\"error\":{\"code\":\"bad_request\",\"message\":\"bad request\"}}"
+   }
+  },
+  "/historical/cutoff": {
+   "market_positions_last_updated_ts": "2026-08-05T00:00:00Z",
+   "market_settled_ts": "2026-08-05T00:00:00Z",
+   "orders_updated_ts": "2026-09-20T00:00:00Z",
+   "trades_created_ts": "2026-08-05T00:00:00Z"
+  },
+  "/exchange/status": {
+   "exchange_active": true,
+   "exchange_index_statuses": [
+    {
+     "description": "Default",
+     "exchange_active": true,
+     "exchange_index": 0,
+     "intra_exchange_transfers_active": true,
+     "trading_active": true
+    },
+    {
+     "description": "Combos",
+     "exchange_active": true,
+     "exchange_index": 1,
+     "intra_exchange_transfers_active": true,
+     "trading_active": true
+    },
+    {
+     "description": "Crypto & Commodities",
+     "exchange_active": true,
+     "exchange_index": 2,
+     "intra_exchange_transfers_active": true,
+     "trading_active": true
+    },
+    {
+     "description": "Tennis, Baseball, Basketball",
+     "exchange_active": true,
+     "exchange_index": 3,
+     "intra_exchange_transfers_active": true,
+     "trading_active": true
+    }
+   ],
+   "intra_exchange_transfers_active": true,
+   "trading_active": true
+  }
+ },
+ "http_calls": 76
+}
