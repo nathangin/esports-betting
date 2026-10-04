@@ -238,6 +238,9 @@ def scan(state: State, k: Kalshi, now: datetime, series: list[str]) -> tuple[lis
     decided = state.decided()
     # matches already under way that this trader never decided on (late runs, late markets)
     state.missed = int(((up["minutes_to_start"] < lo) & ~up["event_ticker"].isin(decided)).sum())
+    ahead = up[up["minutes_to_start"] > 0]
+    state.upcoming = {"next_24h": int((ahead["minutes_to_start"] <= 24 * 60).sum()),
+                      "next_start": None if ahead.empty else ahead["start_time"].min().isoformat()}
     record_closes(state, up[up["event_ticker"].isin(decided)], now)
     todo = up[(up["minutes_to_start"] >= lo) & (up["minutes_to_start"] <= hi) & ~up["event_ticker"].isin(decided)]
     if todo.empty:
@@ -369,6 +372,7 @@ def run(state_dir: str, now: datetime | None = None, until: str | None = None) -
             scans, placed = scan(state, k, now, series)
             summary["matches_decided"] = len(scans)
             summary["open_matches_missed"] = getattr(state, "missed", 0)
+            summary["upcoming"] = getattr(state, "upcoming", {})
             summary["bets_placed"] = {b: sum(1 for p in placed if p["book"] == b) for b in BOOKS}
             if scans:
                 sp = state.root / "scans" / f"{now:%Y-%m-%d}.parquet"
