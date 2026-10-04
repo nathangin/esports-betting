@@ -1,20 +1,36 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-04 12:15 UTC. Model fitted 2026-10-04T12:10. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-04 15:23 UTC. Model fitted 2026-10-04T12:10. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
+| model-only | Elo win model alone (control: ignores the market) | 4 | 4 | 0 | 0 | $0.00 | - | - | $1,000.00 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 7 | 7 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
 No finished matches yet.
+
+## Latest bets
+
+| Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
+|---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-04 15:23 | model-only | lol | UCAM Esports Club | Movistar KOI Fénix | NO Movistar KOI Fénix | 13 | 0.24 | 0.39 | 0.76 | open | - |
+| 2026-10-04 15:23 | favourite | lol | Movistar KOI Fénix | UCAM Esports Club | YES Movistar KOI Fénix | 12 | 0.77 | 0.76 | 0.76 | open | - |
+| 2026-10-04 15:23 | favourite | r6 | INTZ | Imperial Esports | NO Imperial Esports | 18 | 0.53 | 0.52 | 0.48 | open | - |
+| 2026-10-04 15:23 | model-only | cs2 | M80 | BetBoom Team | YES M80 | 59 | 0.32 | 0.43 | 0.68 | open | - |
+| 2026-10-04 15:23 | favourite | cs2 | BetBoom Team | M80 | YES BetBoom Team | 14 | 0.68 | 0.68 | 0.68 | open | - |
+| 2026-10-04 15:23 | model-only | cs2 | Natus Vincere | Vitality | YES Natus Vincere | 70 | 0.27 | 0.34 | 0.27 | open | - |
+| 2026-10-04 15:23 | favourite | cs2 | Vitality | Natus Vincere | YES Vitality | 13 | 0.73 | 0.73 | 0.27 | open | - |
+| 2026-10-04 15:23 | favourite | cs2 | ex-RUSTEC | ENJOY | NO ENJOY | 15 | 0.64 | 0.64 | 0.36 | open | - |
+| 2026-10-04 15:23 | model-only | r6 | Black Dragons e-Sports | FaZe Clan | YES Black Dragons e-Sports | 125 | 0.15 | 0.30 | 0.15 | open | - |
+| 2026-10-04 15:23 | favourite | r6 | FaZe Clan | Black Dragons e-Sports | YES FaZe Clan | 11 | 0.85 | 0.85 | 0.15 | open | - |
+| 2026-10-04 15:23 | favourite | cs2 | Turma do Pagode | Bounty Hunters Esports | NO Bounty Hunters Esports | 17 | 0.54 | 0.54 | 0.47 | open | - |
 
 ## Backtest on real Kalshi prices
 

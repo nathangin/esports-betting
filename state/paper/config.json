@@ -4,6 +4,8 @@
   10,
   70
  ],
+ "late_gap_minutes": 30,
+ "late_lead_minutes": 180,
  "flat_frac": 0.01,
  "rules": {
   "blend": {},
