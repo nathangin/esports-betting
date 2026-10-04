@@ -131,12 +131,15 @@ def write(state_dir: str) -> dict:
     L.append("")
     led = state.ledger
     if len(led):
-        L += ["## Latest bets", "", "| Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |",
+        L += ["## Latest bets", "", "Prob is the book's probability that the backed team wins; Market is the "
+              "market's (mid price) at the decision.", "",
+              "| Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |",
               "|---|---|---|---|---|---|---:|---:|---:|---:|---|---:|"]
         for _, r in led.sort_values("placed_at", ascending=False).head(25).iterrows():
+            q_side = float(r["q"]) if r.get("backs_side", "A") == "A" else 1 - float(r["q"])
             L.append(f"| {str(r['placed_at'])[:16].replace('T', ' ')} | {r['book']} | {r['game']} | {r['backs']} | "
                      f"{r['opponent']} | {str(r['side']).upper()} {r['market_team']} | {int(r['contracts'])} | "
-                     f"{float(r['price']):.2f} | {float(r['prob']):.2f} | {float(r['q']):.2f} | {r['status']} | "
+                     f"{float(r['price']):.2f} | {float(r['prob']):.2f} | {q_side:.2f} | {r['status']} | "
                      f"{_money(None if pd.isna(r['pnl']) else float(r['pnl']))} |")
         L.append("")
     if bt:

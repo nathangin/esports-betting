@@ -326,11 +326,66 @@ def record_closes(state: State, up: pd.DataFrame, now: datetime, window=(-10.0, 
                          "minutes_to_start": round(float(r.minutes_to_start), 1), "q_close": round(q, 4)})
     if not rows:
         return 0
+    for r in rows:
+        r["source"] = "snapshot"
+    _merge_closes(state, rows)
+    return len(rows)
+
+
+def _merge_closes(state: State, rows: list[dict]) -> None:
+    """Keep one closing line per match: prices from the 1-minute candles at the start when
+    available, otherwise the live snapshot nearest the start."""
     path = state.root / "closes.csv"
     old = pd.read_csv(path) if path.exists() else None
     df = pd.concat([old, pd.DataFrame(rows)], ignore_index=True) if old is not None else pd.DataFrame(rows)
-    df = df.assign(dist=df["minutes_to_start"].abs()).sort_values("dist").drop_duplicates("event_ticker")
-    df.drop(columns="dist").sort_values("at").to_csv(path, index=False)
+    if "source" not in df:
+        df["source"] = "snapshot"
+    df["source"] = df["source"].fillna("snapshot")
+    df = df.assign(rank=(df["source"] != "candles").astype(int), dist=df["minutes_to_start"].abs())
+    df = df.sort_values(["rank", "dist"]).drop_duplicates("event_ticker")
+    df.drop(columns=["rank", "dist"]).sort_values("at").to_csv(path, index=False)
+
+
+def backfill_closes(state: State, k: Kalshi, now: datetime, max_events: int = 40) -> int:
+    """Closing lines for decided matches that have started, from Kalshi's 1-minute candles (the
+    same measure as the backtest). Scheduled runs are too sparse to catch most starts live."""
+    from .backtest import quotes_at
+
+    d = state.root / "scans"
+    files = sorted(d.glob("*.parquet"))[-3:] if d.exists() else []
+    if not files:
+        return 0
+    cols = ["event_ticker", "series_ticker", "start_time", "ticker_a", "ticker_b"]
+    sc = pd.concat([pd.read_parquet(f, columns=cols) for f in files], ignore_index=True).drop_duplicates("event_ticker")
+    sc["start_time"] = pd.to_datetime(sc["start_time"], utc=True)
+    path = state.root / "closes.csv"
+    have = set()
+    if path.exists():
+        c = pd.read_csv(path)
+        if "source" in c:
+            have = set(c.loc[c["source"] == "candles", "event_ticker"])
+    t_now = pd.Timestamp(now)
+    todo = sc[(sc["start_time"] <= t_now - pd.Timedelta(minutes=5)) & (sc["start_time"] > t_now - pd.Timedelta(days=2))
+              & ~sc["event_ticker"].isin(have)].head(max_events)
+    rows = []
+    for r in todo.itertuples(index=False):
+        t_close = int(r.start_time.timestamp())
+        try:
+            got = k.event_candles(r.series_ticker, r.event_ticker, t_close - 1800, t_close + 60, period=1)
+            if not any(got.values()):
+                got = {t: k.market_candles(r.series_ticker, t, t_close - 1800, t_close + 60, period=1)
+                       for t in (r.ticker_a, r.ticker_b)}
+        except Exception as e:  # noqa: BLE001 - a missing closing line must not stop the run
+            log.warning("closing line for %s: %s", r.event_ticker, e)
+            continue
+        frames = {t: pd.DataFrame(cs, columns=["ts", "bid", "ask", "price", "volume"]).sort_values("ts")
+                  .reset_index(drop=True) for t, cs in got.items() if cs}
+        q = market_prob(*quotes_at(frames.get(r.ticker_a), t_close, 900), *quotes_at(frames.get(r.ticker_b), t_close, 900))
+        if q is not None:
+            rows.append({"event_ticker": r.event_ticker, "at": now.isoformat(timespec="seconds"),
+                         "minutes_to_start": 0.0, "q_close": round(q, 4), "source": "candles"})
+    if rows:
+        _merge_closes(state, rows)
     return len(rows)
 
 
@@ -386,6 +441,7 @@ def run(state_dir: str, now: datetime | None = None, until: str | None = None) -
     http = Http(sample_dir=state.root / "samples")
     k = Kalshi(http)
     summary["settled"] = settle(state, k, now)
+    summary["closes_backfilled"] = backfill_closes(state, k, now)
     series = state.match_series()
     summary["series"] = len(series)
     if not series:

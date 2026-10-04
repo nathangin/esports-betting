@@ -121,3 +121,25 @@ def test_decision_window_widens_when_runs_are_late(tmp_path, monkeypatch):
     assert out2["matches_decided"] == 2
     scans = pd.read_parquet(tmp_path / "paper" / "scans" / "2026-10-02.parquet").set_index("event_ticker")
     assert abs(scans.loc[soon, "minutes_to_start"] - 20) < 1e-6 and abs(scans.loc[LATER, "minutes_to_start"] - 110) < 1e-6
+
+
+def test_closing_lines_backfilled_from_candles_when_runs_are_sparse(tmp_path, monkeypatch):
+    open_ms = _setup(tmp_path)
+    _run(monkeypatch, tmp_path, FakeKalshiHttp(open_markets=open_ms), NOW)
+    start = int(datetime(2026, 10, 2, 18, 45, tzinfo=timezone.utc).timestamp())
+    # 1-minute candles: Team 1 drifts from 0.45 to 0.55 by the start (Team 2 mirrors it)
+    candles = {f"{EV}-T01": [(start - 600, 0.46, 0.48), (start - 60, 0.54, 0.56)],
+               f"{EV}-T02": [(start - 600, 0.52, 0.54), (start - 60, 0.44, 0.46)]}
+    # no run near the start; the next one is an hour after it
+    out = _run(monkeypatch, tmp_path, FakeKalshiHttp(open_markets=open_ms[2:], candles=candles),
+               NOW + timedelta(minutes=105))
+    assert out["closes_backfilled"] == 1
+    closes = pd.read_csv(tmp_path / "paper" / "closes.csv")
+    row = closes.set_index("event_ticker").loc[EV]
+    assert row["source"] == "candles" and abs(row["q_close"] - 0.55) < 1e-9
+    books = report.book_stats(paper.State(tmp_path))
+    assert abs(books["blend"]["avg_clv"] - (0.55 - 0.46)) < 1e-9
+    # a later run does not fetch it again
+    out2 = _run(monkeypatch, tmp_path, FakeKalshiHttp(open_markets=open_ms[2:], candles=candles),
+                NOW + timedelta(minutes=120))
+    assert out2["closes_backfilled"] == 0
