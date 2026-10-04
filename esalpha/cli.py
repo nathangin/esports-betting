@@ -15,6 +15,7 @@ def main(argv=None) -> int:
 
     p = sub.add_parser("probe", help="check market and results sources and save raw samples")
     p.add_argument("--out", default="state/probe")
+    p.add_argument("--kalshi-coverage", action="store_true", help="only check which Kalshi endpoints list which markets")
 
     p = sub.add_parser("history", help="download settled esports matches and pre-match price candles")
     p.add_argument("--state", default="state")
@@ -41,9 +42,13 @@ def main(argv=None) -> int:
     if args.cmd == "probe":
         from . import probe
 
-        rep = probe.run(args.out)
-        print(json.dumps({"checks": len(rep["checks"]), "failed": [c["name"] for c in rep["checks"] if not c["ok"]],
-                          "http_calls": rep["http_calls"]}, indent=1))
+        if args.kalshi_coverage:
+            rep = probe.run_kalshi(args.out)
+            print(json.dumps(rep, indent=1, default=str)[:20000])
+        else:
+            rep = probe.run(args.out)
+            print(json.dumps({"checks": len(rep["checks"]), "failed": [c["name"] for c in rep["checks"] if not c["ok"]],
+                              "http_calls": rep["http_calls"]}, indent=1))
     elif args.cmd == "history":
         from . import history
 

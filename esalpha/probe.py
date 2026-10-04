@@ -19,6 +19,65 @@ ESPORT_WORDS = re.compile(r"counter[- ]?strike|\bcs2\b|\bcsgo\b|cs:go|league of 
                           r"esport|e-sport|overwatch|rocket league|rainbow|call of duty", re.I)
 
 
+DIAG_SERIES = ["KXCS2GAME", "KXCS2GAMES", "KXLOLGAME", "KXLOLGAMES", "KXVALORANTGAME", "KXDOTA2GAME", "KXR6GAME"]
+
+
+def kalshi_coverage(http: Http, series: list[str] = DIAG_SERIES, max_pages: int = 15) -> dict:
+    """Which endpoint/status filter returns which markets, per series (to find gaps in the history)."""
+    from .history import MATCH_TITLE
+
+    def scan(path, params):
+        rows, cursor, pages = [], None, 0
+        while pages < max_pages:
+            q = {**params, "limit": 1000, **({"cursor": cursor} if cursor else {})}
+            js = http.get_json(f"{KALSHI}{path}", q)
+            got = js.get("markets") or js.get("events") or []
+            rows += got
+            pages += 1
+            cursor = js.get("cursor")
+            if not cursor or not got:
+                break
+        closes = [r.get("close_time") or "" for r in rows if r.get("close_time")]
+        months: dict = {}
+        for c in closes:
+            months[c[:7]] = months.get(c[:7], 0) + 1
+        st: dict = {}
+        for r in rows:
+            st[r.get("status")] = st.get(r.get("status"), 0) + 1
+        return {"n": len(rows), "pages": pages, "more": bool(cursor), "status": st, "months": months,
+                "first_rows_close": closes[:2], "last_rows_close": closes[-2:],
+                "match_titles": sum(1 for r in rows if MATCH_TITLE.match((r.get("title") or "").strip())),
+                "titles": sorted({(r.get("title") or "")[:90] for r in rows})[:4],
+                "events": sorted({r.get("event_ticker") or r.get("ticker") or "" for r in rows})[-4:]}
+
+    out = {}
+    for s in series:
+        res = {}
+        for name, path, params in (("all", "/markets", {}), ("settled", "/markets", {"status": "settled"}),
+                                   ("closed", "/markets", {"status": "closed"}), ("open", "/markets", {"status": "open"}),
+                                   ("historical", "/historical/markets", {}), ("events", "/events", {})):
+            try:
+                res[name] = scan(path, {"series_ticker": s, **params})
+            except Exception as e:  # noqa: BLE001
+                res[name] = {"error": str(e)[:300]}
+        out[s] = res
+    for path in ("/historical/cutoff", "/exchange/status"):
+        try:
+            out[path] = http.get_json(f"{KALSHI}{path}")
+        except Exception as e:  # noqa: BLE001
+            out[path] = {"error": str(e)[:300]}
+    return out
+
+
+def run_kalshi(out_dir: str) -> dict:
+    out = Path(out_dir)
+    out.mkdir(parents=True, exist_ok=True)
+    http = Http()
+    rep = {"started": datetime.now(timezone.utc).isoformat(), "coverage": kalshi_coverage(http), "http_calls": http.calls}
+    (out / "kalshi_coverage.json").write_text(json.dumps(rep, indent=1, default=str))
+    return rep
+
+
 def run(out_dir: str) -> dict:
     out = Path(out_dir)
     http = Http(sample_dir=out / "samples")

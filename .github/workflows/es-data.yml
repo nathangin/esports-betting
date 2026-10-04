@@ -3,7 +3,7 @@
 #
 # Scheduled: daily history refresh; on Mondays also the backtest.
 # By hand: Actions tab -> Data jobs -> Run workflow, or push a commit to the esalpha branch
-# whose message contains [probe], [history], [backtest] or [paper].
+# whose message contains [coverage], [probe], [history], [backtest] or [paper].
 name: Data jobs
 
 on:
@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       tasks:
-        description: "Space-separated: probe history backtest paper"
+        description: "Space-separated: coverage probe history backtest paper"
         required: true
         default: "history backtest"
       args:
@@ -36,7 +36,8 @@ jobs:
       contains(github.event.head_commit.message, '[probe]') ||
       contains(github.event.head_commit.message, '[history]') ||
       contains(github.event.head_commit.message, '[backtest]') ||
-      contains(github.event.head_commit.message, '[paper]')
+      contains(github.event.head_commit.message, '[paper]') ||
+      contains(github.event.head_commit.message, '[coverage]')
     runs-on: ubuntu-latest
     timeout-minutes: 120
     defaults:
@@ -66,7 +67,7 @@ jobs:
             args="--days 14 --minutes 40"
             if [ "$(date -u +%u)" = "1" ]; then tasks="history backtest"; fi
           elif [ -z "$tasks" ]; then
-            for t in probe history backtest paper; do
+            for t in coverage probe history backtest paper; do
               case "$MSG" in *"[$t]"*) tasks="$tasks $t";; esac
             done
           fi
@@ -84,6 +85,7 @@ jobs:
             log="state-branch/state/logs/${t}-${ts}.log"
             case "$t" in
               probe)    python -m esalpha probe --out state-branch/state/probe 2>&1 | tee -a "$log" ;;
+              coverage) python -m esalpha probe --kalshi-coverage --out state-branch/state/probe 2>&1 | tee -a "$log" ;;
               history)  python -m esalpha history --state state-branch/state $HISTORY_ARGS 2>&1 | tee -a "$log" ;;
               backtest) python -m esalpha backtest --state state-branch/state 2>&1 | tee -a "$log" ;;
               paper)    python -m esalpha paper --state state-branch/state 2>&1 | tee -a "$log" ;;
