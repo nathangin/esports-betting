@@ -14,12 +14,75 @@ Two parts live in this repo:
 
 ## Results
 
-RESULTS_PLACEHOLDER
+**Short version: Kalshi's esports prices are better forecasts than this model, and no strategy
+tried here beat them after the bid/ask spread and fees.** The paper trader keeps testing that
+live, with fake money.
+
+### Backtest on real Kalshi prices
+
+7,469 settled matches from May 28 to Oct 4 2026 (CS2 3,820, LoL 1,455, Valorant 769, Dota 2 652,
+R6 413, Overwatch 216, CoD 88, Rocket League 56). Ratings use all 13,898 Kalshi matches since
+Nov 2025.
+Every decision is made 60 minutes before the scheduled start at the quoted bid/ask, pays Kalshi's
+taker fee and settles on Kalshi's result; ratings, the win model and the blend only ever see
+earlier matches (weekly walk-forward refits). Each strategy starts with $1,000.
+
+| Strategy | Bets | ROI | 95% range | Closing-line value | $1,000 became |
+|---|---:|---:|---|---:|---:|
+| model + market blend | 24 | -0.4% | -35% to +46% | +0.0c | $998 |
+| Elo model alone | 1,864 | -10.7% | -19% to -3% | -0.8c | $21 |
+| always the favourite (1% flat) | 3,572 | -4.8% | -7.4% to -2.4% | -1.6c | $263 |
+| always the underdog (1% flat) | 3,602 | -11.3% | -17% to -5% | -1.3c | $21 |
+
+Forecast quality on the same matches (log loss, lower is better):
+
+| Forecast | Log loss | Brier | Picks the winner |
+|---|---:|---:|---:|
+| Kalshi price 60 min before | **0.573** | 0.196 | 69.1% |
+| Elo win model | 0.662 | 0.235 | 59.3% |
+| model + market blend | **0.573** | 0.196 | |
+
+What this means:
+
+* **The market is far ahead of a results-only model**, in every game (CS2 0.591 vs 0.674,
+  LoL 0.547 vs 0.643, Valorant 0.612 vs 0.696, Dota 2 0.548 vs 0.656). It knows rosters,
+  stand-ins, map pools and form that match results alone do not show.
+* **The fitted blend puts all its weight on the market** (weights -0.06 on the model, 1.13 on the
+  market), so it almost never finds a bet: 24 in four months, too few to say anything.
+* **Closing-line value is zero or negative for every strategy**: on average the bets were placed
+  at prices no better than where the market stood at the start. That is the signature of no
+  information edge.
+* **The favourite-longshot pattern is real but not bettable as a taker**: at mid prices,
+  favourites at 70-80c won about 4 points more often than priced, but the price you can actually
+  buy at averaged 2.5c above that mid and the fee adds about 1.3c, so backing favourites at the
+  ask still lost about 2% at 60, 30 and 10 minutes before the start.
+* Also tried and rejected (no out-of-sample gain over the market): team ratings learned from
+  earlier matches' closing prices, recalibrating the market price, deciding 120/30/10 minutes
+  before the start, stricter edge thresholds.
+
+The same lesson as the Kalshi weather project: only trust an edge that survives a walk-forward
+test against the market's own price, and judge live results by closing-line value before P&L.
+
+### Paper trading
+
+Running on GitHub Actions every 15 minutes from Oct 4 2026 (new bets stop after Nov 15). The
+live report, with every bet, is
+[`state/reports/summary.md`](../../blob/paper-trading/state/reports/summary.md) on the
+`paper-trading` branch.
+
+### The original app
+
+Its reported accuracy was inflated by look-ahead: every training row carried the teams' final
+Elo ratings, which already include that match's result, and the "out-of-sample" backtest
+reused models trained on the test period. The fixes are listed below; with them the app's
+numbers can be trusted, but there are still no real prices in its database to say whether
+its edges would have paid.
 
 ## How esalpha works
 
-**Market.** Each Kalshi esports match is an event with one market per team ("Will OpTic
-Gaming win the OpTic Gaming vs. Team Heretics match?"). A team is identified by a stable
+**Market.** Each Kalshi esports match is an event with one market per team in a
+`KX<GAME>GAME` series ("Will OpTic Gaming win the OpTic Gaming vs. Team Heretics match?", or
+since August 2026 just "OpTic Gaming wins"). A team is identified by a stable
 competitor id (`custom_strike.esports_competitor`), the scheduled start is encoded in the event
 ticker in Eastern time (`KXCODGAME-26AUG091500OGHTCS` = Aug 9 2026, 3:00 PM ET), markets open
 about two hours before the start, keep trading during the match and close as soon as a

@@ -25,8 +25,8 @@ import numpy as np
 import pandas as pd
 
 from . import ratings as rt
-from .history import build_matches, is_match_series, is_match_title, read_table
-from .kalshi import Kalshi, Market, game_of
+from .history import build_matches, is_match_series, is_match_title, normalize_matches, read_table
+from .kalshi import Kalshi, Market
 from .model import Params
 from .net import Http
 from .strategy import (Rules, default_rules, flat_candidates, flat_rules, match_candidates, market_prob,
@@ -115,9 +115,7 @@ class State:
         frames = [f for f in (self.history_matches(), self.paper_matches()) if len(f)]
         if not frames:
             return pd.DataFrame(columns=MATCH_COLS)
-        m = pd.concat([f[MATCH_COLS] for f in frames], ignore_index=True)
-        m["game"] = m["series_ticker"].map(game_of)
-        m["start_time"] = pd.to_datetime(m["start_time"], utc=True)
+        m = normalize_matches(pd.concat([f[MATCH_COLS] for f in frames], ignore_index=True))[MATCH_COLS]
         m = m.dropna(subset=["start_time"])
         # later rows (paper results) win over the history copy of the same event
         return m.drop_duplicates("event_ticker", keep="last").sort_values("start_time").reset_index(drop=True)

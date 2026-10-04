@@ -29,7 +29,7 @@ fake-money paper trading on GitHub Actions). See README.md for results.
 - Taker fee `ceil(0.07 * C * P * (1 - P))` (all match series quadratic, multiplier 1).
 
 ## What the data says
-- At 60 minutes before the start the market's log loss is ~0.577; the Elo model's ~0.666. The
+- At 60 minutes before the start the market's log loss is ~0.573; the Elo model's ~0.662. The
   model + market blend is no better than the market, and bets lose after spread and fees.
   Closing-line value of every strategy tried was zero or negative. Treat any new "edge" with
   suspicion until it shows positive closing-line value out of sample.

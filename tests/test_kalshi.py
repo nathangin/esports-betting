@@ -98,3 +98,16 @@ def test_match_markets_old_and_new_titles():
     assert is_match_series("KXCS2GAME") and is_match_series("KXR6GAME")
     assert not is_match_series("KXDOTA2GAME3WAY") and not is_match_series("KXCS2MAPWINNER")
     assert not is_match_series("KXLOLGAMES")
+
+
+def test_old_date_only_tickers_get_an_estimated_start():
+    from esalpha.history import normalize_matches
+
+    m = pd.DataFrame([{"event_ticker": "KXCODGAME-25DEC05BOSCRR", "series_ticker": "KXCODGAME", "game": "x",
+                       "start_time": None, "close_time": pd.Timestamp("2025-12-05T22:10Z")},
+                      {"event_ticker": "KXRLGAME-26FEB201600AB", "series_ticker": "KXRLGAME", "game": "rlgame",
+                       "start_time": pd.Timestamp("2026-02-20T21:00Z"), "close_time": pd.Timestamp("2026-02-20T23:00Z")}])
+    n = normalize_matches(m)
+    assert n.loc[0, "start_time"] == pd.Timestamp("2025-12-05T20:10Z") and bool(n.loc[0, "start_estimated"])
+    assert n.loc[1, "start_time"] == pd.Timestamp("2026-02-20T21:00Z") and not bool(n.loc[1, "start_estimated"])
+    assert list(n["game"]) == ["cod", "rl"]

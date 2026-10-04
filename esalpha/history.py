@@ -23,7 +23,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from .kalshi import Kalshi, parse_market
+from .kalshi import Kalshi, game_of, parse_market
 from .net import Http, HttpError
 
 log = logging.getLogger(__name__)
@@ -112,6 +112,25 @@ def fetch_markets(k: Kalshi, series: list[dict], hist: Path, manifest: dict, max
     manifest["markets"] = {"rows": int(len(df)), "events": int(df["event_ticker"].nunique()),
                            "by_game": df.groupby("game")["event_ticker"].nunique().to_dict()}
     return df
+
+
+def normalize_matches(m: pd.DataFrame) -> pd.DataFrame:
+    """Matches as the models use them: game labels from the current ``game_of`` and a start
+    time for every match. Event tickers before ~Feb 2026 carry only a date
+    (``KXCODGAME-25DEC05BOSCRR``); those get the market close (when the winner was declared)
+    minus two hours, which is enough to order results for the ratings. They have no price
+    history, so no betting decision ever depends on the estimate."""
+    if m is None or m.empty:
+        return m
+    m = m.copy()
+    m["game"] = m["series_ticker"].map(game_of)
+    st = pd.to_datetime(m["start_time"], utc=True)
+    est = st.isna()
+    if est.any() and "close_time" in m:
+        st = st.where(~est, pd.to_datetime(m["close_time"], utc=True) - pd.Timedelta(hours=2))
+    m["start_time"] = st
+    m["start_estimated"] = est
+    return m
 
 
 def build_matches(markets: pd.DataFrame) -> pd.DataFrame:
