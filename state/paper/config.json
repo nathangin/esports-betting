@@ -1,0 +1,13 @@
+{
+ "bankroll": 1000.0,
+ "lead_minutes": [
+  10,
+  70
+ ],
+ "flat_frac": 0.01,
+ "rules": {
+  "blend": {},
+  "model-only": {},
+  "favourite": {}
+ }
+}
