@@ -1,11 +1,13 @@
 """Fake Kalshi responses for the esalpha tests (field names copied from real responses)."""
 
 def market(ticker, team, comp, *, status="active", bid=None, ask=None, result="", open_time="2026-10-02T16:00:00Z",
-           close_time="2026-10-03T16:00:00Z", bid_size=500.0, ask_size=500.0, opponent="Other"):
-    """A market object shaped like Kalshi's (field names copied from a real response)."""
+           close_time="2026-10-03T16:00:00Z", bid_size=500.0, ask_size=500.0, opponent="Other", new_title=False):
+    """A market object shaped like Kalshi's (field names copied from a real response).
+    ``new_title``: the short title format Kalshi uses since August 2026 ("A wins")."""
     event = ticker.rsplit("-", 1)[0]
     return {
-        "ticker": ticker, "event_ticker": event, "title": f"Will {team} win the {team} vs. {opponent} match?",
+        "ticker": ticker, "event_ticker": event,
+        "title": f"{team} wins" if new_title else f"Will {team} win the {team} vs. {opponent} match?",
         "yes_sub_title": team, "no_sub_title": team, "custom_strike": {"esports_competitor": comp},
         "status": status, "result": result, "expiration_value": team if result == "yes" else "",
         "yes_bid_dollars": "0.0000" if bid is None else f"{bid:.4f}",

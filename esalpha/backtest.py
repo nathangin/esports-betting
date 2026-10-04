@@ -19,6 +19,7 @@ import pandas as pd
 
 from . import ratings as rt
 from .history import read_table
+from .kalshi import game_of
 from .model import Params
 from .strategy import Rules, default_rules, flat_candidates, flat_rules, match_candidates, market_prob, settle_pnl, size
 
@@ -52,6 +53,7 @@ def quotes_at(c: pd.DataFrame | None, ts: int, max_age: int = 3600) -> tuple[flo
 
 def build_events(hist: Path, minutes_before: float = 60.0, tune_until=None) -> tuple[pd.DataFrame, dict]:
     matches = read_table(hist, "matches")
+    matches["game"] = matches["series_ticker"].map(game_of)        # labels follow the current code
     matches["start_time"] = pd.to_datetime(matches["start_time"], utc=True)
     matches = matches.dropna(subset=["start_time"])
     candles = read_table(hist, "candles")

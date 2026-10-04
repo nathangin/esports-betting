@@ -29,7 +29,7 @@ _MONTHS = {m: i + 1 for i, m in enumerate(
 # series ticker fragments -> game key
 GAME_KEYS = [
     ("CSGO", "cs2"), ("CS2", "cs2"), ("LOL", "lol"), ("LEAGUE", "lol"), ("VALORANT", "valorant"),
-    ("VCT", "valorant"), ("DOTA", "dota2"), ("COD", "cod"), ("ROCKETLEAGUE", "rl"), ("R6", "r6"),
+    ("VCT", "valorant"), ("DOTA", "dota2"), ("COD", "cod"), ("ROCKETLEAGUE", "rl"), ("RLGAME", "rl"), ("R6", "r6"),
     ("OVERWATCH", "ow"), ("OW", "ow"), ("PUBG", "pubg"), ("APEX", "apex"), ("MLBB", "mlbb"),
 ]
 
@@ -52,12 +52,24 @@ def _f(x) -> float | None:
     return None if math.isnan(v) else v
 
 
-def price(m: dict, key: str) -> float | None:
-    v = _f(m.get(f"{key}_dollars"))
+def dollars(d: dict, key: str) -> float | None:
+    """A price in dollars from ``<key>_dollars`` or ``<key>``.
+
+    The live API sends ``close_dollars: "0.4500"``; the historical endpoints send the same
+    dollar string under the bare name (``close: "0.4500"``); old responses used integer cents
+    (``close: 45``). A string with a decimal point is dollars, a bare number is cents."""
+    v = _f(d.get(f"{key}_dollars"))
     if v is not None:
         return v
-    v = _f(m.get(key))
+    raw = d.get(key)
+    if isinstance(raw, str) and "." in raw:
+        return _f(raw)
+    v = _f(raw)
     return None if v is None else v / 100.0
+
+
+def price(m: dict, key: str) -> float | None:
+    return dollars(m, key)
 
 
 def qty(m: dict, key: str) -> float | None:
@@ -175,12 +187,7 @@ def parse_candles(rows) -> list[dict]:
     out = []
     for c in rows or []:
         def ohlc(name, fld="close"):
-            d = c.get(name) or {}
-            v = _f(d.get(f"{fld}_dollars"))
-            if v is not None:
-                return v
-            v = _f(d.get(fld))
-            return None if v is None else v / 100.0
+            return dollars(c.get(name) or {}, fld)
         bid, ask = ohlc("yes_bid"), ohlc("yes_ask")
         out.append({"ts": int(c.get("end_period_ts") or 0), "bid": bid if bid and bid > 0 else None,
                     "ask": ask if ask is not None and ask < 1.0 else None, "price": ohlc("price"),

@@ -24,7 +24,7 @@ DIAG_SERIES = ["KXCS2GAME", "KXCS2GAMES", "KXLOLGAME", "KXLOLGAMES", "KXVALORANT
 
 def kalshi_coverage(http: Http, series: list[str] = DIAG_SERIES, max_pages: int = 15) -> dict:
     """Which endpoint/status filter returns which markets, per series (to find gaps in the history)."""
-    from .history import MATCH_TITLE
+    from .history import is_match_title
 
     def scan(path, params):
         rows, cursor, pages = [], None, 0
@@ -46,7 +46,7 @@ def kalshi_coverage(http: Http, series: list[str] = DIAG_SERIES, max_pages: int 
             st[r.get("status")] = st.get(r.get("status"), 0) + 1
         return {"n": len(rows), "pages": pages, "more": bool(cursor), "status": st, "months": months,
                 "first_rows_close": closes[:2], "last_rows_close": closes[-2:],
-                "match_titles": sum(1 for r in rows if MATCH_TITLE.match((r.get("title") or "").strip())),
+                "match_titles": sum(1 for r in rows if is_match_title(r.get("title"))),
                 "titles": sorted({(r.get("title") or "")[:90] for r in rows})[:4],
                 "events": sorted({r.get("event_ticker") or r.get("ticker") or "" for r in rows})[-4:]}
 

@@ -19,8 +19,8 @@ def _setup(tmp_path):
     # the win model says 0.82 for team A, the blend averages model and market on the logit scale
     Params(k={"cs2": 32.0, "lol": 32.0}, win_w=[1.5, 0.0, 0.0, 0.0], blend_w=[0.0, 0.5, 0.5],
            meta={"fitted": "2026-10-01T00:00Z"}).save(tmp_path / "params" / "fitted.json")
-    open_ms = [market(f"{EV}-T01", "Team 1", "cs2-1", bid=0.44, ask=0.46, opponent="Team 2"),
-               market(f"{EV}-T02", "Team 2", "cs2-2", bid=0.54, ask=0.56, opponent="Team 1"),
+    open_ms = [market(f"{EV}-T01", "Team 1", "cs2-1", bid=0.44, ask=0.46, opponent="Team 2", new_title=True),
+               market(f"{EV}-T02", "Team 2", "cs2-2", bid=0.54, ask=0.56, opponent="Team 1", new_title=True),
                market(f"{LATER}-T03", "Team 3", "cs2-3", bid=0.30, ask=0.32, opponent="Team 4"),
                market(f"{LATER}-T04", "Team 4", "cs2-4", bid=0.68, ask=0.70, opponent="Team 3")]
     return open_ms

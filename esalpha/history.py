@@ -28,7 +28,21 @@ from .net import Http, HttpError
 
 log = logging.getLogger(__name__)
 
+# Match-winner markets live in series named KX<GAME>GAME (KXCS2GAME, KXLOLGAME, KXR6GAME, ...).
+# Titles changed in August 2026 from "Will A win the A vs. B match?" to "A wins"; both are
+# accepted, and a match is an event with exactly two such markets on different teams.
+MATCH_SERIES = re.compile(r"^KX[A-Z0-9]+GAME$")
 MATCH_TITLE = re.compile(r"^Will (.+?) win the (.+?) vs\.? (.+?) match\??$", re.I)
+MATCH_TITLE_NEW = re.compile(r"^(.+?) wins\??$", re.I)
+
+
+def is_match_series(series_ticker: str) -> bool:
+    return bool(MATCH_SERIES.match(series_ticker or ""))
+
+
+def is_match_title(title: str) -> bool:
+    t = (title or "").strip()
+    return bool(MATCH_TITLE.match(t) or MATCH_TITLE_NEW.match(t))
 MARKET_COLS = ["ticker", "event_ticker", "series_ticker", "game", "team", "competitor", "title", "status",
                "result", "winner_name", "volume", "last_price", "open_time", "close_time", "start_time", "tournament"]
 
@@ -79,11 +93,13 @@ def fetch_markets(k: Kalshi, series: list[dict], hist: Path, manifest: dict, max
     rows = []
     for s in series:
         tk = s["ticker"]
+        if not is_match_series(tk):
+            continue
         n0 = len(rows)
         for path, params, pages in (("/markets", {"status": "settled"}, 40), ("/historical/markets", {}, max_hist_pages)):
             try:
                 for m in k.iter_markets(path=path, max_pages=pages, series_ticker=tk, **params):
-                    if not MATCH_TITLE.match((m.get("title") or "").strip()):
+                    if not is_match_title(m.get("title")):
                         continue
                     mk = parse_market(m, tk).to_row()
                     rows.append({c: mk.get(c) for c in MARKET_COLS})
@@ -121,11 +137,39 @@ def build_matches(markets: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
+def repair_candle_scale(c: pd.DataFrame) -> tuple[pd.DataFrame, int]:
+    """Undo a parsing bug in candles saved before Oct 4 2026: the historical endpoint's dollar
+    strings were read as cents, so those markets' prices were stored 100x too small.
+
+    A market's candles all come from one endpoint, and a real Kalshi price is a whole number
+    of cents, so a market whose bids are all below 1c and asks at most 1c was mis-scaled.
+    Asks of $1.00 (no offer) and bids of $0 become missing, as the parser does now."""
+    if c is None or c.empty:
+        return c, 0
+    g = c.groupby("ticker")
+    bad = (g["bid"].max().fillna(0) < 0.01) & (g["ask"].max().fillna(0) <= 0.01) & (g["ask"].max().notna() | g["bid"].max().notna())
+    tickers = set(bad[bad].index)
+    if not tickers:
+        return c, 0
+    c = c.copy()
+    sel = c["ticker"].isin(tickers)
+    for col in ("bid", "ask", "price"):
+        c.loc[sel, col] = (c.loc[sel, col] * 100).round(4)
+    c.loc[sel & (c["ask"] >= 1.0), "ask"] = None
+    c.loc[sel & (c["bid"] <= 0), "bid"] = None
+    return c, len(tickers)
+
+
 def fetch_candles(k: Kalshi, hist: Path, matches: pd.DataFrame, days: int, hours_before: float,
                   manifest: dict, minutes: float) -> pd.DataFrame:
     """1-minute candles for the ``hours_before`` hours up to each match's scheduled start."""
     old = read_table(hist, "candles")
     old = old if len(old) else None
+    if old is not None:
+        old, n_fixed = repair_candle_scale(old)
+        if n_fixed:
+            manifest["candles_rescaled_markets"] = n_fixed
+            old = _save(old, [], hist)
     done = set(old["event_ticker"].unique()) if old is not None else set()
     t_end = time.monotonic() + minutes * 60
     cutoff = pd.Timestamp(datetime.now(timezone.utc) - timedelta(days=days))

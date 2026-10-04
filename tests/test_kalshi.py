@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from esalpha.history import MATCH_TITLE, build_matches
+from esalpha.history import MATCH_TITLE, build_matches, is_match_series, is_match_title
 from esalpha.kalshi import game_of, parse_candles, parse_market, start_from_rules, start_from_ticker
 
 import pandas as pd
@@ -61,3 +61,40 @@ def test_history_tables_are_monthly_shards(tmp_path):
     assert (tmp_path / "candles" / "2025-09.parquet").stat().st_mtime_ns == before   # untouched month
     out = read_table(tmp_path, "candles")
     assert list(out["event_ticker"]) == ["A", "B", "C", "D"]
+
+
+def test_candles_from_live_and_historical_endpoints_are_both_dollars(fixture):
+    from esalpha.kalshi import parse_candles
+
+    live = fixture("kalshi_event_candles_live.json")
+    c = parse_candles(live["market_candlesticks"][0])
+    assert c[0]["bid"] == 0.73 and c[0]["ask"] == 0.76 and c[0]["price"] is None
+    assert c[-1]["price"] == 0.85
+    hist = parse_candles(fixture("kalshi_market_candles_historical.json")["candlesticks"])
+    # the historical endpoint sends "close": "0.9000" (dollars, no _dollars suffix)
+    assert hist[0]["bid"] == 0.90 and hist[0]["ask"] == 0.91
+    assert hist[-1]["bid"] == 0.85 and hist[-1]["ask"] == 0.89
+
+
+def test_repair_of_candles_saved_with_the_cents_bug():
+    from esalpha.history import repair_candle_scale
+
+    c = pd.DataFrame({"event_ticker": ["E"] * 4, "ticker": ["E-A", "E-A", "E-B", "E-B"], "ts": [1, 2, 1, 2],
+                      "bid": [0.0016, 0.0090, 0.30, 0.31], "ask": [0.0024, 0.01, 0.33, 0.34],
+                      "price": [None, 0.0095, 0.32, None], "volume": [0.0] * 4})
+    fixed, n = repair_candle_scale(c)
+    assert n == 1
+    a = fixed[fixed["ticker"] == "E-A"]
+    assert list(a["bid"]) == [0.16, 0.90] and a["ask"].iloc[0] == 0.24 and pd.isna(a["ask"].iloc[1])
+    assert list(fixed.loc[fixed["ticker"] == "E-B", "bid"]) == [0.30, 0.31]      # live prices untouched
+    again, n2 = repair_candle_scale(fixed)
+    assert n2 == 0
+
+
+def test_match_markets_old_and_new_titles():
+    assert is_match_title("Will OpTic Gaming win the OpTic Gaming vs. Team Heretics match?")
+    assert is_match_title("100 Thieves wins")                      # format since August 2026
+    assert not is_match_title("Will over 4.5 maps be played in the Fuego vs. Cupid Esports match?")
+    assert is_match_series("KXCS2GAME") and is_match_series("KXR6GAME")
+    assert not is_match_series("KXDOTA2GAME3WAY") and not is_match_series("KXCS2MAPWINNER")
+    assert not is_match_series("KXLOLGAMES")
