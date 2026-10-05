@@ -11,6 +11,9 @@ fake-money paper trading on GitHub Actions). See README.md for results.
   scrapers; their sites' terms restrict automated access.
 - State (history, params, ledger, reports) lives on the `paper-trading` branch, written only
   by the workflows (`scripts/state_branch.sh`).
+- GitHub starts this repo's scheduled runs only ~3 times a day, so `es-paper.yml` runs
+  `esalpha paper-loop`: one job does a pass every 5 minutes for up to 5.5 hours and saves state
+  as it goes; the next scheduled run waits in the concurrency queue and takes over.
 
 ## Kalshi esports facts (verified Oct 2026)
 - Match-winner series are `KX<GAME>GAME`: KXCS2GAME, KXLOLGAME, KXVALORANTGAME, KXDOTA2GAME,
