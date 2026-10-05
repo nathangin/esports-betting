@@ -1,32 +1,34 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-05 08:50 UTC. Model fitted 2026-10-04T12:10. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-05 18:18 UTC. Model fitted 2026-10-04T12:10. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 11 | 5 | 6 | 1 | $56.52 | +82.5% | +3.5c (6) | $1,056.52 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 18 | 8 | 10 | 7 | $3.57 | +3.7% | -2.6c (10) | $1,003.57 |
+| model-only | Elo win model alone (control: ignores the market) | 13 | 2 | 11 | 2 | -$20.06 | -12.9% | +2.1c (11) | $979.94 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 22 | 4 | 18 | 13 | $10.81 | +6.5% | -2.4c (18) | $1,010.81 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-12 finished matches. Lower is better; the market line is the bar to beat.
+20 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5728 | 0.1938 |
-| model | 0.6431 | 0.2244 |
-| blend | 0.5752 | 0.1933 |
+| market | 0.5467 | 0.1823 |
+| model | 0.6230 | 0.2154 |
+| blend | 0.5450 | 0.1809 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
+| cs2 | 9 | 0.5609 | 0.6217 |
 | r6 | 5 | 0.9439 | 0.8509 |
-| cs2 | 4 | 0.4450 | 0.5386 |
-| lol | 3 | 0.1246 | 0.4360 |
+| lol | 4 | 0.1268 | 0.4386 |
+| dota2 | 1 | 0.3747 | 0.5551 |
+| ow | 1 | 0.2844 | 0.3003 |
 
 ## Latest bets
 
@@ -34,31 +36,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-05 08:50 | favourite | cs2 | Natus Vincere | 9z | NO 9z | 13 | 0.71 | 0.70 | 0.71 | open | - |
-| 2026-10-05 08:50 | model-only | cs2 | 9z | Natus Vincere | YES 9z | 67 | 0.30 | 0.47 | 0.29 | open | - |
-| 2026-10-05 08:50 | favourite | cs2 | Legacy | 1WIN | YES Legacy | 17 | 0.55 | 0.55 | 0.55 | open | - |
-| 2026-10-05 08:50 | favourite | lol | JD Gaming | Shopify Rebellion | NO Shopify Rebellion | 11 | 0.87 | 0.88 | 0.88 | open | - |
-| 2026-10-05 08:50 | model-only | lol | Shopify Rebellion | JD Gaming | NO JD Gaming | 165 | 0.12 | 0.36 | 0.12 | open | - |
-| 2026-10-05 08:50 | favourite | dota2 | Yellow Submarine | CyberHero | YES Yellow Submarine | 14 | 0.69 | 0.69 | 0.69 | open | - |
-| 2026-10-05 08:50 | model-only | dota2 | CyberHero | Yellow Submarine | YES CyberHero | 65 | 0.31 | 0.43 | 0.31 | open | - |
-| 2026-10-05 08:50 | favourite | cs2 | Noir Verse | MORROW | NO MORROW | 3 | 0.74 | 0.73 | 0.73 | open | - |
-| 2026-10-05 08:50 | model-only | cs2 | MORROW | Noir Verse | YES MORROW | 11 | 0.29 | 0.38 | 0.27 | open | - |
-| 2026-10-05 08:50 | favourite | cs2 | Esport Academy Copenhagen | Lavked | YES Esport Academy Copenhagen | 14 | 0.66 | 0.66 | 0.66 | open | - |
-| 2026-10-05 08:50 | model-only | cs2 | Lavked | Esport Academy Copenhagen | YES Lavked | 59 | 0.34 | 0.47 | 0.34 | open | - |
-| 2026-10-05 08:50 | favourite | ow | ENTER FORCE.36 | Please Not Hero Ban | YES ENTER FORCE.36 | 11 | 0.86 | 0.75 | 0.75 | open | - |
-| 2026-10-05 08:50 | favourite | cs2 | STATE | Vitality Academy | YES STATE | 14 | 0.69 | 0.67 | 0.67 | open | - |
+| 2026-10-05 18:18 | favourite | lol | KaBuM! Ilha das Lendas | 9z Globant | NO 9z Globant | 11 | 0.89 | 0.88 | 0.88 | open | - |
+| 2026-10-05 18:18 | favourite | r6 | G2 Esports | Virtus.pro | YES G2 Esports | 1 | 0.68 | 0.66 | 0.66 | open | - |
+| 2026-10-05 18:18 | model-only | r6 | Virtus.pro | G2 Esports | NO G2 Esports | 6 | 0.37 | 0.47 | 0.34 | open | - |
+| 2026-10-05 18:18 | favourite | cs2 | XI Esport | struggletony | YES XI Esport | 5 | 0.80 | 0.55 | 0.55 | open | - |
+| 2026-10-05 18:18 | favourite | cs2 | EAC Extra | Linx Legacy Esport | YES EAC Extra | 18 | 0.53 | 0.51 | 0.51 | open | - |
+| 2026-10-05 18:18 | model-only | cs2 | Linx Legacy Esport | EAC Extra | NO EAC Extra | 4 | 0.50 | 0.62 | 0.49 | open | - |
+| 2026-10-05 08:50 | model-only | lol | Shopify Rebellion | JD Gaming | NO JD Gaming | 165 | 0.12 | 0.36 | 0.12 | lost | -$21.02 |
+| 2026-10-05 08:50 | model-only | cs2 | MORROW | Noir Verse | YES MORROW | 11 | 0.29 | 0.38 | 0.27 | won | $7.65 |
+| 2026-10-05 08:50 | favourite | cs2 | Noir Verse | MORROW | NO MORROW | 3 | 0.74 | 0.73 | 0.73 | lost | -$2.27 |
+| 2026-10-05 08:50 | model-only | dota2 | CyberHero | Yellow Submarine | YES CyberHero | 65 | 0.31 | 0.43 | 0.31 | lost | -$21.13 |
+| 2026-10-05 08:50 | favourite | dota2 | Yellow Submarine | CyberHero | YES Yellow Submarine | 14 | 0.69 | 0.69 | 0.69 | won | $4.13 |
+| 2026-10-05 08:50 | model-only | cs2 | 9z | Natus Vincere | YES 9z | 67 | 0.30 | 0.47 | 0.29 | lost | -$21.09 |
+| 2026-10-05 08:50 | favourite | lol | JD Gaming | Shopify Rebellion | NO Shopify Rebellion | 11 | 0.87 | 0.88 | 0.88 | won | $1.34 |
+| 2026-10-05 08:50 | favourite | cs2 | Legacy | 1WIN | YES Legacy | 17 | 0.55 | 0.55 | 0.55 | lost | -$9.65 |
+| 2026-10-05 08:50 | model-only | cs2 | Lavked | Esport Academy Copenhagen | YES Lavked | 59 | 0.34 | 0.47 | 0.34 | lost | -$20.99 |
+| 2026-10-05 08:50 | favourite | cs2 | Natus Vincere | 9z | NO 9z | 13 | 0.71 | 0.70 | 0.71 | won | $3.58 |
+| 2026-10-05 08:50 | favourite | cs2 | Esport Academy Copenhagen | Lavked | YES Esport Academy Copenhagen | 14 | 0.66 | 0.66 | 0.66 | won | $4.54 |
+| 2026-10-05 08:50 | favourite | ow | ENTER FORCE.36 | Please Not Hero Ban | YES ENTER FORCE.36 | 11 | 0.86 | 0.75 | 0.75 | won | $1.44 |
+| 2026-10-05 08:50 | favourite | cs2 | STATE | Vitality Academy | YES STATE | 14 | 0.69 | 0.67 | 0.67 | won | $4.13 |
 | 2026-10-04 20:02 | favourite | r6 | FURIA Esports | Lucky Five | YES FURIA Esports | 13 | 0.72 | 0.71 | 0.71 | lost | -$9.55 |
 | 2026-10-04 16:52 | favourite | r6 | Fluxo W7M | LOUD | YES Fluxo W7M | 15 | 0.63 | 0.63 | 0.63 | won | $5.30 |
 | 2026-10-04 16:52 | model-only | r6 | LOUD | Fluxo W7M | NO Fluxo W7M | 8 | 0.38 | 0.44 | 0.37 | lost | -$3.18 |
 | 2026-10-04 16:52 | favourite | r6 | Team Liquid | LOS | YES Team Liquid | 14 | 0.68 | 0.68 | 0.68 | won | $4.26 |
 | 2026-10-04 16:52 | model-only | r6 | LOS | Team Liquid | NO Team Liquid | 7 | 0.34 | 0.41 | 0.32 | lost | -$2.49 |
 | 2026-10-04 15:23 | favourite | lol | Movistar KOI Fénix | UCAM Esports Club | YES Movistar KOI Fénix | 12 | 0.77 | 0.76 | 0.76 | won | $2.61 |
-| 2026-10-04 15:23 | favourite | cs2 | Turma do Pagode | Bounty Hunters Esports | NO Bounty Hunters Esports | 17 | 0.54 | 0.54 | 0.53 | won | $7.52 |
-| 2026-10-04 15:23 | favourite | r6 | FaZe Clan | Black Dragons e-Sports | YES FaZe Clan | 11 | 0.85 | 0.85 | 0.85 | lost | -$9.45 |
-| 2026-10-04 15:23 | model-only | r6 | Black Dragons e-Sports | FaZe Clan | YES Black Dragons e-Sports | 125 | 0.15 | 0.30 | 0.15 | won | $105.13 |
-| 2026-10-04 15:23 | favourite | cs2 | ex-RUSTEC | ENJOY | NO ENJOY | 15 | 0.64 | 0.64 | 0.64 | won | $5.15 |
-| 2026-10-04 15:23 | favourite | cs2 | Vitality | Natus Vincere | YES Vitality | 13 | 0.73 | 0.73 | 0.73 | won | $3.33 |
-| 2026-10-04 15:23 | model-only | cs2 | Natus Vincere | Vitality | YES Natus Vincere | 70 | 0.27 | 0.34 | 0.27 | lost | -$19.87 |
 
 ## Backtest on real Kalshi prices
 
