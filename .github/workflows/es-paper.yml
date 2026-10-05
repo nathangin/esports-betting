@@ -1,17 +1,23 @@
 # Fake-money paper trading on live Kalshi esports match markets.
 #
-# Every 15 minutes: settle finished bets, pick up new results, and decide once on every match
-# starting in the next 10-70 minutes. GitHub can start scheduled runs hours late: after a gap
-# of more than 30 minutes the window widens to 3 hours, and matches that start without a
-# decision are counted as missed in state/paper/runs.jsonl. Kalshi is only read through its
-# public market-data API; nothing here can place an order and no API key is used.
-# Results: state/reports/summary.md on the paper-trading branch.
+# GitHub starts this repo's scheduled runs only a few times a day, hours apart, so each run
+# stays open for up to 5.5 hours and does a pass every 5 minutes: settle finished bets, pick
+# up new results, and decide once on every match starting in the next 10-70 minutes (3 hours
+# after a gap). State is saved as it goes. The 15-minute schedule keeps a next run queued; it
+# waits for the current one (concurrency group) and takes over when it ends.
+# Kalshi is only read through its public market-data API; nothing here can place an order
+# and no API key is used. Results: state/reports/summary.md on the paper-trading branch.
 name: Paper trading
 
 on:
   schedule:
     - cron: "4,19,34,49 * * * *"
   workflow_dispatch:
+    inputs:
+      minutes:
+        description: "How long this run keeps going, in minutes (at most 330)"
+        required: false
+        default: "330"
 
 permissions:
   contents: write
@@ -26,7 +32,7 @@ env:
 jobs:
   paper:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 350
     defaults:
       run:
         shell: bash
@@ -39,10 +45,12 @@ jobs:
           cache-dependency-path: pyproject.toml
       - run: pip install -q .
       - run: bash scripts/state_branch.sh checkout
-      - name: Paper pass
-        run: python -m esalpha paper --state state-branch/state --until "$PAPER_UNTIL"
-      - name: Report
-        run: python -m esalpha report --state state-branch/state
+      - name: Paper passes every 5 minutes
+        env:
+          MINUTES: ${{ github.event.inputs.minutes || '330' }}
+        run: |
+          python -m esalpha paper-loop --state state-branch/state --until "$PAPER_UNTIL" \
+            --minutes "$MINUTES" --every 5 --commit-cmd "bash scripts/state_branch.sh commit"
       - name: Save state
         if: always()
         run: |

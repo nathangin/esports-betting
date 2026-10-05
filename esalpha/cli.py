@@ -33,6 +33,14 @@ def main(argv=None) -> int:
     p.add_argument("--state", default="state")
     p.add_argument("--until", default=None, help="last day (YYYY-MM-DD) of the paper trial")
 
+    p = sub.add_parser("paper-loop", help="repeat paper passes for hours (one long GitHub Actions job)")
+    p.add_argument("--state", default="state")
+    p.add_argument("--until", default=None, help="last day (YYYY-MM-DD) of the paper trial")
+    p.add_argument("--minutes", type=float, default=330.0, help="how long to keep going")
+    p.add_argument("--every", type=float, default=5.0, help="minutes between passes")
+    p.add_argument("--commit-cmd", default=None, help="command that saves the state; the message is appended")
+    p.add_argument("--commit-every", type=float, default=30.0, help="save at least this often (minutes)")
+
     p = sub.add_parser("report", help="write state/reports/summary.md from the paper ledger and backtest")
     p.add_argument("--state", default="state")
 
@@ -67,6 +75,12 @@ def main(argv=None) -> int:
         from . import paper
 
         print(json.dumps(paper.run(args.state, until=args.until), indent=1, default=str))
+    elif args.cmd == "paper-loop":
+        from . import loop
+
+        out = loop.run_loop(args.state, until=args.until, minutes=args.minutes, every=args.every,
+                            commit_cmd=args.commit_cmd, commit_every=args.commit_every)
+        print(json.dumps(out))
     elif args.cmd == "report":
         from . import report
 
