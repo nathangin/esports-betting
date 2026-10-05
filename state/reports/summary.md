@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-04 23:01 UTC. Model fitted 2026-10-04T12:10. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-05 01:50 UTC. Model fitted 2026-10-04T12:10. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
