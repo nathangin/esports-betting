@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-05 01:50 UTC. Model fitted 2026-10-04T12:10. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-05 08:50 UTC. Model fitted 2026-10-04T12:10. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 6 | 0 | 6 | 1 | $56.52 | +82.5% | +3.5c (6) | $1,056.52 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 10 | 0 | 10 | 7 | $3.57 | +3.7% | -2.6c (10) | $1,003.57 |
+| model-only | Elo win model alone (control: ignores the market) | 11 | 5 | 6 | 1 | $56.52 | +82.5% | +3.5c (6) | $1,056.52 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 18 | 8 | 10 | 7 | $3.57 | +3.7% | -2.6c (10) | $1,003.57 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -34,22 +34,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-05 08:50 | favourite | cs2 | Natus Vincere | 9z | NO 9z | 13 | 0.71 | 0.70 | 0.71 | open | - |
+| 2026-10-05 08:50 | model-only | cs2 | 9z | Natus Vincere | YES 9z | 67 | 0.30 | 0.47 | 0.29 | open | - |
+| 2026-10-05 08:50 | favourite | cs2 | Legacy | 1WIN | YES Legacy | 17 | 0.55 | 0.55 | 0.55 | open | - |
+| 2026-10-05 08:50 | favourite | lol | JD Gaming | Shopify Rebellion | NO Shopify Rebellion | 11 | 0.87 | 0.88 | 0.88 | open | - |
+| 2026-10-05 08:50 | model-only | lol | Shopify Rebellion | JD Gaming | NO JD Gaming | 165 | 0.12 | 0.36 | 0.12 | open | - |
+| 2026-10-05 08:50 | favourite | dota2 | Yellow Submarine | CyberHero | YES Yellow Submarine | 14 | 0.69 | 0.69 | 0.69 | open | - |
+| 2026-10-05 08:50 | model-only | dota2 | CyberHero | Yellow Submarine | YES CyberHero | 65 | 0.31 | 0.43 | 0.31 | open | - |
+| 2026-10-05 08:50 | favourite | cs2 | Noir Verse | MORROW | NO MORROW | 3 | 0.74 | 0.73 | 0.73 | open | - |
+| 2026-10-05 08:50 | model-only | cs2 | MORROW | Noir Verse | YES MORROW | 11 | 0.29 | 0.38 | 0.27 | open | - |
+| 2026-10-05 08:50 | favourite | cs2 | Esport Academy Copenhagen | Lavked | YES Esport Academy Copenhagen | 14 | 0.66 | 0.66 | 0.66 | open | - |
+| 2026-10-05 08:50 | model-only | cs2 | Lavked | Esport Academy Copenhagen | YES Lavked | 59 | 0.34 | 0.47 | 0.34 | open | - |
+| 2026-10-05 08:50 | favourite | ow | ENTER FORCE.36 | Please Not Hero Ban | YES ENTER FORCE.36 | 11 | 0.86 | 0.75 | 0.75 | open | - |
+| 2026-10-05 08:50 | favourite | cs2 | STATE | Vitality Academy | YES STATE | 14 | 0.69 | 0.67 | 0.67 | open | - |
 | 2026-10-04 20:02 | favourite | r6 | FURIA Esports | Lucky Five | YES FURIA Esports | 13 | 0.72 | 0.71 | 0.71 | lost | -$9.55 |
-| 2026-10-04 16:52 | model-only | r6 | LOS | Team Liquid | NO Team Liquid | 7 | 0.34 | 0.41 | 0.32 | lost | -$2.49 |
-| 2026-10-04 16:52 | favourite | r6 | Team Liquid | LOS | YES Team Liquid | 14 | 0.68 | 0.68 | 0.68 | won | $4.26 |
-| 2026-10-04 16:52 | model-only | r6 | LOUD | Fluxo W7M | NO Fluxo W7M | 8 | 0.38 | 0.44 | 0.37 | lost | -$3.18 |
 | 2026-10-04 16:52 | favourite | r6 | Fluxo W7M | LOUD | YES Fluxo W7M | 15 | 0.63 | 0.63 | 0.63 | won | $5.30 |
-| 2026-10-04 15:23 | model-only | lol | UCAM Esports Club | Movistar KOI Fénix | NO Movistar KOI Fénix | 13 | 0.24 | 0.39 | 0.24 | lost | -$3.29 |
+| 2026-10-04 16:52 | model-only | r6 | LOUD | Fluxo W7M | NO Fluxo W7M | 8 | 0.38 | 0.44 | 0.37 | lost | -$3.18 |
+| 2026-10-04 16:52 | favourite | r6 | Team Liquid | LOS | YES Team Liquid | 14 | 0.68 | 0.68 | 0.68 | won | $4.26 |
+| 2026-10-04 16:52 | model-only | r6 | LOS | Team Liquid | NO Team Liquid | 7 | 0.34 | 0.41 | 0.32 | lost | -$2.49 |
 | 2026-10-04 15:23 | favourite | lol | Movistar KOI Fénix | UCAM Esports Club | YES Movistar KOI Fénix | 12 | 0.77 | 0.76 | 0.76 | won | $2.61 |
-| 2026-10-04 15:23 | favourite | r6 | INTZ | Imperial Esports | NO Imperial Esports | 18 | 0.53 | 0.52 | 0.52 | lost | -$9.86 |
-| 2026-10-04 15:23 | model-only | cs2 | M80 | BetBoom Team | YES M80 | 59 | 0.32 | 0.43 | 0.32 | lost | -$19.78 |
-| 2026-10-04 15:23 | favourite | cs2 | BetBoom Team | M80 | YES BetBoom Team | 14 | 0.68 | 0.68 | 0.68 | won | $4.26 |
-| 2026-10-04 15:23 | model-only | cs2 | Natus Vincere | Vitality | YES Natus Vincere | 70 | 0.27 | 0.34 | 0.27 | lost | -$19.87 |
-| 2026-10-04 15:23 | favourite | cs2 | Vitality | Natus Vincere | YES Vitality | 13 | 0.73 | 0.73 | 0.73 | won | $3.33 |
-| 2026-10-04 15:23 | favourite | cs2 | ex-RUSTEC | ENJOY | NO ENJOY | 15 | 0.64 | 0.64 | 0.64 | won | $5.15 |
-| 2026-10-04 15:23 | model-only | r6 | Black Dragons e-Sports | FaZe Clan | YES Black Dragons e-Sports | 125 | 0.15 | 0.30 | 0.15 | won | $105.13 |
-| 2026-10-04 15:23 | favourite | r6 | FaZe Clan | Black Dragons e-Sports | YES FaZe Clan | 11 | 0.85 | 0.85 | 0.85 | lost | -$9.45 |
 | 2026-10-04 15:23 | favourite | cs2 | Turma do Pagode | Bounty Hunters Esports | NO Bounty Hunters Esports | 17 | 0.54 | 0.54 | 0.53 | won | $7.52 |
+| 2026-10-04 15:23 | favourite | r6 | FaZe Clan | Black Dragons e-Sports | YES FaZe Clan | 11 | 0.85 | 0.85 | 0.85 | lost | -$9.45 |
+| 2026-10-04 15:23 | model-only | r6 | Black Dragons e-Sports | FaZe Clan | YES Black Dragons e-Sports | 125 | 0.15 | 0.30 | 0.15 | won | $105.13 |
+| 2026-10-04 15:23 | favourite | cs2 | ex-RUSTEC | ENJOY | NO ENJOY | 15 | 0.64 | 0.64 | 0.64 | won | $5.15 |
+| 2026-10-04 15:23 | favourite | cs2 | Vitality | Natus Vincere | YES Vitality | 13 | 0.73 | 0.73 | 0.73 | won | $3.33 |
+| 2026-10-04 15:23 | model-only | cs2 | Natus Vincere | Vitality | YES Natus Vincere | 70 | 0.27 | 0.34 | 0.27 | lost | -$19.87 |
 
 ## Backtest on real Kalshi prices
 
