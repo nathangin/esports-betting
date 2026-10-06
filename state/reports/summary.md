@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 06:52 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 07:02 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-06 06:52 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 15 | 3 | 12 | 2 | -$22.38 | -14.1% | -0.7c (13) | $977.62 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 28 | 8 | 20 | 15 | $12.24 | +6.9% | -1.7c (25) | $1,012.24 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 28 | 7 | 21 | 16 | $13.10 | +7.4% | -1.7c (25) | $1,013.10 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -43,7 +43,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 06:52 | model-only | cs2 | MORROW | Just_Players | NO Just_Players | 3 | 0.29 | 0.45 | 0.28 | open | - |
 | 2026-10-06 05:52 | favourite | lol | OKSavingsBank BRION | Natus Vincere | YES OKSavingsBank BRION | 12 | 0.80 | 0.80 | 0.80 | open | - |
 | 2026-10-06 04:51 | favourite | dota2 | Xipto Esports | Direborn | NO Direborn | 3 | 0.88 | 0.86 | 0.86 | open | - |
-| 2026-10-06 01:51 | favourite | dota2 | InterActive Philippines | Yangon Galacticos | NO Yangon Galacticos | 2 | 0.55 | 0.54 | 0.54 | open | - |
+| 2026-10-06 01:51 | favourite | dota2 | InterActive Philippines | Yangon Galacticos | NO Yangon Galacticos | 2 | 0.55 | 0.54 | 0.54 | won | $0.86 |
 | 2026-10-05 18:18 | favourite | cs2 | XI Esport | struggletony | YES XI Esport | 5 | 0.80 | 0.55 | 0.55 | open | - |
 | 2026-10-05 18:18 | model-only | cs2 | Linx Legacy Esport | EAC Extra | NO EAC Extra | 4 | 0.50 | 0.62 | 0.49 | open | - |
 | 2026-10-05 18:18 | favourite | cs2 | EAC Extra | Linx Legacy Esport | YES EAC Extra | 18 | 0.53 | 0.51 | 0.51 | open | - |
