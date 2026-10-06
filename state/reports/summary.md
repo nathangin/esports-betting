@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 18:43 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 18:48 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 34 | 10 | 24 | 6 | $71.91 | +25.9% | -0.7c (33) | $1,071.91 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 54 | 11 | 43 | 30 | -$37.75 | -10.7% | -1.1c (54) | $962.25 |
+| model-only | Elo win model alone (control: ignores the market) | 34 | 10 | 24 | 6 | $71.91 | +25.9% | -0.7c (34) | $1,071.91 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 54 | 10 | 44 | 30 | -$47.40 | -13.1% | -1.1c (54) | $952.60 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -56,7 +56,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 14:53 | favourite | lol | TLN Pirates | Bushido Wildcats | YES TLN Pirates | 11 | 0.84 | 0.84 | 0.84 | won | $1.65 |
 | 2026-10-06 14:53 | favourite | lol | Galions | Berlin International Gaming | NO Berlin International Gaming | 12 | 0.80 | 0.80 | 0.80 | won | $2.26 |
 | 2026-10-06 14:53 | model-only | lol | Berlin International Gaming | Galions | YES Berlin International Gaming | 94 | 0.21 | 0.45 | 0.20 | lost | -$20.84 |
-| 2026-10-06 13:23 | favourite | cs2 | FURIA | Aurora Gaming | NO Aurora Gaming | 17 | 0.55 | 0.55 | 0.54 | open | - |
+| 2026-10-06 13:23 | favourite | cs2 | FURIA | Aurora Gaming | NO Aurora Gaming | 17 | 0.55 | 0.55 | 0.54 | lost | -$9.65 |
 | 2026-10-06 13:23 | favourite | cs2 | BetBoom Team | 9z | YES BetBoom Team | 16 | 0.57 | 0.57 | 0.57 | lost | -$9.40 |
 | 2026-10-06 12:53 | favourite | dota2 | Yellow Submarine | Team Synapse | YES Yellow Submarine | 17 | 0.57 | 0.56 | 0.56 | lost | -$9.99 |
 | 2026-10-06 12:53 | model-only | dota2 | Team Synapse | Yellow Submarine | NO Yellow Submarine | 38 | 0.44 | 0.62 | 0.43 | won | $20.62 |
