@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 10:53 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 11:03 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 21 | 9 | 12 | 2 | -$22.38 | -14.1% | -0.3c (19) | $977.62 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 39 | 16 | 23 | 18 | $15.69 | +8.2% | -1.2c (36) | $1,015.69 |
+| model-only | Elo win model alone (control: ignores the market) | 21 | 8 | 13 | 2 | -$23.30 | -14.6% | -0.3c (19) | $976.70 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 39 | 15 | 24 | 19 | $16.42 | +8.5% | -1.3c (36) | $1,016.42 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -56,8 +56,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 06:52 | favourite | dota2 | HULIGANI | CyberHero | NO CyberHero | 18 | 0.53 | 0.53 | 0.53 | open | - |
 | 2026-10-06 06:52 | favourite | cs2 | EAC Extra | TheChampionGG | NO TheChampionGG | 13 | 0.71 | 0.69 | 0.69 | open | - |
 | 2026-10-06 06:52 | model-only | cs2 | TheChampionGG | EAC Extra | YES TheChampionGG | 1 | 0.32 | 0.51 | 0.31 | open | - |
-| 2026-10-06 06:52 | favourite | cs2 | Just_Players | MORROW | YES Just_Players | 3 | 0.74 | 0.72 | 0.72 | open | - |
-| 2026-10-06 06:52 | model-only | cs2 | MORROW | Just_Players | NO Just_Players | 3 | 0.29 | 0.45 | 0.28 | open | - |
+| 2026-10-06 06:52 | favourite | cs2 | Just_Players | MORROW | YES Just_Players | 3 | 0.74 | 0.72 | 0.72 | won | $0.73 |
+| 2026-10-06 06:52 | model-only | cs2 | MORROW | Just_Players | NO Just_Players | 3 | 0.29 | 0.45 | 0.28 | lost | -$0.92 |
 | 2026-10-06 05:52 | favourite | lol | OKSavingsBank BRION | Natus Vincere | YES OKSavingsBank BRION | 12 | 0.80 | 0.80 | 0.80 | won | $2.26 |
 | 2026-10-06 04:51 | favourite | dota2 | Xipto Esports | Direborn | NO Direborn | 3 | 0.88 | 0.86 | 0.86 | won | $0.33 |
 | 2026-10-06 01:51 | favourite | dota2 | InterActive Philippines | Yangon Galacticos | NO Yangon Galacticos | 2 | 0.55 | 0.54 | 0.54 | won | $0.86 |
