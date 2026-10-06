@@ -1,0 +1,30 @@
+2026-10-06 20:51:24,416 INFO esalpha.poly: polymarket cs2: 2000 match markets
+2026-10-06 20:51:33,470 INFO esalpha.poly: polymarket lol: 1080 match markets
+2026-10-06 20:51:37,263 INFO esalpha.poly: polymarket valorant: 500 match markets
+2026-10-06 20:51:41,515 INFO esalpha.poly: polymarket dota2: 546 match markets
+2026-10-06 20:51:43,488 INFO esalpha.poly: polymarket r6: 500 match markets
+2026-10-06 20:51:44,342 INFO esalpha.poly: polymarket cod: 200 match markets
+{
+ "started": "2026-10-06T20:50:54.974503+00:00",
+ "since": "2026-08-01",
+ "poly_matches": {
+  "rows": 4051,
+  "by_game": {
+   "cod": 28,
+   "cs2": 2000,
+   "dota2": 455,
+   "lol": 917,
+   "r6": 311,
+   "valorant": 340
+  }
+ },
+ "poly_prices": {
+  "rows": 700551,
+  "markets": 4006,
+  "fetched": 4051,
+  "empty": 45
+ },
+ "finished": "2026-10-06T21:06:17.003816+00:00",
+ "http_calls": 4100
+}
+0 errors
