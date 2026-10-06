@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 15:43 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 15:53 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 26 | 6 | 20 | 4 | $51.00 | +23.2% | -0.5c (24) | $1,051.00 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 48 | 11 | 37 | 27 | -$16.71 | -5.7% | -1.0c (44) | $983.29 |
+| model-only | Elo win model alone (control: ignores the market) | 30 | 10 | 20 | 4 | $51.00 | +23.2% | -0.6c (26) | $1,051.00 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 53 | 16 | 37 | 27 | -$16.71 | -5.7% | -1.0c (48) | $983.29 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -36,31 +36,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-06 14:53 | favourite | r6 | Geekay Esports | Shifters | YES Geekay Esports | 1 | 0.66 | 0.63 | 0.63 | open | - |
-| 2026-10-06 14:53 | model-only | r6 | Shifters | Geekay Esports | NO Geekay Esports | 24 | 0.39 | 0.44 | 0.37 | open | - |
-| 2026-10-06 14:53 | favourite | lol | Movistar KOI Fénix | Frites Esports Club | NO Frites Esports Club | 11 | 0.89 | 0.89 | 0.89 | open | - |
+| 2026-10-06 15:53 | favourite | dota2 | MOUZ | LEGION | NO LEGION | 17 | 0.53 | 0.52 | 0.52 | open | - |
+| 2026-10-06 15:53 | model-only | dota2 | LEGION | MOUZ | YES LEGION | 42 | 0.48 | 0.62 | 0.48 | open | - |
+| 2026-10-06 15:53 | favourite | cs2 | Team Falcons | Natus Vincere | YES Team Falcons | 16 | 0.58 | 0.57 | 0.57 | open | - |
+| 2026-10-06 15:53 | favourite | cs2 | MASONIC | MASQ | NO MASQ | 14 | 0.68 | 0.67 | 0.67 | open | - |
+| 2026-10-06 15:53 | model-only | cs2 | MASQ | MASONIC | NO MASONIC | 2 | 0.33 | 0.49 | 0.33 | open | - |
+| 2026-10-06 15:53 | favourite | cs2 | Legacy | M80 | YES Legacy | 17 | 0.55 | 0.55 | 0.55 | open | - |
+| 2026-10-06 15:53 | model-only | cs2 | Legacy | M80 | YES Legacy | 37 | 0.55 | 0.63 | 0.55 | open | - |
+| 2026-10-06 15:53 | favourite | cs2 | Lavked | WRAITH PCIFIC | YES Lavked | 16 | 0.57 | 0.57 | 0.57 | open | - |
+| 2026-10-06 15:53 | model-only | cs2 | WRAITH PCIFIC | Lavked | YES WRAITH PCIFIC | 47 | 0.43 | 0.58 | 0.43 | open | - |
 | 2026-10-06 14:53 | favourite | lol | TLN Pirates | Bushido Wildcats | YES TLN Pirates | 11 | 0.84 | 0.84 | 0.84 | open | - |
-| 2026-10-06 14:53 | favourite | lol | Galions | Berlin International Gaming | NO Berlin International Gaming | 12 | 0.80 | 0.80 | 0.80 | open | - |
 | 2026-10-06 14:53 | model-only | lol | Berlin International Gaming | Galions | YES Berlin International Gaming | 94 | 0.21 | 0.45 | 0.20 | open | - |
+| 2026-10-06 14:53 | favourite | lol | Galions | Berlin International Gaming | NO Berlin International Gaming | 12 | 0.80 | 0.80 | 0.80 | open | - |
+| 2026-10-06 14:53 | favourite | r6 | Geekay Esports | Shifters | YES Geekay Esports | 1 | 0.66 | 0.63 | 0.63 | open | - |
+| 2026-10-06 14:53 | favourite | lol | Movistar KOI Fénix | Frites Esports Club | NO Frites Esports Club | 11 | 0.89 | 0.89 | 0.89 | open | - |
+| 2026-10-06 14:53 | model-only | r6 | Shifters | Geekay Esports | NO Geekay Esports | 24 | 0.39 | 0.44 | 0.37 | open | - |
 | 2026-10-06 13:23 | favourite | cs2 | BetBoom Team | 9z | YES BetBoom Team | 16 | 0.57 | 0.57 | 0.57 | open | - |
 | 2026-10-06 13:23 | favourite | cs2 | FURIA | Aurora Gaming | NO Aurora Gaming | 17 | 0.55 | 0.55 | 0.54 | open | - |
+| 2026-10-06 12:53 | model-only | cs2 | mellren | Gothic | NO Gothic | 42 | 0.44 | 0.61 | 0.44 | open | - |
+| 2026-10-06 12:53 | model-only | cs2 | ex-RUSTEC | Butterfly | NO Butterfly | 41 | 0.45 | 0.54 | 0.44 | open | - |
+| 2026-10-06 12:53 | favourite | cs2 | Butterfly | ex-RUSTEC | YES Butterfly | 17 | 0.56 | 0.56 | 0.56 | open | - |
+| 2026-10-06 12:53 | favourite | cs2 | Gothic | mellren | YES Gothic | 4 | 0.57 | 0.56 | 0.56 | open | - |
 | 2026-10-06 12:53 | favourite | dota2 | Yellow Submarine | Team Synapse | YES Yellow Submarine | 17 | 0.57 | 0.56 | 0.56 | open | - |
 | 2026-10-06 12:53 | model-only | dota2 | Team Synapse | Yellow Submarine | NO Yellow Submarine | 38 | 0.44 | 0.62 | 0.43 | open | - |
-| 2026-10-06 12:53 | favourite | cs2 | Gothic | mellren | YES Gothic | 4 | 0.57 | 0.56 | 0.56 | open | - |
-| 2026-10-06 12:53 | model-only | cs2 | mellren | Gothic | NO Gothic | 42 | 0.44 | 0.61 | 0.44 | open | - |
-| 2026-10-06 12:53 | favourite | cs2 | Butterfly | ex-RUSTEC | YES Butterfly | 17 | 0.56 | 0.56 | 0.56 | open | - |
-| 2026-10-06 12:53 | model-only | cs2 | ex-RUSTEC | Butterfly | NO Butterfly | 41 | 0.45 | 0.54 | 0.44 | open | - |
-| 2026-10-06 10:53 | favourite | cs2 | G2 | PARIVISION | YES G2 | 15 | 0.62 | 0.61 | 0.61 | lost | -$9.55 |
-| 2026-10-06 10:53 | model-only | cs2 | 1WIN | Spirit | YES 1WIN | 131 | 0.14 | 0.37 | 0.14 | won | $111.55 |
-| 2026-10-06 10:53 | favourite | cs2 | Spirit | 1WIN | NO 1WIN | 11 | 0.87 | 0.86 | 0.86 | lost | -$9.66 |
-| 2026-10-06 10:53 | model-only | ow | Lazuli | MURASH GAMING | YES Lazuli | 1 | 0.24 | 0.35 | 0.23 | lost | -$0.26 |
 | 2026-10-06 10:53 | favourite | ow | MURASH GAMING | Lazuli | NO Lazuli | 4 | 0.79 | 0.77 | 0.77 | won | $0.79 |
-| 2026-10-06 09:52 | favourite | cs2 | Noir Verse | maybe | NO maybe | 12 | 0.78 | 0.78 | 0.78 | lost | -$9.51 |
-| 2026-10-06 09:52 | favourite | cs2 | ex-Zero Tenacity | MASONIC | YES ex-Zero Tenacity | 11 | 0.85 | 0.85 | 0.85 | won | $1.55 |
-| 2026-10-06 09:52 | model-only | cs2 | maybe | Noir Verse | NO Noir Verse | 4 | 0.22 | 0.43 | 0.22 | won | $3.07 |
-| 2026-10-06 09:52 | model-only | cs2 | MASONIC | ex-Zero Tenacity | YES MASONIC | 123 | 0.15 | 0.34 | 0.15 | lost | -$19.55 |
-| 2026-10-06 09:52 | model-only | dota2 | Nemiga Gaming | Blasterbl | NO Blasterbl | 64 | 0.29 | 0.40 | 0.28 | lost | -$19.49 |
-| 2026-10-06 09:52 | favourite | dota2 | Blasterbl | Nemiga Gaming | YES Blasterbl | 13 | 0.72 | 0.72 | 0.72 | won | $3.45 |
+| 2026-10-06 10:53 | model-only | ow | Lazuli | MURASH GAMING | YES Lazuli | 1 | 0.24 | 0.35 | 0.23 | lost | -$0.26 |
 
 ## Backtest on real Kalshi prices
 
