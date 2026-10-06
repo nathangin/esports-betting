@@ -1,26 +1,26 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 12:53 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 13:03 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 24 | 10 | 14 | 2 | -$23.98 | -15.0% | -0.3c (21) | $976.02 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 42 | 13 | 29 | 22 | $2.46 | +1.1% | -1.1c (39) | $1,002.46 |
+| model-only | Elo win model alone (control: ignores the market) | 24 | 9 | 15 | 2 | -$24.24 | -15.1% | -0.3c (21) | $975.76 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 42 | 11 | 31 | 24 | $3.43 | +1.4% | -1.1c (39) | $1,003.43 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-34 finished matches. Lower is better; the market line is the bar to beat.
+35 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.4536 | 0.1436 |
-| model | 0.6367 | 0.2220 |
-| blend | 0.4436 | 0.1403 |
+| market | 0.4481 | 0.1410 |
+| model | 0.6309 | 0.2192 |
+| blend | 0.4376 | 0.1375 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
@@ -28,7 +28,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | lol | 9 | 0.2057 | 0.6560 |
 | r6 | 6 | 0.8571 | 0.8141 |
 | dota2 | 4 | 0.4724 | 0.5794 |
-| ow | 3 | 0.1925 | 0.4851 |
+| ow | 4 | 0.2097 | 0.4720 |
 
 ## Latest bets
 
@@ -42,8 +42,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 12:53 | model-only | cs2 | mellren | Gothic | NO Gothic | 42 | 0.44 | 0.61 | 0.44 | open | - |
 | 2026-10-06 12:53 | favourite | cs2 | Butterfly | ex-RUSTEC | YES Butterfly | 17 | 0.56 | 0.56 | 0.56 | open | - |
 | 2026-10-06 12:53 | model-only | cs2 | ex-RUSTEC | Butterfly | NO Butterfly | 41 | 0.45 | 0.54 | 0.44 | open | - |
-| 2026-10-06 10:53 | favourite | ow | MURASH GAMING | Lazuli | NO Lazuli | 4 | 0.79 | 0.77 | 0.77 | open | - |
-| 2026-10-06 10:53 | model-only | ow | Lazuli | MURASH GAMING | YES Lazuli | 1 | 0.24 | 0.35 | 0.23 | open | - |
+| 2026-10-06 10:53 | favourite | ow | MURASH GAMING | Lazuli | NO Lazuli | 4 | 0.79 | 0.77 | 0.77 | won | $0.79 |
+| 2026-10-06 10:53 | model-only | ow | Lazuli | MURASH GAMING | YES Lazuli | 1 | 0.24 | 0.35 | 0.23 | lost | -$0.26 |
 | 2026-10-06 10:53 | favourite | cs2 | G2 | PARIVISION | YES G2 | 15 | 0.62 | 0.61 | 0.61 | open | - |
 | 2026-10-06 10:53 | favourite | cs2 | Spirit | 1WIN | NO 1WIN | 11 | 0.87 | 0.86 | 0.86 | open | - |
 | 2026-10-06 10:53 | model-only | cs2 | 1WIN | Spirit | YES 1WIN | 131 | 0.14 | 0.37 | 0.14 | open | - |
@@ -57,7 +57,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 09:22 | favourite | cs2 | VP.Future 3 | 3DMAX Academy | YES VP.Future 3 | 14 | 0.68 | 0.68 | 0.68 | won | $4.26 |
 | 2026-10-06 09:22 | model-only | cs2 | 3DMAX Academy | VP.Future 3 | YES 3DMAX Academy | 2 | 0.32 | 0.46 | 0.32 | lost | -$0.68 |
 | 2026-10-06 09:22 | favourite | cs2 | Teletubisie | THE UNIT | NO THE UNIT | 1 | 0.82 | 0.82 | 0.82 | won | $0.16 |
-| 2026-10-06 08:27 | favourite | dota2 | Yangon Galacticos | Cloud Dawning | YES Yangon Galacticos | 1 | 0.80 | 0.51 | 0.51 | open | - |
+| 2026-10-06 08:27 | favourite | dota2 | Yangon Galacticos | Cloud Dawning | YES Yangon Galacticos | 1 | 0.80 | 0.51 | 0.51 | won | $0.18 |
 | 2026-10-06 07:52 | favourite | lol | JD Gaming | LGD Gaming | YES JD Gaming | 18 | 0.53 | 0.53 | 0.53 | lost | -$9.86 |
 | 2026-10-06 06:52 | favourite | dota2 | HULIGANI | CyberHero | NO CyberHero | 18 | 0.53 | 0.53 | 0.53 | lost | -$9.86 |
 | 2026-10-06 06:52 | favourite | cs2 | EAC Extra | TheChampionGG | NO TheChampionGG | 13 | 0.71 | 0.69 | 0.69 | open | - |
