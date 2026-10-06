@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 13:13 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 13:23 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-06 13:13 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 24 | 8 | 16 | 3 | -$21.17 | -13.1% | -0.3c (21) | $978.83 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 42 | 10 | 32 | 24 | -$6.08 | -2.5% | -1.1c (39) | $993.92 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 44 | 12 | 32 | 24 | -$6.08 | -2.5% | -1.1c (39) | $993.92 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -36,12 +36,14 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-06 12:53 | favourite | dota2 | Yellow Submarine | Team Synapse | YES Yellow Submarine | 17 | 0.57 | 0.56 | 0.56 | open | - |
-| 2026-10-06 12:53 | model-only | dota2 | Team Synapse | Yellow Submarine | NO Yellow Submarine | 38 | 0.44 | 0.62 | 0.43 | open | - |
+| 2026-10-06 13:23 | favourite | cs2 | BetBoom Team | 9z | YES BetBoom Team | 16 | 0.57 | 0.57 | 0.57 | open | - |
+| 2026-10-06 13:23 | favourite | cs2 | FURIA | Aurora Gaming | NO Aurora Gaming | 17 | 0.55 | 0.55 | 0.54 | open | - |
 | 2026-10-06 12:53 | favourite | cs2 | Gothic | mellren | YES Gothic | 4 | 0.57 | 0.56 | 0.56 | open | - |
-| 2026-10-06 12:53 | model-only | cs2 | mellren | Gothic | NO Gothic | 42 | 0.44 | 0.61 | 0.44 | open | - |
 | 2026-10-06 12:53 | favourite | cs2 | Butterfly | ex-RUSTEC | YES Butterfly | 17 | 0.56 | 0.56 | 0.56 | open | - |
+| 2026-10-06 12:53 | model-only | cs2 | mellren | Gothic | NO Gothic | 42 | 0.44 | 0.61 | 0.44 | open | - |
 | 2026-10-06 12:53 | model-only | cs2 | ex-RUSTEC | Butterfly | NO Butterfly | 41 | 0.45 | 0.54 | 0.44 | open | - |
+| 2026-10-06 12:53 | model-only | dota2 | Team Synapse | Yellow Submarine | NO Yellow Submarine | 38 | 0.44 | 0.62 | 0.43 | open | - |
+| 2026-10-06 12:53 | favourite | dota2 | Yellow Submarine | Team Synapse | YES Yellow Submarine | 17 | 0.57 | 0.56 | 0.56 | open | - |
 | 2026-10-06 10:53 | favourite | ow | MURASH GAMING | Lazuli | NO Lazuli | 4 | 0.79 | 0.77 | 0.77 | won | $0.79 |
 | 2026-10-06 10:53 | model-only | ow | Lazuli | MURASH GAMING | YES Lazuli | 1 | 0.24 | 0.35 | 0.23 | lost | -$0.26 |
 | 2026-10-06 10:53 | favourite | cs2 | G2 | PARIVISION | YES G2 | 15 | 0.62 | 0.61 | 0.61 | open | - |
@@ -59,8 +61,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 09:22 | favourite | cs2 | Teletubisie | THE UNIT | NO THE UNIT | 1 | 0.82 | 0.82 | 0.82 | won | $0.16 |
 | 2026-10-06 08:27 | favourite | dota2 | Yangon Galacticos | Cloud Dawning | YES Yangon Galacticos | 1 | 0.80 | 0.51 | 0.51 | won | $0.18 |
 | 2026-10-06 07:52 | favourite | lol | JD Gaming | LGD Gaming | YES JD Gaming | 18 | 0.53 | 0.53 | 0.53 | lost | -$9.86 |
-| 2026-10-06 06:52 | favourite | dota2 | HULIGANI | CyberHero | NO CyberHero | 18 | 0.53 | 0.53 | 0.53 | lost | -$9.86 |
-| 2026-10-06 06:52 | favourite | cs2 | EAC Extra | TheChampionGG | NO TheChampionGG | 13 | 0.71 | 0.69 | 0.69 | open | - |
 
 ## Backtest on real Kalshi prices
 
