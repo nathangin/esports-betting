@@ -1,0 +1,33 @@
+{
+ "started": "2026-10-06T20:43:42.797985+00:00",
+ "errors": [],
+ "args": {
+  "days": 90
+ },
+ "side_markets": {
+  "rows": 53290,
+  "by_series": {
+   "KXCODMAP": 1038,
+   "KXCODTOTALMAPS": 294,
+   "KXCS2MAP": 22046,
+   "KXCS2TOTALMAPS": 5507,
+   "KXCSGOMAP": 12,
+   "KXDOTA2MAP": 4044,
+   "KXDOTA2TOTALMAPS": 403,
+   "KXLOLMAP": 10006,
+   "KXLOLTOTALMAPS": 2675,
+   "KXR6MAP": 670,
+   "KXVALORANTMAP": 6302,
+   "KXVALORANTTOTALMAPS": 293
+  }
+ },
+ "side_candles": {
+  "rows": 271257,
+  "events": 6792,
+  "fetched_now": 8982,
+  "empty": 2190,
+  "todo": 8982
+ },
+ "finished": "2026-10-06T21:23:15.766412+00:00",
+ "http_calls": 9076
+}

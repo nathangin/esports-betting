@@ -1,0 +1,77 @@
+2026-10-06 20:43:44,107 INFO esalpha.sides: KXVALORANTMAP: 6508 side markets
+2026-10-06 20:43:46,160 INFO esalpha.sides: KXLOLMAP: 10486 side markets
+2026-10-06 20:43:47,192 INFO esalpha.sides: KXCS2TOTALMAPS: 5715 side markets
+2026-10-06 20:43:47,418 INFO esalpha.sides: KXRLSPREAD: 0 side markets
+2026-10-06 20:43:47,656 INFO esalpha.sides: KXDOTA2SPREAD: 0 side markets
+2026-10-06 20:43:56,158 INFO esalpha.sides: KXCS2MAP: 22874 side markets
+2026-10-06 20:43:56,361 INFO esalpha.sides: KXCS2SPREAD: 0 side markets
+2026-10-06 20:43:56,640 INFO esalpha.sides: KXLOLSPREAD: 0 side markets
+2026-10-06 20:43:56,842 INFO esalpha.sides: KXR6SPREAD: 0 side markets
+2026-10-06 20:43:57,083 INFO esalpha.sides: KXRLTOTALMAPS: 0 side markets
+2026-10-06 20:43:57,325 INFO esalpha.sides: KXCSGOMAP: 12 side markets
+2026-10-06 20:43:57,564 INFO esalpha.sides: KXCODSPREAD: 0 side markets
+2026-10-06 20:43:57,803 INFO esalpha.sides: KXOWTOTALMAPS: 0 side markets
+2026-10-06 20:43:58,044 INFO esalpha.sides: KXR6TOTALMAPS: 0 side markets
+2026-10-06 20:43:58,311 INFO esalpha.sides: KXR6MAP: 694 side markets
+2026-10-06 20:43:58,553 INFO esalpha.sides: KXDOTA2TOTALMAPS: 403 side markets
+2026-10-06 20:44:01,869 INFO esalpha.sides: KXVALORANTSPREAD: 0 side markets
+2026-10-06 20:44:02,108 INFO esalpha.sides: KXVALORANTTOTALMAPS: 293 side markets
+2026-10-06 20:44:02,350 INFO esalpha.sides: KXOWSPREAD: 0 side markets
+2026-10-06 20:44:03,307 INFO esalpha.sides: KXDOTA2MAP: 4280 side markets
+2026-10-06 20:44:03,557 INFO esalpha.sides: KXCODMAP: 1150 side markets
+2026-10-06 20:44:03,785 INFO esalpha.sides: KXRLMAP: 0 side markets
+2026-10-06 20:44:04,033 INFO esalpha.sides: KXCODTOTALMAPS: 326 side markets
+2026-10-06 20:44:04,580 INFO esalpha.sides: KXLOLTOTALMAPS: 2794 side markets
+2026-10-06 20:45:23,090 INFO esalpha.sides: side candles: 300 events
+2026-10-06 20:46:43,607 INFO esalpha.sides: side candles: 600 events
+2026-10-06 20:48:01,011 INFO esalpha.sides: side candles: 900 events
+2026-10-06 20:49:18,466 INFO esalpha.sides: side candles: 1200 events
+2026-10-06 20:53:16,267 INFO esalpha.sides: side candles: 2100 events
+2026-10-06 20:54:33,895 INFO esalpha.sides: side candles: 2400 events
+2026-10-06 20:55:51,261 INFO esalpha.sides: side candles: 2700 events
+2026-10-06 20:57:11,669 INFO esalpha.sides: side candles: 3000 events
+2026-10-06 20:58:29,079 INFO esalpha.sides: side candles: 3300 events
+2026-10-06 20:59:46,721 INFO esalpha.sides: side candles: 3600 events
+2026-10-06 21:01:07,212 INFO esalpha.sides: side candles: 3900 events
+2026-10-06 21:02:25,033 INFO esalpha.sides: side candles: 4200 events
+2026-10-06 21:03:42,735 INFO esalpha.sides: side candles: 4500 events
+2026-10-06 21:05:01,187 INFO esalpha.sides: side candles: 4800 events
+2026-10-06 21:06:19,125 INFO esalpha.sides: side candles: 5100 events
+2026-10-06 21:08:57,134 INFO esalpha.sides: side candles: 5700 events
+2026-10-06 21:10:15,343 INFO esalpha.sides: side candles: 6000 events
+2026-10-06 21:11:33,535 INFO esalpha.sides: side candles: 6300 events
+2026-10-06 21:12:51,967 INFO esalpha.sides: side candles: 6600 events
+2026-10-06 21:15:28,352 INFO esalpha.sides: side candles: 7200 events
+{
+ "started": "2026-10-06T20:43:42.797985+00:00",
+ "args": {
+  "days": 90
+ },
+ "side_markets": {
+  "rows": 53290,
+  "by_series": {
+   "KXCODMAP": 1038,
+   "KXCODTOTALMAPS": 294,
+   "KXCS2MAP": 22046,
+   "KXCS2TOTALMAPS": 5507,
+   "KXCSGOMAP": 12,
+   "KXDOTA2MAP": 4044,
+   "KXDOTA2TOTALMAPS": 403,
+   "KXLOLMAP": 10006,
+   "KXLOLTOTALMAPS": 2675,
+   "KXR6MAP": 670,
+   "KXVALORANTMAP": 6302,
+   "KXVALORANTTOTALMAPS": 293
+  }
+ },
+ "side_candles": {
+  "rows": 271257,
+  "events": 6792,
+  "fetched_now": 8982,
+  "empty": 2190,
+  "todo": 8982
+ },
+ "finished": "2026-10-06T21:23:15.766412+00:00",
+ "http_calls": 9076
+}
+0 errors
