@@ -1,30 +1,30 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 19:33 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 19:43 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 35 | 10 | 25 | 6 | $62.15 | +21.6% | -0.7c (34) | $1,062.15 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 54 | 7 | 47 | 32 | -$53.59 | -14.1% | -1.1c (54) | $946.41 |
+| model-only | Elo win model alone (control: ignores the market) | 35 | 7 | 28 | 6 | $19.52 | +5.9% | -0.7c (34) | $1,019.52 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 54 | 5 | 49 | 33 | -$56.64 | -14.2% | -1.1c (54) | $943.36 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-55 finished matches. Lower is better; the market line is the bar to beat.
+58 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5048 | 0.1658 |
-| model | 0.6344 | 0.2209 |
-| blend | 0.5008 | 0.1645 |
+| market | 0.5078 | 0.1670 |
+| model | 0.6407 | 0.2240 |
+| blend | 0.5032 | 0.1654 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 24 | 0.6326 | 0.6491 |
+| cs2 | 27 | 0.6249 | 0.6611 |
 | lol | 13 | 0.1859 | 0.6244 |
 | dota2 | 7 | 0.5320 | 0.5483 |
 | r6 | 7 | 0.8001 | 0.7811 |
@@ -39,13 +39,13 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 18:53 | model-only | lol | Fuego | Cupid Esports | NO Cupid Esports | 126 | 0.16 | 0.30 | 0.16 | open | - |
 | 2026-10-06 17:53 | model-only | r6 | Twisted Minds | Virtus.pro | YES Twisted Minds | 51 | 0.27 | 0.41 | 0.26 | open | - |
 | 2026-10-06 17:23 | model-only | cs2 | menszczysni | ZOTIX | YES menszczysni | 2 | 0.34 | 0.52 | 0.34 | open | - |
-| 2026-10-06 17:23 | model-only | cs2 | PENSIONERS | Regnum4Games | YES PENSIONERS | 2 | 0.29 | 0.35 | 0.28 | open | - |
+| 2026-10-06 17:23 | model-only | cs2 | PENSIONERS | Regnum4Games | YES PENSIONERS | 2 | 0.29 | 0.35 | 0.28 | lost | -$0.61 |
 | 2026-10-06 17:23 | model-only | cs2 | TTG Esports | KUUSAMO.gg | YES TTG Esports | 4 | 0.42 | 0.58 | 0.44 | open | - |
 | 2026-10-06 16:53 | favourite | cs2 | PARTIZAN | 99firepower 1utility | YES PARTIZAN | 12 | 0.62 | 0.51 | 0.51 | lost | -$7.64 |
-| 2026-10-06 15:53 | favourite | cs2 | Legacy | M80 | YES Legacy | 17 | 0.55 | 0.55 | 0.55 | open | - |
-| 2026-10-06 15:53 | model-only | cs2 | WRAITH PCIFIC | Lavked | YES WRAITH PCIFIC | 47 | 0.43 | 0.58 | 0.43 | open | - |
-| 2026-10-06 15:53 | favourite | cs2 | Lavked | WRAITH PCIFIC | YES Lavked | 16 | 0.57 | 0.57 | 0.57 | open | - |
-| 2026-10-06 15:53 | model-only | cs2 | Legacy | M80 | YES Legacy | 37 | 0.55 | 0.63 | 0.55 | open | - |
+| 2026-10-06 15:53 | favourite | cs2 | Legacy | M80 | YES Legacy | 17 | 0.55 | 0.55 | 0.55 | lost | -$9.65 |
+| 2026-10-06 15:53 | model-only | cs2 | WRAITH PCIFIC | Lavked | YES WRAITH PCIFIC | 47 | 0.43 | 0.58 | 0.43 | lost | -$21.02 |
+| 2026-10-06 15:53 | favourite | cs2 | Lavked | WRAITH PCIFIC | YES Lavked | 16 | 0.57 | 0.57 | 0.57 | won | $6.60 |
+| 2026-10-06 15:53 | model-only | cs2 | Legacy | M80 | YES Legacy | 37 | 0.55 | 0.63 | 0.55 | lost | -$21.00 |
 | 2026-10-06 15:53 | model-only | cs2 | MASQ | MASONIC | NO MASONIC | 2 | 0.33 | 0.49 | 0.33 | lost | -$0.70 |
 | 2026-10-06 15:53 | favourite | cs2 | MASONIC | MASQ | NO MASQ | 14 | 0.68 | 0.67 | 0.67 | won | $4.26 |
 | 2026-10-06 15:53 | favourite | cs2 | Team Falcons | Natus Vincere | YES Team Falcons | 16 | 0.58 | 0.57 | 0.57 | open | - |
