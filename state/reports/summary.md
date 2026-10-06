@@ -1,33 +1,33 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 13:03 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 13:13 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 24 | 9 | 15 | 2 | -$24.24 | -15.1% | -0.3c (21) | $975.76 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 42 | 11 | 31 | 24 | $3.43 | +1.4% | -1.1c (39) | $1,003.43 |
+| model-only | Elo win model alone (control: ignores the market) | 24 | 8 | 16 | 3 | -$21.17 | -13.1% | -0.3c (21) | $978.83 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 42 | 10 | 32 | 24 | -$6.08 | -2.5% | -1.1c (39) | $993.92 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-35 finished matches. Lower is better; the market line is the bar to beat.
+37 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.4481 | 0.1410 |
-| model | 0.6309 | 0.2192 |
-| blend | 0.4376 | 0.1375 |
+| market | 0.4830 | 0.1563 |
+| model | 0.6342 | 0.2208 |
+| blend | 0.4765 | 0.1542 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 12 | 0.4967 | 0.5906 |
+| cs2 | 13 | 0.5750 | 0.6102 |
 | lol | 9 | 0.2057 | 0.6560 |
 | r6 | 6 | 0.8571 | 0.8141 |
-| dota2 | 4 | 0.4724 | 0.5794 |
+| dota2 | 5 | 0.5126 | 0.5709 |
 | ow | 4 | 0.2097 | 0.4720 |
 
 ## Latest bets
@@ -47,10 +47,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 10:53 | favourite | cs2 | G2 | PARIVISION | YES G2 | 15 | 0.62 | 0.61 | 0.61 | open | - |
 | 2026-10-06 10:53 | favourite | cs2 | Spirit | 1WIN | NO 1WIN | 11 | 0.87 | 0.86 | 0.86 | open | - |
 | 2026-10-06 10:53 | model-only | cs2 | 1WIN | Spirit | YES 1WIN | 131 | 0.14 | 0.37 | 0.14 | open | - |
-| 2026-10-06 09:52 | favourite | cs2 | Noir Verse | maybe | NO maybe | 12 | 0.78 | 0.78 | 0.78 | open | - |
+| 2026-10-06 09:52 | favourite | cs2 | Noir Verse | maybe | NO maybe | 12 | 0.78 | 0.78 | 0.78 | lost | -$9.51 |
 | 2026-10-06 09:52 | model-only | cs2 | MASONIC | ex-Zero Tenacity | YES MASONIC | 123 | 0.15 | 0.34 | 0.15 | open | - |
 | 2026-10-06 09:52 | favourite | cs2 | ex-Zero Tenacity | MASONIC | YES ex-Zero Tenacity | 11 | 0.85 | 0.85 | 0.85 | open | - |
-| 2026-10-06 09:52 | model-only | cs2 | maybe | Noir Verse | NO Noir Verse | 4 | 0.22 | 0.43 | 0.22 | open | - |
+| 2026-10-06 09:52 | model-only | cs2 | maybe | Noir Verse | NO Noir Verse | 4 | 0.22 | 0.43 | 0.22 | won | $3.07 |
 | 2026-10-06 09:52 | model-only | dota2 | Nemiga Gaming | Blasterbl | NO Blasterbl | 64 | 0.29 | 0.40 | 0.28 | open | - |
 | 2026-10-06 09:52 | favourite | dota2 | Blasterbl | Nemiga Gaming | YES Blasterbl | 13 | 0.72 | 0.72 | 0.72 | open | - |
 | 2026-10-06 09:52 | favourite | lol | Team Vitality | RED Canids | NO RED Canids | 11 | 0.87 | 0.86 | 0.86 | won | $1.34 |
