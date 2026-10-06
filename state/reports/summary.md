@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 12:13 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 12:43 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,24 +8,24 @@ Updated 2026-10-06 12:13 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 21 | 7 | 14 | 2 | -$23.98 | -15.0% | -0.3c (21) | $976.02 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 39 | 12 | 27 | 22 | $22.18 | +10.4% | -1.1c (39) | $1,022.18 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 39 | 10 | 29 | 22 | $2.46 | +1.1% | -1.1c (39) | $1,002.46 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-32 finished matches. Lower is better; the market line is the bar to beat.
+33 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.4352 | 0.1352 |
-| model | 0.6338 | 0.2205 |
-| blend | 0.4241 | 0.1315 |
+| market | 0.4446 | 0.1395 |
+| model | 0.6359 | 0.2216 |
+| blend | 0.4340 | 0.1360 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 12 | 0.4967 | 0.5906 |
-| lol | 8 | 0.1383 | 0.6498 |
+| lol | 9 | 0.2057 | 0.6560 |
 | r6 | 6 | 0.8571 | 0.8141 |
 | dota2 | 3 | 0.3800 | 0.5516 |
 | ow | 3 | 0.1925 | 0.4851 |
@@ -52,8 +52,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 09:22 | model-only | cs2 | 3DMAX Academy | VP.Future 3 | YES 3DMAX Academy | 2 | 0.32 | 0.46 | 0.32 | lost | -$0.68 |
 | 2026-10-06 09:22 | favourite | cs2 | VP.Future 3 | 3DMAX Academy | YES VP.Future 3 | 14 | 0.68 | 0.68 | 0.68 | won | $4.26 |
 | 2026-10-06 08:27 | favourite | dota2 | Yangon Galacticos | Cloud Dawning | YES Yangon Galacticos | 1 | 0.80 | 0.51 | 0.51 | open | - |
-| 2026-10-06 07:52 | favourite | lol | JD Gaming | LGD Gaming | YES JD Gaming | 18 | 0.53 | 0.53 | 0.53 | open | - |
-| 2026-10-06 06:52 | favourite | dota2 | HULIGANI | CyberHero | NO CyberHero | 18 | 0.53 | 0.53 | 0.53 | open | - |
+| 2026-10-06 07:52 | favourite | lol | JD Gaming | LGD Gaming | YES JD Gaming | 18 | 0.53 | 0.53 | 0.53 | lost | -$9.86 |
+| 2026-10-06 06:52 | favourite | dota2 | HULIGANI | CyberHero | NO CyberHero | 18 | 0.53 | 0.53 | 0.53 | lost | -$9.86 |
 | 2026-10-06 06:52 | favourite | cs2 | EAC Extra | TheChampionGG | NO TheChampionGG | 13 | 0.71 | 0.69 | 0.69 | open | - |
 | 2026-10-06 06:52 | model-only | cs2 | TheChampionGG | EAC Extra | YES TheChampionGG | 1 | 0.32 | 0.51 | 0.31 | open | - |
 | 2026-10-06 06:52 | favourite | cs2 | Just_Players | MORROW | YES Just_Players | 3 | 0.74 | 0.72 | 0.72 | won | $0.73 |
