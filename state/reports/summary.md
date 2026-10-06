@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 19:13 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 19:33 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,23 +8,23 @@ Updated 2026-10-06 19:13 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 35 | 10 | 25 | 6 | $62.15 | +21.6% | -0.7c (34) | $1,062.15 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 54 | 8 | 46 | 32 | -$45.95 | -12.4% | -1.1c (54) | $954.05 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 54 | 7 | 47 | 32 | -$53.59 | -14.1% | -1.1c (54) | $946.41 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-52 finished matches. Lower is better; the market line is the bar to beat.
+55 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5075 | 0.1670 |
-| model | 0.6396 | 0.2235 |
-| blend | 0.5038 | 0.1657 |
+| market | 0.5048 | 0.1658 |
+| model | 0.6344 | 0.2209 |
+| blend | 0.5008 | 0.1645 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 21 | 0.6576 | 0.6643 |
+| cs2 | 24 | 0.6326 | 0.6491 |
 | lol | 13 | 0.1859 | 0.6244 |
 | dota2 | 7 | 0.5320 | 0.5483 |
 | r6 | 7 | 0.8001 | 0.7811 |
@@ -41,7 +41,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 17:23 | model-only | cs2 | menszczysni | ZOTIX | YES menszczysni | 2 | 0.34 | 0.52 | 0.34 | open | - |
 | 2026-10-06 17:23 | model-only | cs2 | PENSIONERS | Regnum4Games | YES PENSIONERS | 2 | 0.29 | 0.35 | 0.28 | open | - |
 | 2026-10-06 17:23 | model-only | cs2 | TTG Esports | KUUSAMO.gg | YES TTG Esports | 4 | 0.42 | 0.58 | 0.44 | open | - |
-| 2026-10-06 16:53 | favourite | cs2 | PARTIZAN | 99firepower 1utility | YES PARTIZAN | 12 | 0.62 | 0.51 | 0.51 | open | - |
+| 2026-10-06 16:53 | favourite | cs2 | PARTIZAN | 99firepower 1utility | YES PARTIZAN | 12 | 0.62 | 0.51 | 0.51 | lost | -$7.64 |
 | 2026-10-06 15:53 | favourite | cs2 | Legacy | M80 | YES Legacy | 17 | 0.55 | 0.55 | 0.55 | open | - |
 | 2026-10-06 15:53 | model-only | cs2 | WRAITH PCIFIC | Lavked | YES WRAITH PCIFIC | 47 | 0.43 | 0.58 | 0.43 | open | - |
 | 2026-10-06 15:53 | favourite | cs2 | Lavked | WRAITH PCIFIC | YES Lavked | 16 | 0.57 | 0.57 | 0.57 | open | - |
