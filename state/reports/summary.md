@@ -1,30 +1,30 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 18:48 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 18:53 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 34 | 10 | 24 | 6 | $71.91 | +25.9% | -0.7c (34) | $1,071.91 |
+| model-only | Elo win model alone (control: ignores the market) | 35 | 11 | 24 | 6 | $71.91 | +25.9% | -0.7c (34) | $1,071.91 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 54 | 10 | 44 | 30 | -$47.40 | -13.1% | -1.1c (54) | $952.60 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-49 finished matches. Lower is better; the market line is the bar to beat.
+50 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5108 | 0.1681 |
-| model | 0.6412 | 0.2242 |
-| blend | 0.5076 | 0.1670 |
+| market | 0.5163 | 0.1707 |
+| model | 0.6420 | 0.2246 |
+| blend | 0.5134 | 0.1697 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 20 | 0.6511 | 0.6634 |
+| cs2 | 21 | 0.6576 | 0.6643 |
 | lol | 12 | 0.1917 | 0.6282 |
 | dota2 | 7 | 0.5320 | 0.5483 |
 | r6 | 6 | 0.8571 | 0.8141 |
@@ -36,6 +36,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-06 18:53 | model-only | lol | Fuego | Cupid Esports | NO Cupid Esports | 126 | 0.16 | 0.30 | 0.16 | open | - |
 | 2026-10-06 17:53 | model-only | r6 | Twisted Minds | Virtus.pro | YES Twisted Minds | 51 | 0.27 | 0.41 | 0.26 | open | - |
 | 2026-10-06 17:23 | model-only | cs2 | menszczysni | ZOTIX | YES menszczysni | 2 | 0.34 | 0.52 | 0.34 | open | - |
 | 2026-10-06 17:23 | model-only | cs2 | PENSIONERS | Regnum4Games | YES PENSIONERS | 2 | 0.29 | 0.35 | 0.28 | open | - |
@@ -60,7 +61,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 13:23 | favourite | cs2 | BetBoom Team | 9z | YES BetBoom Team | 16 | 0.57 | 0.57 | 0.57 | lost | -$9.40 |
 | 2026-10-06 12:53 | favourite | dota2 | Yellow Submarine | Team Synapse | YES Yellow Submarine | 17 | 0.57 | 0.56 | 0.56 | lost | -$9.99 |
 | 2026-10-06 12:53 | model-only | dota2 | Team Synapse | Yellow Submarine | NO Yellow Submarine | 38 | 0.44 | 0.62 | 0.43 | won | $20.62 |
-| 2026-10-06 12:53 | favourite | cs2 | Gothic | mellren | YES Gothic | 4 | 0.57 | 0.56 | 0.56 | open | - |
 
 ## Backtest on real Kalshi prices
 
