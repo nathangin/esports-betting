@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 09:32 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 09:42 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,24 +8,24 @@ Updated 2026-10-06 09:32 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 16 | 4 | 12 | 2 | -$22.38 | -14.1% | -0.3c (15) | $977.62 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 32 | 10 | 22 | 17 | $15.36 | +8.2% | -1.6c (30) | $1,015.36 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 32 | 9 | 23 | 18 | $15.69 | +8.2% | -1.6c (30) | $1,015.69 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-24 finished matches. Lower is better; the market line is the bar to beat.
+25 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5081 | 0.1665 |
-| model | 0.6432 | 0.2250 |
-| blend | 0.5031 | 0.1644 |
+| market | 0.4969 | 0.1615 |
+| model | 0.6646 | 0.2352 |
+| blend | 0.4905 | 0.1590 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 9 | 0.5609 | 0.6217 |
-| lol | 6 | 0.1220 | 0.5869 |
+| lol | 7 | 0.1374 | 0.6715 |
 | r6 | 6 | 0.8571 | 0.8141 |
 | dota2 | 2 | 0.4931 | 0.5672 |
 | ow | 1 | 0.2844 | 0.3003 |
@@ -47,7 +47,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 06:52 | model-only | cs2 | TheChampionGG | EAC Extra | YES TheChampionGG | 1 | 0.32 | 0.51 | 0.31 | open | - |
 | 2026-10-06 06:52 | favourite | cs2 | Just_Players | MORROW | YES Just_Players | 3 | 0.74 | 0.72 | 0.72 | open | - |
 | 2026-10-06 05:52 | favourite | lol | OKSavingsBank BRION | Natus Vincere | YES OKSavingsBank BRION | 12 | 0.80 | 0.80 | 0.80 | won | $2.26 |
-| 2026-10-06 04:51 | favourite | dota2 | Xipto Esports | Direborn | NO Direborn | 3 | 0.88 | 0.86 | 0.86 | open | - |
+| 2026-10-06 04:51 | favourite | dota2 | Xipto Esports | Direborn | NO Direborn | 3 | 0.88 | 0.86 | 0.86 | won | $0.33 |
 | 2026-10-06 01:51 | favourite | dota2 | InterActive Philippines | Yangon Galacticos | NO Yangon Galacticos | 2 | 0.55 | 0.54 | 0.54 | won | $0.86 |
 | 2026-10-05 18:18 | favourite | lol | KaBuM! Ilha das Lendas | 9z Globant | NO 9z Globant | 11 | 0.89 | 0.88 | 0.88 | won | $1.13 |
 | 2026-10-05 18:18 | favourite | r6 | G2 Esports | Virtus.pro | YES G2 Esports | 1 | 0.68 | 0.66 | 0.66 | won | $0.30 |
