@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 04:16 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 04:51 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-06 04:16 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 13 | 1 | 12 | 2 | -$22.38 | -14.1% | -0.7c (13) | $977.62 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 23 | 3 | 20 | 15 | $12.24 | +6.9% | -1.8c (23) | $1,012.24 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 24 | 4 | 20 | 15 | $12.24 | +6.9% | -1.8c (23) | $1,012.24 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -36,6 +36,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-06 04:51 | favourite | dota2 | Xipto Esports | Direborn | NO Direborn | 3 | 0.88 | 0.86 | 0.86 | open | - |
 | 2026-10-06 01:51 | favourite | dota2 | InterActive Philippines | Yangon Galacticos | NO Yangon Galacticos | 2 | 0.55 | 0.54 | 0.54 | open | - |
 | 2026-10-05 18:18 | favourite | lol | KaBuM! Ilha das Lendas | 9z Globant | NO 9z Globant | 11 | 0.89 | 0.88 | 0.88 | won | $1.13 |
 | 2026-10-05 18:18 | favourite | r6 | G2 Esports | Virtus.pro | YES G2 Esports | 1 | 0.68 | 0.66 | 0.66 | won | $0.30 |
@@ -60,7 +61,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-04 16:52 | favourite | r6 | Fluxo W7M | LOUD | YES Fluxo W7M | 15 | 0.63 | 0.63 | 0.63 | won | $5.30 |
 | 2026-10-04 16:52 | model-only | r6 | LOUD | Fluxo W7M | NO Fluxo W7M | 8 | 0.38 | 0.44 | 0.37 | lost | -$3.18 |
 | 2026-10-04 16:52 | favourite | r6 | Team Liquid | LOS | YES Team Liquid | 14 | 0.68 | 0.68 | 0.68 | won | $4.26 |
-| 2026-10-04 16:52 | model-only | r6 | LOS | Team Liquid | NO Team Liquid | 7 | 0.34 | 0.41 | 0.32 | lost | -$2.49 |
 
 ## Backtest on real Kalshi prices
 
