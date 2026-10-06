@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 07:42 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 07:52 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 15 | 3 | 12 | 2 | -$22.38 | -14.1% | -0.7c (13) | $977.62 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 28 | 7 | 21 | 16 | $13.10 | +7.4% | -1.7c (25) | $1,013.10 |
+| model-only | Elo win model alone (control: ignores the market) | 15 | 3 | 12 | 2 | -$22.38 | -14.1% | -0.1c (15) | $977.62 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 29 | 8 | 21 | 16 | $13.10 | +7.4% | -2.0c (28) | $1,013.10 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -36,6 +36,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-06 07:52 | favourite | lol | JD Gaming | LGD Gaming | YES JD Gaming | 18 | 0.53 | 0.53 | 0.53 | open | - |
 | 2026-10-06 06:52 | favourite | dota2 | HULIGANI | CyberHero | NO CyberHero | 18 | 0.53 | 0.53 | 0.53 | open | - |
 | 2026-10-06 06:52 | favourite | cs2 | EAC Extra | TheChampionGG | NO TheChampionGG | 13 | 0.71 | 0.69 | 0.69 | open | - |
 | 2026-10-06 06:52 | model-only | cs2 | TheChampionGG | EAC Extra | YES TheChampionGG | 1 | 0.32 | 0.51 | 0.31 | open | - |
@@ -47,20 +48,19 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-05 18:18 | favourite | cs2 | XI Esport | struggletony | YES XI Esport | 5 | 0.80 | 0.55 | 0.55 | open | - |
 | 2026-10-05 18:18 | model-only | cs2 | Linx Legacy Esport | EAC Extra | NO EAC Extra | 4 | 0.50 | 0.62 | 0.49 | open | - |
 | 2026-10-05 18:18 | favourite | cs2 | EAC Extra | Linx Legacy Esport | YES EAC Extra | 18 | 0.53 | 0.51 | 0.51 | open | - |
-| 2026-10-05 18:18 | favourite | r6 | G2 Esports | Virtus.pro | YES G2 Esports | 1 | 0.68 | 0.66 | 0.66 | won | $0.30 |
-| 2026-10-05 18:18 | model-only | r6 | Virtus.pro | G2 Esports | NO G2 Esports | 6 | 0.37 | 0.47 | 0.34 | lost | -$2.32 |
 | 2026-10-05 18:18 | favourite | lol | KaBuM! Ilha das Lendas | 9z Globant | NO 9z Globant | 11 | 0.89 | 0.88 | 0.88 | won | $1.13 |
-| 2026-10-05 08:50 | model-only | dota2 | CyberHero | Yellow Submarine | YES CyberHero | 65 | 0.31 | 0.43 | 0.31 | lost | -$21.13 |
+| 2026-10-05 18:18 | model-only | r6 | Virtus.pro | G2 Esports | NO G2 Esports | 6 | 0.37 | 0.47 | 0.34 | lost | -$2.32 |
+| 2026-10-05 18:18 | favourite | r6 | G2 Esports | Virtus.pro | YES G2 Esports | 1 | 0.68 | 0.66 | 0.66 | won | $0.30 |
+| 2026-10-05 08:50 | favourite | dota2 | Yellow Submarine | CyberHero | YES Yellow Submarine | 14 | 0.69 | 0.69 | 0.69 | won | $4.13 |
 | 2026-10-05 08:50 | favourite | cs2 | Natus Vincere | 9z | NO 9z | 13 | 0.71 | 0.70 | 0.71 | won | $3.58 |
 | 2026-10-05 08:50 | model-only | cs2 | 9z | Natus Vincere | YES 9z | 67 | 0.30 | 0.47 | 0.29 | lost | -$21.09 |
 | 2026-10-05 08:50 | favourite | cs2 | Legacy | 1WIN | YES Legacy | 17 | 0.55 | 0.55 | 0.55 | lost | -$9.65 |
 | 2026-10-05 08:50 | favourite | lol | JD Gaming | Shopify Rebellion | NO Shopify Rebellion | 11 | 0.87 | 0.88 | 0.88 | won | $1.34 |
 | 2026-10-05 08:50 | model-only | lol | Shopify Rebellion | JD Gaming | NO JD Gaming | 165 | 0.12 | 0.36 | 0.12 | lost | -$21.02 |
-| 2026-10-05 08:50 | favourite | dota2 | Yellow Submarine | CyberHero | YES Yellow Submarine | 14 | 0.69 | 0.69 | 0.69 | won | $4.13 |
-| 2026-10-05 08:50 | favourite | cs2 | Noir Verse | MORROW | NO MORROW | 3 | 0.74 | 0.73 | 0.73 | lost | -$2.27 |
+| 2026-10-05 08:50 | model-only | dota2 | CyberHero | Yellow Submarine | YES CyberHero | 65 | 0.31 | 0.43 | 0.31 | lost | -$21.13 |
+| 2026-10-05 08:50 | model-only | cs2 | MORROW | Noir Verse | YES MORROW | 11 | 0.29 | 0.38 | 0.27 | won | $7.65 |
 | 2026-10-05 08:50 | favourite | cs2 | Esport Academy Copenhagen | Lavked | YES Esport Academy Copenhagen | 14 | 0.66 | 0.66 | 0.66 | won | $4.54 |
 | 2026-10-05 08:50 | model-only | cs2 | Lavked | Esport Academy Copenhagen | YES Lavked | 59 | 0.34 | 0.47 | 0.34 | lost | -$20.99 |
-| 2026-10-05 08:50 | favourite | ow | ENTER FORCE.36 | Please Not Hero Ban | YES ENTER FORCE.36 | 11 | 0.86 | 0.75 | 0.75 | won | $1.44 |
 
 ## Backtest on real Kalshi prices
 
