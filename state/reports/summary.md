@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 14:38 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 14:43 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 24 | 6 | 18 | 4 | $70.83 | +35.4% | -0.5c (24) | $1,070.83 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 44 | 10 | 34 | 25 | -$14.19 | -5.4% | -1.0c (44) | $985.81 |
+| model-only | Elo win model alone (control: ignores the market) | 24 | 5 | 19 | 4 | $51.34 | +23.4% | -0.5c (24) | $1,051.34 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 44 | 9 | 35 | 26 | -$10.74 | -3.9% | -1.0c (44) | $989.26 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -53,8 +53,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 09:52 | model-only | cs2 | MASONIC | ex-Zero Tenacity | YES MASONIC | 123 | 0.15 | 0.34 | 0.15 | lost | -$19.55 |
 | 2026-10-06 09:52 | favourite | cs2 | ex-Zero Tenacity | MASONIC | YES ex-Zero Tenacity | 11 | 0.85 | 0.85 | 0.85 | won | $1.55 |
 | 2026-10-06 09:52 | model-only | cs2 | maybe | Noir Verse | NO Noir Verse | 4 | 0.22 | 0.43 | 0.22 | won | $3.07 |
-| 2026-10-06 09:52 | model-only | dota2 | Nemiga Gaming | Blasterbl | NO Blasterbl | 64 | 0.29 | 0.40 | 0.28 | open | - |
-| 2026-10-06 09:52 | favourite | dota2 | Blasterbl | Nemiga Gaming | YES Blasterbl | 13 | 0.72 | 0.72 | 0.72 | open | - |
+| 2026-10-06 09:52 | model-only | dota2 | Nemiga Gaming | Blasterbl | NO Blasterbl | 64 | 0.29 | 0.40 | 0.28 | lost | -$19.49 |
+| 2026-10-06 09:52 | favourite | dota2 | Blasterbl | Nemiga Gaming | YES Blasterbl | 13 | 0.72 | 0.72 | 0.72 | won | $3.45 |
 | 2026-10-06 09:52 | favourite | lol | Team Vitality | RED Canids | NO RED Canids | 11 | 0.87 | 0.86 | 0.86 | won | $1.34 |
 | 2026-10-06 09:22 | favourite | cs2 | VP.Future 3 | 3DMAX Academy | YES VP.Future 3 | 14 | 0.68 | 0.68 | 0.68 | won | $4.26 |
 | 2026-10-06 09:22 | model-only | cs2 | 3DMAX Academy | VP.Future 3 | YES 3DMAX Academy | 2 | 0.32 | 0.46 | 0.32 | lost | -$0.68 |
