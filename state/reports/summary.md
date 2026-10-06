@@ -1,33 +1,33 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 21:08 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 21:14 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 35 | 5 | 30 | 8 | $63.41 | +17.1% | -0.7c (35) | $1,063.41 |
+| model-only | Elo win model alone (control: ignores the market) | 35 | 4 | 31 | 8 | $48.93 | +12.7% | -0.7c (35) | $1,048.93 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 54 | 3 | 51 | 33 | -$68.30 | -16.6% | -1.1c (54) | $931.70 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-62 finished matches. Lower is better; the market line is the bar to beat.
+63 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5323 | 0.1783 |
-| model | 0.6464 | 0.2266 |
-| blend | 0.5297 | 0.1775 |
+| market | 0.5285 | 0.1765 |
+| model | 0.6445 | 0.2257 |
+| blend | 0.5255 | 0.1756 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 30 | 0.6560 | 0.6761 |
 | lol | 13 | 0.1859 | 0.6244 |
 | dota2 | 8 | 0.5579 | 0.5401 |
-| r6 | 7 | 0.8001 | 0.7811 |
+| r6 | 8 | 0.7369 | 0.7490 |
 | ow | 4 | 0.2097 | 0.4720 |
 
 ## Latest bets
@@ -37,7 +37,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-10-06 18:53 | model-only | lol | Fuego | Cupid Esports | NO Cupid Esports | 126 | 0.16 | 0.30 | 0.16 | open | - |
-| 2026-10-06 17:53 | model-only | r6 | Twisted Minds | Virtus.pro | YES Twisted Minds | 51 | 0.27 | 0.41 | 0.26 | open | - |
+| 2026-10-06 17:53 | model-only | r6 | Twisted Minds | Virtus.pro | YES Twisted Minds | 51 | 0.27 | 0.41 | 0.26 | lost | -$14.48 |
 | 2026-10-06 17:23 | model-only | cs2 | menszczysni | ZOTIX | YES menszczysni | 2 | 0.34 | 0.52 | 0.34 | open | - |
 | 2026-10-06 17:23 | model-only | cs2 | PENSIONERS | Regnum4Games | YES PENSIONERS | 2 | 0.29 | 0.35 | 0.28 | lost | -$0.61 |
 | 2026-10-06 17:23 | model-only | cs2 | TTG Esports | KUUSAMO.gg | YES TTG Esports | 4 | 0.42 | 0.58 | 0.44 | open | - |
