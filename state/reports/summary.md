@@ -1,30 +1,30 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 17:33 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 17:43 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 33 | 12 | 21 | 5 | $72.83 | +30.5% | -0.4c (30) | $1,072.83 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 54 | 15 | 39 | 27 | -$35.93 | -11.5% | -1.0c (53) | $964.07 |
+| model-only | Elo win model alone (control: ignores the market) | 33 | 10 | 23 | 6 | $92.75 | +36.1% | -0.4c (30) | $1,092.75 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 54 | 13 | 41 | 28 | -$41.66 | -12.5% | -1.0c (53) | $958.34 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-44 finished matches. Lower is better; the market line is the bar to beat.
+45 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5306 | 0.1759 |
-| model | 0.6508 | 0.2289 |
-| blend | 0.5286 | 0.1749 |
+| market | 0.5277 | 0.1744 |
+| model | 0.6513 | 0.2292 |
+| blend | 0.5251 | 0.1732 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 19 | 0.6643 | 0.6627 |
+| cs2 | 20 | 0.6511 | 0.6634 |
 | lol | 9 | 0.2057 | 0.6560 |
 | dota2 | 6 | 0.4819 | 0.5610 |
 | r6 | 6 | 0.8571 | 0.8141 |
@@ -40,12 +40,12 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 17:23 | model-only | cs2 | PENSIONERS | Regnum4Games | YES PENSIONERS | 2 | 0.29 | 0.35 | 0.28 | open | - |
 | 2026-10-06 17:23 | model-only | cs2 | TTG Esports | KUUSAMO.gg | YES TTG Esports | 4 | 0.42 | 0.58 | 0.44 | open | - |
 | 2026-10-06 16:53 | favourite | cs2 | PARTIZAN | 99firepower 1utility | YES PARTIZAN | 12 | 0.62 | 0.51 | 0.51 | open | - |
-| 2026-10-06 15:53 | model-only | cs2 | MASQ | MASONIC | NO MASONIC | 2 | 0.33 | 0.49 | 0.33 | open | - |
+| 2026-10-06 15:53 | model-only | cs2 | MASQ | MASONIC | NO MASONIC | 2 | 0.33 | 0.49 | 0.33 | lost | -$0.70 |
 | 2026-10-06 15:53 | model-only | cs2 | WRAITH PCIFIC | Lavked | YES WRAITH PCIFIC | 47 | 0.43 | 0.58 | 0.43 | open | - |
 | 2026-10-06 15:53 | favourite | cs2 | Lavked | WRAITH PCIFIC | YES Lavked | 16 | 0.57 | 0.57 | 0.57 | open | - |
 | 2026-10-06 15:53 | model-only | cs2 | Legacy | M80 | YES Legacy | 37 | 0.55 | 0.63 | 0.55 | open | - |
 | 2026-10-06 15:53 | favourite | cs2 | Legacy | M80 | YES Legacy | 17 | 0.55 | 0.55 | 0.55 | open | - |
-| 2026-10-06 15:53 | favourite | cs2 | MASONIC | MASQ | NO MASQ | 14 | 0.68 | 0.67 | 0.67 | open | - |
+| 2026-10-06 15:53 | favourite | cs2 | MASONIC | MASQ | NO MASQ | 14 | 0.68 | 0.67 | 0.67 | won | $4.26 |
 | 2026-10-06 15:53 | favourite | cs2 | Team Falcons | Natus Vincere | YES Team Falcons | 16 | 0.58 | 0.57 | 0.57 | open | - |
 | 2026-10-06 15:53 | model-only | dota2 | LEGION | MOUZ | YES LEGION | 42 | 0.48 | 0.62 | 0.48 | open | - |
 | 2026-10-06 15:53 | favourite | dota2 | MOUZ | LEGION | NO LEGION | 17 | 0.53 | 0.52 | 0.52 | open | - |
@@ -57,7 +57,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 14:53 | model-only | lol | Berlin International Gaming | Galions | YES Berlin International Gaming | 94 | 0.21 | 0.45 | 0.20 | open | - |
 | 2026-10-06 13:23 | favourite | cs2 | BetBoom Team | 9z | YES BetBoom Team | 16 | 0.57 | 0.57 | 0.57 | lost | -$9.40 |
 | 2026-10-06 13:23 | favourite | cs2 | FURIA | Aurora Gaming | NO Aurora Gaming | 17 | 0.55 | 0.55 | 0.54 | open | - |
-| 2026-10-06 12:53 | model-only | dota2 | Team Synapse | Yellow Submarine | NO Yellow Submarine | 38 | 0.44 | 0.62 | 0.43 | open | - |
+| 2026-10-06 12:53 | model-only | dota2 | Team Synapse | Yellow Submarine | NO Yellow Submarine | 38 | 0.44 | 0.62 | 0.43 | won | $20.62 |
 | 2026-10-06 12:53 | favourite | cs2 | Gothic | mellren | YES Gothic | 4 | 0.57 | 0.56 | 0.56 | open | - |
 | 2026-10-06 12:53 | model-only | cs2 | mellren | Gothic | NO Gothic | 42 | 0.44 | 0.61 | 0.44 | open | - |
 | 2026-10-06 12:53 | favourite | cs2 | Butterfly | ex-RUSTEC | YES Butterfly | 17 | 0.56 | 0.56 | 0.56 | lost | -$9.82 |
