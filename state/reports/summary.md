@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 09:22 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 09:32 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-06 09:22 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 16 | 4 | 12 | 2 | -$22.38 | -14.1% | -0.3c (15) | $977.62 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 32 | 11 | 21 | 16 | $13.10 | +7.4% | -1.6c (30) | $1,013.10 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 32 | 10 | 22 | 17 | $15.36 | +8.2% | -1.6c (30) | $1,015.36 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -46,7 +46,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 06:52 | favourite | cs2 | EAC Extra | TheChampionGG | NO TheChampionGG | 13 | 0.71 | 0.69 | 0.69 | open | - |
 | 2026-10-06 06:52 | model-only | cs2 | TheChampionGG | EAC Extra | YES TheChampionGG | 1 | 0.32 | 0.51 | 0.31 | open | - |
 | 2026-10-06 06:52 | favourite | cs2 | Just_Players | MORROW | YES Just_Players | 3 | 0.74 | 0.72 | 0.72 | open | - |
-| 2026-10-06 05:52 | favourite | lol | OKSavingsBank BRION | Natus Vincere | YES OKSavingsBank BRION | 12 | 0.80 | 0.80 | 0.80 | open | - |
+| 2026-10-06 05:52 | favourite | lol | OKSavingsBank BRION | Natus Vincere | YES OKSavingsBank BRION | 12 | 0.80 | 0.80 | 0.80 | won | $2.26 |
 | 2026-10-06 04:51 | favourite | dota2 | Xipto Esports | Direborn | NO Direborn | 3 | 0.88 | 0.86 | 0.86 | open | - |
 | 2026-10-06 01:51 | favourite | dota2 | InterActive Philippines | Yangon Galacticos | NO Yangon Galacticos | 2 | 0.55 | 0.54 | 0.54 | won | $0.86 |
 | 2026-10-05 18:18 | favourite | lol | KaBuM! Ilha das Lendas | 9z Globant | NO 9z Globant | 11 | 0.89 | 0.88 | 0.88 | won | $1.13 |
