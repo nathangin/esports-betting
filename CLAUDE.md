@@ -30,14 +30,24 @@ fake-money paper trading on GitHub Actions). See README.md for results.
   candlestick endpoint uses bare names (`"close": "0.9000"`). A decimal string is dollars.
 - `/events?series_ticker=...` returned HTTP 400 for these series; use `/markets`.
 - Taker fee `ceil(0.07 * C * P * (1 - P))` (all match series quadratic, multiplier 1).
+- Side markets share the match code: `KX<G>MAP-<code>-<n>` (map n winner, one market per team) and
+  `KX<G>TOTALMAPS-<code>` ("over N.5 maps" ladder: BO3 2.5; BO5 3.5 and 4.5). Map 1-3 markets are
+  listed before the match, map 4+ only once the match gets there: never infer best-of from map
+  markets (look-ahead); use the totals ladder.
+- Polymarket esports: gamma `/events?series_id=` (cs2 10310, lol 10311, valorant 10369, dota2
+  10309, r6 10432, cod 10427), moneyline markets, CLOB `/prices-history?market=<token>`.
 
 ## What the data says
 - At 60 minutes before the start the market's log loss is ~0.573; the Elo model's ~0.662. The
   model + market blend is no better than the market, and bets lose after spread and fees.
   Closing-line value of every strategy tried was zero or negative. Treat any new "edge" with
   suspicion until it shows positive closing-line value out of sample.
+- Also no edge (Oct 2026, `research/`): Polymarket's price (same accuracy as Kalshi, 1-2c apart,
+  nothing left after costs); side markets (less accurate than the match price implies, but 5-10c
+  spreads and almost no volume, so bets lose); favourites (good Sep-Oct, bad May-Aug, negative CLV).
 - The original app's training leaked future results (final Elo in training rows); fixed in Oct 2026.
 
 ## Commands
-`python -m esalpha history|backtest|paper|report|probe [--kalshi-coverage] --state <dir>`;
+`python -m esalpha history|backtest|paper|report|sides|poly|probe [--kalshi-coverage] --state <dir>`;
+`python research/poly_vs_kalshi.py|side_markets.py --state <dir>`;
 `python -m pytest -q` (tests/legacy covers the original app).
