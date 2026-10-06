@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 11:08 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 11:13 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,24 +8,24 @@ Updated 2026-10-06 11:08 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 21 | 8 | 13 | 2 | -$23.30 | -14.6% | -0.3c (19) | $976.70 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 39 | 15 | 24 | 19 | $16.42 | +8.5% | -1.2c (36) | $1,016.42 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 39 | 14 | 25 | 20 | $17.76 | +8.8% | -1.2c (36) | $1,017.76 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-28 finished matches. Lower is better; the market line is the bar to beat.
+29 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.4659 | 0.1484 |
-| model | 0.6517 | 0.2288 |
-| blend | 0.4571 | 0.1452 |
+| market | 0.4548 | 0.1439 |
+| model | 0.6463 | 0.2262 |
+| blend | 0.4454 | 0.1407 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 10 | 0.5376 | 0.6202 |
-| lol | 7 | 0.1374 | 0.6715 |
+| lol | 8 | 0.1383 | 0.6498 |
 | r6 | 6 | 0.8571 | 0.8141 |
 | dota2 | 3 | 0.3800 | 0.5516 |
 | ow | 2 | 0.2118 | 0.4022 |
@@ -41,7 +41,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 10:53 | favourite | cs2 | G2 | PARIVISION | YES G2 | 15 | 0.62 | 0.61 | 0.61 | open | - |
 | 2026-10-06 10:53 | favourite | cs2 | Spirit | 1WIN | NO 1WIN | 11 | 0.87 | 0.86 | 0.86 | open | - |
 | 2026-10-06 10:53 | model-only | cs2 | 1WIN | Spirit | YES 1WIN | 131 | 0.14 | 0.37 | 0.14 | open | - |
-| 2026-10-06 09:52 | favourite | lol | Team Vitality | RED Canids | NO RED Canids | 11 | 0.87 | 0.86 | 0.86 | open | - |
+| 2026-10-06 09:52 | favourite | lol | Team Vitality | RED Canids | NO RED Canids | 11 | 0.87 | 0.86 | 0.86 | won | $1.34 |
 | 2026-10-06 09:52 | favourite | dota2 | Blasterbl | Nemiga Gaming | YES Blasterbl | 13 | 0.72 | 0.72 | 0.72 | open | - |
 | 2026-10-06 09:52 | model-only | dota2 | Nemiga Gaming | Blasterbl | NO Blasterbl | 64 | 0.29 | 0.40 | 0.28 | open | - |
 | 2026-10-06 09:52 | favourite | cs2 | Noir Verse | maybe | NO maybe | 12 | 0.78 | 0.78 | 0.78 | open | - |
