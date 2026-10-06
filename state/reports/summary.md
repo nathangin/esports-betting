@@ -1,30 +1,30 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 20:08 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 20:13 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 35 | 7 | 28 | 6 | $19.52 | +5.9% | -0.7c (35) | $1,019.52 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 54 | 5 | 49 | 33 | -$56.64 | -14.2% | -1.1c (54) | $943.36 |
+| model-only | Elo win model alone (control: ignores the market) | 35 | 5 | 30 | 8 | $63.41 | +17.1% | -0.7c (35) | $1,063.41 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 54 | 3 | 51 | 33 | -$68.30 | -16.6% | -1.1c (54) | $931.70 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-59 finished matches. Lower is better; the market line is the bar to beat.
+61 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5208 | 0.1730 |
-| model | 0.6507 | 0.2287 |
-| blend | 0.5172 | 0.1718 |
+| market | 0.5289 | 0.1767 |
+| model | 0.6491 | 0.2279 |
+| blend | 0.5259 | 0.1758 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 28 | 0.6481 | 0.6815 |
+| cs2 | 30 | 0.6560 | 0.6761 |
 | lol | 13 | 0.1859 | 0.6244 |
 | dota2 | 7 | 0.5320 | 0.5483 |
 | r6 | 7 | 0.8001 | 0.7811 |
@@ -49,8 +49,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 15:53 | model-only | cs2 | MASQ | MASONIC | NO MASONIC | 2 | 0.33 | 0.49 | 0.33 | lost | -$0.70 |
 | 2026-10-06 15:53 | favourite | cs2 | MASONIC | MASQ | NO MASQ | 14 | 0.68 | 0.67 | 0.67 | won | $4.26 |
 | 2026-10-06 15:53 | favourite | cs2 | Team Falcons | Natus Vincere | YES Team Falcons | 16 | 0.58 | 0.57 | 0.57 | open | - |
-| 2026-10-06 15:53 | model-only | dota2 | LEGION | MOUZ | YES LEGION | 42 | 0.48 | 0.62 | 0.48 | open | - |
-| 2026-10-06 15:53 | favourite | dota2 | MOUZ | LEGION | NO LEGION | 17 | 0.53 | 0.52 | 0.52 | open | - |
+| 2026-10-06 15:53 | model-only | dota2 | LEGION | MOUZ | YES LEGION | 42 | 0.48 | 0.62 | 0.48 | won | $21.10 |
+| 2026-10-06 15:53 | favourite | dota2 | MOUZ | LEGION | NO LEGION | 17 | 0.53 | 0.52 | 0.52 | lost | -$9.31 |
 | 2026-10-06 14:53 | favourite | r6 | Geekay Esports | Shifters | YES Geekay Esports | 1 | 0.66 | 0.63 | 0.63 | won | $0.32 |
 | 2026-10-06 14:53 | model-only | r6 | Shifters | Geekay Esports | NO Geekay Esports | 24 | 0.39 | 0.44 | 0.37 | lost | -$9.76 |
 | 2026-10-06 14:53 | favourite | lol | Movistar KOI Fénix | Frites Esports Club | NO Frites Esports Club | 11 | 0.89 | 0.89 | 0.89 | won | $1.13 |
