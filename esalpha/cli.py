@@ -23,6 +23,16 @@ def main(argv=None) -> int:
     p.add_argument("--hours-before", type=float, default=6.0, help="hours of candles before each start")
     p.add_argument("--minutes", type=float, default=90, help="time budget for candles")
 
+    p = sub.add_parser("sides", help="download side markets (map winner, total maps, spread) and their candles")
+    p.add_argument("--state", default="state")
+    p.add_argument("--days", type=int, default=90, help="days of recent matches to fetch side candles for")
+    p.add_argument("--minutes", type=float, default=95, help="time budget for candles")
+
+    p = sub.add_parser("poly", help="download Polymarket esports match markets and their pre-match prices")
+    p.add_argument("--state", default="state")
+    p.add_argument("--since", default="2026-08-01")
+    p.add_argument("--minutes", type=float, default=40, help="time budget for price histories")
+
     p = sub.add_parser("backtest", help="walk-forward fake-money backtest on real Kalshi prices; refits the model")
     p.add_argument("--state", default="state")
     p.add_argument("--minutes-before", type=float, default=60.0, help="decide this long before the scheduled start")
@@ -61,6 +71,18 @@ def main(argv=None) -> int:
         from . import history
 
         man = history.build(args.state, days=args.days, hours_before=args.hours_before, minutes=args.minutes)
+        print(json.dumps({k: v for k, v in man.items() if k != "errors"}, indent=1, default=str))
+        print(f"{len(man['errors'])} errors", *man["errors"][:20], sep="\n  ")
+    elif args.cmd == "sides":
+        from . import sides
+
+        man = sides.build(args.state, days=args.days, minutes=args.minutes)
+        print(json.dumps({k: v for k, v in man.items() if k != "errors"}, indent=1, default=str))
+        print(f"{len(man['errors'])} errors", *man["errors"][:20], sep="\n  ")
+    elif args.cmd == "poly":
+        from . import poly
+
+        man = poly.build(args.state, since=args.since, minutes=args.minutes)
         print(json.dumps({k: v for k, v in man.items() if k != "errors"}, indent=1, default=str))
         print(f"{len(man['errors'])} errors", *man["errors"][:20], sep="\n  ")
     elif args.cmd == "backtest":

@@ -63,6 +63,33 @@ What this means:
 The same lesson as the Kalshi weather project: only trust an edge that survives a walk-forward
 test against the market's own price, and judge live results by closing-line value before P&L.
 
+### Looking for other edges (Oct 2026)
+
+Three more ideas, each tested the same way (decisions on days the fit never saw, taker prices,
+fees). None of them makes money.
+
+* **Polymarket's price for the same match.** 3,490 Kalshi matches since late July are also on
+  Polymarket (paired by game, teams and start time; the two exchanges' winners agree on 99.97%).
+  The prices sit 1-2c apart and forecast equally well (log loss 0.564 for both, 60 minutes
+  before the start). Kalshi does drift toward Polymarket before the start (about a third of the
+  gap), but the gap is smaller than the spread plus the fee. Walk-forward, adding Polymarket's
+  price improves Kalshi's log loss by nothing measurable (+0.0004, range spanning zero) once
+  Kalshi's own favourite-longshot pattern is allowed for, and bets on the difference made nothing
+  reliable.
+* **Side markets** (map 1 winner, total maps played). The match price predicts them better than
+  their own prices do: map 1 log loss 0.621 vs 0.641; "over 2.5 maps" 0.669 vs 0.676. The totals
+  market prices a third map at 44% when 40% happen (27% vs 13% when one team is a 90c+
+  favourite). But these markets are thin (in the hour before the start the median one trades
+  nothing) and their spreads are 5-10c, so bets on the difference lost 2-10% after spread and
+  fees. A first version of this test showed a +25% "edge" that was a look-ahead: Kalshi only
+  creates the map-4 market once a match reaches map 4, so using map markets to tell a best-of-3
+  from a best-of-5 leaked the result. The scripts in `research/` take the format from the totals
+  ladder, which is listed before the match.
+* **Favourites again.** On the Polymarket-paired matches (mid-August on), a "stretched" market
+  price that leans toward favourites made +3% (range touching zero), but on the full
+  7,500-match history backing favourites lost 2-8% in every price band, with negative
+  closing-line value; only September and October were good months.
+
 ### Paper trading
 
 Running on GitHub Actions every 15 minutes from Oct 4 2026 (new bets stop after Nov 15). The
@@ -142,6 +169,10 @@ python -m esalpha backtest --state state          # walk-forward backtest, write
 python -m esalpha paper    --state state          # one paper-trading pass
 python -m esalpha report   --state state          # state/reports/summary.md
 python -m esalpha probe                           # check the data sources, save raw samples
+python -m esalpha sides    --state state          # side markets (map winner, total maps) + candles
+python -m esalpha poly     --state state          # Polymarket esports match prices
+python research/poly_vs_kalshi.py --state state   # does Polymarket add anything to Kalshi?
+python research/side_markets.py   --state state   # are side markets consistent with the match price?
 python -m pytest -q
 ```
 
