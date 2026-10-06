@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
     inputs:
       tasks:
-        description: "Space-separated: coverage probe history sides backtest paper"
+        description: "Space-separated: coverage probe history sides poly backtest paper"
         required: true
         default: "history backtest"
       args:
@@ -26,7 +26,8 @@ permissions:
   contents: write
 
 concurrency:
-  group: es-data
+  # one queue per task list, so a long research download does not hold up the daily refresh
+  group: es-data-${{ github.event.inputs.tasks || github.event_name }}
   cancel-in-progress: false
 
 jobs:
@@ -38,7 +39,8 @@ jobs:
       contains(github.event.head_commit.message, '[backtest]') ||
       contains(github.event.head_commit.message, '[paper]') ||
       contains(github.event.head_commit.message, '[coverage]') ||
-      contains(github.event.head_commit.message, '[sides]')
+      contains(github.event.head_commit.message, '[sides]') ||
+      contains(github.event.head_commit.message, '[poly]')
     runs-on: ubuntu-latest
     timeout-minutes: 120
     defaults:
@@ -68,7 +70,7 @@ jobs:
             args="--days 14 --minutes 40"
             if [ "$(date -u +%u)" = "1" ]; then tasks="history backtest"; fi
           elif [ -z "$tasks" ]; then
-            for t in coverage probe history sides backtest paper; do
+            for t in coverage probe history sides poly backtest paper; do
               case "$MSG" in *"[$t]"*) tasks="$tasks $t";; esac
             done
           fi
@@ -89,6 +91,7 @@ jobs:
               coverage) python -m esalpha probe --kalshi-coverage --out state-branch/state/probe 2>&1 | tee -a "$log" ;;
               history)  python -m esalpha history --state state-branch/state $HISTORY_ARGS 2>&1 | tee -a "$log" ;;
               sides)    python -m esalpha sides --state state-branch/state 2>&1 | tee -a "$log" ;;
+              poly)     python -m esalpha poly --state state-branch/state 2>&1 | tee -a "$log" ;;
               backtest) python -m esalpha backtest --state state-branch/state 2>&1 | tee -a "$log" ;;
               paper)    python -m esalpha paper --state state-branch/state 2>&1 | tee -a "$log" ;;
               *) echo "unknown task $t" ;;
