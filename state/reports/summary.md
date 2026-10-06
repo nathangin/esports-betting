@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-06 18:38 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-06 18:43 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,24 +8,24 @@ Updated 2026-10-06 18:38 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 34 | 10 | 24 | 6 | $71.91 | +25.9% | -0.7c (33) | $1,071.91 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 54 | 12 | 42 | 29 | -$39.40 | -11.5% | -1.1c (54) | $960.60 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 54 | 11 | 43 | 30 | -$37.75 | -10.7% | -1.1c (54) | $962.25 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-48 finished matches. Lower is better; the market line is the bar to beat.
+49 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5178 | 0.1711 |
-| model | 0.6423 | 0.2248 |
-| blend | 0.5151 | 0.1701 |
+| market | 0.5108 | 0.1681 |
+| model | 0.6412 | 0.2242 |
+| blend | 0.5076 | 0.1670 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 20 | 0.6511 | 0.6634 |
-| lol | 11 | 0.1933 | 0.6319 |
+| lol | 12 | 0.1917 | 0.6282 |
 | dota2 | 7 | 0.5320 | 0.5483 |
 | r6 | 6 | 0.8571 | 0.8141 |
 | ow | 4 | 0.2097 | 0.4720 |
@@ -53,7 +53,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-06 14:53 | favourite | r6 | Geekay Esports | Shifters | YES Geekay Esports | 1 | 0.66 | 0.63 | 0.63 | open | - |
 | 2026-10-06 14:53 | model-only | r6 | Shifters | Geekay Esports | NO Geekay Esports | 24 | 0.39 | 0.44 | 0.37 | open | - |
 | 2026-10-06 14:53 | favourite | lol | Movistar KOI Fénix | Frites Esports Club | NO Frites Esports Club | 11 | 0.89 | 0.89 | 0.89 | open | - |
-| 2026-10-06 14:53 | favourite | lol | TLN Pirates | Bushido Wildcats | YES TLN Pirates | 11 | 0.84 | 0.84 | 0.84 | open | - |
+| 2026-10-06 14:53 | favourite | lol | TLN Pirates | Bushido Wildcats | YES TLN Pirates | 11 | 0.84 | 0.84 | 0.84 | won | $1.65 |
 | 2026-10-06 14:53 | favourite | lol | Galions | Berlin International Gaming | NO Berlin International Gaming | 12 | 0.80 | 0.80 | 0.80 | won | $2.26 |
 | 2026-10-06 14:53 | model-only | lol | Berlin International Gaming | Galions | YES Berlin International Gaming | 94 | 0.21 | 0.45 | 0.20 | lost | -$20.84 |
 | 2026-10-06 13:23 | favourite | cs2 | FURIA | Aurora Gaming | NO Aurora Gaming | 17 | 0.55 | 0.55 | 0.54 | open | - |
