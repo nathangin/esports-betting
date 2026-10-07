@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-07 13:06 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-07 13:11 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-07 13:06 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 50 | 6 | 44 | 11 | -$57.74 | -9.4% | -1.1c (49) | $942.26 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 87 | 13 | 74 | 54 | -$24.61 | -4.2% | -0.5c (84) | $975.39 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 87 | 12 | 75 | 55 | -$22.64 | -3.8% | -0.5c (84) | $977.36 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -46,7 +46,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-07 08:46 | favourite | cs2 | G2 Ares | Falcons Force | YES G2 Ares | 16 | 0.56 | 0.55 | 0.55 | won | $6.76 |
 | 2026-10-07 08:46 | model-only | cs2 | SINQU | PURE | NO PURE | 86 | 0.22 | 0.41 | 0.20 | lost | -$19.96 |
 | 2026-10-07 08:46 | favourite | cs2 | PURE | SINQU | YES PURE | 11 | 0.81 | 0.80 | 0.80 | won | $1.97 |
-| 2026-10-07 08:46 | favourite | cs2 | Copenhagen Wolves | Bread Eaters Esports | NO Bread Eaters Esports | 11 | 0.81 | 0.80 | 0.80 | open | - |
+| 2026-10-07 08:46 | favourite | cs2 | Copenhagen Wolves | Bread Eaters Esports | NO Bread Eaters Esports | 11 | 0.81 | 0.80 | 0.80 | won | $1.97 |
 | 2026-10-07 08:46 | model-only | cs2 | Falcons Force | OG | YES Falcons Force | 66 | 0.29 | 0.43 | 0.28 | won | $45.90 |
 | 2026-10-07 08:46 | favourite | cs2 | OG | Falcons Force | NO Falcons Force | 12 | 0.73 | 0.72 | 0.72 | lost | -$8.93 |
 | 2026-10-07 08:46 | favourite | cs2 | PURE | Orion Wanderers | NO Orion Wanderers | 10 | 0.86 | 0.85 | 0.85 | won | $1.31 |
