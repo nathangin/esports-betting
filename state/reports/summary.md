@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-07 12:06 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-07 12:11 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-07 12:06 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 50 | 7 | 43 | 11 | -$37.67 | -6.3% | -1.1c (49) | $962.33 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 85 | 17 | 68 | 48 | -$44.11 | -8.2% | -0.5c (84) | $955.89 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 85 | 15 | 70 | 50 | -$35.28 | -6.3% | -0.5c (84) | $964.72 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -56,8 +56,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-07 08:46 | favourite | cs2 | Gothic | LPH Gaming | YES Gothic | 12 | 0.75 | 0.75 | 0.75 | won | $2.84 |
 | 2026-10-07 08:46 | favourite | cs2 | ENJOY | ILLYRIANS | YES ENJOY | 17 | 0.52 | 0.52 | 0.52 | open | - |
 | 2026-10-07 08:46 | favourite | lol | FlyQuest | Shopify Rebellion | YES FlyQuest | 14 | 0.65 | 0.65 | 0.65 | open | - |
-| 2026-10-07 08:46 | favourite | cs2 | Falcons Force | Orion Wanderers | NO Orion Wanderers | 11 | 0.80 | 0.79 | 0.79 | open | - |
-| 2026-10-07 08:46 | favourite | cs2 | PURE | G2 Ares | NO G2 Ares | 16 | 0.56 | 0.54 | 0.54 | open | - |
+| 2026-10-07 08:46 | favourite | cs2 | Falcons Force | Orion Wanderers | NO Orion Wanderers | 11 | 0.80 | 0.79 | 0.79 | won | $2.07 |
+| 2026-10-07 08:46 | favourite | cs2 | PURE | G2 Ares | NO G2 Ares | 16 | 0.56 | 0.54 | 0.54 | won | $6.76 |
 | 2026-10-07 08:46 | favourite | cs2 | OG | SINQU | YES OG | 1 | 0.89 | 0.89 | 0.89 | open | - |
 | 2026-10-07 08:46 | model-only | cs2 | Gothic | Esport Academy Copenhagen | YES Gothic | 60 | 0.32 | 0.48 | 0.31 | open | - |
 | 2026-10-07 07:50 | favourite | dota2 | Yellow Submarine | Blasterbl | YES Yellow Submarine | 16 | 0.56 | 0.56 | 0.56 | open | - |
