@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-07 13:51 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-07 14:06 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,28 +8,28 @@ Updated 2026-10-07 13:51 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 50 | 4 | 46 | 12 | -$38.07 | -5.8% | -1.1c (49) | $961.93 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 87 | 10 | 77 | 55 | -$41.18 | -6.7% | -0.5c (86) | $958.82 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 87 | 10 | 77 | 55 | -$41.18 | -6.7% | -0.4c (86) | $958.82 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-95 finished matches. Lower is better; the market line is the bar to beat.
+97 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5166 | 0.1693 |
-| model | 0.6409 | 0.2242 |
-| blend | 0.5124 | 0.1676 |
+| market | 0.5141 | 0.1688 |
+| model | 0.6407 | 0.2241 |
+| blend | 0.5100 | 0.1672 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 53 | 0.5613 | 0.6546 |
+| cs2 | 54 | 0.5514 | 0.6528 |
 | lol | 18 | 0.3450 | 0.6448 |
 | dota2 | 11 | 0.5518 | 0.5657 |
 | r6 | 8 | 0.7369 | 0.7490 |
 | ow | 4 | 0.2097 | 0.4720 |
-| valorant | 1 | 0.3147 | 0.4822 |
+| valorant | 2 | 0.5402 | 0.5937 |
 
 ## Latest bets
 
