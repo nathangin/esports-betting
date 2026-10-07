@@ -1,32 +1,32 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-07 14:11 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-07 15:48 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 50 | 4 | 46 | 12 | -$38.07 | -5.8% | -1.1c (49) | $961.93 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 87 | 9 | 78 | 56 | -$33.32 | -5.4% | -0.4c (86) | $966.68 |
+| model-only | Elo win model alone (control: ignores the market) | 50 | 3 | 47 | 12 | -$39.14 | -5.9% | -1.1c (49) | $960.86 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 87 | 7 | 80 | 58 | -$30.99 | -4.9% | -0.4c (86) | $969.01 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-97 finished matches. Lower is better; the market line is the bar to beat.
+110 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5141 | 0.1688 |
-| model | 0.6407 | 0.2241 |
-| blend | 0.5100 | 0.1672 |
+| market | 0.5260 | 0.1734 |
+| model | 0.6448 | 0.2259 |
+| blend | 0.5234 | 0.1721 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 54 | 0.5514 | 0.6528 |
+| cs2 | 65 | 0.5631 | 0.6602 |
 | lol | 18 | 0.3450 | 0.6448 |
-| dota2 | 11 | 0.5518 | 0.5657 |
+| dota2 | 13 | 0.5563 | 0.5647 |
 | r6 | 8 | 0.7369 | 0.7490 |
 | ow | 4 | 0.2097 | 0.4720 |
 | valorant | 2 | 0.5402 | 0.5937 |
@@ -38,7 +38,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-10-07 12:51 | favourite | cs2 | megoshort | Azuolas | YES megoshort | 4 | 0.57 | 0.53 | 0.53 | open | - |
-| 2026-10-07 12:21 | favourite | cs2 | Vitality Academy | Royal Foxes Esports | NO Royal Foxes Esports | 3 | 0.78 | 0.77 | 0.77 | open | - |
+| 2026-10-07 12:21 | favourite | cs2 | Vitality Academy | Royal Foxes Esports | NO Royal Foxes Esports | 3 | 0.78 | 0.77 | 0.77 | won | $0.62 |
 | 2026-10-07 10:51 | favourite | cs2 | Acend | Sashi Esport | YES Acend | 7 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-10-07 10:51 | favourite | cs2 | Spirit | M80 | YES Spirit | 11 | 0.86 | 0.86 | 0.86 | open | - |
 | 2026-10-07 08:46 | model-only | cs2 | TheChampionGG | WRAITH PCIFIC | YES TheChampionGG | 95 | 0.20 | 0.43 | 0.20 | lost | -$20.07 |
