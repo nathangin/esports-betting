@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-07 14:06 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-07 14:11 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-07 14:06 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 50 | 4 | 46 | 12 | -$38.07 | -5.8% | -1.1c (49) | $961.93 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 87 | 10 | 77 | 55 | -$41.18 | -6.7% | -0.4c (86) | $958.82 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 87 | 9 | 78 | 56 | -$33.32 | -5.4% | -0.4c (86) | $966.68 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -57,7 +57,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-07 08:46 | favourite | cs2 | Esport Academy Copenhagen | Gothic | YES Esport Academy Copenhagen | 13 | 0.70 | 0.69 | 0.69 | lost | -$9.30 |
 | 2026-10-07 08:46 | model-only | cs2 | LPH Gaming | Gothic | YES LPH Gaming | 6 | 0.25 | 0.48 | 0.25 | lost | -$1.58 |
 | 2026-10-07 08:46 | favourite | cs2 | Gothic | LPH Gaming | YES Gothic | 12 | 0.75 | 0.75 | 0.75 | won | $2.84 |
-| 2026-10-07 08:46 | favourite | cs2 | ENJOY | ILLYRIANS | YES ENJOY | 17 | 0.52 | 0.52 | 0.52 | open | - |
+| 2026-10-07 08:46 | favourite | cs2 | ENJOY | ILLYRIANS | YES ENJOY | 17 | 0.52 | 0.52 | 0.52 | won | $7.86 |
 | 2026-10-07 08:46 | favourite | lol | FlyQuest | Shopify Rebellion | YES FlyQuest | 14 | 0.65 | 0.65 | 0.65 | won | $4.67 |
 | 2026-10-07 08:46 | favourite | cs2 | Falcons Force | Orion Wanderers | NO Orion Wanderers | 11 | 0.80 | 0.79 | 0.79 | won | $2.07 |
 | 2026-10-07 08:46 | favourite | cs2 | PURE | G2 Ares | NO G2 Ares | 16 | 0.56 | 0.54 | 0.54 | won | $6.76 |
