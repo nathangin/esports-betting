@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-07 07:40 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-07 07:50 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 39 | 7 | 32 | 8 | $27.58 | +6.8% | -0.7c (37) | $1,027.58 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 64 | 11 | 53 | 35 | -$61.61 | -14.6% | -1.1c (57) | $938.39 |
+| model-only | Elo win model alone (control: ignores the market) | 43 | 11 | 32 | 8 | $27.58 | +6.8% | -0.7c (39) | $1,027.58 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 69 | 16 | 53 | 35 | -$61.61 | -14.6% | -1.4c (64) | $938.39 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -36,31 +36,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-07 06:50 | favourite | cs2 | Falcons Force | SINQU | YES Falcons Force | 12 | 0.76 | 0.75 | 0.75 | open | - |
-| 2026-10-07 06:50 | favourite | cs2 | OG | PURE | YES OG | 13 | 0.68 | 0.67 | 0.67 | open | - |
-| 2026-10-07 06:50 | model-only | cs2 | PURE | OG | NO OG | 29 | 0.34 | 0.41 | 0.33 | open | - |
-| 2026-10-07 06:50 | favourite | cs2 | XI Esport | Passion Academy | YES XI Esport | 13 | 0.66 | 0.65 | 0.65 | open | - |
+| 2026-10-07 07:50 | favourite | valorant | NRG | T1 | NO T1 | 12 | 0.73 | 0.73 | 0.73 | open | - |
+| 2026-10-07 07:50 | model-only | valorant | T1 | NRG | NO NRG | 72 | 0.27 | 0.38 | 0.27 | open | - |
+| 2026-10-07 07:50 | favourite | lol | Shopify Rebellion | GAM Esports | YES Shopify Rebellion | 14 | 0.63 | 0.63 | 0.63 | open | - |
+| 2026-10-07 07:50 | model-only | lol | GAM Esports | Shopify Rebellion | YES GAM Esports | 53 | 0.37 | 0.60 | 0.37 | open | - |
+| 2026-10-07 07:50 | favourite | dota2 | Yellow Submarine | Blasterbl | YES Yellow Submarine | 16 | 0.56 | 0.56 | 0.56 | open | - |
+| 2026-10-07 07:50 | model-only | dota2 | Yellow Submarine | Blasterbl | YES Yellow Submarine | 35 | 0.56 | 0.63 | 0.56 | open | - |
+| 2026-10-07 07:50 | favourite | dota2 | Direborn | Yangon Galacticos | YES Direborn | 6 | 0.70 | 0.67 | 0.67 | open | - |
+| 2026-10-07 07:50 | model-only | dota2 | Yangon Galacticos | Direborn | YES Yangon Galacticos | 3 | 0.34 | 0.43 | 0.33 | open | - |
+| 2026-10-07 07:50 | favourite | cs2 | HOTU | STATE | YES HOTU | 11 | 0.83 | 0.83 | 0.83 | open | - |
 | 2026-10-07 06:50 | model-only | cs2 | XI Esport | Passion Academy | YES XI Esport | 30 | 0.66 | 0.73 | 0.65 | open | - |
-| 2026-10-07 06:50 | favourite | cs2 | G2 Ares | Orion Wanderers | NO Orion Wanderers | 1 | 0.89 | 0.88 | 0.88 | open | - |
-| 2026-10-07 06:50 | favourite | cs2 | MORROW | maybe | YES MORROW | 13 | 0.69 | 0.51 | 0.51 | open | - |
-| 2026-10-07 06:50 | favourite | cs2 | los kogutos | MORROW | YES los kogutos | 13 | 0.69 | 0.60 | 0.60 | open | - |
 | 2026-10-07 06:50 | favourite | cs2 | Leo Team | Walczaki | YES Leo Team | 16 | 0.54 | 0.50 | 0.50 | open | - |
+| 2026-10-07 06:50 | favourite | cs2 | los kogutos | MORROW | YES los kogutos | 13 | 0.69 | 0.60 | 0.60 | open | - |
+| 2026-10-07 06:50 | favourite | cs2 | MORROW | maybe | YES MORROW | 13 | 0.69 | 0.51 | 0.51 | open | - |
+| 2026-10-07 06:50 | favourite | cs2 | G2 Ares | Orion Wanderers | NO Orion Wanderers | 1 | 0.89 | 0.88 | 0.88 | open | - |
+| 2026-10-07 06:50 | favourite | cs2 | XI Esport | Passion Academy | YES XI Esport | 13 | 0.66 | 0.65 | 0.65 | open | - |
+| 2026-10-07 06:50 | model-only | cs2 | PURE | OG | NO OG | 29 | 0.34 | 0.41 | 0.33 | open | - |
+| 2026-10-07 06:50 | favourite | cs2 | OG | PURE | YES OG | 13 | 0.68 | 0.67 | 0.67 | open | - |
+| 2026-10-07 06:50 | favourite | cs2 | Falcons Force | SINQU | YES Falcons Force | 12 | 0.76 | 0.75 | 0.75 | open | - |
 | 2026-10-07 05:50 | favourite | lol | FlyQuest | GAM Esports | YES FlyQuest | 12 | 0.71 | 0.71 | 0.71 | open | - |
 | 2026-10-07 05:50 | model-only | lol | GAM Esports | FlyQuest | YES GAM Esports | 67 | 0.29 | 0.54 | 0.29 | open | - |
-| 2026-10-07 04:50 | model-only | dota2 | InterActive Philippines | Xipto Esports | YES InterActive Philippines | 81 | 0.24 | 0.39 | 0.23 | open | - |
 | 2026-10-07 04:50 | favourite | dota2 | Xipto Esports | InterActive Philippines | YES Xipto Esports | 1 | 0.78 | 0.77 | 0.77 | open | - |
+| 2026-10-07 04:50 | model-only | dota2 | InterActive Philippines | Xipto Esports | YES InterActive Philippines | 81 | 0.24 | 0.39 | 0.23 | open | - |
 | 2026-10-07 01:54 | favourite | dota2 | Direborn | IaChIo123 | YES Direborn | 1 | 0.73 | 0.59 | 0.59 | won | $0.25 |
 | 2026-10-06 18:53 | model-only | lol | Fuego | Cupid Esports | NO Cupid Esports | 126 | 0.16 | 0.30 | 0.16 | lost | -$21.35 |
 | 2026-10-06 17:53 | model-only | r6 | Twisted Minds | Virtus.pro | YES Twisted Minds | 51 | 0.27 | 0.41 | 0.26 | lost | -$14.48 |
-| 2026-10-06 17:23 | model-only | cs2 | menszczysni | ZOTIX | YES menszczysni | 2 | 0.34 | 0.52 | 0.34 | open | - |
-| 2026-10-06 17:23 | model-only | cs2 | PENSIONERS | Regnum4Games | YES PENSIONERS | 2 | 0.29 | 0.35 | 0.28 | lost | -$0.61 |
-| 2026-10-06 17:23 | model-only | cs2 | TTG Esports | KUUSAMO.gg | YES TTG Esports | 4 | 0.42 | 0.58 | 0.44 | open | - |
-| 2026-10-06 16:53 | favourite | cs2 | PARTIZAN | 99firepower 1utility | YES PARTIZAN | 12 | 0.62 | 0.51 | 0.51 | lost | -$7.64 |
-| 2026-10-06 15:53 | favourite | cs2 | Legacy | M80 | YES Legacy | 17 | 0.55 | 0.55 | 0.55 | lost | -$9.65 |
-| 2026-10-06 15:53 | model-only | cs2 | WRAITH PCIFIC | Lavked | YES WRAITH PCIFIC | 47 | 0.43 | 0.58 | 0.43 | lost | -$21.02 |
-| 2026-10-06 15:53 | favourite | cs2 | Lavked | WRAITH PCIFIC | YES Lavked | 16 | 0.57 | 0.57 | 0.57 | won | $6.60 |
-| 2026-10-06 15:53 | model-only | cs2 | Legacy | M80 | YES Legacy | 37 | 0.55 | 0.63 | 0.55 | lost | -$21.00 |
-| 2026-10-06 15:53 | model-only | cs2 | MASQ | MASONIC | NO MASONIC | 2 | 0.33 | 0.49 | 0.33 | lost | -$0.70 |
 
 ## Backtest on real Kalshi prices
 
