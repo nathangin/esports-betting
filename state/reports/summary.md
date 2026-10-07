@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-07 12:31 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-07 12:36 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,24 +8,24 @@ Updated 2026-10-07 12:31 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 50 | 6 | 44 | 11 | -$57.74 | -9.4% | -1.1c (49) | $942.26 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 86 | 14 | 72 | 52 | -$28.54 | -5.0% | -0.5c (84) | $971.46 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 86 | 12 | 74 | 54 | -$24.61 | -4.2% | -0.5c (84) | $975.39 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-86 finished matches. Lower is better; the market line is the bar to beat.
+89 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5161 | 0.1689 |
-| model | 0.6369 | 0.2222 |
-| blend | 0.5125 | 0.1674 |
+| market | 0.5125 | 0.1675 |
+| model | 0.6336 | 0.2207 |
+| blend | 0.5086 | 0.1659 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 46 | 0.5720 | 0.6539 |
-| lol | 17 | 0.3395 | 0.6531 |
+| cs2 | 48 | 0.5648 | 0.6499 |
+| lol | 18 | 0.3450 | 0.6448 |
 | dota2 | 10 | 0.5249 | 0.5229 |
 | r6 | 8 | 0.7369 | 0.7490 |
 | ow | 4 | 0.2097 | 0.4720 |
@@ -60,7 +60,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-07 08:46 | favourite | lol | FlyQuest | Shopify Rebellion | YES FlyQuest | 14 | 0.65 | 0.65 | 0.65 | won | $4.67 |
 | 2026-10-07 08:46 | favourite | cs2 | Falcons Force | Orion Wanderers | NO Orion Wanderers | 11 | 0.80 | 0.79 | 0.79 | won | $2.07 |
 | 2026-10-07 08:46 | favourite | cs2 | PURE | G2 Ares | NO G2 Ares | 16 | 0.56 | 0.54 | 0.54 | won | $6.76 |
-| 2026-10-07 08:46 | favourite | cs2 | OG | SINQU | YES OG | 1 | 0.89 | 0.89 | 0.89 | open | - |
+| 2026-10-07 08:46 | favourite | cs2 | OG | SINQU | YES OG | 1 | 0.89 | 0.89 | 0.89 | won | $0.10 |
 | 2026-10-07 07:50 | favourite | dota2 | Yellow Submarine | Blasterbl | YES Yellow Submarine | 16 | 0.56 | 0.56 | 0.56 | open | - |
 
 ## Backtest on real Kalshi prices
