@@ -90,6 +90,31 @@ fees). None of them makes money.
   7,500-match history backing favourites lost 2-8% in every price band, with negative
   closing-line value; only September and October were good months.
 
+### Times of day, games and bet types (Oct 2026)
+
+`research/time_of_day_rules.py` tries every simple rule built from these:
+- the game
+- the match's start hour (ET)
+- weekday or weekend
+- minutes before the start (240 down to 5)
+- favourite or underdog
+- price band
+- liquidity so far
+- the tournament
+
+Data: 8,771 matches from May 7 to Oct 6. Each rule was picked on May 7 to Aug 5 and checked on
+Aug 6 to Oct 6, then the other way round.
+
+* Of 564 rules with 40+ bets in the first period, 4 made 5%+ with a t-stat of 2+. Three of them
+  made money afterwards: +2.7% together on 358 bets. Picking on the second period instead: 11
+  rules, 3 held, and together they lost 4.6%. Rules that made money in both periods: 27 of 432,
+  against about 21 expected by luck alone.
+* Favourites lose 2-4% at every start time and every decision time. Underdogs lose 6-20%
+  everywhere, and worst of all in thin markets.
+* One slice made money in both periods: League of Legends favourites priced 90c or more, about
+  +3% (95% range +0.3% to +5.1% at 5 minutes before the start). That is about 185 bets in five
+  months, or roughly 2.5c per contract.
+
 ### Paper trading
 
 Running on GitHub Actions every 15 minutes from Oct 4 2026 (new bets stop after Nov 15). The
@@ -173,6 +198,7 @@ python -m esalpha sides    --state state          # side markets (map winner, to
 python -m esalpha poly     --state state          # Polymarket esports match prices
 python research/poly_vs_kalshi.py --state state   # does Polymarket add anything to Kalshi?
 python research/side_markets.py   --state state   # are side markets consistent with the match price?
+python research/time_of_day_rules.py --state state # every game / start-hour / timing / price rule, two periods
 python -m pytest -q
 ```
 
