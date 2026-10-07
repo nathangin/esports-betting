@@ -1,5 +1,5 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/markets?tickers=KXCS2GAME-26OCT051500LLEACE-EACE%2CKXCS2GAME-26OCT051500XISTR-XI%2CKXCS2GAME-26OCT061430KSMTTG-TTG%2CKXCS2GAME-26OCT061430ZOTIXMEN-MEN%2CKXLOLGAME-26OCT061600FUECPD-CPD&limit=200",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/markets?tickers=KXCS2GAME-26OCT051500LLEACE-EACE%2CKXCS2GAME-26OCT051500XISTR-XI%2CKXCS2GAME-26OCT061430KSMTTG-TTG%2CKXCS2GAME-26OCT061430ZOTIXMEN-MEN&limit=200",
  "status": 200,
  "body": {
   "cursor": "",
@@ -74,7 +74,7 @@
     "last_price_dollars": "0.8100",
     "latest_expiration_time": "2026-10-07T19:00:00Z",
     "market_type": "binary",
-    "no_ask_dollars": "0.3800",
+    "no_ask_dollars": "0.4100",
     "no_bid_dollars": "0.1400",
     "no_sub_title": "XI Esport",
     "notional_value_dollars": "1.0000",
@@ -106,8 +106,8 @@
     "volume_fp": "279.03",
     "yes_ask_dollars": "0.8600",
     "yes_ask_size_fp": "6.00",
-    "yes_bid_dollars": "0.6200",
-    "yes_bid_size_fp": "18.00",
+    "yes_bid_dollars": "0.5900",
+    "yes_bid_size_fp": "2.00",
     "yes_sub_title": "XI Esport"
    },
    {
@@ -181,7 +181,7 @@
     "latest_expiration_time": "2026-10-08T18:30:00Z",
     "market_type": "binary",
     "no_ask_dollars": "0.6800",
-    "no_bid_dollars": "0.6200",
+    "no_bid_dollars": "0.6500",
     "no_sub_title": "menszczysni",
     "notional_value_dollars": "1.0000",
     "occurrence_datetime": "2026-10-06T22:30:00Z",
@@ -210,65 +210,11 @@
     "updated_time": "2026-10-06T19:05:27.99894Z",
     "volume_24h_fp": "9.83",
     "volume_fp": "9.83",
-    "yes_ask_dollars": "0.3800",
-    "yes_ask_size_fp": "500.00",
+    "yes_ask_dollars": "0.3500",
+    "yes_ask_size_fp": "89.10",
     "yes_bid_dollars": "0.3200",
     "yes_bid_size_fp": "1.00",
     "yes_sub_title": "menszczysni"
-   },
-   {
-    "can_close_early": true,
-    "close_time": "2026-10-06T23:29:48Z",
-    "created_time": "2026-10-03T00:00:52.005734Z",
-    "custom_strike": {
-     "esports_competitor": "cf2b28e8-33ae-47d6-b8fa-680b912c6d25"
-    },
-    "early_close_condition": "This market will close and expire after a winner is declared.",
-    "event_ticker": "KXLOLGAME-26OCT061600FUECPD",
-    "exchange_index": 0,
-    "expected_expiration_time": "2026-10-07T00:00:00Z",
-    "expiration_time": "2026-10-08T20:00:00Z",
-    "expiration_value": "Cupid Esports",
-    "last_price_dollars": "0.9900",
-    "latest_expiration_time": "2026-10-08T20:00:00Z",
-    "market_type": "binary",
-    "no_ask_dollars": "1.0000",
-    "no_bid_dollars": "0.0000",
-    "no_sub_title": "Cupid Esports",
-    "notional_value_dollars": "1.0000",
-    "occurrence_datetime": "2026-10-07T00:00:00Z",
-    "open_interest_fp": "22166.51",
-    "open_time": "2026-10-03T00:05:00Z",
-    "previous_price_dollars": "0.8400",
-    "previous_yes_ask_dollars": "0.8300",
-    "previous_yes_bid_dollars": "0.8200",
-    "price_level_structure": "linear_cent",
-    "price_ranges": [
-     {
-      "end": "1.0000",
-      "start": "0.0000",
-      "step": "0.0100"
-     }
-    ],
-    "result": "yes",
-    "rules_primary": "If Cupid Esports wins the LCS Promotion 2027: Fuego vs. Cupid Esports League of Legends match originally scheduled for Oct 6, 2026 at 4:00 PM EDT, then the market resolves to Yes.",
-    "rules_secondary": "The following market refers to the full match in the LCS Promotion 2027: Fuego vs. Cupid Esports League of Legends match originally scheduled for Oct 6, 2026 at 4:00 PM EDT\nIf the relevant match is postponed and not started within 48 hours of its originally scheduled start time, the market will resolve to the fair market price.\nIf the relevant match is cancelled before play begins, the market will resolve to the fair market price.\nIf the relevant match is forfeited before any play occurs, the market will resolve to the fair market price.\nIf the relevant match begins and is subsequently forfeited, the market will resolve according to the official result published by the governing body or tournament organizer.\n\nKalshi is not affiliated, associated, authorized, endorsed by, or in any way officially connected with the Governing League. All trademarks, logos, and brand names are the property of their respective owners.",
-    "settlement_bounds_type": "default",
-    "settlement_timer_seconds": 119,
-    "settlement_ts": "2026-10-06T23:32:47.119489Z",
-    "settlement_value_dollars": "1.0000",
-    "status": "finalized",
-    "strike_type": "structured",
-    "ticker": "KXLOLGAME-26OCT061600FUECPD-CPD",
-    "title": "Cupid Esports wins",
-    "updated_time": "2026-10-06T23:32:47.515046Z",
-    "volume_24h_fp": "40113.87",
-    "volume_fp": "40134.98",
-    "yes_ask_dollars": "1.0000",
-    "yes_ask_size_fp": "0.00",
-    "yes_bid_dollars": "0.0000",
-    "yes_bid_size_fp": "0.00",
-    "yes_sub_title": "Cupid Esports"
    }
   ]
  }
