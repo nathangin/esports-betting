@@ -1,30 +1,30 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-07 11:11 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-07 11:21 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 50 | 8 | 42 | 11 | -$17.23 | -3.0% | -1.1c (49) | $982.77 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 85 | 19 | 66 | 46 | -$48.94 | -9.4% | -0.4c (79) | $951.06 |
+| model-only | Elo win model alone (control: ignores the market) | 50 | 7 | 43 | 11 | -$37.67 | -6.3% | -1.1c (49) | $962.33 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 85 | 18 | 67 | 47 | -$45.87 | -8.7% | -0.4c (79) | $954.13 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-80 finished matches. Lower is better; the market line is the bar to beat.
+81 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5193 | 0.1702 |
-| model | 0.6360 | 0.2218 |
-| blend | 0.5162 | 0.1688 |
+| market | 0.5285 | 0.1745 |
+| model | 0.6386 | 0.2231 |
+| blend | 0.5264 | 0.1734 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 41 | 0.5802 | 0.6505 |
+| cs2 | 42 | 0.5965 | 0.6552 |
 | lol | 17 | 0.3395 | 0.6531 |
 | dota2 | 10 | 0.5249 | 0.5229 |
 | r6 | 8 | 0.7369 | 0.7490 |
