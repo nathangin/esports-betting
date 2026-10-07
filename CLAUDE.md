@@ -45,9 +45,13 @@ fake-money paper trading on GitHub Actions). See README.md for results.
 - Also no edge (Oct 2026, `research/`): Polymarket's price (same accuracy as Kalshi, 1-2c apart,
   nothing left after costs); side markets (less accurate than the match price implies, but 5-10c
   spreads and almost no volume, so bets lose); favourites (good Sep-Oct, bad May-Aug, negative CLV).
+- Time-of-day / game / weekday / timing / liquidity / tournament rules (Oct 2026,
+  `research/time_of_day_rules.py`): no persistence beyond luck (27 of 432 rules made money in both
+  periods vs ~21 by chance). Underdogs lose 6-20% everywhere; only LoL favourites at 90c+ made ~+3%
+  in both periods (~185 bets in 5 months).
 - The original app's training leaked future results (final Elo in training rows); fixed in Oct 2026.
 
 ## Commands
 `python -m esalpha history|backtest|paper|report|sides|poly|probe [--kalshi-coverage] --state <dir>`;
-`python research/poly_vs_kalshi.py|side_markets.py --state <dir>`;
+`python research/poly_vs_kalshi.py|side_markets.py|time_of_day_rules.py --state <dir>`;
 `python -m pytest -q` (tests/legacy covers the original app).
