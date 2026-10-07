@@ -1,32 +1,32 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-07 09:41 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-07 10:11 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 50 | 14 | 36 | 10 | $15.10 | +3.2% | -1.4c (45) | $1,015.10 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 83 | 24 | 59 | 40 | -$60.12 | -13.1% | -0.6c (71) | $939.88 |
+| model-only | Elo win model alone (control: ignores the market) | 50 | 11 | 39 | 10 | -$41.58 | -7.8% | -1.4c (45) | $958.42 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 83 | 21 | 62 | 43 | -$46.44 | -9.6% | -0.6c (71) | $953.56 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-71 finished matches. Lower is better; the market line is the bar to beat.
+74 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5462 | 0.1820 |
-| model | 0.6421 | 0.2247 |
-| blend | 0.5460 | 0.1814 |
+| market | 0.5344 | 0.1770 |
+| model | 0.6339 | 0.2208 |
+| blend | 0.5333 | 0.1763 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 34 | 0.6396 | 0.6703 |
+| cs2 | 36 | 0.6181 | 0.6560 |
 | lol | 16 | 0.3318 | 0.6367 |
-| dota2 | 9 | 0.5545 | 0.5259 |
+| dota2 | 10 | 0.5249 | 0.5229 |
 | r6 | 8 | 0.7369 | 0.7490 |
 | ow | 4 | 0.2097 | 0.4720 |
 
@@ -38,10 +38,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-10-07 08:46 | favourite | cs2 | OG | SINQU | YES OG | 1 | 0.89 | 0.89 | 0.89 | open | - |
 | 2026-10-07 08:46 | model-only | cs2 | TheChampionGG | WRAITH PCIFIC | YES TheChampionGG | 95 | 0.20 | 0.43 | 0.20 | open | - |
-| 2026-10-07 08:46 | model-only | cs2 | Falcons Force | G2 Ares | YES Falcons Force | 34 | 0.46 | 0.51 | 0.45 | open | - |
-| 2026-10-07 08:46 | favourite | cs2 | G2 Ares | Falcons Force | YES G2 Ares | 16 | 0.56 | 0.55 | 0.55 | open | - |
-| 2026-10-07 08:46 | model-only | cs2 | SINQU | PURE | NO PURE | 86 | 0.22 | 0.41 | 0.20 | open | - |
-| 2026-10-07 08:46 | favourite | cs2 | PURE | SINQU | YES PURE | 11 | 0.81 | 0.80 | 0.80 | open | - |
+| 2026-10-07 08:46 | model-only | cs2 | Falcons Force | G2 Ares | YES Falcons Force | 34 | 0.46 | 0.51 | 0.45 | lost | -$16.24 |
+| 2026-10-07 08:46 | favourite | cs2 | G2 Ares | Falcons Force | YES G2 Ares | 16 | 0.56 | 0.55 | 0.55 | won | $6.76 |
+| 2026-10-07 08:46 | model-only | cs2 | SINQU | PURE | NO PURE | 86 | 0.22 | 0.41 | 0.20 | lost | -$19.96 |
+| 2026-10-07 08:46 | favourite | cs2 | PURE | SINQU | YES PURE | 11 | 0.81 | 0.80 | 0.80 | won | $1.97 |
 | 2026-10-07 08:46 | model-only | cs2 | Falcons Force | OG | YES Falcons Force | 66 | 0.29 | 0.43 | 0.28 | open | - |
 | 2026-10-07 08:46 | favourite | cs2 | OG | Falcons Force | NO Falcons Force | 12 | 0.73 | 0.72 | 0.72 | open | - |
 | 2026-10-07 08:46 | favourite | cs2 | PURE | Orion Wanderers | NO Orion Wanderers | 10 | 0.86 | 0.85 | 0.85 | open | - |
