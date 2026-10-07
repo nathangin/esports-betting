@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-07 05:50 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-07 05:55 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-07 05:50 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 37 | 5 | 32 | 8 | $27.58 | +6.8% | -0.7c (36) | $1,027.58 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 57 | 5 | 52 | 34 | -$61.86 | -14.7% | -1.2c (56) | $938.14 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 57 | 4 | 53 | 35 | -$61.61 | -14.6% | -1.2c (56) | $938.39 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -40,7 +40,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-07 05:50 | model-only | lol | GAM Esports | FlyQuest | YES GAM Esports | 67 | 0.29 | 0.54 | 0.29 | open | - |
 | 2026-10-07 04:50 | favourite | dota2 | Xipto Esports | InterActive Philippines | YES Xipto Esports | 1 | 0.78 | 0.77 | 0.77 | open | - |
 | 2026-10-07 04:50 | model-only | dota2 | InterActive Philippines | Xipto Esports | YES InterActive Philippines | 81 | 0.24 | 0.39 | 0.23 | open | - |
-| 2026-10-07 01:54 | favourite | dota2 | Direborn | IaChIo123 | YES Direborn | 1 | 0.73 | 0.59 | 0.59 | open | - |
+| 2026-10-07 01:54 | favourite | dota2 | Direborn | IaChIo123 | YES Direborn | 1 | 0.73 | 0.59 | 0.59 | won | $0.25 |
 | 2026-10-06 18:53 | model-only | lol | Fuego | Cupid Esports | NO Cupid Esports | 126 | 0.16 | 0.30 | 0.16 | lost | -$21.35 |
 | 2026-10-06 17:53 | model-only | r6 | Twisted Minds | Virtus.pro | YES Twisted Minds | 51 | 0.27 | 0.41 | 0.26 | lost | -$14.48 |
 | 2026-10-06 17:23 | model-only | cs2 | TTG Esports | KUUSAMO.gg | YES TTG Esports | 4 | 0.42 | 0.58 | 0.44 | open | - |
