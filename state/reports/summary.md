@@ -1,30 +1,30 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-08 14:43 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-08 14:53 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 69 | 12 | 57 | 14 | -$18.43 | -2.3% | -0.8c (68) | $981.57 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 118 | 18 | 100 | 71 | -$43.13 | -5.5% | -0.6c (116) | $956.87 |
+| model-only | Elo win model alone (control: ignores the market) | 69 | 11 | 58 | 14 | -$37.05 | -4.5% | -0.8c (68) | $962.95 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 118 | 17 | 101 | 71 | -$52.44 | -6.6% | -0.7c (117) | $947.56 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-186 finished matches. Lower is better; the market line is the bar to beat.
+187 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5511 | 0.1850 |
-| model | 0.6525 | 0.2301 |
-| blend | 0.5496 | 0.1843 |
+| market | 0.5521 | 0.1855 |
+| model | 0.6544 | 0.2310 |
+| blend | 0.5506 | 0.1847 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 128 | 0.5790 | 0.6582 |
+| cs2 | 129 | 0.5803 | 0.6609 |
 | lol | 25 | 0.3694 | 0.6324 |
 | dota2 | 17 | 0.5675 | 0.6051 |
 | r6 | 8 | 0.7369 | 0.7490 |
@@ -57,8 +57,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-08 11:50 | model-only | cs2 | THE UNIT | The KnockoutX | NO The KnockoutX | 39 | 0.38 | 0.48 | 0.36 | open | - |
 | 2026-10-08 11:20 | favourite | dota2 | Aurora | 1win | YES Aurora | 17 | 0.53 | 0.53 | 0.53 | open | - |
 | 2026-10-08 10:50 | model-only | dota2 | Team Synapse | Blasterbl | YES Team Synapse | 34 | 0.53 | 0.67 | 0.52 | open | - |
-| 2026-10-08 10:50 | model-only | cs2 | Team Nemesis | Sinners | YES Team Nemesis | 34 | 0.53 | 0.63 | 0.53 | open | - |
-| 2026-10-08 10:50 | favourite | cs2 | Team Nemesis | Sinners | YES Team Nemesis | 17 | 0.53 | 0.53 | 0.53 | open | - |
+| 2026-10-08 10:50 | model-only | cs2 | Team Nemesis | Sinners | YES Team Nemesis | 34 | 0.53 | 0.63 | 0.53 | lost | -$18.62 |
+| 2026-10-08 10:50 | favourite | cs2 | Team Nemesis | Sinners | YES Team Nemesis | 17 | 0.53 | 0.53 | 0.53 | lost | -$9.31 |
 | 2026-10-08 10:50 | favourite | dota2 | Team Synapse | Blasterbl | YES Team Synapse | 17 | 0.53 | 0.52 | 0.52 | open | - |
 | 2026-10-08 10:50 | model-only | valorant | Nongshim RedForce | Team Vitality | YES Nongshim RedForce | 33 | 0.47 | 0.52 | 0.47 | lost | -$16.09 |
 | 2026-10-08 10:50 | favourite | valorant | Team Vitality | Nongshim RedForce | NO Nongshim RedForce | 17 | 0.54 | 0.54 | 0.53 | won | $7.52 |
