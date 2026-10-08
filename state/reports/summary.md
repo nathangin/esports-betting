@@ -1,30 +1,30 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-08 17:08 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-08 17:13 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 69 | 6 | 63 | 15 | -$70.80 | -8.3% | -0.8c (68) | $929.20 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 118 | 7 | 111 | 76 | -$81.91 | -9.5% | -0.8c (117) | $918.09 |
+| model-only | Elo win model alone (control: ignores the market) | 69 | 5 | 64 | 15 | -$90.29 | -10.3% | -0.8c (68) | $909.71 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 118 | 6 | 112 | 77 | -$78.96 | -9.1% | -0.8c (117) | $921.04 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-205 finished matches. Lower is better; the market line is the bar to beat.
+206 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5663 | 0.1916 |
-| model | 0.6606 | 0.2341 |
-| blend | 0.5660 | 0.1913 |
+| market | 0.5651 | 0.1911 |
+| model | 0.6607 | 0.2341 |
+| blend | 0.5646 | 0.1906 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 145 | 0.5954 | 0.6661 |
+| cs2 | 146 | 0.5935 | 0.6663 |
 | lol | 25 | 0.3694 | 0.6324 |
 | dota2 | 19 | 0.5795 | 0.6319 |
 | r6 | 8 | 0.7369 | 0.7490 |
@@ -43,8 +43,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-08 11:50 | favourite | cs2 | Alter Ego | Kaleido | YES Alter Ego | 13 | 0.67 | 0.65 | 0.65 | lost | -$8.92 |
 | 2026-10-08 11:50 | model-only | cs2 | bLight blue | Boring Players | NO Boring Players | 1 | 0.42 | 0.49 | 0.41 | lost | -$0.44 |
 | 2026-10-08 11:50 | favourite | cs2 | Boring Players | bLight blue | NO bLight blue | 15 | 0.60 | 0.58 | 0.58 | won | $5.74 |
-| 2026-10-08 11:50 | model-only | cs2 | Chinggis Warriors | Lynn Vision | YES Chinggis Warriors | 64 | 0.29 | 0.50 | 0.27 | open | - |
-| 2026-10-08 11:50 | favourite | cs2 | Lynn Vision | Chinggis Warriors | YES Lynn Vision | 12 | 0.74 | 0.73 | 0.73 | open | - |
+| 2026-10-08 11:50 | model-only | cs2 | Chinggis Warriors | Lynn Vision | YES Chinggis Warriors | 64 | 0.29 | 0.50 | 0.27 | lost | -$19.49 |
+| 2026-10-08 11:50 | favourite | cs2 | Lynn Vision | Chinggis Warriors | YES Lynn Vision | 12 | 0.74 | 0.73 | 0.73 | won | $2.95 |
 | 2026-10-08 11:50 | favourite | cs2 | HyperSpirit | los kogutos | YES HyperSpirit | 1 | 0.65 | 0.59 | 0.59 | won | $0.33 |
 | 2026-10-08 11:50 | favourite | cs2 | Rare Atom | Just Swing | NO Just Swing | 10 | 0.85 | 0.83 | 0.83 | lost | -$8.59 |
 | 2026-10-08 11:50 | favourite | cs2 | mellren | Esport BERG | NO Esport BERG | 12 | 0.75 | 0.74 | 0.74 | won | $2.84 |
