@@ -1,30 +1,30 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-08 15:08 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-08 15:13 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 69 | 11 | 58 | 14 | -$37.05 | -4.5% | -0.8c (68) | $962.95 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 118 | 17 | 101 | 71 | -$52.44 | -6.6% | -0.8c (117) | $947.56 |
+| model-only | Elo win model alone (control: ignores the market) | 69 | 10 | 59 | 15 | -$35.34 | -4.3% | -0.8c (68) | $964.66 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 118 | 16 | 102 | 71 | -$61.49 | -7.7% | -0.8c (117) | $938.51 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-187 finished matches. Lower is better; the market line is the bar to beat.
+188 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5521 | 0.1855 |
-| model | 0.6544 | 0.2310 |
-| blend | 0.5506 | 0.1847 |
+| market | 0.5542 | 0.1865 |
+| model | 0.6548 | 0.2312 |
+| blend | 0.5529 | 0.1858 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 129 | 0.5803 | 0.6609 |
+| cs2 | 130 | 0.5831 | 0.6615 |
 | lol | 25 | 0.3694 | 0.6324 |
 | dota2 | 17 | 0.5675 | 0.6051 |
 | r6 | 8 | 0.7369 | 0.7490 |
@@ -50,8 +50,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-08 11:50 | favourite | cs2 | mellren | Esport BERG | NO Esport BERG | 12 | 0.75 | 0.74 | 0.74 | won | $2.84 |
 | 2026-10-08 11:50 | favourite | cs2 | Not A Squad Esports | Legion | YES Not A Squad Esports | 2 | 0.79 | 0.78 | 0.78 | open | - |
 | 2026-10-08 11:50 | favourite | cs2 | The Last Resort | Privateer Gaming | NO Privateer Gaming | 11 | 0.81 | 0.76 | 0.76 | open | - |
-| 2026-10-08 11:50 | model-only | cs2 | ENCE | Sokerorg | YES ENCE | 3 | 0.41 | 0.48 | 0.39 | open | - |
-| 2026-10-08 11:50 | favourite | cs2 | Sokerorg | ENCE | NO ENCE | 14 | 0.63 | 0.61 | 0.61 | open | - |
+| 2026-10-08 11:50 | model-only | cs2 | ENCE | Sokerorg | YES ENCE | 3 | 0.41 | 0.48 | 0.39 | won | $1.71 |
+| 2026-10-08 11:50 | favourite | cs2 | Sokerorg | ENCE | NO ENCE | 14 | 0.63 | 0.61 | 0.61 | lost | -$9.05 |
 | 2026-10-08 11:50 | model-only | cs2 | TEAM XDM | The Huns Esports | YES TEAM XDM | 31 | 0.39 | 0.52 | 0.38 | open | - |
 | 2026-10-08 11:50 | favourite | cs2 | The Huns Esports | TEAM XDM | YES The Huns Esports | 3 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-10-08 11:50 | model-only | cs2 | THE UNIT | The KnockoutX | NO The KnockoutX | 39 | 0.38 | 0.48 | 0.36 | open | - |
