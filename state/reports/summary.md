@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-08 15:43 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-08 15:53 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,23 +8,23 @@ Updated 2026-10-08 15:43 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 69 | 8 | 61 | 15 | -$51.25 | -6.1% | -0.8c (68) | $948.75 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 118 | 14 | 104 | 73 | -$55.36 | -6.8% | -0.8c (117) | $944.64 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 118 | 13 | 105 | 74 | -$54.08 | -6.6% | -0.8c (117) | $945.92 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-192 finished matches. Lower is better; the market line is the bar to beat.
+194 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5512 | 0.1850 |
-| model | 0.6541 | 0.2309 |
-| blend | 0.5494 | 0.1842 |
+| market | 0.5522 | 0.1854 |
+| model | 0.6561 | 0.2319 |
+| blend | 0.5503 | 0.1846 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 134 | 0.5780 | 0.6603 |
+| cs2 | 136 | 0.5789 | 0.6630 |
 | lol | 25 | 0.3694 | 0.6324 |
 | dota2 | 17 | 0.5675 | 0.6051 |
 | r6 | 8 | 0.7369 | 0.7490 |
@@ -37,7 +37,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-08 14:38 | favourite | cs2 | EAC Extra | Linx Legacy Esport | YES EAC Extra | 5 | 0.73 | 0.61 | 0.61 | open | - |
+| 2026-10-08 14:38 | favourite | cs2 | EAC Extra | Linx Legacy Esport | YES EAC Extra | 5 | 0.73 | 0.61 | 0.61 | won | $1.28 |
 | 2026-10-08 12:50 | model-only | cs2 | Nexus | CYBERSHOKE Esports | YES Nexus | 52 | 0.31 | 0.52 | 0.31 | open | - |
 | 2026-10-08 12:50 | model-only | cs2 | Azuolas | Misa Esports | NO Misa Esports | 4 | 0.22 | 0.31 | 0.20 | open | - |
 | 2026-10-08 11:50 | favourite | cs2 | Alter Ego | Kaleido | YES Alter Ego | 13 | 0.67 | 0.65 | 0.65 | open | - |
