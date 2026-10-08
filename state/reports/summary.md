@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-08 16:48 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-08 16:53 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,23 +8,23 @@ Updated 2026-10-08 16:48 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 69 | 7 | 62 | 15 | -$69.87 | -8.2% | -0.8c (68) | $930.13 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 118 | 8 | 110 | 75 | -$89.60 | -10.5% | -0.8c (117) | $910.40 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 118 | 7 | 111 | 76 | -$81.91 | -9.5% | -0.8c (117) | $918.09 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-199 finished matches. Lower is better; the market line is the bar to beat.
+201 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5659 | 0.1914 |
-| model | 0.6634 | 0.2354 |
-| blend | 0.5654 | 0.1909 |
+| market | 0.5686 | 0.1926 |
+| model | 0.6617 | 0.2346 |
+| blend | 0.5686 | 0.1923 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 140 | 0.5964 | 0.6699 |
+| cs2 | 142 | 0.5999 | 0.6674 |
 | lol | 25 | 0.3694 | 0.6324 |
 | dota2 | 18 | 0.5761 | 0.6337 |
 | r6 | 8 | 0.7369 | 0.7490 |
@@ -55,7 +55,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-08 11:50 | model-only | cs2 | TEAM XDM | The Huns Esports | YES TEAM XDM | 31 | 0.39 | 0.52 | 0.38 | open | - |
 | 2026-10-08 11:50 | favourite | cs2 | The Huns Esports | TEAM XDM | YES The Huns Esports | 3 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-10-08 11:50 | model-only | cs2 | THE UNIT | The KnockoutX | NO The KnockoutX | 39 | 0.38 | 0.48 | 0.36 | lost | -$15.47 |
-| 2026-10-08 11:20 | favourite | dota2 | Aurora | 1win | YES Aurora | 17 | 0.53 | 0.53 | 0.53 | open | - |
+| 2026-10-08 11:20 | favourite | dota2 | Aurora | 1win | YES Aurora | 17 | 0.53 | 0.53 | 0.53 | won | $7.69 |
 | 2026-10-08 10:50 | model-only | dota2 | Team Synapse | Blasterbl | YES Team Synapse | 34 | 0.53 | 0.67 | 0.52 | lost | -$18.62 |
 | 2026-10-08 10:50 | model-only | cs2 | Team Nemesis | Sinners | YES Team Nemesis | 34 | 0.53 | 0.63 | 0.53 | lost | -$18.62 |
 | 2026-10-08 10:50 | favourite | cs2 | Team Nemesis | Sinners | YES Team Nemesis | 17 | 0.53 | 0.53 | 0.53 | lost | -$9.31 |
