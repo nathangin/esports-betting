@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-08 01:44 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-08 01:54 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-08 01:44 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 50 | 2 | 48 | 12 | -$39.86 | -6.0% | -1.1c (49) | $960.14 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 87 | 4 | 83 | 61 | -$26.96 | -4.2% | -0.4c (86) | $973.04 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 88 | 5 | 83 | 61 | -$26.96 | -4.2% | -0.4c (86) | $973.04 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -37,6 +37,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-08 01:54 | favourite | dota2 | Direborn | InterActive Philippines | YES Direborn | 17 | 0.55 | 0.54 | 0.54 | open | - |
 | 2026-10-07 12:51 | favourite | cs2 | megoshort | Azuolas | YES megoshort | 4 | 0.57 | 0.53 | 0.53 | won | $1.65 |
 | 2026-10-07 12:21 | favourite | cs2 | Vitality Academy | Royal Foxes Esports | NO Royal Foxes Esports | 3 | 0.78 | 0.77 | 0.77 | won | $0.62 |
 | 2026-10-07 10:51 | favourite | cs2 | Acend | Sashi Esport | YES Acend | 7 | 0.63 | 0.62 | 0.62 | open | - |
@@ -61,7 +62,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-07 08:46 | favourite | lol | FlyQuest | Shopify Rebellion | YES FlyQuest | 14 | 0.65 | 0.65 | 0.65 | won | $4.67 |
 | 2026-10-07 08:46 | favourite | cs2 | Falcons Force | Orion Wanderers | NO Orion Wanderers | 11 | 0.80 | 0.79 | 0.79 | won | $2.07 |
 | 2026-10-07 08:46 | favourite | cs2 | PURE | G2 Ares | NO G2 Ares | 16 | 0.56 | 0.54 | 0.54 | won | $6.76 |
-| 2026-10-07 08:46 | favourite | cs2 | OG | SINQU | YES OG | 1 | 0.89 | 0.89 | 0.89 | won | $0.10 |
 
 ## Backtest on real Kalshi prices
 
