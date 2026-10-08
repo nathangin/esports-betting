@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-08 10:50 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-08 11:05 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,28 +8,28 @@ Updated 2026-10-08 10:50 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 62 | 13 | 49 | 12 | -$59.00 | -8.7% | -0.6c (58) | $941.00 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 106 | 22 | 84 | 61 | -$36.61 | -5.6% | -0.6c (102) | $963.39 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 106 | 19 | 87 | 63 | -$41.78 | -6.2% | -0.6c (102) | $958.22 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-170 finished matches. Lower is better; the market line is the bar to beat.
+173 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5380 | 0.1791 |
-| model | 0.6483 | 0.2279 |
-| blend | 0.5356 | 0.1781 |
+| market | 0.5408 | 0.1804 |
+| model | 0.6528 | 0.2301 |
+| blend | 0.5384 | 0.1793 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 116 | 0.5625 | 0.6569 |
+| cs2 | 118 | 0.5617 | 0.6587 |
 | lol | 24 | 0.3704 | 0.6283 |
 | dota2 | 16 | 0.5946 | 0.6157 |
 | r6 | 8 | 0.7369 | 0.7490 |
 | ow | 4 | 0.2097 | 0.4720 |
-| valorant | 2 | 0.5402 | 0.5937 |
+| valorant | 3 | 0.7149 | 0.7980 |
 
 ## Latest bets
 
@@ -53,13 +53,13 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-08 09:20 | favourite | cs2 | Passion Academy | TheChampionGG | YES Passion Academy | 14 | 0.63 | 0.58 | 0.58 | open | - |
 | 2026-10-08 08:50 | favourite | cs2 | Sangal | OG | NO OG | 16 | 0.57 | 0.58 | 0.58 | open | - |
 | 2026-10-08 08:50 | favourite | cs2 | Rebels Gaming | G2 Ares | YES Rebels Gaming | 1 | 0.72 | 0.58 | 0.58 | open | - |
-| 2026-10-08 07:50 | favourite | valorant | 100 Thieves | G2 Esports | YES 100 Thieves | 14 | 0.66 | 0.66 | 0.66 | open | - |
+| 2026-10-08 07:50 | favourite | valorant | 100 Thieves | G2 Esports | YES 100 Thieves | 14 | 0.66 | 0.66 | 0.66 | lost | -$9.46 |
 | 2026-10-08 07:50 | favourite | lol | JD Gaming | Natus Vincere | YES JD Gaming | 12 | 0.73 | 0.71 | 0.71 | open | - |
 | 2026-10-08 07:50 | model-only | lol | Natus Vincere | JD Gaming | NO JD Gaming | 30 | 0.29 | 0.52 | 0.29 | open | - |
 | 2026-10-08 07:50 | favourite | dota2 | Team Yandex | LGD Gaming | YES Team Yandex | 10 | 0.87 | 0.88 | 0.88 | open | - |
 | 2026-10-08 07:50 | model-only | dota2 | LGD Gaming | Team Yandex | YES LGD Gaming | 139 | 0.13 | 0.35 | 0.12 | open | - |
-| 2026-10-08 07:50 | favourite | cs2 | GamerLegion | 33 | NO 33 | 13 | 0.69 | 0.66 | 0.66 | open | - |
-| 2026-10-08 06:50 | favourite | cs2 | ILLYRIANS | los kogutos | YES ILLYRIANS | 1 | 0.52 | 0.54 | 0.54 | open | - |
+| 2026-10-08 07:50 | favourite | cs2 | GamerLegion | 33 | NO 33 | 13 | 0.69 | 0.66 | 0.66 | won | $3.83 |
+| 2026-10-08 06:50 | favourite | cs2 | ILLYRIANS | los kogutos | YES ILLYRIANS | 1 | 0.52 | 0.54 | 0.54 | won | $0.46 |
 | 2026-10-08 06:50 | model-only | cs2 | ex-Zero Tenacity | Acend | NO Acend | 15 | 0.59 | 0.66 | 0.58 | open | - |
 | 2026-10-08 06:50 | favourite | cs2 | ex-Zero Tenacity | Acend | NO Acend | 15 | 0.59 | 0.58 | 0.58 | open | - |
 
