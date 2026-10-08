@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-08 11:25 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-08 11:40 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 62 | 12 | 50 | 12 | -$68.11 | -9.9% | -0.6c (58) | $931.89 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 107 | 19 | 88 | 63 | -$50.89 | -7.5% | -0.6c (102) | $949.11 |
+| model-only | Elo win model alone (control: ignores the market) | 62 | 11 | 51 | 13 | -$15.06 | -2.1% | -0.6c (58) | $984.94 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 107 | 18 | 89 | 63 | -$60.17 | -8.7% | -0.6c (102) | $939.83 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -60,8 +60,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-08 07:50 | favourite | cs2 | GamerLegion | 33 | NO 33 | 13 | 0.69 | 0.66 | 0.66 | won | $3.83 |
 | 2026-10-08 07:50 | favourite | lol | JD Gaming | Natus Vincere | YES JD Gaming | 12 | 0.73 | 0.71 | 0.71 | open | - |
 | 2026-10-08 07:50 | favourite | valorant | 100 Thieves | G2 Esports | YES 100 Thieves | 14 | 0.66 | 0.66 | 0.66 | lost | -$9.46 |
-| 2026-10-08 06:50 | favourite | cs2 | EAC Extra | THE UNIT | YES EAC Extra | 12 | 0.76 | 0.75 | 0.75 | open | - |
-| 2026-10-08 06:50 | model-only | cs2 | THE UNIT | EAC Extra | YES THE UNIT | 72 | 0.25 | 0.44 | 0.25 | open | - |
+| 2026-10-08 06:50 | favourite | cs2 | EAC Extra | THE UNIT | YES EAC Extra | 12 | 0.76 | 0.75 | 0.75 | lost | -$9.28 |
+| 2026-10-08 06:50 | model-only | cs2 | THE UNIT | EAC Extra | YES THE UNIT | 72 | 0.25 | 0.44 | 0.25 | won | $53.05 |
 
 ## Backtest on real Kalshi prices
 
