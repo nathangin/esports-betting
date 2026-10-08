@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-08 15:33 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-08 15:43 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,23 +8,23 @@ Updated 2026-10-08 15:33 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 69 | 8 | 61 | 15 | -$51.25 | -6.1% | -0.8c (68) | $948.75 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 118 | 15 | 103 | 72 | -$55.75 | -6.9% | -0.8c (117) | $944.25 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 118 | 14 | 104 | 73 | -$55.36 | -6.8% | -0.8c (117) | $944.64 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-191 finished matches. Lower is better; the market line is the bar to beat.
+192 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5528 | 0.1857 |
-| model | 0.6533 | 0.2305 |
-| blend | 0.5512 | 0.1850 |
+| market | 0.5512 | 0.1850 |
+| model | 0.6541 | 0.2309 |
+| blend | 0.5494 | 0.1842 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 133 | 0.5804 | 0.6591 |
+| cs2 | 134 | 0.5780 | 0.6603 |
 | lol | 25 | 0.3694 | 0.6324 |
 | dota2 | 17 | 0.5675 | 0.6051 |
 | r6 | 8 | 0.7369 | 0.7490 |
@@ -48,7 +48,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-08 11:50 | favourite | cs2 | HyperSpirit | los kogutos | YES HyperSpirit | 1 | 0.65 | 0.59 | 0.59 | open | - |
 | 2026-10-08 11:50 | favourite | cs2 | Rare Atom | Just Swing | NO Just Swing | 10 | 0.85 | 0.83 | 0.83 | open | - |
 | 2026-10-08 11:50 | favourite | cs2 | mellren | Esport BERG | NO Esport BERG | 12 | 0.75 | 0.74 | 0.74 | won | $2.84 |
-| 2026-10-08 11:50 | favourite | cs2 | Not A Squad Esports | Legion | YES Not A Squad Esports | 2 | 0.79 | 0.78 | 0.78 | open | - |
+| 2026-10-08 11:50 | favourite | cs2 | Not A Squad Esports | Legion | YES Not A Squad Esports | 2 | 0.79 | 0.78 | 0.78 | won | $0.39 |
 | 2026-10-08 11:50 | favourite | cs2 | The Last Resort | Privateer Gaming | NO Privateer Gaming | 11 | 0.81 | 0.76 | 0.76 | open | - |
 | 2026-10-08 11:50 | model-only | cs2 | ENCE | Sokerorg | YES ENCE | 3 | 0.41 | 0.48 | 0.39 | won | $1.71 |
 | 2026-10-08 11:50 | favourite | cs2 | Sokerorg | ENCE | NO ENCE | 14 | 0.63 | 0.61 | 0.61 | lost | -$9.05 |
