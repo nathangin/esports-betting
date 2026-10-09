@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-09 07:50 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-09 07:55 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 73 | 7 | 66 | 15 | -$93.97 | -10.7% | -0.7c (72) | $906.03 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 136 | 14 | 122 | 83 | -$98.89 | -10.4% | -0.9c (134) | $901.11 |
+| model-only | Elo win model alone (control: ignores the market) | 75 | 9 | 66 | 15 | -$93.97 | -10.7% | -0.7c (72) | $906.03 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 138 | 16 | 122 | 83 | -$98.89 | -10.4% | -0.9c (134) | $901.11 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,19 +39,23 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-09 07:54 | favourite | dota2 | Team Spirit | Aurora | NO Aurora | 12 | 0.69 | 0.69 | 0.69 | open | - |
+| 2026-10-09 07:54 | model-only | dota2 | Aurora | Team Spirit | YES Aurora | 48 | 0.32 | 0.38 | 0.32 | open | - |
+| 2026-10-09 07:54 | favourite | cs2 | HOTU | Acend | NO Acend | 11 | 0.75 | 0.74 | 0.74 | open | - |
+| 2026-10-09 07:54 | model-only | cs2 | Acend | HOTU | NO HOTU | 66 | 0.26 | 0.36 | 0.26 | open | - |
 | 2026-10-09 07:24 | favourite | cs2 | Aurora Gaming | 1WIN | NO 1WIN | 12 | 0.71 | 0.70 | 0.71 | open | - |
-| 2026-10-09 06:53 | favourite | r6 | Chiefs Esports Club | 7VEN | NO 7VEN | 10 | 0.85 | 0.84 | 0.84 | open | - |
-| 2026-10-09 06:53 | favourite | cs2 | Teletubisie | STATE | YES Teletubisie | 14 | 0.60 | 0.60 | 0.60 | open | - |
-| 2026-10-09 06:53 | favourite | cs2 | Royal Foxes Esports | Elite Klan | NO Elite Klan | 13 | 0.64 | 0.63 | 0.63 | open | - |
 | 2026-10-09 06:53 | model-only | cs2 | Elite Klan | Royal Foxes Esports | YES Elite Klan | 46 | 0.37 | 0.44 | 0.37 | open | - |
-| 2026-10-09 06:53 | favourite | cs2 | Acend | Nexus | YES Acend | 14 | 0.61 | 0.57 | 0.57 | open | - |
-| 2026-10-09 06:53 | favourite | cs2 | Fire Flux Esports | Lavked | NO Lavked | 11 | 0.75 | 0.57 | 0.57 | open | - |
 | 2026-10-09 06:53 | favourite | cs2 | mellren | Bebop | NO Bebop | 13 | 0.66 | 0.66 | 0.66 | open | - |
+| 2026-10-09 06:53 | favourite | cs2 | Fire Flux Esports | Lavked | NO Lavked | 11 | 0.75 | 0.57 | 0.57 | open | - |
+| 2026-10-09 06:53 | favourite | cs2 | Acend | Nexus | YES Acend | 14 | 0.61 | 0.57 | 0.57 | open | - |
 | 2026-10-09 06:53 | model-only | cs2 | mellren | Bebop | NO Bebop | 26 | 0.66 | 0.73 | 0.66 | open | - |
+| 2026-10-09 06:53 | favourite | cs2 | Royal Foxes Esports | Elite Klan | NO Elite Klan | 13 | 0.64 | 0.63 | 0.63 | open | - |
+| 2026-10-09 06:53 | favourite | cs2 | Teletubisie | STATE | YES Teletubisie | 14 | 0.60 | 0.60 | 0.60 | open | - |
+| 2026-10-09 06:53 | favourite | r6 | Chiefs Esports Club | 7VEN | NO 7VEN | 10 | 0.85 | 0.84 | 0.84 | open | - |
 | 2026-10-09 05:53 | favourite | cs2 | Chinggis Warriors | 1337 | YES Chinggis Warriors | 10 | 0.88 | 0.86 | 0.86 | open | - |
 | 2026-10-09 03:53 | favourite | r6 | ENTERPRISE Esports | Man eSports LFO | NO Man eSports LFO | 4 | 0.83 | 0.84 | 0.84 | won | $0.64 |
-| 2026-10-09 02:53 | model-only | cs2 | The Audacity | The Huns Esports | YES The Audacity | 1 | 0.30 | 0.54 | 0.30 | lost | -$0.32 |
 | 2026-10-09 02:53 | favourite | cs2 | The Huns Esports | The Audacity | NO The Audacity | 12 | 0.72 | 0.70 | 0.70 | won | $3.19 |
+| 2026-10-09 02:53 | model-only | cs2 | The Audacity | The Huns Esports | YES The Audacity | 1 | 0.30 | 0.54 | 0.30 | lost | -$0.32 |
 | 2026-10-09 02:48 | favourite | ebasketballgame | New Orleans Pelicans (Tim) | Indiana Pacers (Larry) | NO Indiana Pacers (Larry) | 10 | 0.73 | 0.70 | 0.71 | won | $2.56 |
 | 2026-10-09 02:48 | model-only | ebasketballgame | Indiana Pacers (Larry) | New Orleans Pelicans (Tim) | YES Indiana Pacers (Larry) | 10 | 0.32 | 0.43 | 0.29 | lost | -$3.36 |
 | 2026-10-09 02:18 | favourite | ebasketballgame | New Orleans Pelicans (Zion) | Indiana Pacers (Larry) | NO Indiana Pacers (Larry) | 13 | 0.68 | 0.65 | 0.65 | won | $3.96 |
@@ -60,10 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-09 01:07 | favourite | esoccergame | FC Augsburg (Aron) | 1. FC Köln (Frost) | YES FC Augsburg (Aron) | 12 | 0.73 | 0.77 | 0.77 | lost | -$8.93 |
 | 2026-10-09 00:52 | favourite | esoccergame | FSV Mainz 05 (Pedri) | Dortmund (Declan) | YES FSV Mainz 05 (Pedri) | 19 | 0.46 | 0.51 | 0.51 | lost | -$9.08 |
 | 2026-10-09 00:52 | favourite | esoccergame | Leverkusen (Frenkie) | 1. FC Köln (Frost) | YES Leverkusen (Frenkie) | 11 | 0.81 | 0.82 | 0.82 | won | $1.97 |
-| 2026-10-09 00:37 | favourite | esoccergame | São Paulo (Declan) | Estudiantes (Frost) | YES São Paulo (Declan) | 13 | 0.69 | 0.72 | 0.72 | won | $3.83 |
-| 2026-10-08 14:38 | favourite | cs2 | EAC Extra | Linx Legacy Esport | YES EAC Extra | 5 | 0.73 | 0.61 | 0.61 | won | $1.28 |
-| 2026-10-08 12:50 | model-only | cs2 | Azuolas | Misa Esports | NO Misa Esports | 4 | 0.22 | 0.31 | 0.20 | lost | -$0.93 |
-| 2026-10-08 12:50 | model-only | cs2 | Nexus | CYBERSHOKE Esports | YES Nexus | 52 | 0.31 | 0.52 | 0.31 | open | - |
 
 ## Backtest on real Kalshi prices
 
