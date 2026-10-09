@@ -1,31 +1,31 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-09 14:00 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-09 14:05 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 86 | 13 | 73 | 17 | -$137.61 | -14.0% | -0.7c (81) | $862.39 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 146 | 11 | 135 | 90 | -$129.94 | -12.3% | -0.8c (145) | $870.06 |
+| model-only | Elo win model alone (control: ignores the market) | 86 | 11 | 75 | 17 | -$171.65 | -16.8% | -0.7c (81) | $828.35 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 146 | 10 | 136 | 91 | -$126.40 | -11.9% | -0.8c (145) | $873.60 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-662 finished matches. Lower is better; the market line is the bar to beat.
+663 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6379 | 0.2251 |
-| model | 0.6764 | 0.2420 |
-| blend | 0.6380 | 0.2253 |
+| market | 0.6377 | 0.2250 |
+| model | 0.6766 | 0.2421 |
+| blend | 0.6379 | 0.2252 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | esoccergame | 330 | 0.6902 | 0.6788 |
-| cs2 | 190 | 0.5898 | 0.6753 |
+| cs2 | 191 | 0.5896 | 0.6763 |
 | ebasketballgame | 67 | 0.6661 | 0.7062 |
 | lol | 26 | 0.3970 | 0.6526 |
 | dota2 | 21 | 0.6117 | 0.6346 |
@@ -44,7 +44,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-09 11:54 | model-only | cs2 | Vitalem Aerem | Rare Atom | NO Rare Atom | 1 | 0.27 | 0.37 | 0.27 | open | - |
 | 2026-10-09 11:24 | model-only | dota2 | 1win | PARIVISION | YES 1win | 11 | 0.14 | 0.28 | 0.14 | open | - |
 | 2026-10-09 10:54 | model-only | valorant | T1 | Paper Rex | NO Paper Rex | 63 | 0.27 | 0.50 | 0.28 | won | $45.12 |
-| 2026-10-09 10:54 | model-only | cs2 | Sinners | GamerLegion | YES Sinners | 42 | 0.41 | 0.58 | 0.42 | open | - |
+| 2026-10-09 10:54 | model-only | cs2 | Sinners | GamerLegion | YES Sinners | 42 | 0.41 | 0.58 | 0.42 | lost | -$17.94 |
 | 2026-10-09 10:54 | model-only | cs2 | K27 | fnatic | YES K27 | 35 | 0.50 | 0.56 | 0.49 | open | - |
 | 2026-10-09 09:54 | model-only | cs2 | Honvéd | 6666 | YES Honvéd | 55 | 0.31 | 0.41 | 0.31 | lost | -$17.88 |
 | 2026-10-09 09:54 | model-only | cs2 | PARIVISION | Vitality | NO Vitality | 106 | 0.16 | 0.27 | 0.15 | lost | -$17.96 |
@@ -58,8 +58,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-09 08:54 | model-only | cs2 | Esport Academy Copenhagen | Sangal | YES Esport Academy Copenhagen | 55 | 0.31 | 0.40 | 0.31 | lost | -$17.88 |
 | 2026-10-09 08:54 | favourite | cs2 | Infinite | WBT Academy | YES Infinite | 14 | 0.59 | 0.60 | 0.60 | lost | -$8.50 |
 | 2026-10-09 08:54 | model-only | cs2 | WBT Academy | Infinite | YES WBT Academy | 1 | 0.40 | 0.57 | 0.40 | won | $0.58 |
-| 2026-10-09 07:54 | favourite | dota2 | Team Spirit | Aurora | NO Aurora | 12 | 0.69 | 0.69 | 0.69 | open | - |
-| 2026-10-09 07:54 | model-only | dota2 | Aurora | Team Spirit | YES Aurora | 48 | 0.32 | 0.38 | 0.32 | open | - |
+| 2026-10-09 07:54 | favourite | dota2 | Team Spirit | Aurora | NO Aurora | 12 | 0.69 | 0.69 | 0.69 | won | $3.54 |
+| 2026-10-09 07:54 | model-only | dota2 | Aurora | Team Spirit | YES Aurora | 48 | 0.32 | 0.38 | 0.32 | lost | -$16.10 |
 | 2026-10-09 07:54 | favourite | cs2 | HOTU | Acend | NO Acend | 11 | 0.75 | 0.74 | 0.74 | won | $2.60 |
 | 2026-10-09 07:54 | model-only | cs2 | Acend | HOTU | NO HOTU | 66 | 0.26 | 0.36 | 0.26 | lost | -$18.05 |
 | 2026-10-09 07:24 | favourite | cs2 | Aurora Gaming | 1WIN | NO 1WIN | 12 | 0.71 | 0.70 | 0.71 | won | $3.30 |
