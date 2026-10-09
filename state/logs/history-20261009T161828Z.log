@@ -1,0 +1,69 @@
+2026-10-09 16:18:29,254 INFO esalpha.history: KXMLBBGAME: 24 match markets
+2026-10-09 16:18:29,891 INFO esalpha.history: KXVALORANTGAME: 3313 match markets
+2026-10-09 16:18:30,065 INFO esalpha.history: KXCSGOGAME: 206 match markets
+2026-10-09 16:18:30,848 INFO esalpha.history: KXDOTA2GAME: 3453 match markets
+2026-10-09 16:18:31,046 INFO esalpha.history: KXRLGAME: 218 match markets
+2026-10-09 16:18:31,277 INFO esalpha.history: KXEBASKETBALLGAME: 332 match markets
+2026-10-09 16:18:31,796 INFO esalpha.history: KXESOCCERGAME: 1570 match markets
+2026-10-09 16:18:37,211 INFO esalpha.history: KXCS2GAME: 14229 match markets
+2026-10-09 16:18:37,450 INFO esalpha.history: KXCODGAME: 662 match markets
+2026-10-09 16:18:37,678 INFO esalpha.history: KXOWGAME: 744 match markets
+2026-10-09 16:18:38,682 INFO esalpha.history: KXLOLGAME: 6110 match markets
+2026-10-09 16:18:39,003 INFO esalpha.history: KXR6GAME: 1426 match markets
+2026-10-09 16:18:39,430 INFO esalpha.history: markets done (11s)
+2026-10-09 16:20:04,338 INFO esalpha.history: candles: 250 events
+2026-10-09 16:21:20,374 INFO esalpha.history: candles: 500 events
+2026-10-09 16:22:05,076 INFO esalpha.history: candles done (216s)
+{
+ "started": "2026-10-09T16:18:28.729398+00:00",
+ "args": {
+  "days": 14,
+  "hours_before": 6.0
+ },
+ "series": 129,
+ "markets": {
+  "rows": 31031,
+  "events": 15417,
+  "by_game": {
+   "cod": 303,
+   "cs2": 6928,
+   "dota2": 1600,
+   "ebasketballgame": 166,
+   "esoccergame": 785,
+   "lol": 2864,
+   "mlbb": 12,
+   "ow": 372,
+   "r6": 683,
+   "rl": 109,
+   "valorant": 1595
+  }
+ },
+ "matches": {
+  "rows": 15220,
+  "by_game": {
+   "cod": 303,
+   "cs2": 6927,
+   "dota2": 1433,
+   "ebasketballgame": 166,
+   "esoccergame": 785,
+   "lol": 2836,
+   "mlbb": 12,
+   "ow": 372,
+   "r6": 683,
+   "rl": 109,
+   "valorant": 1594
+  },
+  "first": "2026-02-20 21:00:00+00:00",
+  "last": "2026-10-09 20:57:00+00:00",
+  "decided": 14563
+ },
+ "candles": {
+  "rows": 2538363,
+  "events": 9919,
+  "fetched_now": 572,
+  "empty": 1
+ },
+ "finished": "2026-10-09T16:22:05.076771+00:00",
+ "http_calls": 623
+}
+0 errors

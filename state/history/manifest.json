@@ -1,51 +1,53 @@
 {
- "started": "2026-10-08T16:35:55.647215+00:00",
+ "started": "2026-10-09T16:18:28.729398+00:00",
  "errors": [],
  "args": {
   "days": 14,
   "hours_before": 6.0
  },
- "series": 128,
+ "series": 129,
  "markets": {
-  "rows": 29671,
-  "events": 14737,
+  "rows": 31031,
+  "events": 15417,
   "by_game": {
    "cod": 303,
-   "cs2": 6861,
-   "dota2": 1596,
-   "ebasketballgame": 77,
-   "esoccergame": 291,
-   "lol": 2863,
-   "ow": 369,
-   "r6": 677,
+   "cs2": 6928,
+   "dota2": 1600,
+   "ebasketballgame": 166,
+   "esoccergame": 785,
+   "lol": 2864,
+   "mlbb": 12,
+   "ow": 372,
+   "r6": 683,
    "rl": 109,
-   "valorant": 1591
+   "valorant": 1595
   }
  },
  "matches": {
-  "rows": 14540,
+  "rows": 15220,
   "by_game": {
    "cod": 303,
-   "cs2": 6860,
-   "dota2": 1429,
-   "ebasketballgame": 77,
-   "esoccergame": 291,
-   "lol": 2835,
-   "ow": 369,
-   "r6": 677,
+   "cs2": 6927,
+   "dota2": 1433,
+   "ebasketballgame": 166,
+   "esoccergame": 785,
+   "lol": 2836,
+   "mlbb": 12,
+   "ow": 372,
+   "r6": 683,
    "rl": 109,
-   "valorant": 1590
+   "valorant": 1594
   },
   "first": "2026-02-20 21:00:00+00:00",
-  "last": "2026-10-08 18:00:00+00:00",
-  "decided": 13992
+  "last": "2026-10-09 20:57:00+00:00",
+  "decided": 14563
  },
  "candles": {
-  "rows": 2494427,
-  "events": 9348,
-  "fetched_now": 404,
+  "rows": 2538363,
+  "events": 9919,
+  "fetched_now": 572,
   "empty": 1
  },
- "finished": "2026-10-08T16:38:38.015465+00:00",
- "http_calls": 451
+ "finished": "2026-10-09T16:22:05.076771+00:00",
+ "http_calls": 623
 }
