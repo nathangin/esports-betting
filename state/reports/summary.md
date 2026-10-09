@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-09 03:09 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-09 03:14 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,24 +8,24 @@ Updated 2026-10-09 03:09 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 71 | 7 | 64 | 15 | -$90.29 | -10.3% | -0.8c (68) | $909.71 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 127 | 10 | 117 | 79 | -$100.32 | -10.9% | -0.6c (123) | $899.68 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 127 | 10 | 117 | 79 | -$100.32 | -10.9% | -0.6c (124) | $899.68 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-417 finished matches. Lower is better; the market line is the bar to beat.
+418 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6228 | 0.2178 |
-| model | 0.6759 | 0.2417 |
-| blend | 0.6228 | 0.2178 |
+| market | 0.6229 | 0.2179 |
+| model | 0.6765 | 0.2420 |
+| blend | 0.6229 | 0.2178 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 172 | 0.5997 | 0.6702 |
-| esoccergame | 146 | 0.6887 | 0.6804 |
+| esoccergame | 147 | 0.6887 | 0.6823 |
 | ebasketballgame | 30 | 0.6661 | 0.7300 |
 | lol | 26 | 0.3970 | 0.6526 |
 | dota2 | 21 | 0.6117 | 0.6346 |
