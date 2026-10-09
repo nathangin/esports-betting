@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-09 04:44 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-09 04:49 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,25 +8,25 @@ Updated 2026-10-09 04:44 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 71 | 6 | 65 | 15 | -$93.65 | -10.7% | -0.8c (70) | $906.35 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 128 | 8 | 120 | 81 | -$102.72 | -10.9% | -0.7c (126) | $897.28 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 128 | 8 | 120 | 81 | -$102.72 | -10.9% | -0.7c (127) | $897.28 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-457 finished matches. Lower is better; the market line is the bar to beat.
+458 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6254 | 0.2189 |
-| model | 0.6783 | 0.2429 |
-| blend | 0.6250 | 0.2188 |
+| market | 0.6255 | 0.2190 |
+| model | 0.6777 | 0.2425 |
+| blend | 0.6252 | 0.2189 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | esoccergame | 177 | 0.6895 | 0.6815 |
 | cs2 | 176 | 0.5960 | 0.6732 |
-| ebasketballgame | 35 | 0.6531 | 0.7296 |
+| ebasketballgame | 36 | 0.6543 | 0.7202 |
 | lol | 26 | 0.3970 | 0.6526 |
 | dota2 | 21 | 0.6117 | 0.6346 |
 | r6 | 12 | 0.7332 | 0.7358 |
