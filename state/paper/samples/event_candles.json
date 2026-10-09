@@ -1,37 +1,15 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/events/KXCS2GAME-26OCT070700GOTLPH/candlesticks?start_ts=1791369000&end_ts=1791370860&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/events/KXCS2GAME-26OCT0710309ZFURIA/candlesticks?start_ts=1791381600&end_ts=1791383460&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791370860,
+  "adjusted_end_ts": 1791383460,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791369120,
-     "open_interest_fp": "3406.24",
+     "end_period_ts": 1791381720,
+     "open_interest_fp": "54819.81",
      "price": {
-      "previous_dollars": "0.9900"
-     },
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "1.0000",
-      "high_dollars": "1.0000",
-      "low_dollars": "1.0000",
-      "open_dollars": "1.0000"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.9900"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791369120,
-     "open_interest_fp": "8684.02",
-     "price": {
-      "previous_dollars": "0.0400"
+      "previous_dollars": "0.0100"
      },
      "volume_fp": "0.00",
      "yes_ask": {
@@ -47,11 +25,63 @@
       "open_dollars": "0.0000"
      }
     }
+   ],
+   [
+    {
+     "end_period_ts": 1791381600,
+     "open_interest_fp": "110190.55",
+     "price": {
+      "close_dollars": "0.9900",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.9900",
+      "mean_dollars": "0.9900",
+      "open_dollars": "0.9900",
+      "previous_dollars": "0.9900"
+     },
+     "volume_fp": "249.60",
+     "yes_ask": {
+      "close_dollars": "1.0000",
+      "high_dollars": "1.0000",
+      "low_dollars": "1.0000",
+      "open_dollars": "1.0000"
+     },
+     "yes_bid": {
+      "close_dollars": "0.9900",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.9900",
+      "open_dollars": "0.9900"
+     }
+    },
+    {
+     "end_period_ts": 1791381720,
+     "open_interest_fp": "110190.55",
+     "price": {
+      "close_dollars": "0.9900",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.9900",
+      "mean_dollars": "0.9900",
+      "open_dollars": "0.9900",
+      "previous_dollars": "0.9900"
+     },
+     "volume_fp": "46.45",
+     "yes_ask": {
+      "close_dollars": "1.0000",
+      "high_dollars": "1.0000",
+      "low_dollars": "1.0000",
+      "open_dollars": "1.0000"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0000",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.9900"
+     }
+    }
    ]
   ],
   "market_tickers": [
-   "KXCS2GAME-26OCT070700GOTLPH-GOT",
-   "KXCS2GAME-26OCT070700GOTLPH-LPH"
+   "KXCS2GAME-26OCT0710309ZFURIA-9Z",
+   "KXCS2GAME-26OCT0710309ZFURIA-FURIA"
   ]
  }
 }
