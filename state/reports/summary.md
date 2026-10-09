@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-09 01:23 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-09 01:33 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,24 +8,24 @@ Updated 2026-10-09 01:23 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 69 | 5 | 64 | 15 | -$90.29 | -10.3% | -0.8c (68) | $909.71 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 123 | 11 | 112 | 77 | -$78.96 | -9.1% | -0.8c (117) | $921.04 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 123 | 11 | 112 | 77 | -$78.96 | -9.1% | -0.7c (118) | $921.04 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-383 finished matches. Lower is better; the market line is the bar to beat.
+386 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6183 | 0.2157 |
-| model | 0.6726 | 0.2401 |
-| blend | 0.6185 | 0.2157 |
+| market | 0.6189 | 0.2160 |
+| model | 0.6729 | 0.2402 |
+| blend | 0.6190 | 0.2160 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 170 | 0.5977 | 0.6688 |
-| esoccergame | 119 | 0.6946 | 0.6761 |
+| esoccergame | 122 | 0.6946 | 0.6770 |
 | lol | 26 | 0.3970 | 0.6526 |
 | ebasketballgame | 25 | 0.6607 | 0.7249 |
 | dota2 | 21 | 0.6117 | 0.6346 |
