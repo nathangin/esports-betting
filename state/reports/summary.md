@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-09 10:40 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-09 10:45 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,30 +8,30 @@ Updated 2026-10-09 10:40 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 79 | 13 | 66 | 15 | -$93.97 | -10.7% | -0.8c (76) | $906.03 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 146 | 20 | 126 | 85 | -$110.16 | -11.2% | -1.0c (144) | $889.84 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 146 | 20 | 126 | 85 | -$110.16 | -11.2% | -0.9c (145) | $889.84 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-583 finished matches. Lower is better; the market line is the bar to beat.
+587 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6364 | 0.2242 |
-| model | 0.6797 | 0.2435 |
-| blend | 0.6365 | 0.2243 |
+| market | 0.6357 | 0.2239 |
+| model | 0.6782 | 0.2428 |
+| blend | 0.6358 | 0.2240 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 275 | 0.6912 | 0.6821 |
+| esoccergame | 278 | 0.6912 | 0.6812 |
 | cs2 | 178 | 0.5922 | 0.6743 |
 | ebasketballgame | 58 | 0.6750 | 0.7131 |
 | lol | 26 | 0.3970 | 0.6526 |
 | dota2 | 21 | 0.6117 | 0.6346 |
 | r6 | 14 | 0.6536 | 0.7299 |
+| ow | 6 | 0.1578 | 0.4189 |
 | valorant | 6 | 0.5347 | 0.7195 |
-| ow | 5 | 0.1801 | 0.4916 |
 
 ## Latest bets
 
