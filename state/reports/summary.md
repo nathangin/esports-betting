@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-09 14:30 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-09 14:35 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,24 +8,24 @@ Updated 2026-10-09 14:30 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 86 | 11 | 75 | 17 | -$171.65 | -16.8% | -0.7c (81) | $828.35 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 146 | 10 | 136 | 91 | -$126.40 | -11.9% | -0.8c (145) | $873.60 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 146 | 9 | 137 | 92 | -$123.80 | -11.6% | -0.8c (145) | $876.20 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-668 finished matches. Lower is better; the market line is the bar to beat.
+671 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6381 | 0.2252 |
-| model | 0.6775 | 0.2425 |
-| blend | 0.6382 | 0.2255 |
+| market | 0.6388 | 0.2256 |
+| model | 0.6773 | 0.2424 |
+| blend | 0.6391 | 0.2259 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 334 | 0.6910 | 0.6811 |
-| cs2 | 191 | 0.5896 | 0.6763 |
+| esoccergame | 336 | 0.6932 | 0.6803 |
+| cs2 | 192 | 0.5880 | 0.6770 |
 | ebasketballgame | 67 | 0.6661 | 0.7062 |
 | lol | 26 | 0.3970 | 0.6526 |
 | dota2 | 22 | 0.6011 | 0.6277 |
@@ -51,7 +51,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-09 09:49 | favourite | esoccergame | Frankfurt (Fede) | Freiburg (Shaq) | YES Frankfurt (Fede) | 1 | 0.45 | 0.50 | 0.50 | won | $0.53 |
 | 2026-10-09 09:49 | favourite | esoccergame | Portugal (Rose) | United States (Mia) | YES Portugal (Rose) | 10 | 0.47 | 0.53 | 0.53 | lost | -$4.88 |
 | 2026-10-09 09:34 | favourite | esoccergame | Freiburg (Shaq) | Stuttgart (Niskanen15) | YES Freiburg (Shaq) | 13 | 0.63 | 0.68 | 0.68 | won | $4.59 |
-| 2026-10-09 09:24 | favourite | cs2 | WRAITH PCIFIC | XI Esport | NO XI Esport | 11 | 0.75 | 0.75 | 0.75 | open | - |
+| 2026-10-09 09:24 | favourite | cs2 | WRAITH PCIFIC | XI Esport | NO XI Esport | 11 | 0.75 | 0.75 | 0.75 | won | $2.60 |
 | 2026-10-09 09:24 | favourite | cs2 | Vitality Academy | CTRL Esports | NO CTRL Esports | 13 | 0.63 | 0.62 | 0.62 | lost | -$8.41 |
 | 2026-10-09 09:09 | favourite | esoccergame | Freiburg (Shaq) | Mönchengladbach (Eder) | YES Freiburg (Shaq) | 16 | 0.54 | 0.58 | 0.58 | lost | -$8.92 |
 | 2026-10-09 08:54 | favourite | cs2 | Sangal | Esport Academy Copenhagen | YES Sangal | 12 | 0.69 | 0.69 | 0.69 | won | $3.54 |
