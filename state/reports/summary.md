@@ -1,31 +1,31 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-09 11:10 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-09 11:15 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 82 | 16 | 66 | 15 | -$93.97 | -10.7% | -0.7c (78) | $906.03 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 146 | 18 | 128 | 87 | -$102.27 | -10.2% | -0.8c (145) | $897.73 |
+| model-only | Elo win model alone (control: ignores the market) | 82 | 14 | 68 | 15 | -$129.59 | -14.2% | -0.7c (78) | $870.41 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 146 | 15 | 131 | 89 | -$107.93 | -10.6% | -0.8c (145) | $892.07 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-595 finished matches. Lower is better; the market line is the bar to beat.
+600 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6344 | 0.2234 |
-| model | 0.6793 | 0.2434 |
-| blend | 0.6343 | 0.2234 |
+| market | 0.6346 | 0.2235 |
+| model | 0.6798 | 0.2436 |
+| blend | 0.6345 | 0.2235 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 284 | 0.6902 | 0.6832 |
-| cs2 | 180 | 0.5882 | 0.6748 |
+| esoccergame | 287 | 0.6897 | 0.6829 |
+| cs2 | 182 | 0.5892 | 0.6769 |
 | ebasketballgame | 58 | 0.6750 | 0.7131 |
 | lol | 26 | 0.3970 | 0.6526 |
 | dota2 | 21 | 0.6117 | 0.6346 |
@@ -44,7 +44,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-09 10:54 | model-only | cs2 | K27 | fnatic | YES K27 | 35 | 0.50 | 0.56 | 0.49 | open | - |
 | 2026-10-09 09:54 | model-only | cs2 | Honvéd | 6666 | YES Honvéd | 55 | 0.31 | 0.41 | 0.31 | open | - |
 | 2026-10-09 09:54 | model-only | cs2 | PARIVISION | Vitality | NO Vitality | 106 | 0.16 | 0.27 | 0.15 | open | - |
-| 2026-10-09 09:49 | favourite | esoccergame | Frankfurt (Fede) | Freiburg (Shaq) | YES Frankfurt (Fede) | 1 | 0.45 | 0.50 | 0.50 | open | - |
+| 2026-10-09 09:49 | favourite | esoccergame | Frankfurt (Fede) | Freiburg (Shaq) | YES Frankfurt (Fede) | 1 | 0.45 | 0.50 | 0.50 | won | $0.53 |
 | 2026-10-09 09:49 | favourite | esoccergame | Portugal (Rose) | United States (Mia) | YES Portugal (Rose) | 10 | 0.47 | 0.53 | 0.53 | lost | -$4.88 |
 | 2026-10-09 09:34 | favourite | esoccergame | Freiburg (Shaq) | Stuttgart (Niskanen15) | YES Freiburg (Shaq) | 13 | 0.63 | 0.68 | 0.68 | won | $4.59 |
 | 2026-10-09 09:24 | favourite | cs2 | WRAITH PCIFIC | XI Esport | NO XI Esport | 11 | 0.75 | 0.75 | 0.75 | open | - |
@@ -56,12 +56,12 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-09 08:54 | model-only | cs2 | Esport Academy Copenhagen | Sangal | YES Esport Academy Copenhagen | 55 | 0.31 | 0.40 | 0.31 | open | - |
 | 2026-10-09 07:54 | favourite | dota2 | Team Spirit | Aurora | NO Aurora | 12 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-10-09 07:54 | model-only | dota2 | Aurora | Team Spirit | YES Aurora | 48 | 0.32 | 0.38 | 0.32 | open | - |
-| 2026-10-09 07:54 | favourite | cs2 | HOTU | Acend | NO Acend | 11 | 0.75 | 0.74 | 0.74 | open | - |
-| 2026-10-09 07:54 | model-only | cs2 | Acend | HOTU | NO HOTU | 66 | 0.26 | 0.36 | 0.26 | open | - |
+| 2026-10-09 07:54 | favourite | cs2 | HOTU | Acend | NO Acend | 11 | 0.75 | 0.74 | 0.74 | won | $2.60 |
+| 2026-10-09 07:54 | model-only | cs2 | Acend | HOTU | NO HOTU | 66 | 0.26 | 0.36 | 0.26 | lost | -$18.05 |
 | 2026-10-09 07:24 | favourite | cs2 | Aurora Gaming | 1WIN | NO 1WIN | 12 | 0.71 | 0.70 | 0.71 | won | $3.30 |
 | 2026-10-09 06:53 | model-only | cs2 | Elite Klan | Royal Foxes Esports | YES Elite Klan | 46 | 0.37 | 0.44 | 0.37 | open | - |
-| 2026-10-09 06:53 | model-only | cs2 | mellren | Bebop | NO Bebop | 26 | 0.66 | 0.73 | 0.66 | open | - |
-| 2026-10-09 06:53 | favourite | cs2 | mellren | Bebop | NO Bebop | 13 | 0.66 | 0.66 | 0.66 | open | - |
+| 2026-10-09 06:53 | model-only | cs2 | mellren | Bebop | NO Bebop | 26 | 0.66 | 0.73 | 0.66 | lost | -$17.57 |
+| 2026-10-09 06:53 | favourite | cs2 | mellren | Bebop | NO Bebop | 13 | 0.66 | 0.66 | 0.66 | lost | -$8.79 |
 | 2026-10-09 06:53 | favourite | cs2 | Fire Flux Esports | Lavked | NO Lavked | 11 | 0.75 | 0.57 | 0.57 | open | - |
 | 2026-10-09 06:53 | favourite | cs2 | Acend | Nexus | YES Acend | 14 | 0.61 | 0.57 | 0.57 | open | - |
 
