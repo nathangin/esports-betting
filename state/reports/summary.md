@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-09 10:20 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-09 10:25 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,19 +8,19 @@ Updated 2026-10-09 10:20 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 79 | 13 | 66 | 15 | -$93.97 | -10.7% | -0.8c (76) | $906.03 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 146 | 23 | 123 | 84 | -$97.77 | -10.1% | -0.9c (143) | $902.23 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 146 | 22 | 124 | 85 | -$96.36 | -9.9% | -0.9c (143) | $903.64 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-577 finished matches. Lower is better; the market line is the bar to beat.
+578 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6366 | 0.2242 |
-| model | 0.6797 | 0.2435 |
-| blend | 0.6367 | 0.2243 |
+| market | 0.6358 | 0.2239 |
+| model | 0.6798 | 0.2435 |
+| blend | 0.6358 | 0.2240 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
@@ -29,7 +29,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | ebasketballgame | 56 | 0.6743 | 0.7138 |
 | lol | 26 | 0.3970 | 0.6526 |
 | dota2 | 21 | 0.6117 | 0.6346 |
-| r6 | 13 | 0.6902 | 0.7295 |
+| r6 | 14 | 0.6536 | 0.7299 |
 | valorant | 6 | 0.5347 | 0.7195 |
 | ow | 5 | 0.1801 | 0.4916 |
 
@@ -63,7 +63,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-09 06:53 | favourite | cs2 | mellren | Bebop | NO Bebop | 13 | 0.66 | 0.66 | 0.66 | open | - |
 | 2026-10-09 06:53 | favourite | cs2 | Royal Foxes Esports | Elite Klan | NO Elite Klan | 13 | 0.64 | 0.63 | 0.63 | open | - |
 | 2026-10-09 06:53 | favourite | cs2 | Teletubisie | STATE | YES Teletubisie | 14 | 0.60 | 0.60 | 0.60 | open | - |
-| 2026-10-09 06:53 | favourite | r6 | Chiefs Esports Club | 7VEN | NO 7VEN | 10 | 0.85 | 0.84 | 0.84 | open | - |
+| 2026-10-09 06:53 | favourite | r6 | Chiefs Esports Club | 7VEN | NO 7VEN | 10 | 0.85 | 0.84 | 0.84 | won | $1.41 |
 
 ## Backtest on real Kalshi prices
 
