@@ -1,37 +1,37 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-09 12:00 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-09 12:05 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 84 | 15 | 69 | 15 | -$147.47 | -15.8% | -0.7c (80) | $852.53 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 146 | 13 | 133 | 90 | -$113.03 | -10.9% | -0.8c (145) | $886.97 |
+| model-only | Elo win model alone (control: ignores the market) | 84 | 13 | 71 | 17 | -$101.77 | -10.7% | -0.7c (80) | $898.23 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 146 | 12 | 134 | 90 | -$121.53 | -11.6% | -0.8c (145) | $878.47 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-616 finished matches. Lower is better; the market line is the bar to beat.
+619 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6351 | 0.2237 |
-| model | 0.6807 | 0.2440 |
-| blend | 0.6349 | 0.2237 |
+| market | 0.6366 | 0.2244 |
+| model | 0.6806 | 0.2440 |
+| blend | 0.6366 | 0.2246 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 297 | 0.6904 | 0.6846 |
-| cs2 | 184 | 0.5897 | 0.6773 |
+| esoccergame | 298 | 0.6904 | 0.6847 |
+| cs2 | 185 | 0.5915 | 0.6767 |
 | ebasketballgame | 62 | 0.6639 | 0.7102 |
 | lol | 26 | 0.3970 | 0.6526 |
 | dota2 | 21 | 0.6117 | 0.6346 |
 | r6 | 14 | 0.6536 | 0.7299 |
+| valorant | 7 | 0.6428 | 0.7153 |
 | ow | 6 | 0.1578 | 0.4189 |
-| valorant | 6 | 0.5347 | 0.7195 |
 
 ## Latest bets
 
@@ -41,7 +41,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-10-09 11:54 | model-only | cs2 | Vitalem Aerem | Rare Atom | NO Rare Atom | 1 | 0.27 | 0.37 | 0.27 | open | - |
 | 2026-10-09 11:24 | model-only | dota2 | 1win | PARIVISION | YES 1win | 11 | 0.14 | 0.28 | 0.14 | open | - |
-| 2026-10-09 10:54 | model-only | valorant | T1 | Paper Rex | NO Paper Rex | 63 | 0.27 | 0.50 | 0.28 | open | - |
+| 2026-10-09 10:54 | model-only | valorant | T1 | Paper Rex | NO Paper Rex | 63 | 0.27 | 0.50 | 0.28 | won | $45.12 |
 | 2026-10-09 10:54 | model-only | cs2 | Sinners | GamerLegion | YES Sinners | 42 | 0.41 | 0.58 | 0.42 | open | - |
 | 2026-10-09 10:54 | model-only | cs2 | K27 | fnatic | YES K27 | 35 | 0.50 | 0.56 | 0.49 | open | - |
 | 2026-10-09 09:54 | model-only | cs2 | Honvéd | 6666 | YES Honvéd | 55 | 0.31 | 0.41 | 0.31 | open | - |
@@ -54,8 +54,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-09 09:09 | favourite | esoccergame | Freiburg (Shaq) | Mönchengladbach (Eder) | YES Freiburg (Shaq) | 16 | 0.54 | 0.58 | 0.58 | lost | -$8.92 |
 | 2026-10-09 08:54 | favourite | cs2 | Sangal | Esport Academy Copenhagen | YES Sangal | 12 | 0.69 | 0.69 | 0.69 | won | $3.54 |
 | 2026-10-09 08:54 | model-only | cs2 | Esport Academy Copenhagen | Sangal | YES Esport Academy Copenhagen | 55 | 0.31 | 0.40 | 0.31 | lost | -$17.88 |
-| 2026-10-09 08:54 | favourite | cs2 | Infinite | WBT Academy | YES Infinite | 14 | 0.59 | 0.60 | 0.60 | open | - |
-| 2026-10-09 08:54 | model-only | cs2 | WBT Academy | Infinite | YES WBT Academy | 1 | 0.40 | 0.57 | 0.40 | open | - |
+| 2026-10-09 08:54 | favourite | cs2 | Infinite | WBT Academy | YES Infinite | 14 | 0.59 | 0.60 | 0.60 | lost | -$8.50 |
+| 2026-10-09 08:54 | model-only | cs2 | WBT Academy | Infinite | YES WBT Academy | 1 | 0.40 | 0.57 | 0.40 | won | $0.58 |
 | 2026-10-09 07:54 | favourite | dota2 | Team Spirit | Aurora | NO Aurora | 12 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-10-09 07:54 | model-only | dota2 | Aurora | Team Spirit | YES Aurora | 48 | 0.32 | 0.38 | 0.32 | open | - |
 | 2026-10-09 07:54 | favourite | cs2 | HOTU | Acend | NO Acend | 11 | 0.75 | 0.74 | 0.74 | won | $2.60 |
