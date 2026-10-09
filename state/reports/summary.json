@@ -1,19 +1,19 @@
 {
- "generated": "2026-10-09T22:36:27.113040+00:00",
+ "generated": "2026-10-09T22:46:26.721281+00:00",
  "books": {
   "blend": {
    "start": 1000.0,
    "equity": 1000.0,
-   "cash": 1000.0,
-   "bets": 0,
-   "open": 0,
+   "cash": 980.31,
+   "bets": 1,
+   "open": 1,
    "settled": 0,
    "won": 0,
    "void": 0,
    "pnl": 0.0,
    "outlay": 0.0,
    "roi": null,
-   "fees": 0.0,
+   "fees": 0.49,
    "avg_clv": null,
    "clv_n": 0
   },
