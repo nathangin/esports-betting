@@ -1,31 +1,31 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-09 05:59 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-09 06:04 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 71 | 6 | 65 | 15 | -$93.65 | -10.7% | -0.8c (70) | $906.35 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 129 | 9 | 120 | 81 | -$102.72 | -10.9% | -0.6c (127) | $897.28 |
+| model-only | Elo win model alone (control: ignores the market) | 71 | 5 | 66 | 15 | -$93.97 | -10.7% | -0.8c (70) | $906.03 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 129 | 8 | 121 | 82 | -$99.53 | -10.5% | -0.6c (127) | $900.47 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-487 finished matches. Lower is better; the market line is the bar to beat.
+488 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6304 | 0.2213 |
-| model | 0.6767 | 0.2421 |
-| blend | 0.6304 | 0.2213 |
+| market | 0.6298 | 0.2210 |
+| model | 0.6769 | 0.2422 |
+| blend | 0.6298 | 0.2210 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | esoccergame | 201 | 0.6901 | 0.6774 |
-| cs2 | 176 | 0.5960 | 0.6732 |
+| cs2 | 177 | 0.5946 | 0.6738 |
 | ebasketballgame | 41 | 0.6677 | 0.7213 |
 | lol | 26 | 0.3970 | 0.6526 |
 | dota2 | 21 | 0.6117 | 0.6346 |
@@ -41,8 +41,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-10-09 05:53 | favourite | cs2 | Chinggis Warriors | 1337 | YES Chinggis Warriors | 10 | 0.88 | 0.86 | 0.86 | open | - |
 | 2026-10-09 03:53 | favourite | r6 | ENTERPRISE Esports | Man eSports LFO | NO Man eSports LFO | 4 | 0.83 | 0.84 | 0.84 | open | - |
-| 2026-10-09 02:53 | favourite | cs2 | The Huns Esports | The Audacity | NO The Audacity | 12 | 0.72 | 0.70 | 0.70 | open | - |
-| 2026-10-09 02:53 | model-only | cs2 | The Audacity | The Huns Esports | YES The Audacity | 1 | 0.30 | 0.54 | 0.30 | open | - |
+| 2026-10-09 02:53 | favourite | cs2 | The Huns Esports | The Audacity | NO The Audacity | 12 | 0.72 | 0.70 | 0.70 | won | $3.19 |
+| 2026-10-09 02:53 | model-only | cs2 | The Audacity | The Huns Esports | YES The Audacity | 1 | 0.30 | 0.54 | 0.30 | lost | -$0.32 |
 | 2026-10-09 02:48 | favourite | ebasketballgame | New Orleans Pelicans (Tim) | Indiana Pacers (Larry) | NO Indiana Pacers (Larry) | 10 | 0.73 | 0.70 | 0.71 | won | $2.56 |
 | 2026-10-09 02:48 | model-only | ebasketballgame | Indiana Pacers (Larry) | New Orleans Pelicans (Tim) | YES Indiana Pacers (Larry) | 10 | 0.32 | 0.43 | 0.29 | lost | -$3.36 |
 | 2026-10-09 02:18 | favourite | ebasketballgame | New Orleans Pelicans (Zion) | Indiana Pacers (Larry) | NO Indiana Pacers (Larry) | 13 | 0.68 | 0.65 | 0.65 | won | $3.96 |
