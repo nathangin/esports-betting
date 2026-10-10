@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-10 15:48 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-10 15:53 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,23 +8,23 @@ Updated 2026-10-10 15:48 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
 | model-only | Elo win model alone (control: ignores the market) | 106 | 9 | 97 | 23 | -$232.12 | -18.5% | -0.5c (100) | $767.88 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 179 | 9 | 170 | 113 | -$145.02 | -11.2% | -1.1c (178) | $854.98 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 180 | 10 | 170 | 113 | -$145.02 | -11.2% | -1.1c (178) | $854.98 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1256 finished matches. Lower is better; the market line is the bar to beat.
+1258 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6575 | 0.2339 |
+| market | 0.6576 | 0.2340 |
 | model | 0.6734 | 0.2403 |
 | blend | 0.6591 | 0.2347 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 727 | 0.6958 | 0.6780 |
+| esoccergame | 729 | 0.6958 | 0.6780 |
 | cs2 | 259 | 0.5829 | 0.6645 |
 | ebasketballgame | 164 | 0.6751 | 0.6804 |
 | lol | 30 | 0.4152 | 0.6717 |
@@ -40,6 +40,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-10 15:53 | favourite | cs2 | Spirit | MOUZ | NO MOUZ | 1 | 0.59 | 0.58 | 0.58 | open | - |
 | 2026-10-10 12:38 | model-only | cs2 | Aurora Gaming | Vitality | YES Aurora Gaming | 21 | 0.24 | 0.39 | 0.23 | open | - |
 | 2026-10-10 11:53 | model-only | cs2 | PRIVATE | GamerLegion | YES PRIVATE | 19 | 0.32 | 0.51 | 0.32 | open | - |
 | 2026-10-10 11:53 | model-only | cs2 | Just Swing | Kaleido | YES Just Swing | 31 | 0.46 | 0.60 | 0.43 | won | $16.20 |
@@ -64,7 +65,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-10 07:52 | favourite | cs2 | MARKandLARRY | Orgless | YES MARKandLARRY | 14 | 0.55 | 0.54 | 0.54 | won | $6.05 |
 | 2026-10-10 07:52 | model-only | cs2 | Orgless | MARKandLARRY | YES Orgless | 32 | 0.48 | 0.58 | 0.46 | lost | -$15.92 |
 | 2026-10-10 07:52 | favourite | cs2 | Rooster | Ice Block | NO Ice Block | 3 | 0.89 | 0.88 | 0.88 | open | - |
-| 2026-10-10 06:52 | model-only | dota2 | KukuysV3 | InterActive Philippines | YES KukuysV3 | 4 | 0.35 | 0.46 | 0.34 | open | - |
 
 ## Backtest on real Kalshi prices
 
