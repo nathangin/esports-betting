@@ -1,31 +1,31 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-10 07:28 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-10 07:33 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 92 | 12 | 80 | 19 | -$192.23 | -17.9% | -0.7c (84) | $807.77 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 169 | 20 | 149 | 98 | -$158.79 | -13.6% | -1.3c (162) | $841.21 |
+| model-only | Elo win model alone (control: ignores the market) | 92 | 11 | 81 | 19 | -$192.53 | -17.9% | -0.7c (84) | $807.47 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 169 | 19 | 150 | 99 | -$155.87 | -13.2% | -1.3c (162) | $844.13 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1045 finished matches. Lower is better; the market line is the bar to beat.
+1048 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6556 | 0.2331 |
-| model | 0.6747 | 0.2410 |
-| blend | 0.6570 | 0.2339 |
+| market | 0.6553 | 0.2330 |
+| model | 0.6746 | 0.2409 |
+| blend | 0.6568 | 0.2338 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 593 | 0.6955 | 0.6800 |
-| cs2 | 232 | 0.5962 | 0.6674 |
+| esoccergame | 595 | 0.6955 | 0.6801 |
+| cs2 | 233 | 0.5950 | 0.6667 |
 | ebasketballgame | 131 | 0.6785 | 0.6868 |
 | lol | 29 | 0.3933 | 0.6710 |
 | dota2 | 24 | 0.5756 | 0.6162 |
@@ -58,8 +58,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-10 02:52 | favourite | cs2 | NEXVOID | 5star | NO 5star | 10 | 0.77 | 0.63 | 0.63 | open | - |
 | 2026-10-10 02:47 | favourite | ebasketballgame | New Orleans Pelicans (Zach) | Indiana Pacers (James) | NO Indiana Pacers (James) | 9 | 0.88 | 0.84 | 0.84 | won | $1.01 |
 | 2026-10-10 02:47 | favourite | ebasketballgame | Denver Nuggets (Lonzo) | Dallas Mavericks (Cade) | NO Dallas Mavericks (Cade) | 10 | 0.83 | 0.80 | 0.80 | won | $1.60 |
-| 2026-10-10 02:22 | favourite | cs2 | Abyssal | Mindfreak | NO Mindfreak | 11 | 0.72 | 0.72 | 0.72 | open | - |
-| 2026-10-10 02:22 | model-only | cs2 | Mindfreak | Abyssal | NO Abyssal | 1 | 0.28 | 0.40 | 0.28 | open | - |
+| 2026-10-10 02:22 | favourite | cs2 | Abyssal | Mindfreak | NO Mindfreak | 11 | 0.72 | 0.72 | 0.72 | won | $2.92 |
+| 2026-10-10 02:22 | model-only | cs2 | Mindfreak | Abyssal | NO Abyssal | 1 | 0.28 | 0.40 | 0.28 | lost | -$0.30 |
 | 2026-10-10 02:17 | favourite | ebasketballgame | Indiana Pacers (James) | New Orleans Pelicans (Davis) | NO New Orleans Pelicans (Davis) | 14 | 0.57 | 0.54 | 0.53 | won | $5.77 |
 | 2026-10-10 02:17 | favourite | ebasketballgame | Dallas Mavericks (Cade) | Denver Nuggets (Bryce) | NO Denver Nuggets (Bryce) | 13 | 0.61 | 0.57 | 0.57 | lost | -$8.15 |
 | 2026-10-10 01:52 | favourite | ebasketballgame | Golden State Warriors (Zach) | Brooklyn Nets (Davis) | NO Brooklyn Nets (Davis) | 9 | 0.88 | 0.84 | 0.84 | won | $1.01 |
