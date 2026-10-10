@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-10 03:57 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-10 04:02 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,25 +8,25 @@ Updated 2026-10-10 03:57 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
 | model-only | Elo win model alone (control: ignores the market) | 87 | 7 | 80 | 19 | -$192.23 | -17.9% | -0.7c (82) | $807.77 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 158 | 11 | 147 | 96 | -$161.40 | -14.0% | -1.2c (157) | $838.60 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 158 | 11 | 147 | 96 | -$161.40 | -14.0% | -1.3c (157) | $838.60 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-983 finished matches. Lower is better; the market line is the bar to beat.
+984 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6556 | 0.2331 |
-| model | 0.6745 | 0.2409 |
-| blend | 0.6572 | 0.2339 |
+| market | 0.6555 | 0.2331 |
+| model | 0.6746 | 0.2410 |
+| blend | 0.6571 | 0.2339 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | esoccergame | 548 | 0.6957 | 0.6797 |
 | cs2 | 229 | 0.5993 | 0.6693 |
-| ebasketballgame | 118 | 0.6858 | 0.6854 |
+| ebasketballgame | 119 | 0.6853 | 0.6865 |
 | lol | 29 | 0.3933 | 0.6710 |
 | dota2 | 24 | 0.5756 | 0.6162 |
 | r6 | 18 | 0.6914 | 0.7324 |
