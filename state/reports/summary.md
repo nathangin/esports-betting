@@ -1,31 +1,31 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-10 12:03 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-10 12:13 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 105 | 18 | 87 | 19 | -$258.42 | -22.6% | -0.5c (97) | $741.58 |
+| model-only | Elo win model alone (control: ignores the market) | 105 | 17 | 88 | 19 | -$258.80 | -22.7% | -0.5c (97) | $741.20 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 179 | 15 | 164 | 108 | -$147.89 | -11.7% | -1.0c (177) | $852.11 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1146 finished matches. Lower is better; the market line is the bar to beat.
+1152 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6585 | 0.2343 |
-| model | 0.6746 | 0.2410 |
-| blend | 0.6601 | 0.2351 |
+| market | 0.6579 | 0.2341 |
+| model | 0.6743 | 0.2408 |
+| blend | 0.6596 | 0.2349 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 658 | 0.6954 | 0.6789 |
-| cs2 | 241 | 0.5936 | 0.6656 |
+| esoccergame | 662 | 0.6954 | 0.6788 |
+| cs2 | 243 | 0.5910 | 0.6646 |
 | ebasketballgame | 148 | 0.6775 | 0.6837 |
 | lol | 29 | 0.3933 | 0.6710 |
 | dota2 | 27 | 0.5740 | 0.6323 |
@@ -49,7 +49,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-10 09:52 | model-only | cs2 | Saint Sinners | WBT Academy | YES Saint Sinners | 36 | 0.42 | 0.51 | 0.42 | open | - |
 | 2026-10-10 09:47 | favourite | esoccergame | RB Leipzig (Kylian) | Mönchengladbach (Bradley) | YES RB Leipzig (Kylian) | 1 | 0.57 | 0.61 | 0.61 | lost | -$0.59 |
 | 2026-10-10 09:22 | model-only | dota2 | Team Spirit | Team Yandex | NO Team Yandex | 39 | 0.38 | 0.47 | 0.38 | open | - |
-| 2026-10-10 09:22 | model-only | cs2 | VP.Future 3 | EAC Extra | YES VP.Future 3 | 1 | 0.36 | 0.55 | 0.34 | open | - |
+| 2026-10-10 09:22 | model-only | cs2 | VP.Future 3 | EAC Extra | YES VP.Future 3 | 1 | 0.36 | 0.55 | 0.34 | lost | -$0.38 |
 | 2026-10-10 08:52 | model-only | cs2 | HOTU | fnatic | YES HOTU | 31 | 0.48 | 0.57 | 0.48 | open | - |
 | 2026-10-10 08:52 | model-only | cs2 | PURE | Sangal | NO Sangal | 1 | 0.35 | 0.43 | 0.34 | open | - |
 | 2026-10-10 08:52 | favourite | cs2 | Black Phoenix | Nexus | YES Black Phoenix | 5 | 0.53 | 0.54 | 0.54 | open | - |
