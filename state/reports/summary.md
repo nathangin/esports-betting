@@ -1,32 +1,32 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-10 06:48 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-10 06:53 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 89 | 9 | 80 | 19 | -$192.23 | -17.9% | -0.7c (84) | $807.77 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 163 | 14 | 149 | 98 | -$158.79 | -13.6% | -1.3c (161) | $841.21 |
+| model-only | Elo win model alone (control: ignores the market) | 92 | 12 | 80 | 19 | -$192.23 | -17.9% | -0.7c (84) | $807.77 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 169 | 20 | 149 | 98 | -$158.79 | -13.6% | -1.3c (161) | $841.21 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1030 finished matches. Lower is better; the market line is the bar to beat.
+1033 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6553 | 0.2330 |
-| model | 0.6746 | 0.2409 |
-| blend | 0.6568 | 0.2338 |
+| market | 0.6554 | 0.2331 |
+| model | 0.6745 | 0.2409 |
+| blend | 0.6569 | 0.2338 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 582 | 0.6956 | 0.6809 |
+| esoccergame | 584 | 0.6956 | 0.6805 |
 | cs2 | 232 | 0.5962 | 0.6674 |
-| ebasketballgame | 128 | 0.6782 | 0.6816 |
+| ebasketballgame | 129 | 0.6783 | 0.6832 |
 | lol | 29 | 0.3933 | 0.6710 |
 | dota2 | 24 | 0.5756 | 0.6162 |
 | r6 | 18 | 0.6914 | 0.7324 |
@@ -39,13 +39,22 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-10 06:52 | favourite | r6 | Man eSports LFO | 7VEN | YES Man eSports LFO | 12 | 0.65 | 0.61 | 0.61 | open | - |
+| 2026-10-10 06:52 | favourite | lol | PART TIMERS | West Point Esports PH | YES PART TIMERS | 12 | 0.65 | 0.65 | 0.65 | open | - |
+| 2026-10-10 06:52 | model-only | lol | West Point Esports PH | PART TIMERS | YES West Point Esports PH | 44 | 0.35 | 0.50 | 0.35 | open | - |
+| 2026-10-10 06:52 | favourite | dota2 | InterActive Philippines | KukuysV3 | YES InterActive Philippines | 12 | 0.67 | 0.66 | 0.66 | open | - |
+| 2026-10-10 06:52 | model-only | dota2 | KukuysV3 | InterActive Philippines | YES KukuysV3 | 4 | 0.35 | 0.46 | 0.34 | open | - |
+| 2026-10-10 06:52 | favourite | cs2 | XI Esport | THE UNIT | NO THE UNIT | 13 | 0.63 | 0.61 | 0.61 | open | - |
+| 2026-10-10 06:52 | favourite | cs2 | TheChampionGG | 3DMAX Academy | NO 3DMAX Academy | 3 | 0.60 | 0.58 | 0.58 | open | - |
+| 2026-10-10 06:52 | favourite | cs2 | mellren | Honvéd | YES mellren | 10 | 0.79 | 0.79 | 0.79 | open | - |
+| 2026-10-10 06:52 | model-only | cs2 | Honvéd | mellren | YES Honvéd | 55 | 0.22 | 0.28 | 0.21 | open | - |
 | 2026-10-10 06:22 | favourite | ow | Crazy Raccoon | T1 | YES Crazy Raccoon | 6 | 0.72 | 0.68 | 0.68 | open | - |
 | 2026-10-10 05:52 | favourite | cs2 | Chinggis Warriors | The Huns Esports | YES Chinggis Warriors | 10 | 0.76 | 0.74 | 0.74 | open | - |
 | 2026-10-10 05:52 | model-only | cs2 | The Huns Esports | Chinggis Warriors | YES The Huns Esports | 53 | 0.26 | 0.45 | 0.26 | open | - |
-| 2026-10-10 04:52 | favourite | ow | ZANSIDE GAMING | SEIJI ESPORTS | NO SEIJI ESPORTS | 2 | 0.86 | 0.84 | 0.84 | open | - |
 | 2026-10-10 04:52 | favourite | dota2 | Cloud Dawning | Cresent | NO Cresent | 14 | 0.56 | 0.55 | 0.55 | open | - |
-| 2026-10-10 04:52 | model-only | dota2 | Cresent | Cloud Dawning | NO Cloud Dawning | 33 | 0.47 | 0.61 | 0.45 | open | - |
 | 2026-10-10 04:52 | favourite | dota2 | Cloud Rising | Zenith | YES Cloud Rising | 1 | 0.71 | 0.64 | 0.64 | open | - |
+| 2026-10-10 04:52 | model-only | dota2 | Cresent | Cloud Dawning | NO Cloud Dawning | 33 | 0.47 | 0.61 | 0.45 | open | - |
+| 2026-10-10 04:52 | favourite | ow | ZANSIDE GAMING | SEIJI ESPORTS | NO SEIJI ESPORTS | 2 | 0.86 | 0.84 | 0.84 | open | - |
 | 2026-10-10 02:52 | favourite | cs2 | NEXVOID | 5star | NO 5star | 10 | 0.77 | 0.63 | 0.63 | open | - |
 | 2026-10-10 02:47 | favourite | ebasketballgame | New Orleans Pelicans (Zach) | Indiana Pacers (James) | NO Indiana Pacers (James) | 9 | 0.88 | 0.84 | 0.84 | won | $1.01 |
 | 2026-10-10 02:47 | favourite | ebasketballgame | Denver Nuggets (Lonzo) | Dallas Mavericks (Cade) | NO Dallas Mavericks (Cade) | 10 | 0.83 | 0.80 | 0.80 | won | $1.60 |
@@ -53,17 +62,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-10 02:22 | model-only | cs2 | Mindfreak | Abyssal | NO Abyssal | 1 | 0.28 | 0.40 | 0.28 | open | - |
 | 2026-10-10 02:17 | favourite | ebasketballgame | Indiana Pacers (James) | New Orleans Pelicans (Davis) | NO New Orleans Pelicans (Davis) | 14 | 0.57 | 0.54 | 0.53 | won | $5.77 |
 | 2026-10-10 02:17 | favourite | ebasketballgame | Dallas Mavericks (Cade) | Denver Nuggets (Bryce) | NO Denver Nuggets (Bryce) | 13 | 0.61 | 0.57 | 0.57 | lost | -$8.15 |
-| 2026-10-10 01:52 | favourite | ebasketballgame | Los Angeles Lakers (Lonzo) | New York Knicks (Bryce) | NO New York Knicks (Bryce) | 10 | 0.84 | 0.80 | 0.80 | lost | -$8.50 |
 | 2026-10-10 01:52 | favourite | ebasketballgame | Golden State Warriors (Zach) | Brooklyn Nets (Davis) | NO Brooklyn Nets (Davis) | 9 | 0.88 | 0.84 | 0.84 | won | $1.01 |
-| 2026-10-10 01:17 | favourite | esoccergame | FC Augsburg (Aron) | Dortmund (Frost) | YES FC Augsburg (Aron) | 11 | 0.76 | 0.79 | 0.79 | lost | -$8.51 |
-| 2026-10-10 01:07 | favourite | esoccergame | FC Augsburg (Aron) | 1. FC Köln (Kevin) | YES FC Augsburg (Aron) | 13 | 0.61 | 0.66 | 0.66 | lost | -$8.15 |
-| 2026-10-10 00:51 | favourite | esoccergame | Leverkusen (Frenkie) | 1. FC Köln (Kevin) | YES Leverkusen (Frenkie) | 12 | 0.67 | 0.69 | 0.69 | won | $3.77 |
-| 2026-10-10 00:41 | favourite | esoccergame | Botafogo (Frenkie) | Universitario (Aron) | YES Botafogo (Frenkie) | 15 | 0.56 | 0.61 | 0.61 | lost | -$8.66 |
-| 2026-10-09 22:46 | blend | esoccergame | Montpellier (Ellen) | Nantes (Lucy) | YES Montpellier (Ellen) | 30 | 0.64 | 0.77 | 0.74 | lost | -$19.69 |
-| 2026-10-09 12:24 | model-only | cs2 | ENCE Prospects | Passion Academy | YES ENCE Prospects | 43 | 0.40 | 0.54 | 0.39 | lost | -$17.93 |
-| 2026-10-09 12:24 | model-only | cs2 | NAVI Junior | G2 Ares | YES NAVI Junior | 34 | 0.50 | 0.60 | 0.50 | won | $16.40 |
-| 2026-10-09 11:54 | model-only | cs2 | Vitalem Aerem | Rare Atom | NO Rare Atom | 1 | 0.27 | 0.37 | 0.27 | won | $0.71 |
-| 2026-10-09 11:24 | model-only | dota2 | 1win | PARIVISION | YES 1win | 11 | 0.14 | 0.28 | 0.14 | lost | -$1.64 |
+| 2026-10-10 01:52 | favourite | ebasketballgame | Los Angeles Lakers (Lonzo) | New York Knicks (Bryce) | NO New York Knicks (Bryce) | 10 | 0.84 | 0.80 | 0.80 | lost | -$8.50 |
 
 ## Backtest on real Kalshi prices
 
