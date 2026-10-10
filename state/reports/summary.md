@@ -1,31 +1,31 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-10 09:48 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-10 09:53 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 99 | 17 | 82 | 19 | -$208.62 | -19.1% | -0.5c (92) | $791.38 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 178 | 22 | 156 | 102 | -$157.53 | -13.1% | -1.1c (176) | $842.47 |
+| model-only | Elo win model alone (control: ignores the market) | 101 | 19 | 82 | 19 | -$208.62 | -19.1% | -0.5c (92) | $791.38 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 178 | 21 | 157 | 102 | -$165.94 | -13.7% | -1.1c (176) | $834.06 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1097 finished matches. Lower is better; the market line is the bar to beat.
+1101 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6581 | 0.2342 |
-| model | 0.6748 | 0.2411 |
-| blend | 0.6597 | 0.2350 |
+| market | 0.6585 | 0.2344 |
+| model | 0.6751 | 0.2412 |
+| blend | 0.6601 | 0.2352 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 628 | 0.6954 | 0.6794 |
-| cs2 | 235 | 0.5965 | 0.6670 |
+| esoccergame | 631 | 0.6954 | 0.6795 |
+| cs2 | 236 | 0.5980 | 0.6682 |
 | ebasketballgame | 141 | 0.6795 | 0.6872 |
 | lol | 29 | 0.3933 | 0.6710 |
 | dota2 | 26 | 0.5941 | 0.6300 |
@@ -39,6 +39,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-10 09:52 | model-only | ow | JD Gaming | Weibo Gaming | YES JD Gaming | 37 | 0.21 | 0.31 | 0.20 | open | - |
+| 2026-10-10 09:52 | model-only | cs2 | Saint Sinners | WBT Academy | YES Saint Sinners | 36 | 0.42 | 0.51 | 0.42 | open | - |
 | 2026-10-10 09:47 | favourite | esoccergame | RB Leipzig (Kylian) | Mönchengladbach (Bradley) | YES RB Leipzig (Kylian) | 1 | 0.57 | 0.61 | 0.61 | open | - |
 | 2026-10-10 09:22 | model-only | dota2 | Team Spirit | Team Yandex | NO Team Yandex | 39 | 0.38 | 0.47 | 0.38 | open | - |
 | 2026-10-10 09:22 | model-only | cs2 | VP.Future 3 | EAC Extra | YES VP.Future 3 | 1 | 0.36 | 0.55 | 0.34 | open | - |
@@ -50,20 +52,18 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-10 08:52 | model-only | cs2 | HOTU | fnatic | YES HOTU | 31 | 0.48 | 0.57 | 0.48 | open | - |
 | 2026-10-10 08:22 | favourite | cs2 | KZG | BGNS Orange | YES KZG | 1 | 0.75 | 0.75 | 0.75 | open | - |
 | 2026-10-10 07:52 | model-only | cs2 | Dynamo Eclot Phoenix | Vitality Academy | NO Vitality Academy | 1 | 0.26 | 0.42 | 0.25 | open | - |
+| 2026-10-10 07:52 | favourite | cs2 | Rooster | Ice Block | NO Ice Block | 3 | 0.89 | 0.88 | 0.88 | open | - |
 | 2026-10-10 07:52 | model-only | cs2 | Orgless | MARKandLARRY | YES Orgless | 32 | 0.48 | 0.58 | 0.46 | open | - |
 | 2026-10-10 07:52 | favourite | cs2 | MARKandLARRY | Orgless | YES MARKandLARRY | 14 | 0.55 | 0.54 | 0.54 | open | - |
-| 2026-10-10 07:52 | favourite | cs2 | Rooster | Ice Block | NO Ice Block | 3 | 0.89 | 0.88 | 0.88 | open | - |
 | 2026-10-10 07:52 | favourite | cs2 | Vitality Academy | Dynamo Eclot Phoenix | NO Dynamo Eclot Phoenix | 10 | 0.76 | 0.75 | 0.75 | open | - |
 | 2026-10-10 07:52 | favourite | ow | Solus Victorem | HUNENG | YES Solus Victorem | 10 | 0.78 | 0.71 | 0.71 | open | - |
-| 2026-10-10 06:52 | model-only | dota2 | KukuysV3 | InterActive Philippines | YES KukuysV3 | 4 | 0.35 | 0.46 | 0.34 | open | - |
-| 2026-10-10 06:52 | model-only | cs2 | Honvéd | mellren | YES Honvéd | 55 | 0.22 | 0.28 | 0.21 | open | - |
-| 2026-10-10 06:52 | favourite | cs2 | mellren | Honvéd | YES mellren | 10 | 0.79 | 0.79 | 0.79 | open | - |
-| 2026-10-10 06:52 | favourite | cs2 | XI Esport | THE UNIT | NO THE UNIT | 13 | 0.63 | 0.61 | 0.61 | open | - |
-| 2026-10-10 06:52 | favourite | cs2 | TheChampionGG | 3DMAX Academy | NO 3DMAX Academy | 3 | 0.60 | 0.58 | 0.58 | won | $1.14 |
-| 2026-10-10 06:52 | favourite | dota2 | InterActive Philippines | KukuysV3 | YES InterActive Philippines | 12 | 0.67 | 0.66 | 0.66 | open | - |
-| 2026-10-10 06:52 | model-only | lol | West Point Esports PH | PART TIMERS | YES West Point Esports PH | 44 | 0.35 | 0.50 | 0.35 | open | - |
-| 2026-10-10 06:52 | favourite | lol | PART TIMERS | West Point Esports PH | YES PART TIMERS | 12 | 0.65 | 0.65 | 0.65 | open | - |
 | 2026-10-10 06:52 | favourite | r6 | Man eSports LFO | 7VEN | YES Man eSports LFO | 12 | 0.65 | 0.61 | 0.61 | open | - |
+| 2026-10-10 06:52 | favourite | lol | PART TIMERS | West Point Esports PH | YES PART TIMERS | 12 | 0.65 | 0.65 | 0.65 | open | - |
+| 2026-10-10 06:52 | model-only | lol | West Point Esports PH | PART TIMERS | YES West Point Esports PH | 44 | 0.35 | 0.50 | 0.35 | open | - |
+| 2026-10-10 06:52 | favourite | dota2 | InterActive Philippines | KukuysV3 | YES InterActive Philippines | 12 | 0.67 | 0.66 | 0.66 | open | - |
+| 2026-10-10 06:52 | model-only | dota2 | KukuysV3 | InterActive Philippines | YES KukuysV3 | 4 | 0.35 | 0.46 | 0.34 | open | - |
+| 2026-10-10 06:52 | favourite | cs2 | XI Esport | THE UNIT | NO THE UNIT | 13 | 0.63 | 0.61 | 0.61 | lost | -$8.41 |
+| 2026-10-10 06:52 | favourite | cs2 | TheChampionGG | 3DMAX Academy | NO 3DMAX Academy | 3 | 0.60 | 0.58 | 0.58 | won | $1.14 |
 
 ## Backtest on real Kalshi prices
 
