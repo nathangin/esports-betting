@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-10 02:22 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-10 02:27 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-10 02:22 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
 | model-only | Elo win model alone (control: ignores the market) | 87 | 7 | 80 | 19 | -$192.23 | -17.9% | -0.7c (81) | $807.77 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 155 | 14 | 141 | 94 | -$134.87 | -12.2% | -0.8c (149) | $865.13 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 155 | 13 | 142 | 94 | -$143.02 | -12.8% | -1.0c (149) | $856.98 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -46,7 +46,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-10 01:52 | favourite | ebasketballgame | Golden State Warriors (Zach) | Brooklyn Nets (Davis) | NO Brooklyn Nets (Davis) | 9 | 0.88 | 0.84 | 0.84 | open | - |
 | 2026-10-10 01:52 | favourite | ebasketballgame | Los Angeles Lakers (Lonzo) | New York Knicks (Bryce) | NO New York Knicks (Bryce) | 10 | 0.84 | 0.80 | 0.80 | open | - |
 | 2026-10-10 01:17 | favourite | esoccergame | FC Augsburg (Aron) | Dortmund (Frost) | YES FC Augsburg (Aron) | 11 | 0.76 | 0.79 | 0.79 | open | - |
-| 2026-10-10 01:07 | favourite | esoccergame | FC Augsburg (Aron) | 1. FC Köln (Kevin) | YES FC Augsburg (Aron) | 13 | 0.61 | 0.66 | 0.66 | open | - |
+| 2026-10-10 01:07 | favourite | esoccergame | FC Augsburg (Aron) | 1. FC Köln (Kevin) | YES FC Augsburg (Aron) | 13 | 0.61 | 0.66 | 0.66 | lost | -$8.15 |
 | 2026-10-10 00:51 | favourite | esoccergame | Leverkusen (Frenkie) | 1. FC Köln (Kevin) | YES Leverkusen (Frenkie) | 12 | 0.67 | 0.69 | 0.69 | won | $3.77 |
 | 2026-10-10 00:41 | favourite | esoccergame | Botafogo (Frenkie) | Universitario (Aron) | YES Botafogo (Frenkie) | 15 | 0.56 | 0.61 | 0.61 | lost | -$8.66 |
 | 2026-10-09 22:46 | blend | esoccergame | Montpellier (Ellen) | Nantes (Lucy) | YES Montpellier (Ellen) | 30 | 0.64 | 0.77 | 0.74 | lost | -$19.69 |
