@@ -1,37 +1,37 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-10 11:58 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-10 12:03 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 105 | 19 | 86 | 19 | -$252.09 | -22.2% | -0.5c (97) | $747.91 |
+| model-only | Elo win model alone (control: ignores the market) | 105 | 18 | 87 | 19 | -$258.42 | -22.6% | -0.5c (97) | $741.58 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 179 | 15 | 164 | 108 | -$147.89 | -11.7% | -1.0c (177) | $852.11 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1144 finished matches. Lower is better; the market line is the bar to beat.
+1146 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6584 | 0.2343 |
-| model | 0.6746 | 0.2409 |
-| blend | 0.6600 | 0.2351 |
+| market | 0.6585 | 0.2343 |
+| model | 0.6746 | 0.2410 |
+| blend | 0.6601 | 0.2351 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 657 | 0.6954 | 0.6792 |
+| esoccergame | 658 | 0.6954 | 0.6789 |
 | cs2 | 241 | 0.5936 | 0.6656 |
 | ebasketballgame | 148 | 0.6775 | 0.6837 |
 | lol | 29 | 0.3933 | 0.6710 |
 | dota2 | 27 | 0.5740 | 0.6323 |
 | r6 | 20 | 0.6693 | 0.7229 |
 | ow | 11 | 0.5115 | 0.5274 |
-| valorant | 10 | 0.6330 | 0.6398 |
+| valorant | 11 | 0.6422 | 0.6659 |
 | mlbb | 1 | 0.6931 | 0.6931 |
 
 ## Latest bets
@@ -43,7 +43,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-10 11:53 | model-only | cs2 | PRIVATE | GamerLegion | YES PRIVATE | 19 | 0.32 | 0.51 | 0.32 | open | - |
 | 2026-10-10 11:53 | model-only | cs2 | Just Swing | Kaleido | YES Just Swing | 31 | 0.46 | 0.60 | 0.43 | open | - |
 | 2026-10-10 11:53 | favourite | cs2 | Iberian Soul | Nemiga | NO Nemiga | 3 | 0.81 | 0.81 | 0.81 | open | - |
-| 2026-10-10 10:52 | model-only | valorant | NRG | LOUD | YES NRG | 12 | 0.51 | 0.60 | 0.52 | open | - |
+| 2026-10-10 10:52 | model-only | valorant | NRG | LOUD | YES NRG | 12 | 0.51 | 0.60 | 0.52 | lost | -$6.33 |
 | 2026-10-10 10:52 | model-only | cs2 | LPH Gaming | UNiTY esports | YES LPH Gaming | 43 | 0.24 | 0.33 | 0.23 | open | - |
 | 2026-10-10 09:52 | model-only | ow | JD Gaming | Weibo Gaming | YES JD Gaming | 37 | 0.21 | 0.31 | 0.20 | open | - |
 | 2026-10-10 09:52 | model-only | cs2 | Saint Sinners | WBT Academy | YES Saint Sinners | 36 | 0.42 | 0.51 | 0.42 | open | - |
