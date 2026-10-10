@@ -1,30 +1,30 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-10 11:43 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-10 11:48 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 103 | 17 | 86 | 19 | -$252.09 | -22.2% | -0.5c (96) | $747.91 |
+| model-only | Elo win model alone (control: ignores the market) | 103 | 17 | 86 | 19 | -$252.09 | -22.2% | -0.5c (97) | $747.91 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 178 | 14 | 164 | 108 | -$147.89 | -11.7% | -1.0c (177) | $852.11 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1140 finished matches. Lower is better; the market line is the bar to beat.
+1142 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6583 | 0.2342 |
+| market | 0.6584 | 0.2343 |
 | model | 0.6749 | 0.2411 |
-| blend | 0.6600 | 0.2350 |
+| blend | 0.6601 | 0.2351 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 655 | 0.6954 | 0.6791 |
+| esoccergame | 657 | 0.6954 | 0.6792 |
 | cs2 | 241 | 0.5936 | 0.6656 |
 | ebasketballgame | 146 | 0.6781 | 0.6867 |
 | lol | 29 | 0.3933 | 0.6710 |
