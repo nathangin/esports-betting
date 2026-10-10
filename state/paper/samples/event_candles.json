@@ -1,54 +1,54 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT081752ARONFREN/candlesticks?start_ts=1791494520&end_ts=1791496380&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT081806DECLPEDR/candlesticks?start_ts=1791495360&end_ts=1791497220&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791496380,
+  "adjusted_end_ts": 1791497220,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791496380,
-     "open_interest_fp": "2.00",
+     "end_period_ts": 1791497220,
+     "open_interest_fp": "3.00",
      "price": {
-      "previous_dollars": "0.2600"
+      "previous_dollars": "0.3800"
      },
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.3300",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.3300",
-      "open_dollars": "0.3300"
+      "close_dollars": "0.4500",
+      "high_dollars": "0.8300",
+      "low_dollars": "0.4500",
+      "open_dollars": "0.4500"
      },
      "yes_bid": {
-      "close_dollars": "0.2600",
-      "high_dollars": "0.2600",
-      "low_dollars": "0.1500",
-      "open_dollars": "0.2600"
+      "close_dollars": "0.3800",
+      "high_dollars": "0.3800",
+      "low_dollars": "0.1800",
+      "open_dollars": "0.3800"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791496380,
+     "end_period_ts": 1791497220,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.5700",
-      "high_dollars": "0.9800",
-      "low_dollars": "0.5700",
-      "open_dollars": "0.5800"
+      "close_dollars": "0.4600",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.4600",
+      "open_dollars": "0.4600"
      },
      "yes_bid": {
-      "close_dollars": "0.5000",
-      "high_dollars": "0.5100",
-      "low_dollars": "0.2200",
-      "open_dollars": "0.5100"
+      "close_dollars": "0.3900",
+      "high_dollars": "0.3900",
+      "low_dollars": "0.1500",
+      "open_dollars": "0.3900"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791496380,
+     "end_period_ts": 1791497220,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
@@ -61,16 +61,16 @@
      "yes_bid": {
       "close_dollars": "0.1300",
       "high_dollars": "0.1300",
-      "low_dollars": "0.0400",
-      "open_dollars": "0.1200"
+      "low_dollars": "0.0000",
+      "open_dollars": "0.1300"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT081752ARONFREN-ARON",
-   "KXESOCCERGAME-26OCT081752ARONFREN-FREN",
-   "KXESOCCERGAME-26OCT081752ARONFREN-TIE"
+   "KXESOCCERGAME-26OCT081806DECLPEDR-DECL",
+   "KXESOCCERGAME-26OCT081806DECLPEDR-PEDR",
+   "KXESOCCERGAME-26OCT081806DECLPEDR-TIE"
   ]
  }
 }
