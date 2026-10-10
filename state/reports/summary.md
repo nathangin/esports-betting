@@ -1,38 +1,38 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-10 16:38 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-10 16:43 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 106 | 9 | 97 | 23 | -$232.12 | -18.5% | -0.5c (100) | $767.88 |
+| model-only | Elo win model alone (control: ignores the market) | 106 | 8 | 98 | 24 | -$219.49 | -17.4% | -0.5c (100) | $780.51 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 180 | 10 | 170 | 113 | -$145.02 | -11.2% | -1.1c (178) | $854.98 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1278 finished matches. Lower is better; the market line is the bar to beat.
+1283 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6574 | 0.2339 |
-| model | 0.6727 | 0.2399 |
-| blend | 0.6589 | 0.2346 |
+| market | 0.6579 | 0.2341 |
+| model | 0.6725 | 0.2398 |
+| blend | 0.6595 | 0.2349 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 741 | 0.6958 | 0.6777 |
-| cs2 | 260 | 0.5828 | 0.6639 |
+| esoccergame | 744 | 0.6958 | 0.6772 |
+| cs2 | 261 | 0.5849 | 0.6640 |
 | ebasketballgame | 169 | 0.6736 | 0.6783 |
 | dota2 | 30 | 0.5639 | 0.6275 |
 | lol | 30 | 0.4152 | 0.6717 |
 | r6 | 20 | 0.6693 | 0.7229 |
 | ow | 12 | 0.4870 | 0.5138 |
 | valorant | 12 | 0.6525 | 0.6684 |
-| mlbb | 4 | 0.6931 | 0.6735 |
+| mlbb | 5 | 0.6931 | 0.6964 |
 
 ## Latest bets
 
@@ -42,7 +42,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-10-10 15:53 | favourite | cs2 | Spirit | MOUZ | NO MOUZ | 1 | 0.59 | 0.58 | 0.58 | open | - |
 | 2026-10-10 12:38 | model-only | cs2 | Aurora Gaming | Vitality | YES Aurora Gaming | 21 | 0.24 | 0.39 | 0.23 | open | - |
-| 2026-10-10 11:53 | model-only | cs2 | PRIVATE | GamerLegion | YES PRIVATE | 19 | 0.32 | 0.51 | 0.32 | open | - |
+| 2026-10-10 11:53 | model-only | cs2 | PRIVATE | GamerLegion | YES PRIVATE | 19 | 0.32 | 0.51 | 0.32 | won | $12.63 |
 | 2026-10-10 11:53 | model-only | cs2 | Just Swing | Kaleido | YES Just Swing | 31 | 0.46 | 0.60 | 0.43 | won | $16.20 |
 | 2026-10-10 11:53 | favourite | cs2 | Iberian Soul | Nemiga | NO Nemiga | 3 | 0.81 | 0.81 | 0.81 | won | $0.53 |
 | 2026-10-10 10:52 | model-only | valorant | NRG | LOUD | YES NRG | 12 | 0.51 | 0.60 | 0.52 | lost | -$6.33 |
