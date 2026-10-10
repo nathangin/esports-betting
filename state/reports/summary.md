@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-10 03:47 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-10 03:52 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-10 03:47 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
 | model-only | Elo win model alone (control: ignores the market) | 87 | 7 | 80 | 19 | -$192.23 | -17.9% | -0.7c (82) | $807.77 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 158 | 13 | 145 | 95 | -$159.02 | -14.0% | -1.2c (157) | $840.98 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 158 | 12 | 146 | 95 | -$167.17 | -14.6% | -1.2c (157) | $832.83 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -45,7 +45,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-10 02:22 | favourite | cs2 | Abyssal | Mindfreak | NO Mindfreak | 11 | 0.72 | 0.72 | 0.72 | open | - |
 | 2026-10-10 02:22 | model-only | cs2 | Mindfreak | Abyssal | NO Abyssal | 1 | 0.28 | 0.40 | 0.28 | open | - |
 | 2026-10-10 02:17 | favourite | ebasketballgame | Indiana Pacers (James) | New Orleans Pelicans (Davis) | NO New Orleans Pelicans (Davis) | 14 | 0.57 | 0.54 | 0.53 | open | - |
-| 2026-10-10 02:17 | favourite | ebasketballgame | Dallas Mavericks (Cade) | Denver Nuggets (Bryce) | NO Denver Nuggets (Bryce) | 13 | 0.61 | 0.57 | 0.57 | open | - |
+| 2026-10-10 02:17 | favourite | ebasketballgame | Dallas Mavericks (Cade) | Denver Nuggets (Bryce) | NO Denver Nuggets (Bryce) | 13 | 0.61 | 0.57 | 0.57 | lost | -$8.15 |
 | 2026-10-10 01:52 | favourite | ebasketballgame | Golden State Warriors (Zach) | Brooklyn Nets (Davis) | NO Brooklyn Nets (Davis) | 9 | 0.88 | 0.84 | 0.84 | won | $1.01 |
 | 2026-10-10 01:52 | favourite | ebasketballgame | Los Angeles Lakers (Lonzo) | New York Knicks (Bryce) | NO New York Knicks (Bryce) | 10 | 0.84 | 0.80 | 0.80 | lost | -$8.50 |
 | 2026-10-10 01:17 | favourite | esoccergame | FC Augsburg (Aron) | Dortmund (Frost) | YES FC Augsburg (Aron) | 11 | 0.76 | 0.79 | 0.79 | lost | -$8.51 |
