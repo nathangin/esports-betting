@@ -1,35 +1,21 @@
 [
  {
-  "ticker": "KXDOTA2MPH",
-  "title": "Most Picked Hero",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXEWCFATALFURY",
-  "title": "FATAL FURY: City of the Wolves at 2025 Esports World Cup",
+  "ticker": "KXEWCMOBILELEGENDSBBWOMENS",
+  "title": "Mobile Legends: Bang Bang Women's Invitational at 2025 Esports World Cup",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "one_off"
  },
  {
-  "ticker": "KXRANKLISTCS2TEAM",
-  "title": "HLTV Team of the Year",
+  "ticker": "KXEWCHONOROFKINGS",
+  "title": "Honor of Kings World Cup at 2025 Esports World Cup",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
-  "frequency": "custom"
+  "frequency": "one_off"
  },
  {
-  "ticker": "KXCS2",
-  "title": "CS2 Tournament Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXMLBBGAME",
-  "title": "Mobile Legends Bang Bang Game",
+  "ticker": "KXCS2QUALIFIER",
+  "title": "CS2 Qualifier",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "one_off"
@@ -42,232 +28,8 @@
   "frequency": "one_off"
  },
  {
-  "ticker": "KXLOLREGION",
-  "title": "Region of Champion",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXEWCVALORANT",
-  "title": "VALORANT featured at 2025 Esports World Cup",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXBLASTRIVALS2",
-  "title": "BLAST Rivals 2025 Season 2",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXVALORANTMAP",
-  "title": "Valorant Map Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXLOLQUALIFIERS",
-  "title": "League of Legends Qualifiers",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXDOTA2",
-  "title": "Dota 2 Tournament Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXVALPL",
-  "title": "Valorant Predator League",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXEWCSTARCRAFTII",
-  "title": "StarCraft II at 2025 Esports World Cup",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXVALORANT",
-  "title": "Valorant Tournament Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXCSGOADVANCE",
-  "title": "CSGO Advance",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXCS2MAPWINNER",
-  "title": "CS2 Map Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXR6SPREAD",
-  "title": "R6 Spread",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXVALORANTGAME",
-  "title": "Valorant game winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXESLPROS1",
-  "title": "ESL Pro League Stage 1",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXCODMAP",
-  "title": "COD Map Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXCSGOGAME",
-  "title": "Counter-Strike 2 Games",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXVALORANTQUALIFIERS",
-  "title": "Valorant Qualifiers",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXEWCAPEXLEGENDS",
-  "title": "Apex Legends at 2025 Esports World Cup",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXTORONTOULTRACHAMPIONSHIP",
-  "title": "Dota 2 at 2025 Esports World Cup",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXROCKETLEAGUEGAME",
-  "title": "Rocket League Game",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXSTARLADDERBUDAPESTMAJOR",
-  "title": "Who wil win the StarLadder Budapest Major 2025",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXOWTOTALMAPS",
-  "title": "Overwatch Total Maps",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXOVERWATCH",
-  "title": "Overwatch Tournament Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXDOTA2GAME",
-  "title": "Dota 2 Game",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXAUSTINMAJOR",
-  "title": "Rennsport at 2025 Esports World Cup",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "annual"
- },
- {
-  "ticker": "KXSPORTSIGNINSPIRED",
-  "title": "Inspired",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXCS2QUALIFIER",
-  "title": "CS2 Qualifier",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXMIDSEASONINVITATIONAL",
-  "title": "2025 Mid-Season Invitational",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXNIKOAWPMAJOR",
-  "title": "NiKo AWP Major",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXCODSPREAD",
-  "title": "COD Spread",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXGEOGUESSR",
-  "title": "GeoGuessr World Championship Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXEWCCHESS2025",
-  "title": "Chess \u2013 Esports World Cup Winner?",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXDOTA2MBH",
-  "title": "Most Banned Hero",
+  "ticker": "KXOWGAME",
+  "title": "Overwatch Game",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "custom"
@@ -280,218 +42,15 @@
   "frequency": "custom"
  },
  {
-  "ticker": "KXLEAGUEWORLDS",
-  "title": "League of Legends Worlds",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "annual"
- },
- {
-  "ticker": "KXEWCCHESS",
-  "title": "Chess \u2013 Esports World Cup winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXPUBGGC",
-  "title": "PUBG Global Championship 2025",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXESPORTSTEST",
-  "title": "TESTING",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXRANKLISTCS2PLAYER",
-  "title": "HLTV Player of Year",
+  "ticker": "KXCHARCOUNTLOLWORLDS",
+  "title": "LOL worlds",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "custom"
  },
  {
-  "ticker": "KXOWSPREAD",
-  "title": "Overwatch Spread",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXDOTA2GAME3WAY",
-  "title": "Dota 2 Game",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXZYWOOMVP",
-  "title": "Will ZywOo be the MVP at the Budapest Major",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXDOTA2TOTALMAPS",
-  "title": "Dota 2 Total Maps",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXROSTERT1",
-  "title": "Roster T1",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXODINVCTFINALS",
-  "title": "Odin VCT finals",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXEWCRENNSPORT",
-  "title": "2025 Mid-Season Invitational",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXVALORANTAWARD",
-  "title": "Valorant Award",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXCROSSFIRE",
-  "title": "Crossfire Tournament Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXWORLDSMVP",
-  "title": "Worlds MVP?",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXCHOVYMVPWF",
-  "title": "Will Chovy be the MVP of the Worlds finals",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXRLGAME",
-  "title": "Rocket League Game",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXLOLSPREAD",
-  "title": "League of Legends Spread",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXROCKETLEAGUE",
-  "title": "Rocket League Tournament Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXRLTOTALMAPS",
-  "title": "Rocket League Total Games",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXBOUNTY2025S2",
-  "title": "Bounty 2025 Season 2",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXEWCDOTA2",
-  "title": "Dota 2 at 2025 Esports World Cup",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXCS2TOTALMAPS",
-  "title": "CS2 Total Maps",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXEWCMOBILELEGENDSBBWOMENS",
-  "title": "Mobile Legends: Bang Bang Women's Invitational at 2025 Esports World Cup",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXVALPLIND",
-  "title": "Valorant Predator League Indonesia",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXVALORANTTOTALMAPS",
-  "title": "Valorant Total Maps",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXCS2QUALIFIERS",
-  "title": "CS2 Qualifier",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXEWCRSS",
-  "title": "Rainbow Six at 2025 Esports World Cup",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXFIRSTTIMEWINNER",
-  "title": "First Time Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXPUBG",
-  "title": "PUBG Tournament Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXEBASKETBALLGAME",
-  "title": "eBasketball Game",
+  "ticker": "KXGEOGUESSR",
+  "title": "GeoGuessr World Championship Winner",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "custom"
@@ -504,74 +63,11 @@
   "frequency": "custom"
  },
  {
-  "ticker": "KXFORTNITE",
-  "title": "Fortnite Tournament",
+  "ticker": "KXOWSPREAD",
+  "title": "Overwatch Spread",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "custom"
- },
- {
-  "ticker": "KXLOLMAP",
-  "title": "League of Legends Map Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXLOL",
-  "title": "League of Legends",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXCODTOTALMAPS",
-  "title": "COD Maps",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXR6MAP",
-  "title": "R6 Map Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXEWCPUBGBATTLEG",
-  "title": "PUBG: BATTLEGROUNDS at 2025 Esports World Cup",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXCSGOMAP",
-  "title": "CSGO Map Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXCS2SPREAD",
-  "title": "CS2 Spread",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXEWCEASPORTSFC",
-  "title": "EA SPORTS FC 25 at 2025 Esports World Cup WINNER",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXPGLMASTERSBUCHAREST",
-  "title": "Who will win the PGL Masters Bucharest 2025",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
  },
  {
   "ticker": "KXVCCHAMPIONSPARIS",
@@ -581,190 +77,43 @@
   "frequency": "one_off"
  },
  {
-  "ticker": "KXCSGO",
-  "title": "CSGO",
+  "ticker": "KXDOTA2MBH",
+  "title": "Most Banned Hero",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "custom"
  },
  {
-  "ticker": "KXLOLAWARD",
-  "title": "League of Legends Award",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXCS2GAMES",
-  "title": "Cs2 Games",
+  "ticker": "KXBLASTRIVALS2",
+  "title": "BLAST Rivals 2025 Season 2",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "one_off"
  },
  {
-  "ticker": "KXBRAWLSTARS",
-  "title": "Brawl Stars Tournament Winner",
+  "ticker": "KXEWCPUBGBATTLEG",
+  "title": "PUBG: BATTLEGROUNDS at 2025 Esports World Cup",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXOWTOTALMAPS",
+  "title": "Overwatch Total Maps",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "custom"
  },
  {
-  "ticker": "KXESOCCERGAME",
-  "title": "eSoccer Game",
+  "ticker": "KXSTARLADDERBUDAPESTMAJOR",
+  "title": "Who wil win the StarLadder Budapest Major 2025",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
-  "frequency": "custom"
+  "frequency": "one_off"
  },
  {
   "ticker": "KXEWCMLBB",
   "title": "Mobile Legends: Bang Bang Mid Season Cup at 2025 Esports World Cup",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXIEMCHEN",
-  "title": "Who will win the IEM Chengdu 2025",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXR6TOTALMAPS",
-  "title": "R6 Total Maps",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXEWCHONOROFKINGS",
-  "title": "Honor of Kings World Cup at 2025 Esports World Cup",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXEWCLEAGUEOFLEGENDS",
-  "title": "League of Legends featured at 2025 Esports World Cup",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXEWCRB6",
-  "title": "Rainbow Six at 2025 Esports World Cup",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXVALORANTSPREAD",
-  "title": "Valorant Spread",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXPGLBUCH",
-  "title": "Who will win the PGL Masters Bucharest 2025",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXCHARCOUNTLOLWORLDS",
-  "title": "LOL worlds",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXDOTA2SPREAD",
-  "title": "Dota 2 Spread",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXMIDSEASONINVITATIONALB",
-  "title": "2025 Mid-Season Invitational",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXVALORANTREGION",
-  "title": "Valorant Tournament Winning Region",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXEWCRAINBOW6SEIGE",
-  "title": "Rainbow Six at 2025 Esports World Cup WINNER",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXCS2GAME",
-  "title": "Counter-Strike 2 Game",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXCHOVYMVPBP",
-  "title": "Will Chovy be the MVP of the Worlds finals",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXRLMAP",
-  "title": "Rocket League Game Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXCODGAME",
-  "title": "Call of Duty Games",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXLOLGAMES",
-  "title": "League of Legends Games",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXOWGAME",
-  "title": "Overwatch Game",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXCOD",
-  "title": "COD Tournament Winner",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "custom"
- },
- {
-  "ticker": "KXVALGCSEOUL",
-  "title": "Game Changers : Championship Seoul",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXVALORANTGAMETEAMVSMIBR",
-  "title": "TEAM VS. MIBR",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "one_off"
@@ -777,39 +126,32 @@
   "frequency": "custom"
  },
  {
-  "ticker": "KXCS2QUALIFY",
-  "title": "CS2 Qualifier",
+  "ticker": "KXEWCFATALFURY",
+  "title": "FATAL FURY: City of the Wolves at 2025 Esports World Cup",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "one_off"
  },
  {
-  "ticker": "KXEWCCS2",
-  "title": "ESPORTS WORLD CUP COUNTER STRIKE 2",
+  "ticker": "KXEWCCHESS2025",
+  "title": "Chess \u2013 Esports World Cup Winner?",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "one_off"
  },
  {
-  "ticker": "KXZYWOOMVPBP",
-  "title": "Will ZywOo be the MVP at the Budapest Major",
-  "fee_type": "quadratic",
-  "fee_multiplier": 1,
-  "frequency": "one_off"
- },
- {
-  "ticker": "KXVALORANTGROUPWIN",
-  "title": "Valorant Tournament Group Winner",
+  "ticker": "KXROCKETLEAGUEGAME",
+  "title": "Rocket League Game",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "custom"
  },
  {
-  "ticker": "KXCS2MAP",
-  "title": "Counter-Strike 2 Map Winner ",
+  "ticker": "KXEWCSTARCRAFTII",
+  "title": "StarCraft II at 2025 Esports World Cup",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
-  "frequency": "daily"
+  "frequency": "one_off"
  },
  {
   "ticker": "KXVALORANTMASTERSFINALS",
@@ -819,15 +161,260 @@
   "frequency": "one_off"
  },
  {
-  "ticker": "KXEWCCALLOFDUTYBLOPS6",
-  "title": "Call of Duty: Black Ops 6 at 2025 Esports World Cup",
+  "ticker": "KXEWCVALORANT",
+  "title": "VALORANT featured at 2025 Esports World Cup",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "one_off"
  },
  {
+  "ticker": "KXCODTOTALMAPS",
+  "title": "COD Maps",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXBRAWLSTARS",
+  "title": "Brawl Stars Tournament Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
   "ticker": "KXR6",
   "title": "R6 Tournament Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXCS2",
+  "title": "CS2 Tournament Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXOW",
+  "title": "Overwatch Tournament Champion",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXLOLREGION",
+  "title": "Region of Champion",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXLOL",
+  "title": "League of Legends",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXVALORANT",
+  "title": "Valorant Tournament Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXPUBG",
+  "title": "PUBG Tournament Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXESPORTSTEST",
+  "title": "TESTING",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXBOUNTY2025S2",
+  "title": "Bounty 2025 Season 2",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXRANKLISTCS2PLAYER",
+  "title": "HLTV Player of Year",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXEWCDOTA2",
+  "title": "Dota 2 at 2025 Esports World Cup",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXVALORANTSPREAD",
+  "title": "Valorant Spread",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXOVERWATCH",
+  "title": "Overwatch Tournament Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXCODMAP",
+  "title": "COD Map Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXCS2IEMCOLOGNE",
+  "title": "CS2: IEM Cologne",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXSPORTSIGNINSPIRED",
+  "title": "Inspired",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXIEMCHEN",
+  "title": "Who will win the IEM Chengdu 2025",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXPUBGGC",
+  "title": "PUBG Global Championship 2025",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXCHOVYMVPBP",
+  "title": "Will Chovy be the MVP of the Worlds finals",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXAUSTINMAJOR",
+  "title": "Rennsport at 2025 Esports World Cup",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "annual"
+ },
+ {
+  "ticker": "KXMIDSEASONINVITATIONAL",
+  "title": "2025 Mid-Season Invitational",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXVALORANTGAMETEAMVSMIBR",
+  "title": "TEAM VS. MIBR",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXCS2GAMES",
+  "title": "Cs2 Games",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXR6MAP",
+  "title": "R6 Map Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXRLSPREAD",
+  "title": "Rocket League Spread",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXROCKETLEAGUE",
+  "title": "Rocket League Tournament Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXZYWOOMVP",
+  "title": "Will ZywOo be the MVP at the Budapest Major",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXLEAGUEWORLDS",
+  "title": "League of Legends Worlds",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "annual"
+ },
+ {
+  "ticker": "KXCSGOMAP",
+  "title": "CSGO Map Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXCHOVYMVP",
+  "title": "Will Chovy be the MVP of the Worlds finals",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXPGLBUCH",
+  "title": "Who will win the PGL Masters Bucharest 2025",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXRANKLISTCS2TEAM",
+  "title": "HLTV Team of the Year",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXCOD",
+  "title": "COD Tournament Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXDOTA2MAP",
+  "title": "Dota 2 Map Winner",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "custom"
@@ -840,6 +427,132 @@
   "frequency": "one_off"
  },
  {
+  "ticker": "KXLOLSPREAD",
+  "title": "League of Legends Spread",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXDOTA2TOTALMAPS",
+  "title": "Dota 2 Total Maps",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXRLGAME",
+  "title": "Rocket League Game",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXODINVCTFINALS",
+  "title": "Odin VCT finals",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXLOLQUALIFIERS",
+  "title": "League of Legends Qualifiers",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXVALORANTAWARD",
+  "title": "Valorant Award",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXLOLGAMES",
+  "title": "League of Legends Games",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXCS2SPREAD",
+  "title": "CS2 Spread",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXRLTOTALMAPS",
+  "title": "Rocket League Total Games",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXPGLMASTERSBUCHAREST",
+  "title": "Who will win the PGL Masters Bucharest 2025",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXLOLMAP",
+  "title": "League of Legends Map Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXEWCCHESS",
+  "title": "Chess \u2013 Esports World Cup winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXROSTERT1",
+  "title": "Roster T1",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXCSGOGAME",
+  "title": "Counter-Strike 2 Games",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXNIKOAWPMAJOR",
+  "title": "NiKo AWP Major",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXCROSSFIRE",
+  "title": "Crossfire Tournament Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXVALPLIND",
+  "title": "Valorant Predator League Indonesia",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXCS2QUALIFY",
+  "title": "CS2 Qualifier",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
   "ticker": "KXEWCTEAMFIGHTTACTICS",
   "title": "Teamfight Tactics featured at 2025 Esports World Cup",
   "fee_type": "quadratic",
@@ -847,43 +560,50 @@
   "frequency": "one_off"
  },
  {
-  "ticker": "KXEWCFREEFIRE",
-  "title": "Free Fire at 2025 Esports World Cup",
+  "ticker": "KXCS2MAP",
+  "title": "Counter-Strike 2 Map Winner ",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
-  "frequency": "one_off"
+  "frequency": "daily"
  },
  {
-  "ticker": "KXDOTA2MAP",
-  "title": "Dota 2 Map Winner",
+  "ticker": "KXVALORANTGAME",
+  "title": "Valorant game winner",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "custom"
  },
  {
-  "ticker": "KXLOLTOTAL",
-  "title": "League of Legends Total Maps Played",
+  "ticker": "KXEWCEASPORTSFC",
+  "title": "EA SPORTS FC 25 at 2025 Esports World Cup WINNER",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "one_off"
  },
  {
-  "ticker": "KXCS2IEMCOLOGNE",
-  "title": "CS2: IEM Cologne",
+  "ticker": "KXR6SPREAD",
+  "title": "R6 Spread",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXEWCAPEXLEGENDS",
+  "title": "Apex Legends at 2025 Esports World Cup",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "one_off"
  },
  {
-  "ticker": "KXCHOVYMVP",
-  "title": "Will Chovy be the MVP of the Worlds finals",
+  "ticker": "KXCS2GAME",
+  "title": "Counter-Strike 2 Game",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
-  "frequency": "one_off"
+  "frequency": "custom"
  },
  {
-  "ticker": "KXRLSPREAD",
-  "title": "Rocket League Spread",
+  "ticker": "KXDOTA2SPREAD",
+  "title": "Dota 2 Spread",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "custom"
@@ -896,10 +616,290 @@
   "frequency": "custom"
  },
  {
-  "ticker": "KXOW",
-  "title": "Overwatch Tournament Champion",
+  "ticker": "KXLOLTOTAL",
+  "title": "League of Legends Total Maps Played",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXCS2MAPWINNER",
+  "title": "CS2 Map Winner",
   "fee_type": "quadratic",
   "fee_multiplier": 1,
   "frequency": "custom"
+ },
+ {
+  "ticker": "KXCSGO",
+  "title": "CSGO",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXEWCRENNSPORT",
+  "title": "2025 Mid-Season Invitational",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXZYWOOMVPBP",
+  "title": "Will ZywOo be the MVP at the Budapest Major",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXLOLAWARD",
+  "title": "League of Legends Award",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXVALORANTMAP",
+  "title": "Valorant Map Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXFIRSTTIMEWINNER",
+  "title": "First Time Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXDOTA2GAME",
+  "title": "Dota 2 Game",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXEBASKETBALLGAME",
+  "title": "eBasketball Game",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXCODGAME",
+  "title": "Call of Duty Games",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXVALORANTQUALIFIERS",
+  "title": "Valorant Qualifiers",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXVALORANTREGION",
+  "title": "Valorant Tournament Winning Region",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXDOTA2GAME3WAY",
+  "title": "Dota 2 Game",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXEWCFREEFIRE",
+  "title": "Free Fire at 2025 Esports World Cup",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXEWCRSS",
+  "title": "Rainbow Six at 2025 Esports World Cup",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXCS2QUALIFIERS",
+  "title": "CS2 Qualifier",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXDOTA2",
+  "title": "Dota 2 Tournament Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXEWCRB6",
+  "title": "Rainbow Six at 2025 Esports World Cup",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXCHOVYMVPWF",
+  "title": "Will Chovy be the MVP of the Worlds finals",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXVALORANTTOTALMAPS",
+  "title": "Valorant Total Maps",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXEWCCS2",
+  "title": "ESPORTS WORLD CUP COUNTER STRIKE 2",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXEWCLEAGUEOFLEGENDS",
+  "title": "League of Legends featured at 2025 Esports World Cup",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXWORLDSMVP",
+  "title": "Worlds MVP?",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXEWCRAINBOW6SEIGE",
+  "title": "Rainbow Six at 2025 Esports World Cup WINNER",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXCS2TOTALMAPS",
+  "title": "CS2 Total Maps",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXMLBBGAME",
+  "title": "Mobile Legends Bang Bang Game",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXVALPL",
+  "title": "Valorant Predator League",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXMIDSEASONINVITATIONALB",
+  "title": "2025 Mid-Season Invitational",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXVALORANTGROUPWIN",
+  "title": "Valorant Tournament Group Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXCSGOADVANCE",
+  "title": "CSGO Advance",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXESLPROS1",
+  "title": "ESL Pro League Stage 1",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXESOCCERGAME",
+  "title": "eSoccer Game",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXDOTA2MPH",
+  "title": "Most Picked Hero",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXEWCCALLOFDUTYBLOPS6",
+  "title": "Call of Duty: Black Ops 6 at 2025 Esports World Cup",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXCODSPREAD",
+  "title": "COD Spread",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXFORTNITE",
+  "title": "Fortnite Tournament",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXTORONTOULTRACHAMPIONSHIP",
+  "title": "Dota 2 at 2025 Esports World Cup",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
+ },
+ {
+  "ticker": "KXR6TOTALMAPS",
+  "title": "R6 Total Maps",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXRLMAP",
+  "title": "Rocket League Game Winner",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "custom"
+ },
+ {
+  "ticker": "KXVALGCSEOUL",
+  "title": "Game Changers : Championship Seoul",
+  "fee_type": "quadratic",
+  "fee_multiplier": 1,
+  "frequency": "one_off"
  }
 ]
