@@ -1,8 +1,8 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/markets/KXCS2GAME-26OCT080400EXZACE-ACE/candlesticks?start_ts=1791444600&end_ts=1791446460&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/markets/KXESOCCERGAME-26OCT081400LUISANTO-ANTO/candlesticks?start_ts=1791480600&end_ts=1791482460&period_interval=1",
  "status": 200,
  "body": {
   "candlesticks": [],
-  "ticker": "KXCS2GAME-26OCT080400EXZACE-ACE"
+  "ticker": "KXESOCCERGAME-26OCT081400LUISANTO-ANTO"
  }
 }
