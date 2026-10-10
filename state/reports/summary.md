@@ -1,33 +1,33 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-10 12:18 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-10 12:23 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 105 | 17 | 88 | 19 | -$258.80 | -22.7% | -0.5c (97) | $741.20 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 179 | 15 | 164 | 108 | -$147.89 | -11.7% | -1.0c (177) | $852.11 |
+| model-only | Elo win model alone (control: ignores the market) | 105 | 16 | 89 | 20 | -$230.91 | -19.9% | -0.5c (97) | $769.09 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 179 | 14 | 165 | 108 | -$155.89 | -12.3% | -1.0c (177) | $844.11 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1153 finished matches. Lower is better; the market line is the bar to beat.
+1158 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6580 | 0.2341 |
-| model | 0.6743 | 0.2408 |
-| blend | 0.6596 | 0.2349 |
+| market | 0.6578 | 0.2340 |
+| model | 0.6746 | 0.2409 |
+| blend | 0.6595 | 0.2348 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 663 | 0.6954 | 0.6787 |
+| esoccergame | 665 | 0.6954 | 0.6793 |
 | cs2 | 243 | 0.5910 | 0.6646 |
-| ebasketballgame | 148 | 0.6775 | 0.6837 |
-| lol | 29 | 0.3933 | 0.6710 |
+| ebasketballgame | 150 | 0.6734 | 0.6827 |
+| lol | 30 | 0.4152 | 0.6717 |
 | dota2 | 27 | 0.5740 | 0.6323 |
 | r6 | 20 | 0.6693 | 0.7229 |
 | ow | 11 | 0.5115 | 0.5274 |
@@ -63,7 +63,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-10 07:52 | model-only | cs2 | Orgless | MARKandLARRY | YES Orgless | 32 | 0.48 | 0.58 | 0.46 | lost | -$15.92 |
 | 2026-10-10 07:52 | favourite | cs2 | Rooster | Ice Block | NO Ice Block | 3 | 0.89 | 0.88 | 0.88 | open | - |
 | 2026-10-10 07:52 | favourite | ow | Solus Victorem | HUNENG | YES Solus Victorem | 10 | 0.78 | 0.71 | 0.71 | won | $2.07 |
-| 2026-10-10 06:52 | favourite | lol | PART TIMERS | West Point Esports PH | YES PART TIMERS | 12 | 0.65 | 0.65 | 0.65 | open | - |
+| 2026-10-10 06:52 | favourite | lol | PART TIMERS | West Point Esports PH | YES PART TIMERS | 12 | 0.65 | 0.65 | 0.65 | lost | -$8.00 |
 | 2026-10-10 06:52 | model-only | cs2 | Honvéd | mellren | YES Honvéd | 55 | 0.22 | 0.28 | 0.21 | lost | -$12.77 |
 
 ## Backtest on real Kalshi prices
