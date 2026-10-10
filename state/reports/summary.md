@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-10 01:52 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-10 02:02 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,28 +8,28 @@ Updated 2026-10-10 01:52 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
 | model-only | Elo win model alone (control: ignores the market) | 86 | 6 | 80 | 19 | -$192.23 | -17.9% | -0.7c (81) | $807.77 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 152 | 13 | 139 | 93 | -$129.98 | -11.9% | -0.8c (147) | $870.02 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 152 | 12 | 140 | 93 | -$138.64 | -12.6% | -0.8c (148) | $861.36 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-931 finished matches. Lower is better; the market line is the bar to beat.
+934 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6517 | 0.2314 |
-| model | 0.6751 | 0.2412 |
-| blend | 0.6529 | 0.2321 |
+| market | 0.6530 | 0.2319 |
+| model | 0.6754 | 0.2414 |
+| blend | 0.6543 | 0.2326 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 513 | 0.6942 | 0.6795 |
+| esoccergame | 515 | 0.6942 | 0.6796 |
 | cs2 | 220 | 0.5993 | 0.6726 |
 | ebasketballgame | 111 | 0.6804 | 0.6889 |
 | lol | 29 | 0.3933 | 0.6710 |
 | dota2 | 24 | 0.5756 | 0.6162 |
-| r6 | 17 | 0.6312 | 0.7195 |
+| r6 | 18 | 0.6914 | 0.7324 |
 | valorant | 10 | 0.6330 | 0.6398 |
 | ow | 7 | 0.1414 | 0.3682 |
 
@@ -44,7 +44,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-10 01:17 | favourite | esoccergame | FC Augsburg (Aron) | Dortmund (Frost) | YES FC Augsburg (Aron) | 11 | 0.76 | 0.79 | 0.79 | open | - |
 | 2026-10-10 01:07 | favourite | esoccergame | FC Augsburg (Aron) | 1. FC Köln (Kevin) | YES FC Augsburg (Aron) | 13 | 0.61 | 0.66 | 0.66 | open | - |
 | 2026-10-10 00:51 | favourite | esoccergame | Leverkusen (Frenkie) | 1. FC Köln (Kevin) | YES Leverkusen (Frenkie) | 12 | 0.67 | 0.69 | 0.69 | open | - |
-| 2026-10-10 00:41 | favourite | esoccergame | Botafogo (Frenkie) | Universitario (Aron) | YES Botafogo (Frenkie) | 15 | 0.56 | 0.61 | 0.61 | open | - |
+| 2026-10-10 00:41 | favourite | esoccergame | Botafogo (Frenkie) | Universitario (Aron) | YES Botafogo (Frenkie) | 15 | 0.56 | 0.61 | 0.61 | lost | -$8.66 |
 | 2026-10-09 22:46 | blend | esoccergame | Montpellier (Ellen) | Nantes (Lucy) | YES Montpellier (Ellen) | 30 | 0.64 | 0.77 | 0.74 | lost | -$19.69 |
 | 2026-10-09 12:24 | model-only | cs2 | ENCE Prospects | Passion Academy | YES ENCE Prospects | 43 | 0.40 | 0.54 | 0.39 | lost | -$17.93 |
 | 2026-10-09 12:24 | model-only | cs2 | NAVI Junior | G2 Ares | YES NAVI Junior | 34 | 0.50 | 0.60 | 0.50 | won | $16.40 |
