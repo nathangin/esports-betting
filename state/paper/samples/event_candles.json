@@ -1,55 +1,74 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT081306NISKANTO/candlesticks?start_ts=1791477360&end_ts=1791479220&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT081347NISKLUIS/candlesticks?start_ts=1791479820&end_ts=1791481680&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791479220,
+  "adjusted_end_ts": 1791481680,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791478980,
+     "end_period_ts": 1791481680,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9900",
+      "close_dollars": "0.7500",
       "high_dollars": "0.9900",
-      "low_dollars": "0.9900",
+      "low_dollars": "0.7500",
       "open_dollars": "0.9900"
      },
      "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.0100",
+      "close_dollars": "0.7100",
+      "high_dollars": "0.7100",
       "low_dollars": "0.0000",
-      "open_dollars": "0.0100"
+      "open_dollars": "0.0000"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791478980,
+     "end_period_ts": 1791481680,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9900",
+      "close_dollars": "0.1700",
       "high_dollars": "0.9900",
-      "low_dollars": "0.9900",
+      "low_dollars": "0.1600",
       "open_dollars": "0.9900"
      },
      "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.0100",
+      "close_dollars": "0.1300",
+      "high_dollars": "0.1300",
       "low_dollars": "0.0000",
-      "open_dollars": "0.0100"
+      "open_dollars": "0.0000"
      }
     }
    ],
-   []
+   [
+    {
+     "end_period_ts": 1791481680,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1500",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1400",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1000",
+      "high_dollars": "0.1000",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    }
+   ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT081306NISKANTO-NISK",
-   "KXESOCCERGAME-26OCT081306NISKANTO-ANTO",
-   "KXESOCCERGAME-26OCT081306NISKANTO-TIE"
+   "KXESOCCERGAME-26OCT081347NISKLUIS-NISK",
+   "KXESOCCERGAME-26OCT081347NISKLUIS-LUIS",
+   "KXESOCCERGAME-26OCT081347NISKLUIS-TIE"
   ]
  }
 }
