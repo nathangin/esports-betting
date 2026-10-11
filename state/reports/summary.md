@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-11 09:42 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-11 09:47 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,24 +8,24 @@ Updated 2026-10-11 09:42 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
 | model-only | Elo win model alone (control: ignores the market) | 115 | 13 | 102 | 25 | -$238.02 | -18.6% | -0.6c (107) | $761.98 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 208 | 23 | 185 | 124 | -$125.30 | -8.9% | -1.7c (202) | $874.70 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 209 | 24 | 185 | 124 | -$125.30 | -8.9% | -1.9c (203) | $874.70 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1671 finished matches. Lower is better; the market line is the bar to beat.
+1672 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6615 | 0.2357 |
+| market | 0.6614 | 0.2357 |
 | model | 0.6774 | 0.2421 |
-| blend | 0.6628 | 0.2364 |
+| blend | 0.6627 | 0.2364 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | esoccergame | 1026 | 0.6912 | 0.6810 |
-| cs2 | 279 | 0.5849 | 0.6671 |
+| cs2 | 280 | 0.5847 | 0.6671 |
 | ebasketballgame | 237 | 0.6863 | 0.6825 |
 | lol | 35 | 0.4622 | 0.7005 |
 | dota2 | 33 | 0.5625 | 0.6477 |
@@ -40,6 +40,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-11 09:47 | favourite | esoccergame | RB Leipzig (Kylian) | Mönchengladbach (Bradley) | YES RB Leipzig (Kylian) | 2 | 0.63 | 0.66 | 0.66 | open | - |
 | 2026-10-11 09:21 | favourite | esoccergame | Mönchengladbach (Bradley) | Stuttgart (Frost) | YES Mönchengladbach (Bradley) | 8 | 0.52 | 0.56 | 0.56 | open | - |
 | 2026-10-11 09:21 | model-only | cs2 | TheChampionGG | VP.Future 3 | YES TheChampionGG | 37 | 0.39 | 0.45 | 0.39 | open | - |
 | 2026-10-11 09:21 | favourite | cs2 | Teletubisie | THE UNIT | YES Teletubisie | 9 | 0.88 | 0.87 | 0.87 | open | - |
@@ -60,11 +61,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-11 06:51 | favourite | cs2 | Vitality Academy | Elite Klan | NO Elite Klan | 1 | 0.82 | 0.81 | 0.81 | open | - |
 | 2026-10-11 06:51 | model-only | cs2 | Misa Esports | Just_Players | YES Misa Esports | 19 | 0.32 | 0.51 | 0.31 | open | - |
 | 2026-10-11 06:51 | favourite | cs2 | ILLYRIANS | MORROW | YES ILLYRIANS | 12 | 0.63 | 0.60 | 0.60 | won | $4.24 |
-| 2026-10-11 06:51 | favourite | cs2 | STATE | WRAITH PCIFIC | YES STATE | 12 | 0.66 | 0.64 | 0.64 | open | - |
 | 2026-10-11 06:51 | favourite | lol | West Point Esports PH | Nothin'Here | NO Nothin'Here | 14 | 0.58 | 0.56 | 0.56 | open | - |
+| 2026-10-11 06:51 | favourite | cs2 | STATE | WRAITH PCIFIC | YES STATE | 12 | 0.66 | 0.64 | 0.64 | open | - |
 | 2026-10-11 05:21 | favourite | mlbb | Team Vamos | Team Flash | NO Team Flash | 5 | 0.88 | 0.64 | 0.64 | won | $0.56 |
 | 2026-10-11 04:51 | favourite | ow | O2 Blast | ZANSIDE GAMING | YES O2 Blast | 15 | 0.56 | 0.52 | 0.52 | lost | -$8.66 |
-| 2026-10-11 02:50 | favourite | cs2 | Chinggis Warriors | NEXVOID | YES Chinggis Warriors | 14 | 0.58 | 0.55 | 0.55 | won | $5.64 |
 
 ## Backtest on real Kalshi prices
 
