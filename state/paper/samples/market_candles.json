@@ -1,8 +1,8 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/markets/KXEBASKETBALLGAME-26OCT082326GAVIKYLE-GAVI/candlesticks?start_ts=1791514560&end_ts=1791516420&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/markets/KXEBASKETBALLGAME-26OCT090152MICKJASO-JASO/candlesticks?start_ts=1791523320&end_ts=1791525180&period_interval=1",
  "status": 200,
  "body": {
   "candlesticks": [],
-  "ticker": "KXEBASKETBALLGAME-26OCT082326GAVIKYLE-GAVI"
+  "ticker": "KXEBASKETBALLGAME-26OCT090152MICKJASO-JASO"
  }
 }

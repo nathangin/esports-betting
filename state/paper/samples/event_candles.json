@@ -1,15 +1,154 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/events/KXEBASKETBALLGAME-26OCT082326GAVIKYLE/candlesticks?start_ts=1791514560&end_ts=1791516420&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT082336ELLIALIC/candlesticks?start_ts=1791515160&end_ts=1791517020&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791516420,
+  "adjusted_end_ts": 1791517020,
   "market_candlesticks": [
-   [],
-   []
+   [
+    {
+     "end_period_ts": 1791515280,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4300",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.4300",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3800",
+      "high_dollars": "0.3800",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791515460,
+     "open_interest_fp": "3.00",
+     "price": {
+      "close_dollars": "0.3800",
+      "high_dollars": "0.3800",
+      "low_dollars": "0.3800",
+      "mean_dollars": "0.3800",
+      "open_dollars": "0.3800"
+     },
+     "volume_fp": "3.00",
+     "yes_ask": {
+      "close_dollars": "0.4300",
+      "high_dollars": "0.4300",
+      "low_dollars": "0.4300",
+      "open_dollars": "0.4300"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3800",
+      "high_dollars": "0.3800",
+      "low_dollars": "0.3800",
+      "open_dollars": "0.3800"
+     }
+    },
+    {
+     "end_period_ts": 1791517020,
+     "open_interest_fp": "3.00",
+     "price": {
+      "previous_dollars": "0.3800"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4300",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.4300",
+      "open_dollars": "0.4300"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3800",
+      "high_dollars": "0.3900",
+      "low_dollars": "0.1600",
+      "open_dollars": "0.3800"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791515280,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4300",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.4300",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3800",
+      "high_dollars": "0.3800",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791517020,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4300",
+      "high_dollars": "0.8700",
+      "low_dollars": "0.4300",
+      "open_dollars": "0.4300"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3800",
+      "high_dollars": "0.3800",
+      "low_dollars": "0.0400",
+      "open_dollars": "0.3800"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791515280,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.2100",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.2100",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1600",
+      "high_dollars": "0.1600",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791517020,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.2200",
+      "high_dollars": "0.4700",
+      "low_dollars": "0.2100",
+      "open_dollars": "0.2100"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1700",
+      "high_dollars": "0.1700",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.1600"
+     }
+    }
+   ]
   ],
   "market_tickers": [
-   "KXEBASKETBALLGAME-26OCT082326GAVIKYLE-GAVI",
-   "KXEBASKETBALLGAME-26OCT082326GAVIKYLE-KYLE"
+   "KXESOCCERGAME-26OCT082336ELLIALIC-ELLI",
+   "KXESOCCERGAME-26OCT082336ELLIALIC-ALIC",
+   "KXESOCCERGAME-26OCT082336ELLIALIC-TIE"
   ]
  }
 }
