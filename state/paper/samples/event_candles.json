@@ -1,102 +1,17 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT090616SHAQEDER/candlesticks?start_ts=1791539160&end_ts=1791541020&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT090618NISKFEDE/candlesticks?start_ts=1791539280&end_ts=1791541140&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791541020,
+  "adjusted_end_ts": 1791541140,
   "market_candlesticks": [
-   [
-    {
-     "end_period_ts": 1791540000,
-     "open_interest_fp": "179.40",
-     "price": {
-      "close_dollars": "0.5400",
-      "high_dollars": "0.5400",
-      "low_dollars": "0.5400",
-      "mean_dollars": "0.5400",
-      "open_dollars": "0.5400"
-     },
-     "volume_fp": "179.40",
-     "yes_ask": {
-      "close_dollars": "0.5400",
-      "high_dollars": "0.5400",
-      "low_dollars": "0.5400",
-      "open_dollars": "0.5400"
-     },
-     "yes_bid": {
-      "close_dollars": "0.4700",
-      "high_dollars": "0.4700",
-      "low_dollars": "0.4700",
-      "open_dollars": "0.4700"
-     }
-    },
-    {
-     "end_period_ts": 1791541020,
-     "open_interest_fp": "179.40",
-     "price": {
-      "previous_dollars": "0.5400"
-     },
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.8300",
-      "high_dollars": "0.8300",
-      "low_dollars": "0.5400",
-      "open_dollars": "0.5400"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0500",
-      "high_dollars": "0.4700",
-      "low_dollars": "0.0500",
-      "open_dollars": "0.4700"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791541020,
-     "open_interest_fp": "2.00",
-     "price": {
-      "previous_dollars": "0.3000"
-     },
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.9300",
-      "high_dollars": "0.9300",
-      "low_dollars": "0.3700",
-      "open_dollars": "0.3700"
-     },
-     "yes_bid": {
-      "close_dollars": "0.1500",
-      "high_dollars": "0.3000",
-      "low_dollars": "0.1500",
-      "open_dollars": "0.3000"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791541020,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.4800",
-      "high_dollars": "0.4800",
-      "low_dollars": "0.2000",
-      "open_dollars": "0.2000"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.1300",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.1300"
-     }
-    }
-   ]
+   [],
+   [],
+   []
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT090616SHAQEDER-SHAQ",
-   "KXESOCCERGAME-26OCT090616SHAQEDER-EDER",
-   "KXESOCCERGAME-26OCT090616SHAQEDER-TIE"
+   "KXESOCCERGAME-26OCT090618NISKFEDE-NISK",
+   "KXESOCCERGAME-26OCT090618NISKFEDE-FEDE",
+   "KXESOCCERGAME-26OCT090618NISKFEDE-TIE"
   ]
  }
 }
