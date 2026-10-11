@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-11 08:51 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-11 08:56 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,23 +8,23 @@ Updated 2026-10-11 08:51 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
 | model-only | Elo win model alone (control: ignores the market) | 113 | 11 | 102 | 25 | -$238.02 | -18.6% | -0.6c (107) | $761.98 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 204 | 21 | 183 | 122 | -$131.23 | -9.5% | -1.7c (202) | $868.77 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 204 | 21 | 183 | 122 | -$131.23 | -9.5% | -1.8c (202) | $868.77 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1651 finished matches. Lower is better; the market line is the bar to beat.
+1654 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6612 | 0.2356 |
-| model | 0.6781 | 0.2425 |
-| blend | 0.6626 | 0.2363 |
+| market | 0.6613 | 0.2356 |
+| model | 0.6777 | 0.2423 |
+| blend | 0.6627 | 0.2363 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 1012 | 0.6913 | 0.6823 |
+| esoccergame | 1015 | 0.6913 | 0.6816 |
 | cs2 | 278 | 0.5844 | 0.6680 |
 | ebasketballgame | 233 | 0.6854 | 0.6827 |
 | lol | 35 | 0.4622 | 0.7005 |
