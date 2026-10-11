@@ -1,43 +1,79 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT091859FROSKEVI/candlesticks?start_ts=1791584940&end_ts=1791586800&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT091904STRUMORD/candlesticks?start_ts=1791585240&end_ts=1791587100&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791586800,
+  "adjusted_end_ts": 1791587100,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791586800,
+     "end_period_ts": 1791585360,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.3700",
+      "close_dollars": "0.3500",
       "high_dollars": "0.9900",
-      "low_dollars": "0.3700",
-      "open_dollars": "0.3700"
+      "low_dollars": "0.3500",
+      "open_dollars": "0.9900"
      },
      "yes_bid": {
-      "close_dollars": "0.3000",
-      "high_dollars": "0.3000",
+      "close_dollars": "0.2800",
+      "high_dollars": "0.2800",
       "low_dollars": "0.0000",
-      "open_dollars": "0.3000"
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791587100,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.5000",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.3500",
+      "open_dollars": "0.3500"
+     },
+     "yes_bid": {
+      "close_dollars": "0.4300",
+      "high_dollars": "0.4300",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.2800"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791586800,
+     "end_period_ts": 1791585360,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.5500",
-      "high_dollars": "0.8700",
-      "low_dollars": "0.5500",
+      "close_dollars": "0.5600",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.5600",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.4900",
+      "high_dollars": "0.4900",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791587100,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4000",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.4000",
       "open_dollars": "0.5600"
      },
      "yes_bid": {
-      "close_dollars": "0.4800",
+      "close_dollars": "0.3300",
       "high_dollars": "0.4900",
       "low_dollars": "0.0000",
       "open_dollars": "0.4900"
@@ -46,29 +82,47 @@
    ],
    [
     {
-     "end_period_ts": 1791586800,
+     "end_period_ts": 1791585360,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
       "close_dollars": "0.1900",
-      "high_dollars": "0.4800",
-      "low_dollars": "0.1800",
-      "open_dollars": "0.1800"
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1900",
+      "open_dollars": "0.9900"
      },
      "yes_bid": {
       "close_dollars": "0.1200",
       "high_dollars": "0.1200",
       "low_dollars": "0.0000",
-      "open_dollars": "0.1100"
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791587100,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.2000",
+      "high_dollars": "0.4800",
+      "low_dollars": "0.1900",
+      "open_dollars": "0.1900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1300",
+      "high_dollars": "0.1300",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.1200"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT091859FROSKEVI-FROS",
-   "KXESOCCERGAME-26OCT091859FROSKEVI-KEVI",
-   "KXESOCCERGAME-26OCT091859FROSKEVI-TIE"
+   "KXESOCCERGAME-26OCT091904STRUMORD-STRU",
+   "KXESOCCERGAME-26OCT091904STRUMORD-MORD",
+   "KXESOCCERGAME-26OCT091904STRUMORD-TIE"
   ]
  }
 }
