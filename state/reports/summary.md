@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-11 00:45 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-11 00:50 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-11 00:45 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
 | model-only | Elo win model alone (control: ignores the market) | 108 | 8 | 100 | 25 | -$222.51 | -17.6% | -0.5c (102) | $777.49 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 182 | 11 | 171 | 113 | -$145.63 | -11.3% | -1.2c (179) | $854.37 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 183 | 12 | 171 | 113 | -$145.63 | -11.3% | -1.2c (179) | $854.37 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -40,6 +40,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-11 00:50 | favourite | esoccergame | Leverkusen (Hurricane) | 1. FC Köln (Frenkie) | YES Leverkusen (Hurricane) | 12 | 0.66 | 0.69 | 0.69 | open | - |
 | 2026-10-11 00:40 | favourite | esoccergame | Botafogo (Hurricane) | Universitario (Danny) | YES Botafogo (Hurricane) | 13 | 0.61 | 0.65 | 0.65 | open | - |
 | 2026-10-11 00:35 | favourite | esoccergame | São Paulo (Niskanen15) | Estudiantes (Frenkie) | YES São Paulo (Niskanen15) | 13 | 0.63 | 0.67 | 0.67 | open | - |
 | 2026-10-10 22:24 | model-only | cs2 | Abyssal | Ground Zero | YES Abyssal | 1 | 0.37 | 0.43 | 0.36 | open | - |
@@ -64,7 +65,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-10 08:52 | model-only | cs2 | PURE | Sangal | NO Sangal | 1 | 0.35 | 0.43 | 0.34 | lost | -$0.37 |
 | 2026-10-10 08:22 | favourite | cs2 | KZG | BGNS Orange | YES KZG | 1 | 0.75 | 0.75 | 0.75 | won | $0.23 |
 | 2026-10-10 07:52 | favourite | ow | Solus Victorem | HUNENG | YES Solus Victorem | 10 | 0.78 | 0.71 | 0.71 | won | $2.07 |
-| 2026-10-10 07:52 | favourite | cs2 | Vitality Academy | Dynamo Eclot Phoenix | NO Dynamo Eclot Phoenix | 10 | 0.76 | 0.75 | 0.75 | won | $2.27 |
 
 ## Backtest on real Kalshi prices
 
