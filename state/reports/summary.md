@@ -1,25 +1,25 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-11 12:42 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-11 12:47 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 117 | 13 | 104 | 25 | -$259.44 | -19.9% | -0.5c (113) | $740.56 |
+| model-only | Elo win model alone (control: ignores the market) | 117 | 13 | 104 | 25 | -$259.44 | -19.9% | -0.6c (114) | $740.56 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 17 | 193 | 127 | -$157.32 | -10.8% | -2.0c (209) | $842.68 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1738 finished matches. Lower is better; the market line is the bar to beat.
+1739 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6612 | 0.2356 |
-| model | 0.6757 | 0.2414 |
+| market | 0.6613 | 0.2356 |
+| model | 0.6759 | 0.2414 |
 | blend | 0.6626 | 0.2364 |
 
 | Game | Matches | Market log loss | Model log loss |
@@ -31,8 +31,8 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | dota2 | 33 | 0.5625 | 0.6477 |
 | ow | 22 | 0.4138 | 0.4935 |
 | r6 | 22 | 0.6444 | 0.7203 |
+| mlbb | 12 | 0.6757 | 0.7183 |
 | valorant | 12 | 0.6525 | 0.6684 |
-| mlbb | 11 | 0.6741 | 0.6954 |
 
 ## Latest bets
 
