@@ -1,76 +1,76 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT091018DANNLUIS/candlesticks?start_ts=1791553680&end_ts=1791555540&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT091032DANNPINK/candlesticks?start_ts=1791554520&end_ts=1791556380&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791555540,
+  "adjusted_end_ts": 1791556380,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791555540,
+     "end_period_ts": 1791556380,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4400",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.4400",
-      "open_dollars": "0.6400"
+      "close_dollars": "0.2000",
+      "high_dollars": "0.4800",
+      "low_dollars": "0.2000",
+      "open_dollars": "0.2100"
      },
      "yes_bid": {
-      "close_dollars": "0.3900",
-      "high_dollars": "0.5700",
+      "close_dollars": "0.1500",
+      "high_dollars": "0.1500",
       "low_dollars": "0.0000",
-      "open_dollars": "0.5600"
+      "open_dollars": "0.1400"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791555540,
+     "end_period_ts": 1791556380,
      "open_interest_fp": "2.00",
      "price": {
-      "previous_dollars": "0.2100"
+      "previous_dollars": "0.7300"
      },
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4300",
-      "high_dollars": "0.4800",
-      "low_dollars": "0.2700",
-      "open_dollars": "0.2800"
+      "close_dollars": "0.7000",
+      "high_dollars": "0.8500",
+      "low_dollars": "0.7000",
+      "open_dollars": "0.7300"
      },
      "yes_bid": {
-      "close_dollars": "0.3800",
-      "high_dollars": "0.3800",
-      "low_dollars": "0.1500",
-      "open_dollars": "0.2100"
+      "close_dollars": "0.6600",
+      "high_dollars": "0.6700",
+      "low_dollars": "0.4500",
+      "open_dollars": "0.6600"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791555540,
+     "end_period_ts": 1791556380,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.2100",
+      "close_dollars": "0.1600",
       "high_dollars": "0.4800",
-      "low_dollars": "0.1800",
-      "open_dollars": "0.1900"
+      "low_dollars": "0.1600",
+      "open_dollars": "0.1700"
      },
      "yes_bid": {
-      "close_dollars": "0.1600",
-      "high_dollars": "0.1600",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.1200"
+      "close_dollars": "0.1000",
+      "high_dollars": "0.1000",
+      "low_dollars": "0.0100",
+      "open_dollars": "0.1000"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT091018DANNLUIS-DANN",
-   "KXESOCCERGAME-26OCT091018DANNLUIS-LUIS",
-   "KXESOCCERGAME-26OCT091018DANNLUIS-TIE"
+   "KXESOCCERGAME-26OCT091032DANNPINK-DANN",
+   "KXESOCCERGAME-26OCT091032DANNPINK-PINK",
+   "KXESOCCERGAME-26OCT091032DANNPINK-TIE"
   ]
  }
 }
