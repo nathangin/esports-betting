@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-11 10:57 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-11 11:02 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,23 +8,23 @@ Updated 2026-10-11 10:57 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
 | model-only | Elo win model alone (control: ignores the market) | 116 | 13 | 103 | 25 | -$244.39 | -19.0% | -0.5c (113) | $755.61 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 21 | 189 | 125 | -$142.91 | -10.0% | -2.0c (208) | $857.09 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 20 | 190 | 125 | -$151.41 | -10.5% | -2.0c (208) | $848.59 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1695 finished matches. Lower is better; the market line is the bar to beat.
+1697 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6615 | 0.2357 |
-| model | 0.6772 | 0.2420 |
+| market | 0.6616 | 0.2358 |
+| model | 0.6771 | 0.2420 |
 | blend | 0.6629 | 0.2365 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 1042 | 0.6916 | 0.6812 |
+| esoccergame | 1044 | 0.6916 | 0.6811 |
 | cs2 | 281 | 0.5840 | 0.6673 |
 | ebasketballgame | 241 | 0.6864 | 0.6821 |
 | lol | 35 | 0.4622 | 0.7005 |
@@ -55,7 +55,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-11 07:51 | model-only | dota2 | Team Spirit | PARIVISION | NO PARIVISION | 47 | 0.31 | 0.44 | 0.31 | open | - |
 | 2026-10-11 07:51 | favourite | dota2 | PARIVISION | Team Spirit | YES PARIVISION | 12 | 0.70 | 0.69 | 0.69 | open | - |
 | 2026-10-11 07:51 | favourite | valorant | G2 Esports | T1 | YES G2 Esports | 13 | 0.62 | 0.61 | 0.61 | open | - |
-| 2026-10-11 07:51 | favourite | mlbb | Invictus Gaming | AC Esports | YES Invictus Gaming | 10 | 0.84 | 0.63 | 0.63 | open | - |
+| 2026-10-11 07:51 | favourite | mlbb | Invictus Gaming | AC Esports | YES Invictus Gaming | 10 | 0.84 | 0.63 | 0.63 | lost | -$8.50 |
 | 2026-10-11 07:51 | favourite | ow | HUNENG | SHENGSHI Esports | YES HUNENG | 10 | 0.82 | 0.70 | 0.70 | won | $1.69 |
 | 2026-10-11 07:51 | model-only | valorant | T1 | G2 Esports | NO G2 Esports | 38 | 0.39 | 0.47 | 0.39 | open | - |
 | 2026-10-11 06:51 | favourite | cs2 | Just_Players | Misa Esports | YES Just_Players | 12 | 0.70 | 0.69 | 0.69 | won | $3.42 |
