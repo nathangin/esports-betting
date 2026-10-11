@@ -1,53 +1,74 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/events/KXEBASKETBALLGAME-26OCT091144TYLEWALT/candlesticks?start_ts=1791558840&end_ts=1791560700&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT091156PINKANTO/candlesticks?start_ts=1791559560&end_ts=1791561420&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791560700,
+  "adjusted_end_ts": 1791561420,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791560700,
+     "end_period_ts": 1791561420,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.5700",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.4700",
-      "open_dollars": "0.5100"
+      "close_dollars": "0.8000",
+      "high_dollars": "0.8100",
+      "low_dollars": "0.5700",
+      "open_dollars": "0.5700"
      },
      "yes_bid": {
-      "close_dollars": "0.5000",
+      "close_dollars": "0.0000",
       "high_dollars": "0.5000",
       "low_dollars": "0.0000",
-      "open_dollars": "0.4300"
+      "open_dollars": "0.5000"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791560700,
+     "end_period_ts": 1791561420,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.5000",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.5000",
-      "open_dollars": "0.5700"
+      "close_dollars": "0.9500",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.3600",
+      "open_dollars": "0.3600"
      },
      "yes_bid": {
-      "close_dollars": "0.4300",
-      "high_dollars": "0.5300",
+      "close_dollars": "0.0100",
+      "high_dollars": "0.2900",
+      "low_dollars": "0.0100",
+      "open_dollars": "0.2900"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791561420,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4700",
+      "high_dollars": "0.4800",
+      "low_dollars": "0.1800",
+      "open_dollars": "0.1800"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0000",
+      "high_dollars": "0.1100",
       "low_dollars": "0.0000",
-      "open_dollars": "0.4900"
+      "open_dollars": "0.1100"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXEBASKETBALLGAME-26OCT091144TYLEWALT-TYLE",
-   "KXEBASKETBALLGAME-26OCT091144TYLEWALT-WALT"
+   "KXESOCCERGAME-26OCT091156PINKANTO-PINK",
+   "KXESOCCERGAME-26OCT091156PINKANTO-ANTO",
+   "KXESOCCERGAME-26OCT091156PINKANTO-TIE"
   ]
  }
 }
