@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-11 14:27 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-11 14:32 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 123 | 16 | 107 | 28 | -$128.65 | -9.5% | -0.7c (119) | $871.35 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 12 | 198 | 127 | -$191.07 | -12.8% | -2.0c (209) | $808.93 |
+| model-only | Elo win model alone (control: ignores the market) | 123 | 15 | 108 | 28 | -$144.11 | -10.6% | -0.7c (119) | $855.89 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 11 | 199 | 128 | -$186.35 | -12.4% | -2.0c (209) | $813.65 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -63,8 +63,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-11 07:51 | favourite | dota2 | PARIVISION | Team Spirit | YES PARIVISION | 12 | 0.70 | 0.69 | 0.69 | lost | -$8.58 |
 | 2026-10-11 07:51 | favourite | ow | HUNENG | SHENGSHI Esports | YES HUNENG | 10 | 0.82 | 0.70 | 0.70 | won | $1.69 |
 | 2026-10-11 07:51 | favourite | mlbb | Invictus Gaming | AC Esports | YES Invictus Gaming | 10 | 0.84 | 0.63 | 0.63 | lost | -$8.50 |
-| 2026-10-11 07:51 | model-only | valorant | T1 | G2 Esports | NO G2 Esports | 38 | 0.39 | 0.47 | 0.39 | open | - |
-| 2026-10-11 07:51 | favourite | valorant | G2 Esports | T1 | YES G2 Esports | 13 | 0.62 | 0.61 | 0.61 | open | - |
+| 2026-10-11 07:51 | model-only | valorant | T1 | G2 Esports | NO G2 Esports | 38 | 0.39 | 0.47 | 0.39 | lost | -$15.46 |
+| 2026-10-11 07:51 | favourite | valorant | G2 Esports | T1 | YES G2 Esports | 13 | 0.62 | 0.61 | 0.61 | won | $4.72 |
 
 ## Backtest on real Kalshi prices
 
