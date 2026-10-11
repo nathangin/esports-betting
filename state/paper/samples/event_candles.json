@@ -1,76 +1,105 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT090907OLIVFLOR/candlesticks?start_ts=1791549420&end_ts=1791551280&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT090908DANNLUIS/candlesticks?start_ts=1791549480&end_ts=1791551340&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791551280,
+  "adjusted_end_ts": 1791551340,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791551280,
+     "end_period_ts": 1791551340,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.7800",
+      "high_dollars": "0.9800",
+      "low_dollars": "0.6300",
+      "open_dollars": "0.6400"
+     },
+     "yes_bid": {
+      "close_dollars": "0.7300",
+      "high_dollars": "0.7300",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.5700"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791549720,
      "open_interest_fp": "2.00",
      "price": {
-      "previous_dollars": "0.2600"
-     },
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.3200",
-      "high_dollars": "0.9200",
-      "low_dollars": "0.3200",
-      "open_dollars": "0.3300"
-     },
-     "yes_bid": {
-      "close_dollars": "0.2800",
-      "high_dollars": "0.2800",
-      "low_dollars": "0.1600",
-      "open_dollars": "0.2600"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791551280,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.5500",
-      "high_dollars": "0.9600",
-      "low_dollars": "0.5500",
-      "open_dollars": "0.5600"
-     },
-     "yes_bid": {
-      "close_dollars": "0.4900",
-      "high_dollars": "0.5100",
-      "low_dollars": "0.0900",
-      "open_dollars": "0.4900"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791551280,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
       "close_dollars": "0.2100",
-      "high_dollars": "0.4700",
-      "low_dollars": "0.2000",
+      "high_dollars": "0.2100",
+      "low_dollars": "0.2100",
+      "mean_dollars": "0.2100",
       "open_dollars": "0.2100"
      },
+     "volume_fp": "2.00",
+     "yes_ask": {
+      "close_dollars": "0.2800",
+      "high_dollars": "0.2800",
+      "low_dollars": "0.2800",
+      "open_dollars": "0.2800"
+     },
      "yes_bid": {
-      "close_dollars": "0.1600",
-      "high_dollars": "0.1600",
+      "close_dollars": "0.2100",
+      "high_dollars": "0.2100",
+      "low_dollars": "0.2100",
+      "open_dollars": "0.2100"
+     }
+    },
+    {
+     "end_period_ts": 1791551340,
+     "open_interest_fp": "0.00",
+     "price": {
+      "close_dollars": "0.1500",
+      "high_dollars": "0.1500",
+      "low_dollars": "0.1500",
+      "mean_dollars": "0.1500",
+      "open_dollars": "0.1500",
+      "previous_dollars": "0.2100"
+     },
+     "volume_fp": "2.00",
+     "yes_ask": {
+      "close_dollars": "0.1500",
+      "high_dollars": "0.4800",
+      "low_dollars": "0.1500",
+      "open_dollars": "0.2800"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0900",
+      "high_dollars": "0.2300",
+      "low_dollars": "0.0200",
+      "open_dollars": "0.2100"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791551340,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1400",
+      "high_dollars": "0.4800",
+      "low_dollars": "0.1400",
+      "open_dollars": "0.1900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0800",
+      "high_dollars": "0.1300",
       "low_dollars": "0.0000",
-      "open_dollars": "0.1400"
+      "open_dollars": "0.1100"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT090907OLIVFLOR-OLIV",
-   "KXESOCCERGAME-26OCT090907OLIVFLOR-FLOR",
-   "KXESOCCERGAME-26OCT090907OLIVFLOR-TIE"
+   "KXESOCCERGAME-26OCT090908DANNLUIS-DANN",
+   "KXESOCCERGAME-26OCT090908DANNLUIS-LUIS",
+   "KXESOCCERGAME-26OCT090908DANNLUIS-TIE"
   ]
  }
 }
