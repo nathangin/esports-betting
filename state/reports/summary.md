@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-11 09:01 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-11 09:06 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-11 09:01 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
 | model-only | Elo win model alone (control: ignores the market) | 113 | 11 | 102 | 25 | -$238.02 | -18.6% | -0.6c (107) | $761.98 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 204 | 21 | 183 | 122 | -$131.23 | -9.5% | -1.7c (202) | $868.77 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 205 | 22 | 183 | 122 | -$131.23 | -9.5% | -1.7c (202) | $868.77 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -40,12 +40,13 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-11 09:06 | favourite | esoccergame | Freiburg (Kevin) | Mönchengladbach (Bradley) | YES Freiburg (Kevin) | 15 | 0.53 | 0.56 | 0.56 | open | - |
 | 2026-10-11 08:51 | favourite | mlbb | ONIC | RRQ Hoshi | YES ONIC | 10 | 0.84 | 0.65 | 0.65 | open | - |
 | 2026-10-11 07:51 | favourite | mlbb | Invictus Gaming | AC Esports | YES Invictus Gaming | 10 | 0.84 | 0.63 | 0.63 | open | - |
-| 2026-10-11 07:51 | model-only | dota2 | Team Spirit | PARIVISION | NO PARIVISION | 47 | 0.31 | 0.44 | 0.31 | open | - |
+| 2026-10-11 07:51 | favourite | cs2 | Rooster | Orgless | NO Orgless | 11 | 0.77 | 0.62 | 0.62 | open | - |
 | 2026-10-11 07:51 | favourite | dota2 | PARIVISION | Team Spirit | YES PARIVISION | 12 | 0.70 | 0.69 | 0.69 | open | - |
 | 2026-10-11 07:51 | favourite | lol | Saigon Warriors | MVK Academy | NO MVK Academy | 10 | 0.80 | 0.79 | 0.79 | open | - |
-| 2026-10-11 07:51 | favourite | cs2 | Rooster | Orgless | NO Orgless | 11 | 0.77 | 0.62 | 0.62 | open | - |
+| 2026-10-11 07:51 | model-only | dota2 | Team Spirit | PARIVISION | NO PARIVISION | 47 | 0.31 | 0.44 | 0.31 | open | - |
 | 2026-10-11 07:51 | favourite | ow | HUNENG | SHENGSHI Esports | YES HUNENG | 10 | 0.82 | 0.70 | 0.70 | open | - |
 | 2026-10-11 07:51 | model-only | valorant | T1 | G2 Esports | NO G2 Esports | 38 | 0.39 | 0.47 | 0.39 | open | - |
 | 2026-10-11 07:51 | favourite | valorant | G2 Esports | T1 | YES G2 Esports | 13 | 0.62 | 0.61 | 0.61 | open | - |
@@ -64,7 +65,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-11 01:35 | favourite | esoccergame | Leverkusen (Hurricane) | Dortmund (Niskanen15) | YES Leverkusen (Hurricane) | 14 | 0.56 | 0.60 | 0.60 | lost | -$8.09 |
 | 2026-10-11 01:20 | favourite | esoccergame | FSV Mainz 05 (Eder) | 1. FC Köln (Frenkie) | YES FSV Mainz 05 (Eder) | 13 | 0.63 | 0.67 | 0.67 | won | $4.59 |
 | 2026-10-11 01:05 | favourite | esoccergame | Leverkusen (Hurricane) | FSV Mainz 05 (Eder) | YES Leverkusen (Hurricane) | 16 | 0.51 | 0.56 | 0.56 | won | $7.56 |
-| 2026-10-11 01:05 | favourite | esoccergame | FC Augsburg (Danny) | 1. FC Köln (Frenkie) | YES FC Augsburg (Danny) | 15 | 0.55 | 0.58 | 0.58 | lost | -$8.51 |
 
 ## Backtest on real Kalshi prices
 
