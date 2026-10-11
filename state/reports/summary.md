@@ -1,37 +1,37 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-11 13:42 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-11 13:52 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 122 | 16 | 106 | 27 | -$215.51 | -16.1% | -0.6c (114) | $784.49 |
+| model-only | Elo win model alone (control: ignores the market) | 123 | 17 | 106 | 27 | -$215.51 | -16.1% | -0.7c (119) | $784.49 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 13 | 197 | 127 | -$183.08 | -12.3% | -2.0c (209) | $816.92 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1765 finished matches. Lower is better; the market line is the bar to beat.
+1770 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6622 | 0.2361 |
-| model | 0.6749 | 0.2411 |
-| blend | 0.6638 | 0.2369 |
+| market | 0.6627 | 0.2363 |
+| model | 0.6751 | 0.2411 |
+| blend | 0.6643 | 0.2371 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 1091 | 0.6908 | 0.6777 |
-| cs2 | 284 | 0.5854 | 0.6674 |
+| esoccergame | 1092 | 0.6909 | 0.6774 |
+| cs2 | 285 | 0.5873 | 0.6687 |
 | ebasketballgame | 251 | 0.6846 | 0.6818 |
 | lol | 37 | 0.5009 | 0.6991 |
-| dota2 | 33 | 0.5625 | 0.6477 |
+| dota2 | 34 | 0.5809 | 0.6527 |
 | ow | 23 | 0.4259 | 0.5014 |
 | r6 | 22 | 0.6444 | 0.7203 |
-| mlbb | 12 | 0.6757 | 0.7183 |
+| mlbb | 14 | 0.6623 | 0.7215 |
 | valorant | 12 | 0.6525 | 0.6684 |
 
 ## Latest bets
@@ -40,6 +40,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-11 13:52 | model-only | cs2 | MOUZ | Vitality | YES MOUZ | 42 | 0.35 | 0.44 | 0.34 | open | - |
 | 2026-10-11 12:52 | model-only | cs2 | Spirit Academy Black | Metizport | NO Metizport | 9 | 0.20 | 0.36 | 0.18 | open | - |
 | 2026-10-11 12:52 | model-only | cs2 | Spirit Academy | 9INE | YES Spirit Academy | 34 | 0.41 | 0.65 | 0.41 | open | - |
 | 2026-10-11 12:52 | model-only | cs2 | mellren | Bebop | YES mellren | 23 | 0.62 | 0.71 | 0.61 | open | - |
@@ -49,22 +50,21 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-11 10:22 | favourite | cs2 | Spirit | Aurora Gaming | NO Aurora Gaming | 1 | 0.68 | 0.68 | 0.68 | lost | -$0.70 |
 | 2026-10-11 09:52 | model-only | cs2 | Fire Flux Esports | Gothic | NO Gothic | 27 | 0.53 | 0.60 | 0.52 | won | $12.21 |
 | 2026-10-11 09:47 | favourite | esoccergame | RB Leipzig (Kylian) | Mönchengladbach (Bradley) | YES RB Leipzig (Kylian) | 2 | 0.63 | 0.66 | 0.66 | won | $0.70 |
-| 2026-10-11 09:21 | favourite | cs2 | Teletubisie | THE UNIT | YES Teletubisie | 9 | 0.88 | 0.87 | 0.87 | open | - |
-| 2026-10-11 09:21 | favourite | esoccergame | RB Leipzig (Kylian) | Freiburg (Kevin) | YES RB Leipzig (Kylian) | 15 | 0.55 | 0.59 | 0.59 | lost | -$8.51 |
-| 2026-10-11 09:21 | model-only | cs2 | THE UNIT | Teletubisie | NO Teletubisie | 102 | 0.14 | 0.25 | 0.13 | open | - |
 | 2026-10-11 09:21 | favourite | esoccergame | Mönchengladbach (Bradley) | Stuttgart (Frost) | YES Mönchengladbach (Bradley) | 8 | 0.52 | 0.56 | 0.56 | lost | -$4.30 |
 | 2026-10-11 09:21 | model-only | cs2 | TheChampionGG | VP.Future 3 | YES TheChampionGG | 37 | 0.39 | 0.45 | 0.39 | lost | -$15.05 |
+| 2026-10-11 09:21 | favourite | cs2 | Teletubisie | THE UNIT | YES Teletubisie | 9 | 0.88 | 0.87 | 0.87 | open | - |
+| 2026-10-11 09:21 | model-only | cs2 | THE UNIT | Teletubisie | NO Teletubisie | 102 | 0.14 | 0.25 | 0.13 | open | - |
+| 2026-10-11 09:21 | favourite | esoccergame | RB Leipzig (Kylian) | Freiburg (Kevin) | YES RB Leipzig (Kylian) | 15 | 0.55 | 0.59 | 0.59 | lost | -$8.51 |
 | 2026-10-11 09:06 | favourite | esoccergame | Freiburg (Kevin) | Mönchengladbach (Bradley) | YES Freiburg (Kevin) | 15 | 0.53 | 0.56 | 0.56 | lost | -$8.22 |
 | 2026-10-11 08:51 | favourite | mlbb | ONIC | RRQ Hoshi | YES ONIC | 10 | 0.84 | 0.65 | 0.65 | won | $1.50 |
 | 2026-10-11 07:51 | favourite | lol | Saigon Warriors | MVK Academy | NO MVK Academy | 10 | 0.80 | 0.79 | 0.79 | lost | -$8.12 |
 | 2026-10-11 07:51 | favourite | cs2 | Rooster | Orgless | NO Orgless | 11 | 0.77 | 0.62 | 0.62 | open | - |
 | 2026-10-11 07:51 | model-only | dota2 | Team Spirit | PARIVISION | NO PARIVISION | 47 | 0.31 | 0.44 | 0.31 | won | $31.72 |
 | 2026-10-11 07:51 | favourite | dota2 | PARIVISION | Team Spirit | YES PARIVISION | 12 | 0.70 | 0.69 | 0.69 | lost | -$8.58 |
+| 2026-10-11 07:51 | favourite | ow | HUNENG | SHENGSHI Esports | YES HUNENG | 10 | 0.82 | 0.70 | 0.70 | won | $1.69 |
 | 2026-10-11 07:51 | favourite | mlbb | Invictus Gaming | AC Esports | YES Invictus Gaming | 10 | 0.84 | 0.63 | 0.63 | lost | -$8.50 |
 | 2026-10-11 07:51 | model-only | valorant | T1 | G2 Esports | NO G2 Esports | 38 | 0.39 | 0.47 | 0.39 | open | - |
 | 2026-10-11 07:51 | favourite | valorant | G2 Esports | T1 | YES G2 Esports | 13 | 0.62 | 0.61 | 0.61 | open | - |
-| 2026-10-11 07:51 | favourite | ow | HUNENG | SHENGSHI Esports | YES HUNENG | 10 | 0.82 | 0.70 | 0.70 | won | $1.69 |
-| 2026-10-11 06:51 | favourite | cs2 | Vitality Academy | Elite Klan | NO Elite Klan | 1 | 0.82 | 0.81 | 0.81 | open | - |
 
 ## Backtest on real Kalshi prices
 
