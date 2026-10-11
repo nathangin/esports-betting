@@ -1,32 +1,32 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-11 06:46 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-11 06:51 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 109 | 8 | 101 | 25 | -$222.90 | -17.6% | -0.6c (103) | $777.10 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 192 | 12 | 180 | 120 | -$128.77 | -9.4% | -1.5c (191) | $871.23 |
+| model-only | Elo win model alone (control: ignores the market) | 111 | 10 | 101 | 25 | -$222.90 | -17.6% | -0.6c (103) | $777.10 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 197 | 17 | 180 | 120 | -$128.77 | -9.4% | -1.5c (191) | $871.23 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1598 finished matches. Lower is better; the market line is the bar to beat.
+1604 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6607 | 0.2353 |
-| model | 0.6777 | 0.2422 |
-| blend | 0.6621 | 0.2361 |
+| market | 0.6609 | 0.2354 |
+| model | 0.6775 | 0.2421 |
+| blend | 0.6623 | 0.2361 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 974 | 0.6913 | 0.6825 |
+| esoccergame | 978 | 0.6913 | 0.6819 |
 | cs2 | 277 | 0.5844 | 0.6676 |
-| ebasketballgame | 223 | 0.6844 | 0.6800 |
+| ebasketballgame | 225 | 0.6848 | 0.6809 |
 | lol | 35 | 0.4622 | 0.7005 |
 | dota2 | 33 | 0.5625 | 0.6477 |
 | r6 | 22 | 0.6444 | 0.7203 |
@@ -40,6 +40,13 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-11 06:51 | favourite | lol | West Point Esports PH | Nothin'Here | NO Nothin'Here | 14 | 0.58 | 0.56 | 0.56 | open | - |
+| 2026-10-11 06:51 | model-only | cs2 | Elite Klan | Vitality Academy | YES Elite Klan | 73 | 0.20 | 0.35 | 0.19 | open | - |
+| 2026-10-11 06:51 | favourite | cs2 | STATE | WRAITH PCIFIC | YES STATE | 12 | 0.66 | 0.64 | 0.64 | open | - |
+| 2026-10-11 06:51 | favourite | cs2 | ILLYRIANS | MORROW | YES ILLYRIANS | 12 | 0.63 | 0.60 | 0.60 | open | - |
+| 2026-10-11 06:51 | favourite | cs2 | Just_Players | Misa Esports | YES Just_Players | 12 | 0.70 | 0.69 | 0.69 | open | - |
+| 2026-10-11 06:51 | model-only | cs2 | Misa Esports | Just_Players | YES Misa Esports | 19 | 0.32 | 0.51 | 0.31 | open | - |
+| 2026-10-11 06:51 | favourite | cs2 | Vitality Academy | Elite Klan | NO Elite Klan | 1 | 0.82 | 0.81 | 0.81 | open | - |
 | 2026-10-11 05:21 | favourite | mlbb | Team Vamos | Team Flash | NO Team Flash | 5 | 0.88 | 0.64 | 0.64 | open | - |
 | 2026-10-11 04:51 | favourite | ow | O2 Blast | ZANSIDE GAMING | YES O2 Blast | 15 | 0.56 | 0.52 | 0.52 | open | - |
 | 2026-10-11 02:50 | favourite | cs2 | Chinggis Warriors | NEXVOID | YES Chinggis Warriors | 14 | 0.58 | 0.55 | 0.55 | open | - |
@@ -57,14 +64,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-10 19:09 | model-only | cs2 | Wildcard | NRG | NO NRG | 4 | 0.41 | 0.58 | 0.38 | won | $2.29 |
 | 2026-10-10 15:53 | favourite | cs2 | Spirit | MOUZ | NO MOUZ | 1 | 0.59 | 0.58 | 0.58 | lost | -$0.61 |
 | 2026-10-10 12:38 | model-only | cs2 | Aurora Gaming | Vitality | YES Aurora Gaming | 21 | 0.24 | 0.39 | 0.23 | lost | -$5.31 |
-| 2026-10-10 11:53 | model-only | cs2 | Just Swing | Kaleido | YES Just Swing | 31 | 0.46 | 0.60 | 0.43 | won | $16.20 |
 | 2026-10-10 11:53 | favourite | cs2 | Iberian Soul | Nemiga | NO Nemiga | 3 | 0.81 | 0.81 | 0.81 | won | $0.53 |
-| 2026-10-10 11:53 | model-only | cs2 | PRIVATE | GamerLegion | YES PRIVATE | 19 | 0.32 | 0.51 | 0.32 | won | $12.63 |
-| 2026-10-10 10:52 | model-only | cs2 | LPH Gaming | UNiTY esports | YES LPH Gaming | 43 | 0.24 | 0.33 | 0.23 | lost | -$10.87 |
-| 2026-10-10 10:52 | model-only | valorant | NRG | LOUD | YES NRG | 12 | 0.51 | 0.60 | 0.52 | lost | -$6.33 |
-| 2026-10-10 09:52 | model-only | ow | JD Gaming | Weibo Gaming | YES JD Gaming | 37 | 0.21 | 0.31 | 0.20 | lost | -$8.20 |
-| 2026-10-10 09:52 | model-only | cs2 | Saint Sinners | WBT Academy | YES Saint Sinners | 36 | 0.42 | 0.51 | 0.42 | won | $20.26 |
-| 2026-10-10 09:47 | favourite | esoccergame | RB Leipzig (Kylian) | Mönchengladbach (Bradley) | YES RB Leipzig (Kylian) | 1 | 0.57 | 0.61 | 0.61 | lost | -$0.59 |
 
 ## Backtest on real Kalshi prices
 
