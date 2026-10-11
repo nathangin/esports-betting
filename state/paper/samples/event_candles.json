@@ -1,128 +1,110 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT091926NICOLEYL/candlesticks?start_ts=1791586560&end_ts=1791588420&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT091929PEDRFREN/candlesticks?start_ts=1791586740&end_ts=1791588600&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791588420,
+  "adjusted_end_ts": 1791588600,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791586800,
+     "end_period_ts": 1791588600,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.3400",
+      "close_dollars": "0.4400",
       "high_dollars": "0.9900",
-      "low_dollars": "0.3400",
-      "open_dollars": "0.9900"
+      "low_dollars": "0.3100",
+      "open_dollars": "0.3100"
      },
      "yes_bid": {
-      "close_dollars": "0.2700",
-      "high_dollars": "0.2700",
+      "close_dollars": "0.3700",
+      "high_dollars": "0.3700",
       "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
+      "open_dollars": "0.2300"
      }
-    },
+    }
+   ],
+   [
     {
-     "end_period_ts": 1791588420,
+     "end_period_ts": 1791588600,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9700",
-      "high_dollars": "0.9700",
-      "low_dollars": "0.2100",
-      "open_dollars": "0.3400"
+      "close_dollars": "0.4800",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.4800",
+      "open_dollars": "0.6300"
+     },
+     "yes_bid": {
+      "close_dollars": "0.4100",
+      "high_dollars": "0.5600",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.5600"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791587220,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1700",
+      "high_dollars": "0.1700",
+      "low_dollars": "0.1700",
+      "open_dollars": "0.1700"
      },
      "yes_bid": {
       "close_dollars": "0.1100",
-      "high_dollars": "0.2700",
-      "low_dollars": "0.1100",
-      "open_dollars": "0.2700"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791586800,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.5600",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.5600",
-      "open_dollars": "0.9900"
-     },
-     "yes_bid": {
-      "close_dollars": "0.4800",
-      "high_dollars": "0.4800",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
+      "high_dollars": "0.1100",
+      "low_dollars": "0.1000",
+      "open_dollars": "0.1000"
      }
     },
     {
-     "end_period_ts": 1791588420,
+     "end_period_ts": 1791588000,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9900",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.5500",
-      "open_dollars": "0.5600"
+      "close_dollars": "0.1700",
+      "high_dollars": "0.1700",
+      "low_dollars": "0.1700",
+      "open_dollars": "0.1700"
      },
      "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.6500",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.4800"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791586800,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.2100",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.2100",
-      "open_dollars": "0.9900"
-     },
-     "yes_bid": {
-      "close_dollars": "0.1400",
-      "high_dollars": "0.1400",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
+      "close_dollars": "0.1000",
+      "high_dollars": "0.1100",
+      "low_dollars": "0.1000",
+      "open_dollars": "0.1100"
      }
     },
     {
-     "end_period_ts": 1791588420,
+     "end_period_ts": 1791588600,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4800",
+      "close_dollars": "0.1800",
       "high_dollars": "0.4800",
-      "low_dollars": "0.1800",
-      "open_dollars": "0.2100"
+      "low_dollars": "0.1700",
+      "open_dollars": "0.1700"
      },
      "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.1400",
+      "close_dollars": "0.1100",
+      "high_dollars": "0.1100",
       "low_dollars": "0.0000",
-      "open_dollars": "0.1400"
+      "open_dollars": "0.1000"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT091926NICOLEYL-NICO",
-   "KXESOCCERGAME-26OCT091926NICOLEYL-LEYL",
-   "KXESOCCERGAME-26OCT091926NICOLEYL-TIE"
+   "KXESOCCERGAME-26OCT091929PEDRFREN-PEDR",
+   "KXESOCCERGAME-26OCT091929PEDRFREN-FREN",
+   "KXESOCCERGAME-26OCT091929PEDRFREN-TIE"
   ]
  }
 }
