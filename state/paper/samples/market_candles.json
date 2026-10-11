@@ -1,8 +1,8 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/markets/KXEBASKETBALLGAME-26OCT090508STEVMAGI-MAGI/candlesticks?start_ts=1791535080&end_ts=1791536940&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/markets/KXESOCCERGAME-26OCT090520HOLIEDER-EDER/candlesticks?start_ts=1791535800&end_ts=1791537660&period_interval=1",
  "status": 200,
  "body": {
   "candlesticks": [],
-  "ticker": "KXEBASKETBALLGAME-26OCT090508STEVMAGI-MAGI"
+  "ticker": "KXESOCCERGAME-26OCT090520HOLIEDER-EDER"
  }
 }
