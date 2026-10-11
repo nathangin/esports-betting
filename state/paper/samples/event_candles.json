@@ -1,93 +1,76 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/events/KXEBASKETBALLGAME-26OCT082108TIMZION/candlesticks?start_ts=1791506280&end_ts=1791508140&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT082116NICOALIC/candlesticks?start_ts=1791506760&end_ts=1791508620&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791508140,
+  "adjusted_end_ts": 1791508620,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791506340,
-     "open_interest_fp": "0.00",
-     "price": {},
+     "end_period_ts": 1791508620,
+     "open_interest_fp": "2.00",
+     "price": {
+      "previous_dollars": "0.3200"
+     },
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.5500",
-      "high_dollars": "0.6100",
-      "low_dollars": "0.5500",
-      "open_dollars": "0.5600"
-     },
-     "yes_bid": {
-      "close_dollars": "0.4800",
-      "high_dollars": "0.4900",
-      "low_dollars": "0.4300",
-      "open_dollars": "0.4900"
-     }
-    },
-    {
-     "end_period_ts": 1791508140,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.6300",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.5500",
-      "open_dollars": "0.5500"
-     },
-     "yes_bid": {
       "close_dollars": "0.5600",
-      "high_dollars": "0.5600",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.4800"
+      "high_dollars": "0.9500",
+      "low_dollars": "0.3900",
+      "open_dollars": "0.3900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.4900",
+      "high_dollars": "0.4900",
+      "low_dollars": "0.1500",
+      "open_dollars": "0.3200"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791506340,
-     "open_interest_fp": "49.28",
-     "price": {
-      "previous_dollars": "0.5100"
-     },
+     "end_period_ts": 1791508620,
+     "open_interest_fp": "0.00",
+     "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.5200",
-      "high_dollars": "0.5500",
-      "low_dollars": "0.5100",
-      "open_dollars": "0.5100"
+      "close_dollars": "0.3300",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.3300",
+      "open_dollars": "0.4900"
      },
      "yes_bid": {
-      "close_dollars": "0.4500",
-      "high_dollars": "0.4500",
-      "low_dollars": "0.3800",
-      "open_dollars": "0.4400"
+      "close_dollars": "0.2600",
+      "high_dollars": "0.4200",
+      "low_dollars": "0.0400",
+      "open_dollars": "0.4200"
      }
-    },
+    }
+   ],
+   [
     {
-     "end_period_ts": 1791508140,
-     "open_interest_fp": "49.28",
-     "price": {
-      "previous_dollars": "0.5100"
-     },
+     "end_period_ts": 1791508620,
+     "open_interest_fp": "0.00",
+     "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4400",
-      "high_dollars": "0.8200",
-      "low_dollars": "0.4400",
-      "open_dollars": "0.5200"
+      "close_dollars": "0.2200",
+      "high_dollars": "0.4800",
+      "low_dollars": "0.2200",
+      "open_dollars": "0.2200"
      },
      "yes_bid": {
-      "close_dollars": "0.3700",
-      "high_dollars": "0.4500",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.4500"
+      "close_dollars": "0.1500",
+      "high_dollars": "0.1500",
+      "low_dollars": "0.0800",
+      "open_dollars": "0.1500"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXEBASKETBALLGAME-26OCT082108TIMZION-TIM",
-   "KXEBASKETBALLGAME-26OCT082108TIMZION-ZION"
+   "KXESOCCERGAME-26OCT082116NICOALIC-NICO",
+   "KXESOCCERGAME-26OCT082116NICOALIC-ALIC",
+   "KXESOCCERGAME-26OCT082116NICOALIC-TIE"
   ]
  }
 }
