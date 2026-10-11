@@ -1,74 +1,74 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT091114LUISANTO/candlesticks?start_ts=1791557040&end_ts=1791558900&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT091128DANNLUIS/candlesticks?start_ts=1791557880&end_ts=1791559740&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791558900,
+  "adjusted_end_ts": 1791559740,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791558900,
+     "end_period_ts": 1791559740,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.0700",
-      "high_dollars": "0.4800",
-      "low_dollars": "0.0700",
-      "open_dollars": "0.1300"
+      "close_dollars": "0.6000",
+      "high_dollars": "0.9800",
+      "low_dollars": "0.6000",
+      "open_dollars": "0.6200"
      },
      "yes_bid": {
-      "close_dollars": "0.0300",
-      "high_dollars": "0.0600",
-      "low_dollars": "0.0200",
-      "open_dollars": "0.0600"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791558900,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.9100",
-      "high_dollars": "0.9100",
-      "low_dollars": "0.8500",
-      "open_dollars": "0.8500"
-     },
-     "yes_bid": {
-      "close_dollars": "0.8700",
-      "high_dollars": "0.8700",
-      "low_dollars": "0.5200",
-      "open_dollars": "0.7800"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791558900,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.0800",
-      "high_dollars": "0.4800",
-      "low_dollars": "0.0800",
-      "open_dollars": "0.1300"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0200",
-      "high_dollars": "0.0600",
+      "close_dollars": "0.5500",
+      "high_dollars": "0.5600",
       "low_dollars": "0.0000",
-      "open_dollars": "0.0600"
+      "open_dollars": "0.5500"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791559740,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.2900",
+      "high_dollars": "0.4700",
+      "low_dollars": "0.2800",
+      "open_dollars": "0.2900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.2300",
+      "high_dollars": "0.2300",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.2200"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791559740,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1900",
+      "high_dollars": "0.4700",
+      "low_dollars": "0.1800",
+      "open_dollars": "0.1900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1300",
+      "high_dollars": "0.1300",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.1200"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT091114LUISANTO-LUIS",
-   "KXESOCCERGAME-26OCT091114LUISANTO-ANTO",
-   "KXESOCCERGAME-26OCT091114LUISANTO-TIE"
+   "KXESOCCERGAME-26OCT091128DANNLUIS-DANN",
+   "KXESOCCERGAME-26OCT091128DANNLUIS-LUIS",
+   "KXESOCCERGAME-26OCT091128DANNLUIS-TIE"
   ]
  }
 }
