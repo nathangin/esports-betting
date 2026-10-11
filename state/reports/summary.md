@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-11 12:07 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-11 12:12 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 117 | 14 | 103 | 25 | -$244.39 | -19.0% | -0.5c (113) | $755.61 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 18 | 192 | 127 | -$149.21 | -10.3% | -2.0c (209) | $850.79 |
+| model-only | Elo win model alone (control: ignores the market) | 117 | 13 | 104 | 25 | -$259.44 | -19.9% | -0.5c (113) | $740.56 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 17 | 193 | 127 | -$157.32 | -10.8% | -2.0c (209) | $842.68 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -45,7 +45,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-11 09:52 | model-only | cs2 | Fire Flux Esports | Gothic | NO Gothic | 27 | 0.53 | 0.60 | 0.52 | open | - |
 | 2026-10-11 09:47 | favourite | esoccergame | RB Leipzig (Kylian) | Mönchengladbach (Bradley) | YES RB Leipzig (Kylian) | 2 | 0.63 | 0.66 | 0.66 | won | $0.70 |
 | 2026-10-11 09:21 | favourite | esoccergame | Mönchengladbach (Bradley) | Stuttgart (Frost) | YES Mönchengladbach (Bradley) | 8 | 0.52 | 0.56 | 0.56 | lost | -$4.30 |
-| 2026-10-11 09:21 | model-only | cs2 | TheChampionGG | VP.Future 3 | YES TheChampionGG | 37 | 0.39 | 0.45 | 0.39 | open | - |
+| 2026-10-11 09:21 | model-only | cs2 | TheChampionGG | VP.Future 3 | YES TheChampionGG | 37 | 0.39 | 0.45 | 0.39 | lost | -$15.05 |
 | 2026-10-11 09:21 | favourite | cs2 | Teletubisie | THE UNIT | YES Teletubisie | 9 | 0.88 | 0.87 | 0.87 | open | - |
 | 2026-10-11 09:21 | model-only | cs2 | THE UNIT | Teletubisie | NO Teletubisie | 102 | 0.14 | 0.25 | 0.13 | open | - |
 | 2026-10-11 09:21 | favourite | esoccergame | RB Leipzig (Kylian) | Freiburg (Kevin) | YES RB Leipzig (Kylian) | 15 | 0.55 | 0.59 | 0.59 | lost | -$8.51 |
@@ -61,7 +61,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-11 07:51 | model-only | valorant | T1 | G2 Esports | NO G2 Esports | 38 | 0.39 | 0.47 | 0.39 | open | - |
 | 2026-10-11 06:51 | model-only | cs2 | Elite Klan | Vitality Academy | YES Elite Klan | 73 | 0.20 | 0.35 | 0.19 | open | - |
 | 2026-10-11 06:51 | favourite | lol | West Point Esports PH | Nothin'Here | NO Nothin'Here | 14 | 0.58 | 0.56 | 0.56 | open | - |
-| 2026-10-11 06:51 | favourite | cs2 | STATE | WRAITH PCIFIC | YES STATE | 12 | 0.66 | 0.64 | 0.64 | open | - |
+| 2026-10-11 06:51 | favourite | cs2 | STATE | WRAITH PCIFIC | YES STATE | 12 | 0.66 | 0.64 | 0.64 | lost | -$8.11 |
 | 2026-10-11 06:51 | favourite | cs2 | ILLYRIANS | MORROW | YES ILLYRIANS | 12 | 0.63 | 0.60 | 0.60 | won | $4.24 |
 | 2026-10-11 06:51 | favourite | cs2 | Just_Players | Misa Esports | YES Just_Players | 12 | 0.70 | 0.69 | 0.69 | won | $3.42 |
 | 2026-10-11 06:51 | model-only | cs2 | Misa Esports | Just_Players | YES Misa Esports | 19 | 0.32 | 0.51 | 0.31 | lost | -$6.37 |
