@@ -1,34 +1,76 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/events/KXEBASKETBALLGAME-26OCT090440MICKJASO/candlesticks?start_ts=1791533400&end_ts=1791535260&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT090452SHAQHOLI/candlesticks?start_ts=1791534120&end_ts=1791535980&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791535260,
+  "adjusted_end_ts": 1791535980,
   "market_candlesticks": [
-   [],
    [
     {
-     "end_period_ts": 1791534600,
+     "end_period_ts": 1791535980,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9900",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.9700",
-      "open_dollars": "0.9700"
+      "close_dollars": "0.1800",
+      "high_dollars": "0.4800",
+      "low_dollars": "0.1700",
+      "open_dollars": "0.1700"
      },
      "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.0000",
+      "close_dollars": "0.1100",
+      "high_dollars": "0.1100",
       "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
+      "open_dollars": "0.1000"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791535980,
+     "open_interest_fp": "2.00",
+     "price": {
+      "previous_dollars": "0.7900"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.7700",
+      "high_dollars": "0.8500",
+      "low_dollars": "0.7700",
+      "open_dollars": "0.7900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.7000",
+      "high_dollars": "0.7100",
+      "low_dollars": "0.5200",
+      "open_dollars": "0.7100"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791535980,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1600",
+      "high_dollars": "0.4800",
+      "low_dollars": "0.1500",
+      "open_dollars": "0.1500"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0900",
+      "high_dollars": "0.0900",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0800"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXEBASKETBALLGAME-26OCT090440MICKJASO-MICK",
-   "KXEBASKETBALLGAME-26OCT090440MICKJASO-JASO"
+   "KXESOCCERGAME-26OCT090452SHAQHOLI-SHAQ",
+   "KXESOCCERGAME-26OCT090452SHAQHOLI-HOLI",
+   "KXESOCCERGAME-26OCT090452SHAQHOLI-TIE"
   ]
  }
 }
