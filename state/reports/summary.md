@@ -1,32 +1,32 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-11 16:43 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-11 16:53 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 125 | 12 | 113 | 31 | -$121.23 | -8.5% | -0.7c (121) | $878.77 |
+| model-only | Elo win model alone (control: ignores the market) | 125 | 11 | 114 | 31 | -$123.14 | -8.6% | -0.8c (122) | $876.86 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 11 | 199 | 128 | -$186.35 | -12.4% | -2.0c (209) | $813.65 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1844 finished matches. Lower is better; the market line is the bar to beat.
+1848 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6643 | 0.2369 |
-| model | 0.6728 | 0.2401 |
-| blend | 0.6663 | 0.2379 |
+| market | 0.6638 | 0.2367 |
+| model | 0.6723 | 0.2399 |
+| blend | 0.6657 | 0.2377 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 1143 | 0.6911 | 0.6748 |
-| cs2 | 293 | 0.5952 | 0.6691 |
-| ebasketballgame | 262 | 0.6846 | 0.6765 |
+| esoccergame | 1144 | 0.6910 | 0.6746 |
+| cs2 | 295 | 0.5926 | 0.6676 |
+| ebasketballgame | 263 | 0.6845 | 0.6754 |
 | lol | 37 | 0.5009 | 0.6991 |
 | dota2 | 34 | 0.5809 | 0.6527 |
 | ow | 23 | 0.4259 | 0.5014 |
@@ -44,7 +44,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-11 14:52 | model-only | r6 | Fluxo W7M | Team Liquid | YES Fluxo W7M | 45 | 0.36 | 0.44 | 0.35 | open | - |
 | 2026-10-11 13:52 | model-only | cs2 | MOUZ | Vitality | YES MOUZ | 42 | 0.35 | 0.44 | 0.34 | open | - |
 | 2026-10-11 12:52 | model-only | cs2 | aimclub | ARGOS | YES aimclub | 30 | 0.47 | 0.54 | 0.47 | won | $15.37 |
-| 2026-10-11 12:52 | model-only | cs2 | Spirit Academy Black | Metizport | NO Metizport | 9 | 0.20 | 0.36 | 0.18 | open | - |
+| 2026-10-11 12:52 | model-only | cs2 | Spirit Academy Black | Metizport | NO Metizport | 9 | 0.20 | 0.36 | 0.18 | lost | -$1.91 |
 | 2026-10-11 12:52 | model-only | cs2 | Spirit Academy | 9INE | YES Spirit Academy | 34 | 0.41 | 0.65 | 0.41 | won | $19.48 |
 | 2026-10-11 12:52 | model-only | cs2 | mellren | Bebop | YES mellren | 23 | 0.62 | 0.71 | 0.61 | won | $8.36 |
 | 2026-10-11 12:52 | model-only | cs2 | MASONIC | Aurora Young Blood | NO Aurora Young Blood | 33 | 0.43 | 0.55 | 0.42 | lost | -$14.76 |
