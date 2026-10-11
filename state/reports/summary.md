@@ -1,30 +1,30 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-11 13:37 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-11 13:42 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 122 | 17 | 105 | 26 | -$247.23 | -18.7% | -0.6c (114) | $752.77 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 15 | 195 | 127 | -$173.80 | -11.8% | -2.0c (209) | $826.20 |
+| model-only | Elo win model alone (control: ignores the market) | 122 | 16 | 106 | 27 | -$215.51 | -16.1% | -0.6c (114) | $784.49 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 13 | 197 | 127 | -$183.08 | -12.3% | -2.0c (209) | $816.92 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1761 finished matches. Lower is better; the market line is the bar to beat.
+1765 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6621 | 0.2360 |
-| model | 0.6751 | 0.2411 |
-| blend | 0.6637 | 0.2368 |
+| market | 0.6622 | 0.2361 |
+| model | 0.6749 | 0.2411 |
+| blend | 0.6638 | 0.2369 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 1087 | 0.6908 | 0.6780 |
+| esoccergame | 1091 | 0.6908 | 0.6777 |
 | cs2 | 284 | 0.5854 | 0.6674 |
 | ebasketballgame | 251 | 0.6846 | 0.6818 |
 | lol | 37 | 0.5009 | 0.6991 |
@@ -46,7 +46,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-11 12:52 | model-only | cs2 | MASONIC | Aurora Young Blood | NO Aurora Young Blood | 33 | 0.43 | 0.55 | 0.42 | open | - |
 | 2026-10-11 12:52 | model-only | cs2 | aimclub | ARGOS | YES aimclub | 30 | 0.47 | 0.54 | 0.47 | open | - |
 | 2026-10-11 11:52 | model-only | cs2 | The KnockoutX | Alter Ego | YES The KnockoutX | 22 | 0.24 | 0.40 | 0.23 | open | - |
-| 2026-10-11 10:22 | favourite | cs2 | Spirit | Aurora Gaming | NO Aurora Gaming | 1 | 0.68 | 0.68 | 0.68 | open | - |
+| 2026-10-11 10:22 | favourite | cs2 | Spirit | Aurora Gaming | NO Aurora Gaming | 1 | 0.68 | 0.68 | 0.68 | lost | -$0.70 |
 | 2026-10-11 09:52 | model-only | cs2 | Fire Flux Esports | Gothic | NO Gothic | 27 | 0.53 | 0.60 | 0.52 | won | $12.21 |
 | 2026-10-11 09:47 | favourite | esoccergame | RB Leipzig (Kylian) | Mönchengladbach (Bradley) | YES RB Leipzig (Kylian) | 2 | 0.63 | 0.66 | 0.66 | won | $0.70 |
 | 2026-10-11 09:21 | favourite | cs2 | Teletubisie | THE UNIT | YES Teletubisie | 9 | 0.88 | 0.87 | 0.87 | open | - |
@@ -58,8 +58,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-11 08:51 | favourite | mlbb | ONIC | RRQ Hoshi | YES ONIC | 10 | 0.84 | 0.65 | 0.65 | won | $1.50 |
 | 2026-10-11 07:51 | favourite | lol | Saigon Warriors | MVK Academy | NO MVK Academy | 10 | 0.80 | 0.79 | 0.79 | lost | -$8.12 |
 | 2026-10-11 07:51 | favourite | cs2 | Rooster | Orgless | NO Orgless | 11 | 0.77 | 0.62 | 0.62 | open | - |
-| 2026-10-11 07:51 | model-only | dota2 | Team Spirit | PARIVISION | NO PARIVISION | 47 | 0.31 | 0.44 | 0.31 | open | - |
-| 2026-10-11 07:51 | favourite | dota2 | PARIVISION | Team Spirit | YES PARIVISION | 12 | 0.70 | 0.69 | 0.69 | open | - |
+| 2026-10-11 07:51 | model-only | dota2 | Team Spirit | PARIVISION | NO PARIVISION | 47 | 0.31 | 0.44 | 0.31 | won | $31.72 |
+| 2026-10-11 07:51 | favourite | dota2 | PARIVISION | Team Spirit | YES PARIVISION | 12 | 0.70 | 0.69 | 0.69 | lost | -$8.58 |
 | 2026-10-11 07:51 | favourite | mlbb | Invictus Gaming | AC Esports | YES Invictus Gaming | 10 | 0.84 | 0.63 | 0.63 | lost | -$8.50 |
 | 2026-10-11 07:51 | model-only | valorant | T1 | G2 Esports | NO G2 Esports | 38 | 0.39 | 0.47 | 0.39 | open | - |
 | 2026-10-11 07:51 | favourite | valorant | G2 Esports | T1 | YES G2 Esports | 13 | 0.62 | 0.61 | 0.61 | open | - |
