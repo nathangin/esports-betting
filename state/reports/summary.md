@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-11 01:50 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-11 02:00 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,23 +8,23 @@ Updated 2026-10-11 01:50 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
 | model-only | Elo win model alone (control: ignores the market) | 108 | 7 | 101 | 25 | -$222.90 | -17.6% | -0.5c (102) | $777.10 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 189 | 18 | 171 | 113 | -$145.63 | -11.3% | -1.4c (183) | $854.37 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 189 | 17 | 172 | 114 | -$141.04 | -10.8% | -1.4c (184) | $858.96 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-1491 finished matches. Lower is better; the market line is the bar to beat.
+1494 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6600 | 0.2351 |
-| model | 0.6754 | 0.2411 |
-| blend | 0.6616 | 0.2359 |
+| market | 0.6598 | 0.2350 |
+| model | 0.6755 | 0.2412 |
+| blend | 0.6614 | 0.2358 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 890 | 0.6927 | 0.6790 |
+| esoccergame | 893 | 0.6923 | 0.6792 |
 | cs2 | 273 | 0.5838 | 0.6664 |
 | ebasketballgame | 205 | 0.6854 | 0.6821 |
 | lol | 35 | 0.4622 | 0.7005 |
@@ -48,7 +48,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-11 00:55 | favourite | esoccergame | FSV Mainz 05 (Eder) | Dortmund (Niskanen15) | YES FSV Mainz 05 (Eder) | 14 | 0.56 | 0.61 | 0.61 | open | - |
 | 2026-10-11 00:50 | favourite | esoccergame | Leverkusen (Hurricane) | 1. FC Köln (Frenkie) | YES Leverkusen (Hurricane) | 12 | 0.66 | 0.69 | 0.69 | open | - |
 | 2026-10-11 00:40 | favourite | esoccergame | Botafogo (Hurricane) | Universitario (Danny) | YES Botafogo (Hurricane) | 13 | 0.61 | 0.65 | 0.65 | open | - |
-| 2026-10-11 00:35 | favourite | esoccergame | São Paulo (Niskanen15) | Estudiantes (Frenkie) | YES São Paulo (Niskanen15) | 13 | 0.63 | 0.67 | 0.67 | open | - |
+| 2026-10-11 00:35 | favourite | esoccergame | São Paulo (Niskanen15) | Estudiantes (Frenkie) | YES São Paulo (Niskanen15) | 13 | 0.63 | 0.67 | 0.67 | won | $4.59 |
 | 2026-10-10 22:24 | model-only | cs2 | Abyssal | Ground Zero | YES Abyssal | 1 | 0.37 | 0.43 | 0.36 | lost | -$0.39 |
 | 2026-10-10 19:09 | model-only | cs2 | Wildcard | NRG | NO NRG | 4 | 0.41 | 0.58 | 0.38 | won | $2.29 |
 | 2026-10-10 15:53 | favourite | cs2 | Spirit | MOUZ | NO MOUZ | 1 | 0.59 | 0.58 | 0.58 | lost | -$0.61 |
