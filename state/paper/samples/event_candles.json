@@ -1,17 +1,17 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT090520HOLIEDER/candlesticks?start_ts=1791535800&end_ts=1791537660&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT090522MANTNINJ/candlesticks?start_ts=1791535920&end_ts=1791537780&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791537660,
+  "adjusted_end_ts": 1791537780,
   "market_candlesticks": [
    [],
    [],
    []
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT090520HOLIEDER-HOLI",
-   "KXESOCCERGAME-26OCT090520HOLIEDER-EDER",
-   "KXESOCCERGAME-26OCT090520HOLIEDER-TIE"
+   "KXESOCCERGAME-26OCT090522MANTNINJ-MANT",
+   "KXESOCCERGAME-26OCT090522MANTNINJ-NINJ",
+   "KXESOCCERGAME-26OCT090522MANTNINJ-TIE"
   ]
  }
 }
