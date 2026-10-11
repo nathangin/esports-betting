@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-11 11:07 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-11 11:12 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-11 11:07 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
 | model-only | Elo win model alone (control: ignores the market) | 116 | 13 | 103 | 25 | -$244.39 | -19.0% | -0.5c (113) | $755.61 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 20 | 190 | 125 | -$151.41 | -10.5% | -2.0c (208) | $848.59 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 19 | 191 | 126 | -$150.71 | -10.4% | -2.0c (208) | $849.29 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -42,7 +42,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-10-11 10:22 | favourite | cs2 | Spirit | Aurora Gaming | NO Aurora Gaming | 1 | 0.68 | 0.68 | 0.68 | open | - |
 | 2026-10-11 09:52 | model-only | cs2 | Fire Flux Esports | Gothic | NO Gothic | 27 | 0.53 | 0.60 | 0.52 | open | - |
-| 2026-10-11 09:47 | favourite | esoccergame | RB Leipzig (Kylian) | Mönchengladbach (Bradley) | YES RB Leipzig (Kylian) | 2 | 0.63 | 0.66 | 0.66 | open | - |
+| 2026-10-11 09:47 | favourite | esoccergame | RB Leipzig (Kylian) | Mönchengladbach (Bradley) | YES RB Leipzig (Kylian) | 2 | 0.63 | 0.66 | 0.66 | won | $0.70 |
 | 2026-10-11 09:21 | favourite | esoccergame | Mönchengladbach (Bradley) | Stuttgart (Frost) | YES Mönchengladbach (Bradley) | 8 | 0.52 | 0.56 | 0.56 | lost | -$4.30 |
 | 2026-10-11 09:21 | model-only | cs2 | TheChampionGG | VP.Future 3 | YES TheChampionGG | 37 | 0.39 | 0.45 | 0.39 | open | - |
 | 2026-10-11 09:21 | favourite | cs2 | Teletubisie | THE UNIT | YES Teletubisie | 9 | 0.88 | 0.87 | 0.87 | open | - |
