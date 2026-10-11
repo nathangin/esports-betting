@@ -1,17 +1,154 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT090618NISKFEDE/candlesticks?start_ts=1791539280&end_ts=1791541140&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT090626ROSEADRI/candlesticks?start_ts=1791539760&end_ts=1791541620&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791541140,
+  "adjusted_end_ts": 1791541620,
   "market_candlesticks": [
-   [],
-   [],
-   []
+   [
+    {
+     "end_period_ts": 1791539940,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.5000",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.5000",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.4300",
+      "high_dollars": "0.4300",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791541620,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.5000",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.5000",
+      "open_dollars": "0.5000"
+     },
+     "yes_bid": {
+      "close_dollars": "0.4200",
+      "high_dollars": "0.4300",
+      "low_dollars": "0.0700",
+      "open_dollars": "0.4300"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791539940,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4000",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.4000",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3300",
+      "high_dollars": "0.3300",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791540120,
+     "open_interest_fp": "2.00",
+     "price": {
+      "close_dollars": "0.3300",
+      "high_dollars": "0.3300",
+      "low_dollars": "0.3300",
+      "mean_dollars": "0.3300",
+      "open_dollars": "0.3300"
+     },
+     "volume_fp": "2.00",
+     "yes_ask": {
+      "close_dollars": "0.4000",
+      "high_dollars": "0.4000",
+      "low_dollars": "0.4000",
+      "open_dollars": "0.4000"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3300",
+      "high_dollars": "0.3300",
+      "low_dollars": "0.3300",
+      "open_dollars": "0.3300"
+     }
+    },
+    {
+     "end_period_ts": 1791541620,
+     "open_interest_fp": "2.00",
+     "price": {
+      "previous_dollars": "0.3300"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4000",
+      "high_dollars": "0.9400",
+      "low_dollars": "0.4000",
+      "open_dollars": "0.4000"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3300",
+      "high_dollars": "0.3300",
+      "low_dollars": "0.1500",
+      "open_dollars": "0.3300"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791539940,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.2100",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.2100",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1400",
+      "high_dollars": "0.1400",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791541620,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.2100",
+      "high_dollars": "0.4800",
+      "low_dollars": "0.2100",
+      "open_dollars": "0.2100"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1400",
+      "high_dollars": "0.1400",
+      "low_dollars": "0.0800",
+      "open_dollars": "0.1400"
+     }
+    }
+   ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT090618NISKFEDE-NISK",
-   "KXESOCCERGAME-26OCT090618NISKFEDE-FEDE",
-   "KXESOCCERGAME-26OCT090618NISKFEDE-TIE"
+   "KXESOCCERGAME-26OCT090626ROSEADRI-ROSE",
+   "KXESOCCERGAME-26OCT090626ROSEADRI-ADRI",
+   "KXESOCCERGAME-26OCT090626ROSEADRI-TIE"
   ]
  }
 }
