@@ -1,8 +1,8 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/markets/KXEBASKETBALLGAME-26OCT090152MICKJASO-JASO/candlesticks?start_ts=1791523320&end_ts=1791525180&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/markets/KXEBASKETBALLGAME-26OCT090440STEVRAY-RAY/candlesticks?start_ts=1791533400&end_ts=1791535260&period_interval=1",
  "status": 200,
  "body": {
   "candlesticks": [],
-  "ticker": "KXEBASKETBALLGAME-26OCT090152MICKJASO-JASO"
+  "ticker": "KXEBASKETBALLGAME-26OCT090440STEVRAY-RAY"
  }
 }
