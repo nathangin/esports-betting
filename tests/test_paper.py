@@ -187,9 +187,11 @@ def test_games_outside_the_trial_are_left_out_and_their_bets_voided(tmp_path, mo
     assert set(v["status"]) == {"void"} and set(v["result"]) == {paper.VOID_NOTE} and (v["pnl"] == 0).all()
     assert paper.void_out_of_scope(st, NOW) == 0                      # idempotent
     st.save()
+    # a closing line for the match both the real blend bet and the voided copy are on
+    pd.DataFrame([{"event_ticker": EV, "q_close": 0.5}]).to_csv(tmp_path / "paper" / "closes.csv", index=False)
     books = report.book_stats(paper.State(tmp_path))
     assert books["favourite"]["bets"] == 1 and books["favourite"]["void"] == 1
-    assert books["blend"]["clv_n"] == books["blend"]["bets"]          # voided bets add no CLV either
+    assert books["blend"]["bets"] == 1 and books["blend"]["clv_n"] == 1     # voided bets add no CLV either
 
 
 def test_favourite_baseline_skips_empty_order_books():
