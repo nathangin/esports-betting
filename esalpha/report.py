@@ -53,14 +53,15 @@ def book_stats(state: State) -> dict:
         led["clv"] = np.nan
     out = {}
     for b in BOOKS:
-        lb = led[led["book"] == b]
+        lb = led[(led["book"] == b) & (led["status"] != "void")]      # voided bets count nowhere
         done = lb[lb["status"].isin(["won", "lost"])]
         outlay = float((done["cost"].astype(float) + done["fee"].astype(float)).sum()) if len(done) else 0.0
         pnl = float(done["pnl"].astype(float).sum()) if len(done) else 0.0
         out[b] = {"start": state.account[b]["start"], "equity": round(state.equity(b), 2),
-                  "cash": round(state.account[b]["cash"], 2), "bets": int((lb["status"] != "void").sum()),
+                  "cash": round(state.account[b]["cash"], 2), "bets": int(len(lb)),
                   "open": int((lb["status"] == "open").sum()), "settled": int(len(done)),
-                  "won": int((done["status"] == "won").sum()), "void": int((lb["status"] == "void").sum()),
+                  "won": int((done["status"] == "won").sum()),
+                  "void": int(((led["book"] == b) & (led["status"] == "void")).sum()),
                   "pnl": round(pnl, 2), "outlay": round(outlay, 2), "roi": pnl / outlay if outlay else None,
                   "fees": round(float(lb["fee"].astype(float).sum()), 2) if len(lb) else 0.0,
                   "avg_clv": float(lb["clv"].mean()) if len(lb) and lb["clv"].notna().any() else None,
