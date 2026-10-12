@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-12 06:50 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-12 06:55 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 11 | 4 | 7 | 5 | $31.17 | +25.8% | -7.3c (7) | $1,031.17 |
-| model-only | Elo win model alone (control: ignores the market) | 133 | 12 | 121 | 33 | -$144.18 | -9.5% | -1.0c (128) | $855.82 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 239 | 19 | 220 | 141 | -$172.66 | -10.4% | -1.9c (234) | $827.34 |
+| model-only | Elo win model alone (control: ignores the market) | 134 | 13 | 121 | 33 | -$144.18 | -9.5% | -1.0c (128) | $855.82 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 240 | 20 | 220 | 141 | -$172.66 | -10.4% | -1.9c (234) | $827.34 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -40,14 +40,16 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-12 06:54 | model-only | cs2 | STATE | THE UNIT | YES STATE | 22 | 0.47 | 0.65 | 0.45 | open | - |
+| 2026-10-12 06:54 | favourite | cs2 | Bread Eaters Esports | Passion Academy | YES Bread Eaters Esports | 2 | 0.59 | 0.57 | 0.57 | open | - |
 | 2026-10-12 06:34 | favourite | ebasketballgame | Golden State Warriors (Jake) | Brooklyn Nets (Barry) | YES Golden State Warriors (Jake) | 1 | 0.15 | 0.55 | 0.55 | open | - |
 | 2026-10-12 06:34 | model-only | ebasketballgame | Golden State Warriors (Jake) | Brooklyn Nets (Barry) | YES Golden State Warriors (Jake) | 19 | 0.15 | 0.46 | 0.55 | open | - |
 | 2026-10-12 06:34 | blend | ebasketballgame | Golden State Warriors (Jake) | Brooklyn Nets (Barry) | YES Golden State Warriors (Jake) | 19 | 0.15 | 0.56 | 0.55 | open | - |
 | 2026-10-12 06:34 | favourite | ebasketballgame | New York Knicks (Shaq) | Los Angeles Lakers (Clyde) | YES New York Knicks (Shaq) | 7 | 0.48 | 0.71 | 0.71 | open | - |
 | 2026-10-12 06:34 | blend | ebasketballgame | New York Knicks (Shaq) | Los Angeles Lakers (Clyde) | YES New York Knicks (Shaq) | 31 | 0.48 | 0.74 | 0.71 | open | - |
 | 2026-10-12 06:09 | favourite | ebasketballgame | New York Knicks (IceKimi) | Los Angeles Lakers (Clyde) | YES New York Knicks (IceKimi) | 22 | 0.35 | 0.65 | 0.65 | open | - |
-| 2026-10-12 06:09 | model-only | ebasketballgame | New York Knicks (IceKimi) | Los Angeles Lakers (Clyde) | YES New York Knicks (IceKimi) | 26 | 0.35 | 0.44 | 0.65 | open | - |
 | 2026-10-12 06:09 | blend | ebasketballgame | New York Knicks (IceKimi) | Los Angeles Lakers (Clyde) | YES New York Knicks (IceKimi) | 26 | 0.35 | 0.67 | 0.65 | open | - |
+| 2026-10-12 06:09 | model-only | ebasketballgame | New York Knicks (IceKimi) | Los Angeles Lakers (Clyde) | YES New York Knicks (IceKimi) | 26 | 0.35 | 0.44 | 0.65 | open | - |
 | 2026-10-12 06:09 | blend | ebasketballgame | Brooklyn Nets (Tatum) | Golden State Warriors (Jake) | YES Brooklyn Nets (Tatum) | 23 | 0.84 | 0.91 | 0.89 | open | - |
 | 2026-10-12 06:09 | favourite | ebasketballgame | Brooklyn Nets (Tatum) | Golden State Warriors (Jake) | YES Brooklyn Nets (Tatum) | 1 | 0.84 | 0.89 | 0.89 | open | - |
 | 2026-10-12 05:54 | favourite | dota2 | Yellow Submarine | Nemiga Gaming | NO Nemiga Gaming | 9 | 0.86 | 0.85 | 0.85 | open | - |
@@ -58,13 +60,11 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-12 05:14 | favourite | ebasketballgame | Indiana Pacers (Clyde) | New Orleans Pelicans (Shaq) | YES Indiana Pacers (Clyde) | 13 | 0.56 | 0.52 | 0.52 | won | $5.49 |
 | 2026-10-12 04:54 | favourite | lol | BNK FEARX | JD Gaming | YES BNK FEARX | 11 | 0.68 | 0.68 | 0.68 | open | - |
 | 2026-10-12 04:54 | model-only | lol | JD Gaming | BNK FEARX | NO BNK FEARX | 48 | 0.33 | 0.50 | 0.32 | open | - |
-| 2026-10-12 04:44 | favourite | ebasketballgame | New Orleans Pelicans (IceKimi) | Indiana Pacers (Clyde) | YES New Orleans Pelicans (IceKimi) | 19 | 0.39 | 0.67 | 0.67 | won | $11.27 |
 | 2026-10-12 04:44 | model-only | ebasketballgame | New Orleans Pelicans (IceKimi) | Indiana Pacers (Clyde) | YES New Orleans Pelicans (IceKimi) | 29 | 0.39 | 0.47 | 0.67 | won | $17.20 |
 | 2026-10-12 04:44 | blend | ebasketballgame | New Orleans Pelicans (IceKimi) | Indiana Pacers (Clyde) | YES New Orleans Pelicans (IceKimi) | 29 | 0.39 | 0.69 | 0.67 | won | $17.20 |
-| 2026-10-12 04:44 | blend | ebasketballgame | Denver Nuggets (Tatum) | Dallas Mavericks (Jake) | YES Denver Nuggets (Tatum) | 22 | 0.85 | 0.92 | 0.90 | won | $3.10 |
+| 2026-10-12 04:44 | favourite | ebasketballgame | New Orleans Pelicans (IceKimi) | Indiana Pacers (Clyde) | YES New Orleans Pelicans (IceKimi) | 19 | 0.39 | 0.67 | 0.67 | won | $11.27 |
 | 2026-10-12 04:44 | favourite | ebasketballgame | Denver Nuggets (Tatum) | Dallas Mavericks (Jake) | YES Denver Nuggets (Tatum) | 9 | 0.85 | 0.90 | 0.90 | won | $1.26 |
-| 2026-10-12 03:44 | favourite | ebasketballgame | Denver Nuggets (Walt) | Dallas Mavericks (Miles) | YES Denver Nuggets (Walt) | 9 | 0.79 | 0.86 | 0.86 | lost | -$7.22 |
-| 2026-10-12 03:44 | blend | ebasketballgame | Denver Nuggets (Walt) | Dallas Mavericks (Miles) | YES Denver Nuggets (Walt) | 24 | 0.79 | 0.89 | 0.86 | lost | -$19.24 |
+| 2026-10-12 04:44 | blend | ebasketballgame | Denver Nuggets (Tatum) | Dallas Mavericks (Jake) | YES Denver Nuggets (Tatum) | 22 | 0.85 | 0.92 | 0.90 | won | $3.10 |
 
 ## Backtest on real Kalshi prices
 
