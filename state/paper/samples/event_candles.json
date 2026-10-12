@@ -1,74 +1,128 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT101128BONYSHEE/candlesticks?start_ts=1791644280&end_ts=1791646140&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT101141EMILROSE/candlesticks?start_ts=1791645060&end_ts=1791646920&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791646140,
+  "adjusted_end_ts": 1791646920,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791646140,
+     "end_period_ts": 1791645300,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.8900",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.7800",
-      "open_dollars": "0.7800"
+      "close_dollars": "0.1800",
+      "high_dollars": "0.8900",
+      "low_dollars": "0.1800",
+      "open_dollars": "0.8900"
      },
      "yes_bid": {
-      "close_dollars": "0.8100",
-      "high_dollars": "0.8100",
+      "close_dollars": "0.1100",
+      "high_dollars": "0.1100",
       "low_dollars": "0.0000",
-      "open_dollars": "0.7100"
+      "open_dollars": "0.0000"
      }
-    }
-   ],
-   [
+    },
     {
-     "end_period_ts": 1791646140,
+     "end_period_ts": 1791646920,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.1100",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.1100",
+      "close_dollars": "0.1800",
+      "high_dollars": "0.8900",
+      "low_dollars": "0.1800",
       "open_dollars": "0.1800"
      },
      "yes_bid": {
-      "close_dollars": "0.0400",
+      "close_dollars": "0.1100",
       "high_dollars": "0.1100",
-      "low_dollars": "0.0100",
+      "low_dollars": "0.0000",
       "open_dollars": "0.1100"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791646140,
+     "end_period_ts": 1791645300,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.1100",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.1100",
-      "open_dollars": "0.1500"
+      "close_dollars": "0.7500",
+      "high_dollars": "0.9700",
+      "low_dollars": "0.7500",
+      "open_dollars": "0.9700"
      },
      "yes_bid": {
-      "close_dollars": "0.0400",
-      "high_dollars": "0.0800",
+      "close_dollars": "0.6800",
+      "high_dollars": "0.6800",
       "low_dollars": "0.0000",
-      "open_dollars": "0.0800"
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791646920,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.7400",
+      "high_dollars": "0.9700",
+      "low_dollars": "0.7400",
+      "open_dollars": "0.7500"
+     },
+     "yes_bid": {
+      "close_dollars": "0.6700",
+      "high_dollars": "0.6800",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.6800"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791645300,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1800",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1800",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1100",
+      "high_dollars": "0.1100",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791646920,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1900",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1800",
+      "open_dollars": "0.1800"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1200",
+      "high_dollars": "0.1200",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.1100"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT101128BONYSHEE-BONY",
-   "KXESOCCERGAME-26OCT101128BONYSHEE-SHEE",
-   "KXESOCCERGAME-26OCT101128BONYSHEE-TIE"
+   "KXESOCCERGAME-26OCT101141EMILROSE-EMIL",
+   "KXESOCCERGAME-26OCT101141EMILROSE-ROSE",
+   "KXESOCCERGAME-26OCT101141EMILROSE-TIE"
   ]
  }
 }
