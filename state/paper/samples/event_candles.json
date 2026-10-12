@@ -1,53 +1,128 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/events/KXEBASKETBALLGAME-26OCT100822RAYDURA/candlesticks?start_ts=1791633120&end_ts=1791634980&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT100834HAZABRAD/candlesticks?start_ts=1791633840&end_ts=1791635700&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791634980,
+  "adjusted_end_ts": 1791635700,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791634980,
+     "end_period_ts": 1791635640,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.3000",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.2700",
-      "open_dollars": "0.3400"
+      "close_dollars": "0.9700",
+      "high_dollars": "0.9700",
+      "low_dollars": "0.5700",
+      "open_dollars": "0.5700"
      },
      "yes_bid": {
-      "close_dollars": "0.2300",
-      "high_dollars": "0.2700",
+      "close_dollars": "0.0000",
+      "high_dollars": "0.5000",
       "low_dollars": "0.0000",
-      "open_dollars": "0.2700"
+      "open_dollars": "0.5000"
+     }
+    },
+    {
+     "end_period_ts": 1791635700,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.5700",
+      "high_dollars": "0.9700",
+      "low_dollars": "0.5700",
+      "open_dollars": "0.9700"
+     },
+     "yes_bid": {
+      "close_dollars": "0.5000",
+      "high_dollars": "0.5000",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791634980,
+     "end_period_ts": 1791635640,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.7700",
+      "close_dollars": "0.9900",
       "high_dollars": "0.9900",
-      "low_dollars": "0.7300",
-      "open_dollars": "0.7300"
+      "low_dollars": "0.3600",
+      "open_dollars": "0.3600"
      },
      "yes_bid": {
-      "close_dollars": "0.7000",
-      "high_dollars": "0.7300",
-      "low_dollars": "0.0100",
-      "open_dollars": "0.6600"
+      "close_dollars": "0.0000",
+      "high_dollars": "0.2900",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.2900"
+     }
+    },
+    {
+     "end_period_ts": 1791635700,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.3600",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.3600",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.2900",
+      "high_dollars": "0.2900",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791635640,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.9900",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1800",
+      "open_dollars": "0.1800"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0000",
+      "high_dollars": "0.1000",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.1000"
+     }
+    },
+    {
+     "end_period_ts": 1791635700,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1800",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1800",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1100",
+      "high_dollars": "0.1100",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXEBASKETBALLGAME-26OCT100822RAYDURA-RAY",
-   "KXEBASKETBALLGAME-26OCT100822RAYDURA-DURA"
+   "KXESOCCERGAME-26OCT100834HAZABRAD-HAZA",
+   "KXESOCCERGAME-26OCT100834HAZABRAD-BRAD",
+   "KXESOCCERGAME-26OCT100834HAZABRAD-TIE"
   ]
  }
 }
