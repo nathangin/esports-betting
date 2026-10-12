@@ -1,74 +1,58 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT101654OLIVLEYL/candlesticks?start_ts=1791663840&end_ts=1791665700&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT101707OLIVFLOR/candlesticks?start_ts=1791664620&end_ts=1791666480&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791665700,
+  "adjusted_end_ts": 1791666480,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791663900,
+     "end_period_ts": 1791666480,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.6700",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.6700",
-      "open_dollars": "0.9900"
-     },
-     "yes_bid": {
-      "close_dollars": "0.6000",
-      "high_dollars": "0.6000",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
-     }
-    },
-    {
-     "end_period_ts": 1791665700,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.6500",
+      "close_dollars": "0.3500",
       "high_dollars": "0.9500",
-      "low_dollars": "0.6500",
-      "open_dollars": "0.6700"
+      "low_dollars": "0.3500",
+      "open_dollars": "0.3500"
      },
      "yes_bid": {
-      "close_dollars": "0.5800",
-      "high_dollars": "0.6000",
+      "close_dollars": "0.2800",
+      "high_dollars": "0.2800",
       "low_dollars": "0.0000",
-      "open_dollars": "0.6000"
+      "open_dollars": "0.2800"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791663900,
+     "end_period_ts": 1791666480,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.5400",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.5400",
+      "open_dollars": "0.5400"
+     },
+     "yes_bid": {
+      "close_dollars": "0.4700",
+      "high_dollars": "0.4700",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.4700"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791666480,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
       "close_dollars": "0.2100",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.2100",
-      "open_dollars": "0.9900"
-     },
-     "yes_bid": {
-      "close_dollars": "0.1400",
-      "high_dollars": "0.1400",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
-     }
-    },
-    {
-     "end_period_ts": 1791665700,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.2200",
-      "high_dollars": "0.9500",
+      "high_dollars": "0.9800",
       "low_dollars": "0.2100",
       "open_dollars": "0.2100"
      },
@@ -79,50 +63,12 @@
       "open_dollars": "0.1400"
      }
     }
-   ],
-   [
-    {
-     "end_period_ts": 1791663900,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.2200",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.2200",
-      "open_dollars": "0.9900"
-     },
-     "yes_bid": {
-      "close_dollars": "0.1500",
-      "high_dollars": "0.1500",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
-     }
-    },
-    {
-     "end_period_ts": 1791665700,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.2400",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.2200",
-      "open_dollars": "0.2200"
-     },
-     "yes_bid": {
-      "close_dollars": "0.1700",
-      "high_dollars": "0.1700",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.1500"
-     }
-    }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT101654OLIVLEYL-OLIV",
-   "KXESOCCERGAME-26OCT101654OLIVLEYL-LEYL",
-   "KXESOCCERGAME-26OCT101654OLIVLEYL-TIE"
+   "KXESOCCERGAME-26OCT101707OLIVFLOR-OLIV",
+   "KXESOCCERGAME-26OCT101707OLIVFLOR-FLOR",
+   "KXESOCCERGAME-26OCT101707OLIVFLOR-TIE"
   ]
  }
 }
