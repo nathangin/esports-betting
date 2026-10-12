@@ -1,31 +1,31 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-12 08:11 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-12 08:16 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| blend | model + market blend (the strategy under test) | 17 | 7 | 10 | 7 | $40.68 | +24.6% | -4.5c (13) | $1,040.68 |
-| model-only | Elo win model alone (control: ignores the market) | 137 | 15 | 122 | 33 | -$153.70 | -10.0% | -0.7c (131) | $846.30 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 241 | 16 | 225 | 145 | -$166.91 | -9.9% | -2.0c (239) | $833.09 |
+| blend | model + market blend (the strategy under test) | 17 | 6 | 11 | 7 | $37.66 | +22.4% | -4.5c (13) | $1,037.66 |
+| model-only | Elo win model alone (control: ignores the market) | 137 | 14 | 123 | 33 | -$156.72 | -10.2% | -0.7c (131) | $843.28 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 241 | 15 | 226 | 145 | -$167.07 | -9.9% | -2.0c (239) | $832.93 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-2170 finished matches. Lower is better; the market line is the bar to beat.
+2175 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6672 | 0.2381 |
-| model | 0.6682 | 0.2378 |
-| blend | 0.6698 | 0.2392 |
+| market | 0.6671 | 0.2380 |
+| model | 0.6681 | 0.2378 |
+| blend | 0.6696 | 0.2392 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 1392 | 0.6910 | 0.6693 |
-| ebasketballgame | 321 | 0.6821 | 0.6656 |
+| esoccergame | 1396 | 0.6910 | 0.6691 |
+| ebasketballgame | 322 | 0.6810 | 0.6660 |
 | cs2 | 303 | 0.5900 | 0.6638 |
 | lol | 38 | 0.5060 | 0.6989 |
 | dota2 | 34 | 0.5809 | 0.6527 |
@@ -52,9 +52,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-12 07:04 | blend | ebasketballgame | New Orleans Pelicans (Tatum) | Indiana Pacers (Barry) | YES New Orleans Pelicans (Tatum) | 33 | 0.60 | 0.79 | 0.77 | open | - |
 | 2026-10-12 06:54 | favourite | cs2 | Bread Eaters Esports | Passion Academy | YES Bread Eaters Esports | 2 | 0.59 | 0.57 | 0.57 | open | - |
 | 2026-10-12 06:54 | model-only | cs2 | STATE | THE UNIT | YES STATE | 22 | 0.47 | 0.65 | 0.45 | open | - |
-| 2026-10-12 06:34 | favourite | ebasketballgame | Golden State Warriors (Jake) | Brooklyn Nets (Barry) | YES Golden State Warriors (Jake) | 1 | 0.15 | 0.55 | 0.55 | open | - |
-| 2026-10-12 06:34 | model-only | ebasketballgame | Golden State Warriors (Jake) | Brooklyn Nets (Barry) | YES Golden State Warriors (Jake) | 19 | 0.15 | 0.46 | 0.55 | open | - |
-| 2026-10-12 06:34 | blend | ebasketballgame | Golden State Warriors (Jake) | Brooklyn Nets (Barry) | YES Golden State Warriors (Jake) | 19 | 0.15 | 0.56 | 0.55 | open | - |
+| 2026-10-12 06:34 | favourite | ebasketballgame | Golden State Warriors (Jake) | Brooklyn Nets (Barry) | YES Golden State Warriors (Jake) | 1 | 0.15 | 0.55 | 0.55 | lost | -$0.16 |
+| 2026-10-12 06:34 | model-only | ebasketballgame | Golden State Warriors (Jake) | Brooklyn Nets (Barry) | YES Golden State Warriors (Jake) | 19 | 0.15 | 0.46 | 0.55 | lost | -$3.02 |
+| 2026-10-12 06:34 | blend | ebasketballgame | Golden State Warriors (Jake) | Brooklyn Nets (Barry) | YES Golden State Warriors (Jake) | 19 | 0.15 | 0.56 | 0.55 | lost | -$3.02 |
 | 2026-10-12 06:34 | favourite | ebasketballgame | New York Knicks (Shaq) | Los Angeles Lakers (Clyde) | YES New York Knicks (Shaq) | 7 | 0.48 | 0.71 | 0.71 | won | $3.51 |
 | 2026-10-12 06:34 | blend | ebasketballgame | New York Knicks (Shaq) | Los Angeles Lakers (Clyde) | YES New York Knicks (Shaq) | 31 | 0.48 | 0.74 | 0.71 | won | $15.57 |
 | 2026-10-12 06:09 | favourite | ebasketballgame | Brooklyn Nets (Tatum) | Golden State Warriors (Jake) | YES Brooklyn Nets (Tatum) | 1 | 0.84 | 0.89 | 0.89 | won | $0.15 |
