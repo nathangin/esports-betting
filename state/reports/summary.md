@@ -1,31 +1,31 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-12 05:15 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-12 05:20 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| blend | model + market blend (the strategy under test) | 7 | 4 | 3 | 2 | $10.52 | +20.4% | -7.6c (5) | $1,010.52 |
+| blend | model + market blend (the strategy under test) | 7 | 2 | 5 | 3 | $10.87 | +12.1% | -7.6c (5) | $1,010.87 |
 | model-only | Elo win model alone (control: ignores the market) | 130 | 10 | 120 | 32 | -$161.38 | -10.7% | -0.9c (125) | $838.62 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 232 | 18 | 214 | 136 | -$192.24 | -11.9% | -1.8c (226) | $807.76 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 232 | 16 | 216 | 137 | -$191.42 | -11.7% | -1.8c (226) | $808.58 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-2113 finished matches. Lower is better; the market line is the bar to beat.
+2115 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6669 | 0.2379 |
+| market | 0.6674 | 0.2381 |
 | model | 0.6683 | 0.2378 |
-| blend | 0.6693 | 0.2391 |
+| blend | 0.6699 | 0.2393 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | esoccergame | 1348 | 0.6909 | 0.6692 |
-| ebasketballgame | 309 | 0.6836 | 0.6669 |
+| ebasketballgame | 311 | 0.6868 | 0.6667 |
 | cs2 | 302 | 0.5901 | 0.6639 |
 | lol | 38 | 0.5060 | 0.6989 |
 | dota2 | 34 | 0.5809 | 0.6527 |
@@ -49,10 +49,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-12 04:44 | favourite | ebasketballgame | New Orleans Pelicans (IceKimi) | Indiana Pacers (Clyde) | YES New Orleans Pelicans (IceKimi) | 19 | 0.39 | 0.67 | 0.67 | open | - |
 | 2026-10-12 04:44 | model-only | ebasketballgame | New Orleans Pelicans (IceKimi) | Indiana Pacers (Clyde) | YES New Orleans Pelicans (IceKimi) | 29 | 0.39 | 0.47 | 0.67 | open | - |
 | 2026-10-12 04:44 | blend | ebasketballgame | New Orleans Pelicans (IceKimi) | Indiana Pacers (Clyde) | YES New Orleans Pelicans (IceKimi) | 29 | 0.39 | 0.69 | 0.67 | open | - |
-| 2026-10-12 03:44 | favourite | ebasketballgame | Indiana Pacers (Lenny) | New Orleans Pelicans (James) | YES Indiana Pacers (Lenny) | 16 | 0.48 | 0.71 | 0.71 | open | - |
-| 2026-10-12 03:44 | blend | ebasketballgame | Indiana Pacers (Lenny) | New Orleans Pelicans (James) | YES Indiana Pacers (Lenny) | 39 | 0.48 | 0.74 | 0.71 | open | - |
-| 2026-10-12 03:44 | blend | ebasketballgame | Denver Nuggets (Walt) | Dallas Mavericks (Miles) | YES Denver Nuggets (Walt) | 24 | 0.79 | 0.89 | 0.86 | open | - |
-| 2026-10-12 03:44 | favourite | ebasketballgame | Denver Nuggets (Walt) | Dallas Mavericks (Miles) | YES Denver Nuggets (Walt) | 9 | 0.79 | 0.86 | 0.86 | open | - |
+| 2026-10-12 03:44 | favourite | ebasketballgame | Indiana Pacers (Lenny) | New Orleans Pelicans (James) | YES Indiana Pacers (Lenny) | 16 | 0.48 | 0.71 | 0.71 | won | $8.04 |
+| 2026-10-12 03:44 | blend | ebasketballgame | Indiana Pacers (Lenny) | New Orleans Pelicans (James) | YES Indiana Pacers (Lenny) | 39 | 0.48 | 0.74 | 0.71 | won | $19.59 |
+| 2026-10-12 03:44 | blend | ebasketballgame | Denver Nuggets (Walt) | Dallas Mavericks (Miles) | YES Denver Nuggets (Walt) | 24 | 0.79 | 0.89 | 0.86 | lost | -$19.24 |
+| 2026-10-12 03:44 | favourite | ebasketballgame | Denver Nuggets (Walt) | Dallas Mavericks (Miles) | YES Denver Nuggets (Walt) | 9 | 0.79 | 0.86 | 0.86 | lost | -$7.22 |
 | 2026-10-12 03:14 | favourite | ebasketballgame | Dallas Mavericks (Walt) | Denver Nuggets (Larry) | YES Dallas Mavericks (Walt) | 15 | 0.50 | 0.72 | 0.72 | won | $7.23 |
 | 2026-10-12 03:14 | blend | ebasketballgame | Dallas Mavericks (Walt) | Denver Nuggets (Larry) | YES Dallas Mavericks (Walt) | 31 | 0.50 | 0.74 | 0.72 | won | $14.95 |
 | 2026-10-12 03:14 | favourite | ebasketballgame | Indiana Pacers (James) | New Orleans Pelicans (Donovan) | YES Indiana Pacers (James) | 15 | 0.49 | 0.72 | 0.72 | won | $7.38 |
