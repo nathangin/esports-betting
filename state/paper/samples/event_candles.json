@@ -1,74 +1,128 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT101212BONYGAVI/candlesticks?start_ts=1791646920&end_ts=1791648780&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT101223EMILROSE/candlesticks?start_ts=1791647580&end_ts=1791649440&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791648780,
+  "adjusted_end_ts": 1791649440,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791648780,
+     "end_period_ts": 1791647640,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4800",
-      "high_dollars": "0.8800",
-      "low_dollars": "0.4800",
-      "open_dollars": "0.4800"
+      "close_dollars": "0.1800",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1800",
+      "open_dollars": "0.9900"
      },
      "yes_bid": {
-      "close_dollars": "0.4100",
-      "high_dollars": "0.4100",
+      "close_dollars": "0.1100",
+      "high_dollars": "0.1100",
       "low_dollars": "0.0000",
-      "open_dollars": "0.4100"
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791649440,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1800",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1800",
+      "open_dollars": "0.1800"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1100",
+      "high_dollars": "0.1100",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.1100"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791648780,
+     "end_period_ts": 1791647640,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4200",
-      "high_dollars": "0.9800",
-      "low_dollars": "0.4200",
-      "open_dollars": "0.4200"
+      "close_dollars": "0.7400",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.7400",
+      "open_dollars": "0.9500"
      },
      "yes_bid": {
-      "close_dollars": "0.3500",
-      "high_dollars": "0.3500",
+      "close_dollars": "0.6700",
+      "high_dollars": "0.6700",
       "low_dollars": "0.0000",
-      "open_dollars": "0.3500"
+      "open_dollars": "0.0000"
      }
-    }
-   ],
-   [
+    },
     {
-     "end_period_ts": 1791648780,
+     "end_period_ts": 1791649440,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.2000",
+      "close_dollars": "0.7300",
       "high_dollars": "0.9600",
-      "low_dollars": "0.2000",
-      "open_dollars": "0.2000"
+      "low_dollars": "0.7300",
+      "open_dollars": "0.7400"
      },
      "yes_bid": {
-      "close_dollars": "0.1300",
-      "high_dollars": "0.1300",
+      "close_dollars": "0.6600",
+      "high_dollars": "0.6700",
       "low_dollars": "0.0000",
-      "open_dollars": "0.1300"
+      "open_dollars": "0.6700"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791647640,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1800",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1800",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1100",
+      "high_dollars": "0.1100",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791649440,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1900",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1800",
+      "open_dollars": "0.1800"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1200",
+      "high_dollars": "0.1200",
+      "low_dollars": "0.0100",
+      "open_dollars": "0.1100"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT101212BONYGAVI-BONY",
-   "KXESOCCERGAME-26OCT101212BONYGAVI-GAVI",
-   "KXESOCCERGAME-26OCT101212BONYGAVI-TIE"
+   "KXESOCCERGAME-26OCT101223EMILROSE-EMIL",
+   "KXESOCCERGAME-26OCT101223EMILROSE-ROSE",
+   "KXESOCCERGAME-26OCT101223EMILROSE-TIE"
   ]
  }
 }
