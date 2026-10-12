@@ -23,7 +23,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from .kalshi import Kalshi, game_of, parse_market
+from .kalshi import Kalshi, game_of, is_traded, parse_market
 from .net import Http, HttpError
 
 log = logging.getLogger(__name__)
@@ -69,6 +69,16 @@ def write_table(hist: Path, name: str, df: pd.DataFrame, time_col: str) -> None:
         legacy.unlink()
 
 
+def _rewrite_months(hist: Path, name: str, df: pd.DataFrame, time_col: str) -> None:
+    """Rewrite every shard of a table from ``df`` (drops shards that end up empty)."""
+    d = hist / name
+    if d.is_dir():
+        for p in d.glob("*.parquet"):
+            p.unlink()
+    if len(df):
+        write_table(hist, name, df, time_col)
+
+
 def read_table(hist: Path, name: str) -> pd.DataFrame:
     """All shards of a history table (also reads an older single-file ``<name>.parquet``)."""
     hist = Path(hist)
@@ -93,7 +103,7 @@ def fetch_markets(k: Kalshi, series: list[dict], hist: Path, manifest: dict, max
     rows = []
     for s in series:
         tk = s["ticker"]
-        if not is_match_series(tk):
+        if not is_match_series(tk) or not is_traded(tk):
             continue
         n0 = len(rows)
         for path, params, pages in (("/markets", {"status": "settled"}, 40), ("/historical/markets", {}, max_hist_pages)):
@@ -185,6 +195,11 @@ def fetch_candles(k: Kalshi, hist: Path, matches: pd.DataFrame, days: int, hours
     old = read_table(hist, "candles")
     old = old if len(old) else None
     if old is not None:
+        keep = old["event_ticker"].str.split("-").str[0].map(is_traded)
+        if not keep.all():
+            manifest["candles_pruned_untraded"] = int((~keep).sum())
+            old = old[keep].reset_index(drop=True)
+            _rewrite_months(hist, "candles", old, "ts")
         old, n_fixed = repair_candle_scale(old)
         if n_fixed:
             manifest["candles_rescaled_markets"] = n_fixed

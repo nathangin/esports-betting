@@ -42,6 +42,16 @@ def game_of(series_ticker: str) -> str:
     return t.lower()
 
 
+# The games the model was built and backtested on. Kalshi keeps adding series that match
+# KX<GAME>GAME (e-soccer and e-basketball on Oct 8 2026, Mobile Legends on Oct 10, mostly with
+# empty order books); they stay out of history, trading, backtests and reports until looked at.
+TRADED_GAMES = ("cs2", "lol", "valorant", "dota2", "r6", "ow", "cod", "rl")
+
+
+def is_traded(series_ticker: str) -> bool:
+    return game_of(series_ticker) in TRADED_GAMES
+
+
 def _f(x) -> float | None:
     if x is None or x == "":
         return None

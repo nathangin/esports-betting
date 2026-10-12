@@ -30,7 +30,7 @@ import pandas as pd
 
 from . import ratings as rt
 from .history import build_matches, is_match_series, is_match_title, normalize_matches, read_table
-from .kalshi import Kalshi, Market
+from .kalshi import TRADED_GAMES, Kalshi, Market, is_traded
 from .model import Params
 from .net import Http
 from .strategy import (Rules, default_rules, flat_candidates, flat_rules, match_candidates, market_prob,
@@ -52,6 +52,7 @@ DEFAULT_CONFIG = {
     "late_gap_minutes": 30,        # if the previous run is older than this ...
     "late_lead_minutes": 180,      # ... decide on any open match starting within this many minutes
     "flat_frac": 0.01,
+    "flat_max_spread": 0.10,       # the favourite baseline skips books with no real two-sided market
     "rules": {"blend": {}, "model-only": {}, "favourite": {}},
 }
 MATCH_COLS = ["event_ticker", "series_ticker", "game", "start_time", "open_time", "close_time", "team_a", "team_b",
@@ -123,6 +124,7 @@ class State:
             return pd.DataFrame(columns=MATCH_COLS)
         m = normalize_matches(pd.concat([f[MATCH_COLS] for f in frames], ignore_index=True))[MATCH_COLS]
         m = m.dropna(subset=["start_time"])
+        m = m[m["series_ticker"].map(is_traded)]
         # later rows (paper results) win over the history copy of the same event
         return m.drop_duplicates("event_ticker", keep="last").sort_values("start_time").reset_index(drop=True)
 
@@ -131,7 +133,7 @@ class State:
         if cfg:
             return list(cfg)
         m = self.history_matches()
-        return sorted(set(m["series_ticker"].dropna())) if len(m) else []
+        return sorted(s for s in set(m["series_ticker"].dropna()) if is_traded(s)) if len(m) else []
 
     def decided(self) -> set[str]:
         d = self.root / "scans"
@@ -166,6 +168,28 @@ def settle(state: State, k: Kalshi, now: datetime) -> int:
         acct["cash"] = round(acct["cash"] + float(b["cost"]) + float(b["fee"]) + pnl, 4)
         n += 1
     return n
+
+
+VOID_NOTE = "outside trial"
+
+
+def void_out_of_scope(state: State, now: datetime) -> int:
+    """Void bets on games outside TRADED_GAMES (series Kalshi added after the trial began, which
+    slipped in through the KX<GAME>GAME pattern): the stake goes back to the book and the bet
+    stays in the ledger with status 'void' and result 'outside trial'."""
+    led = state.ledger
+    if led.empty:
+        return 0
+    bad = led[~led["game"].isin(TRADED_GAMES) & led["status"].isin(["open", "won", "lost"])]
+    for idx, b in bad.iterrows():
+        acct = state.account[b["book"]]
+        if b["status"] == "open":     # stake was taken at placement
+            acct["cash"] = round(acct["cash"] + float(b["cost"]) + float(b["fee"]), 4)
+        else:                         # settlement already paid out: undo the bet's net result
+            acct["cash"] = round(acct["cash"] - float(b["pnl"]), 4)
+        settled_at = b["settled_at"] if isinstance(b["settled_at"], str) and b["settled_at"] else now.isoformat(timespec="seconds")
+        led.loc[idx, ["status", "result", "settled_at", "pnl"]] = ["void", VOID_NOTE, settled_at, 0.0]
+    return int(len(bad))
 
 
 def _markets_frame(markets: list[Market]) -> pd.DataFrame:
@@ -292,7 +316,8 @@ def scan(state: State, k: Kalshi, now: datetime, series: list[str]) -> tuple[lis
             rules = state.rules(book)
             eq, cash = state.equity(book), state.account[book]["cash"]
             if book == "favourite":
-                cands = flat_candidates(r.event_ticker, q >= 0.5, a, b, rules)
+                cands = flat_candidates(r.event_ticker, q >= 0.5, a, b, rules,
+                                        max_spread=state.config.get("flat_max_spread", 0.10))
                 bets = size(cands, eq, cash, flat_rules(rules, state.config.get("flat_frac", 0.01)),
                             run_budget=budget[book])
             else:
@@ -441,6 +466,9 @@ def run(state_dir: str, now: datetime | None = None, until: str | None = None) -
     http = Http(sample_dir=state.root / "samples")
     k = Kalshi(http)
     summary["settled"] = settle(state, k, now)
+    voided = void_out_of_scope(state, now)
+    if voided:
+        summary["voided_outside_trial"] = voided
     summary["closes_backfilled"] = backfill_closes(state, k, now)
     series = state.match_series()
     summary["series"] = len(series)

@@ -4,7 +4,9 @@
 # stays open for up to 5.5 hours and does a pass every 5 minutes: settle finished bets, pick
 # up new results, and decide once on every match starting in the next 10-70 minutes (3 hours
 # after a gap). State is saved as it goes. The 15-minute schedule keeps a next run queued; it
-# waits for the current one (concurrency group) and takes over when it ends.
+# waits for the current one (concurrency group) and takes over when it ends. GitHub's scheduler
+# sometimes starts nothing for many hours (none from 09:40 to 19:00 UTC on Oct 12 2026), so a run
+# that finished its full stretch also queues its successor itself.
 # Kalshi is only read through its public market-data API; nothing here can place an order
 # and no API key is used. Results: state/reports/summary.md on the paper-trading branch.
 name: Paper trading
@@ -21,6 +23,7 @@ on:
 
 permissions:
   contents: write
+  actions: write      # lets a finished run queue the next one
 
 concurrency:
   group: es-paper
@@ -28,6 +31,7 @@ concurrency:
 
 env:
   PAPER_UNTIL: "2026-11-15"   # last day new paper bets are placed; settling continues after
+  CHAIN_UNTIL: "2026-11-18"   # runs queue their own successor until this day (then the schedule alone)
 
 jobs:
   paper:
@@ -45,6 +49,7 @@ jobs:
           cache-dependency-path: pyproject.toml
       - run: pip install -q .
       - run: bash scripts/state_branch.sh checkout
+      - run: echo "STARTED=$(date +%s)" >> "$GITHUB_ENV"
       - name: Paper passes every 5 minutes
         env:
           MINUTES: ${{ github.event.inputs.minutes || '330' }}
@@ -55,3 +60,16 @@ jobs:
         if: always()
         run: |
           bash scripts/state_branch.sh commit "paper run ${{ github.run_id }}"
+      - name: Queue the next run
+        # only after a full stretch (a run that fails or stops early does not start a chain of
+        # failing runs; the schedule picks up from there)
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          elapsed=$(( $(date +%s) - STARTED ))
+          if [ "$elapsed" -ge 3600 ] && [[ "$(date -u +%F)" < "$CHAIN_UNTIL" ]]; then
+            gh workflow run es-paper.yml --ref "$GITHUB_REF_NAME" -f minutes=330 || echo "could not queue the next run"
+          else
+            echo "not queuing a successor (ran ${elapsed}s)"
+          fi

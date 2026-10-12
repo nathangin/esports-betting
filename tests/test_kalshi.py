@@ -111,3 +111,13 @@ def test_old_date_only_tickers_get_an_estimated_start():
     assert n.loc[0, "start_time"] == pd.Timestamp("2025-12-05T20:10Z") and bool(n.loc[0, "start_estimated"])
     assert n.loc[1, "start_time"] == pd.Timestamp("2026-02-20T21:00Z") and not bool(n.loc[1, "start_estimated"])
     assert list(n["game"]) == ["cod", "rl"]
+
+
+def test_traded_games_exclude_series_added_after_the_trial_began():
+    from esalpha.kalshi import is_traded
+
+    for s in ("KXCS2GAME", "KXCSGOGAME", "KXLOLGAME", "KXVALORANTGAME", "KXDOTA2GAME", "KXR6GAME", "KXOWGAME",
+              "KXCODGAME", "KXRLGAME"):
+        assert is_traded(s), s
+    for s in ("KXESOCCERGAME", "KXEBASKETBALLGAME", "KXMLBBGAME"):
+        assert not is_traded(s), s

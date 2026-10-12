@@ -10,7 +10,8 @@ import numpy as np
 import pandas as pd
 
 from . import ratings as rt
-from .paper import BOOKS, State
+from .kalshi import TRADED_GAMES
+from .paper import BOOKS, VOID_NOTE, State
 
 BOOK_NOTES = {
     "blend": "model + market blend (the strategy under test)",
@@ -57,7 +58,7 @@ def book_stats(state: State) -> dict:
         outlay = float((done["cost"].astype(float) + done["fee"].astype(float)).sum()) if len(done) else 0.0
         pnl = float(done["pnl"].astype(float).sum()) if len(done) else 0.0
         out[b] = {"start": state.account[b]["start"], "equity": round(state.equity(b), 2),
-                  "cash": round(state.account[b]["cash"], 2), "bets": int(len(lb)),
+                  "cash": round(state.account[b]["cash"], 2), "bets": int((lb["status"] != "void").sum()),
                   "open": int((lb["status"] == "open").sum()), "settled": int(len(done)),
                   "won": int((done["status"] == "won").sum()), "void": int((lb["status"] == "void").sum()),
                   "pnl": round(pnl, 2), "outlay": round(outlay, 2), "roi": pnl / outlay if outlay else None,
@@ -76,7 +77,7 @@ def scoring(state: State) -> dict:
     s = pd.concat([pd.read_parquet(p) for p in files], ignore_index=True).drop_duplicates("event_ticker", keep="first")
     res = state.all_matches()[["event_ticker", "winner"]]
     s = s.merge(res, on="event_ticker", how="inner")
-    s = s[s["winner"].isin(["A", "B"])]
+    s = s[s["winner"].isin(["A", "B"]) & s["game"].isin(TRADED_GAMES)]
     if s.empty:
         return {"n": 0, "scanned": int(len(files))}
     y = (s["winner"] == "A").astype(float)
@@ -115,6 +116,12 @@ def write(state_dir: str) -> dict:
     L += ["", "Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. "
           "Closing-line value is the market's probability of the backed team near the start minus the price "
           "paid (bets with a snapshot); it shows skill long before P&L can.", ""]
+    out_of_scope = state.ledger[state.ledger["result"].astype(str) == VOID_NOTE] if len(state.ledger) else state.ledger
+    if len(out_of_scope):
+        games = ", ".join(sorted(out_of_scope["game"].astype(str).unique()))
+        L += [f"{len(out_of_scope)} bets on games outside the trial ({games}) were voided and their stakes returned: "
+              "Kalshi listed those series after the trial began (Oct 8-10 2026), they are not games the model was built "
+              "or tested on, and most had no real order book. They are not counted above.", ""]
     L += ["## Forecast scoring on the matches the trader looked at", ""]
     if sc.get("n"):
         L += [f"{sc['n']} finished matches. Lower is better; the market line is the bar to beat.", "",
@@ -130,6 +137,8 @@ def write(state_dir: str) -> dict:
         L.append("No finished matches yet.")
     L.append("")
     led = state.ledger
+    if len(led):
+        led = led[led["result"].astype(str) != VOID_NOTE]
     if len(led):
         L += ["## Latest bets", "", "Prob is the book's probability that the backed team wins; Market is the "
               "market's (mid price) at the decision.", "",

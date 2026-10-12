@@ -13,7 +13,9 @@ fake-money paper trading on GitHub Actions). See README.md for results.
   by the workflows (`scripts/state_branch.sh`).
 - GitHub starts this repo's scheduled runs only ~3 times a day, so `es-paper.yml` runs
   `esalpha paper-loop`: one job does a pass every 5 minutes for up to 5.5 hours and saves state
-  as it goes; the next scheduled run waits in the concurrency queue and takes over.
+  as it goes; the next scheduled run waits in the concurrency queue and takes over. The scheduler
+  can also go quiet for 9+ hours, so a run that completes its full stretch queues its successor
+  (`gh workflow run`, until `CHAIN_UNTIL`).
 
 ## Kalshi esports facts (verified Oct 2026)
 - Match-winner series are `KX<GAME>GAME`: KXCS2GAME, KXLOLGAME, KXVALORANTGAME, KXDOTA2GAME,
@@ -36,6 +38,12 @@ fake-money paper trading on GitHub Actions). See README.md for results.
   markets (look-ahead); use the totals ladder.
 - Polymarket esports: gamma `/events?series_id=` (cs2 10310, lol 10311, valorant 10369, dota2
   10309, r6 10432, cod 10427), moneyline markets, CLOB `/prices-history?market=<token>`.
+- Kalshi keeps adding series that match `KX<GAME>GAME`: KXESOCCERGAME and KXEBASKETBALLGAME (Oct 8
+  2026, hundreds of matches a day, e-soccer books mostly empty: median spread 95c) and KXMLBBGAME
+  (Oct 10). They slipped into the trial for four days; history, trading, backtests and reports are
+  now limited to `TRADED_GAMES` in `kalshi.py` (cs2, lol, valorant, dota2, r6, ow, cod, rl), and the
+  bets placed on the others were voided (status `void`, result `outside trial`). Add a game there
+  only after backtesting it.
 
 ## What the data says
 - At 60 minutes before the start the market's log loss is ~0.573; the Elo model's ~0.662. The

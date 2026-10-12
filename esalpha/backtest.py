@@ -19,6 +19,7 @@ import pandas as pd
 
 from . import ratings as rt
 from .history import normalize_matches, read_table
+from .kalshi import is_traded
 from .model import Params
 from .strategy import Rules, default_rules, flat_candidates, flat_rules, match_candidates, market_prob, settle_pnl, size
 
@@ -52,6 +53,7 @@ def quotes_at(c: pd.DataFrame | None, ts: int, max_age: int = 3600) -> tuple[flo
 
 def build_events(hist: Path, minutes_before: float = 60.0, tune_until=None) -> tuple[pd.DataFrame, dict]:
     matches = normalize_matches(read_table(hist, "matches")).dropna(subset=["start_time"])
+    matches = matches[matches["series_ticker"].map(is_traded)]
     candles = read_table(hist, "candles")
     by_ticker = {t: g.sort_values("ts")[["ts", "bid", "ask"]].reset_index(drop=True) for t, g in candles.groupby("ticker")}
     priced_events = set(candles["event_ticker"].unique())
