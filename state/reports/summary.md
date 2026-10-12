@@ -1,12 +1,12 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-12 08:56 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-12 09:06 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| blend | model + market blend (the strategy under test) | 18 | 7 | 11 | 7 | $37.66 | +22.4% | -1.5c (17) | $1,037.66 |
+| blend | model + market blend (the strategy under test) | 18 | 6 | 12 | 8 | $41.27 | +21.9% | -2.7c (17) | $1,041.27 |
 | model-only | Elo win model alone (control: ignores the market) | 140 | 17 | 123 | 33 | -$156.72 | -10.2% | -0.2c (134) | $843.28 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 241 | 15 | 226 | 145 | -$167.07 | -9.9% | -1.9c (240) | $832.93 |
 
@@ -51,7 +51,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-12 07:30 | favourite | ebasketballgame | Denver Nuggets (IceKimi) | Dallas Mavericks (Clyde) | YES Denver Nuggets (IceKimi) | 7 | 0.37 | 0.66 | 0.66 | open | - |
 | 2026-10-12 07:30 | blend | ebasketballgame | Denver Nuggets (IceKimi) | Dallas Mavericks (Clyde) | YES Denver Nuggets (IceKimi) | 29 | 0.37 | 0.68 | 0.66 | open | - |
 | 2026-10-12 07:30 | model-only | ebasketballgame | Denver Nuggets (IceKimi) | Dallas Mavericks (Clyde) | YES Denver Nuggets (IceKimi) | 29 | 0.37 | 0.42 | 0.66 | open | - |
-| 2026-10-12 07:30 | blend | ebasketballgame | New Orleans Pelicans (Tatum) | Indiana Pacers (Jake) | YES New Orleans Pelicans (Tatum) | 24 | 0.84 | 0.92 | 0.89 | open | - |
+| 2026-10-12 07:30 | blend | ebasketballgame | New Orleans Pelicans (Tatum) | Indiana Pacers (Jake) | YES New Orleans Pelicans (Tatum) | 24 | 0.84 | 0.92 | 0.89 | won | $3.61 |
 | 2026-10-12 07:04 | blend | ebasketballgame | Dallas Mavericks (Shaq) | Denver Nuggets (IceKimi) | YES Dallas Mavericks (Shaq) | 31 | 0.63 | 0.81 | 0.79 | open | - |
 | 2026-10-12 07:04 | blend | ebasketballgame | New Orleans Pelicans (Tatum) | Indiana Pacers (Barry) | YES New Orleans Pelicans (Tatum) | 33 | 0.60 | 0.79 | 0.77 | open | - |
 | 2026-10-12 06:54 | model-only | cs2 | STATE | THE UNIT | YES STATE | 22 | 0.47 | 0.65 | 0.45 | open | - |
