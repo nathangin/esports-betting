@@ -1,34 +1,34 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-12 14:37 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-12 14:42 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 18 | 0 | 18 | 9 | -$23.83 | -8.5% | -2.3c (18) | $976.17 |
-| model-only | Elo win model alone (control: ignores the market) | 143 | 10 | 133 | 35 | -$211.19 | -12.8% | -0.4c (140) | $788.81 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 241 | 10 | 231 | 149 | -$165.27 | -9.7% | -1.9c (240) | $834.73 |
+| model-only | Elo win model alone (control: ignores the market) | 143 | 9 | 134 | 35 | -$227.78 | -13.7% | -0.4c (140) | $772.22 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 241 | 9 | 232 | 150 | -$161.92 | -9.4% | -1.9c (240) | $838.08 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-2315 finished matches. Lower is better; the market line is the bar to beat.
+2317 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6669 | 0.2380 |
-| model | 0.6700 | 0.2387 |
-| blend | 0.6695 | 0.2392 |
+| market | 0.6668 | 0.2380 |
+| model | 0.6701 | 0.2387 |
+| blend | 0.6693 | 0.2391 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 1494 | 0.6910 | 0.6723 |
+| esoccergame | 1495 | 0.6910 | 0.6724 |
 | ebasketballgame | 347 | 0.6853 | 0.6680 |
 | cs2 | 311 | 0.5854 | 0.6624 |
+| lol | 40 | 0.5161 | 0.7031 |
 | dota2 | 39 | 0.5521 | 0.6510 |
-| lol | 39 | 0.5192 | 0.7034 |
 | ow | 31 | 0.5130 | 0.5872 |
 | r6 | 23 | 0.6353 | 0.7140 |
 | mlbb | 18 | 0.6203 | 0.7106 |
