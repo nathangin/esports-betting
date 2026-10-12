@@ -1,74 +1,17 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT100005FROSKEVI/candlesticks?start_ts=1791603300&end_ts=1791605160&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT100019KEVIFREN/candlesticks?start_ts=1791604140&end_ts=1791606000&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791605160,
+  "adjusted_end_ts": 1791606000,
   "market_candlesticks": [
-   [
-    {
-     "end_period_ts": 1791603720,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "1.0000",
-      "high_dollars": "1.0000",
-      "low_dollars": "0.9900",
-      "open_dollars": "0.9900"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.0000",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791603720,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "1.0000",
-      "high_dollars": "1.0000",
-      "low_dollars": "0.9900",
-      "open_dollars": "0.9900"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.0000",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791603720,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "1.0000",
-      "high_dollars": "1.0000",
-      "low_dollars": "0.9900",
-      "open_dollars": "0.9900"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.0000",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
-     }
-    }
-   ]
+   [],
+   [],
+   []
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT100005FROSKEVI-FROS",
-   "KXESOCCERGAME-26OCT100005FROSKEVI-KEVI",
-   "KXESOCCERGAME-26OCT100005FROSKEVI-TIE"
+   "KXESOCCERGAME-26OCT100019KEVIFREN-KEVI",
+   "KXESOCCERGAME-26OCT100019KEVIFREN-FREN",
+   "KXESOCCERGAME-26OCT100019KEVIFREN-TIE"
   ]
  }
 }
