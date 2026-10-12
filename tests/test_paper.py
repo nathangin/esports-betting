@@ -189,6 +189,7 @@ def test_games_outside_the_trial_are_left_out_and_their_bets_voided(tmp_path, mo
     st.save()
     books = report.book_stats(paper.State(tmp_path))
     assert books["favourite"]["bets"] == 1 and books["favourite"]["void"] == 1
+    assert books["blend"]["clv_n"] == books["blend"]["bets"]          # voided bets add no CLV either
 
 
 def test_favourite_baseline_skips_empty_order_books():
