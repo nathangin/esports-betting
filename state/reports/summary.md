@@ -1,30 +1,30 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-12 09:36 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-12 09:41 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| blend | model + market blend (the strategy under test) | 18 | 2 | 16 | 8 | -$28.97 | -11.2% | -2.3c (18) | $971.03 |
-| model-only | Elo win model alone (control: ignores the market) | 141 | 17 | 124 | 33 | -$167.93 | -10.9% | -0.4c (135) | $832.07 |
+| blend | model + market blend (the strategy under test) | 18 | 1 | 17 | 8 | -$33.16 | -12.6% | -2.3c (18) | $966.84 |
+| model-only | Elo win model alone (control: ignores the market) | 141 | 16 | 125 | 33 | -$172.12 | -11.1% | -0.4c (135) | $827.88 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 241 | 14 | 227 | 145 | -$169.78 | -10.0% | -1.9c (240) | $830.22 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-2200 finished matches. Lower is better; the market line is the bar to beat.
+2202 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
 | market | 0.6684 | 0.2386 |
-| model | 0.6686 | 0.2380 |
-| blend | 0.6710 | 0.2398 |
+| model | 0.6687 | 0.2380 |
+| blend | 0.6711 | 0.2398 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 1415 | 0.6910 | 0.6699 |
+| esoccergame | 1417 | 0.6910 | 0.6699 |
 | ebasketballgame | 328 | 0.6876 | 0.6662 |
 | cs2 | 303 | 0.5900 | 0.6638 |
 | lol | 38 | 0.5060 | 0.6989 |
@@ -45,8 +45,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-12 08:50 | model-only | cs2 | Apogee Esports | NIP | NO NIP | 2 | 0.22 | 0.38 | 0.22 | open | - |
 | 2026-10-12 08:30 | model-only | ebasketballgame | Golden State Warriors (Shaq) | Brooklyn Nets (IceKimi) | YES Golden State Warriors (Shaq) | 24 | 0.66 | 0.73 | 0.80 | open | - |
 | 2026-10-12 08:30 | blend | ebasketballgame | New York Knicks (Tatum) | Los Angeles Lakers (Barry) | YES New York Knicks (Tatum) | 25 | 0.61 | 0.80 | 0.78 | open | - |
-| 2026-10-12 08:00 | model-only | ebasketballgame | Indiana Pacers (Jake) | New Orleans Pelicans (Barry) | YES Indiana Pacers (Jake) | 22 | 0.18 | 0.54 | 0.56 | open | - |
-| 2026-10-12 08:00 | blend | ebasketballgame | Indiana Pacers (Jake) | New Orleans Pelicans (Barry) | YES Indiana Pacers (Jake) | 22 | 0.18 | 0.57 | 0.56 | open | - |
+| 2026-10-12 08:00 | model-only | ebasketballgame | Indiana Pacers (Jake) | New Orleans Pelicans (Barry) | YES Indiana Pacers (Jake) | 22 | 0.18 | 0.54 | 0.56 | lost | -$4.19 |
+| 2026-10-12 08:00 | blend | ebasketballgame | Indiana Pacers (Jake) | New Orleans Pelicans (Barry) | YES Indiana Pacers (Jake) | 22 | 0.18 | 0.57 | 0.56 | lost | -$4.19 |
 | 2026-10-12 08:00 | blend | ebasketballgame | Denver Nuggets (Shaq) | Dallas Mavericks (Clyde) | YES Denver Nuggets (Shaq) | 36 | 0.50 | 0.75 | 0.72 | lost | -$18.63 |
 | 2026-10-12 07:50 | model-only | lol | KT Rolster | Team Vitality | YES KT Rolster | 36 | 0.36 | 0.42 | 0.36 | open | - |
 | 2026-10-12 07:30 | favourite | ebasketballgame | Denver Nuggets (IceKimi) | Dallas Mavericks (Clyde) | YES Denver Nuggets (IceKimi) | 7 | 0.37 | 0.66 | 0.66 | lost | -$2.71 |
