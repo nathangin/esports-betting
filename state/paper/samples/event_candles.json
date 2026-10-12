@@ -1,52 +1,106 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT101806NISKEDER/candlesticks?start_ts=1791668160&end_ts=1791670020&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT101816OLIVLEYL/candlesticks?start_ts=1791668760&end_ts=1791670620&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791670020,
+  "adjusted_end_ts": 1791670620,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791670020,
+     "end_period_ts": 1791668880,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.3500",
-      "high_dollars": "0.9500",
-      "low_dollars": "0.3500",
-      "open_dollars": "0.3500"
+      "close_dollars": "0.6700",
+      "high_dollars": "0.9400",
+      "low_dollars": "0.6700",
+      "open_dollars": "0.9400"
      },
      "yes_bid": {
-      "close_dollars": "0.2800",
-      "high_dollars": "0.2800",
+      "close_dollars": "0.6000",
+      "high_dollars": "0.6000",
       "low_dollars": "0.0000",
-      "open_dollars": "0.2800"
+      "open_dollars": "0.0000"
      }
-    }
-   ],
-   [
+    },
     {
-     "end_period_ts": 1791670020,
+     "end_period_ts": 1791670620,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.5400",
+      "close_dollars": "0.6700",
       "high_dollars": "0.9500",
-      "low_dollars": "0.5400",
-      "open_dollars": "0.5400"
+      "low_dollars": "0.6700",
+      "open_dollars": "0.6700"
      },
      "yes_bid": {
-      "close_dollars": "0.4700",
-      "high_dollars": "0.4700",
-      "low_dollars": "0.2100",
-      "open_dollars": "0.4700"
+      "close_dollars": "0.6000",
+      "high_dollars": "0.6000",
+      "low_dollars": "0.2900",
+      "open_dollars": "0.6000"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791670020,
+     "end_period_ts": 1791668880,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.2100",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.2100",
+      "open_dollars": "0.9500"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1400",
+      "high_dollars": "0.1400",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791670620,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.2100",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.2100",
+      "open_dollars": "0.2100"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1400",
+      "high_dollars": "0.1400",
+      "low_dollars": "0.0500",
+      "open_dollars": "0.1400"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791668880,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.2200",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.2200",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1500",
+      "high_dollars": "0.1500",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791670620,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
@@ -57,18 +111,18 @@
       "open_dollars": "0.2200"
      },
      "yes_bid": {
-      "close_dollars": "0.1400",
-      "high_dollars": "0.1400",
+      "close_dollars": "0.1500",
+      "high_dollars": "0.1500",
       "low_dollars": "0.0000",
-      "open_dollars": "0.1400"
+      "open_dollars": "0.1500"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT101806NISKEDER-NISK",
-   "KXESOCCERGAME-26OCT101806NISKEDER-EDER",
-   "KXESOCCERGAME-26OCT101806NISKEDER-TIE"
+   "KXESOCCERGAME-26OCT101816OLIVLEYL-OLIV",
+   "KXESOCCERGAME-26OCT101816OLIVLEYL-LEYL",
+   "KXESOCCERGAME-26OCT101816OLIVLEYL-TIE"
   ]
  }
 }
