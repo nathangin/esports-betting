@@ -1,74 +1,100 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT101144ANTOSHEE/candlesticks?start_ts=1791645240&end_ts=1791647100&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT101158BONYANTO/candlesticks?start_ts=1791646080&end_ts=1791647940&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791647100,
+  "adjusted_end_ts": 1791647940,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791647100,
+     "end_period_ts": 1791647940,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4200",
+      "close_dollars": "0.7400",
       "high_dollars": "0.9900",
-      "low_dollars": "0.4200",
-      "open_dollars": "0.5900"
+      "low_dollars": "0.7400",
+      "open_dollars": "0.7500"
      },
      "yes_bid": {
-      "close_dollars": "0.3500",
-      "high_dollars": "0.5200",
-      "low_dollars": "0.0300",
-      "open_dollars": "0.5200"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791647100,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.4800",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.3300",
-      "open_dollars": "0.3300"
-     },
-     "yes_bid": {
-      "close_dollars": "0.4100",
-      "high_dollars": "0.4100",
+      "close_dollars": "0.6700",
+      "high_dollars": "0.6800",
       "low_dollars": "0.0000",
-      "open_dollars": "0.2600"
+      "open_dollars": "0.6800"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791647100,
+     "end_period_ts": 1791647940,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
       "close_dollars": "0.2000",
       "high_dollars": "0.9900",
-      "low_dollars": "0.1900",
-      "open_dollars": "0.1900"
+      "low_dollars": "0.2000",
+      "open_dollars": "0.2000"
      },
      "yes_bid": {
       "close_dollars": "0.1300",
       "high_dollars": "0.1300",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.1200"
+      "low_dollars": "0.0800",
+      "open_dollars": "0.1300"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791647520,
+     "open_interest_fp": "35.41",
+     "price": {
+      "close_dollars": "0.1600",
+      "high_dollars": "0.1600",
+      "low_dollars": "0.1600",
+      "mean_dollars": "0.1600",
+      "open_dollars": "0.1600"
+     },
+     "volume_fp": "35.41",
+     "yes_ask": {
+      "close_dollars": "0.1600",
+      "high_dollars": "0.1600",
+      "low_dollars": "0.1600",
+      "open_dollars": "0.1600"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0900",
+      "high_dollars": "0.0900",
+      "low_dollars": "0.0900",
+      "open_dollars": "0.0900"
+     }
+    },
+    {
+     "end_period_ts": 1791647940,
+     "open_interest_fp": "35.41",
+     "price": {
+      "previous_dollars": "0.1600"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1600",
+      "high_dollars": "0.9200",
+      "low_dollars": "0.1600",
+      "open_dollars": "0.1600"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0900",
+      "high_dollars": "0.0900",
+      "low_dollars": "0.0100",
+      "open_dollars": "0.0900"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT101144ANTOSHEE-ANTO",
-   "KXESOCCERGAME-26OCT101144ANTOSHEE-SHEE",
-   "KXESOCCERGAME-26OCT101144ANTOSHEE-TIE"
+   "KXESOCCERGAME-26OCT101158BONYANTO-BONY",
+   "KXESOCCERGAME-26OCT101158BONYANTO-ANTO",
+   "KXESOCCERGAME-26OCT101158BONYANTO-TIE"
   ]
  }
 }
