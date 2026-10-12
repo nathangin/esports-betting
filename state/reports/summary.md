@@ -1,31 +1,31 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-12 08:16 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-12 08:26 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| blend | model + market blend (the strategy under test) | 17 | 6 | 11 | 7 | $37.66 | +22.4% | -4.5c (13) | $1,037.66 |
-| model-only | Elo win model alone (control: ignores the market) | 137 | 14 | 123 | 33 | -$156.72 | -10.2% | -0.7c (131) | $843.28 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 241 | 15 | 226 | 145 | -$167.07 | -9.9% | -2.0c (239) | $832.93 |
+| blend | model + market blend (the strategy under test) | 17 | 6 | 11 | 7 | $37.66 | +22.4% | -1.5c (15) | $1,037.66 |
+| model-only | Elo win model alone (control: ignores the market) | 137 | 14 | 123 | 33 | -$156.72 | -10.2% | -0.5c (132) | $843.28 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 241 | 15 | 226 | 145 | -$167.07 | -9.9% | -1.8c (240) | $832.93 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-2175 finished matches. Lower is better; the market line is the bar to beat.
+2178 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6671 | 0.2380 |
+| market | 0.6672 | 0.2380 |
 | model | 0.6681 | 0.2378 |
-| blend | 0.6696 | 0.2392 |
+| blend | 0.6697 | 0.2392 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 1396 | 0.6910 | 0.6691 |
-| ebasketballgame | 322 | 0.6810 | 0.6660 |
+| esoccergame | 1398 | 0.6910 | 0.6691 |
+| ebasketballgame | 323 | 0.6814 | 0.6658 |
 | cs2 | 303 | 0.5900 | 0.6638 |
 | lol | 38 | 0.5060 | 0.6989 |
 | dota2 | 34 | 0.5809 | 0.6527 |
