@@ -1,128 +1,74 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT100356KYLICAST/candlesticks?start_ts=1791617160&end_ts=1791619020&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT100426KYLIFERN/candlesticks?start_ts=1791618960&end_ts=1791620820&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791619020,
+  "adjusted_end_ts": 1791620820,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791618960,
+     "end_period_ts": 1791620820,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9800",
-      "high_dollars": "0.9800",
-      "low_dollars": "0.5800",
-      "open_dollars": "0.5800"
+      "close_dollars": "0.8400",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.8400",
+      "open_dollars": "0.8500"
      },
      "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.5100",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.5100"
-     }
-    },
-    {
-     "end_period_ts": 1791619020,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.5700",
-      "high_dollars": "0.9800",
-      "low_dollars": "0.5700",
-      "open_dollars": "0.9800"
-     },
-     "yes_bid": {
-      "close_dollars": "0.5000",
-      "high_dollars": "0.5100",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
+      "close_dollars": "0.7700",
+      "high_dollars": "0.7800",
+      "low_dollars": "0.5200",
+      "open_dollars": "0.7800"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791618960,
+     "end_period_ts": 1791620820,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9900",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.3500",
-      "open_dollars": "0.3500"
+      "close_dollars": "0.1300",
+      "high_dollars": "0.4800",
+      "low_dollars": "0.1300",
+      "open_dollars": "0.1300"
      },
      "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.2700",
+      "close_dollars": "0.0600",
+      "high_dollars": "0.0600",
       "low_dollars": "0.0000",
-      "open_dollars": "0.2700"
-     }
-    },
-    {
-     "end_period_ts": 1791619020,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.3500",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.3500",
-      "open_dollars": "0.9900"
-     },
-     "yes_bid": {
-      "close_dollars": "0.2800",
-      "high_dollars": "0.2800",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
+      "open_dollars": "0.0600"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791618960,
+     "end_period_ts": 1791620820,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4800",
+      "close_dollars": "0.1300",
       "high_dollars": "0.4800",
-      "low_dollars": "0.1800",
-      "open_dollars": "0.1800"
+      "low_dollars": "0.1300",
+      "open_dollars": "0.1300"
      },
      "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.1100",
+      "close_dollars": "0.0600",
+      "high_dollars": "0.0600",
       "low_dollars": "0.0000",
-      "open_dollars": "0.1100"
-     }
-    },
-    {
-     "end_period_ts": 1791619020,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.1900",
-      "high_dollars": "0.4800",
-      "low_dollars": "0.1800",
-      "open_dollars": "0.4800"
-     },
-     "yes_bid": {
-      "close_dollars": "0.1200",
-      "high_dollars": "0.1200",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
+      "open_dollars": "0.0600"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT100356KYLICAST-KYLI",
-   "KXESOCCERGAME-26OCT100356KYLICAST-CAST",
-   "KXESOCCERGAME-26OCT100356KYLICAST-TIE"
+   "KXESOCCERGAME-26OCT100426KYLIFERN-KYLI",
+   "KXESOCCERGAME-26OCT100426KYLIFERN-FERN",
+   "KXESOCCERGAME-26OCT100426KYLIFERN-TIE"
   ]
  }
 }
