@@ -1,30 +1,30 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-12 03:35 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-12 03:40 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 3 | 2 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 128 | 11 | 117 | 31 | -$157.05 | -10.7% | -0.8c (123) | $842.95 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 225 | 17 | 208 | 132 | -$203.27 | -12.9% | -1.7c (220) | $796.73 |
+| model-only | Elo win model alone (control: ignores the market) | 128 | 11 | 117 | 31 | -$157.05 | -10.7% | -0.8c (125) | $842.95 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 225 | 17 | 208 | 132 | -$203.27 | -12.9% | -1.7c (222) | $796.73 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-2077 finished matches. Lower is better; the market line is the bar to beat.
+2081 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
 | market | 0.6665 | 0.2377 |
-| model | 0.6683 | 0.2379 |
+| model | 0.6683 | 0.2378 |
 | blend | 0.6689 | 0.2389 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 1319 | 0.6907 | 0.6693 |
+| esoccergame | 1323 | 0.6907 | 0.6692 |
 | ebasketballgame | 303 | 0.6840 | 0.6667 |
 | cs2 | 301 | 0.5899 | 0.6637 |
 | lol | 38 | 0.5060 | 0.6989 |
