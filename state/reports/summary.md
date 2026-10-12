@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-12 00:29 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-12 00:39 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,25 +8,25 @@ Updated 2026-10-12 00:29 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
 | model-only | Elo win model alone (control: ignores the market) | 125 | 8 | 117 | 31 | -$157.05 | -10.7% | -0.8c (122) | $842.95 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 11 | 199 | 128 | -$186.35 | -12.4% | -2.0c (209) | $813.65 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 211 | 12 | 199 | 128 | -$186.35 | -12.4% | -2.0c (209) | $813.65 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-2021 finished matches. Lower is better; the market line is the bar to beat.
+2023 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
 | market | 0.6650 | 0.2371 |
-| model | 0.6668 | 0.2373 |
-| blend | 0.6673 | 0.2382 |
+| model | 0.6670 | 0.2374 |
+| blend | 0.6673 | 0.2383 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 1276 | 0.6904 | 0.6680 |
+| esoccergame | 1277 | 0.6904 | 0.6680 |
 | cs2 | 301 | 0.5899 | 0.6637 |
-| ebasketballgame | 291 | 0.6845 | 0.6675 |
+| ebasketballgame | 292 | 0.6844 | 0.6687 |
 | lol | 38 | 0.5060 | 0.6989 |
 | dota2 | 34 | 0.5809 | 0.6527 |
 | ow | 27 | 0.4862 | 0.5412 |
@@ -40,31 +40,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-12 00:38 | favourite | esoccergame | Estudiantes (PinkElephant) | São Paulo (Niskanen15) | YES Estudiantes (PinkElephant) | 13 | 0.59 | 0.63 | 0.63 | open | - |
 | 2026-10-11 15:53 | model-only | cs2 | antidaun | Saint Sinners | YES antidaun | 8 | 0.19 | 0.43 | 0.18 | lost | -$1.61 |
 | 2026-10-11 14:52 | model-only | r6 | Fluxo W7M | Team Liquid | YES Fluxo W7M | 45 | 0.36 | 0.44 | 0.35 | lost | -$16.93 |
 | 2026-10-11 13:52 | model-only | cs2 | MOUZ | Vitality | YES MOUZ | 42 | 0.35 | 0.44 | 0.34 | lost | -$15.37 |
-| 2026-10-11 12:52 | model-only | cs2 | aimclub | ARGOS | YES aimclub | 30 | 0.47 | 0.54 | 0.47 | won | $15.37 |
-| 2026-10-11 12:52 | model-only | cs2 | Spirit Academy Black | Metizport | NO Metizport | 9 | 0.20 | 0.36 | 0.18 | lost | -$1.91 |
-| 2026-10-11 12:52 | model-only | cs2 | Spirit Academy | 9INE | YES Spirit Academy | 34 | 0.41 | 0.65 | 0.41 | won | $19.48 |
 | 2026-10-11 12:52 | model-only | cs2 | mellren | Bebop | YES mellren | 23 | 0.62 | 0.71 | 0.61 | won | $8.36 |
 | 2026-10-11 12:52 | model-only | cs2 | MASONIC | Aurora Young Blood | NO Aurora Young Blood | 33 | 0.43 | 0.55 | 0.42 | lost | -$14.76 |
+| 2026-10-11 12:52 | model-only | cs2 | aimclub | ARGOS | YES aimclub | 30 | 0.47 | 0.54 | 0.47 | won | $15.37 |
+| 2026-10-11 12:52 | model-only | cs2 | Spirit Academy | 9INE | YES Spirit Academy | 34 | 0.41 | 0.65 | 0.41 | won | $19.48 |
+| 2026-10-11 12:52 | model-only | cs2 | Spirit Academy Black | Metizport | NO Metizport | 9 | 0.20 | 0.36 | 0.18 | lost | -$1.91 |
 | 2026-10-11 11:52 | model-only | cs2 | The KnockoutX | Alter Ego | YES The KnockoutX | 22 | 0.24 | 0.40 | 0.23 | lost | -$5.57 |
 | 2026-10-11 10:22 | favourite | cs2 | Spirit | Aurora Gaming | NO Aurora Gaming | 1 | 0.68 | 0.68 | 0.68 | lost | -$0.70 |
 | 2026-10-11 09:52 | model-only | cs2 | Fire Flux Esports | Gothic | NO Gothic | 27 | 0.53 | 0.60 | 0.52 | won | $12.21 |
 | 2026-10-11 09:47 | favourite | esoccergame | RB Leipzig (Kylian) | Mönchengladbach (Bradley) | YES RB Leipzig (Kylian) | 2 | 0.63 | 0.66 | 0.66 | won | $0.70 |
+| 2026-10-11 09:21 | favourite | esoccergame | RB Leipzig (Kylian) | Freiburg (Kevin) | YES RB Leipzig (Kylian) | 15 | 0.55 | 0.59 | 0.59 | lost | -$8.51 |
 | 2026-10-11 09:21 | favourite | esoccergame | Mönchengladbach (Bradley) | Stuttgart (Frost) | YES Mönchengladbach (Bradley) | 8 | 0.52 | 0.56 | 0.56 | lost | -$4.30 |
 | 2026-10-11 09:21 | model-only | cs2 | TheChampionGG | VP.Future 3 | YES TheChampionGG | 37 | 0.39 | 0.45 | 0.39 | lost | -$15.05 |
 | 2026-10-11 09:21 | favourite | cs2 | Teletubisie | THE UNIT | YES Teletubisie | 9 | 0.88 | 0.87 | 0.87 | lost | -$7.99 |
 | 2026-10-11 09:21 | model-only | cs2 | THE UNIT | Teletubisie | NO Teletubisie | 102 | 0.14 | 0.25 | 0.13 | won | $86.86 |
-| 2026-10-11 09:21 | favourite | esoccergame | RB Leipzig (Kylian) | Freiburg (Kevin) | YES RB Leipzig (Kylian) | 15 | 0.55 | 0.59 | 0.59 | lost | -$8.51 |
 | 2026-10-11 09:06 | favourite | esoccergame | Freiburg (Kevin) | Mönchengladbach (Bradley) | YES Freiburg (Kevin) | 15 | 0.53 | 0.56 | 0.56 | lost | -$8.22 |
 | 2026-10-11 08:51 | favourite | mlbb | ONIC | RRQ Hoshi | YES ONIC | 10 | 0.84 | 0.65 | 0.65 | won | $1.50 |
 | 2026-10-11 07:51 | favourite | cs2 | Rooster | Orgless | NO Orgless | 11 | 0.77 | 0.62 | 0.62 | open | - |
-| 2026-10-11 07:51 | model-only | valorant | T1 | G2 Esports | NO G2 Esports | 38 | 0.39 | 0.47 | 0.39 | lost | -$15.46 |
-| 2026-10-11 07:51 | favourite | ow | HUNENG | SHENGSHI Esports | YES HUNENG | 10 | 0.82 | 0.70 | 0.70 | won | $1.69 |
 | 2026-10-11 07:51 | favourite | mlbb | Invictus Gaming | AC Esports | YES Invictus Gaming | 10 | 0.84 | 0.63 | 0.63 | lost | -$8.50 |
-| 2026-10-11 07:51 | favourite | lol | Saigon Warriors | MVK Academy | NO MVK Academy | 10 | 0.80 | 0.79 | 0.79 | lost | -$8.12 |
 | 2026-10-11 07:51 | favourite | dota2 | PARIVISION | Team Spirit | YES PARIVISION | 12 | 0.70 | 0.69 | 0.69 | lost | -$8.58 |
+| 2026-10-11 07:51 | favourite | lol | Saigon Warriors | MVK Academy | NO MVK Academy | 10 | 0.80 | 0.79 | 0.79 | lost | -$8.12 |
+| 2026-10-11 07:51 | model-only | dota2 | Team Spirit | PARIVISION | NO PARIVISION | 47 | 0.31 | 0.44 | 0.31 | won | $31.72 |
 
 ## Backtest on real Kalshi prices
 
