@@ -1,74 +1,15 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT100532LOTTDEMI/candlesticks?start_ts=1791622920&end_ts=1791624780&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/events/KXEBASKETBALLGAME-26OCT100536DURAMELO/candlesticks?start_ts=1791623160&end_ts=1791625020&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791624780,
+  "adjusted_end_ts": 1791625020,
   "market_candlesticks": [
-   [
-    {
-     "end_period_ts": 1791624780,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.4200",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.4200",
-      "open_dollars": "0.4200"
-     },
-     "yes_bid": {
-      "close_dollars": "0.3500",
-      "high_dollars": "0.3500",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.3500"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791624780,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.4800",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.4800",
-      "open_dollars": "0.4900"
-     },
-     "yes_bid": {
-      "close_dollars": "0.4100",
-      "high_dollars": "0.4200",
-      "low_dollars": "0.0100",
-      "open_dollars": "0.4200"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791624780,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.2000",
-      "high_dollars": "0.4800",
-      "low_dollars": "0.2000",
-      "open_dollars": "0.2000"
-     },
-     "yes_bid": {
-      "close_dollars": "0.1300",
-      "high_dollars": "0.1300",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.1200"
-     }
-    }
-   ]
+   [],
+   []
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT100532LOTTDEMI-LOTT",
-   "KXESOCCERGAME-26OCT100532LOTTDEMI-DEMI",
-   "KXESOCCERGAME-26OCT100532LOTTDEMI-TIE"
+   "KXEBASKETBALLGAME-26OCT100536DURAMELO-DURA",
+   "KXEBASKETBALLGAME-26OCT100536DURAMELO-MELO"
   ]
  }
 }
