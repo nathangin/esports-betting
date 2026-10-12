@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-12 04:40 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-12 04:45 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| blend | model + market blend (the strategy under test) | 5 | 4 | 1 | 0 | -$19.69 | -100.0% | -7.5c (5) | $980.31 |
-| model-only | Elo win model alone (control: ignores the market) | 128 | 8 | 120 | 32 | -$161.38 | -10.7% | -0.9c (125) | $838.62 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 227 | 15 | 212 | 134 | -$206.85 | -12.9% | -1.8c (226) | $793.15 |
+| blend | model + market blend (the strategy under test) | 7 | 6 | 1 | 0 | -$19.69 | -100.0% | -7.5c (5) | $980.31 |
+| model-only | Elo win model alone (control: ignores the market) | 129 | 9 | 120 | 32 | -$161.38 | -10.7% | -0.9c (125) | $838.62 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 229 | 17 | 212 | 134 | -$206.85 | -12.9% | -1.8c (226) | $793.15 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -40,31 +40,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-12 04:44 | favourite | ebasketballgame | Denver Nuggets (Tatum) | Dallas Mavericks (Jake) | YES Denver Nuggets (Tatum) | 9 | 0.85 | 0.90 | 0.90 | open | - |
+| 2026-10-12 04:44 | blend | ebasketballgame | Denver Nuggets (Tatum) | Dallas Mavericks (Jake) | YES Denver Nuggets (Tatum) | 22 | 0.85 | 0.92 | 0.90 | open | - |
+| 2026-10-12 04:44 | favourite | ebasketballgame | New Orleans Pelicans (IceKimi) | Indiana Pacers (Clyde) | YES New Orleans Pelicans (IceKimi) | 19 | 0.39 | 0.67 | 0.67 | open | - |
+| 2026-10-12 04:44 | model-only | ebasketballgame | New Orleans Pelicans (IceKimi) | Indiana Pacers (Clyde) | YES New Orleans Pelicans (IceKimi) | 29 | 0.39 | 0.47 | 0.67 | open | - |
+| 2026-10-12 04:44 | blend | ebasketballgame | New Orleans Pelicans (IceKimi) | Indiana Pacers (Clyde) | YES New Orleans Pelicans (IceKimi) | 29 | 0.39 | 0.69 | 0.67 | open | - |
 | 2026-10-12 03:44 | favourite | ebasketballgame | Denver Nuggets (Walt) | Dallas Mavericks (Miles) | YES Denver Nuggets (Walt) | 9 | 0.79 | 0.86 | 0.86 | open | - |
 | 2026-10-12 03:44 | blend | ebasketballgame | Denver Nuggets (Walt) | Dallas Mavericks (Miles) | YES Denver Nuggets (Walt) | 24 | 0.79 | 0.89 | 0.86 | open | - |
 | 2026-10-12 03:44 | favourite | ebasketballgame | Indiana Pacers (Lenny) | New Orleans Pelicans (James) | YES Indiana Pacers (Lenny) | 16 | 0.48 | 0.71 | 0.71 | open | - |
 | 2026-10-12 03:44 | blend | ebasketballgame | Indiana Pacers (Lenny) | New Orleans Pelicans (James) | YES Indiana Pacers (Lenny) | 39 | 0.48 | 0.74 | 0.71 | open | - |
-| 2026-10-12 03:14 | favourite | ebasketballgame | Dallas Mavericks (Walt) | Denver Nuggets (Larry) | YES Dallas Mavericks (Walt) | 15 | 0.50 | 0.72 | 0.72 | open | - |
-| 2026-10-12 03:14 | blend | ebasketballgame | Dallas Mavericks (Walt) | Denver Nuggets (Larry) | YES Dallas Mavericks (Walt) | 31 | 0.50 | 0.74 | 0.72 | open | - |
 | 2026-10-12 03:14 | favourite | ebasketballgame | Indiana Pacers (James) | New Orleans Pelicans (Donovan) | YES Indiana Pacers (James) | 15 | 0.49 | 0.72 | 0.72 | open | - |
 | 2026-10-12 03:14 | blend | ebasketballgame | Indiana Pacers (James) | New Orleans Pelicans (Donovan) | YES Indiana Pacers (James) | 31 | 0.49 | 0.75 | 0.72 | open | - |
-| 2026-10-12 02:44 | model-only | ebasketballgame | Dallas Mavericks (Miles) | Denver Nuggets (Larry) | YES Dallas Mavericks (Miles) | 25 | 0.38 | 0.48 | 0.41 | lost | -$9.92 |
-| 2026-10-12 02:44 | model-only | ebasketballgame | New Orleans Pelicans (Donovan) | Indiana Pacers (Lenny) | NO Indiana Pacers (Lenny) | 39 | 0.41 | 0.61 | 0.38 | won | $22.34 |
-| 2026-10-12 02:44 | favourite | ebasketballgame | Indiana Pacers (Lenny) | New Orleans Pelicans (Donovan) | YES Indiana Pacers (Lenny) | 12 | 0.60 | 0.62 | 0.62 | lost | -$7.41 |
+| 2026-10-12 03:14 | favourite | ebasketballgame | Dallas Mavericks (Walt) | Denver Nuggets (Larry) | YES Dallas Mavericks (Walt) | 15 | 0.50 | 0.72 | 0.72 | open | - |
+| 2026-10-12 03:14 | blend | ebasketballgame | Dallas Mavericks (Walt) | Denver Nuggets (Larry) | YES Dallas Mavericks (Walt) | 31 | 0.50 | 0.74 | 0.72 | open | - |
 | 2026-10-12 02:44 | favourite | ebasketballgame | Denver Nuggets (Larry) | Dallas Mavericks (Miles) | YES Denver Nuggets (Larry) | 12 | 0.59 | 0.59 | 0.59 | won | $4.71 |
+| 2026-10-12 02:44 | model-only | ebasketballgame | Dallas Mavericks (Miles) | Denver Nuggets (Larry) | YES Dallas Mavericks (Miles) | 25 | 0.38 | 0.48 | 0.41 | lost | -$9.92 |
+| 2026-10-12 02:44 | favourite | ebasketballgame | Indiana Pacers (Lenny) | New Orleans Pelicans (Donovan) | YES Indiana Pacers (Lenny) | 12 | 0.60 | 0.62 | 0.62 | lost | -$7.41 |
+| 2026-10-12 02:44 | model-only | ebasketballgame | New Orleans Pelicans (Donovan) | Indiana Pacers (Lenny) | NO Indiana Pacers (Lenny) | 39 | 0.41 | 0.61 | 0.38 | won | $22.34 |
+| 2026-10-12 02:19 | model-only | ebasketballgame | New Orleans Pelicans (James) | Indiana Pacers (Lenny) | NO Indiana Pacers (Lenny) | 33 | 0.49 | 0.59 | 0.46 | lost | -$16.75 |
 | 2026-10-12 02:19 | favourite | ebasketballgame | Denver Nuggets (Walt) | Dallas Mavericks (Miles) | NO Dallas Mavericks (Miles) | 10 | 0.72 | 0.70 | 0.70 | lost | -$7.35 |
 | 2026-10-12 02:19 | favourite | ebasketballgame | Indiana Pacers (Lenny) | New Orleans Pelicans (James) | YES Indiana Pacers (Lenny) | 14 | 0.52 | 0.55 | 0.54 | won | $6.47 |
-| 2026-10-12 02:19 | model-only | ebasketballgame | New Orleans Pelicans (James) | Indiana Pacers (Lenny) | NO Indiana Pacers (Lenny) | 33 | 0.49 | 0.59 | 0.46 | lost | -$16.75 |
 | 2026-10-12 02:14 | favourite | esoccergame | Argentina (Millie) | England (July) | YES Argentina (Millie) | 12 | 0.62 | 0.66 | 0.66 | won | $4.36 |
 | 2026-10-12 01:49 | favourite | ebasketballgame | Los Angeles Lakers (Larry) | New York Knicks (Walt) | YES Los Angeles Lakers (Larry) | 14 | 0.56 | 0.57 | 0.57 | won | $5.91 |
 | 2026-10-12 01:49 | favourite | ebasketballgame | Golden State Warriors (Donovan) | Brooklyn Nets (James) | YES Golden State Warriors (Donovan) | 15 | 0.52 | 0.52 | 0.52 | won | $6.93 |
 | 2026-10-12 01:23 | favourite | esoccergame | 1. FC Köln (PinkElephant) | FSV Mainz 05 (Eder) | YES 1. FC Köln (PinkElephant) | 13 | 0.57 | 0.61 | 0.61 | lost | -$7.64 |
 | 2026-10-12 01:18 | favourite | esoccergame | Dortmund (Niskanen15) | FC Augsburg (Rooney) | YES Dortmund (Niskanen15) | 15 | 0.51 | 0.56 | 0.56 | lost | -$7.92 |
-| 2026-10-12 01:08 | favourite | esoccergame | Leverkusen (Hurricane) | FSV Mainz 05 (Eder) | YES Leverkusen (Hurricane) | 16 | 0.47 | 0.52 | 0.52 | lost | -$7.80 |
-| 2026-10-12 01:03 | favourite | esoccergame | 1. FC Köln (PinkElephant) | FC Augsburg (Rooney) | YES 1. FC Köln (PinkElephant) | 13 | 0.59 | 0.63 | 0.63 | won | $5.10 |
-| 2026-10-12 00:53 | favourite | esoccergame | 1. FC Köln (PinkElephant) | Leverkusen (Hurricane) | YES 1. FC Köln (PinkElephant) | 16 | 0.48 | 0.53 | 0.53 | lost | -$7.96 |
-| 2026-10-12 00:38 | favourite | esoccergame | Estudiantes (PinkElephant) | São Paulo (Niskanen15) | YES Estudiantes (PinkElephant) | 13 | 0.59 | 0.63 | 0.63 | lost | -$7.90 |
-| 2026-10-11 15:53 | model-only | cs2 | antidaun | Saint Sinners | YES antidaun | 8 | 0.19 | 0.43 | 0.18 | lost | -$1.61 |
 
 ## Backtest on real Kalshi prices
 
