@@ -1,8 +1,8 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/markets/KXEBASKETBALLGAME-26OCT100440RAYMELO-MELO/candlesticks?start_ts=1791619800&end_ts=1791621660&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/markets/KXEBASKETBALLGAME-26OCT100508RAYDURA-DURA/candlesticks?start_ts=1791621480&end_ts=1791623340&period_interval=1",
  "status": 200,
  "body": {
   "candlesticks": [],
-  "ticker": "KXEBASKETBALLGAME-26OCT100440RAYMELO-MELO"
+  "ticker": "KXEBASKETBALLGAME-26OCT100508RAYDURA-DURA"
  }
 }
