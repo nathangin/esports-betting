@@ -1,8 +1,8 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/markets/KXESOCCERGAME-26OCT100019KEVIFREN-FREN/candlesticks?start_ts=1791604140&end_ts=1791606000&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/markets/KXESOCCERGAME-26OCT100021FROSPEDR-FROS/candlesticks?start_ts=1791604260&end_ts=1791606120&period_interval=1",
  "status": 200,
  "body": {
   "candlesticks": [],
-  "ticker": "KXESOCCERGAME-26OCT100019KEVIFREN-FREN"
+  "ticker": "KXESOCCERGAME-26OCT100021FROSPEDR-FROS"
  }
 }
