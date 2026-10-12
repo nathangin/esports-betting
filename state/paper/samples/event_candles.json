@@ -1,17 +1,17 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT100520KYLIBRAD/candlesticks?start_ts=1791622200&end_ts=1791624060&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT100522HAZACAST/candlesticks?start_ts=1791622320&end_ts=1791624180&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791624060,
+  "adjusted_end_ts": 1791624180,
   "market_candlesticks": [
    [],
    [],
    []
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT100520KYLIBRAD-KYLI",
-   "KXESOCCERGAME-26OCT100520KYLIBRAD-BRAD",
-   "KXESOCCERGAME-26OCT100520KYLIBRAD-TIE"
+   "KXESOCCERGAME-26OCT100522HAZACAST-HAZA",
+   "KXESOCCERGAME-26OCT100522HAZACAST-CAST",
+   "KXESOCCERGAME-26OCT100522HAZACAST-TIE"
   ]
  }
 }
