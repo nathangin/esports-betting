@@ -1,128 +1,74 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT092356HOMIMORD/candlesticks?start_ts=1791602760&end_ts=1791604620&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT100005FROSKEVI/candlesticks?start_ts=1791603300&end_ts=1791605160&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791604620,
+  "adjusted_end_ts": 1791605160,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791603300,
+     "end_period_ts": 1791603720,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.2900",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.2900",
+      "close_dollars": "1.0000",
+      "high_dollars": "1.0000",
+      "low_dollars": "0.9900",
       "open_dollars": "0.9900"
      },
      "yes_bid": {
-      "close_dollars": "0.2200",
-      "high_dollars": "0.2200",
+      "close_dollars": "0.0000",
+      "high_dollars": "0.0000",
       "low_dollars": "0.0000",
       "open_dollars": "0.0000"
-     }
-    },
-    {
-     "end_period_ts": 1791604620,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.4800",
-      "high_dollars": "0.4800",
-      "low_dollars": "0.2900",
-      "open_dollars": "0.2900"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0100",
-      "high_dollars": "0.2200",
-      "low_dollars": "0.0100",
-      "open_dollars": "0.2200"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791603300,
+     "end_period_ts": 1791603720,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.6300",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.6300",
+      "close_dollars": "1.0000",
+      "high_dollars": "1.0000",
+      "low_dollars": "0.9900",
       "open_dollars": "0.9900"
      },
      "yes_bid": {
-      "close_dollars": "0.5600",
-      "high_dollars": "0.5600",
+      "close_dollars": "0.0000",
+      "high_dollars": "0.0000",
       "low_dollars": "0.0000",
       "open_dollars": "0.0000"
-     }
-    },
-    {
-     "end_period_ts": 1791604620,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.9700",
-      "high_dollars": "0.9700",
-      "low_dollars": "0.6300",
-      "open_dollars": "0.6300"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.5600",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.5600"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791603300,
+     "end_period_ts": 1791603720,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.1800",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.1800",
+      "close_dollars": "1.0000",
+      "high_dollars": "1.0000",
+      "low_dollars": "0.9900",
       "open_dollars": "0.9900"
      },
      "yes_bid": {
-      "close_dollars": "0.1100",
-      "high_dollars": "0.1100",
+      "close_dollars": "0.0000",
+      "high_dollars": "0.0000",
       "low_dollars": "0.0000",
       "open_dollars": "0.0000"
-     }
-    },
-    {
-     "end_period_ts": 1791604620,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.4800",
-      "high_dollars": "0.4800",
-      "low_dollars": "0.1800",
-      "open_dollars": "0.1800"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.1100",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.1100"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT092356HOMIMORD-HOMI",
-   "KXESOCCERGAME-26OCT092356HOMIMORD-MORD",
-   "KXESOCCERGAME-26OCT092356HOMIMORD-TIE"
+   "KXESOCCERGAME-26OCT100005FROSKEVI-FROS",
+   "KXESOCCERGAME-26OCT100005FROSKEVI-KEVI",
+   "KXESOCCERGAME-26OCT100005FROSKEVI-TIE"
   ]
  }
 }
