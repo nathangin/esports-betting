@@ -1,128 +1,74 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT101750NISKFREN/candlesticks?start_ts=1791667200&end_ts=1791669060&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT101806NISKEDER/candlesticks?start_ts=1791668160&end_ts=1791670020&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791669060,
+  "adjusted_end_ts": 1791670020,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791669000,
+     "end_period_ts": 1791670020,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9500",
+      "close_dollars": "0.3500",
       "high_dollars": "0.9500",
-      "low_dollars": "0.6100",
-      "open_dollars": "0.6100"
+      "low_dollars": "0.3500",
+      "open_dollars": "0.3500"
      },
      "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.5400",
+      "close_dollars": "0.2800",
+      "high_dollars": "0.2800",
       "low_dollars": "0.0000",
-      "open_dollars": "0.5400"
+      "open_dollars": "0.2800"
      }
-    },
+    }
+   ],
+   [
     {
-     "end_period_ts": 1791669060,
+     "end_period_ts": 1791670020,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.6100",
-      "high_dollars": "0.9500",
-      "low_dollars": "0.6100",
-      "open_dollars": "0.9500"
-     },
-     "yes_bid": {
       "close_dollars": "0.5400",
-      "high_dollars": "0.6800",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
+      "high_dollars": "0.9500",
+      "low_dollars": "0.5400",
+      "open_dollars": "0.5400"
+     },
+     "yes_bid": {
+      "close_dollars": "0.4700",
+      "high_dollars": "0.4700",
+      "low_dollars": "0.2100",
+      "open_dollars": "0.4700"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791669000,
+     "end_period_ts": 1791670020,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9500",
-      "high_dollars": "0.9500",
-      "low_dollars": "0.3100",
-      "open_dollars": "0.3100"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.2400",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.2400"
-     }
-    },
-    {
-     "end_period_ts": 1791669060,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.3100",
-      "high_dollars": "0.9500",
-      "low_dollars": "0.2000",
-      "open_dollars": "0.9500"
-     },
-     "yes_bid": {
-      "close_dollars": "0.2400",
-      "high_dollars": "0.2400",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791669000,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.9900",
+      "close_dollars": "0.2200",
       "high_dollars": "0.9900",
-      "low_dollars": "0.1800",
-      "open_dollars": "0.1800"
+      "low_dollars": "0.2200",
+      "open_dollars": "0.2200"
      },
      "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.1100",
+      "close_dollars": "0.1400",
+      "high_dollars": "0.1400",
       "low_dollars": "0.0000",
-      "open_dollars": "0.1100"
-     }
-    },
-    {
-     "end_period_ts": 1791669060,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.1900",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.1600",
-      "open_dollars": "0.9900"
-     },
-     "yes_bid": {
-      "close_dollars": "0.1200",
-      "high_dollars": "0.1200",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
+      "open_dollars": "0.1400"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT101750NISKFREN-NISK",
-   "KXESOCCERGAME-26OCT101750NISKFREN-FREN",
-   "KXESOCCERGAME-26OCT101750NISKFREN-TIE"
+   "KXESOCCERGAME-26OCT101806NISKEDER-NISK",
+   "KXESOCCERGAME-26OCT101806NISKEDER-EDER",
+   "KXESOCCERGAME-26OCT101806NISKEDER-TIE"
   ]
  }
 }

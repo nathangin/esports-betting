@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-12 21:50 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-12 21:55 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-12 21:50 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | -2.3c (18) | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 131 | 9 | 122 | 32 | -$197.22 | -12.8% | -0.4c (140) | $802.78 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 176 | 10 | 166 | 113 | -$100.55 | -8.1% | -1.9c (242) | $899.45 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 177 | 11 | 166 | 113 | -$100.55 | -8.1% | -1.9c (242) | $899.45 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-12 21:54 | favourite | lol | Disguised | Maryville University | NO Maryville University | 3 | 0.59 | 0.59 | 0.59 | open | - |
 | 2026-10-12 19:14 | favourite | cs2 | Galorys | Bounty Hunters Esports | NO Bounty Hunters Esports | 7 | 0.67 | 0.67 | 0.67 | open | - |
 | 2026-10-12 19:14 | favourite | lol | G2 HEL | AZ Rising Eterna | NO AZ Rising Eterna | 15 | 0.57 | 0.55 | 0.55 | won | $6.19 |
 | 2026-10-12 09:20 | model-only | cs2 | Sokerorg | MOUZ NXT | YES Sokerorg | 30 | 0.52 | 0.60 | 0.52 | open | - |
@@ -63,7 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-11 10:22 | favourite | cs2 | Spirit | Aurora Gaming | NO Aurora Gaming | 1 | 0.68 | 0.68 | 0.68 | lost | -$0.70 |
 | 2026-10-11 09:52 | model-only | cs2 | Fire Flux Esports | Gothic | NO Gothic | 27 | 0.53 | 0.60 | 0.52 | won | $12.21 |
 | 2026-10-11 09:21 | model-only | cs2 | TheChampionGG | VP.Future 3 | YES TheChampionGG | 37 | 0.39 | 0.45 | 0.39 | lost | -$15.05 |
-| 2026-10-11 09:21 | favourite | cs2 | Teletubisie | THE UNIT | YES Teletubisie | 9 | 0.88 | 0.87 | 0.87 | lost | -$7.99 |
 
 ## Backtest on real Kalshi prices
 
