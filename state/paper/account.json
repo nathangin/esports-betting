@@ -1,14 +1,14 @@
 {
  "blend": {
   "start": 1000.0,
-  "cash": 976.17
+  "cash": 1000.0
  },
  "model-only": {
   "start": 1000.0,
-  "cash": 673.74
+  "cash": 704.3
  },
  "favourite": {
   "start": 1000.0,
-  "cash": 774.75
+  "cash": 816.32
  }
 }

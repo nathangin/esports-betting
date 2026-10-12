@@ -1,37 +1,36 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-12 18:02 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-12 19:15 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| blend | model + market blend (the strategy under test) | 18 | 0 | 18 | 9 | -$23.83 | -8.5% | -2.3c (18) | $976.17 |
-| model-only | Elo win model alone (control: ignores the market) | 143 | 9 | 134 | 35 | -$227.78 | -13.7% | -0.4c (140) | $772.22 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 241 | 9 | 232 | 150 | -$161.92 | -9.4% | -1.9c (240) | $838.08 |
+| blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | -2.3c (18) | $1,000.00 |
+| model-only | Elo win model alone (control: ignores the market) | 131 | 9 | 122 | 32 | -$197.22 | -12.8% | -0.4c (140) | $802.78 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 176 | 11 | 165 | 112 | -$106.74 | -8.7% | -1.9c (240) | $893.26 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
+97 bets on games outside the trial (ebasketballgame, esoccergame, mlbb) were voided and their stakes returned: Kalshi listed those series after the trial began (Oct 8-10 2026), they are not games the model was built or tested on, and most had no real order book. They are not counted above.
+
 ## Forecast scoring on the matches the trader looked at
 
-2394 finished matches. Lower is better; the market line is the bar to beat.
+474 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6661 | 0.2377 |
-| model | 0.6702 | 0.2388 |
-| blend | 0.6685 | 0.2388 |
+| market | 0.5755 | 0.1962 |
+| model | 0.6643 | 0.2356 |
+| blend | 0.5754 | 0.1961 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 1544 | 0.6911 | 0.6723 |
-| ebasketballgame | 361 | 0.6818 | 0.6672 |
-| cs2 | 318 | 0.5847 | 0.6631 |
+| cs2 | 320 | 0.5863 | 0.6633 |
 | dota2 | 43 | 0.5590 | 0.6519 |
 | lol | 42 | 0.5098 | 0.7096 |
 | ow | 31 | 0.5130 | 0.5872 |
-| r6 | 23 | 0.6353 | 0.7140 |
-| mlbb | 18 | 0.6203 | 0.7106 |
+| r6 | 24 | 0.6373 | 0.7153 |
 | valorant | 14 | 0.6110 | 0.6746 |
 
 ## Latest bets
@@ -40,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-12 11:15 | model-only | ebasketballgame | Denver Nuggets (Jake) | Dallas Mavericks (Barry) | YES Denver Nuggets (Jake) | 19 | 0.16 | 0.53 | 0.55 | lost | -$3.22 |
-| 2026-10-12 10:45 | model-only | ebasketballgame | Denver Nuggets (Jake) | Dallas Mavericks (Tatum) | NO Dallas Mavericks (Tatum) | 105 | 0.15 | 0.35 | 0.12 | lost | -$16.69 |
+| 2026-10-12 19:14 | favourite | cs2 | Galorys | Bounty Hunters Esports | NO Bounty Hunters Esports | 7 | 0.67 | 0.67 | 0.67 | open | - |
+| 2026-10-12 19:14 | favourite | lol | G2 HEL | AZ Rising Eterna | NO AZ Rising Eterna | 15 | 0.57 | 0.55 | 0.55 | open | - |
 | 2026-10-12 09:20 | model-only | cs2 | Sokerorg | MOUZ NXT | YES Sokerorg | 30 | 0.52 | 0.60 | 0.52 | open | - |
 | 2026-10-12 08:50 | model-only | cs2 | Sangal | Inner Circle Esports | NO Inner Circle Esports | 47 | 0.34 | 0.51 | 0.33 | lost | -$16.72 |
 | 2026-10-12 08:50 | model-only | cs2 | Apogee Esports | NIP | NO NIP | 2 | 0.22 | 0.38 | 0.22 | lost | -$0.47 |
-| 2026-10-12 08:30 | model-only | ebasketballgame | Golden State Warriors (Shaq) | Brooklyn Nets (IceKimi) | YES Golden State Warriors (Shaq) | 24 | 0.66 | 0.73 | 0.80 | won | $7.78 |
-| 2026-10-12 08:30 | blend | ebasketballgame | New York Knicks (Tatum) | Los Angeles Lakers (Barry) | YES New York Knicks (Tatum) | 25 | 0.61 | 0.80 | 0.78 | won | $9.33 |
-| 2026-10-12 08:00 | blend | ebasketballgame | Indiana Pacers (Jake) | New Orleans Pelicans (Barry) | YES Indiana Pacers (Jake) | 22 | 0.18 | 0.57 | 0.56 | lost | -$4.19 |
-| 2026-10-12 08:00 | blend | ebasketballgame | Denver Nuggets (Shaq) | Dallas Mavericks (Clyde) | YES Denver Nuggets (Shaq) | 36 | 0.50 | 0.75 | 0.72 | lost | -$18.63 |
-| 2026-10-12 08:00 | model-only | ebasketballgame | Indiana Pacers (Jake) | New Orleans Pelicans (Barry) | YES Indiana Pacers (Jake) | 22 | 0.18 | 0.54 | 0.56 | lost | -$4.19 |
 | 2026-10-12 07:50 | model-only | lol | KT Rolster | Team Vitality | YES KT Rolster | 36 | 0.36 | 0.42 | 0.36 | won | $22.45 |
-| 2026-10-12 07:30 | blend | ebasketballgame | New Orleans Pelicans (Tatum) | Indiana Pacers (Jake) | YES New Orleans Pelicans (Tatum) | 24 | 0.84 | 0.92 | 0.89 | won | $3.61 |
-| 2026-10-12 07:30 | favourite | ebasketballgame | Denver Nuggets (IceKimi) | Dallas Mavericks (Clyde) | YES Denver Nuggets (IceKimi) | 7 | 0.37 | 0.66 | 0.66 | lost | -$2.71 |
-| 2026-10-12 07:30 | model-only | ebasketballgame | Denver Nuggets (IceKimi) | Dallas Mavericks (Clyde) | YES Denver Nuggets (IceKimi) | 29 | 0.37 | 0.42 | 0.66 | lost | -$11.21 |
-| 2026-10-12 07:30 | blend | ebasketballgame | Denver Nuggets (IceKimi) | Dallas Mavericks (Clyde) | YES Denver Nuggets (IceKimi) | 29 | 0.37 | 0.68 | 0.66 | lost | -$11.21 |
-| 2026-10-12 07:04 | blend | ebasketballgame | Dallas Mavericks (Shaq) | Denver Nuggets (IceKimi) | YES Dallas Mavericks (Shaq) | 31 | 0.63 | 0.81 | 0.79 | lost | -$20.04 |
-| 2026-10-12 07:04 | blend | ebasketballgame | New Orleans Pelicans (Tatum) | Indiana Pacers (Barry) | YES New Orleans Pelicans (Tatum) | 33 | 0.60 | 0.79 | 0.77 | lost | -$20.36 |
 | 2026-10-12 06:54 | model-only | cs2 | STATE | THE UNIT | YES STATE | 22 | 0.47 | 0.65 | 0.45 | open | - |
 | 2026-10-12 06:54 | favourite | cs2 | Bread Eaters Esports | Passion Academy | YES Bread Eaters Esports | 2 | 0.59 | 0.57 | 0.57 | won | $0.78 |
-| 2026-10-12 06:34 | blend | ebasketballgame | Golden State Warriors (Jake) | Brooklyn Nets (Barry) | YES Golden State Warriors (Jake) | 19 | 0.15 | 0.56 | 0.55 | lost | -$3.02 |
-| 2026-10-12 06:34 | favourite | ebasketballgame | New York Knicks (Shaq) | Los Angeles Lakers (Clyde) | YES New York Knicks (Shaq) | 7 | 0.48 | 0.71 | 0.71 | won | $3.51 |
-| 2026-10-12 06:34 | blend | ebasketballgame | New York Knicks (Shaq) | Los Angeles Lakers (Clyde) | YES New York Knicks (Shaq) | 31 | 0.48 | 0.74 | 0.71 | won | $15.57 |
-| 2026-10-12 06:34 | model-only | ebasketballgame | Golden State Warriors (Jake) | Brooklyn Nets (Barry) | YES Golden State Warriors (Jake) | 19 | 0.15 | 0.46 | 0.55 | lost | -$3.02 |
-| 2026-10-12 06:34 | favourite | ebasketballgame | Golden State Warriors (Jake) | Brooklyn Nets (Barry) | YES Golden State Warriors (Jake) | 1 | 0.15 | 0.55 | 0.55 | lost | -$0.16 |
-| 2026-10-12 06:09 | favourite | ebasketballgame | Brooklyn Nets (Tatum) | Golden State Warriors (Jake) | YES Brooklyn Nets (Tatum) | 1 | 0.84 | 0.89 | 0.89 | won | $0.15 |
+| 2026-10-12 05:54 | favourite | dota2 | Yellow Submarine | Nemiga Gaming | NO Nemiga Gaming | 9 | 0.86 | 0.85 | 0.85 | won | $1.18 |
+| 2026-10-12 05:54 | model-only | dota2 | Nemiga Gaming | Yellow Submarine | NO Yellow Submarine | 99 | 0.16 | 0.24 | 0.15 | lost | -$16.78 |
+| 2026-10-12 04:54 | favourite | lol | BNK FEARX | JD Gaming | YES BNK FEARX | 11 | 0.68 | 0.68 | 0.68 | won | $3.35 |
+| 2026-10-12 04:54 | model-only | lol | JD Gaming | BNK FEARX | NO BNK FEARX | 48 | 0.33 | 0.50 | 0.32 | lost | -$16.59 |
+| 2026-10-11 15:53 | model-only | cs2 | antidaun | Saint Sinners | YES antidaun | 8 | 0.19 | 0.43 | 0.18 | lost | -$1.61 |
+| 2026-10-11 14:52 | model-only | r6 | Fluxo W7M | Team Liquid | YES Fluxo W7M | 45 | 0.36 | 0.44 | 0.35 | lost | -$16.93 |
+| 2026-10-11 13:52 | model-only | cs2 | MOUZ | Vitality | YES MOUZ | 42 | 0.35 | 0.44 | 0.34 | lost | -$15.37 |
+| 2026-10-11 12:52 | model-only | cs2 | MASONIC | Aurora Young Blood | NO Aurora Young Blood | 33 | 0.43 | 0.55 | 0.42 | lost | -$14.76 |
+| 2026-10-11 12:52 | model-only | cs2 | aimclub | ARGOS | YES aimclub | 30 | 0.47 | 0.54 | 0.47 | won | $15.37 |
+| 2026-10-11 12:52 | model-only | cs2 | mellren | Bebop | YES mellren | 23 | 0.62 | 0.71 | 0.61 | won | $8.36 |
+| 2026-10-11 12:52 | model-only | cs2 | Spirit Academy Black | Metizport | NO Metizport | 9 | 0.20 | 0.36 | 0.18 | lost | -$1.91 |
+| 2026-10-11 12:52 | model-only | cs2 | Spirit Academy | 9INE | YES Spirit Academy | 34 | 0.41 | 0.65 | 0.41 | won | $19.48 |
+| 2026-10-11 11:52 | model-only | cs2 | The KnockoutX | Alter Ego | YES The KnockoutX | 22 | 0.24 | 0.40 | 0.23 | lost | -$5.57 |
+| 2026-10-11 10:22 | favourite | cs2 | Spirit | Aurora Gaming | NO Aurora Gaming | 1 | 0.68 | 0.68 | 0.68 | lost | -$0.70 |
+| 2026-10-11 09:52 | model-only | cs2 | Fire Flux Esports | Gothic | NO Gothic | 27 | 0.53 | 0.60 | 0.52 | won | $12.21 |
+| 2026-10-11 09:21 | model-only | cs2 | TheChampionGG | VP.Future 3 | YES TheChampionGG | 37 | 0.39 | 0.45 | 0.39 | lost | -$15.05 |
+| 2026-10-11 09:21 | favourite | cs2 | Teletubisie | THE UNIT | YES Teletubisie | 9 | 0.88 | 0.87 | 0.87 | lost | -$7.99 |
 
 ## Backtest on real Kalshi prices
 

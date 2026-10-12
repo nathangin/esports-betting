@@ -7,6 +7,7 @@
  "late_gap_minutes": 30,
  "late_lead_minutes": 180,
  "flat_frac": 0.01,
+ "flat_max_spread": 0.1,
  "rules": {
   "blend": {},
   "model-only": {},
