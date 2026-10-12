@@ -143,3 +143,61 @@ def test_closing_lines_backfilled_from_candles_when_runs_are_sparse(tmp_path, mo
     out2 = _run(monkeypatch, tmp_path, FakeKalshiHttp(open_markets=open_ms[2:], candles=candles),
                 NOW + timedelta(minutes=120))
     assert out2["closes_backfilled"] == 0
+
+
+def test_games_outside_the_trial_are_left_out_and_their_bets_voided(tmp_path, monkeypatch):
+    from esalpha.history import read_table, write_table
+
+    open_ms = _setup(tmp_path)
+    # Kalshi lists a new KX<GAME>GAME series (e-soccer, Oct 8 2026): it reaches the history...
+    hist = tmp_path / "history"
+    m = read_table(hist, "matches")
+    extra = m.tail(3).copy()
+    extra["series_ticker"] = "KXESOCCERGAME"
+    extra["game"] = "esoccergame"
+    extra["event_ticker"] = ["KXESOCCERGAME-26OCT01" + str(i) for i in range(3)]
+    write_table(hist, "matches", pd.concat([m, extra], ignore_index=True), "start_time")
+    st = paper.State(tmp_path)
+    assert "KXESOCCERGAME" not in st.match_series() and "KXCS2GAME" in st.match_series()
+    assert not st.all_matches()["series_ticker"].eq("KXESOCCERGAME").any()
+
+    # ...and bets placed on it before this fix are voided, with the stake given back
+    fake = FakeKalshiHttp(open_markets=open_ms)
+    _run(monkeypatch, tmp_path, fake, NOW)
+    st = paper.State(tmp_path)
+    cash0 = {b: st.account[b]["cash"] for b in paper.BOOKS}
+    led = st.ledger
+    base = led.iloc[0].to_dict()
+    lost = {**base, "bet_id": "x1", "book": "favourite", "game": "esoccergame", "status": "lost",
+            "cost": 9.7, "fee": 0.01, "pnl": -9.71, "result": "no", "settled_at": "2026-10-09T01:00:00+00:00"}
+    won = {**base, "bet_id": "x2", "book": "blend", "game": "ebasketballgame", "status": "won",
+           "cost": 4.0, "fee": 0.1, "pnl": 5.9, "result": "yes", "settled_at": "2026-10-09T02:00:00+00:00"}
+    opened = {**base, "bet_id": "x3", "book": "model-only", "game": "mlbb", "status": "open",
+              "cost": 3.0, "fee": 0.07, "pnl": None, "result": None, "settled_at": None}
+    st.ledger = pd.concat([led, pd.DataFrame([lost, won, opened])], ignore_index=True)
+    st.account["favourite"]["cash"] = cash0["favourite"] - 9.71       # what placing and settling did
+    st.account["blend"]["cash"] = cash0["blend"] + 5.9
+    st.account["model-only"]["cash"] = cash0["model-only"] - 3.07
+    st.save()
+    st = paper.State(tmp_path)
+    assert paper.void_out_of_scope(st, NOW) == 3
+    for b in paper.BOOKS:
+        assert abs(st.account[b]["cash"] - cash0[b]) < 1e-6
+    v = st.ledger[st.ledger["bet_id"].isin(["x1", "x2", "x3"])]
+    assert set(v["status"]) == {"void"} and set(v["result"]) == {paper.VOID_NOTE} and (v["pnl"] == 0).all()
+    assert paper.void_out_of_scope(st, NOW) == 0                      # idempotent
+    st.save()
+    books = report.book_stats(paper.State(tmp_path))
+    assert books["favourite"]["bets"] == 1 and books["favourite"]["void"] == 1
+
+
+def test_favourite_baseline_skips_empty_order_books():
+    from esalpha.strategy import default_rules, flat_candidates
+
+    rules = default_rules()
+    a = {"ticker": "A", "yes_bid": 0.10, "yes_ask": 0.85, "bid_size": 5, "ask_size": 5}     # 75c spreads
+    b = {"ticker": "B", "yes_bid": 0.15, "yes_ask": 0.90, "bid_size": 5, "ask_size": 5}
+    assert flat_candidates("E", True, a, b, rules, max_spread=0.10) == []
+    assert flat_candidates("E", True, a, b, rules)                    # the backtest's default keeps them
+    a2, b2 = dict(a, yes_bid=0.60, yes_ask=0.62), dict(b, yes_bid=0.38, yes_ask=0.40)
+    assert flat_candidates("E", True, a2, b2, rules, max_spread=0.10)

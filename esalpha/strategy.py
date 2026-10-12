@@ -192,11 +192,12 @@ def match_candidates(event: str, p_a: float, a: dict, b: dict, rules: Rules) -> 
     return out[:1]
 
 
-def flat_candidates(event: str, backs_a: bool, a: dict, b: dict, rules: Rules) -> list[dict]:
+def flat_candidates(event: str, backs_a: bool, a: dict, b: dict, rules: Rules,
+                    max_spread: float = 1.0) -> list[dict]:
     """Cheapest way to back a chosen team regardless of edge (for the favourite/underdog
-    baselines); size with ``flat_rules``."""
+    baselines); size with ``flat_rules``. ``max_spread`` skips books with no real two-sided market."""
     loose = Rules(**{**rules.to_dict(), "sides": tuple(rules.sides), "min_edge": -1.0, "min_roi": -1.0,
-                     "max_spread": 1.0})
+                     "max_spread": max_spread})
     cands = match_candidates(event, 0.999 if backs_a else 0.001, a, b, loose)
     for c in cands:
         c["kelly_f"] = 1.0
