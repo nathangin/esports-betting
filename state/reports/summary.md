@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-12 02:10 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-12 02:15 UTC. Model fitted 2026-10-05T18:34. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,23 +8,23 @@ Updated 2026-10-12 02:10 UTC. Model fitted 2026-10-05T18:34. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 0 | -$19.69 | -100.0% | -13.5c (1) | $980.31 |
 | model-only | Elo win model alone (control: ignores the market) | 125 | 8 | 117 | 31 | -$157.05 | -10.7% | -0.8c (122) | $842.95 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 218 | 19 | 199 | 128 | -$186.35 | -12.4% | -1.9c (213) | $813.65 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 219 | 18 | 201 | 128 | -$202.21 | -13.3% | -1.9c (215) | $797.79 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
 ## Forecast scoring on the matches the trader looked at
 
-2050 finished matches. Lower is better; the market line is the bar to beat.
+2053 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.6661 | 0.2376 |
-| model | 0.6684 | 0.2379 |
-| blend | 0.6685 | 0.2387 |
+| market | 0.6663 | 0.2377 |
+| model | 0.6682 | 0.2378 |
+| blend | 0.6688 | 0.2388 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| esoccergame | 1296 | 0.6906 | 0.6689 |
+| esoccergame | 1299 | 0.6909 | 0.6687 |
 | cs2 | 301 | 0.5899 | 0.6637 |
 | ebasketballgame | 299 | 0.6845 | 0.6689 |
 | lol | 38 | 0.5060 | 0.6989 |
@@ -40,14 +40,15 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-12 02:14 | favourite | esoccergame | Argentina (Millie) | England (July) | YES Argentina (Millie) | 12 | 0.62 | 0.66 | 0.66 | open | - |
 | 2026-10-12 01:49 | favourite | ebasketballgame | Los Angeles Lakers (Larry) | New York Knicks (Walt) | YES Los Angeles Lakers (Larry) | 14 | 0.56 | 0.57 | 0.57 | open | - |
 | 2026-10-12 01:49 | favourite | ebasketballgame | Golden State Warriors (Donovan) | Brooklyn Nets (James) | YES Golden State Warriors (Donovan) | 15 | 0.52 | 0.52 | 0.52 | open | - |
 | 2026-10-12 01:23 | favourite | esoccergame | 1. FC Köln (PinkElephant) | FSV Mainz 05 (Eder) | YES 1. FC Köln (PinkElephant) | 13 | 0.57 | 0.61 | 0.61 | open | - |
 | 2026-10-12 01:18 | favourite | esoccergame | Dortmund (Niskanen15) | FC Augsburg (Rooney) | YES Dortmund (Niskanen15) | 15 | 0.51 | 0.56 | 0.56 | open | - |
 | 2026-10-12 01:08 | favourite | esoccergame | Leverkusen (Hurricane) | FSV Mainz 05 (Eder) | YES Leverkusen (Hurricane) | 16 | 0.47 | 0.52 | 0.52 | open | - |
 | 2026-10-12 01:03 | favourite | esoccergame | 1. FC Köln (PinkElephant) | FC Augsburg (Rooney) | YES 1. FC Köln (PinkElephant) | 13 | 0.59 | 0.63 | 0.63 | open | - |
-| 2026-10-12 00:53 | favourite | esoccergame | 1. FC Köln (PinkElephant) | Leverkusen (Hurricane) | YES 1. FC Köln (PinkElephant) | 16 | 0.48 | 0.53 | 0.53 | open | - |
-| 2026-10-12 00:38 | favourite | esoccergame | Estudiantes (PinkElephant) | São Paulo (Niskanen15) | YES Estudiantes (PinkElephant) | 13 | 0.59 | 0.63 | 0.63 | open | - |
+| 2026-10-12 00:53 | favourite | esoccergame | 1. FC Köln (PinkElephant) | Leverkusen (Hurricane) | YES 1. FC Köln (PinkElephant) | 16 | 0.48 | 0.53 | 0.53 | lost | -$7.96 |
+| 2026-10-12 00:38 | favourite | esoccergame | Estudiantes (PinkElephant) | São Paulo (Niskanen15) | YES Estudiantes (PinkElephant) | 13 | 0.59 | 0.63 | 0.63 | lost | -$7.90 |
 | 2026-10-11 15:53 | model-only | cs2 | antidaun | Saint Sinners | YES antidaun | 8 | 0.19 | 0.43 | 0.18 | lost | -$1.61 |
 | 2026-10-11 14:52 | model-only | r6 | Fluxo W7M | Team Liquid | YES Fluxo W7M | 45 | 0.36 | 0.44 | 0.35 | lost | -$16.93 |
 | 2026-10-11 13:52 | model-only | cs2 | MOUZ | Vitality | YES MOUZ | 42 | 0.35 | 0.44 | 0.34 | lost | -$15.37 |
@@ -60,11 +61,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-11 10:22 | favourite | cs2 | Spirit | Aurora Gaming | NO Aurora Gaming | 1 | 0.68 | 0.68 | 0.68 | lost | -$0.70 |
 | 2026-10-11 09:52 | model-only | cs2 | Fire Flux Esports | Gothic | NO Gothic | 27 | 0.53 | 0.60 | 0.52 | won | $12.21 |
 | 2026-10-11 09:47 | favourite | esoccergame | RB Leipzig (Kylian) | Mönchengladbach (Bradley) | YES RB Leipzig (Kylian) | 2 | 0.63 | 0.66 | 0.66 | won | $0.70 |
-| 2026-10-11 09:21 | favourite | cs2 | Teletubisie | THE UNIT | YES Teletubisie | 9 | 0.88 | 0.87 | 0.87 | lost | -$7.99 |
-| 2026-10-11 09:21 | favourite | esoccergame | RB Leipzig (Kylian) | Freiburg (Kevin) | YES RB Leipzig (Kylian) | 15 | 0.55 | 0.59 | 0.59 | lost | -$8.51 |
-| 2026-10-11 09:21 | model-only | cs2 | THE UNIT | Teletubisie | NO Teletubisie | 102 | 0.14 | 0.25 | 0.13 | won | $86.86 |
-| 2026-10-11 09:21 | favourite | esoccergame | Mönchengladbach (Bradley) | Stuttgart (Frost) | YES Mönchengladbach (Bradley) | 8 | 0.52 | 0.56 | 0.56 | lost | -$4.30 |
 | 2026-10-11 09:21 | model-only | cs2 | TheChampionGG | VP.Future 3 | YES TheChampionGG | 37 | 0.39 | 0.45 | 0.39 | lost | -$15.05 |
+| 2026-10-11 09:21 | favourite | cs2 | Teletubisie | THE UNIT | YES Teletubisie | 9 | 0.88 | 0.87 | 0.87 | lost | -$7.99 |
+| 2026-10-11 09:21 | model-only | cs2 | THE UNIT | Teletubisie | NO Teletubisie | 102 | 0.14 | 0.25 | 0.13 | won | $86.86 |
+| 2026-10-11 09:21 | favourite | esoccergame | RB Leipzig (Kylian) | Freiburg (Kevin) | YES RB Leipzig (Kylian) | 15 | 0.55 | 0.59 | 0.59 | lost | -$8.51 |
 
 ## Backtest on real Kalshi prices
 
