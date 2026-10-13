@@ -1,8 +1,8 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/markets/KXEBASKETBALLGAME-26OCT100536DURAMELO-DURA/candlesticks?start_ts=1791623160&end_ts=1791625020&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/markets/KXESOCCERGAME-26OCT110536NAIRMANT-MANT/candlesticks?start_ts=1791709560&end_ts=1791711420&period_interval=1",
  "status": 200,
  "body": {
   "candlesticks": [],
-  "ticker": "KXEBASKETBALLGAME-26OCT100536DURAMELO-DURA"
+  "ticker": "KXESOCCERGAME-26OCT110536NAIRMANT-MANT"
  }
 }
