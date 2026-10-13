@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-13 16:02 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-13 16:12 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 146 | 15 | 131 | 34 | -$258.33 | -15.5% | -0.8c (141) | $741.67 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 206 | 21 | 185 | 128 | -$90.68 | -6.6% | -0.8c (202) | $909.32 |
+| model-only | Elo win model alone (control: ignores the market) | 146 | 13 | 133 | 34 | -$274.75 | -16.3% | -0.8c (141) | $725.25 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 206 | 19 | 187 | 130 | -$87.11 | -6.2% | -0.8c (202) | $912.89 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,19 +16,19 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-509 finished matches. Lower is better; the market line is the bar to beat.
+510 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
 | market | 0.5643 | 0.1916 |
-| model | 0.6650 | 0.2359 |
-| blend | 0.5630 | 0.1911 |
+| model | 0.6647 | 0.2357 |
+| blend | 0.5631 | 0.1911 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 335 | 0.5813 | 0.6648 |
 | dota2 | 54 | 0.5128 | 0.6480 |
-| lol | 47 | 0.5016 | 0.7310 |
+| lol | 48 | 0.5033 | 0.7254 |
 | ow | 34 | 0.4812 | 0.5596 |
 | r6 | 25 | 0.6521 | 0.7187 |
 | valorant | 14 | 0.6110 | 0.6746 |
@@ -53,12 +53,12 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-13 12:52 | favourite | cs2 | Walczaki | Saint Sinners | YES Walczaki | 17 | 0.52 | 0.53 | 0.53 | open | - |
 | 2026-10-13 11:52 | favourite | dota2 | Power Rangers | The Warriors | YES Power Rangers | 13 | 0.68 | 0.67 | 0.67 | open | - |
 | 2026-10-13 11:52 | model-only | dota2 | The Warriors | Power Rangers | YES The Warriors | 45 | 0.34 | 0.51 | 0.33 | open | - |
-| 2026-10-13 11:52 | favourite | dota2 | Dawn Bulls | Spirit Academy | YES Dawn Bulls | 10 | 0.84 | 0.83 | 0.83 | open | - |
-| 2026-10-13 11:52 | model-only | dota2 | Spirit Academy | Dawn Bulls | NO Dawn Bulls | 2 | 0.19 | 0.33 | 0.17 | open | - |
+| 2026-10-13 11:52 | favourite | dota2 | Dawn Bulls | Spirit Academy | YES Dawn Bulls | 10 | 0.84 | 0.83 | 0.83 | won | $1.50 |
+| 2026-10-13 11:52 | model-only | dota2 | Spirit Academy | Dawn Bulls | NO Dawn Bulls | 2 | 0.19 | 0.33 | 0.17 | lost | -$0.41 |
 | 2026-10-13 11:52 | favourite | cs2 | QUINTESSENCIA | Martians | NO Martians | 11 | 0.76 | 0.75 | 0.75 | won | $2.49 |
 | 2026-10-13 11:52 | model-only | cs2 | Martians | QUINTESSENCIA | YES Martians | 61 | 0.25 | 0.46 | 0.25 | lost | -$16.06 |
-| 2026-10-13 11:52 | favourite | cs2 | Alter Ego | Just Swing | YES Alter Ego | 11 | 0.80 | 0.80 | 0.80 | open | - |
-| 2026-10-13 11:52 | model-only | cs2 | Just Swing | Alter Ego | NO Alter Ego | 69 | 0.22 | 0.42 | 0.20 | open | - |
+| 2026-10-13 11:52 | favourite | cs2 | Alter Ego | Just Swing | YES Alter Ego | 11 | 0.80 | 0.80 | 0.80 | won | $2.07 |
+| 2026-10-13 11:52 | model-only | cs2 | Just Swing | Alter Ego | NO Alter Ego | 69 | 0.22 | 0.42 | 0.20 | lost | -$16.01 |
 | 2026-10-13 10:51 | favourite | lol | Nothin'Here | essences | NO essences | 15 | 0.56 | 0.56 | 0.56 | won | $6.34 |
 | 2026-10-13 10:51 | model-only | lol | Nothin'Here | essences | NO essences | 27 | 0.56 | 0.63 | 0.56 | won | $11.41 |
 | 2026-10-13 10:51 | favourite | ow | 99DIVINE | Please Not Hero Ban | YES 99DIVINE | 2 | 0.89 | 0.86 | 0.86 | won | $0.20 |
