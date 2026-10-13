@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-13 09:56 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-13 10:01 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-13 09:56 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 138 | 16 | 122 | 32 | -$197.22 | -12.8% | -0.8c (134) | $802.78 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 191 | 22 | 169 | 116 | -$96.34 | -7.7% | -0.9c (188) | $903.66 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 191 | 21 | 170 | 117 | -$95.69 | -7.6% | -0.9c (188) | $904.31 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -53,7 +53,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-13 07:51 | favourite | lol | LGD Gaming | OKSavingsBank BRION | NO OKSavingsBank BRION | 16 | 0.54 | 0.54 | 0.54 | open | - |
 | 2026-10-13 06:51 | model-only | cs2 | WRAITH PCIFIC | STATE | NO STATE | 38 | 0.38 | 0.44 | 0.36 | open | - |
 | 2026-10-13 06:51 | favourite | dota2 | Cloud Rising | Cloud Dawning | NO Cloud Dawning | 10 | 0.83 | 0.80 | 0.80 | open | - |
-| 2026-10-13 06:51 | favourite | cs2 | Copenhagen Wolves | VP.Future 3 | YES Copenhagen Wolves | 3 | 0.77 | 0.77 | 0.77 | open | - |
+| 2026-10-13 06:51 | favourite | cs2 | Copenhagen Wolves | VP.Future 3 | YES Copenhagen Wolves | 3 | 0.77 | 0.77 | 0.77 | won | $0.65 |
 | 2026-10-13 06:51 | favourite | cs2 | BakS eSports | Spirit Academy | YES BakS eSports | 15 | 0.56 | 0.55 | 0.55 | open | - |
 | 2026-10-13 06:51 | model-only | cs2 | Spirit Academy | BakS eSports | YES Spirit Academy | 34 | 0.45 | 0.60 | 0.45 | open | - |
 | 2026-10-13 06:51 | favourite | cs2 | STATE | WRAITH PCIFIC | YES STATE | 13 | 0.65 | 0.64 | 0.64 | open | - |
