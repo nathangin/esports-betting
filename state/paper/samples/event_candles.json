@@ -1,24 +1,24 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT102050DANNNISK/candlesticks?start_ts=1791678000&end_ts=1791679860&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT102056MORDHOMI/candlesticks?start_ts=1791678360&end_ts=1791680220&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791679860,
+  "adjusted_end_ts": 1791680220,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791679860,
+     "end_period_ts": 1791680220,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4900",
-      "high_dollars": "0.9500",
-      "low_dollars": "0.4900",
-      "open_dollars": "0.9500"
+      "close_dollars": "0.6100",
+      "high_dollars": "0.9200",
+      "low_dollars": "0.6100",
+      "open_dollars": "0.9200"
      },
      "yes_bid": {
-      "close_dollars": "0.4200",
-      "high_dollars": "0.4200",
+      "close_dollars": "0.5400",
+      "high_dollars": "0.5400",
       "low_dollars": "0.0000",
       "open_dollars": "0.0000"
      }
@@ -26,7 +26,7 @@
    ],
    [
     {
-     "end_period_ts": 1791679260,
+     "end_period_ts": 1791679560,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
@@ -44,19 +44,19 @@
      }
     },
     {
-     "end_period_ts": 1791679860,
+     "end_period_ts": 1791680220,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4100",
+      "close_dollars": "0.3100",
       "high_dollars": "0.9500",
-      "low_dollars": "0.4100",
+      "low_dollars": "0.3100",
       "open_dollars": "0.9500"
      },
      "yes_bid": {
-      "close_dollars": "0.3400",
-      "high_dollars": "0.3400",
+      "close_dollars": "0.2400",
+      "high_dollars": "0.2400",
       "low_dollars": "0.0000",
       "open_dollars": "0.0000"
      }
@@ -64,29 +64,29 @@
    ],
    [
     {
-     "end_period_ts": 1791679860,
+     "end_period_ts": 1791680220,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.2000",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.2000",
-      "open_dollars": "0.9900"
+      "close_dollars": "0.1900",
+      "high_dollars": "0.8100",
+      "low_dollars": "0.1900",
+      "open_dollars": "0.8100"
      },
      "yes_bid": {
-      "close_dollars": "0.1300",
-      "high_dollars": "0.1300",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
+      "close_dollars": "0.1200",
+      "high_dollars": "0.1200",
+      "low_dollars": "0.0100",
+      "open_dollars": "0.0100"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT102050DANNNISK-DANN",
-   "KXESOCCERGAME-26OCT102050DANNNISK-NISK",
-   "KXESOCCERGAME-26OCT102050DANNNISK-TIE"
+   "KXESOCCERGAME-26OCT102056MORDHOMI-MORD",
+   "KXESOCCERGAME-26OCT102056MORDHOMI-HOMI",
+   "KXESOCCERGAME-26OCT102056MORDHOMI-TIE"
   ]
  }
 }
