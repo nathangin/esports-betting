@@ -1,8 +1,8 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/markets/KXESOCCERGAME-26OCT111708DANNFREN-DANN/candlesticks?start_ts=1791751080&end_ts=1791752940&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/markets/KXESOCCERGAME-26OCT111722DANNNISK-DANN/candlesticks?start_ts=1791751920&end_ts=1791753780&period_interval=1",
  "status": 200,
  "body": {
   "candlesticks": [],
-  "ticker": "KXESOCCERGAME-26OCT111708DANNFREN-DANN"
+  "ticker": "KXESOCCERGAME-26OCT111722DANNNISK-DANN"
  }
 }
