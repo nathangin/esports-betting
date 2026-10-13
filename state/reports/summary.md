@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-13 10:51 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-13 11:01 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 139 | 16 | 123 | 32 | -$213.11 | -13.7% | -0.8c (135) | $786.89 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 193 | 21 | 172 | 119 | -$87.56 | -6.9% | -0.8c (190) | $912.44 |
+| model-only | Elo win model alone (control: ignores the market) | 139 | 15 | 124 | 33 | -$190.18 | -12.1% | -0.8c (135) | $809.82 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 193 | 18 | 175 | 121 | -$89.54 | -6.9% | -0.8c (190) | $910.46 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-494 finished matches. Lower is better; the market line is the bar to beat.
+495 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5681 | 0.1932 |
-| model | 0.6656 | 0.2362 |
-| blend | 0.5673 | 0.1929 |
+| market | 0.5671 | 0.1928 |
+| model | 0.6653 | 0.2361 |
+| blend | 0.5663 | 0.1925 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 328 | 0.5823 | 0.6635 |
+| cs2 | 329 | 0.5807 | 0.6630 |
 | dota2 | 49 | 0.5311 | 0.6559 |
 | lol | 46 | 0.4956 | 0.7244 |
 | ow | 32 | 0.4999 | 0.5724 |
@@ -55,12 +55,12 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-13 07:51 | favourite | dota2 | Yellow Submarine | Kalmychata | NO Kalmychata | 11 | 0.75 | 0.74 | 0.74 | open | - |
 | 2026-10-13 07:51 | model-only | dota2 | Kalmychata | Yellow Submarine | YES Kalmychata | 58 | 0.26 | 0.43 | 0.26 | open | - |
 | 2026-10-13 06:51 | favourite | cs2 | BakS eSports | Spirit Academy | YES BakS eSports | 15 | 0.56 | 0.55 | 0.55 | won | $6.34 |
-| 2026-10-13 06:51 | favourite | cs2 | STATE | WRAITH PCIFIC | YES STATE | 13 | 0.65 | 0.64 | 0.64 | open | - |
+| 2026-10-13 06:51 | favourite | cs2 | STATE | WRAITH PCIFIC | YES STATE | 13 | 0.65 | 0.64 | 0.64 | lost | -$8.66 |
 | 2026-10-13 06:51 | model-only | cs2 | Spirit Academy | BakS eSports | YES Spirit Academy | 34 | 0.45 | 0.60 | 0.45 | lost | -$15.89 |
-| 2026-10-13 06:51 | model-only | cs2 | WRAITH PCIFIC | STATE | NO STATE | 38 | 0.38 | 0.44 | 0.36 | open | - |
+| 2026-10-13 06:51 | model-only | cs2 | WRAITH PCIFIC | STATE | NO STATE | 38 | 0.38 | 0.44 | 0.36 | won | $22.93 |
 | 2026-10-13 06:51 | favourite | cs2 | Copenhagen Wolves | VP.Future 3 | YES Copenhagen Wolves | 3 | 0.77 | 0.77 | 0.77 | won | $0.65 |
-| 2026-10-13 06:51 | favourite | dota2 | Cloud Rising | Cloud Dawning | NO Cloud Dawning | 10 | 0.83 | 0.80 | 0.80 | open | - |
-| 2026-10-13 05:50 | favourite | dota2 | Team Lynx | Zero Tenacity | YES Team Lynx | 14 | 0.62 | 0.61 | 0.61 | open | - |
+| 2026-10-13 06:51 | favourite | dota2 | Cloud Rising | Cloud Dawning | NO Cloud Dawning | 10 | 0.83 | 0.80 | 0.80 | won | $1.60 |
+| 2026-10-13 05:50 | favourite | dota2 | Team Lynx | Zero Tenacity | YES Team Lynx | 14 | 0.62 | 0.61 | 0.61 | won | $5.08 |
 | 2026-10-13 04:50 | favourite | lol | Team WE | FlyQuest | NO FlyQuest | 10 | 0.81 | 0.81 | 0.80 | won | $1.79 |
 | 2026-10-13 02:50 | favourite | dota2 | Team Resilience | Imperial Power | NO Imperial Power | 9 | 0.90 | 0.88 | 0.88 | won | $0.84 |
 | 2026-10-12 21:54 | favourite | lol | Disguised | Maryville University | NO Maryville University | 3 | 0.59 | 0.59 | 0.59 | won | $1.17 |
