@@ -1,42 +1,60 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT111456HOLISHEE/candlesticks?start_ts=1791743160&end_ts=1791745020&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT111500KROCZARO/candlesticks?start_ts=1791743400&end_ts=1791745260&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791745020,
+  "adjusted_end_ts": 1791745260,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791744960,
+     "end_period_ts": 1791743460,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4900",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.4900",
+      "open_dollars": "0.9500"
+     },
+     "yes_bid": {
+      "close_dollars": "0.4200",
+      "high_dollars": "0.4200",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791745200,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
       "close_dollars": "0.9500",
       "high_dollars": "0.9500",
-      "low_dollars": "0.7200",
-      "open_dollars": "0.7200"
+      "low_dollars": "0.4900",
+      "open_dollars": "0.4900"
      },
      "yes_bid": {
       "close_dollars": "0.0000",
-      "high_dollars": "0.6500",
+      "high_dollars": "0.4200",
       "low_dollars": "0.0000",
-      "open_dollars": "0.6500"
+      "open_dollars": "0.4200"
      }
     },
     {
-     "end_period_ts": 1791745020,
+     "end_period_ts": 1791745260,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.7100",
-      "high_dollars": "0.9500",
-      "low_dollars": "0.7100",
-      "open_dollars": "0.9500"
-     },
-     "yes_bid": {
       "close_dollars": "0.6400",
-      "high_dollars": "0.6500",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.6400",
+      "open_dollars": "0.9500"
+     },
+     "yes_bid": {
+      "close_dollars": "0.5700",
+      "high_dollars": "0.5700",
       "low_dollars": "0.0000",
       "open_dollars": "0.0000"
      }
@@ -44,37 +62,55 @@
    ],
    [
     {
-     "end_period_ts": 1791744960,
+     "end_period_ts": 1791743460,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4300",
+      "high_dollars": "0.9400",
+      "low_dollars": "0.4300",
+      "open_dollars": "0.9400"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3500",
+      "high_dollars": "0.3500",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791745200,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
       "close_dollars": "0.9500",
       "high_dollars": "0.9500",
-      "low_dollars": "0.2100",
-      "open_dollars": "0.2100"
+      "low_dollars": "0.4300",
+      "open_dollars": "0.4300"
      },
      "yes_bid": {
       "close_dollars": "0.0000",
-      "high_dollars": "0.1400",
+      "high_dollars": "0.3500",
       "low_dollars": "0.0000",
-      "open_dollars": "0.1400"
+      "open_dollars": "0.3500"
      }
     },
     {
-     "end_period_ts": 1791745020,
+     "end_period_ts": 1791745260,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.2200",
+      "close_dollars": "0.2800",
       "high_dollars": "0.9500",
-      "low_dollars": "0.2100",
+      "low_dollars": "0.2800",
       "open_dollars": "0.9500"
      },
      "yes_bid": {
-      "close_dollars": "0.1500",
-      "high_dollars": "0.1500",
+      "close_dollars": "0.2100",
+      "high_dollars": "0.2200",
       "low_dollars": "0.0000",
       "open_dollars": "0.0000"
      }
@@ -82,47 +118,65 @@
    ],
    [
     {
-     "end_period_ts": 1791744960,
+     "end_period_ts": 1791743460,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1900",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1900",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1200",
+      "high_dollars": "0.1200",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791745200,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
       "close_dollars": "0.9900",
       "high_dollars": "0.9900",
-      "low_dollars": "0.1700",
-      "open_dollars": "0.1700"
+      "low_dollars": "0.1900",
+      "open_dollars": "0.1900"
      },
      "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.1000",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.1000"
+      "close_dollars": "0.0300",
+      "high_dollars": "0.1200",
+      "low_dollars": "0.0300",
+      "open_dollars": "0.1200"
      }
     },
     {
-     "end_period_ts": 1791745020,
+     "end_period_ts": 1791745260,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
       "close_dollars": "0.1800",
       "high_dollars": "0.9900",
-      "low_dollars": "0.1700",
+      "low_dollars": "0.1800",
       "open_dollars": "0.9900"
      },
      "yes_bid": {
       "close_dollars": "0.1100",
       "high_dollars": "0.1100",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
+      "low_dollars": "0.0300",
+      "open_dollars": "0.0300"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT111456HOLISHEE-HOLI",
-   "KXESOCCERGAME-26OCT111456HOLISHEE-SHEE",
-   "KXESOCCERGAME-26OCT111456HOLISHEE-TIE"
+   "KXESOCCERGAME-26OCT111500KROCZARO-KROC",
+   "KXESOCCERGAME-26OCT111500KROCZARO-ZARO",
+   "KXESOCCERGAME-26OCT111500KROCZARO-TIE"
   ]
  }
 }
