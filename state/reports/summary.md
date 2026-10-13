@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-13 14:07 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-13 14:12 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 144 | 17 | 127 | 33 | -$222.46 | -13.9% | -0.8c (140) | $777.54 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 198 | 17 | 181 | 126 | -$81.67 | -6.1% | -0.9c (196) | $918.33 |
+| model-only | Elo win model alone (control: ignores the market) | 144 | 15 | 129 | 33 | -$253.68 | -15.5% | -0.8c (140) | $746.32 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 198 | 15 | 183 | 126 | -$99.51 | -7.3% | -0.9c (196) | $900.49 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,19 +16,19 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-505 finished matches. Lower is better; the market line is the bar to beat.
+506 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5650 | 0.1918 |
-| model | 0.6635 | 0.2352 |
-| blend | 0.5639 | 0.1914 |
+| market | 0.5654 | 0.1920 |
+| model | 0.6642 | 0.2355 |
+| blend | 0.5643 | 0.1916 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 333 | 0.5817 | 0.6637 |
 | dota2 | 53 | 0.5208 | 0.6468 |
-| lol | 46 | 0.4956 | 0.7244 |
+| lol | 47 | 0.5016 | 0.7310 |
 | ow | 34 | 0.4812 | 0.5596 |
 | r6 | 25 | 0.6521 | 0.7187 |
 | valorant | 14 | 0.6110 | 0.6746 |
@@ -53,14 +53,14 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-13 10:51 | favourite | lol | Nothin'Here | essences | NO essences | 15 | 0.56 | 0.56 | 0.56 | open | - |
 | 2026-10-13 10:51 | model-only | lol | Nothin'Here | essences | NO essences | 27 | 0.56 | 0.63 | 0.56 | open | - |
 | 2026-10-13 09:51 | favourite | cs2 | Bushido Wildcats | ILLYRIANS | YES Bushido Wildcats | 14 | 0.59 | 0.58 | 0.58 | lost | -$8.50 |
-| 2026-10-13 09:21 | favourite | cs2 | Vitality Academy | RoundsGG | YES Vitality Academy | 16 | 0.54 | 0.53 | 0.53 | open | - |
-| 2026-10-13 09:21 | model-only | cs2 | Vitality Academy | RoundsGG | YES Vitality Academy | 28 | 0.54 | 0.66 | 0.53 | open | - |
+| 2026-10-13 09:21 | favourite | cs2 | Vitality Academy | RoundsGG | YES Vitality Academy | 16 | 0.54 | 0.53 | 0.53 | lost | -$8.92 |
+| 2026-10-13 09:21 | model-only | cs2 | Vitality Academy | RoundsGG | YES Vitality Academy | 28 | 0.54 | 0.66 | 0.53 | lost | -$15.61 |
 | 2026-10-13 08:51 | model-only | cs2 | JiJieHao | 100 Thieves | NO 100 Thieves | 1 | 0.34 | 0.45 | 0.34 | lost | -$0.36 |
 | 2026-10-13 08:51 | favourite | cs2 | Liquid | BBL | NO BBL | 12 | 0.71 | 0.70 | 0.71 | won | $3.30 |
 | 2026-10-13 08:51 | model-only | cs2 | BBL | Liquid | YES BBL | 51 | 0.30 | 0.46 | 0.29 | lost | -$16.05 |
 | 2026-10-13 08:51 | favourite | cs2 | 100 Thieves | JiJieHao | YES 100 Thieves | 13 | 0.67 | 0.66 | 0.66 | won | $4.08 |
-| 2026-10-13 07:51 | favourite | lol | LGD Gaming | OKSavingsBank BRION | NO OKSavingsBank BRION | 16 | 0.54 | 0.54 | 0.54 | open | - |
-| 2026-10-13 07:51 | model-only | lol | LGD Gaming | OKSavingsBank BRION | NO OKSavingsBank BRION | 28 | 0.54 | 0.65 | 0.54 | open | - |
+| 2026-10-13 07:51 | favourite | lol | LGD Gaming | OKSavingsBank BRION | NO OKSavingsBank BRION | 16 | 0.54 | 0.54 | 0.54 | lost | -$8.92 |
+| 2026-10-13 07:51 | model-only | lol | LGD Gaming | OKSavingsBank BRION | NO OKSavingsBank BRION | 28 | 0.54 | 0.65 | 0.54 | lost | -$15.61 |
 | 2026-10-13 07:51 | favourite | dota2 | HULIGANI | Nemiga Gaming | YES HULIGANI | 15 | 0.57 | 0.57 | 0.57 | won | $6.19 |
 | 2026-10-13 07:51 | favourite | dota2 | Yellow Submarine | Kalmychata | NO Kalmychata | 11 | 0.75 | 0.74 | 0.74 | won | $2.60 |
 | 2026-10-13 07:51 | model-only | dota2 | Kalmychata | Yellow Submarine | YES Kalmychata | 58 | 0.26 | 0.43 | 0.26 | lost | -$15.87 |
