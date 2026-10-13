@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-13 05:35 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-13 05:41 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-13 05:35 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 131 | 9 | 122 | 32 | -$197.22 | -12.8% | -0.7c (128) | $802.78 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 179 | 11 | 168 | 115 | -$97.18 | -7.8% | -0.9c (177) | $902.82 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 179 | 10 | 169 | 116 | -$96.34 | -7.7% | -0.9c (177) | $903.66 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -40,7 +40,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-10-13 04:50 | favourite | lol | Team WE | FlyQuest | NO FlyQuest | 10 | 0.81 | 0.81 | 0.80 | open | - |
-| 2026-10-13 02:50 | favourite | dota2 | Team Resilience | Imperial Power | NO Imperial Power | 9 | 0.90 | 0.88 | 0.88 | open | - |
+| 2026-10-13 02:50 | favourite | dota2 | Team Resilience | Imperial Power | NO Imperial Power | 9 | 0.90 | 0.88 | 0.88 | won | $0.84 |
 | 2026-10-12 21:54 | favourite | lol | Disguised | Maryville University | NO Maryville University | 3 | 0.59 | 0.59 | 0.59 | won | $1.17 |
 | 2026-10-12 19:14 | favourite | cs2 | Galorys | Bounty Hunters Esports | NO Bounty Hunters Esports | 7 | 0.67 | 0.67 | 0.67 | won | $2.20 |
 | 2026-10-12 19:14 | favourite | lol | G2 HEL | AZ Rising Eterna | NO AZ Rising Eterna | 15 | 0.57 | 0.55 | 0.55 | won | $6.19 |
