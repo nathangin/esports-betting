@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-13 19:18 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-13 19:23 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-13 19:18 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 146 | 10 | 136 | 35 | -$277.60 | -16.2% | -0.9c (142) | $722.40 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 16 | 194 | 136 | -$77.79 | -5.4% | -0.8c (207) | $922.21 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 14 | 196 | 137 | -$82.44 | -5.7% | -0.8c (207) | $917.56 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-519 finished matches. Lower is better; the market line is the bar to beat.
+522 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5616 | 0.1904 |
-| model | 0.6641 | 0.2355 |
-| blend | 0.5601 | 0.1899 |
+| market | 0.5620 | 0.1906 |
+| model | 0.6652 | 0.2360 |
+| blend | 0.5604 | 0.1900 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 340 | 0.5780 | 0.6639 |
+| cs2 | 343 | 0.5784 | 0.6656 |
 | dota2 | 56 | 0.5050 | 0.6448 |
 | lol | 49 | 0.4974 | 0.7250 |
 | ow | 34 | 0.4812 | 0.5596 |
@@ -41,8 +41,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-10-13 18:53 | favourite | r6 | Shopify Rebellion | Spacestation Gaming | YES Shopify Rebellion | 1 | 0.72 | 0.70 | 0.70 | open | - |
 | 2026-10-13 17:53 | favourite | cs2 | Gremio Esports | Los Ninos | NO Los Ninos | 1 | 0.64 | 0.62 | 0.62 | open | - |
-| 2026-10-13 17:23 | favourite | cs2 | PARTIZAN | aimers | YES PARTIZAN | 1 | 0.55 | 0.55 | 0.54 | open | - |
-| 2026-10-13 17:23 | favourite | cs2 | Revise | A Great Chaos | NO A Great Chaos | 7 | 0.71 | 0.64 | 0.64 | open | - |
+| 2026-10-13 17:23 | favourite | cs2 | PARTIZAN | aimers | YES PARTIZAN | 1 | 0.55 | 0.55 | 0.54 | won | $0.43 |
+| 2026-10-13 17:23 | favourite | cs2 | Revise | A Great Chaos | NO A Great Chaos | 7 | 0.71 | 0.64 | 0.64 | lost | -$5.08 |
 | 2026-10-13 15:52 | favourite | cs2 | Black Phoenix | 6666 | YES Black Phoenix | 1 | 0.77 | 0.72 | 0.72 | won | $0.21 |
 | 2026-10-13 15:52 | favourite | cs2 | Spirit Academy Green | Fraternity | YES Spirit Academy Green | 12 | 0.70 | 0.69 | 0.69 | won | $3.42 |
 | 2026-10-13 15:52 | model-only | cs2 | Fraternity | Spirit Academy Green | YES Fraternity | 3 | 0.32 | 0.43 | 0.31 | lost | -$1.01 |
