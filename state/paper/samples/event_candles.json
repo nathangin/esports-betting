@@ -1,60 +1,60 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT111500KROCZARO/candlesticks?start_ts=1791743400&end_ts=1791745260&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT111514MINJZARO/candlesticks?start_ts=1791744240&end_ts=1791746100&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791745260,
+  "adjusted_end_ts": 1791746100,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791743460,
+     "end_period_ts": 1791744420,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4900",
+      "close_dollars": "0.4400",
       "high_dollars": "0.9500",
-      "low_dollars": "0.4900",
+      "low_dollars": "0.4400",
       "open_dollars": "0.9500"
      },
      "yes_bid": {
-      "close_dollars": "0.4200",
-      "high_dollars": "0.4200",
+      "close_dollars": "0.3700",
+      "high_dollars": "0.3700",
       "low_dollars": "0.0000",
       "open_dollars": "0.0000"
      }
     },
     {
-     "end_period_ts": 1791745200,
+     "end_period_ts": 1791746040,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
       "close_dollars": "0.9500",
       "high_dollars": "0.9500",
-      "low_dollars": "0.4900",
-      "open_dollars": "0.4900"
+      "low_dollars": "0.4400",
+      "open_dollars": "0.4400"
      },
      "yes_bid": {
       "close_dollars": "0.0000",
-      "high_dollars": "0.4200",
+      "high_dollars": "0.3700",
       "low_dollars": "0.0000",
-      "open_dollars": "0.4200"
+      "open_dollars": "0.3700"
      }
     },
     {
-     "end_period_ts": 1791745260,
+     "end_period_ts": 1791746100,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.6400",
+      "close_dollars": "0.5900",
       "high_dollars": "0.9500",
-      "low_dollars": "0.6400",
+      "low_dollars": "0.4400",
       "open_dollars": "0.9500"
      },
      "yes_bid": {
-      "close_dollars": "0.5700",
-      "high_dollars": "0.5700",
+      "close_dollars": "0.5200",
+      "high_dollars": "0.5200",
       "low_dollars": "0.0000",
       "open_dollars": "0.0000"
      }
@@ -62,55 +62,55 @@
    ],
    [
     {
-     "end_period_ts": 1791743460,
+     "end_period_ts": 1791744420,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4300",
+      "close_dollars": "0.4800",
       "high_dollars": "0.9400",
-      "low_dollars": "0.4300",
+      "low_dollars": "0.4800",
       "open_dollars": "0.9400"
      },
      "yes_bid": {
-      "close_dollars": "0.3500",
-      "high_dollars": "0.3500",
+      "close_dollars": "0.4100",
+      "high_dollars": "0.4100",
       "low_dollars": "0.0000",
       "open_dollars": "0.0000"
      }
     },
     {
-     "end_period_ts": 1791745200,
+     "end_period_ts": 1791746040,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9500",
-      "high_dollars": "0.9500",
-      "low_dollars": "0.4300",
-      "open_dollars": "0.4300"
+      "close_dollars": "0.9200",
+      "high_dollars": "0.9200",
+      "low_dollars": "0.4800",
+      "open_dollars": "0.4800"
      },
      "yes_bid": {
       "close_dollars": "0.0000",
-      "high_dollars": "0.3500",
+      "high_dollars": "0.4100",
       "low_dollars": "0.0000",
-      "open_dollars": "0.3500"
+      "open_dollars": "0.4100"
      }
     },
     {
-     "end_period_ts": 1791745260,
+     "end_period_ts": 1791746100,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.2800",
-      "high_dollars": "0.9500",
-      "low_dollars": "0.2800",
-      "open_dollars": "0.9500"
+      "close_dollars": "0.3300",
+      "high_dollars": "0.9200",
+      "low_dollars": "0.3300",
+      "open_dollars": "0.9200"
      },
      "yes_bid": {
-      "close_dollars": "0.2100",
-      "high_dollars": "0.2200",
+      "close_dollars": "0.2600",
+      "high_dollars": "0.4100",
       "low_dollars": "0.0000",
       "open_dollars": "0.0000"
      }
@@ -118,7 +118,7 @@
    ],
    [
     {
-     "end_period_ts": 1791743460,
+     "end_period_ts": 1791744420,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
@@ -136,47 +136,47 @@
      }
     },
     {
-     "end_period_ts": 1791745200,
+     "end_period_ts": 1791746040,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9900",
-      "high_dollars": "0.9900",
+      "close_dollars": "0.9600",
+      "high_dollars": "0.9600",
       "low_dollars": "0.1900",
       "open_dollars": "0.1900"
      },
      "yes_bid": {
-      "close_dollars": "0.0300",
+      "close_dollars": "0.0000",
       "high_dollars": "0.1200",
-      "low_dollars": "0.0300",
+      "low_dollars": "0.0000",
       "open_dollars": "0.1200"
      }
     },
     {
-     "end_period_ts": 1791745260,
+     "end_period_ts": 1791746100,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
       "close_dollars": "0.1800",
-      "high_dollars": "0.9900",
+      "high_dollars": "0.9600",
       "low_dollars": "0.1800",
-      "open_dollars": "0.9900"
+      "open_dollars": "0.9600"
      },
      "yes_bid": {
       "close_dollars": "0.1100",
-      "high_dollars": "0.1100",
-      "low_dollars": "0.0300",
-      "open_dollars": "0.0300"
+      "high_dollars": "0.1200",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT111500KROCZARO-KROC",
-   "KXESOCCERGAME-26OCT111500KROCZARO-ZARO",
-   "KXESOCCERGAME-26OCT111500KROCZARO-TIE"
+   "KXESOCCERGAME-26OCT111514MINJZARO-MINJ",
+   "KXESOCCERGAME-26OCT111514MINJZARO-ZARO",
+   "KXESOCCERGAME-26OCT111514MINJZARO-TIE"
   ]
  }
 }

@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-13 18:58 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-13 19:03 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 146 | 11 | 135 | 34 | -$291.77 | -17.2% | -0.9c (142) | $708.23 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 17 | 193 | 136 | -$69.44 | -4.8% | -0.8c (207) | $930.56 |
+| model-only | Elo win model alone (control: ignores the market) | 146 | 10 | 136 | 35 | -$277.60 | -16.2% | -0.9c (142) | $722.40 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 210 | 16 | 194 | 136 | -$77.79 | -5.4% | -0.8c (207) | $922.21 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,13 +16,13 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-518 finished matches. Lower is better; the market line is the bar to beat.
+519 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5606 | 0.1899 |
-| model | 0.6637 | 0.2353 |
-| blend | 0.5589 | 0.1893 |
+| market | 0.5616 | 0.1904 |
+| model | 0.6641 | 0.2355 |
+| blend | 0.5601 | 0.1899 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
@@ -30,7 +30,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | dota2 | 56 | 0.5050 | 0.6448 |
 | lol | 49 | 0.4974 | 0.7250 |
 | ow | 34 | 0.4812 | 0.5596 |
-| r6 | 25 | 0.6521 | 0.7187 |
+| r6 | 26 | 0.6696 | 0.7234 |
 | valorant | 14 | 0.6110 | 0.6746 |
 
 ## Latest bets
@@ -51,8 +51,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-13 14:52 | favourite | cs2 | Procyon Gaming | Hacha Esports | YES Procyon Gaming | 10 | 0.86 | 0.85 | 0.85 | won | $1.31 |
 | 2026-10-13 14:52 | favourite | dota2 | Dawn Bulls | Nemiga Gaming | YES Dawn Bulls | 5 | 0.78 | 0.79 | 0.79 | open | - |
 | 2026-10-13 14:52 | favourite | lol | Solary | Anubis Gaming | YES Solary | 10 | 0.85 | 0.83 | 0.83 | open | - |
-| 2026-10-13 14:52 | model-only | r6 | Geekay Esports | G2 Esports | NO G2 Esports | 22 | 0.34 | 0.43 | 0.33 | open | - |
-| 2026-10-13 14:52 | favourite | r6 | G2 Esports | Geekay Esports | YES G2 Esports | 12 | 0.68 | 0.67 | 0.67 | open | - |
+| 2026-10-13 14:52 | model-only | r6 | Geekay Esports | G2 Esports | NO G2 Esports | 22 | 0.34 | 0.43 | 0.33 | won | $14.17 |
+| 2026-10-13 14:52 | favourite | r6 | G2 Esports | Geekay Esports | YES G2 Esports | 12 | 0.68 | 0.67 | 0.67 | lost | -$8.35 |
 | 2026-10-13 12:52 | favourite | cs2 | Walczaki | Saint Sinners | YES Walczaki | 17 | 0.52 | 0.53 | 0.53 | open | - |
 | 2026-10-13 12:52 | model-only | cs2 | Saint Sinners | Walczaki | YES Saint Sinners | 31 | 0.47 | 0.53 | 0.47 | open | - |
 | 2026-10-13 11:52 | model-only | dota2 | Spirit Academy | Dawn Bulls | NO Dawn Bulls | 2 | 0.19 | 0.33 | 0.17 | lost | -$0.41 |
