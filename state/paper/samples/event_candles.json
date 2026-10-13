@@ -1,80 +1,200 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT111540ANTOSHEE/candlesticks?start_ts=1791745800&end_ts=1791747660&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT111553GIGIMADD/candlesticks?start_ts=1791746580&end_ts=1791748440&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791747660,
+  "adjusted_end_ts": 1791748440,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791747660,
-     "open_interest_fp": "34.64",
-     "price": {
-      "close_dollars": "0.5600",
-      "high_dollars": "0.5600",
-      "low_dollars": "0.5600",
-      "mean_dollars": "0.5600",
-      "open_dollars": "0.5600"
-     },
-     "volume_fp": "34.64",
+     "end_period_ts": 1791748200,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.5600",
+      "close_dollars": "0.9000",
       "high_dollars": "0.9500",
-      "low_dollars": "0.5600",
-      "open_dollars": "0.5600"
+      "low_dollars": "0.9000",
+      "open_dollars": "0.9500"
      },
      "yes_bid": {
-      "close_dollars": "0.4900",
-      "high_dollars": "0.4900",
+      "close_dollars": "0.8300",
+      "high_dollars": "0.8300",
       "low_dollars": "0.0000",
-      "open_dollars": "0.4900"
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791748380,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.9500",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.9000",
+      "open_dollars": "0.9000"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0000",
+      "high_dollars": "0.8300",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.8300"
+     }
+    },
+    {
+     "end_period_ts": 1791748440,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.8100",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.8100",
+      "open_dollars": "0.9500"
+     },
+     "yes_bid": {
+      "close_dollars": "0.7400",
+      "high_dollars": "0.7400",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791747660,
+     "end_period_ts": 1791747780,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.3500",
+      "close_dollars": "0.9500",
       "high_dollars": "0.9500",
-      "low_dollars": "0.3500",
-      "open_dollars": "0.3500"
+      "low_dollars": "0.9400",
+      "open_dollars": "0.9400"
      },
      "yes_bid": {
-      "close_dollars": "0.2800",
-      "high_dollars": "0.2800",
+      "close_dollars": "0.0000",
+      "high_dollars": "0.0000",
       "low_dollars": "0.0000",
-      "open_dollars": "0.2800"
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791748200,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1000",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.1000",
+      "open_dollars": "0.9500"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0300",
+      "high_dollars": "0.0300",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791748380,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.8900",
+      "high_dollars": "0.8900",
+      "low_dollars": "0.1000",
+      "open_dollars": "0.1000"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0000",
+      "high_dollars": "0.0300",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0300"
+     }
+    },
+    {
+     "end_period_ts": 1791748440,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1700",
+      "high_dollars": "0.8900",
+      "low_dollars": "0.1700",
+      "open_dollars": "0.8900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1000",
+      "high_dollars": "0.1000",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791747660,
+     "end_period_ts": 1791748200,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.1900",
-      "high_dollars": "0.9400",
-      "low_dollars": "0.1900",
-      "open_dollars": "0.1900"
+      "close_dollars": "0.1000",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1000",
+      "open_dollars": "0.9900"
      },
      "yes_bid": {
-      "close_dollars": "0.1200",
-      "high_dollars": "0.1200",
+      "close_dollars": "0.0300",
+      "high_dollars": "0.0300",
       "low_dollars": "0.0000",
-      "open_dollars": "0.1200"
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791748380,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.6800",
+      "high_dollars": "0.6800",
+      "low_dollars": "0.1000",
+      "open_dollars": "0.1000"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0000",
+      "high_dollars": "0.0300",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0300"
+     }
+    },
+    {
+     "end_period_ts": 1791748440,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1300",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1300",
+      "open_dollars": "0.6800"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0600",
+      "high_dollars": "0.0600",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT111540ANTOSHEE-ANTO",
-   "KXESOCCERGAME-26OCT111540ANTOSHEE-SHEE",
-   "KXESOCCERGAME-26OCT111540ANTOSHEE-TIE"
+   "KXESOCCERGAME-26OCT111553GIGIMADD-GIGI",
+   "KXESOCCERGAME-26OCT111553GIGIMADD-MADD",
+   "KXESOCCERGAME-26OCT111553GIGIMADD-TIE"
   ]
  }
 }
