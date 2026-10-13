@@ -1,12 +1,30 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT110506KYLIHAZA/candlesticks?start_ts=1791707760&end_ts=1791709620&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT110522KEVIHAZA/candlesticks?start_ts=1791708720&end_ts=1791710580&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791709620,
+  "adjusted_end_ts": 1791710580,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791709020,
+     "end_period_ts": 1791708840,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.9400",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.9400",
+      "open_dollars": "0.9500"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0000",
+      "high_dollars": "0.0000",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791709980,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
@@ -28,9 +46,9 @@
    []
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT110506KYLIHAZA-KYLI",
-   "KXESOCCERGAME-26OCT110506KYLIHAZA-HAZA",
-   "KXESOCCERGAME-26OCT110506KYLIHAZA-TIE"
+   "KXESOCCERGAME-26OCT110522KEVIHAZA-KEVI",
+   "KXESOCCERGAME-26OCT110522KEVIHAZA-HAZA",
+   "KXESOCCERGAME-26OCT110522KEVIHAZA-TIE"
   ]
  }
 }
