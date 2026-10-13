@@ -1,74 +1,74 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT111018SHAQSHEE/candlesticks?start_ts=1791726480&end_ts=1791728340&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT111032SHAQHOLI/candlesticks?start_ts=1791727320&end_ts=1791729180&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791728340,
+  "adjusted_end_ts": 1791729180,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791728340,
+     "end_period_ts": 1791729180,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.3800",
+      "close_dollars": "0.1200",
+      "high_dollars": "0.9300",
+      "low_dollars": "0.1200",
+      "open_dollars": "0.1900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0500",
+      "high_dollars": "0.1200",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.1200"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791729180,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.8700",
       "high_dollars": "0.9500",
-      "low_dollars": "0.3800",
-      "open_dollars": "0.5400"
+      "low_dollars": "0.7600",
+      "open_dollars": "0.7600"
      },
      "yes_bid": {
-      "close_dollars": "0.3100",
-      "high_dollars": "0.4600",
+      "close_dollars": "0.8000",
+      "high_dollars": "0.8000",
       "low_dollars": "0.0000",
-      "open_dollars": "0.4600"
+      "open_dollars": "0.6900"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791728340,
+     "end_period_ts": 1791729180,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.5400",
-      "high_dollars": "0.9100",
-      "low_dollars": "0.3900",
-      "open_dollars": "0.3900"
-     },
-     "yes_bid": {
-      "close_dollars": "0.4700",
-      "high_dollars": "0.4700",
-      "low_dollars": "0.0700",
-      "open_dollars": "0.3200"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791728340,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.1900",
+      "close_dollars": "0.1200",
       "high_dollars": "0.9900",
-      "low_dollars": "0.1800",
-      "open_dollars": "0.1800"
+      "low_dollars": "0.1200",
+      "open_dollars": "0.1500"
      },
      "yes_bid": {
-      "close_dollars": "0.1100",
-      "high_dollars": "0.1100",
+      "close_dollars": "0.0500",
+      "high_dollars": "0.0900",
       "low_dollars": "0.0000",
-      "open_dollars": "0.1100"
+      "open_dollars": "0.0800"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT111018SHAQSHEE-SHAQ",
-   "KXESOCCERGAME-26OCT111018SHAQSHEE-SHEE",
-   "KXESOCCERGAME-26OCT111018SHAQSHEE-TIE"
+   "KXESOCCERGAME-26OCT111032SHAQHOLI-SHAQ",
+   "KXESOCCERGAME-26OCT111032SHAQHOLI-HOLI",
+   "KXESOCCERGAME-26OCT111032SHAQHOLI-TIE"
   ]
  }
 }
