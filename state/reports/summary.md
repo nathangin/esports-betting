@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-13 04:46 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-13 04:50 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-13 04:46 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 131 | 9 | 122 | 32 | -$197.22 | -12.8% | -0.7c (128) | $802.78 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 178 | 10 | 168 | 115 | -$97.18 | -7.8% | -0.9c (177) | $902.82 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 179 | 11 | 168 | 115 | -$97.18 | -7.8% | -0.9c (177) | $902.82 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-13 04:50 | favourite | lol | Team WE | FlyQuest | NO FlyQuest | 10 | 0.81 | 0.81 | 0.80 | open | - |
 | 2026-10-13 02:50 | favourite | dota2 | Team Resilience | Imperial Power | NO Imperial Power | 9 | 0.90 | 0.88 | 0.88 | open | - |
 | 2026-10-12 21:54 | favourite | lol | Disguised | Maryville University | NO Maryville University | 3 | 0.59 | 0.59 | 0.59 | won | $1.17 |
 | 2026-10-12 19:14 | favourite | cs2 | Galorys | Bounty Hunters Esports | NO Bounty Hunters Esports | 7 | 0.67 | 0.67 | 0.67 | won | $2.20 |
@@ -47,8 +48,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-12 08:50 | model-only | cs2 | Sangal | Inner Circle Esports | NO Inner Circle Esports | 47 | 0.34 | 0.51 | 0.33 | lost | -$16.72 |
 | 2026-10-12 08:50 | model-only | cs2 | Apogee Esports | NIP | NO NIP | 2 | 0.22 | 0.38 | 0.22 | lost | -$0.47 |
 | 2026-10-12 07:50 | model-only | lol | KT Rolster | Team Vitality | YES KT Rolster | 36 | 0.36 | 0.42 | 0.36 | won | $22.45 |
-| 2026-10-12 06:54 | model-only | cs2 | STATE | THE UNIT | YES STATE | 22 | 0.47 | 0.65 | 0.45 | open | - |
 | 2026-10-12 06:54 | favourite | cs2 | Bread Eaters Esports | Passion Academy | YES Bread Eaters Esports | 2 | 0.59 | 0.57 | 0.57 | won | $0.78 |
+| 2026-10-12 06:54 | model-only | cs2 | STATE | THE UNIT | YES STATE | 22 | 0.47 | 0.65 | 0.45 | open | - |
 | 2026-10-12 05:54 | favourite | dota2 | Yellow Submarine | Nemiga Gaming | NO Nemiga Gaming | 9 | 0.86 | 0.85 | 0.85 | won | $1.18 |
 | 2026-10-12 05:54 | model-only | dota2 | Nemiga Gaming | Yellow Submarine | NO Yellow Submarine | 99 | 0.16 | 0.24 | 0.15 | lost | -$16.78 |
 | 2026-10-12 04:54 | favourite | lol | BNK FEARX | JD Gaming | YES BNK FEARX | 11 | 0.68 | 0.68 | 0.68 | won | $3.35 |
@@ -63,7 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-11 12:52 | model-only | cs2 | Spirit Academy Black | Metizport | NO Metizport | 9 | 0.20 | 0.36 | 0.18 | lost | -$1.91 |
 | 2026-10-11 11:52 | model-only | cs2 | The KnockoutX | Alter Ego | YES The KnockoutX | 22 | 0.24 | 0.40 | 0.23 | lost | -$5.57 |
 | 2026-10-11 10:22 | favourite | cs2 | Spirit | Aurora Gaming | NO Aurora Gaming | 1 | 0.68 | 0.68 | 0.68 | lost | -$0.70 |
-| 2026-10-11 09:52 | model-only | cs2 | Fire Flux Esports | Gothic | NO Gothic | 27 | 0.53 | 0.60 | 0.52 | won | $12.21 |
 
 ## Backtest on real Kalshi prices
 
