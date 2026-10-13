@@ -1,12 +1,13 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT110522KEVIHAZA/candlesticks?start_ts=1791708720&end_ts=1791710580&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT110534BRADHAZA/candlesticks?start_ts=1791709440&end_ts=1791711300&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791710580,
+  "adjusted_end_ts": 1791711300,
   "market_candlesticks": [
+   [],
    [
     {
-     "end_period_ts": 1791708840,
+     "end_period_ts": 1791709440,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
@@ -24,7 +25,7 @@
      }
     },
     {
-     "end_period_ts": 1791709980,
+     "end_period_ts": 1791710640,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
@@ -42,13 +43,12 @@
      }
     }
    ],
-   [],
    []
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT110522KEVIHAZA-KEVI",
-   "KXESOCCERGAME-26OCT110522KEVIHAZA-HAZA",
-   "KXESOCCERGAME-26OCT110522KEVIHAZA-TIE"
+   "KXESOCCERGAME-26OCT110534BRADHAZA-BRAD",
+   "KXESOCCERGAME-26OCT110534BRADHAZA-HAZA",
+   "KXESOCCERGAME-26OCT110534BRADHAZA-TIE"
   ]
  }
 }
