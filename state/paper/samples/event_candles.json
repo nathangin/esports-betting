@@ -1,42 +1,50 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT110151TRINMEI/candlesticks?start_ts=1791696060&end_ts=1791697920&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT110204BRADHAZA/candlesticks?start_ts=1791696840&end_ts=1791698700&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791697920,
+  "adjusted_end_ts": 1791698700,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791696840,
+     "end_period_ts": 1791698700,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.5400",
-      "high_dollars": "0.9400",
-      "low_dollars": "0.5400",
-      "open_dollars": "0.9400"
+      "close_dollars": "0.3900",
+      "high_dollars": "0.7800",
+      "low_dollars": "0.3900",
+      "open_dollars": "0.3900"
      },
      "yes_bid": {
-      "close_dollars": "0.4600",
-      "high_dollars": "0.4600",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
+      "close_dollars": "0.3200",
+      "high_dollars": "0.3200",
+      "low_dollars": "0.1000",
+      "open_dollars": "0.3200"
      }
-    },
+    }
+   ],
+   [
     {
-     "end_period_ts": 1791697920,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
+     "end_period_ts": 1791698700,
+     "open_interest_fp": "16.44",
+     "price": {
+      "close_dollars": "0.5300",
+      "high_dollars": "0.5300",
+      "low_dollars": "0.5300",
+      "mean_dollars": "0.5300",
+      "open_dollars": "0.5300"
+     },
+     "volume_fp": "16.44",
      "yes_ask": {
-      "close_dollars": "0.6800",
+      "close_dollars": "0.5300",
       "high_dollars": "0.9500",
       "low_dollars": "0.5300",
       "open_dollars": "0.5400"
      },
      "yes_bid": {
-      "close_dollars": "0.6100",
-      "high_dollars": "0.6100",
+      "close_dollars": "0.4600",
+      "high_dollars": "0.4600",
       "low_dollars": "0.0000",
       "open_dollars": "0.4600"
      }
@@ -44,85 +52,29 @@
    ],
    [
     {
-     "end_period_ts": 1791696840,
+     "end_period_ts": 1791698700,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.3900",
-      "high_dollars": "0.9500",
-      "low_dollars": "0.3900",
-      "open_dollars": "0.9500"
-     },
-     "yes_bid": {
-      "close_dollars": "0.3200",
-      "high_dollars": "0.3200",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
-     }
-    },
-    {
-     "end_period_ts": 1791697920,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.2600",
-      "high_dollars": "0.8000",
-      "low_dollars": "0.2600",
-      "open_dollars": "0.3900"
-     },
-     "yes_bid": {
       "close_dollars": "0.1900",
-      "high_dollars": "0.3200",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.3200"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791696840,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.1800",
       "high_dollars": "0.9900",
       "low_dollars": "0.1800",
-      "open_dollars": "0.9900"
-     },
-     "yes_bid": {
-      "close_dollars": "0.1100",
-      "high_dollars": "0.1100",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
-     }
-    },
-    {
-     "end_period_ts": 1791697920,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.1700",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.1700",
       "open_dollars": "0.1800"
      },
      "yes_bid": {
-      "close_dollars": "0.1000",
+      "close_dollars": "0.1200",
       "high_dollars": "0.1200",
-      "low_dollars": "0.0000",
+      "low_dollars": "0.0300",
       "open_dollars": "0.1100"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT110151TRINMEI-TRIN",
-   "KXESOCCERGAME-26OCT110151TRINMEI-MEI",
-   "KXESOCCERGAME-26OCT110151TRINMEI-TIE"
+   "KXESOCCERGAME-26OCT110204BRADHAZA-BRAD",
+   "KXESOCCERGAME-26OCT110204BRADHAZA-HAZA",
+   "KXESOCCERGAME-26OCT110204BRADHAZA-TIE"
   ]
  }
 }
