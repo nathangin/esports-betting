@@ -1,17 +1,17 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT111722DANNNISK/candlesticks?start_ts=1791751920&end_ts=1791753780&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT111724EDERFREN/candlesticks?start_ts=1791752040&end_ts=1791753900&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791753780,
+  "adjusted_end_ts": 1791753900,
   "market_candlesticks": [
    [],
    [],
    []
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT111722DANNNISK-DANN",
-   "KXESOCCERGAME-26OCT111722DANNNISK-NISK",
-   "KXESOCCERGAME-26OCT111722DANNNISK-TIE"
+   "KXESOCCERGAME-26OCT111724EDERFREN-EDER",
+   "KXESOCCERGAME-26OCT111724EDERFREN-FREN",
+   "KXESOCCERGAME-26OCT111724EDERFREN-TIE"
   ]
  }
 }
