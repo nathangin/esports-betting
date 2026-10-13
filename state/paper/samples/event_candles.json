@@ -1,32 +1,12 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT102056MORDHOMI/candlesticks?start_ts=1791678360&end_ts=1791680220&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT102103OLIVFLOR/candlesticks?start_ts=1791678780&end_ts=1791680640&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791680220,
+  "adjusted_end_ts": 1791680640,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791680220,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.6100",
-      "high_dollars": "0.9200",
-      "low_dollars": "0.6100",
-      "open_dollars": "0.9200"
-     },
-     "yes_bid": {
-      "close_dollars": "0.5400",
-      "high_dollars": "0.5400",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791679560,
+     "end_period_ts": 1791680040,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
@@ -44,19 +24,25 @@
      }
     },
     {
-     "end_period_ts": 1791680220,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.3100",
+     "end_period_ts": 1791680640,
+     "open_interest_fp": "7.55",
+     "price": {
+      "close_dollars": "0.3500",
       "high_dollars": "0.9500",
-      "low_dollars": "0.3100",
+      "low_dollars": "0.3500",
+      "mean_dollars": "0.5161",
+      "open_dollars": "0.9500"
+     },
+     "volume_fp": "7.55",
+     "yes_ask": {
+      "close_dollars": "0.3500",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.3500",
       "open_dollars": "0.9500"
      },
      "yes_bid": {
-      "close_dollars": "0.2400",
-      "high_dollars": "0.2400",
+      "close_dollars": "0.2800",
+      "high_dollars": "0.2800",
       "low_dollars": "0.0000",
       "open_dollars": "0.0000"
      }
@@ -64,29 +50,49 @@
    ],
    [
     {
-     "end_period_ts": 1791680220,
+     "end_period_ts": 1791680640,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.1900",
-      "high_dollars": "0.8100",
-      "low_dollars": "0.1900",
-      "open_dollars": "0.8100"
+      "close_dollars": "0.5400",
+      "high_dollars": "0.6200",
+      "low_dollars": "0.5400",
+      "open_dollars": "0.6200"
      },
      "yes_bid": {
-      "close_dollars": "0.1200",
-      "high_dollars": "0.1200",
-      "low_dollars": "0.0100",
-      "open_dollars": "0.0100"
+      "close_dollars": "0.4700",
+      "high_dollars": "0.4700",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791680640,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.2100",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.2100",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1400",
+      "high_dollars": "0.1400",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT102056MORDHOMI-MORD",
-   "KXESOCCERGAME-26OCT102056MORDHOMI-HOMI",
-   "KXESOCCERGAME-26OCT102056MORDHOMI-TIE"
+   "KXESOCCERGAME-26OCT102103OLIVFLOR-OLIV",
+   "KXESOCCERGAME-26OCT102103OLIVFLOR-FLOR",
+   "KXESOCCERGAME-26OCT102103OLIVFLOR-TIE"
   ]
  }
 }
