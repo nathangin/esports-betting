@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-13 15:52 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-13 16:02 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 146 | 16 | 130 | 33 | -$269.74 | -16.3% | -0.8c (141) | $730.26 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 206 | 22 | 184 | 127 | -$97.02 | -7.1% | -0.9c (202) | $902.98 |
+| model-only | Elo win model alone (control: ignores the market) | 146 | 15 | 131 | 34 | -$258.33 | -15.5% | -0.8c (141) | $741.67 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 206 | 21 | 185 | 128 | -$90.68 | -6.6% | -0.8c (202) | $909.32 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -59,8 +59,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-13 11:52 | model-only | cs2 | Martians | QUINTESSENCIA | YES Martians | 61 | 0.25 | 0.46 | 0.25 | lost | -$16.06 |
 | 2026-10-13 11:52 | favourite | cs2 | Alter Ego | Just Swing | YES Alter Ego | 11 | 0.80 | 0.80 | 0.80 | open | - |
 | 2026-10-13 11:52 | model-only | cs2 | Just Swing | Alter Ego | NO Alter Ego | 69 | 0.22 | 0.42 | 0.20 | open | - |
-| 2026-10-13 10:51 | favourite | lol | Nothin'Here | essences | NO essences | 15 | 0.56 | 0.56 | 0.56 | open | - |
-| 2026-10-13 10:51 | model-only | lol | Nothin'Here | essences | NO essences | 27 | 0.56 | 0.63 | 0.56 | open | - |
+| 2026-10-13 10:51 | favourite | lol | Nothin'Here | essences | NO essences | 15 | 0.56 | 0.56 | 0.56 | won | $6.34 |
+| 2026-10-13 10:51 | model-only | lol | Nothin'Here | essences | NO essences | 27 | 0.56 | 0.63 | 0.56 | won | $11.41 |
 | 2026-10-13 10:51 | favourite | ow | 99DIVINE | Please Not Hero Ban | YES 99DIVINE | 2 | 0.89 | 0.86 | 0.86 | won | $0.20 |
 | 2026-10-13 09:51 | favourite | cs2 | Bushido Wildcats | ILLYRIANS | YES Bushido Wildcats | 14 | 0.59 | 0.58 | 0.58 | lost | -$8.50 |
 | 2026-10-13 09:21 | favourite | cs2 | Vitality Academy | RoundsGG | YES Vitality Academy | 16 | 0.54 | 0.53 | 0.53 | lost | -$8.92 |
