@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-13 11:57 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-13 12:02 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 143 | 18 | 125 | 33 | -$190.54 | -12.1% | -0.8c (136) | $809.46 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 197 | 20 | 177 | 123 | -$79.27 | -6.0% | -0.8c (192) | $920.73 |
+| model-only | Elo win model alone (control: ignores the market) | 143 | 17 | 126 | 33 | -$206.41 | -13.0% | -0.7c (136) | $793.59 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 197 | 19 | 178 | 124 | -$76.67 | -5.8% | -0.9c (192) | $923.33 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -57,8 +57,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-13 08:51 | model-only | cs2 | JiJieHao | 100 Thieves | NO 100 Thieves | 1 | 0.34 | 0.45 | 0.34 | lost | -$0.36 |
 | 2026-10-13 08:51 | favourite | cs2 | Liquid | BBL | NO BBL | 12 | 0.71 | 0.70 | 0.71 | open | - |
 | 2026-10-13 08:51 | model-only | cs2 | BBL | Liquid | YES BBL | 51 | 0.30 | 0.46 | 0.29 | open | - |
-| 2026-10-13 07:51 | favourite | dota2 | Yellow Submarine | Kalmychata | NO Kalmychata | 11 | 0.75 | 0.74 | 0.74 | open | - |
-| 2026-10-13 07:51 | model-only | dota2 | Kalmychata | Yellow Submarine | YES Kalmychata | 58 | 0.26 | 0.43 | 0.26 | open | - |
+| 2026-10-13 07:51 | favourite | dota2 | Yellow Submarine | Kalmychata | NO Kalmychata | 11 | 0.75 | 0.74 | 0.74 | won | $2.60 |
+| 2026-10-13 07:51 | model-only | dota2 | Kalmychata | Yellow Submarine | YES Kalmychata | 58 | 0.26 | 0.43 | 0.26 | lost | -$15.87 |
 | 2026-10-13 07:51 | favourite | dota2 | HULIGANI | Nemiga Gaming | YES HULIGANI | 15 | 0.57 | 0.57 | 0.57 | won | $6.19 |
 | 2026-10-13 07:51 | model-only | lol | LGD Gaming | OKSavingsBank BRION | NO OKSavingsBank BRION | 28 | 0.54 | 0.65 | 0.54 | open | - |
 | 2026-10-13 07:51 | favourite | lol | LGD Gaming | OKSavingsBank BRION | NO OKSavingsBank BRION | 16 | 0.54 | 0.54 | 0.54 | open | - |
