@@ -1,34 +1,74 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/events/KXEBASKETBALLGAME-26OCT110440SHAQICEK/candlesticks?start_ts=1791706200&end_ts=1791708060&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT110452KEVIKYLI/candlesticks?start_ts=1791706920&end_ts=1791708780&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791708060,
+  "adjusted_end_ts": 1791708780,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791707340,
+     "end_period_ts": 1791708780,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9500",
-      "high_dollars": "0.9500",
-      "low_dollars": "0.9400",
-      "open_dollars": "0.9400"
+      "close_dollars": "0.2400",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.2400",
+      "open_dollars": "0.3700"
      },
      "yes_bid": {
-      "close_dollars": "0.0000",
-      "high_dollars": "0.0000",
+      "close_dollars": "0.1700",
+      "high_dollars": "0.3000",
       "low_dollars": "0.0000",
-      "open_dollars": "0.0000"
+      "open_dollars": "0.3000"
      }
     }
    ],
-   []
+   [
+    {
+     "end_period_ts": 1791708780,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.7000",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.5500",
+      "open_dollars": "0.5500"
+     },
+     "yes_bid": {
+      "close_dollars": "0.6300",
+      "high_dollars": "0.6300",
+      "low_dollars": "0.2100",
+      "open_dollars": "0.4800"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791708780,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.1700",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1700",
+      "open_dollars": "0.1800"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1000",
+      "high_dollars": "0.1200",
+      "low_dollars": "0.0300",
+      "open_dollars": "0.1100"
+     }
+    }
+   ]
   ],
   "market_tickers": [
-   "KXEBASKETBALLGAME-26OCT110440SHAQICEK-SHAQ",
-   "KXEBASKETBALLGAME-26OCT110440SHAQICEK-ICEK"
+   "KXESOCCERGAME-26OCT110452KEVIKYLI-KEVI",
+   "KXESOCCERGAME-26OCT110452KEVIKYLI-KYLI",
+   "KXESOCCERGAME-26OCT110452KEVIKYLI-TIE"
   ]
  }
 }
