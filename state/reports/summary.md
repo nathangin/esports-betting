@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-13 10:06 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-13 10:11 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 138 | 16 | 122 | 32 | -$197.22 | -12.8% | -0.8c (134) | $802.78 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 191 | 21 | 170 | 117 | -$95.69 | -7.6% | -0.9c (188) | $904.31 |
+| model-only | Elo win model alone (control: ignores the market) | 138 | 15 | 123 | 32 | -$213.11 | -13.7% | -0.8c (134) | $786.89 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 191 | 20 | 171 | 118 | -$89.35 | -7.1% | -0.9c (188) | $910.65 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -54,8 +54,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-13 06:51 | model-only | cs2 | WRAITH PCIFIC | STATE | NO STATE | 38 | 0.38 | 0.44 | 0.36 | open | - |
 | 2026-10-13 06:51 | favourite | dota2 | Cloud Rising | Cloud Dawning | NO Cloud Dawning | 10 | 0.83 | 0.80 | 0.80 | open | - |
 | 2026-10-13 06:51 | favourite | cs2 | Copenhagen Wolves | VP.Future 3 | YES Copenhagen Wolves | 3 | 0.77 | 0.77 | 0.77 | won | $0.65 |
-| 2026-10-13 06:51 | favourite | cs2 | BakS eSports | Spirit Academy | YES BakS eSports | 15 | 0.56 | 0.55 | 0.55 | open | - |
-| 2026-10-13 06:51 | model-only | cs2 | Spirit Academy | BakS eSports | YES Spirit Academy | 34 | 0.45 | 0.60 | 0.45 | open | - |
+| 2026-10-13 06:51 | favourite | cs2 | BakS eSports | Spirit Academy | YES BakS eSports | 15 | 0.56 | 0.55 | 0.55 | won | $6.34 |
+| 2026-10-13 06:51 | model-only | cs2 | Spirit Academy | BakS eSports | YES Spirit Academy | 34 | 0.45 | 0.60 | 0.45 | lost | -$15.89 |
 | 2026-10-13 06:51 | favourite | cs2 | STATE | WRAITH PCIFIC | YES STATE | 13 | 0.65 | 0.64 | 0.64 | open | - |
 | 2026-10-13 05:50 | favourite | dota2 | Team Lynx | Zero Tenacity | YES Team Lynx | 14 | 0.62 | 0.61 | 0.61 | open | - |
 | 2026-10-13 04:50 | favourite | lol | Team WE | FlyQuest | NO FlyQuest | 10 | 0.81 | 0.81 | 0.80 | open | - |
