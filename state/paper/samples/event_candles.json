@@ -1,74 +1,128 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT111349SHAQFEDE/candlesticks?start_ts=1791739140&end_ts=1791741000&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT111416ANTOFEDE/candlesticks?start_ts=1791740760&end_ts=1791742620&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791741000,
+  "adjusted_end_ts": 1791742620,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791741000,
+     "end_period_ts": 1791742560,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4300",
+      "close_dollars": "0.9500",
       "high_dollars": "0.9500",
-      "low_dollars": "0.4300",
-      "open_dollars": "0.4300"
+      "low_dollars": "0.3400",
+      "open_dollars": "0.3400"
      },
      "yes_bid": {
-      "close_dollars": "0.3600",
-      "high_dollars": "0.3600",
-      "low_dollars": "0.0700",
-      "open_dollars": "0.3600"
+      "close_dollars": "0.0000",
+      "high_dollars": "0.2700",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.2700"
+     }
+    },
+    {
+     "end_period_ts": 1791742620,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.3400",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.3400",
+      "open_dollars": "0.9500"
+     },
+     "yes_bid": {
+      "close_dollars": "0.2700",
+      "high_dollars": "0.2700",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791741000,
+     "end_period_ts": 1791742560,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4800",
-      "high_dollars": "0.9500",
-      "low_dollars": "0.4800",
-      "open_dollars": "0.4800"
+      "close_dollars": "0.9100",
+      "high_dollars": "0.9100",
+      "low_dollars": "0.5800",
+      "open_dollars": "0.5800"
      },
      "yes_bid": {
-      "close_dollars": "0.4000",
-      "high_dollars": "0.4100",
+      "close_dollars": "0.0000",
+      "high_dollars": "0.5100",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.5100"
+     }
+    },
+    {
+     "end_period_ts": 1791742620,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.5700",
+      "high_dollars": "0.9100",
+      "low_dollars": "0.5700",
+      "open_dollars": "0.9100"
+     },
+     "yes_bid": {
+      "close_dollars": "0.5000",
+      "high_dollars": "0.5100",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791742560,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.9900",
+      "high_dollars": "0.9900",
       "low_dollars": "0.1900",
-      "open_dollars": "0.4100"
+      "open_dollars": "0.1900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0000",
+      "high_dollars": "0.1200",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.1200"
      }
-    }
-   ],
-   [
+    },
     {
-     "end_period_ts": 1791741000,
+     "end_period_ts": 1791742620,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
       "close_dollars": "0.2000",
-      "high_dollars": "0.8800",
+      "high_dollars": "0.9900",
       "low_dollars": "0.1900",
-      "open_dollars": "0.1900"
+      "open_dollars": "0.9900"
      },
      "yes_bid": {
       "close_dollars": "0.1300",
       "high_dollars": "0.1300",
       "low_dollars": "0.0000",
-      "open_dollars": "0.1200"
+      "open_dollars": "0.0000"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT111349SHAQFEDE-SHAQ",
-   "KXESOCCERGAME-26OCT111349SHAQFEDE-FEDE",
-   "KXESOCCERGAME-26OCT111349SHAQFEDE-TIE"
+   "KXESOCCERGAME-26OCT111416ANTOFEDE-ANTO",
+   "KXESOCCERGAME-26OCT111416ANTOFEDE-FEDE",
+   "KXESOCCERGAME-26OCT111416ANTOFEDE-TIE"
   ]
  }
 }
