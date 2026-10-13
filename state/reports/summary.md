@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-13 07:46 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-13 07:51 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 133 | 11 | 122 | 32 | -$197.22 | -12.8% | -0.8c (130) | $802.78 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 184 | 15 | 169 | 116 | -$96.34 | -7.7% | -0.9c (183) | $903.66 |
+| model-only | Elo win model alone (control: ignores the market) | 135 | 13 | 122 | 32 | -$197.22 | -12.8% | -0.8c (130) | $802.78 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 187 | 18 | 169 | 116 | -$96.34 | -7.7% | -0.9c (183) | $903.66 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,12 +39,17 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-13 06:51 | favourite | dota2 | Cloud Rising | Cloud Dawning | NO Cloud Dawning | 10 | 0.83 | 0.80 | 0.80 | open | - |
-| 2026-10-13 06:51 | favourite | cs2 | Copenhagen Wolves | VP.Future 3 | YES Copenhagen Wolves | 3 | 0.77 | 0.77 | 0.77 | open | - |
+| 2026-10-13 07:51 | favourite | lol | LGD Gaming | OKSavingsBank BRION | NO OKSavingsBank BRION | 16 | 0.54 | 0.54 | 0.54 | open | - |
+| 2026-10-13 07:51 | model-only | lol | LGD Gaming | OKSavingsBank BRION | NO OKSavingsBank BRION | 28 | 0.54 | 0.65 | 0.54 | open | - |
+| 2026-10-13 07:51 | favourite | dota2 | HULIGANI | Nemiga Gaming | YES HULIGANI | 15 | 0.57 | 0.57 | 0.57 | open | - |
+| 2026-10-13 07:51 | favourite | dota2 | Yellow Submarine | Kalmychata | NO Kalmychata | 11 | 0.75 | 0.74 | 0.74 | open | - |
+| 2026-10-13 07:51 | model-only | dota2 | Kalmychata | Yellow Submarine | YES Kalmychata | 58 | 0.26 | 0.43 | 0.26 | open | - |
 | 2026-10-13 06:51 | favourite | cs2 | BakS eSports | Spirit Academy | YES BakS eSports | 15 | 0.56 | 0.55 | 0.55 | open | - |
-| 2026-10-13 06:51 | model-only | cs2 | Spirit Academy | BakS eSports | YES Spirit Academy | 34 | 0.45 | 0.60 | 0.45 | open | - |
-| 2026-10-13 06:51 | favourite | cs2 | STATE | WRAITH PCIFIC | YES STATE | 13 | 0.65 | 0.64 | 0.64 | open | - |
 | 2026-10-13 06:51 | model-only | cs2 | WRAITH PCIFIC | STATE | NO STATE | 38 | 0.38 | 0.44 | 0.36 | open | - |
+| 2026-10-13 06:51 | favourite | cs2 | STATE | WRAITH PCIFIC | YES STATE | 13 | 0.65 | 0.64 | 0.64 | open | - |
+| 2026-10-13 06:51 | model-only | cs2 | Spirit Academy | BakS eSports | YES Spirit Academy | 34 | 0.45 | 0.60 | 0.45 | open | - |
+| 2026-10-13 06:51 | favourite | cs2 | Copenhagen Wolves | VP.Future 3 | YES Copenhagen Wolves | 3 | 0.77 | 0.77 | 0.77 | open | - |
+| 2026-10-13 06:51 | favourite | dota2 | Cloud Rising | Cloud Dawning | NO Cloud Dawning | 10 | 0.83 | 0.80 | 0.80 | open | - |
 | 2026-10-13 05:50 | favourite | dota2 | Team Lynx | Zero Tenacity | YES Team Lynx | 14 | 0.62 | 0.61 | 0.61 | open | - |
 | 2026-10-13 04:50 | favourite | lol | Team WE | FlyQuest | NO FlyQuest | 10 | 0.81 | 0.81 | 0.80 | open | - |
 | 2026-10-13 02:50 | favourite | dota2 | Team Resilience | Imperial Power | NO Imperial Power | 9 | 0.90 | 0.88 | 0.88 | won | $0.84 |
@@ -52,18 +57,13 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-12 19:14 | favourite | cs2 | Galorys | Bounty Hunters Esports | NO Bounty Hunters Esports | 7 | 0.67 | 0.67 | 0.67 | won | $2.20 |
 | 2026-10-12 19:14 | favourite | lol | G2 HEL | AZ Rising Eterna | NO AZ Rising Eterna | 15 | 0.57 | 0.55 | 0.55 | won | $6.19 |
 | 2026-10-12 09:20 | model-only | cs2 | Sokerorg | MOUZ NXT | YES Sokerorg | 30 | 0.52 | 0.60 | 0.52 | open | - |
-| 2026-10-12 08:50 | model-only | cs2 | Sangal | Inner Circle Esports | NO Inner Circle Esports | 47 | 0.34 | 0.51 | 0.33 | lost | -$16.72 |
 | 2026-10-12 08:50 | model-only | cs2 | Apogee Esports | NIP | NO NIP | 2 | 0.22 | 0.38 | 0.22 | lost | -$0.47 |
+| 2026-10-12 08:50 | model-only | cs2 | Sangal | Inner Circle Esports | NO Inner Circle Esports | 47 | 0.34 | 0.51 | 0.33 | lost | -$16.72 |
 | 2026-10-12 07:50 | model-only | lol | KT Rolster | Team Vitality | YES KT Rolster | 36 | 0.36 | 0.42 | 0.36 | won | $22.45 |
 | 2026-10-12 06:54 | model-only | cs2 | STATE | THE UNIT | YES STATE | 22 | 0.47 | 0.65 | 0.45 | open | - |
 | 2026-10-12 06:54 | favourite | cs2 | Bread Eaters Esports | Passion Academy | YES Bread Eaters Esports | 2 | 0.59 | 0.57 | 0.57 | won | $0.78 |
 | 2026-10-12 05:54 | favourite | dota2 | Yellow Submarine | Nemiga Gaming | NO Nemiga Gaming | 9 | 0.86 | 0.85 | 0.85 | won | $1.18 |
 | 2026-10-12 05:54 | model-only | dota2 | Nemiga Gaming | Yellow Submarine | NO Yellow Submarine | 99 | 0.16 | 0.24 | 0.15 | lost | -$16.78 |
-| 2026-10-12 04:54 | model-only | lol | JD Gaming | BNK FEARX | NO BNK FEARX | 48 | 0.33 | 0.50 | 0.32 | lost | -$16.59 |
-| 2026-10-12 04:54 | favourite | lol | BNK FEARX | JD Gaming | YES BNK FEARX | 11 | 0.68 | 0.68 | 0.68 | won | $3.35 |
-| 2026-10-11 15:53 | model-only | cs2 | antidaun | Saint Sinners | YES antidaun | 8 | 0.19 | 0.43 | 0.18 | lost | -$1.61 |
-| 2026-10-11 14:52 | model-only | r6 | Fluxo W7M | Team Liquid | YES Fluxo W7M | 45 | 0.36 | 0.44 | 0.35 | lost | -$16.93 |
-| 2026-10-11 13:52 | model-only | cs2 | MOUZ | Vitality | YES MOUZ | 42 | 0.35 | 0.44 | 0.34 | lost | -$15.37 |
 
 ## Backtest on real Kalshi prices
 
