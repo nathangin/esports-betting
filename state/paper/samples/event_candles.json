@@ -1,17 +1,74 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT120522BAROSILE/candlesticks?start_ts=1791795120&end_ts=1791796980&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT120532ELLIALIC/candlesticks?start_ts=1791795720&end_ts=1791797580&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791796980,
+  "adjusted_end_ts": 1791797580,
   "market_candlesticks": [
-   [],
-   [],
-   []
+   [
+    {
+     "end_period_ts": 1791797580,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.3900",
+      "high_dollars": "0.9800",
+      "low_dollars": "0.3900",
+      "open_dollars": "0.3900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3200",
+      "high_dollars": "0.3200",
+      "low_dollars": "0.0100",
+      "open_dollars": "0.3200"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791797580,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4900",
+      "high_dollars": "0.9600",
+      "low_dollars": "0.4900",
+      "open_dollars": "0.4900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.4200",
+      "high_dollars": "0.4200",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.4200"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791797580,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.2300",
+      "high_dollars": "0.9500",
+      "low_dollars": "0.2200",
+      "open_dollars": "0.2200"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1600",
+      "high_dollars": "0.1600",
+      "low_dollars": "0.0400",
+      "open_dollars": "0.1500"
+     }
+    }
+   ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT120522BAROSILE-BARO",
-   "KXESOCCERGAME-26OCT120522BAROSILE-SILE",
-   "KXESOCCERGAME-26OCT120522BAROSILE-TIE"
+   "KXESOCCERGAME-26OCT120532ELLIALIC-ELLI",
+   "KXESOCCERGAME-26OCT120532ELLIALIC-ALIC",
+   "KXESOCCERGAME-26OCT120532ELLIALIC-TIE"
   ]
  }
 }
