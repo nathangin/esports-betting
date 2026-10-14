@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-14 10:56 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-14 11:01 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-14 10:56 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 159 | 22 | 137 | 35 | -$291.78 | -16.9% | -0.8c (155) | $708.22 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 231 | 30 | 201 | 139 | -$79.31 | -5.4% | -0.9c (226) | $920.69 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 231 | 29 | 202 | 140 | -$78.19 | -5.3% | -0.9c (226) | $921.81 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -58,7 +58,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-14 08:50 | model-only | cs2 | HOTU | fnatic | NO fnatic | 30 | 0.45 | 0.52 | 0.44 | open | - |
 | 2026-10-14 07:50 | favourite | dota2 | The Warriors | Shadow Dance | NO Shadow Dance | 10 | 0.85 | 0.83 | 0.83 | open | - |
 | 2026-10-14 07:50 | favourite | dota2 | Kalmychata | Nemiga Gaming | YES Kalmychata | 14 | 0.62 | 0.62 | 0.62 | open | - |
-| 2026-10-14 07:50 | favourite | cs2 | Rooster | MARKandLARRY | NO MARKandLARRY | 10 | 0.88 | 0.87 | 0.87 | open | - |
+| 2026-10-14 07:50 | favourite | cs2 | Rooster | MARKandLARRY | NO MARKandLARRY | 10 | 0.88 | 0.87 | 0.87 | won | $1.12 |
 | 2026-10-14 07:50 | model-only | lol | BNK FEARX | KT Rolster | NO KT Rolster | 33 | 0.42 | 0.49 | 0.41 | open | - |
 | 2026-10-14 07:50 | favourite | lol | KT Rolster | BNK FEARX | NO BNK FEARX | 15 | 0.59 | 0.58 | 0.58 | open | - |
 | 2026-10-14 07:20 | favourite | cs2 | Aurora Gaming | 9z | NO 9z | 12 | 0.74 | 0.73 | 0.73 | open | - |
