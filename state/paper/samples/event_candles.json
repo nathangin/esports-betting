@@ -1,58 +1,52 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT120204KEVILUIS/candlesticks?start_ts=1791783240&end_ts=1791785100&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT120218KYLIKEVI/candlesticks?start_ts=1791784080&end_ts=1791785940&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791785100,
+  "adjusted_end_ts": 1791785940,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791785100,
-     "open_interest_fp": "8.44",
-     "price": {
-      "close_dollars": "0.4600",
-      "high_dollars": "0.4600",
-      "low_dollars": "0.4600",
-      "mean_dollars": "0.4600",
-      "open_dollars": "0.4600"
-     },
-     "volume_fp": "8.44",
-     "yes_ask": {
-      "close_dollars": "0.4600",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.4600",
-      "open_dollars": "0.4600"
-     },
-     "yes_bid": {
-      "close_dollars": "0.3900",
-      "high_dollars": "0.3900",
-      "low_dollars": "0.0100",
-      "open_dollars": "0.3900"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791785100,
+     "end_period_ts": 1791785940,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4600",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.4600",
-      "open_dollars": "0.4600"
+      "close_dollars": "0.5400",
+      "high_dollars": "0.9800",
+      "low_dollars": "0.5400",
+      "open_dollars": "0.5400"
      },
      "yes_bid": {
-      "close_dollars": "0.3900",
-      "high_dollars": "0.3900",
-      "low_dollars": "0.2800",
-      "open_dollars": "0.3900"
+      "close_dollars": "0.4600",
+      "high_dollars": "0.4600",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.4600"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791785100,
+     "end_period_ts": 1791785940,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.3800",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.3800",
+      "open_dollars": "0.3800"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3100",
+      "high_dollars": "0.3100",
+      "low_dollars": "0.0700",
+      "open_dollars": "0.3100"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791785940,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
@@ -72,9 +66,9 @@
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT120204KEVILUIS-KEVI",
-   "KXESOCCERGAME-26OCT120204KEVILUIS-LUIS",
-   "KXESOCCERGAME-26OCT120204KEVILUIS-TIE"
+   "KXESOCCERGAME-26OCT120218KYLIKEVI-KYLI",
+   "KXESOCCERGAME-26OCT120218KYLIKEVI-KEVI",
+   "KXESOCCERGAME-26OCT120218KYLIKEVI-TIE"
   ]
  }
 }
