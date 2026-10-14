@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-14 18:07 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-14 18:12 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-14 18:07 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 165 | 14 | 151 | 41 | -$257.53 | -13.8% | -0.7c (162) | $742.47 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 236 | 17 | 219 | 149 | -$115.09 | -7.0% | -1.0c (234) | $884.91 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 236 | 16 | 220 | 150 | -$114.29 | -7.0% | -1.0c (234) | $885.71 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -42,7 +42,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-14 12:51 | model-only | cs2 | Ryvex | WRAITH PCIFIC | YES Ryvex | 63 | 0.18 | 0.39 | 0.17 | lost | -$12.00 |
 | 2026-10-14 12:51 | model-only | cs2 | Just_Players | FOKUS | NO FOKUS | 2 | 0.24 | 0.44 | 0.23 | lost | -$0.51 |
 | 2026-10-14 12:51 | model-only | cs2 | FORZE Reload | 33 | YES FORZE Reload | 29 | 0.50 | 0.57 | 0.48 | won | $13.99 |
-| 2026-10-14 12:21 | favourite | cs2 | Legacy | PARIVISION | YES Legacy | 2 | 0.58 | 0.58 | 0.58 | open | - |
+| 2026-10-14 12:21 | favourite | cs2 | Legacy | PARIVISION | YES Legacy | 2 | 0.58 | 0.58 | 0.58 | won | $0.80 |
 | 2026-10-14 11:51 | favourite | dota2 | Dawn Bulls | salamit | YES Dawn Bulls | 13 | 0.66 | 0.66 | 0.66 | open | - |
 | 2026-10-14 11:51 | model-only | dota2 | salamit | Dawn Bulls | YES salamit | 11 | 0.35 | 0.42 | 0.34 | open | - |
 | 2026-10-14 11:51 | favourite | cs2 | Blitzkrieg | realgotis22 | YES Blitzkrieg | 16 | 0.54 | 0.53 | 0.53 | open | - |
