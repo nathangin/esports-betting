@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-14 11:46 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-14 11:51 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 159 | 20 | 139 | 37 | -$255.40 | -14.7% | -0.8c (155) | $744.60 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 231 | 27 | 204 | 140 | -$95.88 | -6.4% | -1.0c (228) | $904.12 |
+| model-only | Elo win model alone (control: ignores the market) | 162 | 22 | 140 | 38 | -$239.42 | -13.7% | -0.8c (155) | $760.58 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 235 | 30 | 205 | 140 | -$104.54 | -6.9% | -1.0c (228) | $895.46 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-14 11:51 | favourite | dota2 | Dawn Bulls | salamit | YES Dawn Bulls | 13 | 0.66 | 0.66 | 0.66 | open | - |
+| 2026-10-14 11:51 | model-only | dota2 | salamit | Dawn Bulls | YES salamit | 11 | 0.35 | 0.42 | 0.34 | open | - |
+| 2026-10-14 11:51 | favourite | cs2 | Blitzkrieg | realgotis22 | YES Blitzkrieg | 16 | 0.54 | 0.53 | 0.53 | open | - |
+| 2026-10-14 11:51 | model-only | cs2 | realgotis22 | Blitzkrieg | NO Blitzkrieg | 1 | 0.47 | 0.60 | 0.47 | open | - |
+| 2026-10-14 11:51 | favourite | cs2 | 6yuBoJlbl | HyperSpirit | YES 6yuBoJlbl | 12 | 0.69 | 0.68 | 0.68 | open | - |
+| 2026-10-14 11:51 | model-only | cs2 | HyperSpirit | 6yuBoJlbl | NO 6yuBoJlbl | 1 | 0.32 | 0.48 | 0.32 | open | - |
+| 2026-10-14 11:51 | favourite | cs2 | Lynn Vision | Alter Ego | YES Lynn Vision | 12 | 0.71 | 0.70 | 0.71 | open | - |
 | 2026-10-14 10:51 | favourite | ow | ENTER FORCE.36 | 99DIVINE | YES ENTER FORCE.36 | 15 | 0.57 | 0.54 | 0.54 | open | - |
 | 2026-10-14 10:51 | favourite | dota2 | Team Resilience | Yakult's Brothers | NO Yakult's Brothers | 15 | 0.59 | 0.59 | 0.59 | open | - |
-| 2026-10-14 09:51 | favourite | cs2 | los kogutos | 6666 | YES los kogutos | 13 | 0.67 | 0.62 | 0.62 | open | - |
-| 2026-10-14 09:51 | favourite | cs2 | Team Falcons | NIP | YES Team Falcons | 12 | 0.74 | 0.74 | 0.74 | open | - |
 | 2026-10-14 09:51 | model-only | cs2 | NIP | Team Falcons | YES NIP | 52 | 0.26 | 0.41 | 0.26 | open | - |
-| 2026-10-14 09:51 | favourite | cs2 | ex-RUSTEC | mellren | YES ex-RUSTEC | 13 | 0.64 | 0.62 | 0.62 | open | - |
-| 2026-10-14 09:51 | model-only | cs2 | mellren | ex-RUSTEC | NO ex-RUSTEC | 1 | 0.39 | 0.52 | 0.38 | open | - |
 | 2026-10-14 09:51 | favourite | cs2 | BakS eSports | Bushido Wildcats | YES BakS eSports | 15 | 0.58 | 0.57 | 0.57 | open | - |
-| 2026-10-14 09:21 | model-only | cs2 | Bread Eaters Esports | EAC Extra | YES Bread Eaters Esports | 33 | 0.38 | 0.44 | 0.38 | open | - |
+| 2026-10-14 09:51 | model-only | cs2 | mellren | ex-RUSTEC | NO ex-RUSTEC | 1 | 0.39 | 0.52 | 0.38 | open | - |
+| 2026-10-14 09:51 | favourite | cs2 | ex-RUSTEC | mellren | YES ex-RUSTEC | 13 | 0.64 | 0.62 | 0.62 | open | - |
+| 2026-10-14 09:51 | favourite | cs2 | Team Falcons | NIP | YES Team Falcons | 12 | 0.74 | 0.74 | 0.74 | open | - |
+| 2026-10-14 09:51 | favourite | cs2 | los kogutos | 6666 | YES los kogutos | 13 | 0.67 | 0.62 | 0.62 | open | - |
 | 2026-10-14 09:21 | favourite | cs2 | EAC Extra | Bread Eaters Esports | YES EAC Extra | 14 | 0.62 | 0.62 | 0.62 | open | - |
+| 2026-10-14 09:21 | model-only | cs2 | Bread Eaters Esports | EAC Extra | YES Bread Eaters Esports | 33 | 0.38 | 0.44 | 0.38 | open | - |
 | 2026-10-14 08:50 | favourite | dota2 | Team Lynx | Inner Circle | NO Inner Circle | 12 | 0.70 | 0.68 | 0.68 | won | $3.42 |
 | 2026-10-14 08:50 | favourite | cs2 | Astralis | Sashi Esport | YES Astralis | 10 | 0.86 | 0.85 | 0.85 | open | - |
 | 2026-10-14 08:50 | model-only | cs2 | Sashi Esport | Astralis | YES Sashi Esport | 90 | 0.15 | 0.36 | 0.15 | open | - |
 | 2026-10-14 08:50 | favourite | cs2 | Nuclear TigeRES | LPH Gaming | NO LPH Gaming | 10 | 0.87 | 0.86 | 0.86 | open | - |
 | 2026-10-14 08:50 | model-only | cs2 | LPH Gaming | Nuclear TigeRES | YES LPH Gaming | 97 | 0.14 | 0.37 | 0.14 | open | - |
-| 2026-10-14 08:50 | favourite | cs2 | fnatic | HOTU | YES fnatic | 15 | 0.56 | 0.56 | 0.56 | open | - |
-| 2026-10-14 08:50 | model-only | cs2 | HOTU | fnatic | NO fnatic | 30 | 0.45 | 0.52 | 0.44 | open | - |
+| 2026-10-14 08:50 | favourite | cs2 | fnatic | HOTU | YES fnatic | 15 | 0.56 | 0.56 | 0.56 | lost | -$8.66 |
+| 2026-10-14 08:50 | model-only | cs2 | HOTU | fnatic | NO fnatic | 30 | 0.45 | 0.52 | 0.44 | won | $15.98 |
 | 2026-10-14 07:50 | favourite | dota2 | The Warriors | Shadow Dance | NO Shadow Dance | 10 | 0.85 | 0.83 | 0.83 | open | - |
-| 2026-10-14 07:50 | favourite | dota2 | Kalmychata | Nemiga Gaming | YES Kalmychata | 14 | 0.62 | 0.62 | 0.62 | open | - |
-| 2026-10-14 07:50 | favourite | cs2 | Rooster | MARKandLARRY | NO MARKandLARRY | 10 | 0.88 | 0.87 | 0.87 | won | $1.12 |
-| 2026-10-14 07:50 | model-only | lol | BNK FEARX | KT Rolster | NO KT Rolster | 33 | 0.42 | 0.49 | 0.41 | open | - |
-| 2026-10-14 07:50 | favourite | lol | KT Rolster | BNK FEARX | NO BNK FEARX | 15 | 0.59 | 0.58 | 0.58 | open | - |
-| 2026-10-14 07:20 | favourite | cs2 | Aurora Gaming | 9z | NO 9z | 12 | 0.74 | 0.73 | 0.73 | lost | -$9.05 |
-| 2026-10-14 07:20 | model-only | cs2 | 9z | Aurora Gaming | YES 9z | 50 | 0.27 | 0.35 | 0.27 | won | $35.81 |
-| 2026-10-14 06:50 | model-only | cs2 | B8 Academy | ENJOY | YES B8 Academy | 34 | 0.40 | 0.50 | 0.39 | lost | -$14.18 |
 
 ## Backtest on real Kalshi prices
 
