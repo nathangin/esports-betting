@@ -1,71 +1,74 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXEBASKETBALLGAME/events/KXEBASKETBALLGAME-26OCT120822JAKEBARR/candlesticks?start_ts=1791805920&end_ts=1791807780&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT120834KYLIKEVI/candlesticks?start_ts=1791806640&end_ts=1791808500&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791807780,
+  "adjusted_end_ts": 1791808500,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791805920,
+     "end_period_ts": 1791808500,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.2200",
-      "high_dollars": "0.2200",
-      "low_dollars": "0.1600",
-      "open_dollars": "0.1600"
-     },
-     "yes_bid": {
-      "close_dollars": "0.1500",
-      "high_dollars": "0.1500",
-      "low_dollars": "0.1500",
-      "open_dollars": "0.1500"
-     }
-    },
-    {
-     "end_period_ts": 1791807780,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.2600",
+      "close_dollars": "0.5300",
       "high_dollars": "0.9900",
-      "low_dollars": "0.2200",
-      "open_dollars": "0.2200"
+      "low_dollars": "0.5300",
+      "open_dollars": "0.5300"
      },
      "yes_bid": {
-      "close_dollars": "0.1900",
-      "high_dollars": "0.1900",
+      "close_dollars": "0.4600",
+      "high_dollars": "0.4600",
       "low_dollars": "0.0300",
-      "open_dollars": "0.1500"
+      "open_dollars": "0.4600"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791807780,
+     "end_period_ts": 1791808500,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.8100",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.8100",
-      "open_dollars": "0.8500"
+      "close_dollars": "0.3800",
+      "high_dollars": "0.6200",
+      "low_dollars": "0.3800",
+      "open_dollars": "0.3800"
      },
      "yes_bid": {
-      "close_dollars": "0.7400",
-      "high_dollars": "0.7800",
-      "low_dollars": "0.0100",
-      "open_dollars": "0.7800"
+      "close_dollars": "0.3100",
+      "high_dollars": "0.3100",
+      "low_dollars": "0.0500",
+      "open_dollars": "0.3100"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791808500,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.2000",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.1900",
+      "open_dollars": "0.1900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1200",
+      "high_dollars": "0.1200",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.1200"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXEBASKETBALLGAME-26OCT120822JAKEBARR-JAKE",
-   "KXEBASKETBALLGAME-26OCT120822JAKEBARR-BARR"
+   "KXESOCCERGAME-26OCT120834KYLIKEVI-KYLI",
+   "KXESOCCERGAME-26OCT120834KYLIKEVI-KEVI",
+   "KXESOCCERGAME-26OCT120834KYLIKEVI-TIE"
   ]
  }
 }
