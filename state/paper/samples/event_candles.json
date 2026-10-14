@@ -1,74 +1,128 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT120356ARONLUIS/candlesticks?start_ts=1791789960&end_ts=1791791820&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT120409NICOALIC/candlesticks?start_ts=1791790740&end_ts=1791792600&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791791820,
+  "adjusted_end_ts": 1791792600,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791791820,
+     "end_period_ts": 1791790920,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.6200",
+      "close_dollars": "0.3900",
       "high_dollars": "0.9900",
-      "low_dollars": "0.4500",
-      "open_dollars": "0.4500"
+      "low_dollars": "0.3900",
+      "open_dollars": "0.9900"
      },
      "yes_bid": {
-      "close_dollars": "0.5500",
-      "high_dollars": "0.5500",
+      "close_dollars": "0.3200",
+      "high_dollars": "0.3200",
       "low_dollars": "0.0000",
-      "open_dollars": "0.3800"
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791792600,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.9900",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.3900",
+      "open_dollars": "0.3900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0200",
+      "high_dollars": "0.3200",
+      "low_dollars": "0.0200",
+      "open_dollars": "0.3200"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791791820,
+     "end_period_ts": 1791790920,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.2800",
-      "high_dollars": "0.9700",
-      "low_dollars": "0.2800",
+      "close_dollars": "0.5100",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.5100",
+      "open_dollars": "0.9900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.4400",
+      "high_dollars": "0.4400",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791792600,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.9900",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.5000",
+      "open_dollars": "0.5100"
+     },
+     "yes_bid": {
+      "close_dollars": "0.5000",
+      "high_dollars": "0.5000",
+      "low_dollars": "0.0000",
       "open_dollars": "0.4400"
-     },
-     "yes_bid": {
-      "close_dollars": "0.2100",
-      "high_dollars": "0.3700",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.3700"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791791820,
+     "end_period_ts": 1791790920,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.2000",
+      "close_dollars": "0.2100",
       "high_dollars": "0.9900",
-      "low_dollars": "0.2000",
-      "open_dollars": "0.2200"
+      "low_dollars": "0.2100",
+      "open_dollars": "0.9900"
      },
      "yes_bid": {
       "close_dollars": "0.1300",
-      "high_dollars": "0.1500",
+      "high_dollars": "0.1300",
       "low_dollars": "0.0000",
-      "open_dollars": "0.1500"
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1791792600,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.9900",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.2100",
+      "open_dollars": "0.2100"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0000",
+      "high_dollars": "0.1400",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.1300"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT120356ARONLUIS-ARON",
-   "KXESOCCERGAME-26OCT120356ARONLUIS-LUIS",
-   "KXESOCCERGAME-26OCT120356ARONLUIS-TIE"
+   "KXESOCCERGAME-26OCT120409NICOALIC-NICO",
+   "KXESOCCERGAME-26OCT120409NICOALIC-ALIC",
+   "KXESOCCERGAME-26OCT120409NICOALIC-TIE"
   ]
  }
 }
