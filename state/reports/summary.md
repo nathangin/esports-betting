@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-14 05:40 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-14 05:50 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 147 | 11 | 136 | 35 | -$277.60 | -16.2% | -0.8c (143) | $722.40 |
+| model-only | Elo win model alone (control: ignores the market) | 148 | 12 | 136 | 35 | -$277.60 | -16.2% | -0.8c (143) | $722.40 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 211 | 12 | 199 | 137 | -$87.81 | -6.0% | -0.9c (209) | $912.19 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-14 05:50 | model-only | dota2 | PuckChamp | Team Lynx | NO Team Lynx | 123 | 0.11 | 0.19 | 0.09 | open | - |
 | 2026-10-14 02:54 | favourite | dota2 | Cloud Dawning | Imperial Power | NO Imperial Power | 13 | 0.64 | 0.64 | 0.64 | open | - |
 | 2026-10-14 02:54 | model-only | dota2 | Imperial Power | Cloud Dawning | YES Imperial Power | 35 | 0.39 | 0.58 | 0.36 | open | - |
 | 2026-10-13 18:53 | favourite | r6 | Shopify Rebellion | Spacestation Gaming | YES Shopify Rebellion | 1 | 0.72 | 0.70 | 0.70 | lost | -$0.74 |
@@ -52,18 +53,17 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-13 14:52 | favourite | cs2 | eternal premium | Revise | YES eternal premium | 16 | 0.54 | 0.51 | 0.51 | won | $7.08 |
 | 2026-10-13 14:52 | favourite | cs2 | Procyon Gaming | Hacha Esports | YES Procyon Gaming | 10 | 0.86 | 0.85 | 0.85 | won | $1.31 |
 | 2026-10-13 14:52 | favourite | dota2 | Dawn Bulls | Nemiga Gaming | YES Dawn Bulls | 5 | 0.78 | 0.79 | 0.79 | lost | -$3.97 |
-| 2026-10-13 14:52 | model-only | r6 | Geekay Esports | G2 Esports | NO G2 Esports | 22 | 0.34 | 0.43 | 0.33 | won | $14.17 |
-| 2026-10-13 14:52 | favourite | lol | Solary | Anubis Gaming | YES Solary | 10 | 0.85 | 0.83 | 0.83 | open | - |
 | 2026-10-13 14:52 | favourite | r6 | G2 Esports | Geekay Esports | YES G2 Esports | 12 | 0.68 | 0.67 | 0.67 | lost | -$8.35 |
+| 2026-10-13 14:52 | favourite | lol | Solary | Anubis Gaming | YES Solary | 10 | 0.85 | 0.83 | 0.83 | open | - |
+| 2026-10-13 14:52 | model-only | r6 | Geekay Esports | G2 Esports | NO G2 Esports | 22 | 0.34 | 0.43 | 0.33 | won | $14.17 |
 | 2026-10-13 12:52 | favourite | cs2 | Walczaki | Saint Sinners | YES Walczaki | 17 | 0.52 | 0.53 | 0.53 | open | - |
 | 2026-10-13 12:52 | model-only | cs2 | Saint Sinners | Walczaki | YES Saint Sinners | 31 | 0.47 | 0.53 | 0.47 | open | - |
 | 2026-10-13 11:52 | favourite | cs2 | QUINTESSENCIA | Martians | NO Martians | 11 | 0.76 | 0.75 | 0.75 | won | $2.49 |
 | 2026-10-13 11:52 | model-only | cs2 | Just Swing | Alter Ego | NO Alter Ego | 69 | 0.22 | 0.42 | 0.20 | lost | -$16.01 |
 | 2026-10-13 11:52 | favourite | cs2 | Alter Ego | Just Swing | YES Alter Ego | 11 | 0.80 | 0.80 | 0.80 | won | $2.07 |
 | 2026-10-13 11:52 | model-only | cs2 | Martians | QUINTESSENCIA | YES Martians | 61 | 0.25 | 0.46 | 0.25 | lost | -$16.06 |
+| 2026-10-13 11:52 | favourite | dota2 | Dawn Bulls | Spirit Academy | YES Dawn Bulls | 10 | 0.84 | 0.83 | 0.83 | won | $1.50 |
 | 2026-10-13 11:52 | model-only | dota2 | Spirit Academy | Dawn Bulls | NO Dawn Bulls | 2 | 0.19 | 0.33 | 0.17 | lost | -$0.41 |
-| 2026-10-13 11:52 | model-only | dota2 | The Warriors | Power Rangers | YES The Warriors | 45 | 0.34 | 0.51 | 0.33 | lost | -$16.01 |
-| 2026-10-13 11:52 | favourite | dota2 | Power Rangers | The Warriors | YES Power Rangers | 13 | 0.68 | 0.67 | 0.67 | won | $3.96 |
 
 ## Backtest on real Kalshi prices
 
