@@ -1,74 +1,74 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT112215EDERHURR/candlesticks?start_ts=1791769500&end_ts=1791771360&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT112229EDERPINK/candlesticks?start_ts=1791770340&end_ts=1791772200&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791771360,
+  "adjusted_end_ts": 1791772200,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791771360,
+     "end_period_ts": 1791772200,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.6000",
+      "close_dollars": "0.9500",
       "high_dollars": "0.9500",
-      "low_dollars": "0.4300",
-      "open_dollars": "0.4300"
+      "low_dollars": "0.3400",
+      "open_dollars": "0.3400"
      },
      "yes_bid": {
-      "close_dollars": "0.5300",
-      "high_dollars": "0.5300",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.3600"
+      "close_dollars": "0.0100",
+      "high_dollars": "0.2700",
+      "low_dollars": "0.0100",
+      "open_dollars": "0.2700"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791771360,
+     "end_period_ts": 1791772200,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.3000",
+      "close_dollars": "0.9500",
       "high_dollars": "0.9500",
-      "low_dollars": "0.3000",
-      "open_dollars": "0.4700"
+      "low_dollars": "0.5700",
+      "open_dollars": "0.5700"
      },
      "yes_bid": {
-      "close_dollars": "0.2300",
-      "high_dollars": "0.3900",
+      "close_dollars": "0.0000",
+      "high_dollars": "0.5000",
       "low_dollars": "0.0000",
-      "open_dollars": "0.3900"
+      "open_dollars": "0.5000"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791771360,
+     "end_period_ts": 1791772200,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.2000",
+      "close_dollars": "0.9900",
       "high_dollars": "0.9900",
       "low_dollars": "0.2000",
-      "open_dollars": "0.2100"
+      "open_dollars": "0.2000"
      },
      "yes_bid": {
-      "close_dollars": "0.1300",
-      "high_dollars": "0.1400",
-      "low_dollars": "0.0000",
-      "open_dollars": "0.1400"
+      "close_dollars": "0.0200",
+      "high_dollars": "0.1300",
+      "low_dollars": "0.0200",
+      "open_dollars": "0.1300"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT112215EDERHURR-EDER",
-   "KXESOCCERGAME-26OCT112215EDERHURR-HURR",
-   "KXESOCCERGAME-26OCT112215EDERHURR-TIE"
+   "KXESOCCERGAME-26OCT112229EDERPINK-EDER",
+   "KXESOCCERGAME-26OCT112229EDERPINK-PINK",
+   "KXESOCCERGAME-26OCT112229EDERPINK-TIE"
   ]
  }
 }
