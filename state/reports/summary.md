@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-14 15:27 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-14 15:42 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-14 15:27 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 165 | 18 | 147 | 40 | -$258.67 | -14.1% | -0.7c (162) | $741.33 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 236 | 20 | 216 | 146 | -$127.82 | -7.9% | -1.0c (234) | $872.18 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 236 | 19 | 217 | 147 | -$121.93 | -7.5% | -1.0c (234) | $878.07 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -50,7 +50,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-14 11:51 | favourite | cs2 | 6yuBoJlbl | HyperSpirit | YES 6yuBoJlbl | 12 | 0.69 | 0.68 | 0.68 | open | - |
 | 2026-10-14 11:51 | model-only | cs2 | HyperSpirit | 6yuBoJlbl | NO 6yuBoJlbl | 1 | 0.32 | 0.48 | 0.32 | open | - |
 | 2026-10-14 11:51 | favourite | cs2 | Lynn Vision | Alter Ego | YES Lynn Vision | 12 | 0.71 | 0.70 | 0.71 | open | - |
-| 2026-10-14 10:51 | favourite | dota2 | Team Resilience | Yakult's Brothers | NO Yakult's Brothers | 15 | 0.59 | 0.59 | 0.59 | open | - |
+| 2026-10-14 10:51 | favourite | dota2 | Team Resilience | Yakult's Brothers | NO Yakult's Brothers | 15 | 0.59 | 0.59 | 0.59 | won | $5.89 |
 | 2026-10-14 10:51 | favourite | ow | ENTER FORCE.36 | 99DIVINE | YES ENTER FORCE.36 | 15 | 0.57 | 0.54 | 0.54 | lost | -$8.81 |
 | 2026-10-14 09:51 | favourite | cs2 | los kogutos | 6666 | YES los kogutos | 13 | 0.67 | 0.62 | 0.62 | lost | -$8.92 |
 | 2026-10-14 09:51 | favourite | cs2 | Team Falcons | NIP | YES Team Falcons | 12 | 0.74 | 0.74 | 0.74 | won | $2.95 |
