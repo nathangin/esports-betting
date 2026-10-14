@@ -1,80 +1,74 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT120314KEVILUIS/candlesticks?start_ts=1791787440&end_ts=1791789300&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT120316ARONPEDR/candlesticks?start_ts=1791787560&end_ts=1791789420&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791789300,
+  "adjusted_end_ts": 1791789420,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791789300,
+     "end_period_ts": 1791789420,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.6100",
+      "close_dollars": "0.5400",
       "high_dollars": "0.9900",
-      "low_dollars": "0.4600",
-      "open_dollars": "0.4600"
+      "low_dollars": "0.3600",
+      "open_dollars": "0.3600"
      },
      "yes_bid": {
-      "close_dollars": "0.5300",
-      "high_dollars": "0.5300",
+      "close_dollars": "0.4600",
+      "high_dollars": "0.4600",
       "low_dollars": "0.0000",
-      "open_dollars": "0.3900"
+      "open_dollars": "0.2900"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791789300,
-     "open_interest_fp": "2.98",
-     "price": {
-      "close_dollars": "0.3200",
-      "high_dollars": "0.3200",
-      "low_dollars": "0.3200",
-      "mean_dollars": "0.3200",
-      "open_dollars": "0.3200"
-     },
-     "volume_fp": "2.98",
+     "end_period_ts": 1791789420,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.3200",
-      "high_dollars": "0.9000",
-      "low_dollars": "0.3200",
-      "open_dollars": "0.4600"
+      "close_dollars": "0.3600",
+      "high_dollars": "0.8900",
+      "low_dollars": "0.3600",
+      "open_dollars": "0.5300"
      },
      "yes_bid": {
-      "close_dollars": "0.2500",
-      "high_dollars": "0.3900",
-      "low_dollars": "0.0600",
-      "open_dollars": "0.3900"
+      "close_dollars": "0.2900",
+      "high_dollars": "0.4600",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.4600"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791789300,
+     "end_period_ts": 1791789420,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.1800",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.1800",
-      "open_dollars": "0.1900"
+      "close_dollars": "0.2100",
+      "high_dollars": "0.9600",
+      "low_dollars": "0.2100",
+      "open_dollars": "0.2100"
      },
      "yes_bid": {
-      "close_dollars": "0.1100",
-      "high_dollars": "0.1200",
+      "close_dollars": "0.1400",
+      "high_dollars": "0.1400",
       "low_dollars": "0.0000",
-      "open_dollars": "0.1200"
+      "open_dollars": "0.1400"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT120314KEVILUIS-KEVI",
-   "KXESOCCERGAME-26OCT120314KEVILUIS-LUIS",
-   "KXESOCCERGAME-26OCT120314KEVILUIS-TIE"
+   "KXESOCCERGAME-26OCT120316ARONPEDR-ARON",
+   "KXESOCCERGAME-26OCT120316ARONPEDR-PEDR",
+   "KXESOCCERGAME-26OCT120316ARONPEDR-TIE"
   ]
  }
 }
