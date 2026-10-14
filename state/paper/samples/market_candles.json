@@ -1,8 +1,8 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/markets/KXESOCCERGAME-26OCT120440PEDRLUIS-LUIS/candlesticks?start_ts=1791792600&end_ts=1791794460&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/markets/KXESOCCERGAME-26OCT120454PEDRKEVI-KEVI/candlesticks?start_ts=1791793440&end_ts=1791795300&period_interval=1",
  "status": 200,
  "body": {
   "candlesticks": [],
-  "ticker": "KXESOCCERGAME-26OCT120440PEDRLUIS-LUIS"
+  "ticker": "KXESOCCERGAME-26OCT120454PEDRKEVI-KEVI"
  }
 }
