@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-14 22:07 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-14 22:42 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 165 | 14 | 151 | 41 | -$257.53 | -13.8% | -0.7c (162) | $742.47 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 236 | 15 | 221 | 151 | -$112.88 | -6.8% | -1.0c (234) | $887.12 |
+| model-only | Elo win model alone (control: ignores the market) | 165 | 13 | 152 | 41 | -$261.56 | -14.0% | -0.7c (162) | $738.44 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 236 | 14 | 222 | 152 | -$108.67 | -6.6% | -1.0c (234) | $891.33 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,22 +16,22 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-592 finished matches. Lower is better; the market line is the bar to beat.
+594 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5604 | 0.1899 |
-| model | 0.6612 | 0.2342 |
-| blend | 0.5585 | 0.1893 |
+| market | 0.5611 | 0.1902 |
+| model | 0.6607 | 0.2339 |
+| blend | 0.5593 | 0.1896 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 383 | 0.5719 | 0.6633 |
-| dota2 | 77 | 0.5411 | 0.6450 |
+| dota2 | 78 | 0.5396 | 0.6437 |
 | lol | 51 | 0.4986 | 0.7236 |
 | ow | 38 | 0.4673 | 0.5439 |
 | r6 | 28 | 0.6762 | 0.7223 |
-| valorant | 15 | 0.5943 | 0.6637 |
+| valorant | 16 | 0.6269 | 0.6492 |
 
 ## Latest bets
 
@@ -43,8 +43,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-14 12:51 | model-only | cs2 | Just_Players | FOKUS | NO FOKUS | 2 | 0.24 | 0.44 | 0.23 | lost | -$0.51 |
 | 2026-10-14 12:51 | model-only | cs2 | FORZE Reload | 33 | YES FORZE Reload | 29 | 0.50 | 0.57 | 0.48 | won | $13.99 |
 | 2026-10-14 12:21 | favourite | cs2 | Legacy | PARIVISION | YES Legacy | 2 | 0.58 | 0.58 | 0.58 | won | $0.80 |
-| 2026-10-14 11:51 | favourite | dota2 | Dawn Bulls | salamit | YES Dawn Bulls | 13 | 0.66 | 0.66 | 0.66 | open | - |
-| 2026-10-14 11:51 | model-only | dota2 | salamit | Dawn Bulls | YES salamit | 11 | 0.35 | 0.42 | 0.34 | open | - |
+| 2026-10-14 11:51 | favourite | dota2 | Dawn Bulls | salamit | YES Dawn Bulls | 13 | 0.66 | 0.66 | 0.66 | won | $4.21 |
+| 2026-10-14 11:51 | model-only | dota2 | salamit | Dawn Bulls | YES salamit | 11 | 0.35 | 0.42 | 0.34 | lost | -$4.03 |
 | 2026-10-14 11:51 | favourite | cs2 | Blitzkrieg | realgotis22 | YES Blitzkrieg | 16 | 0.54 | 0.53 | 0.53 | open | - |
 | 2026-10-14 11:51 | model-only | cs2 | realgotis22 | Blitzkrieg | NO Blitzkrieg | 1 | 0.47 | 0.60 | 0.47 | open | - |
 | 2026-10-14 11:51 | favourite | cs2 | 6yuBoJlbl | HyperSpirit | YES 6yuBoJlbl | 12 | 0.69 | 0.68 | 0.68 | won | $3.54 |
