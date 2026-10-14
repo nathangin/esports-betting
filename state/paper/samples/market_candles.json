@@ -1,8 +1,8 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/markets/KXESOCCERGAME-26OCT120508KYLIPEDR-KYLI/candlesticks?start_ts=1791794280&end_ts=1791796140&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/markets/KXESOCCERGAME-26OCT120522BAROSILE-BARO/candlesticks?start_ts=1791795120&end_ts=1791796980&period_interval=1",
  "status": 200,
  "body": {
   "candlesticks": [],
-  "ticker": "KXESOCCERGAME-26OCT120508KYLIPEDR-KYLI"
+  "ticker": "KXESOCCERGAME-26OCT120522BAROSILE-BARO"
  }
 }
