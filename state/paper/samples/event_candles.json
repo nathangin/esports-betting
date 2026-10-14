@@ -1,74 +1,74 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT121226NATEVINI/candlesticks?start_ts=1791820560&end_ts=1791822420&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT121305LEXILOTT/candlesticks?start_ts=1791822900&end_ts=1791824760&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791822420,
+  "adjusted_end_ts": 1791824760,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791822420,
+     "end_period_ts": 1791824760,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9200",
-      "high_dollars": "0.9200",
-      "low_dollars": "0.3300",
+      "close_dollars": "0.7100",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.5900",
+      "open_dollars": "0.6000"
+     },
+     "yes_bid": {
+      "close_dollars": "0.6300",
+      "high_dollars": "0.6700",
+      "low_dollars": "0.1600",
+      "open_dollars": "0.5300"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1791824760,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.2200",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.2100",
       "open_dollars": "0.3300"
      },
      "yes_bid": {
-      "close_dollars": "0.0300",
+      "close_dollars": "0.1500",
       "high_dollars": "0.2600",
       "low_dollars": "0.0200",
-      "open_dollars": "0.2600"
+      "open_dollars": "0.2500"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1791822420,
+     "end_period_ts": 1791824760,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9900",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.5700",
-      "open_dollars": "0.5700"
+      "close_dollars": "0.1800",
+      "high_dollars": "0.9200",
+      "low_dollars": "0.1600",
+      "open_dollars": "0.1800"
      },
      "yes_bid": {
-      "close_dollars": "0.0300",
-      "high_dollars": "0.4900",
+      "close_dollars": "0.1100",
+      "high_dollars": "0.1200",
       "low_dollars": "0.0200",
-      "open_dollars": "0.4900"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1791822420,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.9900",
-      "high_dollars": "0.9900",
-      "low_dollars": "0.2100",
-      "open_dollars": "0.2100"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0300",
-      "high_dollars": "0.1400",
-      "low_dollars": "0.0200",
-      "open_dollars": "0.1400"
+      "open_dollars": "0.1100"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT121226NATEVINI-NATE",
-   "KXESOCCERGAME-26OCT121226NATEVINI-VINI",
-   "KXESOCCERGAME-26OCT121226NATEVINI-TIE"
+   "KXESOCCERGAME-26OCT121305LEXILOTT-LEXI",
+   "KXESOCCERGAME-26OCT121305LEXILOTT-LOTT",
+   "KXESOCCERGAME-26OCT121305LEXILOTT-TIE"
   ]
  }
 }
