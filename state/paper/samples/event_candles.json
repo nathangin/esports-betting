@@ -1,42 +1,42 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT121414OUSMREND/candlesticks?start_ts=1791827040&end_ts=1791828900&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXESOCCERGAME/events/KXESOCCERGAME-26OCT121456NATEREND/candlesticks?start_ts=1791829560&end_ts=1791831420&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791828900,
+  "adjusted_end_ts": 1791831420,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1791828840,
+     "end_period_ts": 1791831360,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
       "close_dollars": "0.9900",
       "high_dollars": "0.9900",
-      "low_dollars": "0.6500",
-      "open_dollars": "0.6500"
+      "low_dollars": "0.6200",
+      "open_dollars": "0.6200"
      },
      "yes_bid": {
       "close_dollars": "0.0000",
-      "high_dollars": "0.5800",
+      "high_dollars": "0.5500",
       "low_dollars": "0.0000",
-      "open_dollars": "0.5800"
+      "open_dollars": "0.5500"
      }
     },
     {
-     "end_period_ts": 1791828900,
+     "end_period_ts": 1791831420,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.6500",
+      "close_dollars": "0.6200",
       "high_dollars": "0.9900",
-      "low_dollars": "0.6500",
+      "low_dollars": "0.6200",
       "open_dollars": "0.9900"
      },
      "yes_bid": {
-      "close_dollars": "0.5800",
-      "high_dollars": "0.5800",
+      "close_dollars": "0.5500",
+      "high_dollars": "0.5500",
       "low_dollars": "0.0000",
       "open_dollars": "0.0000"
      }
@@ -44,37 +44,37 @@
    ],
    [
     {
-     "end_period_ts": 1791828840,
+     "end_period_ts": 1791831360,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
       "close_dollars": "0.9900",
       "high_dollars": "0.9900",
-      "low_dollars": "0.2500",
-      "open_dollars": "0.2500"
+      "low_dollars": "0.2800",
+      "open_dollars": "0.2800"
      },
      "yes_bid": {
       "close_dollars": "0.0000",
-      "high_dollars": "0.1800",
+      "high_dollars": "0.2100",
       "low_dollars": "0.0000",
-      "open_dollars": "0.1800"
+      "open_dollars": "0.2100"
      }
     },
     {
-     "end_period_ts": 1791828900,
+     "end_period_ts": 1791831420,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.2500",
+      "close_dollars": "0.2800",
       "high_dollars": "0.9900",
-      "low_dollars": "0.2500",
+      "low_dollars": "0.2800",
       "open_dollars": "0.9900"
      },
      "yes_bid": {
-      "close_dollars": "0.1800",
-      "high_dollars": "0.1800",
+      "close_dollars": "0.2100",
+      "high_dollars": "0.2100",
       "low_dollars": "0.0000",
       "open_dollars": "0.0000"
      }
@@ -82,13 +82,13 @@
    ],
    [
     {
-     "end_period_ts": 1791828840,
+     "end_period_ts": 1791831360,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9900",
-      "high_dollars": "0.9900",
+      "close_dollars": "0.9800",
+      "high_dollars": "0.9800",
       "low_dollars": "0.2000",
       "open_dollars": "0.2000"
      },
@@ -100,15 +100,15 @@
      }
     },
     {
-     "end_period_ts": 1791828900,
+     "end_period_ts": 1791831420,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
       "close_dollars": "0.2000",
-      "high_dollars": "0.9900",
+      "high_dollars": "0.9800",
       "low_dollars": "0.2000",
-      "open_dollars": "0.9900"
+      "open_dollars": "0.9800"
      },
      "yes_bid": {
       "close_dollars": "0.1300",
@@ -120,9 +120,9 @@
    ]
   ],
   "market_tickers": [
-   "KXESOCCERGAME-26OCT121414OUSMREND-OUSM",
-   "KXESOCCERGAME-26OCT121414OUSMREND-REND",
-   "KXESOCCERGAME-26OCT121414OUSMREND-TIE"
+   "KXESOCCERGAME-26OCT121456NATEREND-NATE",
+   "KXESOCCERGAME-26OCT121456NATEREND-REND",
+   "KXESOCCERGAME-26OCT121456NATEREND-TIE"
   ]
  }
 }
