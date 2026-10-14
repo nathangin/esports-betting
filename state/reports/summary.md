@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-14 12:36 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-14 12:41 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 162 | 19 | 143 | 39 | -$249.54 | -13.9% | -0.8c (155) | $750.46 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 236 | 29 | 207 | 141 | -$112.34 | -7.3% | -1.0c (228) | $887.66 |
+| model-only | Elo win model alone (control: ignores the market) | 162 | 18 | 144 | 39 | -$263.94 | -14.6% | -0.8c (155) | $736.06 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 236 | 27 | 209 | 142 | -$119.93 | -7.7% | -1.0c (228) | $880.07 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -47,7 +47,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-14 11:51 | favourite | cs2 | 6yuBoJlbl | HyperSpirit | YES 6yuBoJlbl | 12 | 0.69 | 0.68 | 0.68 | open | - |
 | 2026-10-14 11:51 | model-only | cs2 | HyperSpirit | 6yuBoJlbl | NO 6yuBoJlbl | 1 | 0.32 | 0.48 | 0.32 | open | - |
 | 2026-10-14 11:51 | favourite | cs2 | Lynn Vision | Alter Ego | YES Lynn Vision | 12 | 0.71 | 0.70 | 0.71 | open | - |
-| 2026-10-14 10:51 | favourite | ow | ENTER FORCE.36 | 99DIVINE | YES ENTER FORCE.36 | 15 | 0.57 | 0.54 | 0.54 | open | - |
+| 2026-10-14 10:51 | favourite | ow | ENTER FORCE.36 | 99DIVINE | YES ENTER FORCE.36 | 15 | 0.57 | 0.54 | 0.54 | lost | -$8.81 |
 | 2026-10-14 10:51 | favourite | dota2 | Team Resilience | Yakult's Brothers | NO Yakult's Brothers | 15 | 0.59 | 0.59 | 0.59 | open | - |
 | 2026-10-14 09:51 | favourite | cs2 | los kogutos | 6666 | YES los kogutos | 13 | 0.67 | 0.62 | 0.62 | open | - |
 | 2026-10-14 09:51 | favourite | cs2 | Team Falcons | NIP | YES Team Falcons | 12 | 0.74 | 0.74 | 0.74 | open | - |
@@ -57,10 +57,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-14 09:51 | favourite | cs2 | BakS eSports | Bushido Wildcats | YES BakS eSports | 15 | 0.58 | 0.57 | 0.57 | open | - |
 | 2026-10-14 09:21 | favourite | cs2 | EAC Extra | Bread Eaters Esports | YES EAC Extra | 14 | 0.62 | 0.62 | 0.62 | open | - |
 | 2026-10-14 09:21 | model-only | cs2 | Bread Eaters Esports | EAC Extra | YES Bread Eaters Esports | 33 | 0.38 | 0.44 | 0.38 | open | - |
-| 2026-10-14 08:50 | favourite | cs2 | Nuclear TigeRES | LPH Gaming | NO LPH Gaming | 10 | 0.87 | 0.86 | 0.86 | open | - |
+| 2026-10-14 08:50 | favourite | cs2 | Nuclear TigeRES | LPH Gaming | NO LPH Gaming | 10 | 0.87 | 0.86 | 0.86 | won | $1.22 |
 | 2026-10-14 08:50 | model-only | cs2 | HOTU | fnatic | NO fnatic | 30 | 0.45 | 0.52 | 0.44 | won | $15.98 |
 | 2026-10-14 08:50 | favourite | cs2 | fnatic | HOTU | YES fnatic | 15 | 0.56 | 0.56 | 0.56 | lost | -$8.66 |
-| 2026-10-14 08:50 | model-only | cs2 | LPH Gaming | Nuclear TigeRES | YES LPH Gaming | 97 | 0.14 | 0.37 | 0.14 | open | - |
+| 2026-10-14 08:50 | model-only | cs2 | LPH Gaming | Nuclear TigeRES | YES LPH Gaming | 97 | 0.14 | 0.37 | 0.14 | lost | -$14.40 |
 | 2026-10-14 08:50 | model-only | cs2 | Sashi Esport | Astralis | YES Sashi Esport | 90 | 0.15 | 0.36 | 0.15 | lost | -$14.31 |
 | 2026-10-14 08:50 | favourite | cs2 | Astralis | Sashi Esport | YES Astralis | 10 | 0.86 | 0.85 | 0.85 | won | $1.31 |
 | 2026-10-14 08:50 | favourite | dota2 | Team Lynx | Inner Circle | NO Inner Circle | 12 | 0.70 | 0.68 | 0.68 | won | $3.42 |
