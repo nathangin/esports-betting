@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-14 11:16 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-14 11:21 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 159 | 22 | 137 | 35 | -$291.78 | -16.9% | -0.8c (155) | $708.22 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 231 | 29 | 202 | 140 | -$78.19 | -5.3% | -0.9c (226) | $921.81 |
+| model-only | Elo win model alone (control: ignores the market) | 159 | 20 | 139 | 37 | -$255.40 | -14.7% | -0.8c (155) | $744.60 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 231 | 27 | 204 | 140 | -$95.88 | -6.4% | -0.9c (226) | $904.12 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -61,8 +61,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-14 07:50 | favourite | cs2 | Rooster | MARKandLARRY | NO MARKandLARRY | 10 | 0.88 | 0.87 | 0.87 | won | $1.12 |
 | 2026-10-14 07:50 | model-only | lol | BNK FEARX | KT Rolster | NO KT Rolster | 33 | 0.42 | 0.49 | 0.41 | open | - |
 | 2026-10-14 07:50 | favourite | lol | KT Rolster | BNK FEARX | NO BNK FEARX | 15 | 0.59 | 0.58 | 0.58 | open | - |
-| 2026-10-14 07:20 | favourite | cs2 | Aurora Gaming | 9z | NO 9z | 12 | 0.74 | 0.73 | 0.73 | open | - |
-| 2026-10-14 07:20 | model-only | cs2 | 9z | Aurora Gaming | YES 9z | 50 | 0.27 | 0.35 | 0.27 | open | - |
+| 2026-10-14 07:20 | favourite | cs2 | Aurora Gaming | 9z | NO 9z | 12 | 0.74 | 0.73 | 0.73 | lost | -$9.05 |
+| 2026-10-14 07:20 | model-only | cs2 | 9z | Aurora Gaming | YES 9z | 50 | 0.27 | 0.35 | 0.27 | won | $35.81 |
 | 2026-10-14 06:50 | model-only | cs2 | B8 Academy | ENJOY | YES B8 Academy | 34 | 0.40 | 0.50 | 0.39 | lost | -$14.18 |
 
 ## Backtest on real Kalshi prices
