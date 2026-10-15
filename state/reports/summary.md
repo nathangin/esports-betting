@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-15 13:08 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-15 13:23 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 186 | 26 | 160 | 44 | -$217.56 | -11.3% | -0.6c (177) | $782.44 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 262 | 28 | 234 | 161 | -$112.39 | -6.5% | -1.1c (253) | $887.61 |
+| model-only | Elo win model alone (control: ignores the market) | 186 | 25 | 161 | 45 | -$200.20 | -10.3% | -0.6c (178) | $799.80 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 262 | 27 | 235 | 161 | -$121.20 | -7.0% | -1.1c (254) | $878.80 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,19 +16,19 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-618 finished matches. Lower is better; the market line is the bar to beat.
+619 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5674 | 0.1929 |
-| model | 0.6606 | 0.2339 |
-| blend | 0.5663 | 0.1926 |
+| market | 0.5678 | 0.1931 |
+| model | 0.6604 | 0.2338 |
+| blend | 0.5668 | 0.1928 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 395 | 0.5737 | 0.6617 |
 | dota2 | 89 | 0.5781 | 0.6510 |
-| lol | 51 | 0.4986 | 0.7236 |
+| lol | 52 | 0.5052 | 0.7198 |
 | ow | 38 | 0.4673 | 0.5439 |
 | r6 | 28 | 0.6762 | 0.7223 |
 | valorant | 17 | 0.6143 | 0.6568 |
@@ -60,8 +60,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-15 10:22 | favourite | cs2 | WBT Academy | ENCE | NO ENCE | 1 | 0.61 | 0.60 | 0.60 | open | - |
 | 2026-10-15 10:22 | favourite | cs2 | Johnny Speeds | Bushido Wildcats | YES Johnny Speeds | 1 | 0.59 | 0.56 | 0.55 | open | - |
 | 2026-10-15 10:22 | model-only | dota2 | PuckChamp | Zero Tenacity | YES PuckChamp | 127 | 0.11 | 0.34 | 0.11 | open | - |
-| 2026-10-15 07:54 | favourite | lol | OKSavingsBank BRION | Team WE | YES OKSavingsBank BRION | 15 | 0.57 | 0.57 | 0.57 | open | - |
-| 2026-10-15 07:54 | model-only | lol | Team WE | OKSavingsBank BRION | NO OKSavingsBank BRION | 32 | 0.44 | 0.59 | 0.43 | open | - |
+| 2026-10-15 07:54 | favourite | lol | OKSavingsBank BRION | Team WE | YES OKSavingsBank BRION | 15 | 0.57 | 0.57 | 0.57 | lost | -$8.81 |
+| 2026-10-15 07:54 | model-only | lol | Team WE | OKSavingsBank BRION | NO OKSavingsBank BRION | 32 | 0.44 | 0.59 | 0.43 | won | $17.36 |
 | 2026-10-15 07:24 | favourite | cs2 | Aurora Gaming | NIP | YES Aurora Gaming | 12 | 0.72 | 0.71 | 0.71 | won | $3.19 |
 | 2026-10-15 07:24 | model-only | cs2 | NIP | Aurora Gaming | NO Aurora Gaming | 1 | 0.30 | 0.43 | 0.29 | lost | -$0.32 |
 
