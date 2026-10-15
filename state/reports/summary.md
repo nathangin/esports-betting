@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-15 12:08 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-15 12:13 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 181 | 23 | 158 | 43 | -$204.13 | -10.7% | -0.6c (176) | $795.87 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 256 | 24 | 232 | 160 | -$104.42 | -6.1% | -1.1c (252) | $895.58 |
+| model-only | Elo win model alone (control: ignores the market) | 181 | 22 | 159 | 44 | -$202.93 | -10.6% | -0.6c (176) | $797.07 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 256 | 23 | 233 | 160 | -$112.83 | -6.5% | -1.1c (252) | $887.17 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-615 finished matches. Lower is better; the market line is the bar to beat.
+616 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5665 | 0.1925 |
-| model | 0.6606 | 0.2339 |
-| blend | 0.5654 | 0.1921 |
+| market | 0.5671 | 0.1928 |
+| model | 0.6605 | 0.2339 |
+| blend | 0.5661 | 0.1925 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 393 | 0.5725 | 0.6615 |
+| cs2 | 394 | 0.5736 | 0.6614 |
 | dota2 | 88 | 0.5774 | 0.6514 |
 | lol | 51 | 0.4986 | 0.7236 |
 | ow | 38 | 0.4673 | 0.5439 |
@@ -60,8 +60,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-15 06:53 | favourite | cs2 | Vitality Academy | VP.Future 3 | YES Vitality Academy | 14 | 0.59 | 0.57 | 0.57 | open | - |
 | 2026-10-15 06:53 | model-only | cs2 | VP.Future 3 | Vitality Academy | YES VP.Future 3 | 32 | 0.44 | 0.51 | 0.43 | open | - |
 | 2026-10-15 06:53 | favourite | cs2 | 6666 | Bushido Wildcats | YES 6666 | 14 | 0.62 | 0.60 | 0.60 | won | $5.08 |
-| 2026-10-15 06:53 | favourite | cs2 | Brute | mellren | YES Brute | 13 | 0.63 | 0.62 | 0.62 | open | - |
-| 2026-10-15 06:53 | model-only | cs2 | mellren | Brute | YES mellren | 2 | 0.38 | 0.55 | 0.38 | open | - |
+| 2026-10-15 06:53 | favourite | cs2 | Brute | mellren | YES Brute | 13 | 0.63 | 0.62 | 0.62 | lost | -$8.41 |
+| 2026-10-15 06:53 | model-only | cs2 | mellren | Brute | YES mellren | 2 | 0.38 | 0.55 | 0.38 | won | $1.20 |
 | 2026-10-15 06:53 | favourite | cs2 | WBT Academy | Esport Academy Copenhagen | NO Esport Academy Copenhagen | 14 | 0.58 | 0.56 | 0.56 | won | $5.64 |
 | 2026-10-15 05:53 | favourite | dota2 | salamit | Spirit Academy | YES salamit | 12 | 0.72 | 0.70 | 0.70 | lost | -$8.81 |
 
