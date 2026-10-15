@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-15 05:43 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-15 05:53 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 169 | 17 | 152 | 41 | -$261.56 | -14.0% | -0.8c (166) | $738.44 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 242 | 19 | 223 | 153 | -$108.54 | -6.5% | -1.0c (240) | $891.46 |
+| model-only | Elo win model alone (control: ignores the market) | 170 | 18 | 152 | 41 | -$261.56 | -14.0% | -0.8c (166) | $738.44 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 243 | 20 | 223 | 153 | -$108.54 | -6.5% | -1.0c (240) | $891.46 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-15 05:53 | favourite | dota2 | salamit | Spirit Academy | YES salamit | 12 | 0.72 | 0.70 | 0.70 | open | - |
+| 2026-10-15 05:53 | model-only | dota2 | Spirit Academy | salamit | YES Spirit Academy | 32 | 0.31 | 0.47 | 0.30 | open | - |
 | 2026-10-15 03:53 | favourite | dota2 | Yakult's Brothers | Novus Gaming | NO Novus Gaming | 11 | 0.73 | 0.72 | 0.72 | open | - |
 | 2026-10-15 03:53 | model-only | dota2 | Novus Gaming | Yakult's Brothers | NO Yakult's Brothers | 46 | 0.30 | 0.42 | 0.28 | open | - |
 | 2026-10-15 02:53 | favourite | dota2 | Yakult's Brothers | Zenith | YES Yakult's Brothers | 5 | 0.76 | 0.77 | 0.77 | open | - |
@@ -46,12 +48,12 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-15 02:53 | model-only | dota2 | Execration | Royal Bear | YES Execration | 38 | 0.37 | 0.49 | 0.36 | open | - |
 | 2026-10-15 02:53 | favourite | dota2 | Direborn | Team Kinetix | YES Direborn | 1 | 0.72 | 0.71 | 0.71 | open | - |
 | 2026-10-15 02:53 | model-only | dota2 | Team Kinetix | Direborn | YES Team Kinetix | 1 | 0.31 | 0.39 | 0.29 | open | - |
-| 2026-10-15 00:52 | favourite | dota2 | Team Resilience | Zenith | NO Zenith | 1 | 0.78 | 0.78 | 0.78 | open | - |
 | 2026-10-15 00:52 | model-only | dota2 | Zenith | Team Resilience | NO Team Resilience | 11 | 0.23 | 0.45 | 0.22 | open | - |
+| 2026-10-15 00:52 | favourite | dota2 | Team Resilience | Zenith | NO Zenith | 1 | 0.78 | 0.78 | 0.78 | open | - |
 | 2026-10-14 22:52 | favourite | cs2 | NEXVOID | Mindfreak | NO Mindfreak | 1 | 0.86 | 0.82 | 0.82 | won | $0.13 |
+| 2026-10-14 12:51 | model-only | cs2 | Ryvex | WRAITH PCIFIC | YES Ryvex | 63 | 0.18 | 0.39 | 0.17 | lost | -$12.00 |
 | 2026-10-14 12:51 | model-only | cs2 | Just_Players | FOKUS | NO FOKUS | 2 | 0.24 | 0.44 | 0.23 | lost | -$0.51 |
 | 2026-10-14 12:51 | model-only | cs2 | FORZE Reload | 33 | YES FORZE Reload | 29 | 0.50 | 0.57 | 0.48 | won | $13.99 |
-| 2026-10-14 12:51 | model-only | cs2 | Ryvex | WRAITH PCIFIC | YES Ryvex | 63 | 0.18 | 0.39 | 0.17 | lost | -$12.00 |
 | 2026-10-14 12:21 | favourite | cs2 | Legacy | PARIVISION | YES Legacy | 2 | 0.58 | 0.58 | 0.58 | won | $0.80 |
 | 2026-10-14 11:51 | favourite | dota2 | Dawn Bulls | salamit | YES Dawn Bulls | 13 | 0.66 | 0.66 | 0.66 | won | $4.21 |
 | 2026-10-14 11:51 | model-only | dota2 | salamit | Dawn Bulls | YES salamit | 11 | 0.35 | 0.42 | 0.34 | lost | -$4.03 |
@@ -62,8 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-14 11:51 | favourite | cs2 | Lynn Vision | Alter Ego | YES Lynn Vision | 12 | 0.71 | 0.70 | 0.71 | won | $3.30 |
 | 2026-10-14 10:51 | favourite | ow | ENTER FORCE.36 | 99DIVINE | YES ENTER FORCE.36 | 15 | 0.57 | 0.54 | 0.54 | lost | -$8.81 |
 | 2026-10-14 10:51 | favourite | dota2 | Team Resilience | Yakult's Brothers | NO Yakult's Brothers | 15 | 0.59 | 0.59 | 0.59 | won | $5.89 |
-| 2026-10-14 09:51 | favourite | cs2 | ex-RUSTEC | mellren | YES ex-RUSTEC | 13 | 0.64 | 0.62 | 0.62 | won | $4.47 |
-| 2026-10-14 09:51 | favourite | cs2 | BakS eSports | Bushido Wildcats | YES BakS eSports | 15 | 0.58 | 0.57 | 0.57 | won | $6.04 |
 
 ## Backtest on real Kalshi prices
 
