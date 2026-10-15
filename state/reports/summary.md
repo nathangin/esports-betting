@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-15 07:39 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-15 07:54 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 175 | 22 | 153 | 41 | -$261.89 | -14.0% | -0.8c (167) | $738.11 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 250 | 25 | 225 | 155 | -$107.15 | -6.4% | -1.0c (241) | $892.85 |
+| model-only | Elo win model alone (control: ignores the market) | 176 | 23 | 153 | 41 | -$261.89 | -14.0% | -0.7c (171) | $738.11 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 251 | 26 | 225 | 155 | -$107.15 | -6.4% | -1.0c (247) | $892.85 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,14 +39,16 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-15 07:54 | favourite | lol | OKSavingsBank BRION | Team WE | YES OKSavingsBank BRION | 15 | 0.57 | 0.57 | 0.57 | open | - |
+| 2026-10-15 07:54 | model-only | lol | Team WE | OKSavingsBank BRION | NO OKSavingsBank BRION | 32 | 0.44 | 0.59 | 0.43 | open | - |
 | 2026-10-15 07:24 | favourite | cs2 | Aurora Gaming | NIP | YES Aurora Gaming | 12 | 0.72 | 0.71 | 0.71 | open | - |
 | 2026-10-15 07:24 | model-only | cs2 | NIP | Aurora Gaming | NO Aurora Gaming | 1 | 0.30 | 0.43 | 0.29 | open | - |
 | 2026-10-15 06:53 | favourite | cs2 | Vitality Academy | VP.Future 3 | YES Vitality Academy | 14 | 0.59 | 0.57 | 0.57 | open | - |
 | 2026-10-15 06:53 | favourite | cs2 | WBT Academy | Esport Academy Copenhagen | NO Esport Academy Copenhagen | 14 | 0.58 | 0.56 | 0.56 | open | - |
-| 2026-10-15 06:53 | favourite | cs2 | Brute | mellren | YES Brute | 13 | 0.63 | 0.62 | 0.62 | open | - |
+| 2026-10-15 06:53 | model-only | cs2 | mellren | Brute | YES mellren | 2 | 0.38 | 0.55 | 0.38 | open | - |
 | 2026-10-15 06:53 | favourite | cs2 | 6666 | Bushido Wildcats | YES 6666 | 14 | 0.62 | 0.60 | 0.60 | open | - |
 | 2026-10-15 06:53 | model-only | cs2 | VP.Future 3 | Vitality Academy | YES VP.Future 3 | 32 | 0.44 | 0.51 | 0.43 | open | - |
-| 2026-10-15 06:53 | model-only | cs2 | mellren | Brute | YES mellren | 2 | 0.38 | 0.55 | 0.38 | open | - |
+| 2026-10-15 06:53 | favourite | cs2 | Brute | mellren | YES Brute | 13 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-10-15 06:53 | model-only | dota2 | InterActive Philippines | Xipto Esports | NO Xipto Esports | 66 | 0.21 | 0.38 | 0.20 | open | - |
 | 2026-10-15 06:53 | favourite | dota2 | Xipto Esports | InterActive Philippines | NO InterActive Philippines | 10 | 0.81 | 0.80 | 0.80 | open | - |
 | 2026-10-15 06:53 | model-only | dota2 | Ivory | Yangon Galacticos | NO Yangon Galacticos | 1 | 0.18 | 0.37 | 0.17 | open | - |
@@ -60,10 +62,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-15 02:53 | model-only | dota2 | Execration | Royal Bear | YES Execration | 38 | 0.37 | 0.49 | 0.36 | open | - |
 | 2026-10-15 02:53 | favourite | dota2 | Direborn | Team Kinetix | YES Direborn | 1 | 0.72 | 0.71 | 0.71 | won | $0.26 |
 | 2026-10-15 02:53 | model-only | dota2 | Team Kinetix | Direborn | YES Team Kinetix | 1 | 0.31 | 0.39 | 0.29 | lost | -$0.33 |
-| 2026-10-15 00:52 | model-only | dota2 | Zenith | Team Resilience | NO Team Resilience | 11 | 0.23 | 0.45 | 0.22 | open | - |
 | 2026-10-15 00:52 | favourite | dota2 | Team Resilience | Zenith | NO Zenith | 1 | 0.78 | 0.78 | 0.78 | open | - |
-| 2026-10-14 22:52 | favourite | cs2 | NEXVOID | Mindfreak | NO Mindfreak | 1 | 0.86 | 0.82 | 0.82 | won | $0.13 |
-| 2026-10-14 12:51 | model-only | cs2 | Ryvex | WRAITH PCIFIC | YES Ryvex | 63 | 0.18 | 0.39 | 0.17 | lost | -$12.00 |
+| 2026-10-15 00:52 | model-only | dota2 | Zenith | Team Resilience | NO Team Resilience | 11 | 0.23 | 0.45 | 0.22 | open | - |
 
 ## Backtest on real Kalshi prices
 
