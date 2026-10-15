@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-15 14:08 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-15 14:43 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 186 | 24 | 162 | 45 | -$207.29 | -10.7% | -0.6c (182) | $792.71 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 262 | 26 | 236 | 162 | -$120.83 | -6.9% | -1.1c (259) | $879.17 |
+| model-only | Elo win model alone (control: ignores the market) | 186 | 22 | 164 | 45 | -$226.30 | -11.5% | -0.6c (182) | $773.70 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 262 | 24 | 238 | 164 | -$114.26 | -6.5% | -1.1c (259) | $885.74 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-620 finished matches. Lower is better; the market line is the bar to beat.
+623 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5677 | 0.1931 |
-| model | 0.6604 | 0.2338 |
-| blend | 0.5667 | 0.1927 |
+| market | 0.5671 | 0.1928 |
+| model | 0.6596 | 0.2334 |
+| blend | 0.5660 | 0.1924 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 396 | 0.5735 | 0.6617 |
-| dota2 | 89 | 0.5781 | 0.6510 |
+| cs2 | 398 | 0.5724 | 0.6607 |
+| dota2 | 90 | 0.5792 | 0.6503 |
 | lol | 52 | 0.5052 | 0.7198 |
 | ow | 38 | 0.4673 | 0.5439 |
 | r6 | 28 | 0.6762 | 0.7223 |
@@ -51,10 +51,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-15 12:22 | favourite | cs2 | PARIVISION | BetBoom Team | YES PARIVISION | 16 | 0.52 | 0.52 | 0.52 | open | - |
 | 2026-10-15 12:22 | model-only | cs2 | BetBoom Team | PARIVISION | YES BetBoom Team | 32 | 0.48 | 0.55 | 0.48 | open | - |
 | 2026-10-15 10:22 | model-only | cs2 | Ryvex | maybe | YES Ryvex | 30 | 0.47 | 0.54 | 0.46 | lost | -$14.63 |
-| 2026-10-15 10:22 | model-only | cs2 | 9z | Team Falcons | NO Team Falcons | 56 | 0.25 | 0.34 | 0.24 | open | - |
-| 2026-10-15 10:22 | favourite | cs2 | Team Falcons | 9z | NO 9z | 11 | 0.76 | 0.76 | 0.76 | open | - |
-| 2026-10-15 10:22 | model-only | cs2 | Just_Players | ex-Zero Tenacity | YES Just_Players | 12 | 0.34 | 0.40 | 0.33 | open | - |
-| 2026-10-15 10:22 | favourite | cs2 | ex-Zero Tenacity | Just_Players | YES ex-Zero Tenacity | 13 | 0.67 | 0.67 | 0.67 | open | - |
+| 2026-10-15 10:22 | model-only | cs2 | 9z | Team Falcons | NO Team Falcons | 56 | 0.25 | 0.34 | 0.24 | lost | -$14.74 |
+| 2026-10-15 10:22 | favourite | cs2 | Team Falcons | 9z | NO 9z | 11 | 0.76 | 0.76 | 0.76 | won | $2.49 |
+| 2026-10-15 10:22 | model-only | cs2 | Just_Players | ex-Zero Tenacity | YES Just_Players | 12 | 0.34 | 0.40 | 0.33 | lost | -$4.27 |
+| 2026-10-15 10:22 | favourite | cs2 | ex-Zero Tenacity | Just_Players | YES ex-Zero Tenacity | 13 | 0.67 | 0.67 | 0.67 | won | $4.08 |
 | 2026-10-15 10:22 | model-only | cs2 | ENCE | WBT Academy | YES ENCE | 17 | 0.40 | 0.48 | 0.40 | lost | -$7.09 |
 | 2026-10-15 10:22 | favourite | cs2 | maybe | Ryvex | YES maybe | 1 | 0.54 | 0.54 | 0.54 | won | $0.44 |
 | 2026-10-15 10:22 | favourite | cs2 | WBT Academy | ENCE | NO ENCE | 1 | 0.61 | 0.60 | 0.60 | won | $0.37 |
