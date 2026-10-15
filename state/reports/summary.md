@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-15 05:53 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-15 06:13 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 170 | 18 | 152 | 41 | -$261.56 | -14.0% | -0.8c (166) | $738.44 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 243 | 20 | 223 | 153 | -$108.54 | -6.5% | -1.0c (240) | $891.46 |
+| model-only | Elo win model alone (control: ignores the market) | 170 | 17 | 153 | 41 | -$261.89 | -14.0% | -0.8c (166) | $738.11 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 243 | 18 | 225 | 155 | -$107.15 | -6.4% | -1.0c (240) | $892.85 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-602 finished matches. Lower is better; the market line is the bar to beat.
+603 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5636 | 0.1913 |
-| model | 0.6605 | 0.2339 |
-| blend | 0.5621 | 0.1908 |
+| market | 0.5652 | 0.1920 |
+| model | 0.6612 | 0.2342 |
+| blend | 0.5640 | 0.1916 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 388 | 0.5727 | 0.6627 |
-| dota2 | 80 | 0.5560 | 0.6445 |
+| dota2 | 81 | 0.5685 | 0.6497 |
 | lol | 51 | 0.4986 | 0.7236 |
 | ow | 38 | 0.4673 | 0.5439 |
 | r6 | 28 | 0.6762 | 0.7223 |
@@ -43,11 +43,11 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-15 05:53 | model-only | dota2 | Spirit Academy | salamit | YES Spirit Academy | 32 | 0.31 | 0.47 | 0.30 | open | - |
 | 2026-10-15 03:53 | favourite | dota2 | Yakult's Brothers | Novus Gaming | NO Novus Gaming | 11 | 0.73 | 0.72 | 0.72 | open | - |
 | 2026-10-15 03:53 | model-only | dota2 | Novus Gaming | Yakult's Brothers | NO Yakult's Brothers | 46 | 0.30 | 0.42 | 0.28 | open | - |
-| 2026-10-15 02:53 | favourite | dota2 | Yakult's Brothers | Zenith | YES Yakult's Brothers | 5 | 0.76 | 0.77 | 0.77 | open | - |
+| 2026-10-15 02:53 | favourite | dota2 | Yakult's Brothers | Zenith | YES Yakult's Brothers | 5 | 0.76 | 0.77 | 0.77 | won | $1.13 |
 | 2026-10-15 02:53 | favourite | dota2 | Royal Bear | Execration | YES Royal Bear | 13 | 0.65 | 0.64 | 0.64 | open | - |
 | 2026-10-15 02:53 | model-only | dota2 | Execration | Royal Bear | YES Execration | 38 | 0.37 | 0.49 | 0.36 | open | - |
-| 2026-10-15 02:53 | favourite | dota2 | Direborn | Team Kinetix | YES Direborn | 1 | 0.72 | 0.71 | 0.71 | open | - |
-| 2026-10-15 02:53 | model-only | dota2 | Team Kinetix | Direborn | YES Team Kinetix | 1 | 0.31 | 0.39 | 0.29 | open | - |
+| 2026-10-15 02:53 | favourite | dota2 | Direborn | Team Kinetix | YES Direborn | 1 | 0.72 | 0.71 | 0.71 | won | $0.26 |
+| 2026-10-15 02:53 | model-only | dota2 | Team Kinetix | Direborn | YES Team Kinetix | 1 | 0.31 | 0.39 | 0.29 | lost | -$0.33 |
 | 2026-10-15 00:52 | model-only | dota2 | Zenith | Team Resilience | NO Team Resilience | 11 | 0.23 | 0.45 | 0.22 | open | - |
 | 2026-10-15 00:52 | favourite | dota2 | Team Resilience | Zenith | NO Zenith | 1 | 0.78 | 0.78 | 0.78 | open | - |
 | 2026-10-14 22:52 | favourite | cs2 | NEXVOID | Mindfreak | NO Mindfreak | 1 | 0.86 | 0.82 | 0.82 | won | $0.13 |
