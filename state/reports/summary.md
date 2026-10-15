@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-15 00:42 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-15 00:53 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 165 | 13 | 152 | 41 | -$261.56 | -14.0% | -0.7c (162) | $738.44 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 237 | 15 | 222 | 152 | -$108.67 | -6.6% | -1.0c (235) | $891.33 |
+| model-only | Elo win model alone (control: ignores the market) | 166 | 14 | 152 | 41 | -$261.56 | -14.0% | -0.7c (162) | $738.44 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 238 | 16 | 222 | 152 | -$108.67 | -6.6% | -1.0c (235) | $891.33 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,13 +16,13 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-598 finished matches. Lower is better; the market line is the bar to beat.
+599 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5637 | 0.1913 |
-| model | 0.6604 | 0.2338 |
-| blend | 0.5623 | 0.1909 |
+| market | 0.5634 | 0.1912 |
+| model | 0.6606 | 0.2339 |
+| blend | 0.5620 | 0.1907 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
@@ -31,7 +31,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | lol | 51 | 0.4986 | 0.7236 |
 | ow | 38 | 0.4673 | 0.5439 |
 | r6 | 28 | 0.6762 | 0.7223 |
-| valorant | 16 | 0.6269 | 0.6492 |
+| valorant | 17 | 0.6143 | 0.6568 |
 
 ## Latest bets
 
@@ -39,20 +39,22 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-15 00:52 | favourite | dota2 | Team Resilience | Zenith | NO Zenith | 1 | 0.78 | 0.78 | 0.78 | open | - |
+| 2026-10-15 00:52 | model-only | dota2 | Zenith | Team Resilience | NO Team Resilience | 11 | 0.23 | 0.45 | 0.22 | open | - |
 | 2026-10-14 22:52 | favourite | cs2 | NEXVOID | Mindfreak | NO Mindfreak | 1 | 0.86 | 0.82 | 0.82 | open | - |
 | 2026-10-14 12:51 | model-only | cs2 | Ryvex | WRAITH PCIFIC | YES Ryvex | 63 | 0.18 | 0.39 | 0.17 | lost | -$12.00 |
 | 2026-10-14 12:51 | model-only | cs2 | Just_Players | FOKUS | NO FOKUS | 2 | 0.24 | 0.44 | 0.23 | lost | -$0.51 |
 | 2026-10-14 12:51 | model-only | cs2 | FORZE Reload | 33 | YES FORZE Reload | 29 | 0.50 | 0.57 | 0.48 | won | $13.99 |
 | 2026-10-14 12:21 | favourite | cs2 | Legacy | PARIVISION | YES Legacy | 2 | 0.58 | 0.58 | 0.58 | won | $0.80 |
-| 2026-10-14 11:51 | favourite | dota2 | Dawn Bulls | salamit | YES Dawn Bulls | 13 | 0.66 | 0.66 | 0.66 | won | $4.21 |
-| 2026-10-14 11:51 | model-only | dota2 | salamit | Dawn Bulls | YES salamit | 11 | 0.35 | 0.42 | 0.34 | lost | -$4.03 |
-| 2026-10-14 11:51 | favourite | cs2 | Blitzkrieg | realgotis22 | YES Blitzkrieg | 16 | 0.54 | 0.53 | 0.53 | open | - |
-| 2026-10-14 11:51 | model-only | cs2 | realgotis22 | Blitzkrieg | NO Blitzkrieg | 1 | 0.47 | 0.60 | 0.47 | open | - |
 | 2026-10-14 11:51 | favourite | cs2 | 6yuBoJlbl | HyperSpirit | YES 6yuBoJlbl | 12 | 0.69 | 0.68 | 0.68 | won | $3.54 |
-| 2026-10-14 11:51 | model-only | cs2 | HyperSpirit | 6yuBoJlbl | NO 6yuBoJlbl | 1 | 0.32 | 0.48 | 0.32 | lost | -$0.34 |
 | 2026-10-14 11:51 | favourite | cs2 | Lynn Vision | Alter Ego | YES Lynn Vision | 12 | 0.71 | 0.70 | 0.71 | won | $3.30 |
-| 2026-10-14 10:51 | favourite | dota2 | Team Resilience | Yakult's Brothers | NO Yakult's Brothers | 15 | 0.59 | 0.59 | 0.59 | won | $5.89 |
+| 2026-10-14 11:51 | model-only | cs2 | HyperSpirit | 6yuBoJlbl | NO 6yuBoJlbl | 1 | 0.32 | 0.48 | 0.32 | lost | -$0.34 |
+| 2026-10-14 11:51 | model-only | cs2 | realgotis22 | Blitzkrieg | NO Blitzkrieg | 1 | 0.47 | 0.60 | 0.47 | open | - |
+| 2026-10-14 11:51 | favourite | cs2 | Blitzkrieg | realgotis22 | YES Blitzkrieg | 16 | 0.54 | 0.53 | 0.53 | open | - |
+| 2026-10-14 11:51 | model-only | dota2 | salamit | Dawn Bulls | YES salamit | 11 | 0.35 | 0.42 | 0.34 | lost | -$4.03 |
+| 2026-10-14 11:51 | favourite | dota2 | Dawn Bulls | salamit | YES Dawn Bulls | 13 | 0.66 | 0.66 | 0.66 | won | $4.21 |
 | 2026-10-14 10:51 | favourite | ow | ENTER FORCE.36 | 99DIVINE | YES ENTER FORCE.36 | 15 | 0.57 | 0.54 | 0.54 | lost | -$8.81 |
+| 2026-10-14 10:51 | favourite | dota2 | Team Resilience | Yakult's Brothers | NO Yakult's Brothers | 15 | 0.59 | 0.59 | 0.59 | won | $5.89 |
 | 2026-10-14 09:51 | favourite | cs2 | los kogutos | 6666 | YES los kogutos | 13 | 0.67 | 0.62 | 0.62 | lost | -$8.92 |
 | 2026-10-14 09:51 | favourite | cs2 | Team Falcons | NIP | YES Team Falcons | 12 | 0.74 | 0.74 | 0.74 | won | $2.95 |
 | 2026-10-14 09:51 | model-only | cs2 | NIP | Team Falcons | YES NIP | 52 | 0.26 | 0.41 | 0.26 | lost | -$14.23 |
@@ -61,9 +63,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-14 09:51 | favourite | cs2 | BakS eSports | Bushido Wildcats | YES BakS eSports | 15 | 0.58 | 0.57 | 0.57 | won | $6.04 |
 | 2026-10-14 09:21 | favourite | cs2 | EAC Extra | Bread Eaters Esports | YES EAC Extra | 14 | 0.62 | 0.62 | 0.62 | lost | -$8.92 |
 | 2026-10-14 09:21 | model-only | cs2 | Bread Eaters Esports | EAC Extra | YES Bread Eaters Esports | 33 | 0.38 | 0.44 | 0.38 | won | $19.91 |
-| 2026-10-14 08:50 | favourite | cs2 | Nuclear TigeRES | LPH Gaming | NO LPH Gaming | 10 | 0.87 | 0.86 | 0.86 | won | $1.22 |
-| 2026-10-14 08:50 | model-only | cs2 | HOTU | fnatic | NO fnatic | 30 | 0.45 | 0.52 | 0.44 | won | $15.98 |
-| 2026-10-14 08:50 | favourite | cs2 | fnatic | HOTU | YES fnatic | 15 | 0.56 | 0.56 | 0.56 | lost | -$8.66 |
+| 2026-10-14 08:50 | favourite | cs2 | Astralis | Sashi Esport | YES Astralis | 10 | 0.86 | 0.85 | 0.85 | won | $1.31 |
 
 ## Backtest on real Kalshi prices
 
