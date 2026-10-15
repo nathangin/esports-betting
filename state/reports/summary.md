@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-15 08:09 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-15 10:23 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 176 | 23 | 153 | 41 | -$261.89 | -14.0% | -0.6c (171) | $738.11 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 251 | 26 | 225 | 155 | -$107.15 | -6.4% | -1.1c (247) | $892.85 |
+| model-only | Elo win model alone (control: ignores the market) | 181 | 26 | 155 | 42 | -$254.98 | -13.5% | -0.6c (172) | $745.02 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 256 | 27 | 229 | 158 | -$100.90 | -5.9% | -1.1c (248) | $899.10 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-605 finished matches. Lower is better; the market line is the bar to beat.
+609 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5644 | 0.1916 |
-| model | 0.6612 | 0.2342 |
-| blend | 0.5630 | 0.1912 |
+| market | 0.5652 | 0.1920 |
+| model | 0.6611 | 0.2341 |
+| blend | 0.5639 | 0.1915 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 388 | 0.5727 | 0.6627 |
-| dota2 | 83 | 0.5622 | 0.6501 |
+| cs2 | 390 | 0.5726 | 0.6622 |
+| dota2 | 85 | 0.5687 | 0.6515 |
 | lol | 51 | 0.4986 | 0.7236 |
 | ow | 38 | 0.4673 | 0.5439 |
 | r6 | 28 | 0.6762 | 0.7223 |
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-15 10:22 | model-only | dota2 | PuckChamp | Zero Tenacity | YES PuckChamp | 127 | 0.11 | 0.34 | 0.11 | open | - |
+| 2026-10-15 10:22 | favourite | cs2 | Johnny Speeds | Bushido Wildcats | YES Johnny Speeds | 1 | 0.59 | 0.56 | 0.55 | open | - |
+| 2026-10-15 10:22 | favourite | cs2 | WBT Academy | ENCE | NO ENCE | 1 | 0.61 | 0.60 | 0.60 | open | - |
+| 2026-10-15 10:22 | model-only | cs2 | ENCE | WBT Academy | YES ENCE | 17 | 0.40 | 0.48 | 0.40 | open | - |
+| 2026-10-15 10:22 | favourite | cs2 | maybe | Ryvex | YES maybe | 1 | 0.54 | 0.54 | 0.54 | open | - |
+| 2026-10-15 10:22 | model-only | cs2 | Ryvex | maybe | YES Ryvex | 30 | 0.47 | 0.54 | 0.46 | open | - |
+| 2026-10-15 10:22 | favourite | cs2 | ex-Zero Tenacity | Just_Players | YES ex-Zero Tenacity | 13 | 0.67 | 0.67 | 0.67 | open | - |
+| 2026-10-15 10:22 | model-only | cs2 | Just_Players | ex-Zero Tenacity | YES Just_Players | 12 | 0.34 | 0.40 | 0.33 | open | - |
+| 2026-10-15 10:22 | favourite | cs2 | Team Falcons | 9z | NO 9z | 11 | 0.76 | 0.76 | 0.76 | open | - |
+| 2026-10-15 10:22 | model-only | cs2 | 9z | Team Falcons | NO Team Falcons | 56 | 0.25 | 0.34 | 0.24 | open | - |
 | 2026-10-15 07:54 | favourite | lol | OKSavingsBank BRION | Team WE | YES OKSavingsBank BRION | 15 | 0.57 | 0.57 | 0.57 | open | - |
 | 2026-10-15 07:54 | model-only | lol | Team WE | OKSavingsBank BRION | NO OKSavingsBank BRION | 32 | 0.44 | 0.59 | 0.43 | open | - |
 | 2026-10-15 07:24 | favourite | cs2 | Aurora Gaming | NIP | YES Aurora Gaming | 12 | 0.72 | 0.71 | 0.71 | open | - |
 | 2026-10-15 07:24 | model-only | cs2 | NIP | Aurora Gaming | NO Aurora Gaming | 1 | 0.30 | 0.43 | 0.29 | open | - |
-| 2026-10-15 06:53 | favourite | cs2 | Vitality Academy | VP.Future 3 | YES Vitality Academy | 14 | 0.59 | 0.57 | 0.57 | open | - |
-| 2026-10-15 06:53 | favourite | cs2 | WBT Academy | Esport Academy Copenhagen | NO Esport Academy Copenhagen | 14 | 0.58 | 0.56 | 0.56 | open | - |
-| 2026-10-15 06:53 | model-only | cs2 | mellren | Brute | YES mellren | 2 | 0.38 | 0.55 | 0.38 | open | - |
-| 2026-10-15 06:53 | favourite | cs2 | 6666 | Bushido Wildcats | YES 6666 | 14 | 0.62 | 0.60 | 0.60 | open | - |
-| 2026-10-15 06:53 | model-only | cs2 | VP.Future 3 | Vitality Academy | YES VP.Future 3 | 32 | 0.44 | 0.51 | 0.43 | open | - |
-| 2026-10-15 06:53 | favourite | cs2 | Brute | mellren | YES Brute | 13 | 0.63 | 0.62 | 0.62 | open | - |
-| 2026-10-15 06:53 | model-only | dota2 | InterActive Philippines | Xipto Esports | NO Xipto Esports | 66 | 0.21 | 0.38 | 0.20 | open | - |
-| 2026-10-15 06:53 | favourite | dota2 | Xipto Esports | InterActive Philippines | NO InterActive Philippines | 10 | 0.81 | 0.80 | 0.80 | open | - |
-| 2026-10-15 06:53 | model-only | dota2 | Ivory | Yangon Galacticos | NO Yangon Galacticos | 1 | 0.18 | 0.37 | 0.17 | open | - |
 | 2026-10-15 06:53 | favourite | dota2 | Yangon Galacticos | Ivory | YES Yangon Galacticos | 10 | 0.84 | 0.83 | 0.83 | open | - |
-| 2026-10-15 05:53 | favourite | dota2 | salamit | Spirit Academy | YES salamit | 12 | 0.72 | 0.70 | 0.70 | open | - |
-| 2026-10-15 05:53 | model-only | dota2 | Spirit Academy | salamit | YES Spirit Academy | 32 | 0.31 | 0.47 | 0.30 | open | - |
-| 2026-10-15 03:53 | favourite | dota2 | Yakult's Brothers | Novus Gaming | NO Novus Gaming | 11 | 0.73 | 0.72 | 0.72 | open | - |
-| 2026-10-15 03:53 | model-only | dota2 | Novus Gaming | Yakult's Brothers | NO Yakult's Brothers | 46 | 0.30 | 0.42 | 0.28 | open | - |
-| 2026-10-15 02:53 | favourite | dota2 | Yakult's Brothers | Zenith | YES Yakult's Brothers | 5 | 0.76 | 0.77 | 0.77 | won | $1.13 |
-| 2026-10-15 02:53 | favourite | dota2 | Royal Bear | Execration | YES Royal Bear | 13 | 0.65 | 0.64 | 0.64 | open | - |
-| 2026-10-15 02:53 | model-only | dota2 | Execration | Royal Bear | YES Execration | 38 | 0.37 | 0.49 | 0.36 | open | - |
-| 2026-10-15 02:53 | favourite | dota2 | Direborn | Team Kinetix | YES Direborn | 1 | 0.72 | 0.71 | 0.71 | won | $0.26 |
-| 2026-10-15 02:53 | model-only | dota2 | Team Kinetix | Direborn | YES Team Kinetix | 1 | 0.31 | 0.39 | 0.29 | lost | -$0.33 |
-| 2026-10-15 00:52 | favourite | dota2 | Team Resilience | Zenith | NO Zenith | 1 | 0.78 | 0.78 | 0.78 | open | - |
-| 2026-10-15 00:52 | model-only | dota2 | Zenith | Team Resilience | NO Team Resilience | 11 | 0.23 | 0.45 | 0.22 | open | - |
+| 2026-10-15 06:53 | model-only | dota2 | Ivory | Yangon Galacticos | NO Yangon Galacticos | 1 | 0.18 | 0.37 | 0.17 | open | - |
+| 2026-10-15 06:53 | favourite | dota2 | Xipto Esports | InterActive Philippines | NO InterActive Philippines | 10 | 0.81 | 0.80 | 0.80 | open | - |
+| 2026-10-15 06:53 | model-only | dota2 | InterActive Philippines | Xipto Esports | NO Xipto Esports | 66 | 0.21 | 0.38 | 0.20 | open | - |
+| 2026-10-15 06:53 | favourite | cs2 | Vitality Academy | VP.Future 3 | YES Vitality Academy | 14 | 0.59 | 0.57 | 0.57 | open | - |
+| 2026-10-15 06:53 | model-only | cs2 | VP.Future 3 | Vitality Academy | YES VP.Future 3 | 32 | 0.44 | 0.51 | 0.43 | open | - |
+| 2026-10-15 06:53 | favourite | cs2 | 6666 | Bushido Wildcats | YES 6666 | 14 | 0.62 | 0.60 | 0.60 | won | $5.08 |
+| 2026-10-15 06:53 | favourite | cs2 | Brute | mellren | YES Brute | 13 | 0.63 | 0.62 | 0.62 | open | - |
+| 2026-10-15 06:53 | model-only | cs2 | mellren | Brute | YES mellren | 2 | 0.38 | 0.55 | 0.38 | open | - |
+| 2026-10-15 06:53 | favourite | cs2 | WBT Academy | Esport Academy Copenhagen | NO Esport Academy Copenhagen | 14 | 0.58 | 0.56 | 0.56 | won | $5.64 |
+| 2026-10-15 05:53 | favourite | dota2 | salamit | Spirit Academy | YES salamit | 12 | 0.72 | 0.70 | 0.70 | lost | -$8.81 |
 
 ## Backtest on real Kalshi prices
 
