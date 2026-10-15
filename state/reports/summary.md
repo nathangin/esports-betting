@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-15 19:54 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-15 20:13 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-15 19:54 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 187 | 16 | 171 | 47 | -$258.04 | -12.7% | -0.6c (183) | $741.96 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 270 | 22 | 248 | 170 | -$133.37 | -7.2% | -1.1c (267) | $866.63 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 270 | 21 | 249 | 170 | -$133.91 | -7.3% | -1.1c (267) | $866.09 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-645 finished matches. Lower is better; the market line is the bar to beat.
+647 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5670 | 0.1929 |
-| model | 0.6579 | 0.2326 |
-| blend | 0.5659 | 0.1926 |
+| market | 0.5676 | 0.1932 |
+| model | 0.6582 | 0.2327 |
+| blend | 0.5666 | 0.1929 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 414 | 0.5730 | 0.6583 |
-| dota2 | 96 | 0.5736 | 0.6494 |
+| cs2 | 415 | 0.5734 | 0.6584 |
+| dota2 | 97 | 0.5762 | 0.6509 |
 | lol | 52 | 0.5052 | 0.7198 |
 | ow | 38 | 0.4673 | 0.5439 |
 | r6 | 28 | 0.6762 | 0.7223 |
@@ -39,7 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-15 17:23 | favourite | cs2 | ZOTIX | eternal premium | YES ZOTIX | 1 | 0.52 | 0.51 | 0.51 | open | - |
+| 2026-10-15 17:23 | favourite | cs2 | ZOTIX | eternal premium | YES ZOTIX | 1 | 0.52 | 0.51 | 0.51 | lost | -$0.54 |
 | 2026-10-15 15:53 | favourite | cs2 | Sokerorg | Gothic | YES Sokerorg | 13 | 0.54 | 0.53 | 0.53 | open | - |
 | 2026-10-15 15:53 | favourite | cs2 | 99firepower 1utility | Fraternity | YES 99firepower 1utility | 12 | 0.67 | 0.64 | 0.64 | lost | -$8.23 |
 | 2026-10-15 14:52 | favourite | dota2 | Inner Circle | Mena Warriors | YES Inner Circle | 2 | 0.75 | 0.74 | 0.74 | open | - |
