@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-15 18:09 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-15 18:33 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 187 | 17 | 170 | 46 | -$274.12 | -13.6% | -0.6c (183) | $725.88 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 270 | 25 | 245 | 169 | -$120.66 | -6.6% | -1.1c (266) | $879.34 |
+| model-only | Elo win model alone (control: ignores the market) | 187 | 16 | 171 | 47 | -$258.04 | -12.7% | -0.6c (183) | $741.96 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 270 | 23 | 247 | 170 | -$124.67 | -6.8% | -1.1c (267) | $875.33 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-635 finished matches. Lower is better; the market line is the bar to beat.
+638 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5655 | 0.1923 |
-| model | 0.6580 | 0.2326 |
-| blend | 0.5644 | 0.1919 |
+| market | 0.5658 | 0.1924 |
+| model | 0.6577 | 0.2325 |
+| blend | 0.5647 | 0.1920 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 405 | 0.5725 | 0.6590 |
+| cs2 | 408 | 0.5728 | 0.6585 |
 | dota2 | 95 | 0.5670 | 0.6467 |
 | lol | 52 | 0.5052 | 0.7198 |
 | ow | 38 | 0.4673 | 0.5439 |
@@ -44,7 +44,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-15 15:53 | favourite | cs2 | 99firepower 1utility | Fraternity | YES 99firepower 1utility | 12 | 0.67 | 0.64 | 0.64 | lost | -$8.23 |
 | 2026-10-15 14:52 | favourite | dota2 | Inner Circle | Mena Warriors | YES Inner Circle | 2 | 0.75 | 0.74 | 0.74 | open | - |
 | 2026-10-15 14:52 | favourite | dota2 | Stray Team | Korb3n Team | YES Stray Team | 12 | 0.71 | 0.70 | 0.70 | open | - |
-| 2026-10-15 14:52 | favourite | cs2 | UPGRADE | Lavked | YES UPGRADE | 13 | 0.63 | 0.62 | 0.62 | open | - |
+| 2026-10-15 14:52 | favourite | cs2 | UPGRADE | Lavked | YES UPGRADE | 13 | 0.63 | 0.62 | 0.62 | won | $4.59 |
 | 2026-10-15 14:52 | favourite | cs2 | FURIA | Legacy | YES FURIA | 14 | 0.60 | 0.59 | 0.59 | open | - |
 | 2026-10-15 14:52 | favourite | cs2 | WBT Academy | BOJONG | YES WBT Academy | 9 | 0.89 | 0.87 | 0.87 | won | $0.92 |
 | 2026-10-15 14:52 | model-only | cs2 | BOJONG | WBT Academy | NO WBT Academy | 14 | 0.16 | 0.33 | 0.13 | lost | -$2.38 |
@@ -57,8 +57,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-15 12:52 | favourite | cs2 | Spirit Academy | The Last Resort | NO The Last Resort | 11 | 0.78 | 0.76 | 0.76 | won | $2.28 |
 | 2026-10-15 12:52 | model-only | dota2 | White Sails | Team Synapse | NO Team Synapse | 77 | 0.19 | 0.38 | 0.17 | lost | -$15.46 |
 | 2026-10-15 12:52 | favourite | dota2 | Team Synapse | White Sails | YES Team Synapse | 10 | 0.85 | 0.83 | 0.83 | won | $1.41 |
-| 2026-10-15 12:22 | favourite | cs2 | PARIVISION | BetBoom Team | YES PARIVISION | 16 | 0.52 | 0.52 | 0.52 | open | - |
-| 2026-10-15 12:22 | model-only | cs2 | BetBoom Team | PARIVISION | YES BetBoom Team | 32 | 0.48 | 0.55 | 0.48 | open | - |
+| 2026-10-15 12:22 | favourite | cs2 | PARIVISION | BetBoom Team | YES PARIVISION | 16 | 0.52 | 0.52 | 0.52 | lost | -$8.60 |
+| 2026-10-15 12:22 | model-only | cs2 | BetBoom Team | PARIVISION | YES BetBoom Team | 32 | 0.48 | 0.55 | 0.48 | won | $16.08 |
 | 2026-10-15 10:22 | favourite | cs2 | maybe | Ryvex | YES maybe | 1 | 0.54 | 0.54 | 0.54 | won | $0.44 |
 | 2026-10-15 10:22 | model-only | cs2 | 9z | Team Falcons | NO Team Falcons | 56 | 0.25 | 0.34 | 0.24 | lost | -$14.74 |
 | 2026-10-15 10:22 | favourite | cs2 | Team Falcons | 9z | NO 9z | 11 | 0.76 | 0.76 | 0.76 | won | $2.49 |
