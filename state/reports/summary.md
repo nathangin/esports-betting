@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-15 14:43 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-15 14:53 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 186 | 22 | 164 | 45 | -$226.30 | -11.5% | -0.6c (182) | $773.70 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 262 | 24 | 238 | 164 | -$114.26 | -6.5% | -1.1c (259) | $885.74 |
+| model-only | Elo win model alone (control: ignores the market) | 187 | 23 | 164 | 45 | -$226.30 | -11.5% | -0.6c (182) | $773.70 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 267 | 29 | 238 | 164 | -$114.26 | -6.5% | -1.1c (259) | $885.74 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-15 12:52 | favourite | dota2 | Team Synapse | White Sails | YES Team Synapse | 10 | 0.85 | 0.83 | 0.83 | open | - |
-| 2026-10-15 12:52 | model-only | dota2 | White Sails | Team Synapse | NO Team Synapse | 77 | 0.19 | 0.38 | 0.17 | open | - |
-| 2026-10-15 12:52 | favourite | cs2 | 6666 | ENJOY | YES 6666 | 13 | 0.65 | 0.64 | 0.64 | open | - |
-| 2026-10-15 12:52 | favourite | cs2 | Spirit Academy | The Last Resort | NO The Last Resort | 11 | 0.78 | 0.76 | 0.76 | open | - |
-| 2026-10-15 12:52 | model-only | cs2 | The Last Resort | Spirit Academy | YES The Last Resort | 1 | 0.25 | 0.31 | 0.24 | open | - |
+| 2026-10-15 14:52 | favourite | dota2 | Inner Circle | Mena Warriors | YES Inner Circle | 2 | 0.75 | 0.74 | 0.74 | open | - |
+| 2026-10-15 14:52 | favourite | dota2 | Stray Team | Korb3n Team | YES Stray Team | 12 | 0.71 | 0.70 | 0.70 | open | - |
+| 2026-10-15 14:52 | favourite | cs2 | UPGRADE | Lavked | YES UPGRADE | 13 | 0.63 | 0.62 | 0.62 | open | - |
+| 2026-10-15 14:52 | favourite | cs2 | FURIA | Legacy | YES FURIA | 14 | 0.60 | 0.59 | 0.59 | open | - |
+| 2026-10-15 14:52 | favourite | cs2 | WBT Academy | BOJONG | YES WBT Academy | 9 | 0.89 | 0.87 | 0.87 | open | - |
+| 2026-10-15 14:52 | model-only | cs2 | BOJONG | WBT Academy | NO WBT Academy | 14 | 0.16 | 0.33 | 0.13 | open | - |
 | 2026-10-15 12:52 | favourite | cs2 | Butterfly | Fire Flux Esports | YES Butterfly | 13 | 0.64 | 0.63 | 0.63 | open | - |
-| 2026-10-15 12:52 | model-only | cs2 | Fire Flux Esports | Butterfly | NO Butterfly | 1 | 0.38 | 0.54 | 0.37 | open | - |
-| 2026-10-15 12:52 | favourite | cs2 | Esport Academy Copenhagen | BOJONG | NO BOJONG | 10 | 0.85 | 0.83 | 0.83 | open | - |
 | 2026-10-15 12:52 | model-only | cs2 | BOJONG | Esport Academy Copenhagen | YES BOJONG | 77 | 0.19 | 0.41 | 0.17 | open | - |
+| 2026-10-15 12:52 | favourite | cs2 | Esport Academy Copenhagen | BOJONG | NO BOJONG | 10 | 0.85 | 0.83 | 0.83 | open | - |
+| 2026-10-15 12:52 | model-only | cs2 | Fire Flux Esports | Butterfly | NO Butterfly | 1 | 0.38 | 0.54 | 0.37 | open | - |
+| 2026-10-15 12:52 | model-only | cs2 | The Last Resort | Spirit Academy | YES The Last Resort | 1 | 0.25 | 0.31 | 0.24 | open | - |
+| 2026-10-15 12:52 | favourite | cs2 | Spirit Academy | The Last Resort | NO The Last Resort | 11 | 0.78 | 0.76 | 0.76 | open | - |
+| 2026-10-15 12:52 | favourite | cs2 | 6666 | ENJOY | YES 6666 | 13 | 0.65 | 0.64 | 0.64 | open | - |
+| 2026-10-15 12:52 | model-only | dota2 | White Sails | Team Synapse | NO Team Synapse | 77 | 0.19 | 0.38 | 0.17 | open | - |
+| 2026-10-15 12:52 | favourite | dota2 | Team Synapse | White Sails | YES Team Synapse | 10 | 0.85 | 0.83 | 0.83 | open | - |
 | 2026-10-15 12:22 | favourite | cs2 | PARIVISION | BetBoom Team | YES PARIVISION | 16 | 0.52 | 0.52 | 0.52 | open | - |
 | 2026-10-15 12:22 | model-only | cs2 | BetBoom Team | PARIVISION | YES BetBoom Team | 32 | 0.48 | 0.55 | 0.48 | open | - |
-| 2026-10-15 10:22 | model-only | cs2 | Ryvex | maybe | YES Ryvex | 30 | 0.47 | 0.54 | 0.46 | lost | -$14.63 |
-| 2026-10-15 10:22 | model-only | cs2 | 9z | Team Falcons | NO Team Falcons | 56 | 0.25 | 0.34 | 0.24 | lost | -$14.74 |
+| 2026-10-15 10:22 | favourite | cs2 | maybe | Ryvex | YES maybe | 1 | 0.54 | 0.54 | 0.54 | won | $0.44 |
 | 2026-10-15 10:22 | favourite | cs2 | Team Falcons | 9z | NO 9z | 11 | 0.76 | 0.76 | 0.76 | won | $2.49 |
 | 2026-10-15 10:22 | model-only | cs2 | Just_Players | ex-Zero Tenacity | YES Just_Players | 12 | 0.34 | 0.40 | 0.33 | lost | -$4.27 |
 | 2026-10-15 10:22 | favourite | cs2 | ex-Zero Tenacity | Just_Players | YES ex-Zero Tenacity | 13 | 0.67 | 0.67 | 0.67 | won | $4.08 |
+| 2026-10-15 10:22 | model-only | cs2 | Ryvex | maybe | YES Ryvex | 30 | 0.47 | 0.54 | 0.46 | lost | -$14.63 |
+| 2026-10-15 10:22 | model-only | cs2 | 9z | Team Falcons | NO Team Falcons | 56 | 0.25 | 0.34 | 0.24 | lost | -$14.74 |
 | 2026-10-15 10:22 | model-only | cs2 | ENCE | WBT Academy | YES ENCE | 17 | 0.40 | 0.48 | 0.40 | lost | -$7.09 |
-| 2026-10-15 10:22 | favourite | cs2 | maybe | Ryvex | YES maybe | 1 | 0.54 | 0.54 | 0.54 | won | $0.44 |
-| 2026-10-15 10:22 | favourite | cs2 | WBT Academy | ENCE | NO ENCE | 1 | 0.61 | 0.60 | 0.60 | won | $0.37 |
 | 2026-10-15 10:22 | favourite | cs2 | Johnny Speeds | Bushido Wildcats | YES Johnny Speeds | 1 | 0.59 | 0.56 | 0.55 | open | - |
-| 2026-10-15 10:22 | model-only | dota2 | PuckChamp | Zero Tenacity | YES PuckChamp | 127 | 0.11 | 0.34 | 0.11 | open | - |
-| 2026-10-15 07:54 | favourite | lol | OKSavingsBank BRION | Team WE | YES OKSavingsBank BRION | 15 | 0.57 | 0.57 | 0.57 | lost | -$8.81 |
-| 2026-10-15 07:54 | model-only | lol | Team WE | OKSavingsBank BRION | NO OKSavingsBank BRION | 32 | 0.44 | 0.59 | 0.43 | won | $17.36 |
-| 2026-10-15 07:24 | favourite | cs2 | Aurora Gaming | NIP | YES Aurora Gaming | 12 | 0.72 | 0.71 | 0.71 | won | $3.19 |
-| 2026-10-15 07:24 | model-only | cs2 | NIP | Aurora Gaming | NO Aurora Gaming | 1 | 0.30 | 0.43 | 0.29 | lost | -$0.32 |
 
 ## Backtest on real Kalshi prices
 
