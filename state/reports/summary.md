@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-16 14:52 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-16 15:02 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-16 14:52 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 206 | 18 | 188 | 48 | -$372.13 | -17.0% | -0.7c (202) | $627.87 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 302 | 28 | 274 | 189 | -$122.44 | -6.1% | -1.2c (299) | $877.56 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 302 | 26 | 276 | 191 | -$115.01 | -5.7% | -1.2c (299) | $884.99 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -43,13 +43,13 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-16 11:51 | favourite | cs2 | Young TigeRES | Young27 | YES Young TigeRES | 6 | 0.58 | 0.57 | 0.57 | open | - |
 | 2026-10-16 11:51 | favourite | cs2 | Joga de terno | your end | YES Joga de terno | 14 | 0.58 | 0.57 | 0.57 | open | - |
 | 2026-10-16 11:51 | favourite | cs2 | Black Phoenix | X-CITY | YES Black Phoenix | 10 | 0.86 | 0.83 | 0.83 | open | - |
-| 2026-10-16 10:51 | favourite | dota2 | Royal Bear | InterActive Philippines | YES Royal Bear | 10 | 0.81 | 0.80 | 0.80 | open | - |
+| 2026-10-16 10:51 | favourite | dota2 | Royal Bear | InterActive Philippines | YES Royal Bear | 10 | 0.81 | 0.80 | 0.80 | won | $1.79 |
 | 2026-10-16 10:51 | favourite | dota2 | by Owl Team | ALOHADANCE Team | YES by Owl Team | 6 | 0.71 | 0.70 | 0.71 | open | - |
 | 2026-10-16 10:51 | favourite | cs2 | Voca | HAVU | NO HAVU | 14 | 0.60 | 0.58 | 0.58 | lost | -$8.64 |
 | 2026-10-16 10:51 | favourite | r6 | Elevate | Fury | NO Fury | 2 | 0.74 | 0.72 | 0.72 | won | $0.49 |
 | 2026-10-16 09:51 | favourite | cs2 | ex-RUSTEC | Saint Sinners | YES ex-RUSTEC | 12 | 0.70 | 0.69 | 0.69 | won | $3.42 |
 | 2026-10-16 09:51 | model-only | cs2 | Saint Sinners | ex-RUSTEC | NO ex-RUSTEC | 1 | 0.32 | 0.40 | 0.31 | lost | -$0.34 |
-| 2026-10-16 09:51 | favourite | cs2 | Team Nemesis | Nuclear TigeRES | YES Team Nemesis | 14 | 0.58 | 0.57 | 0.57 | open | - |
+| 2026-10-16 09:51 | favourite | cs2 | Team Nemesis | Nuclear TigeRES | YES Team Nemesis | 14 | 0.58 | 0.57 | 0.57 | won | $5.64 |
 | 2026-10-16 09:51 | favourite | cs2 | ILLYRIANS | MORROW | YES ILLYRIANS | 10 | 0.80 | 0.77 | 0.77 | lost | -$8.12 |
 | 2026-10-16 09:51 | model-only | cs2 | MORROW | ILLYRIANS | YES MORROW | 46 | 0.26 | 0.40 | 0.23 | won | $33.42 |
 | 2026-10-16 09:51 | favourite | cs2 | Heroic | fnatic | YES Heroic | 13 | 0.66 | 0.66 | 0.66 | won | $4.21 |
