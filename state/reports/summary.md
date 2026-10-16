@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-16 08:05 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-16 08:21 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 197 | 22 | 175 | 47 | -$290.61 | -14.1% | -0.6c (193) | $709.39 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 284 | 31 | 253 | 174 | -$124.94 | -6.7% | -1.1c (279) | $875.06 |
+| model-only | Elo win model alone (control: ignores the market) | 198 | 23 | 175 | 47 | -$290.61 | -14.1% | -0.6c (193) | $709.39 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 285 | 32 | 253 | 174 | -$124.94 | -6.7% | -1.1c (279) | $875.06 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-16 08:21 | favourite | ow | T1 | Cheeseburger | NO Cheeseburger | 1 | 0.80 | 0.80 | 0.80 | open | - |
+| 2026-10-16 08:21 | model-only | ow | Cheeseburger | T1 | NO T1 | 9 | 0.20 | 0.25 | 0.20 | open | - |
 | 2026-10-16 07:50 | favourite | valorant | 100 Thieves | G2 Esports | YES 100 Thieves | 13 | 0.65 | 0.65 | 0.65 | open | - |
 | 2026-10-16 07:50 | favourite | r6 | Weibo Gaming | Sharper Esport | NO Sharper Esport | 9 | 0.88 | 0.87 | 0.87 | open | - |
 | 2026-10-16 06:50 | favourite | cs2 | Phantom | Voca | NO Voca | 14 | 0.57 | 0.56 | 0.56 | open | - |
+| 2026-10-16 06:50 | favourite | cs2 | Eternal Fire | Apogee Esports | YES Eternal Fire | 12 | 0.69 | 0.68 | 0.68 | open | - |
 | 2026-10-16 06:50 | model-only | cs2 | Black Phoenix | ILLYRIANS | NO ILLYRIANS | 1 | 0.65 | 0.71 | 0.63 | open | - |
 | 2026-10-16 06:50 | favourite | cs2 | Black Phoenix | ILLYRIANS | NO ILLYRIANS | 1 | 0.65 | 0.63 | 0.63 | open | - |
-| 2026-10-16 06:50 | model-only | cs2 | ENCE Prospects | Gatorian | YES ENCE Prospects | 43 | 0.31 | 0.38 | 0.29 | open | - |
 | 2026-10-16 06:50 | favourite | cs2 | Gatorian | ENCE Prospects | NO ENCE Prospects | 11 | 0.73 | 0.71 | 0.71 | open | - |
 | 2026-10-16 06:50 | model-only | cs2 | Voca | Phantom | NO Phantom | 30 | 0.45 | 0.60 | 0.44 | open | - |
-| 2026-10-16 06:50 | favourite | cs2 | Eternal Fire | Apogee Esports | YES Eternal Fire | 12 | 0.69 | 0.68 | 0.68 | open | - |
+| 2026-10-16 06:50 | model-only | cs2 | ENCE Prospects | Gatorian | YES ENCE Prospects | 43 | 0.31 | 0.38 | 0.29 | open | - |
 | 2026-10-16 06:50 | favourite | cs2 | Revise | Lilmix | NO Lilmix | 13 | 0.63 | 0.61 | 0.61 | open | - |
+| 2026-10-16 06:50 | model-only | cs2 | Copenhagen Wolves | RoundsGG | YES Copenhagen Wolves | 21 | 0.64 | 0.70 | 0.63 | open | - |
 | 2026-10-16 06:50 | favourite | cs2 | Copenhagen Wolves | RoundsGG | YES Copenhagen Wolves | 13 | 0.64 | 0.63 | 0.63 | open | - |
 | 2026-10-16 06:50 | favourite | cs2 | NIP | Liquid | YES NIP | 16 | 0.50 | 0.50 | 0.50 | open | - |
 | 2026-10-16 06:50 | model-only | ow | SEIJI ESPORTS | Falcons | NO Falcons | 5 | 0.20 | 0.37 | 0.16 | open | - |
 | 2026-10-16 06:50 | favourite | ow | Falcons | SEIJI ESPORTS | YES Falcons | 1 | 0.86 | 0.84 | 0.84 | open | - |
-| 2026-10-16 06:50 | model-only | cs2 | Copenhagen Wolves | RoundsGG | YES Copenhagen Wolves | 21 | 0.64 | 0.70 | 0.63 | open | - |
-| 2026-10-16 05:50 | model-only | dota2 | Zero Tenacity | CyberHero | NO CyberHero | 39 | 0.34 | 0.47 | 0.33 | open | - |
-| 2026-10-16 05:50 | favourite | cs2 | JUMBO TEAM | VP Future | YES JUMBO TEAM | 12 | 0.69 | 0.66 | 0.66 | open | - |
 | 2026-10-16 05:50 | model-only | cs2 | d06eg | QUAZAR | YES d06eg | 136 | 0.10 | 0.33 | 0.08 | open | - |
+| 2026-10-16 05:50 | favourite | cs2 | JUMBO TEAM | VP Future | YES JUMBO TEAM | 12 | 0.69 | 0.66 | 0.66 | open | - |
+| 2026-10-16 05:50 | model-only | dota2 | Zero Tenacity | CyberHero | NO CyberHero | 39 | 0.34 | 0.47 | 0.33 | open | - |
 | 2026-10-16 05:50 | favourite | dota2 | CyberHero | Zero Tenacity | YES CyberHero | 12 | 0.68 | 0.67 | 0.67 | open | - |
 | 2026-10-16 04:50 | favourite | valorant | LOUD | Team Vitality | YES LOUD | 15 | 0.56 | 0.56 | 0.56 | open | - |
 | 2026-10-16 04:50 | model-only | valorant | Team Vitality | LOUD | NO LOUD | 31 | 0.45 | 0.53 | 0.44 | open | - |
 | 2026-10-16 02:50 | model-only | dota2 | Ivory | Xipto Esports | NO Xipto Esports | 139 | 0.10 | 0.19 | 0.08 | lost | -$14.78 |
 | 2026-10-16 02:50 | favourite | dota2 | Execration | Team Kinetix | NO Team Kinetix | 4 | 0.84 | 0.81 | 0.81 | won | $0.60 |
-| 2026-10-16 02:50 | model-only | dota2 | Team Kinetix | Execration | NO Execration | 3 | 0.20 | 0.37 | 0.18 | lost | -$0.64 |
-| 2026-10-15 17:23 | favourite | cs2 | ZOTIX | eternal premium | YES ZOTIX | 1 | 0.52 | 0.51 | 0.51 | lost | -$0.54 |
 
 ## Backtest on real Kalshi prices
 
