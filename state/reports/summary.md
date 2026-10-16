@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-16 12:06 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-16 12:21 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 205 | 21 | 184 | 47 | -$378.94 | -17.6% | -0.7c (201) | $621.06 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 302 | 34 | 268 | 184 | -$128.09 | -6.5% | -1.2c (296) | $871.91 |
+| model-only | Elo win model alone (control: ignores the market) | 205 | 20 | 185 | 48 | -$345.52 | -16.0% | -0.7c (201) | $654.48 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 302 | 33 | 269 | 184 | -$136.21 | -6.9% | -1.2c (296) | $863.79 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -49,8 +49,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-16 09:51 | favourite | cs2 | ex-RUSTEC | Saint Sinners | YES ex-RUSTEC | 12 | 0.70 | 0.69 | 0.69 | open | - |
 | 2026-10-16 09:51 | model-only | cs2 | Saint Sinners | ex-RUSTEC | NO ex-RUSTEC | 1 | 0.32 | 0.40 | 0.31 | open | - |
 | 2026-10-16 09:51 | favourite | cs2 | Team Nemesis | Nuclear TigeRES | YES Team Nemesis | 14 | 0.58 | 0.57 | 0.57 | open | - |
-| 2026-10-16 09:51 | favourite | cs2 | ILLYRIANS | MORROW | YES ILLYRIANS | 10 | 0.80 | 0.77 | 0.77 | open | - |
-| 2026-10-16 09:51 | model-only | cs2 | MORROW | ILLYRIANS | YES MORROW | 46 | 0.26 | 0.40 | 0.23 | open | - |
+| 2026-10-16 09:51 | favourite | cs2 | ILLYRIANS | MORROW | YES ILLYRIANS | 10 | 0.80 | 0.77 | 0.77 | lost | -$8.12 |
+| 2026-10-16 09:51 | model-only | cs2 | MORROW | ILLYRIANS | YES MORROW | 46 | 0.26 | 0.40 | 0.23 | won | $33.42 |
 | 2026-10-16 09:51 | favourite | cs2 | Heroic | fnatic | YES Heroic | 13 | 0.66 | 0.66 | 0.66 | open | - |
 | 2026-10-16 09:51 | model-only | cs2 | fnatic | Heroic | YES fnatic | 35 | 0.34 | 0.42 | 0.34 | open | - |
 | 2026-10-16 09:51 | favourite | cs2 | ex-RUSTEC | Bushido Wildcats | NO Bushido Wildcats | 14 | 0.61 | 0.59 | 0.59 | open | - |
