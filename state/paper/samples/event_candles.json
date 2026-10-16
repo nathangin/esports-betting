@@ -1,15 +1,15 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXDOTA2GAME/events/KXDOTA2GAME-26OCT140600LYNXIC/candlesticks?start_ts=1791970200&end_ts=1791972060&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/events/KXCS2GAME-26OCT150400LKB8A/candlesticks?start_ts=1792049400&end_ts=1792051260&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1791972060,
+  "adjusted_end_ts": 1792051260,
   "market_candlesticks": [
    [],
    []
   ],
   "market_tickers": [
-   "KXDOTA2GAME-26OCT140600LYNXIC-LYNX",
-   "KXDOTA2GAME-26OCT140600LYNXIC-IC"
+   "KXCS2GAME-26OCT150400LKB8A-LK",
+   "KXCS2GAME-26OCT150400LKB8A-B8A"
   ]
  }
 }
