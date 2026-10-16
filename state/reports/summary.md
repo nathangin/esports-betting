@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-16 10:36 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-16 10:51 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 205 | 23 | 182 | 47 | -$376.36 | -17.5% | -0.7c (198) | $623.64 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 295 | 34 | 261 | 180 | -$121.51 | -6.3% | -1.1c (287) | $878.49 |
+| model-only | Elo win model alone (control: ignores the market) | 205 | 21 | 184 | 47 | -$378.94 | -17.6% | -0.7c (201) | $621.06 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 299 | 36 | 263 | 181 | -$122.00 | -6.3% | -1.1c (292) | $878.00 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-16 09:51 | favourite | cs2 | ex-RUSTEC | Saint Sinners | YES ex-RUSTEC | 12 | 0.70 | 0.69 | 0.69 | open | - |
-| 2026-10-16 09:51 | model-only | cs2 | Saint Sinners | ex-RUSTEC | NO ex-RUSTEC | 1 | 0.32 | 0.40 | 0.31 | open | - |
-| 2026-10-16 09:51 | favourite | cs2 | Team Nemesis | Nuclear TigeRES | YES Team Nemesis | 14 | 0.58 | 0.57 | 0.57 | open | - |
+| 2026-10-16 10:51 | favourite | r6 | Elevate | Fury | NO Fury | 2 | 0.74 | 0.72 | 0.72 | open | - |
+| 2026-10-16 10:51 | favourite | dota2 | Royal Bear | InterActive Philippines | YES Royal Bear | 10 | 0.81 | 0.80 | 0.80 | open | - |
+| 2026-10-16 10:51 | favourite | dota2 | by Owl Team | ALOHADANCE Team | YES by Owl Team | 6 | 0.71 | 0.70 | 0.71 | open | - |
+| 2026-10-16 10:51 | favourite | cs2 | Voca | HAVU | NO HAVU | 14 | 0.60 | 0.58 | 0.58 | open | - |
 | 2026-10-16 09:51 | favourite | cs2 | ILLYRIANS | MORROW | YES ILLYRIANS | 10 | 0.80 | 0.77 | 0.77 | open | - |
-| 2026-10-16 09:51 | model-only | cs2 | MORROW | ILLYRIANS | YES MORROW | 46 | 0.26 | 0.40 | 0.23 | open | - |
-| 2026-10-16 09:51 | favourite | cs2 | Heroic | fnatic | YES Heroic | 13 | 0.66 | 0.66 | 0.66 | open | - |
-| 2026-10-16 09:51 | model-only | cs2 | fnatic | Heroic | YES fnatic | 35 | 0.34 | 0.42 | 0.34 | open | - |
 | 2026-10-16 09:51 | favourite | cs2 | ex-RUSTEC | Bushido Wildcats | NO Bushido Wildcats | 14 | 0.61 | 0.59 | 0.59 | open | - |
+| 2026-10-16 09:51 | model-only | cs2 | fnatic | Heroic | YES fnatic | 35 | 0.34 | 0.42 | 0.34 | open | - |
+| 2026-10-16 09:51 | favourite | cs2 | Heroic | fnatic | YES Heroic | 13 | 0.66 | 0.66 | 0.66 | open | - |
+| 2026-10-16 09:51 | model-only | cs2 | MORROW | ILLYRIANS | YES MORROW | 46 | 0.26 | 0.40 | 0.23 | open | - |
+| 2026-10-16 09:51 | favourite | cs2 | Team Nemesis | Nuclear TigeRES | YES Team Nemesis | 14 | 0.58 | 0.57 | 0.57 | open | - |
+| 2026-10-16 09:51 | model-only | cs2 | Saint Sinners | ex-RUSTEC | NO ex-RUSTEC | 1 | 0.32 | 0.40 | 0.31 | open | - |
+| 2026-10-16 09:51 | favourite | cs2 | ex-RUSTEC | Saint Sinners | YES ex-RUSTEC | 12 | 0.70 | 0.69 | 0.69 | open | - |
 | 2026-10-16 09:21 | favourite | cs2 | STATE | TheChampionGG | NO TheChampionGG | 2 | 0.59 | 0.56 | 0.56 | open | - |
 | 2026-10-16 09:21 | model-only | cs2 | STATE | TheChampionGG | NO TheChampionGG | 2 | 0.59 | 0.67 | 0.56 | open | - |
 | 2026-10-16 09:21 | favourite | cs2 | Sokerorg | Bread Eaters Esports | NO Bread Eaters Esports | 11 | 0.78 | 0.77 | 0.77 | open | - |
 | 2026-10-16 08:51 | favourite | dota2 | CyberHero | Mena Warriors | YES CyberHero | 10 | 0.86 | 0.85 | 0.85 | open | - |
 | 2026-10-16 08:51 | model-only | cs2 | RoundsGG | HAVU | NO HAVU | 69 | 0.19 | 0.40 | 0.18 | lost | -$13.86 |
 | 2026-10-16 08:51 | favourite | cs2 | HAVU | RoundsGG | YES HAVU | 10 | 0.83 | 0.82 | 0.82 | won | $1.60 |
-| 2026-10-16 08:51 | model-only | dota2 | potn9ki | White Sails | YES potn9ki | 1 | 0.42 | 0.50 | 0.42 | open | - |
-| 2026-10-16 08:51 | model-only | dota2 | PuckChamp | Dawn Bulls | NO Dawn Bulls | 130 | 0.10 | 0.23 | 0.09 | open | - |
 | 2026-10-16 08:51 | favourite | dota2 | White Sails | potn9ki | NO potn9ki | 14 | 0.59 | 0.58 | 0.58 | open | - |
-| 2026-10-16 08:21 | favourite | ow | T1 | Cheeseburger | NO Cheeseburger | 1 | 0.80 | 0.80 | 0.80 | open | - |
-| 2026-10-16 08:21 | model-only | ow | Cheeseburger | T1 | NO T1 | 9 | 0.20 | 0.25 | 0.20 | open | - |
+| 2026-10-16 08:51 | model-only | dota2 | PuckChamp | Dawn Bulls | NO Dawn Bulls | 130 | 0.10 | 0.23 | 0.09 | open | - |
+| 2026-10-16 08:51 | model-only | dota2 | potn9ki | White Sails | YES potn9ki | 1 | 0.42 | 0.50 | 0.42 | open | - |
+| 2026-10-16 08:21 | favourite | ow | T1 | Cheeseburger | NO Cheeseburger | 1 | 0.80 | 0.80 | 0.80 | won | $0.18 |
+| 2026-10-16 08:21 | model-only | ow | Cheeseburger | T1 | NO T1 | 9 | 0.20 | 0.25 | 0.20 | lost | -$1.91 |
 | 2026-10-16 07:50 | favourite | valorant | 100 Thieves | G2 Esports | YES 100 Thieves | 13 | 0.65 | 0.65 | 0.65 | open | - |
 | 2026-10-16 07:50 | favourite | r6 | Weibo Gaming | Sharper Esport | NO Sharper Esport | 9 | 0.88 | 0.87 | 0.87 | open | - |
-| 2026-10-16 06:50 | model-only | cs2 | Voca | Phantom | NO Phantom | 30 | 0.45 | 0.60 | 0.44 | lost | -$14.02 |
-| 2026-10-16 06:50 | favourite | cs2 | Eternal Fire | Apogee Esports | YES Eternal Fire | 12 | 0.69 | 0.68 | 0.68 | open | - |
-| 2026-10-16 06:50 | model-only | cs2 | Black Phoenix | ILLYRIANS | NO ILLYRIANS | 1 | 0.65 | 0.71 | 0.63 | open | - |
-| 2026-10-16 06:50 | favourite | cs2 | Black Phoenix | ILLYRIANS | NO ILLYRIANS | 1 | 0.65 | 0.63 | 0.63 | open | - |
 
 ## Backtest on real Kalshi prices
 
