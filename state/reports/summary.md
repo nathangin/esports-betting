@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-16 14:07 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-16 14:12 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 206 | 20 | 186 | 48 | -$357.97 | -16.5% | -0.7c (202) | $642.03 |
+| model-only | Elo win model alone (control: ignores the market) | 206 | 19 | 187 | 48 | -$371.79 | -17.0% | -0.7c (202) | $628.21 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 302 | 29 | 273 | 188 | -$125.86 | -6.3% | -1.2c (299) | $874.14 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -60,7 +60,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-16 09:21 | favourite | cs2 | STATE | TheChampionGG | NO TheChampionGG | 2 | 0.59 | 0.56 | 0.56 | open | - |
 | 2026-10-16 08:51 | favourite | dota2 | White Sails | potn9ki | NO potn9ki | 14 | 0.59 | 0.58 | 0.58 | open | - |
 | 2026-10-16 08:51 | model-only | dota2 | potn9ki | White Sails | YES potn9ki | 1 | 0.42 | 0.50 | 0.42 | open | - |
-| 2026-10-16 08:51 | model-only | dota2 | PuckChamp | Dawn Bulls | NO Dawn Bulls | 130 | 0.10 | 0.23 | 0.09 | open | - |
+| 2026-10-16 08:51 | model-only | dota2 | PuckChamp | Dawn Bulls | NO Dawn Bulls | 130 | 0.10 | 0.23 | 0.09 | lost | -$13.82 |
 | 2026-10-16 08:51 | favourite | dota2 | CyberHero | Mena Warriors | YES CyberHero | 10 | 0.86 | 0.85 | 0.85 | won | $1.31 |
 | 2026-10-16 08:51 | favourite | cs2 | HAVU | RoundsGG | YES HAVU | 10 | 0.83 | 0.82 | 0.82 | won | $1.60 |
 | 2026-10-16 08:51 | model-only | cs2 | RoundsGG | HAVU | NO HAVU | 69 | 0.19 | 0.40 | 0.18 | lost | -$13.86 |
