@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-16 11:11 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-16 11:41 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-16 11:11 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 205 | 21 | 184 | 47 | -$378.94 | -17.6% | -0.7c (201) | $621.06 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 299 | 34 | 265 | 183 | -$113.27 | -5.8% | -1.1c (292) | $886.73 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 299 | 33 | 266 | 183 | -$121.73 | -6.2% | -1.1c (292) | $878.27 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-682 finished matches. Lower is better; the market line is the bar to beat.
+683 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5675 | 0.1934 |
-| model | 0.6593 | 0.2333 |
-| blend | 0.5663 | 0.1931 |
+| market | 0.5677 | 0.1935 |
+| model | 0.6594 | 0.2334 |
+| blend | 0.5665 | 0.1931 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 429 | 0.5736 | 0.6604 |
+| cs2 | 430 | 0.5739 | 0.6605 |
 | dota2 | 109 | 0.5670 | 0.6467 |
 | lol | 54 | 0.5255 | 0.7203 |
 | ow | 40 | 0.4539 | 0.5356 |
