@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-16 06:05 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-16 06:25 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 192 | 20 | 172 | 47 | -$272.52 | -13.3% | -0.6c (186) | $727.48 |
+| model-only | Elo win model alone (control: ignores the market) | 192 | 19 | 173 | 47 | -$287.30 | -14.0% | -0.6c (186) | $712.70 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 274 | 23 | 251 | 172 | -$125.74 | -6.8% | -1.1c (269) | $874.26 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -45,7 +45,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-16 05:50 | model-only | cs2 | d06eg | QUAZAR | YES d06eg | 136 | 0.10 | 0.33 | 0.08 | open | - |
 | 2026-10-16 04:50 | favourite | valorant | LOUD | Team Vitality | YES LOUD | 15 | 0.56 | 0.56 | 0.56 | open | - |
 | 2026-10-16 04:50 | model-only | valorant | Team Vitality | LOUD | NO LOUD | 31 | 0.45 | 0.53 | 0.44 | open | - |
-| 2026-10-16 02:50 | model-only | dota2 | Ivory | Xipto Esports | NO Xipto Esports | 139 | 0.10 | 0.19 | 0.08 | open | - |
+| 2026-10-16 02:50 | model-only | dota2 | Ivory | Xipto Esports | NO Xipto Esports | 139 | 0.10 | 0.19 | 0.08 | lost | -$14.78 |
 | 2026-10-16 02:50 | favourite | dota2 | Execration | Team Kinetix | NO Team Kinetix | 4 | 0.84 | 0.81 | 0.81 | open | - |
 | 2026-10-16 02:50 | model-only | dota2 | Team Kinetix | Execration | NO Execration | 3 | 0.20 | 0.37 | 0.18 | open | - |
 | 2026-10-15 17:23 | favourite | cs2 | ZOTIX | eternal premium | YES ZOTIX | 1 | 0.52 | 0.51 | 0.51 | lost | -$0.54 |
