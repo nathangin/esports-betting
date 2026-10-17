@@ -1,55 +1,207 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXDOTA2GAME/events/KXDOTA2GAME-26OCT150500KALMYPRAN/candlesticks?start_ts=1792053000&end_ts=1792054860&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/events/KXCS2GAME-26OCT151430AGRAIM/candlesticks?start_ts=1792087200&end_ts=1792089060&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1792054860,
+  "adjusted_end_ts": 1792089060,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1792054860,
-     "open_interest_fp": "71.82",
+     "end_period_ts": 1792087260,
+     "open_interest_fp": "39.00",
      "price": {
-      "previous_dollars": "0.6000"
+      "close_dollars": "0.6300",
+      "high_dollars": "0.6300",
+      "low_dollars": "0.6300",
+      "mean_dollars": "0.6300",
+      "open_dollars": "0.6300",
+      "previous_dollars": "0.7600"
+     },
+     "volume_fp": "2.32",
+     "yes_ask": {
+      "close_dollars": "0.6300",
+      "high_dollars": "0.6300",
+      "low_dollars": "0.6300",
+      "open_dollars": "0.6300"
+     },
+     "yes_bid": {
+      "close_dollars": "0.5000",
+      "high_dollars": "0.5000",
+      "low_dollars": "0.5000",
+      "open_dollars": "0.5000"
+     }
+    },
+    {
+     "end_period_ts": 1792087500,
+     "open_interest_fp": "39.00",
+     "price": {
+      "previous_dollars": "0.6300"
      },
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.6500",
-      "high_dollars": "0.6900",
-      "low_dollars": "0.5800",
-      "open_dollars": "0.6900"
+      "close_dollars": "0.6300",
+      "high_dollars": "0.6300",
+      "low_dollars": "0.6300",
+      "open_dollars": "0.6300"
      },
      "yes_bid": {
-      "close_dollars": "0.5200",
-      "high_dollars": "0.5200",
-      "low_dollars": "0.4500",
-      "open_dollars": "0.4500"
+      "close_dollars": "0.5000",
+      "high_dollars": "0.5000",
+      "low_dollars": "0.5000",
+      "open_dollars": "0.5000"
+     }
+    },
+    {
+     "end_period_ts": 1792087740,
+     "open_interest_fp": "39.00",
+     "price": {
+      "previous_dollars": "0.6300"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.6300",
+      "high_dollars": "0.6300",
+      "low_dollars": "0.6200",
+      "open_dollars": "0.6300"
+     },
+     "yes_bid": {
+      "close_dollars": "0.5000",
+      "high_dollars": "0.5000",
+      "low_dollars": "0.5000",
+      "open_dollars": "0.5000"
+     }
+    },
+    {
+     "end_period_ts": 1792087860,
+     "open_interest_fp": "39.00",
+     "price": {
+      "previous_dollars": "0.6300"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.6300",
+      "high_dollars": "0.6300",
+      "low_dollars": "0.6300",
+      "open_dollars": "0.6300"
+     },
+     "yes_bid": {
+      "close_dollars": "0.5000",
+      "high_dollars": "0.5000",
+      "low_dollars": "0.5000",
+      "open_dollars": "0.5000"
+     }
+    },
+    {
+     "end_period_ts": 1792089060,
+     "open_interest_fp": "39.00",
+     "price": {
+      "previous_dollars": "0.6300"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.6300",
+      "high_dollars": "0.6300",
+      "low_dollars": "0.6300",
+      "open_dollars": "0.6300"
+     },
+     "yes_bid": {
+      "close_dollars": "0.5800",
+      "high_dollars": "0.5800",
+      "low_dollars": "0.3200",
+      "open_dollars": "0.5000"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1792054860,
-     "open_interest_fp": "0.00",
-     "price": {},
+     "end_period_ts": 1792087500,
+     "open_interest_fp": "77.00",
+     "price": {
+      "previous_dollars": "0.4100"
+     },
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.4700",
-      "high_dollars": "0.6900",
-      "low_dollars": "0.4700",
-      "open_dollars": "0.6900"
+      "close_dollars": "0.4900",
+      "high_dollars": "0.4900",
+      "low_dollars": "0.4900",
+      "open_dollars": "0.4900"
      },
      "yes_bid": {
-      "close_dollars": "0.3700",
-      "high_dollars": "0.3700",
-      "low_dollars": "0.3600",
-      "open_dollars": "0.3600"
+      "close_dollars": "0.3500",
+      "high_dollars": "0.3500",
+      "low_dollars": "0.3300",
+      "open_dollars": "0.3300"
+     }
+    },
+    {
+     "end_period_ts": 1792087620,
+     "open_interest_fp": "77.00",
+     "price": {
+      "previous_dollars": "0.4100"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4900",
+      "high_dollars": "0.4900",
+      "low_dollars": "0.4900",
+      "open_dollars": "0.4900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3500",
+      "high_dollars": "0.3500",
+      "low_dollars": "0.3500",
+      "open_dollars": "0.3500"
+     }
+    },
+    {
+     "end_period_ts": 1792087860,
+     "open_interest_fp": "77.00",
+     "price": {
+      "close_dollars": "0.4900",
+      "high_dollars": "0.4900",
+      "low_dollars": "0.4900",
+      "mean_dollars": "0.4900",
+      "open_dollars": "0.4900",
+      "previous_dollars": "0.4100"
+     },
+     "volume_fp": "2.33",
+     "yes_ask": {
+      "close_dollars": "0.4900",
+      "high_dollars": "0.4900",
+      "low_dollars": "0.4900",
+      "open_dollars": "0.4900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3500",
+      "high_dollars": "0.3500",
+      "low_dollars": "0.3500",
+      "open_dollars": "0.3500"
+     }
+    },
+    {
+     "end_period_ts": 1792089060,
+     "open_interest_fp": "77.00",
+     "price": {
+      "previous_dollars": "0.4900"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4500",
+      "high_dollars": "0.4900",
+      "low_dollars": "0.4500",
+      "open_dollars": "0.4900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3500",
+      "high_dollars": "0.3500",
+      "low_dollars": "0.3500",
+      "open_dollars": "0.3500"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXDOTA2GAME-26OCT150500KALMYPRAN-KALMY",
-   "KXDOTA2GAME-26OCT150500KALMYPRAN-PRAN"
+   "KXCS2GAME-26OCT151430AGRAIM-AGR",
+   "KXCS2GAME-26OCT151430AGRAIM-AIM"
   ]
  }
 }
