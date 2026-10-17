@@ -1,15 +1,55 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/events/KXCS2GAME-26OCT150445RSTRMF/candlesticks?start_ts=1792052100&end_ts=1792053960&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXDOTA2GAME/events/KXDOTA2GAME-26OCT150500KALMYPRAN/candlesticks?start_ts=1792053000&end_ts=1792054860&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1792053960,
+  "adjusted_end_ts": 1792054860,
   "market_candlesticks": [
-   [],
-   []
+   [
+    {
+     "end_period_ts": 1792054860,
+     "open_interest_fp": "71.82",
+     "price": {
+      "previous_dollars": "0.6000"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.6500",
+      "high_dollars": "0.6900",
+      "low_dollars": "0.5800",
+      "open_dollars": "0.6900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.5200",
+      "high_dollars": "0.5200",
+      "low_dollars": "0.4500",
+      "open_dollars": "0.4500"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1792054860,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4700",
+      "high_dollars": "0.6900",
+      "low_dollars": "0.4700",
+      "open_dollars": "0.6900"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3700",
+      "high_dollars": "0.3700",
+      "low_dollars": "0.3600",
+      "open_dollars": "0.3600"
+     }
+    }
+   ]
   ],
   "market_tickers": [
-   "KXCS2GAME-26OCT150445RSTRMF-RSTR",
-   "KXCS2GAME-26OCT150445RSTRMF-MF"
+   "KXDOTA2GAME-26OCT150500KALMYPRAN-KALMY",
+   "KXDOTA2GAME-26OCT150500KALMYPRAN-PRAN"
   ]
  }
 }
