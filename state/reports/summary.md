@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-17 19:41 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-17 20:01 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 221 | 20 | 201 | 50 | -$449.94 | -19.5% | -0.8c (217) | $550.06 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 327 | 30 | 297 | 206 | -$100.31 | -4.6% | -1.4c (323) | $899.69 |
+| model-only | Elo win model alone (control: ignores the market) | 221 | 19 | 202 | 50 | -$460.87 | -19.9% | -0.8c (217) | $539.13 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 327 | 28 | 299 | 208 | -$92.55 | -4.2% | -1.4c (324) | $907.45 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,20 +16,20 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-759 finished matches. Lower is better; the market line is the bar to beat.
+760 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5639 | 0.1917 |
-| model | 0.6540 | 0.2309 |
-| blend | 0.5626 | 0.1913 |
+| market | 0.5662 | 0.1925 |
+| model | 0.6548 | 0.2313 |
+| blend | 0.5651 | 0.1921 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 468 | 0.5736 | 0.6556 |
 | dota2 | 131 | 0.5451 | 0.6450 |
 | lol | 57 | 0.5490 | 0.7107 |
-| ow | 47 | 0.4325 | 0.5211 |
+| ow | 48 | 0.4704 | 0.5372 |
 | r6 | 35 | 0.6531 | 0.7263 |
 | valorant | 21 | 0.6521 | 0.6977 |
 
@@ -44,13 +44,13 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-17 17:51 | favourite | cs2 | 6yuBoJlbl | WRAITH PCIFIC | YES 6yuBoJlbl | 15 | 0.58 | 0.55 | 0.54 | open | - |
 | 2026-10-17 16:51 | favourite | lol | FURIA Esports | MVK Esports | YES FURIA Esports | 13 | 0.64 | 0.64 | 0.64 | open | - |
 | 2026-10-17 15:50 | favourite | cs2 | MIBR | NIP | YES MIBR | 15 | 0.57 | 0.55 | 0.55 | open | - |
-| 2026-10-17 15:50 | favourite | cs2 | BBL | ex-RUSTEC | NO ex-RUSTEC | 7 | 0.60 | 0.59 | 0.59 | open | - |
+| 2026-10-17 15:50 | favourite | cs2 | BBL | ex-RUSTEC | NO ex-RUSTEC | 7 | 0.60 | 0.59 | 0.59 | won | $2.68 |
 | 2026-10-17 15:50 | favourite | cs2 | Team Falcons | BetBoom Team | YES Team Falcons | 12 | 0.73 | 0.73 | 0.73 | open | - |
 | 2026-10-17 15:50 | model-only | cs2 | BetBoom Team | Team Falcons | YES BetBoom Team | 24 | 0.27 | 0.37 | 0.27 | open | - |
 | 2026-10-17 14:50 | favourite | dota2 | Yellow Submarine | Dawn Bulls | NO Dawn Bulls | 12 | 0.68 | 0.67 | 0.67 | open | - |
 | 2026-10-17 14:50 | model-only | dota2 | Dawn Bulls | Yellow Submarine | NO Yellow Submarine | 31 | 0.34 | 0.44 | 0.33 | open | - |
-| 2026-10-17 14:50 | favourite | dota2 | Zero Tenacity | Inner Circle | NO Inner Circle | 14 | 0.62 | 0.60 | 0.60 | open | - |
-| 2026-10-17 14:50 | model-only | dota2 | Inner Circle | Zero Tenacity | YES Inner Circle | 25 | 0.42 | 0.51 | 0.40 | open | - |
+| 2026-10-17 14:50 | favourite | dota2 | Zero Tenacity | Inner Circle | NO Inner Circle | 14 | 0.62 | 0.60 | 0.60 | won | $5.08 |
+| 2026-10-17 14:50 | model-only | dota2 | Inner Circle | Zero Tenacity | YES Inner Circle | 25 | 0.42 | 0.51 | 0.40 | lost | -$10.93 |
 | 2026-10-17 11:50 | model-only | ow | Solus Victorem | Weibo Gaming | YES Solus Victorem | 71 | 0.10 | 0.21 | 0.09 | lost | -$7.55 |
 | 2026-10-17 11:50 | favourite | dota2 | Yellow Submarine | Spirit Academy | YES Yellow Submarine | 9 | 0.89 | 0.89 | 0.89 | won | $0.92 |
 | 2026-10-17 11:50 | model-only | dota2 | Spirit Academy | Yellow Submarine | YES Spirit Academy | 2 | 0.12 | 0.26 | 0.12 | lost | -$0.26 |
