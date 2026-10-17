@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-17 06:24 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-17 06:44 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 208 | 19 | 189 | 48 | -$377.33 | -17.2% | -0.7c (204) | $622.67 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 309 | 27 | 282 | 194 | -$124.81 | -6.1% | -1.2c (303) | $875.19 |
+| model-only | Elo win model alone (control: ignores the market) | 208 | 18 | 190 | 48 | -$389.51 | -17.6% | -0.7c (204) | $610.49 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 309 | 26 | 283 | 195 | -$122.10 | -5.9% | -1.2c (303) | $877.90 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -45,8 +45,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-17 04:53 | favourite | ow | O2 Blast | Poker Face | YES O2 Blast | 2 | 0.73 | 0.71 | 0.71 | open | - |
 | 2026-10-17 04:53 | model-only | ow | O2 Blast | Poker Face | YES O2 Blast | 2 | 0.73 | 0.79 | 0.71 | open | - |
 | 2026-10-17 03:53 | favourite | dota2 | Xtreme Gaming | Yakult's Brothers | YES Xtreme Gaming | 10 | 0.81 | 0.79 | 0.79 | open | - |
-| 2026-10-17 02:53 | favourite | dota2 | Xipto Esports | InterActive Philippines | NO InterActive Philippines | 11 | 0.74 | 0.72 | 0.72 | open | - |
-| 2026-10-17 02:53 | model-only | dota2 | InterActive Philippines | Xipto Esports | YES InterActive Philippines | 40 | 0.29 | 0.39 | 0.28 | open | - |
+| 2026-10-17 02:53 | favourite | dota2 | Xipto Esports | InterActive Philippines | NO InterActive Philippines | 11 | 0.74 | 0.72 | 0.72 | won | $2.71 |
+| 2026-10-17 02:53 | model-only | dota2 | InterActive Philippines | Xipto Esports | YES InterActive Philippines | 40 | 0.29 | 0.39 | 0.28 | lost | -$12.18 |
 | 2026-10-16 15:22 | favourite | dota2 | Stariy bog Team | Korb3n Team | YES Stariy bog Team | 2 | 0.62 | 0.61 | 0.61 | lost | -$1.28 |
 | 2026-10-16 12:51 | model-only | cs2 | 9z | Aurora Gaming | YES 9z | 16 | 0.31 | 0.36 | 0.31 | lost | -$5.20 |
 | 2026-10-16 11:51 | favourite | cs2 | Young TigeRES | Young27 | YES Young TigeRES | 6 | 0.58 | 0.57 | 0.57 | won | $2.41 |
