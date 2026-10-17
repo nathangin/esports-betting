@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-17 07:14 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-17 07:29 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-17 07:14 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 211 | 21 | 190 | 48 | -$389.51 | -17.6% | -0.7c (204) | $610.49 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 311 | 27 | 284 | 196 | -$120.31 | -5.8% | -1.3c (305) | $879.69 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 311 | 27 | 284 | 196 | -$120.31 | -5.8% | -1.3c (306) | $879.69 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-734 finished matches. Lower is better; the market line is the bar to beat.
+735 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5661 | 0.1926 |
+| market | 0.5656 | 0.1924 |
 | model | 0.6550 | 0.2314 |
-| blend | 0.5650 | 0.1922 |
+| blend | 0.5645 | 0.1920 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 463 | 0.5740 | 0.6558 |
-| dota2 | 121 | 0.5526 | 0.6473 |
+| dota2 | 122 | 0.5500 | 0.6474 |
 | lol | 56 | 0.5519 | 0.7119 |
 | ow | 41 | 0.4441 | 0.5241 |
 | r6 | 33 | 0.6423 | 0.7254 |
