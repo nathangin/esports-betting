@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-17 09:44 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-17 09:54 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 214 | 23 | 191 | 48 | -$391.00 | -17.7% | -0.8c (209) | $609.00 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 315 | 29 | 286 | 197 | -$121.20 | -5.8% | -1.3c (310) | $878.80 |
+| model-only | Elo win model alone (control: ignores the market) | 215 | 24 | 191 | 48 | -$391.00 | -17.7% | -0.8c (210) | $609.00 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 316 | 30 | 286 | 197 | -$121.20 | -5.8% | -1.3c (312) | $878.80 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-17 09:54 | favourite | r6 | SCARZ | FearX | NO FearX | 11 | 0.59 | 0.58 | 0.58 | open | - |
+| 2026-10-17 09:54 | model-only | r6 | FearX | SCARZ | YES FearX | 22 | 0.43 | 0.48 | 0.42 | open | - |
 | 2026-10-17 08:54 | favourite | dota2 | Inner Circle | PuckChamp | YES Inner Circle | 10 | 0.83 | 0.82 | 0.82 | open | - |
 | 2026-10-17 08:54 | model-only | dota2 | PuckChamp | Inner Circle | YES PuckChamp | 60 | 0.19 | 0.35 | 0.18 | open | - |
 | 2026-10-17 08:54 | favourite | dota2 | Team Lynx | Dawn Bulls | NO Dawn Bulls | 16 | 0.53 | 0.52 | 0.52 | open | - |
@@ -46,11 +48,11 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-17 07:54 | model-only | lol | Team WE | BNK FEARX | NO BNK FEARX | 36 | 0.32 | 0.47 | 0.32 | open | - |
 | 2026-10-17 07:54 | favourite | dota2 | Gorgc Team | ALOHADANCE Team | YES Gorgc Team | 13 | 0.64 | 0.63 | 0.63 | open | - |
 | 2026-10-17 07:54 | model-only | dota2 | ALOHADANCE Team | Gorgc Team | YES ALOHADANCE Team | 30 | 0.38 | 0.46 | 0.37 | open | - |
-| 2026-10-17 06:54 | favourite | r6 | CAG by VARREL | Dplus | YES CAG by VARREL | 12 | 0.69 | 0.67 | 0.67 | open | - |
-| 2026-10-17 06:54 | model-only | r6 | Dplus | CAG by VARREL | NO CAG by VARREL | 14 | 0.34 | 0.44 | 0.33 | open | - |
 | 2026-10-17 06:54 | model-only | ow | ZANSIDE GAMING | T1 | NO T1 | 104 | 0.11 | 0.21 | 0.09 | open | - |
 | 2026-10-17 06:54 | favourite | dota2 | Team Resilience | Team Tidebound | NO Team Tidebound | 16 | 0.53 | 0.53 | 0.53 | open | - |
 | 2026-10-17 06:54 | model-only | dota2 | Team Resilience | Team Tidebound | NO Team Tidebound | 22 | 0.53 | 0.70 | 0.53 | open | - |
+| 2026-10-17 06:54 | model-only | r6 | Dplus | CAG by VARREL | NO CAG by VARREL | 14 | 0.34 | 0.44 | 0.33 | open | - |
+| 2026-10-17 06:54 | favourite | r6 | CAG by VARREL | Dplus | YES CAG by VARREL | 12 | 0.69 | 0.67 | 0.67 | open | - |
 | 2026-10-17 06:24 | favourite | ow | Crazy Raccoon | Falcons | YES Crazy Raccoon | 4 | 0.84 | 0.82 | 0.82 | won | $0.60 |
 | 2026-10-17 05:54 | favourite | valorant | 100 Thieves | Team Vitality | YES 100 Thieves | 12 | 0.68 | 0.68 | 0.68 | open | - |
 | 2026-10-17 05:54 | favourite | dota2 | Nemiga Gaming | LFO | NO LFO | 13 | 0.62 | 0.61 | 0.61 | open | - |
@@ -62,8 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-16 15:22 | favourite | dota2 | Stariy bog Team | Korb3n Team | YES Stariy bog Team | 2 | 0.62 | 0.61 | 0.61 | lost | -$1.28 |
 | 2026-10-16 12:51 | model-only | cs2 | 9z | Aurora Gaming | YES 9z | 16 | 0.31 | 0.36 | 0.31 | lost | -$5.20 |
 | 2026-10-16 11:51 | favourite | cs2 | Young TigeRES | Young27 | YES Young TigeRES | 6 | 0.58 | 0.57 | 0.57 | won | $2.41 |
-| 2026-10-16 11:51 | favourite | cs2 | Joga de terno | your end | YES Joga de terno | 14 | 0.58 | 0.57 | 0.57 | lost | -$8.36 |
-| 2026-10-16 11:51 | favourite | cs2 | Black Phoenix | X-CITY | YES Black Phoenix | 10 | 0.86 | 0.83 | 0.83 | won | $1.31 |
 
 ## Backtest on real Kalshi prices
 
