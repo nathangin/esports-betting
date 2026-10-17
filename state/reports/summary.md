@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-17 11:14 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-17 11:35 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-17 11:14 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 216 | 22 | 194 | 50 | -$384.19 | -17.2% | -0.8c (211) | $615.81 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 317 | 28 | 289 | 199 | -$117.70 | -5.6% | -1.3c (313) | $882.30 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 317 | 27 | 290 | 199 | -$126.05 | -6.0% | -1.3c (313) | $873.95 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,13 +16,13 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-742 finished matches. Lower is better; the market line is the bar to beat.
+743 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5658 | 0.1925 |
-| model | 0.6549 | 0.2313 |
-| blend | 0.5647 | 0.1922 |
+| market | 0.5666 | 0.1929 |
+| model | 0.6556 | 0.2316 |
+| blend | 0.5655 | 0.1925 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
@@ -31,7 +31,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | lol | 56 | 0.5519 | 0.7119 |
 | ow | 45 | 0.4465 | 0.5315 |
 | r6 | 34 | 0.6563 | 0.7282 |
-| valorant | 20 | 0.6286 | 0.6749 |
+| valorant | 21 | 0.6521 | 0.6977 |
 
 ## Latest bets
 
@@ -56,7 +56,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-17 06:54 | model-only | r6 | Dplus | CAG by VARREL | NO CAG by VARREL | 14 | 0.34 | 0.44 | 0.33 | won | $9.02 |
 | 2026-10-17 06:54 | favourite | r6 | CAG by VARREL | Dplus | YES CAG by VARREL | 12 | 0.69 | 0.67 | 0.67 | lost | -$8.46 |
 | 2026-10-17 06:24 | favourite | ow | Crazy Raccoon | Falcons | YES Crazy Raccoon | 4 | 0.84 | 0.82 | 0.82 | won | $0.60 |
-| 2026-10-17 05:54 | favourite | valorant | 100 Thieves | Team Vitality | YES 100 Thieves | 12 | 0.68 | 0.68 | 0.68 | open | - |
+| 2026-10-17 05:54 | favourite | valorant | 100 Thieves | Team Vitality | YES 100 Thieves | 12 | 0.68 | 0.68 | 0.68 | lost | -$8.35 |
 | 2026-10-17 05:54 | favourite | dota2 | Nemiga Gaming | LFO | NO LFO | 13 | 0.62 | 0.61 | 0.61 | won | $4.72 |
 | 2026-10-17 04:53 | model-only | ow | O2 Blast | Poker Face | YES O2 Blast | 2 | 0.73 | 0.79 | 0.71 | lost | -$1.49 |
 | 2026-10-17 04:53 | favourite | ow | O2 Blast | Poker Face | YES O2 Blast | 2 | 0.73 | 0.71 | 0.71 | lost | -$1.49 |
