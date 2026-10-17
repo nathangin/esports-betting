@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-17 11:09 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-17 11:14 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 216 | 23 | 193 | 50 | -$372.03 | -16.7% | -0.8c (211) | $627.97 |
+| model-only | Elo win model alone (control: ignores the market) | 216 | 22 | 194 | 50 | -$384.19 | -17.2% | -0.8c (211) | $615.81 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 317 | 28 | 289 | 199 | -$117.70 | -5.6% | -1.3c (313) | $882.30 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -16,20 +16,20 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-741 finished matches. Lower is better; the market line is the bar to beat.
+742 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5665 | 0.1928 |
-| model | 0.6554 | 0.2316 |
-| blend | 0.5654 | 0.1924 |
+| market | 0.5658 | 0.1925 |
+| model | 0.6549 | 0.2313 |
+| blend | 0.5647 | 0.1922 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 463 | 0.5740 | 0.6558 |
 | dota2 | 124 | 0.5501 | 0.6471 |
 | lol | 56 | 0.5519 | 0.7119 |
-| ow | 44 | 0.4544 | 0.5381 |
+| ow | 45 | 0.4465 | 0.5315 |
 | r6 | 34 | 0.6563 | 0.7282 |
 | valorant | 20 | 0.6286 | 0.6749 |
 
@@ -50,7 +50,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-17 07:54 | model-only | lol | Team WE | BNK FEARX | NO BNK FEARX | 36 | 0.32 | 0.47 | 0.32 | open | - |
 | 2026-10-17 07:54 | favourite | dota2 | Gorgc Team | ALOHADANCE Team | YES Gorgc Team | 13 | 0.64 | 0.63 | 0.63 | open | - |
 | 2026-10-17 07:54 | model-only | dota2 | ALOHADANCE Team | Gorgc Team | YES ALOHADANCE Team | 30 | 0.38 | 0.46 | 0.37 | open | - |
-| 2026-10-17 06:54 | model-only | ow | ZANSIDE GAMING | T1 | NO T1 | 104 | 0.11 | 0.21 | 0.09 | open | - |
+| 2026-10-17 06:54 | model-only | ow | ZANSIDE GAMING | T1 | NO T1 | 104 | 0.11 | 0.21 | 0.09 | lost | -$12.16 |
 | 2026-10-17 06:54 | model-only | dota2 | Team Resilience | Team Tidebound | NO Team Tidebound | 22 | 0.53 | 0.70 | 0.53 | won | $9.95 |
 | 2026-10-17 06:54 | favourite | dota2 | Team Resilience | Team Tidebound | NO Team Tidebound | 16 | 0.53 | 0.53 | 0.53 | won | $7.24 |
 | 2026-10-17 06:54 | model-only | r6 | Dplus | CAG by VARREL | NO CAG by VARREL | 14 | 0.34 | 0.44 | 0.33 | won | $9.02 |
