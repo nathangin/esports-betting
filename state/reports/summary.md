@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-17 13:05 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-17 13:35 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 218 | 23 | 195 | 50 | -$396.26 | -17.6% | -0.8c (214) | $603.74 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 318 | 27 | 291 | 200 | -$122.40 | -5.8% | -1.3c (315) | $877.60 |
+| model-only | Elo win model alone (control: ignores the market) | 218 | 22 | 196 | 50 | -$406.10 | -18.0% | -0.8c (214) | $593.90 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 318 | 26 | 292 | 201 | -$118.08 | -5.5% | -1.3c (315) | $881.92 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,21 +16,21 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-744 finished matches. Lower is better; the market line is the bar to beat.
+746 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5664 | 0.1928 |
-| model | 0.6555 | 0.2316 |
+| market | 0.5665 | 0.1928 |
+| model | 0.6557 | 0.2317 |
 | blend | 0.5653 | 0.1924 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 463 | 0.5740 | 0.6558 |
-| dota2 | 124 | 0.5501 | 0.6471 |
+| dota2 | 125 | 0.5510 | 0.6481 |
 | lol | 57 | 0.5490 | 0.7107 |
 | ow | 45 | 0.4465 | 0.5315 |
-| r6 | 34 | 0.6563 | 0.7282 |
+| r6 | 35 | 0.6531 | 0.7263 |
 | valorant | 21 | 0.6521 | 0.6977 |
 
 ## Latest bets
@@ -44,8 +44,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-17 11:50 | model-only | dota2 | Spirit Academy | Yellow Submarine | YES Spirit Academy | 2 | 0.12 | 0.26 | 0.12 | open | - |
 | 2026-10-17 10:54 | favourite | dota2 | Nix Team | by Owl Team | NO by Owl Team | 12 | 0.69 | 0.67 | 0.67 | open | - |
 | 2026-10-17 10:54 | model-only | dota2 | by Owl Team | Nix Team | YES by Owl Team | 33 | 0.35 | 0.57 | 0.33 | open | - |
-| 2026-10-17 09:54 | favourite | r6 | SCARZ | FearX | NO FearX | 11 | 0.59 | 0.58 | 0.58 | open | - |
-| 2026-10-17 09:54 | model-only | r6 | FearX | SCARZ | YES FearX | 22 | 0.43 | 0.48 | 0.42 | open | - |
+| 2026-10-17 09:54 | favourite | r6 | SCARZ | FearX | NO FearX | 11 | 0.59 | 0.58 | 0.58 | won | $4.32 |
+| 2026-10-17 09:54 | model-only | r6 | FearX | SCARZ | YES FearX | 22 | 0.43 | 0.48 | 0.42 | lost | -$9.84 |
 | 2026-10-17 08:54 | model-only | dota2 | PuckChamp | Inner Circle | YES PuckChamp | 60 | 0.19 | 0.35 | 0.18 | open | - |
 | 2026-10-17 08:54 | favourite | dota2 | Team Lynx | Dawn Bulls | NO Dawn Bulls | 16 | 0.53 | 0.52 | 0.52 | open | - |
 | 2026-10-17 08:54 | favourite | dota2 | Inner Circle | PuckChamp | YES Inner Circle | 10 | 0.83 | 0.82 | 0.82 | open | - |
