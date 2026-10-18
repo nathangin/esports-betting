@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-18 14:23 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-18 14:43 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-18 14:23 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 231 | 23 | 208 | 53 | -$452.52 | -19.0% | -0.8c (226) | $547.48 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 355 | 39 | 316 | 218 | -$112.53 | -4.9% | -1.5c (350) | $887.47 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 355 | 38 | 317 | 219 | -$110.25 | -4.8% | -1.5c (350) | $889.75 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -55,7 +55,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-18 12:38 | model-only | cs2 | Privateer Gaming | ex-6666 | YES Privateer Gaming | 1 | 0.18 | 0.38 | 0.17 | open | - |
 | 2026-10-18 11:53 | model-only | cs2 | realgotis22 | Joga de terno | NO Joga de terno | 25 | 0.41 | 0.49 | 0.38 | open | - |
 | 2026-10-18 11:53 | favourite | cs2 | Joga de terno | realgotis22 | YES Joga de terno | 13 | 0.64 | 0.62 | 0.62 | open | - |
-| 2026-10-18 11:53 | favourite | dota2 | Stariy bog Team | ALOHADANCE Team | NO ALOHADANCE Team | 11 | 0.78 | 0.73 | 0.73 | open | - |
+| 2026-10-18 11:53 | favourite | dota2 | Stariy bog Team | ALOHADANCE Team | NO ALOHADANCE Team | 11 | 0.78 | 0.73 | 0.73 | won | $2.28 |
 | 2026-10-18 10:53 | favourite | dota2 | Team Synapse | CyberHero | NO CyberHero | 13 | 0.65 | 0.63 | 0.63 | open | - |
 | 2026-10-18 10:23 | favourite | cs2 | Team Falcons | Aurora Gaming | YES Team Falcons | 15 | 0.57 | 0.57 | 0.57 | open | - |
 | 2026-10-18 09:53 | favourite | cs2 | Saint Sinners | maybe | NO maybe | 13 | 0.64 | 0.63 | 0.63 | open | - |
