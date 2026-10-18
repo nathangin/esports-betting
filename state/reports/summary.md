@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-18 16:48 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-18 16:53 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 235 | 24 | 211 | 55 | -$419.57 | -17.5% | -0.9c (231) | $580.43 |
+| model-only | Elo win model alone (control: ignores the market) | 236 | 25 | 211 | 55 | -$419.57 | -17.5% | -0.9c (231) | $580.43 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 359 | 35 | 324 | 222 | -$131.58 | -5.6% | -1.4c (356) | $868.42 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-18 16:53 | model-only | lol | MVK Esports | Karmine Corp | NO Karmine Corp | 42 | 0.13 | 0.28 | 0.12 | open | - |
 | 2026-10-18 15:53 | favourite | cs2 | UNiTY esports | mellren | NO mellren | 8 | 0.67 | 0.65 | 0.65 | open | - |
 | 2026-10-18 15:53 | model-only | cs2 | mellren | UNiTY esports | YES mellren | 29 | 0.37 | 0.51 | 0.35 | open | - |
 | 2026-10-18 15:53 | favourite | cs2 | Nuclear TigeRES | ex-RUSTEC | NO ex-RUSTEC | 12 | 0.67 | 0.65 | 0.65 | open | - |
@@ -51,17 +52,16 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-18 13:53 | favourite | cs2 | FURIA | BetBoom Team | NO BetBoom Team | 11 | 0.74 | 0.73 | 0.73 | open | - |
 | 2026-10-18 13:53 | model-only | cs2 | BetBoom Team | FURIA | NO FURIA | 38 | 0.27 | 0.45 | 0.27 | open | - |
 | 2026-10-18 12:53 | favourite | cs2 | ILLYRIANS | MORROW | YES ILLYRIANS | 13 | 0.65 | 0.62 | 0.62 | won | $4.34 |
-| 2026-10-18 12:53 | favourite | cs2 | UPGRADE | Lavked | NO Lavked | 12 | 0.67 | 0.65 | 0.65 | lost | -$8.23 |
-| 2026-10-18 12:53 | model-only | cs2 | mellren | Spirit Academy | YES mellren | 21 | 0.49 | 0.58 | 0.47 | open | - |
-| 2026-10-18 12:53 | favourite | cs2 | Spirit Academy | mellren | YES Spirit Academy | 15 | 0.55 | 0.53 | 0.53 | open | - |
 | 2026-10-18 12:53 | model-only | cs2 | Lavked | UPGRADE | YES Lavked | 28 | 0.36 | 0.45 | 0.35 | won | $17.46 |
+| 2026-10-18 12:53 | favourite | cs2 | UPGRADE | Lavked | NO Lavked | 12 | 0.67 | 0.65 | 0.65 | lost | -$8.23 |
+| 2026-10-18 12:53 | favourite | cs2 | Spirit Academy | mellren | YES Spirit Academy | 15 | 0.55 | 0.53 | 0.53 | open | - |
+| 2026-10-18 12:53 | model-only | cs2 | mellren | Spirit Academy | YES mellren | 21 | 0.49 | 0.58 | 0.47 | open | - |
 | 2026-10-18 12:53 | favourite | cs2 | Team Nemesis | EYEBALLERS | NO EYEBALLERS | 12 | 0.70 | 0.68 | 0.68 | open | - |
-| 2026-10-18 12:53 | favourite | cs2 | 33 | Brute | NO Brute | 4 | 0.68 | 0.65 | 0.65 | lost | -$2.79 |
 | 2026-10-18 12:53 | model-only | cs2 | Brute | 33 | YES Brute | 26 | 0.38 | 0.56 | 0.35 | won | $15.69 |
+| 2026-10-18 12:53 | favourite | cs2 | 33 | Brute | NO Brute | 4 | 0.68 | 0.65 | 0.65 | lost | -$2.79 |
 | 2026-10-18 12:38 | favourite | cs2 | Phantom Academy | antidaun | NO antidaun | 10 | 0.85 | 0.83 | 0.83 | won | $1.41 |
 | 2026-10-18 12:38 | favourite | cs2 | ex-6666 | Privateer Gaming | NO Privateer Gaming | 10 | 0.85 | 0.83 | 0.83 | won | $1.41 |
 | 2026-10-18 12:38 | model-only | cs2 | Privateer Gaming | ex-6666 | YES Privateer Gaming | 1 | 0.18 | 0.38 | 0.17 | lost | -$0.20 |
-| 2026-10-18 11:53 | favourite | dota2 | Stariy bog Team | ALOHADANCE Team | NO ALOHADANCE Team | 11 | 0.78 | 0.73 | 0.73 | won | $2.28 |
 | 2026-10-18 11:53 | favourite | cs2 | Joga de terno | realgotis22 | YES Joga de terno | 13 | 0.64 | 0.62 | 0.62 | open | - |
 | 2026-10-18 11:53 | model-only | cs2 | realgotis22 | Joga de terno | NO Joga de terno | 25 | 0.41 | 0.49 | 0.38 | open | - |
 
