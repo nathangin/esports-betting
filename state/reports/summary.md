@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-18 14:43 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-18 14:54 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 231 | 23 | 208 | 53 | -$452.52 | -19.0% | -0.8c (226) | $547.48 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 355 | 38 | 317 | 219 | -$110.25 | -4.8% | -1.5c (350) | $889.75 |
+| model-only | Elo win model alone (control: ignores the market) | 232 | 24 | 208 | 53 | -$452.52 | -19.0% | -0.8c (227) | $547.48 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 356 | 39 | 317 | 219 | -$110.25 | -4.8% | -1.5c (352) | $889.75 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-783 finished matches. Lower is better; the market line is the bar to beat.
+784 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5668 | 0.1930 |
-| model | 0.6532 | 0.2307 |
-| blend | 0.5658 | 0.1926 |
+| market | 0.5665 | 0.1928 |
+| model | 0.6531 | 0.2307 |
+| blend | 0.5654 | 0.1925 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 479 | 0.5770 | 0.6565 |
-| dota2 | 134 | 0.5501 | 0.6469 |
+| dota2 | 135 | 0.5483 | 0.6467 |
 | lol | 58 | 0.5569 | 0.7146 |
 | ow | 55 | 0.4422 | 0.5102 |
 | r6 | 35 | 0.6531 | 0.7263 |
@@ -39,17 +39,19 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-18 14:53 | favourite | cs2 | Damajuana | A NATA | YES Damajuana | 16 | 0.52 | 0.51 | 0.51 | open | - |
+| 2026-10-18 14:53 | model-only | cs2 | A NATA | Damajuana | YES A NATA | 20 | 0.51 | 0.61 | 0.49 | open | - |
 | 2026-10-18 13:53 | favourite | dota2 | Power Rangers | Nemiga Gaming | YES Power Rangers | 14 | 0.58 | 0.58 | 0.58 | open | - |
 | 2026-10-18 13:53 | favourite | cs2 | FURIA | BetBoom Team | NO BetBoom Team | 11 | 0.74 | 0.73 | 0.73 | open | - |
 | 2026-10-18 13:53 | model-only | cs2 | BetBoom Team | FURIA | NO FURIA | 38 | 0.27 | 0.45 | 0.27 | open | - |
-| 2026-10-18 12:53 | favourite | cs2 | 33 | Brute | NO Brute | 4 | 0.68 | 0.65 | 0.65 | open | - |
-| 2026-10-18 12:53 | model-only | cs2 | Brute | 33 | YES Brute | 26 | 0.38 | 0.56 | 0.35 | open | - |
+| 2026-10-18 12:53 | favourite | cs2 | Spirit Academy | mellren | YES Spirit Academy | 15 | 0.55 | 0.53 | 0.53 | open | - |
+| 2026-10-18 12:53 | model-only | cs2 | Lavked | UPGRADE | YES Lavked | 28 | 0.36 | 0.45 | 0.35 | open | - |
+| 2026-10-18 12:53 | favourite | cs2 | UPGRADE | Lavked | NO Lavked | 12 | 0.67 | 0.65 | 0.65 | open | - |
+| 2026-10-18 12:53 | model-only | cs2 | mellren | Spirit Academy | YES mellren | 21 | 0.49 | 0.58 | 0.47 | open | - |
 | 2026-10-18 12:53 | favourite | cs2 | Team Nemesis | EYEBALLERS | NO EYEBALLERS | 12 | 0.70 | 0.68 | 0.68 | open | - |
 | 2026-10-18 12:53 | favourite | cs2 | ILLYRIANS | MORROW | YES ILLYRIANS | 13 | 0.65 | 0.62 | 0.62 | open | - |
-| 2026-10-18 12:53 | favourite | cs2 | Spirit Academy | mellren | YES Spirit Academy | 15 | 0.55 | 0.53 | 0.53 | open | - |
-| 2026-10-18 12:53 | model-only | cs2 | mellren | Spirit Academy | YES mellren | 21 | 0.49 | 0.58 | 0.47 | open | - |
-| 2026-10-18 12:53 | favourite | cs2 | UPGRADE | Lavked | NO Lavked | 12 | 0.67 | 0.65 | 0.65 | open | - |
-| 2026-10-18 12:53 | model-only | cs2 | Lavked | UPGRADE | YES Lavked | 28 | 0.36 | 0.45 | 0.35 | open | - |
+| 2026-10-18 12:53 | model-only | cs2 | Brute | 33 | YES Brute | 26 | 0.38 | 0.56 | 0.35 | open | - |
+| 2026-10-18 12:53 | favourite | cs2 | 33 | Brute | NO Brute | 4 | 0.68 | 0.65 | 0.65 | open | - |
 | 2026-10-18 12:38 | favourite | cs2 | Phantom Academy | antidaun | NO antidaun | 10 | 0.85 | 0.83 | 0.83 | open | - |
 | 2026-10-18 12:38 | favourite | cs2 | ex-6666 | Privateer Gaming | NO Privateer Gaming | 10 | 0.85 | 0.83 | 0.83 | open | - |
 | 2026-10-18 12:38 | model-only | cs2 | Privateer Gaming | ex-6666 | YES Privateer Gaming | 1 | 0.18 | 0.38 | 0.17 | open | - |
@@ -62,8 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-18 09:53 | favourite | cs2 | Quintessence | MORROW | NO MORROW | 14 | 0.58 | 0.53 | 0.53 | won | $5.64 |
 | 2026-10-18 09:53 | favourite | cs2 | ex-RUSTEC | ILLYRIANS | YES ex-RUSTEC | 6 | 0.75 | 0.72 | 0.72 | won | $1.42 |
 | 2026-10-18 09:53 | model-only | cs2 | ILLYRIANS | ex-RUSTEC | NO ex-RUSTEC | 34 | 0.30 | 0.37 | 0.28 | lost | -$10.70 |
-| 2026-10-18 09:23 | favourite | cs2 | Copenhagen Wolves | Sokerorg | NO Sokerorg | 14 | 0.60 | 0.57 | 0.57 | open | - |
-| 2026-10-18 09:23 | favourite | cs2 | Revenge | WonderKids | YES Revenge | 2 | 0.58 | 0.58 | 0.58 | lost | -$1.20 |
 
 ## Backtest on real Kalshi prices
 
