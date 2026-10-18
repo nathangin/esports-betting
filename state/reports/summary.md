@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-18 13:08 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-18 13:13 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 230 | 24 | 206 | 51 | -$475.91 | -20.2% | -0.8c (222) | $524.09 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 353 | 40 | 313 | 217 | -$108.21 | -4.7% | -1.4c (343) | $891.79 |
+| model-only | Elo win model alone (control: ignores the market) | 230 | 23 | 207 | 52 | -$465.78 | -19.7% | -0.8c (222) | $534.22 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 353 | 39 | 314 | 217 | -$116.97 | -5.1% | -1.4c (343) | $883.03 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,20 +16,20 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-779 finished matches. Lower is better; the market line is the bar to beat.
+781 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5668 | 0.1929 |
-| model | 0.6543 | 0.2313 |
-| blend | 0.5657 | 0.1925 |
+| market | 0.5663 | 0.1927 |
+| model | 0.6534 | 0.2308 |
+| blend | 0.5653 | 0.1924 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 476 | 0.5760 | 0.6574 |
+| cs2 | 477 | 0.5763 | 0.6569 |
 | dota2 | 134 | 0.5501 | 0.6469 |
 | lol | 58 | 0.5569 | 0.7146 |
-| ow | 54 | 0.4493 | 0.5173 |
+| ow | 55 | 0.4422 | 0.5102 |
 | r6 | 35 | 0.6531 | 0.7263 |
 | valorant | 22 | 0.6473 | 0.6972 |
 
@@ -62,8 +62,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-18 09:23 | favourite | cs2 | Copenhagen Wolves | Sokerorg | NO Sokerorg | 14 | 0.60 | 0.57 | 0.57 | open | - |
 | 2026-10-18 09:23 | favourite | cs2 | Revenge | WonderKids | YES Revenge | 2 | 0.58 | 0.58 | 0.58 | open | - |
 | 2026-10-18 09:23 | model-only | cs2 | WonderKids | Revenge | YES WonderKids | 24 | 0.43 | 0.50 | 0.42 | open | - |
-| 2026-10-18 08:52 | favourite | cs2 | Bushido Wildcats | Fire Flux Esports | YES Bushido Wildcats | 16 | 0.53 | 0.52 | 0.52 | open | - |
-| 2026-10-18 08:52 | model-only | cs2 | Fire Flux Esports | Bushido Wildcats | YES Fire Flux Esports | 21 | 0.50 | 0.65 | 0.48 | open | - |
+| 2026-10-18 08:52 | favourite | cs2 | Bushido Wildcats | Fire Flux Esports | YES Bushido Wildcats | 16 | 0.53 | 0.52 | 0.52 | lost | -$8.76 |
+| 2026-10-18 08:52 | model-only | cs2 | Fire Flux Esports | Bushido Wildcats | YES Fire Flux Esports | 21 | 0.50 | 0.65 | 0.48 | won | $10.13 |
 
 ## Backtest on real Kalshi prices
 
