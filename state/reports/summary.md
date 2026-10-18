@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-18 11:08 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-18 11:13 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 225 | 21 | 204 | 51 | -$454.72 | -19.5% | -0.8c (221) | $545.28 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 344 | 34 | 310 | 215 | -$103.38 | -4.6% | -1.4c (339) | $896.62 |
+| model-only | Elo win model alone (control: ignores the market) | 225 | 20 | 205 | 51 | -$465.21 | -19.9% | -0.8c (221) | $534.79 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 344 | 33 | 311 | 216 | -$100.97 | -4.4% | -1.4c (339) | $899.03 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,12 +16,12 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-775 finished matches. Lower is better; the market line is the bar to beat.
+776 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5663 | 0.1927 |
-| model | 0.6541 | 0.2311 |
+| market | 0.5663 | 0.1926 |
+| model | 0.6541 | 0.2312 |
 | blend | 0.5652 | 0.1923 |
 
 | Game | Matches | Market log loss | Model log loss |
@@ -31,7 +31,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | lol | 58 | 0.5569 | 0.7146 |
 | ow | 54 | 0.4493 | 0.5173 |
 | r6 | 35 | 0.6531 | 0.7263 |
-| valorant | 21 | 0.6521 | 0.6977 |
+| valorant | 22 | 0.6473 | 0.6972 |
 
 ## Latest bets
 
@@ -54,8 +54,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-18 06:52 | favourite | cs2 | ex-RUSTEC | Butterfly | NO Butterfly | 13 | 0.65 | 0.65 | 0.65 | open | - |
 | 2026-10-18 06:52 | favourite | cs2 | EAC Extra | VP.Future 3 | YES EAC Extra | 15 | 0.55 | 0.54 | 0.54 | won | $6.49 |
 | 2026-10-18 06:52 | favourite | cs2 | Black Phoenix | Saint Sinners | NO Saint Sinners | 10 | 0.70 | 0.69 | 0.69 | open | - |
-| 2026-10-18 04:52 | favourite | valorant | LOUD | Team Vitality | NO Team Vitality | 6 | 0.58 | 0.58 | 0.58 | open | - |
-| 2026-10-18 04:52 | model-only | valorant | Team Vitality | LOUD | NO LOUD | 24 | 0.42 | 0.50 | 0.42 | open | - |
+| 2026-10-18 04:52 | favourite | valorant | LOUD | Team Vitality | NO Team Vitality | 6 | 0.58 | 0.58 | 0.58 | won | $2.41 |
+| 2026-10-18 04:52 | model-only | valorant | Team Vitality | LOUD | NO LOUD | 24 | 0.42 | 0.50 | 0.42 | lost | -$10.49 |
 | 2026-10-18 04:52 | favourite | ow | Cheeseburger | SEIJI ESPORTS | YES Cheeseburger | 4 | 0.89 | 0.88 | 0.88 | won | $0.41 |
 | 2026-10-18 01:51 | favourite | cs2 | NEXVOID | Off Chops | YES NEXVOID | 6 | 0.74 | 0.70 | 0.70 | won | $1.47 |
 | 2026-10-17 21:51 | favourite | ow | NTMR | Disguised | NO Disguised | 15 | 0.57 | 0.53 | 0.53 | won | $6.19 |
