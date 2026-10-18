@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-18 19:08 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-18 19:13 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 236 | 22 | 214 | 55 | -$451.07 | -18.6% | -0.9c (232) | $548.93 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 360 | 31 | 329 | 227 | -$104.44 | -4.3% | -1.4c (356) | $895.56 |
+| model-only | Elo win model alone (control: ignores the market) | 236 | 21 | 215 | 55 | -$462.28 | -19.0% | -0.9c (232) | $537.72 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 360 | 30 | 330 | 228 | -$101.93 | -4.2% | -1.4c (356) | $898.07 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-797 finished matches. Lower is better; the market line is the bar to beat.
+798 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5691 | 0.1939 |
-| model | 0.6534 | 0.2309 |
-| blend | 0.5683 | 0.1936 |
+| market | 0.5689 | 0.1938 |
+| model | 0.6535 | 0.2309 |
+| blend | 0.5681 | 0.1935 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 490 | 0.5773 | 0.6562 |
+| cs2 | 491 | 0.5770 | 0.6563 |
 | dota2 | 136 | 0.5516 | 0.6492 |
 | lol | 58 | 0.5569 | 0.7146 |
 | ow | 56 | 0.4688 | 0.5140 |
@@ -45,8 +45,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-18 15:53 | favourite | cs2 | FORZE Reload | BakS eSports | NO BakS eSports | 14 | 0.60 | 0.58 | 0.58 | won | $5.36 |
 | 2026-10-18 15:53 | model-only | cs2 | ex-RUSTEC | Nuclear TigeRES | YES ex-RUSTEC | 29 | 0.37 | 0.46 | 0.35 | open | - |
 | 2026-10-18 15:53 | model-only | cs2 | BakS eSports | FORZE Reload | YES BakS eSports | 23 | 0.43 | 0.49 | 0.42 | lost | -$10.29 |
-| 2026-10-18 15:53 | model-only | cs2 | mellren | UNiTY esports | YES mellren | 29 | 0.37 | 0.51 | 0.35 | open | - |
-| 2026-10-18 15:53 | favourite | cs2 | UNiTY esports | mellren | NO mellren | 8 | 0.67 | 0.65 | 0.65 | open | - |
+| 2026-10-18 15:53 | model-only | cs2 | mellren | UNiTY esports | YES mellren | 29 | 0.37 | 0.51 | 0.35 | lost | -$11.21 |
+| 2026-10-18 15:53 | favourite | cs2 | UNiTY esports | mellren | NO mellren | 8 | 0.67 | 0.65 | 0.65 | won | $2.51 |
 | 2026-10-18 14:53 | favourite | cs2 | Damajuana | A NATA | YES Damajuana | 16 | 0.52 | 0.51 | 0.51 | won | $7.40 |
 | 2026-10-18 14:53 | model-only | cs2 | A NATA | Damajuana | YES A NATA | 20 | 0.51 | 0.61 | 0.49 | lost | -$10.55 |
 | 2026-10-18 13:53 | favourite | dota2 | Power Rangers | Nemiga Gaming | YES Power Rangers | 14 | 0.58 | 0.58 | 0.58 | open | - |
