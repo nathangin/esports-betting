@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-18 06:07 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-18 06:12 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-18 06:07 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 222 | 18 | 204 | 51 | -$454.72 | -19.5% | -0.8c (218) | $545.28 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 332 | 25 | 307 | 212 | -$111.75 | -5.0% | -1.4c (329) | $888.25 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 332 | 24 | 308 | 213 | -$110.28 | -4.9% | -1.4c (329) | $889.72 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -42,7 +42,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-18 04:52 | favourite | valorant | LOUD | Team Vitality | NO Team Vitality | 6 | 0.58 | 0.58 | 0.58 | open | - |
 | 2026-10-18 04:52 | model-only | valorant | Team Vitality | LOUD | NO LOUD | 24 | 0.42 | 0.50 | 0.42 | open | - |
 | 2026-10-18 04:52 | favourite | ow | Cheeseburger | SEIJI ESPORTS | YES Cheeseburger | 4 | 0.89 | 0.88 | 0.88 | open | - |
-| 2026-10-18 01:51 | favourite | cs2 | NEXVOID | Off Chops | YES NEXVOID | 6 | 0.74 | 0.70 | 0.70 | open | - |
+| 2026-10-18 01:51 | favourite | cs2 | NEXVOID | Off Chops | YES NEXVOID | 6 | 0.74 | 0.70 | 0.70 | won | $1.47 |
 | 2026-10-17 21:51 | favourite | ow | NTMR | Disguised | NO Disguised | 15 | 0.57 | 0.53 | 0.53 | won | $6.19 |
 | 2026-10-17 20:21 | favourite | ow | Team Liquid | The Kafe | YES Team Liquid | 12 | 0.73 | 0.70 | 0.70 | won | $3.07 |
 | 2026-10-17 18:51 | favourite | ow | Geekay Esports | Team Peps | YES Geekay Esports | 8 | 0.65 | 0.63 | 0.63 | won | $2.67 |
