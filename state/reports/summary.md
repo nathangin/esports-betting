@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-18 19:13 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-18 19:33 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 236 | 21 | 215 | 55 | -$462.28 | -19.0% | -0.9c (232) | $537.72 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 360 | 30 | 330 | 228 | -$101.93 | -4.2% | -1.4c (356) | $898.07 |
+| model-only | Elo win model alone (control: ignores the market) | 236 | 20 | 216 | 55 | -$473.49 | -19.3% | -0.9c (232) | $526.51 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 360 | 28 | 332 | 230 | -$92.52 | -3.8% | -1.4c (356) | $907.48 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-798 finished matches. Lower is better; the market line is the bar to beat.
+799 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5689 | 0.1938 |
+| market | 0.5687 | 0.1937 |
 | model | 0.6535 | 0.2309 |
-| blend | 0.5681 | 0.1935 |
+| blend | 0.5679 | 0.1934 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 491 | 0.5770 | 0.6563 |
+| cs2 | 492 | 0.5767 | 0.6562 |
 | dota2 | 136 | 0.5516 | 0.6492 |
 | lol | 58 | 0.5569 | 0.7146 |
 | ow | 56 | 0.4688 | 0.5140 |
@@ -41,15 +41,15 @@ Prob is the book's probability that the backed team wins; Market is the market's
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-10-18 18:53 | favourite | cs2 | 6yuBoJlbl | HyperSpirit | YES 6yuBoJlbl | 2 | 0.65 | 0.62 | 0.62 | open | - |
 | 2026-10-18 16:53 | model-only | lol | MVK Esports | Karmine Corp | NO Karmine Corp | 42 | 0.13 | 0.28 | 0.12 | open | - |
-| 2026-10-18 15:53 | favourite | cs2 | Nuclear TigeRES | ex-RUSTEC | NO ex-RUSTEC | 12 | 0.67 | 0.65 | 0.65 | open | - |
+| 2026-10-18 15:53 | favourite | cs2 | Nuclear TigeRES | ex-RUSTEC | NO ex-RUSTEC | 12 | 0.67 | 0.65 | 0.65 | won | $3.77 |
 | 2026-10-18 15:53 | favourite | cs2 | FORZE Reload | BakS eSports | NO BakS eSports | 14 | 0.60 | 0.58 | 0.58 | won | $5.36 |
-| 2026-10-18 15:53 | model-only | cs2 | ex-RUSTEC | Nuclear TigeRES | YES ex-RUSTEC | 29 | 0.37 | 0.46 | 0.35 | open | - |
+| 2026-10-18 15:53 | model-only | cs2 | ex-RUSTEC | Nuclear TigeRES | YES ex-RUSTEC | 29 | 0.37 | 0.46 | 0.35 | lost | -$11.21 |
 | 2026-10-18 15:53 | model-only | cs2 | BakS eSports | FORZE Reload | YES BakS eSports | 23 | 0.43 | 0.49 | 0.42 | lost | -$10.29 |
 | 2026-10-18 15:53 | model-only | cs2 | mellren | UNiTY esports | YES mellren | 29 | 0.37 | 0.51 | 0.35 | lost | -$11.21 |
 | 2026-10-18 15:53 | favourite | cs2 | UNiTY esports | mellren | NO mellren | 8 | 0.67 | 0.65 | 0.65 | won | $2.51 |
 | 2026-10-18 14:53 | favourite | cs2 | Damajuana | A NATA | YES Damajuana | 16 | 0.52 | 0.51 | 0.51 | won | $7.40 |
 | 2026-10-18 14:53 | model-only | cs2 | A NATA | Damajuana | YES A NATA | 20 | 0.51 | 0.61 | 0.49 | lost | -$10.55 |
-| 2026-10-18 13:53 | favourite | dota2 | Power Rangers | Nemiga Gaming | YES Power Rangers | 14 | 0.58 | 0.58 | 0.58 | open | - |
+| 2026-10-18 13:53 | favourite | dota2 | Power Rangers | Nemiga Gaming | YES Power Rangers | 14 | 0.58 | 0.58 | 0.58 | won | $5.64 |
 | 2026-10-18 13:53 | favourite | cs2 | FURIA | BetBoom Team | NO BetBoom Team | 11 | 0.74 | 0.73 | 0.73 | open | - |
 | 2026-10-18 13:53 | model-only | cs2 | BetBoom Team | FURIA | NO FURIA | 38 | 0.27 | 0.45 | 0.27 | open | - |
 | 2026-10-18 12:53 | favourite | cs2 | Spirit Academy | mellren | YES Spirit Academy | 15 | 0.55 | 0.53 | 0.53 | won | $6.49 |
