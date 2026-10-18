@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-18 19:33 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-18 19:48 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-18 19:33 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 236 | 20 | 216 | 55 | -$473.49 | -19.3% | -0.9c (232) | $526.51 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 360 | 28 | 332 | 230 | -$92.52 | -3.8% | -1.4c (356) | $907.48 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 360 | 28 | 332 | 230 | -$92.52 | -3.8% | -1.4c (357) | $907.48 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-799 finished matches. Lower is better; the market line is the bar to beat.
+800 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
 | market | 0.5687 | 0.1937 |
-| model | 0.6535 | 0.2309 |
+| model | 0.6533 | 0.2308 |
 | blend | 0.5679 | 0.1934 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 492 | 0.5767 | 0.6562 |
-| dota2 | 136 | 0.5516 | 0.6492 |
+| dota2 | 137 | 0.5516 | 0.6481 |
 | lol | 58 | 0.5569 | 0.7146 |
 | ow | 56 | 0.4688 | 0.5140 |
 | r6 | 35 | 0.6531 | 0.7263 |
