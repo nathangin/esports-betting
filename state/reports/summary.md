@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-18 09:23 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-18 09:53 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 224 | 20 | 204 | 51 | -$454.72 | -19.5% | -0.8c (218) | $545.28 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 339 | 30 | 309 | 214 | -$109.87 | -4.9% | -1.4c (333) | $890.13 |
+| model-only | Elo win model alone (control: ignores the market) | 225 | 21 | 204 | 51 | -$454.72 | -19.5% | -0.8c (219) | $545.28 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 342 | 33 | 309 | 214 | -$109.87 | -4.9% | -1.4c (334) | $890.13 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-18 09:53 | favourite | cs2 | Saint Sinners | maybe | NO maybe | 13 | 0.64 | 0.63 | 0.63 | open | - |
+| 2026-10-18 09:53 | favourite | cs2 | Quintessence | MORROW | NO MORROW | 14 | 0.58 | 0.53 | 0.53 | open | - |
+| 2026-10-18 09:53 | favourite | cs2 | ex-RUSTEC | ILLYRIANS | YES ex-RUSTEC | 6 | 0.75 | 0.72 | 0.72 | open | - |
+| 2026-10-18 09:53 | model-only | cs2 | ILLYRIANS | ex-RUSTEC | NO ex-RUSTEC | 34 | 0.30 | 0.37 | 0.28 | open | - |
 | 2026-10-18 09:23 | favourite | cs2 | Copenhagen Wolves | Sokerorg | NO Sokerorg | 14 | 0.60 | 0.57 | 0.57 | open | - |
 | 2026-10-18 09:23 | favourite | cs2 | Revenge | WonderKids | YES Revenge | 2 | 0.58 | 0.58 | 0.58 | open | - |
 | 2026-10-18 09:23 | model-only | cs2 | WonderKids | Revenge | YES WonderKids | 24 | 0.43 | 0.50 | 0.42 | open | - |
@@ -48,22 +52,18 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-18 06:52 | favourite | cs2 | Passion Academy | Elite Klan | YES Passion Academy | 15 | 0.55 | 0.54 | 0.53 | open | - |
 | 2026-10-18 06:52 | favourite | cs2 | ex-RUSTEC | Butterfly | NO Butterfly | 13 | 0.65 | 0.65 | 0.65 | open | - |
 | 2026-10-18 06:52 | favourite | cs2 | EAC Extra | VP.Future 3 | YES EAC Extra | 15 | 0.55 | 0.54 | 0.54 | open | - |
+| 2026-10-18 04:52 | favourite | ow | Cheeseburger | SEIJI ESPORTS | YES Cheeseburger | 4 | 0.89 | 0.88 | 0.88 | won | $0.41 |
 | 2026-10-18 04:52 | favourite | valorant | LOUD | Team Vitality | NO Team Vitality | 6 | 0.58 | 0.58 | 0.58 | open | - |
 | 2026-10-18 04:52 | model-only | valorant | Team Vitality | LOUD | NO LOUD | 24 | 0.42 | 0.50 | 0.42 | open | - |
-| 2026-10-18 04:52 | favourite | ow | Cheeseburger | SEIJI ESPORTS | YES Cheeseburger | 4 | 0.89 | 0.88 | 0.88 | won | $0.41 |
 | 2026-10-18 01:51 | favourite | cs2 | NEXVOID | Off Chops | YES NEXVOID | 6 | 0.74 | 0.70 | 0.70 | won | $1.47 |
 | 2026-10-17 21:51 | favourite | ow | NTMR | Disguised | NO Disguised | 15 | 0.57 | 0.53 | 0.53 | won | $6.19 |
 | 2026-10-17 20:21 | favourite | ow | Team Liquid | The Kafe | YES Team Liquid | 12 | 0.73 | 0.70 | 0.70 | won | $3.07 |
 | 2026-10-17 18:51 | favourite | ow | Geekay Esports | Team Peps | YES Geekay Esports | 8 | 0.65 | 0.63 | 0.63 | won | $2.67 |
-| 2026-10-17 17:51 | favourite | cs2 | 6yuBoJlbl | WRAITH PCIFIC | YES 6yuBoJlbl | 15 | 0.58 | 0.55 | 0.54 | open | - |
 | 2026-10-17 17:51 | favourite | dota2 | CyberHero | Inner Circle | YES CyberHero | 11 | 0.76 | 0.75 | 0.75 | lost | -$8.51 |
+| 2026-10-17 17:51 | favourite | cs2 | 6yuBoJlbl | WRAITH PCIFIC | YES 6yuBoJlbl | 15 | 0.58 | 0.55 | 0.54 | open | - |
 | 2026-10-17 16:51 | favourite | lol | FURIA Esports | MVK Esports | YES FURIA Esports | 13 | 0.64 | 0.64 | 0.64 | lost | -$8.53 |
-| 2026-10-17 15:50 | favourite | cs2 | MIBR | NIP | YES MIBR | 15 | 0.57 | 0.55 | 0.55 | lost | -$8.81 |
-| 2026-10-17 15:50 | favourite | cs2 | BBL | ex-RUSTEC | NO ex-RUSTEC | 7 | 0.60 | 0.59 | 0.59 | won | $2.68 |
 | 2026-10-17 15:50 | favourite | cs2 | Team Falcons | BetBoom Team | YES Team Falcons | 12 | 0.73 | 0.73 | 0.73 | lost | -$8.93 |
-| 2026-10-17 15:50 | model-only | cs2 | BetBoom Team | Team Falcons | YES BetBoom Team | 24 | 0.27 | 0.37 | 0.27 | won | $17.18 |
-| 2026-10-17 14:50 | favourite | dota2 | Yellow Submarine | Dawn Bulls | NO Dawn Bulls | 12 | 0.68 | 0.67 | 0.67 | won | $3.65 |
-| 2026-10-17 14:50 | model-only | dota2 | Dawn Bulls | Yellow Submarine | NO Yellow Submarine | 31 | 0.34 | 0.44 | 0.33 | lost | -$11.03 |
+| 2026-10-17 15:50 | favourite | cs2 | MIBR | NIP | YES MIBR | 15 | 0.57 | 0.55 | 0.55 | lost | -$8.81 |
 
 ## Backtest on real Kalshi prices
 
