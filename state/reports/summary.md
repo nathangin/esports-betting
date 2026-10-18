@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-17 23:56 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-18 00:11 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-17 23:56 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 221 | 17 | 204 | 51 | -$454.72 | -19.5% | -0.8c (217) | $545.28 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 329 | 23 | 306 | 211 | -$117.94 | -5.3% | -1.4c (326) | $882.06 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 329 | 22 | 307 | 212 | -$111.75 | -5.0% | -1.4c (326) | $888.25 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,7 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-17 21:51 | favourite | ow | NTMR | Disguised | NO Disguised | 15 | 0.57 | 0.53 | 0.53 | open | - |
+| 2026-10-17 21:51 | favourite | ow | NTMR | Disguised | NO Disguised | 15 | 0.57 | 0.53 | 0.53 | won | $6.19 |
 | 2026-10-17 20:21 | favourite | ow | Team Liquid | The Kafe | YES Team Liquid | 12 | 0.73 | 0.70 | 0.70 | won | $3.07 |
 | 2026-10-17 18:51 | favourite | ow | Geekay Esports | Team Peps | YES Geekay Esports | 8 | 0.65 | 0.63 | 0.63 | won | $2.67 |
 | 2026-10-17 17:51 | favourite | dota2 | CyberHero | Inner Circle | YES CyberHero | 11 | 0.76 | 0.75 | 0.75 | lost | -$8.51 |
