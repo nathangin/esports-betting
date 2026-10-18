@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-18 12:53 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-18 13:03 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 230 | 25 | 205 | 51 | -$465.21 | -19.9% | -0.8c (222) | $534.79 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 353 | 41 | 312 | 216 | -$109.63 | -4.8% | -1.4c (343) | $890.37 |
+| model-only | Elo win model alone (control: ignores the market) | 230 | 24 | 206 | 51 | -$475.91 | -20.2% | -0.8c (222) | $524.09 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 353 | 40 | 313 | 217 | -$108.21 | -4.7% | -1.4c (343) | $891.79 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-778 finished matches. Lower is better; the market line is the bar to beat.
+779 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5671 | 0.1930 |
-| model | 0.6546 | 0.2314 |
-| blend | 0.5661 | 0.1927 |
+| market | 0.5668 | 0.1929 |
+| model | 0.6543 | 0.2313 |
+| blend | 0.5657 | 0.1925 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 475 | 0.5765 | 0.6578 |
+| cs2 | 476 | 0.5760 | 0.6574 |
 | dota2 | 134 | 0.5501 | 0.6469 |
 | lol | 58 | 0.5569 | 0.7146 |
 | ow | 54 | 0.4493 | 0.5173 |
@@ -55,8 +55,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-18 11:53 | model-only | cs2 | realgotis22 | Joga de terno | NO Joga de terno | 25 | 0.41 | 0.49 | 0.38 | open | - |
 | 2026-10-18 10:53 | favourite | dota2 | Team Synapse | CyberHero | NO CyberHero | 13 | 0.65 | 0.63 | 0.63 | open | - |
 | 2026-10-18 10:23 | favourite | cs2 | Team Falcons | Aurora Gaming | YES Team Falcons | 15 | 0.57 | 0.57 | 0.57 | open | - |
-| 2026-10-18 09:53 | favourite | cs2 | ex-RUSTEC | ILLYRIANS | YES ex-RUSTEC | 6 | 0.75 | 0.72 | 0.72 | open | - |
-| 2026-10-18 09:53 | model-only | cs2 | ILLYRIANS | ex-RUSTEC | NO ex-RUSTEC | 34 | 0.30 | 0.37 | 0.28 | open | - |
+| 2026-10-18 09:53 | favourite | cs2 | ex-RUSTEC | ILLYRIANS | YES ex-RUSTEC | 6 | 0.75 | 0.72 | 0.72 | won | $1.42 |
+| 2026-10-18 09:53 | model-only | cs2 | ILLYRIANS | ex-RUSTEC | NO ex-RUSTEC | 34 | 0.30 | 0.37 | 0.28 | lost | -$10.70 |
 | 2026-10-18 09:53 | favourite | cs2 | Saint Sinners | maybe | NO maybe | 13 | 0.64 | 0.63 | 0.63 | open | - |
 | 2026-10-18 09:53 | favourite | cs2 | Quintessence | MORROW | NO MORROW | 14 | 0.58 | 0.53 | 0.53 | open | - |
 | 2026-10-18 09:23 | favourite | cs2 | Copenhagen Wolves | Sokerorg | NO Sokerorg | 14 | 0.60 | 0.57 | 0.57 | open | - |
