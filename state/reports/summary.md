@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-19 15:46 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-19 15:51 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-19 15:46 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 252 | 23 | 229 | 58 | -$531.18 | -20.8% | -1.0c (248) | $468.82 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 389 | 33 | 356 | 247 | -$91.32 | -3.5% | -1.4c (385) | $908.68 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 390 | 34 | 356 | 247 | -$91.32 | -3.5% | -1.4c (385) | $908.68 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,14 +39,15 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-19 15:51 | favourite | cs2 | ex-6666 | Fire Flux Esports | NO Fire Flux Esports | 2 | 0.52 | 0.51 | 0.51 | open | - |
 | 2026-10-19 14:51 | model-only | cs2 | Pandaric eSports | Regnum4Games | YES Pandaric eSports | 1 | 0.25 | 0.38 | 0.23 | open | - |
 | 2026-10-19 14:51 | favourite | cs2 | MASONIC | Linx Legacy Esport | NO Linx Legacy Esport | 5 | 0.65 | 0.61 | 0.61 | open | - |
 | 2026-10-19 13:51 | model-only | cs2 | fnatic | Liquid | NO Liquid | 20 | 0.44 | 0.55 | 0.44 | open | - |
 | 2026-10-19 13:51 | favourite | cs2 | Phantom | Brute | YES Phantom | 3 | 0.60 | 0.60 | 0.60 | open | - |
 | 2026-10-19 13:51 | model-only | cs2 | Brute | Phantom | YES Brute | 22 | 0.40 | 0.49 | 0.40 | open | - |
-| 2026-10-19 12:51 | favourite | cs2 | mellren | G2 Ares | NO G2 Ares | 13 | 0.67 | 0.65 | 0.65 | open | - |
-| 2026-10-19 12:51 | favourite | cs2 | BBL | Apogee Esports | YES BBL | 15 | 0.57 | 0.56 | 0.56 | open | - |
 | 2026-10-19 12:51 | favourite | cs2 | ex-Zero Tenacity | Bushido Wildcats | YES ex-Zero Tenacity | 12 | 0.72 | 0.70 | 0.70 | open | - |
+| 2026-10-19 12:51 | favourite | cs2 | BBL | Apogee Esports | YES BBL | 15 | 0.57 | 0.56 | 0.56 | open | - |
+| 2026-10-19 12:51 | favourite | cs2 | mellren | G2 Ares | NO G2 Ares | 13 | 0.67 | 0.65 | 0.65 | open | - |
 | 2026-10-19 12:51 | model-only | cs2 | Lilmix | Saint Sinners | YES Lilmix | 30 | 0.23 | 0.29 | 0.21 | open | - |
 | 2026-10-19 12:51 | favourite | cs2 | Saint Sinners | Lilmix | NO Lilmix | 11 | 0.80 | 0.79 | 0.79 | open | - |
 | 2026-10-19 12:36 | favourite | cs2 | aimclub | Insiders Esport | NO Insiders Esport | 2 | 0.88 | 0.83 | 0.83 | open | - |
@@ -63,7 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-19 09:35 | favourite | cs2 | Sashi Esport | MOUZ NXT | YES Sashi Esport | 14 | 0.62 | 0.61 | 0.61 | won | $5.08 |
 | 2026-10-19 09:35 | favourite | cs2 | Leo Team | ASTRAL | NO ASTRAL | 14 | 0.59 | 0.57 | 0.57 | lost | -$8.50 |
 | 2026-10-19 09:35 | model-only | cs2 | Leo Team | ASTRAL | NO ASTRAL | 16 | 0.59 | 0.65 | 0.57 | lost | -$9.72 |
-| 2026-10-19 09:35 | favourite | cs2 | Iberian Soul | HyperSpirit | YES Iberian Soul | 12 | 0.74 | 0.74 | 0.74 | won | $2.95 |
 
 ## Backtest on real Kalshi prices
 
