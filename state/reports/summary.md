@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-19 12:05 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-19 12:11 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-19 12:05 UTC. Model fitted 2026-10-12T19:16. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 248 | 23 | 225 | 56 | -$528.08 | -21.0% | -1.0c (244) | $471.92 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 382 | 34 | 348 | 240 | -$111.03 | -4.3% | -1.4c (378) | $888.97 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 382 | 33 | 349 | 241 | -$107.84 | -4.2% | -1.4c (378) | $892.16 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -57,7 +57,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-19 09:20 | favourite | cs2 | The Chosen Few | SANCTUM | YES The Chosen Few | 12 | 0.73 | 0.72 | 0.72 | open | - |
 | 2026-10-19 09:20 | model-only | cs2 | SANCTUM | The Chosen Few | YES SANCTUM | 33 | 0.29 | 0.51 | 0.28 | open | - |
 | 2026-10-19 07:50 | favourite | cs2 | Infinite | Insiders Esport | YES Infinite | 11 | 0.80 | 0.79 | 0.79 | won | $2.07 |
-| 2026-10-19 07:50 | favourite | cs2 | Apogee Esports | Spirit Academy | YES Apogee Esports | 12 | 0.72 | 0.70 | 0.70 | open | - |
+| 2026-10-19 07:50 | favourite | cs2 | Apogee Esports | Spirit Academy | YES Apogee Esports | 12 | 0.72 | 0.70 | 0.70 | won | $3.19 |
 | 2026-10-19 07:50 | model-only | cs2 | aimclub | BASEMENT BOYS | YES aimclub | 1 | 0.40 | 0.48 | 0.38 | lost | -$0.42 |
 | 2026-10-19 07:50 | favourite | cs2 | BASEMENT BOYS | aimclub | NO aimclub | 13 | 0.64 | 0.62 | 0.62 | won | $4.47 |
 | 2026-10-19 07:50 | favourite | cs2 | BC.Game Esports | Drama eSports | YES BC.Game Esports | 10 | 0.85 | 0.84 | 0.84 | won | $1.41 |
