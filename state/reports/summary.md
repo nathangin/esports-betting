@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-19 14:06 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-19 14:31 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 251 | 24 | 227 | 57 | -$528.97 | -20.9% | -1.0c (245) | $471.03 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 388 | 36 | 352 | 243 | -$108.33 | -4.2% | -1.4c (383) | $891.67 |
+| model-only | Elo win model alone (control: ignores the market) | 251 | 23 | 228 | 57 | -$538.70 | -21.2% | -1.0c (245) | $461.30 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 388 | 35 | 353 | 244 | -$104.79 | -4.0% | -1.4c (383) | $895.21 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -48,8 +48,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-19 12:51 | favourite | cs2 | ex-Zero Tenacity | Bushido Wildcats | YES ex-Zero Tenacity | 12 | 0.72 | 0.70 | 0.70 | open | - |
 | 2026-10-19 12:51 | favourite | cs2 | BBL | Apogee Esports | YES BBL | 15 | 0.57 | 0.56 | 0.56 | open | - |
 | 2026-10-19 12:36 | favourite | cs2 | aimclub | Insiders Esport | NO Insiders Esport | 2 | 0.88 | 0.83 | 0.83 | open | - |
-| 2026-10-19 10:50 | favourite | dota2 | HULIGANI | Nemiga Gaming | YES HULIGANI | 12 | 0.69 | 0.69 | 0.69 | open | - |
-| 2026-10-19 10:50 | model-only | dota2 | Nemiga Gaming | HULIGANI | NO HULIGANI | 29 | 0.32 | 0.46 | 0.31 | open | - |
+| 2026-10-19 10:50 | favourite | dota2 | HULIGANI | Nemiga Gaming | YES HULIGANI | 12 | 0.69 | 0.69 | 0.69 | won | $3.54 |
+| 2026-10-19 10:50 | model-only | dota2 | Nemiga Gaming | HULIGANI | NO HULIGANI | 29 | 0.32 | 0.46 | 0.31 | lost | -$9.73 |
 | 2026-10-19 10:50 | favourite | cs2 | GenOne | Omega | YES GenOne | 16 | 0.54 | 0.53 | 0.53 | open | - |
 | 2026-10-19 10:50 | model-only | cs2 | GenOne | Omega | YES GenOne | 17 | 0.54 | 0.59 | 0.53 | open | - |
 | 2026-10-19 10:50 | favourite | cs2 | TheMongolz | Alliance | NO Alliance | 11 | 0.75 | 0.74 | 0.74 | won | $2.60 |
