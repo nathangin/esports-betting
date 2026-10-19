@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-19 16:51 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-19 17:06 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 252 | 22 | 230 | 58 | -$538.46 | -21.1% | -1.0c (248) | $461.54 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 391 | 33 | 358 | 249 | -$86.06 | -3.3% | -1.4c (386) | $913.94 |
+| model-only | Elo win model alone (control: ignores the market) | 252 | 21 | 231 | 59 | -$527.61 | -20.6% | -1.0c (248) | $472.39 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 391 | 32 | 359 | 250 | -$85.84 | -3.2% | -1.4c (386) | $914.16 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-840 finished matches. Lower is better; the market line is the bar to beat.
+844 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5660 | 0.1925 |
-| model | 0.6525 | 0.2305 |
-| blend | 0.5648 | 0.1921 |
+| market | 0.5658 | 0.1924 |
+| model | 0.6527 | 0.2306 |
+| blend | 0.5645 | 0.1920 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 524 | 0.5716 | 0.6554 |
+| cs2 | 528 | 0.5712 | 0.6558 |
 | dota2 | 140 | 0.5496 | 0.6465 |
 | ow | 60 | 0.4906 | 0.5267 |
 | lol | 59 | 0.5497 | 0.7082 |
@@ -43,7 +43,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-19 15:51 | favourite | cs2 | ex-6666 | Fire Flux Esports | NO Fire Flux Esports | 2 | 0.52 | 0.51 | 0.51 | open | - |
 | 2026-10-19 14:51 | model-only | cs2 | Pandaric eSports | Regnum4Games | YES Pandaric eSports | 1 | 0.25 | 0.38 | 0.23 | open | - |
 | 2026-10-19 14:51 | favourite | cs2 | MASONIC | Linx Legacy Esport | NO Linx Legacy Esport | 5 | 0.65 | 0.61 | 0.61 | open | - |
-| 2026-10-19 13:51 | model-only | cs2 | fnatic | Liquid | NO Liquid | 20 | 0.44 | 0.55 | 0.44 | open | - |
+| 2026-10-19 13:51 | model-only | cs2 | fnatic | Liquid | NO Liquid | 20 | 0.44 | 0.55 | 0.44 | won | $10.85 |
 | 2026-10-19 13:51 | favourite | cs2 | Phantom | Brute | YES Phantom | 3 | 0.60 | 0.60 | 0.60 | open | - |
 | 2026-10-19 13:51 | model-only | cs2 | Brute | Phantom | YES Brute | 22 | 0.40 | 0.49 | 0.40 | open | - |
 | 2026-10-19 12:51 | favourite | cs2 | Saint Sinners | Lilmix | NO Lilmix | 11 | 0.80 | 0.79 | 0.79 | won | $2.07 |
@@ -51,7 +51,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-19 12:51 | favourite | cs2 | mellren | G2 Ares | NO G2 Ares | 13 | 0.67 | 0.65 | 0.65 | open | - |
 | 2026-10-19 12:51 | favourite | cs2 | ex-Zero Tenacity | Bushido Wildcats | YES ex-Zero Tenacity | 12 | 0.72 | 0.70 | 0.70 | won | $3.19 |
 | 2026-10-19 12:51 | favourite | cs2 | BBL | Apogee Esports | YES BBL | 15 | 0.57 | 0.56 | 0.56 | open | - |
-| 2026-10-19 12:36 | favourite | cs2 | aimclub | Insiders Esport | NO Insiders Esport | 2 | 0.88 | 0.83 | 0.83 | open | - |
+| 2026-10-19 12:36 | favourite | cs2 | aimclub | Insiders Esport | NO Insiders Esport | 2 | 0.88 | 0.83 | 0.83 | won | $0.22 |
 | 2026-10-19 10:50 | favourite | cs2 | GenOne | Omega | YES GenOne | 16 | 0.54 | 0.53 | 0.53 | won | $7.08 |
 | 2026-10-19 10:50 | favourite | cs2 | TheMongolz | Alliance | NO Alliance | 11 | 0.75 | 0.74 | 0.74 | won | $2.60 |
 | 2026-10-19 10:50 | model-only | cs2 | GenOne | Omega | YES GenOne | 17 | 0.54 | 0.59 | 0.53 | won | $7.52 |
@@ -67,36 +67,36 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 ## Backtest on real Kalshi prices
 
-7979 settled matches from 2026-05-28 to 2026-10-12, decided 60 min before scheduled start at the quoted bid/ask, with Kalshi's taker fee. Ratings, the win model and the blend only ever use earlier matches (weekly walk-forward refits).
+8346 settled matches from 2026-05-28 to 2026-10-19, decided 60 min before scheduled start at the quoted bid/ask, with Kalshi's taker fee. Ratings, the win model and the blend only ever use earlier matches (weekly walk-forward refits).
 
 | Strategy | Bets | Staked | P&L | ROI | 95% range | Hit rate | Closing-line value | Max drawdown |
 |---|---:|---:|---:|---:|---|---:|---:|---:|
-| model + market blend | 24 | $439.42 | -$30.42 | -6.9% | -43.8% to +40.9% | 54% | -0.0c | 10% |
-| model only | 1968 | $8,857.80 | -$985.80 | -11.1% | -19.2% to -3.2% | 33% | -0.6c | 99% |
-| always the favourite (1% flat) | 3824 | $15,776.22 | -$733.22 | -4.6% | -7.0% to -2.2% | 67% | -1.5c | 81% |
-| always the underdog (1% flat) | 3731 | $8,550.73 | -$978.73 | -11.4% | -17.1% to -5.8% | 31% | -1.3c | 98% |
+| model + market blend | 23 | $422.99 | -$10.99 | -2.6% | -39.0% to +46.3% | 57% | -0.0c | 8% |
+| model only | 1998 | $8,526.95 | -$990.95 | -11.6% | -20.1% to -3.0% | 33% | -0.6c | 99% |
+| always the favourite (1% flat) | 4018 | $16,341.50 | -$762.50 | -4.7% | -6.9% to -2.4% | 67% | -1.6c | 81% |
+| always the underdog (1% flat) | 3742 | $8,889.87 | -$982.87 | -11.1% | -16.6% to -5.4% | 31% | -1.3c | 98% |
 
 Closing-line value: the market's probability at the scheduled start of the side bought, minus the price paid, averaged over bets. Around zero means the bets saw nothing the market did not price in by the start.
 
-Forecast quality on the same 7754 matches (lower is better):
+Forecast quality on the same 8121 matches (lower is better):
 
 | Forecast | Log loss | Brier | Picks the winner |
 |---|---:|---:|---:|
-| market | 0.5731 | 0.1959 | 69.2% |
-| model | 0.6615 | 0.2347 | 59.5% |
-| blend | 0.5727 | 0.1958 | - |
+| market | 0.5723 | 0.1955 | 69.3% |
+| model | 0.6605 | 0.2343 | 59.6% |
+| blend | 0.5719 | 0.1954 | - |
 
 Is the market's favourite priced right?
 
 | Market favourite at | Matches | Average price | Won |
 |---|---:|---:|---:|
-| (0.499, 0.55] | 1281 | 0.525 | 0.522 |
-| (0.55, 0.6] | 1311 | 0.577 | 0.548 |
-| (0.6, 0.65] | 1192 | 0.626 | 0.638 |
-| (0.65, 0.7] | 1041 | 0.676 | 0.701 |
-| (0.7, 0.75] | 880 | 0.726 | 0.773 |
-| (0.75, 0.8] | 755 | 0.776 | 0.812 |
-| (0.8, 0.85] | 636 | 0.826 | 0.824 |
-| (0.85, 0.9] | 478 | 0.877 | 0.902 |
-| (0.9, 1.0] | 405 | 0.932 | 0.956 |
+| (0.499, 0.55] | 1335 | 0.525 | 0.524 |
+| (0.55, 0.6] | 1359 | 0.577 | 0.550 |
+| (0.6, 0.65] | 1254 | 0.626 | 0.635 |
+| (0.65, 0.7] | 1092 | 0.676 | 0.702 |
+| (0.7, 0.75] | 921 | 0.726 | 0.773 |
+| (0.75, 0.8] | 786 | 0.776 | 0.812 |
+| (0.8, 0.85] | 668 | 0.826 | 0.826 |
+| (0.85, 0.9] | 503 | 0.877 | 0.903 |
+| (0.9, 1.0] | 428 | 0.932 | 0.956 |
 
