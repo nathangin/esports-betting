@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-19 13:41 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-19 13:51 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 249 | 22 | 227 | 57 | -$528.97 | -20.9% | -1.0c (244) | $471.03 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 387 | 35 | 352 | 243 | -$108.33 | -4.2% | -1.5c (379) | $891.67 |
+| model-only | Elo win model alone (control: ignores the market) | 251 | 24 | 227 | 57 | -$528.97 | -20.9% | -1.0c (245) | $471.03 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 388 | 36 | 352 | 243 | -$108.33 | -4.2% | -1.4c (383) | $891.67 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-828 finished matches. Lower is better; the market line is the bar to beat.
+830 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5672 | 0.1931 |
+| market | 0.5675 | 0.1933 |
 | model | 0.6545 | 0.2314 |
-| blend | 0.5661 | 0.1928 |
+| blend | 0.5665 | 0.1930 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 513 | 0.5733 | 0.6587 |
+| cs2 | 515 | 0.5738 | 0.6586 |
 | dota2 | 139 | 0.5508 | 0.6467 |
 | ow | 60 | 0.4906 | 0.5267 |
 | lol | 59 | 0.5497 | 0.7082 |
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-19 13:51 | model-only | cs2 | fnatic | Liquid | NO Liquid | 20 | 0.44 | 0.55 | 0.44 | open | - |
+| 2026-10-19 13:51 | favourite | cs2 | Phantom | Brute | YES Phantom | 3 | 0.60 | 0.60 | 0.60 | open | - |
+| 2026-10-19 13:51 | model-only | cs2 | Brute | Phantom | YES Brute | 22 | 0.40 | 0.49 | 0.40 | open | - |
 | 2026-10-19 12:51 | favourite | cs2 | Saint Sinners | Lilmix | NO Lilmix | 11 | 0.80 | 0.79 | 0.79 | open | - |
 | 2026-10-19 12:51 | model-only | cs2 | Lilmix | Saint Sinners | YES Lilmix | 30 | 0.23 | 0.29 | 0.21 | open | - |
 | 2026-10-19 12:51 | favourite | cs2 | mellren | G2 Ares | NO G2 Ares | 13 | 0.67 | 0.65 | 0.65 | open | - |
 | 2026-10-19 12:51 | favourite | cs2 | ex-Zero Tenacity | Bushido Wildcats | YES ex-Zero Tenacity | 12 | 0.72 | 0.70 | 0.70 | open | - |
 | 2026-10-19 12:51 | favourite | cs2 | BBL | Apogee Esports | YES BBL | 15 | 0.57 | 0.56 | 0.56 | open | - |
 | 2026-10-19 12:36 | favourite | cs2 | aimclub | Insiders Esport | NO Insiders Esport | 2 | 0.88 | 0.83 | 0.83 | open | - |
+| 2026-10-19 10:50 | favourite | dota2 | HULIGANI | Nemiga Gaming | YES HULIGANI | 12 | 0.69 | 0.69 | 0.69 | open | - |
+| 2026-10-19 10:50 | model-only | dota2 | Nemiga Gaming | HULIGANI | NO HULIGANI | 29 | 0.32 | 0.46 | 0.31 | open | - |
+| 2026-10-19 10:50 | favourite | cs2 | GenOne | Omega | YES GenOne | 16 | 0.54 | 0.53 | 0.53 | open | - |
 | 2026-10-19 10:50 | model-only | cs2 | GenOne | Omega | YES GenOne | 17 | 0.54 | 0.59 | 0.53 | open | - |
 | 2026-10-19 10:50 | favourite | cs2 | TheMongolz | Alliance | NO Alliance | 11 | 0.75 | 0.74 | 0.74 | won | $2.60 |
-| 2026-10-19 10:50 | favourite | cs2 | GenOne | Omega | YES GenOne | 16 | 0.54 | 0.53 | 0.53 | open | - |
-| 2026-10-19 10:50 | model-only | dota2 | Nemiga Gaming | HULIGANI | NO HULIGANI | 29 | 0.32 | 0.46 | 0.31 | open | - |
-| 2026-10-19 10:50 | favourite | dota2 | HULIGANI | Nemiga Gaming | YES HULIGANI | 12 | 0.69 | 0.69 | 0.69 | open | - |
-| 2026-10-19 09:50 | favourite | cs2 | Bushido Wildcats | Saint Sinners | YES Bushido Wildcats | 16 | 0.54 | 0.52 | 0.52 | lost | -$8.92 |
-| 2026-10-19 09:50 | model-only | cs2 | Saint Sinners | Bushido Wildcats | NO Bushido Wildcats | 19 | 0.50 | 0.57 | 0.48 | won | $9.16 |
 | 2026-10-19 09:50 | favourite | cs2 | ex-6666 | Privateer Gaming | YES ex-6666 | 15 | 0.58 | 0.56 | 0.56 | open | - |
 | 2026-10-19 09:50 | model-only | cs2 | ex-6666 | Privateer Gaming | YES ex-6666 | 17 | 0.58 | 0.63 | 0.56 | open | - |
 | 2026-10-19 09:50 | favourite | cs2 | Bebop | Honvéd | YES Bebop | 14 | 0.60 | 0.58 | 0.58 | won | $5.36 |
-| 2026-10-19 09:35 | favourite | cs2 | Iberian Soul | HyperSpirit | YES Iberian Soul | 12 | 0.74 | 0.74 | 0.74 | won | $2.95 |
-| 2026-10-19 09:35 | model-only | cs2 | HyperSpirit | Iberian Soul | NO Iberian Soul | 1 | 0.27 | 0.42 | 0.26 | lost | -$0.29 |
-| 2026-10-19 09:35 | model-only | cs2 | Leo Team | ASTRAL | NO ASTRAL | 16 | 0.59 | 0.65 | 0.57 | lost | -$9.72 |
+| 2026-10-19 09:50 | model-only | cs2 | Saint Sinners | Bushido Wildcats | NO Bushido Wildcats | 19 | 0.50 | 0.57 | 0.48 | won | $9.16 |
+| 2026-10-19 09:50 | favourite | cs2 | Bushido Wildcats | Saint Sinners | YES Bushido Wildcats | 16 | 0.54 | 0.52 | 0.52 | lost | -$8.92 |
 | 2026-10-19 09:35 | favourite | cs2 | Sashi Esport | MOUZ NXT | YES Sashi Esport | 14 | 0.62 | 0.61 | 0.61 | won | $5.08 |
 | 2026-10-19 09:35 | favourite | cs2 | Leo Team | ASTRAL | NO ASTRAL | 14 | 0.59 | 0.57 | 0.57 | lost | -$8.50 |
+| 2026-10-19 09:35 | model-only | cs2 | Leo Team | ASTRAL | NO ASTRAL | 16 | 0.59 | 0.65 | 0.57 | lost | -$9.72 |
+| 2026-10-19 09:35 | favourite | cs2 | Iberian Soul | HyperSpirit | YES Iberian Soul | 12 | 0.74 | 0.74 | 0.74 | won | $2.95 |
+| 2026-10-19 09:35 | model-only | cs2 | HyperSpirit | Iberian Soul | NO Iberian Soul | 1 | 0.27 | 0.42 | 0.26 | lost | -$0.29 |
 | 2026-10-19 09:20 | favourite | cs2 | The Chosen Few | SANCTUM | YES The Chosen Few | 12 | 0.73 | 0.72 | 0.72 | won | $3.07 |
-| 2026-10-19 09:20 | model-only | cs2 | SANCTUM | The Chosen Few | YES SANCTUM | 33 | 0.29 | 0.51 | 0.28 | lost | -$10.05 |
-| 2026-10-19 07:50 | favourite | cs2 | BC.Game Esports | Drama eSports | YES BC.Game Esports | 10 | 0.85 | 0.84 | 0.84 | won | $1.41 |
-| 2026-10-19 07:50 | favourite | dota2 | Yellow Submarine | Zero Tenacity | YES Yellow Submarine | 10 | 0.87 | 0.86 | 0.86 | won | $1.22 |
 
 ## Backtest on real Kalshi prices
 
