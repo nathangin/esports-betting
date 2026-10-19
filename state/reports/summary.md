@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-19 10:15 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-19 10:25 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 246 | 27 | 219 | 55 | -$490.50 | -19.9% | -0.9c (238) | $509.50 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 379 | 41 | 338 | 234 | -$93.57 | -3.8% | -1.4c (370) | $906.43 |
+| model-only | Elo win model alone (control: ignores the market) | 246 | 26 | 220 | 55 | -$500.56 | -20.2% | -0.9c (238) | $499.44 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 379 | 39 | 340 | 236 | -$88.20 | -3.5% | -1.4c (370) | $911.80 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-813 finished matches. Lower is better; the market line is the bar to beat.
+815 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5687 | 0.1938 |
+| market | 0.5680 | 0.1935 |
 | model | 0.6536 | 0.2310 |
-| blend | 0.5679 | 0.1935 |
+| blend | 0.5671 | 0.1931 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 499 | 0.5750 | 0.6566 |
+| cs2 | 501 | 0.5740 | 0.6565 |
 | dota2 | 138 | 0.5537 | 0.6492 |
 | ow | 60 | 0.4906 | 0.5267 |
 | lol | 59 | 0.5497 | 0.7082 |
@@ -55,7 +55,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-19 07:50 | favourite | cs2 | Apogee Esports | Spirit Academy | YES Apogee Esports | 12 | 0.72 | 0.70 | 0.70 | open | - |
 | 2026-10-19 07:50 | model-only | cs2 | aimclub | BASEMENT BOYS | YES aimclub | 1 | 0.40 | 0.48 | 0.38 | lost | -$0.42 |
 | 2026-10-19 07:50 | favourite | cs2 | BASEMENT BOYS | aimclub | NO aimclub | 13 | 0.64 | 0.62 | 0.62 | won | $4.47 |
-| 2026-10-19 07:50 | favourite | cs2 | Infinite | Insiders Esport | YES Infinite | 11 | 0.80 | 0.79 | 0.79 | open | - |
+| 2026-10-19 07:50 | favourite | cs2 | Infinite | Insiders Esport | YES Infinite | 11 | 0.80 | 0.79 | 0.79 | won | $2.07 |
 | 2026-10-19 07:50 | favourite | cs2 | BIG | PRIVATE | YES BIG | 12 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-10-19 07:50 | model-only | dota2 | Zero Tenacity | Yellow Submarine | NO Yellow Submarine | 64 | 0.15 | 0.27 | 0.14 | open | - |
 | 2026-10-19 07:50 | favourite | dota2 | Yellow Submarine | Zero Tenacity | YES Yellow Submarine | 10 | 0.87 | 0.86 | 0.86 | open | - |
