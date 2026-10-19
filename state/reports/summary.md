@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-19 16:06 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-19 16:11 UTC. Model fitted 2026-10-12T19:16. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 252 | 23 | 229 | 58 | -$531.18 | -20.8% | -1.0c (248) | $468.82 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 390 | 34 | 356 | 247 | -$91.32 | -3.5% | -1.4c (385) | $908.68 |
+| model-only | Elo win model alone (control: ignores the market) | 252 | 22 | 230 | 58 | -$538.46 | -21.1% | -1.0c (248) | $461.54 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 390 | 33 | 357 | 248 | -$89.25 | -3.4% | -1.4c (385) | $910.75 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -48,8 +48,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-19 12:51 | favourite | cs2 | ex-Zero Tenacity | Bushido Wildcats | YES ex-Zero Tenacity | 12 | 0.72 | 0.70 | 0.70 | open | - |
 | 2026-10-19 12:51 | favourite | cs2 | BBL | Apogee Esports | YES BBL | 15 | 0.57 | 0.56 | 0.56 | open | - |
 | 2026-10-19 12:51 | favourite | cs2 | mellren | G2 Ares | NO G2 Ares | 13 | 0.67 | 0.65 | 0.65 | open | - |
-| 2026-10-19 12:51 | model-only | cs2 | Lilmix | Saint Sinners | YES Lilmix | 30 | 0.23 | 0.29 | 0.21 | open | - |
-| 2026-10-19 12:51 | favourite | cs2 | Saint Sinners | Lilmix | NO Lilmix | 11 | 0.80 | 0.79 | 0.79 | open | - |
+| 2026-10-19 12:51 | model-only | cs2 | Lilmix | Saint Sinners | YES Lilmix | 30 | 0.23 | 0.29 | 0.21 | lost | -$7.28 |
+| 2026-10-19 12:51 | favourite | cs2 | Saint Sinners | Lilmix | NO Lilmix | 11 | 0.80 | 0.79 | 0.79 | won | $2.07 |
 | 2026-10-19 12:36 | favourite | cs2 | aimclub | Insiders Esport | NO Insiders Esport | 2 | 0.88 | 0.83 | 0.83 | open | - |
 | 2026-10-19 10:50 | favourite | dota2 | HULIGANI | Nemiga Gaming | YES HULIGANI | 12 | 0.69 | 0.69 | 0.69 | won | $3.54 |
 | 2026-10-19 10:50 | model-only | dota2 | Nemiga Gaming | HULIGANI | NO HULIGANI | 29 | 0.32 | 0.46 | 0.31 | lost | -$9.73 |
