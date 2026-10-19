@@ -1,0 +1,58 @@
+2026-10-19 16:31:39,671 INFO esalpha.history: KXOWGAME: 850 match markets
+2026-10-19 16:31:41,899 INFO esalpha.history: KXCS2GAME: 15187 match markets
+2026-10-19 16:31:42,138 INFO esalpha.history: KXCODGAME: 606 match markets
+2026-10-19 16:31:42,335 INFO esalpha.history: KXCSGOGAME: 206 match markets
+2026-10-19 16:31:46,392 INFO esalpha.history: KXDOTA2GAME: 3745 match markets
+2026-10-19 16:31:46,669 INFO esalpha.history: KXR6GAME: 1424 match markets
+2026-10-19 16:31:47,197 INFO esalpha.history: KXVALORANTGAME: 3345 match markets
+2026-10-19 16:31:48,417 INFO esalpha.history: KXLOLGAME: 6072 match markets
+2026-10-19 16:31:48,620 INFO esalpha.history: KXRLGAME: 256 match markets
+2026-10-19 16:31:49,231 INFO esalpha.history: markets done (10s)
+2026-10-19 16:32:40,803 INFO esalpha.history: candles done (62s)
+{
+ "started": "2026-10-19T16:31:39.116865+00:00",
+ "args": {
+  "days": 14,
+  "hours_before": 6.0
+ },
+ "series": 147,
+ "markets": {
+  "rows": 30581,
+  "events": 15192,
+  "by_game": {
+   "cod": 303,
+   "cs2": 7390,
+   "dota2": 1752,
+   "lol": 2897,
+   "ow": 425,
+   "r6": 706,
+   "rl": 109,
+   "valorant": 1610
+  }
+ },
+ "matches": {
+  "rows": 14995,
+  "by_game": {
+   "cod": 303,
+   "cs2": 7389,
+   "dota2": 1585,
+   "lol": 2869,
+   "ow": 425,
+   "r6": 706,
+   "rl": 109,
+   "valorant": 1609
+  },
+  "first": "2026-02-20 21:00:00+00:00",
+  "last": "2026-10-20 13:45:00+00:00",
+  "decided": 14402
+ },
+ "candles": {
+  "rows": 2677778,
+  "events": 9722,
+  "fetched_now": 64,
+  "empty": 2
+ },
+ "finished": "2026-10-19T16:32:40.803887+00:00",
+ "http_calls": 113
+}
+0 errors
