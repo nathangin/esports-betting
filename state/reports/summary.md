@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-20 14:09 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-20 14:24 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 270 | 27 | 243 | 64 | -$452.53 | -17.1% | -1.1c (264) | $547.47 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 419 | 38 | 381 | 265 | -$87.52 | -3.1% | -1.4c (415) | $912.48 |
+| model-only | Elo win model alone (control: ignores the market) | 270 | 26 | 244 | 64 | -$462.07 | -17.4% | -1.1c (264) | $537.93 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 419 | 37 | 382 | 266 | -$86.21 | -3.1% | -1.4c (415) | $913.79 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-896 finished matches. Lower is better; the market line is the bar to beat.
+897 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5686 | 0.1935 |
-| model | 0.6553 | 0.2318 |
-| blend | 0.5673 | 0.1931 |
+| market | 0.5681 | 0.1933 |
+| model | 0.6552 | 0.2317 |
+| blend | 0.5669 | 0.1929 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 574 | 0.5760 | 0.6594 |
+| cs2 | 575 | 0.5753 | 0.6592 |
 | dota2 | 145 | 0.5462 | 0.6483 |
 | lol | 60 | 0.5511 | 0.7049 |
 | ow | 60 | 0.4906 | 0.5267 |
@@ -48,8 +48,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-20 12:54 | favourite | cs2 | BakS eSports | mellren | YES BakS eSports | 15 | 0.58 | 0.55 | 0.55 | open | - |
 | 2026-10-20 12:54 | favourite | cs2 | Luminosity | ASTRAL | NO ASTRAL | 15 | 0.57 | 0.56 | 0.56 | open | - |
 | 2026-10-20 10:54 | model-only | cs2 | magic | Liquid | YES magic | 15 | 0.43 | 0.48 | 0.43 | won | $8.29 |
-| 2026-10-20 10:54 | model-only | cs2 | Aurora Young Blood | Sangal | YES Aurora Young Blood | 53 | 0.17 | 0.40 | 0.16 | open | - |
-| 2026-10-20 10:54 | favourite | cs2 | Sangal | Aurora Young Blood | NO Aurora Young Blood | 10 | 0.86 | 0.84 | 0.84 | open | - |
+| 2026-10-20 10:54 | model-only | cs2 | Aurora Young Blood | Sangal | YES Aurora Young Blood | 53 | 0.17 | 0.40 | 0.16 | lost | -$9.54 |
+| 2026-10-20 10:54 | favourite | cs2 | Sangal | Aurora Young Blood | NO Aurora Young Blood | 10 | 0.86 | 0.84 | 0.84 | won | $1.31 |
 | 2026-10-20 10:54 | model-only | dota2 | Team Lynx | Power Rangers | YES Team Lynx | 14 | 0.64 | 0.76 | 0.63 | open | - |
 | 2026-10-20 10:54 | favourite | cs2 | Liquid | magic | YES Liquid | 15 | 0.56 | 0.56 | 0.56 | lost | -$8.66 |
 | 2026-10-20 10:54 | favourite | dota2 | Team Lynx | Power Rangers | YES Team Lynx | 13 | 0.64 | 0.63 | 0.63 | open | - |
