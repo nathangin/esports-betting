@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-20 03:42 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-20 03:52 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 254 | 19 | 235 | 60 | -$518.90 | -20.1% | -1.0c (250) | $481.10 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 391 | 26 | 365 | 253 | -$91.90 | -3.4% | -1.4c (387) | $908.10 |
+| model-only | Elo win model alone (control: ignores the market) | 255 | 20 | 235 | 60 | -$518.90 | -20.1% | -1.0c (250) | $481.10 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 392 | 27 | 365 | 253 | -$91.90 | -3.4% | -1.4c (387) | $908.10 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-20 03:52 | favourite | cs2 | Alter Ego | Rare Atom | YES Alter Ego | 16 | 0.52 | 0.50 | 0.50 | open | - |
+| 2026-10-20 03:52 | model-only | cs2 | Alter Ego | Rare Atom | YES Alter Ego | 14 | 0.52 | 0.57 | 0.50 | open | - |
 | 2026-10-19 19:52 | model-only | cs2 | ARK E-sports | RED Canids Academy | YES ARK E-sports | 16 | 0.18 | 0.30 | 0.16 | lost | -$3.05 |
 | 2026-10-19 17:52 | model-only | cs2 | Hacha Esports | Rush | YES Hacha Esports | 2 | 0.38 | 0.50 | 0.35 | lost | -$0.80 |
 | 2026-10-19 16:21 | favourite | cs2 | UNiTY esports | 9INE | NO 9INE | 2 | 0.51 | 0.50 | 0.50 | won | $0.94 |
@@ -54,16 +56,14 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-19 12:51 | favourite | cs2 | ex-Zero Tenacity | Bushido Wildcats | YES ex-Zero Tenacity | 12 | 0.72 | 0.70 | 0.70 | won | $3.19 |
 | 2026-10-19 12:51 | favourite | cs2 | BBL | Apogee Esports | YES BBL | 15 | 0.57 | 0.56 | 0.56 | won | $6.19 |
 | 2026-10-19 12:36 | favourite | cs2 | aimclub | Insiders Esport | NO Insiders Esport | 2 | 0.88 | 0.83 | 0.83 | won | $0.22 |
-| 2026-10-19 10:50 | model-only | cs2 | GenOne | Omega | YES GenOne | 17 | 0.54 | 0.59 | 0.53 | won | $7.52 |
-| 2026-10-19 10:50 | favourite | cs2 | TheMongolz | Alliance | NO Alliance | 11 | 0.75 | 0.74 | 0.74 | won | $2.60 |
 | 2026-10-19 10:50 | favourite | cs2 | GenOne | Omega | YES GenOne | 16 | 0.54 | 0.53 | 0.53 | won | $7.08 |
-| 2026-10-19 10:50 | favourite | dota2 | HULIGANI | Nemiga Gaming | YES HULIGANI | 12 | 0.69 | 0.69 | 0.69 | won | $3.54 |
+| 2026-10-19 10:50 | favourite | cs2 | TheMongolz | Alliance | NO Alliance | 11 | 0.75 | 0.74 | 0.74 | won | $2.60 |
+| 2026-10-19 10:50 | model-only | cs2 | GenOne | Omega | YES GenOne | 17 | 0.54 | 0.59 | 0.53 | won | $7.52 |
 | 2026-10-19 10:50 | model-only | dota2 | Nemiga Gaming | HULIGANI | NO HULIGANI | 29 | 0.32 | 0.46 | 0.31 | lost | -$9.73 |
+| 2026-10-19 10:50 | favourite | dota2 | HULIGANI | Nemiga Gaming | YES HULIGANI | 12 | 0.69 | 0.69 | 0.69 | won | $3.54 |
 | 2026-10-19 09:50 | favourite | cs2 | Bushido Wildcats | Saint Sinners | YES Bushido Wildcats | 16 | 0.54 | 0.52 | 0.52 | lost | -$8.92 |
 | 2026-10-19 09:50 | model-only | cs2 | Saint Sinners | Bushido Wildcats | NO Bushido Wildcats | 19 | 0.50 | 0.57 | 0.48 | won | $9.16 |
 | 2026-10-19 09:50 | favourite | cs2 | ex-6666 | Privateer Gaming | YES ex-6666 | 15 | 0.58 | 0.56 | 0.56 | open | - |
-| 2026-10-19 09:50 | model-only | cs2 | ex-6666 | Privateer Gaming | YES ex-6666 | 17 | 0.58 | 0.63 | 0.56 | open | - |
-| 2026-10-19 09:50 | favourite | cs2 | Bebop | Honvéd | YES Bebop | 14 | 0.60 | 0.58 | 0.58 | won | $5.36 |
 
 ## Backtest on real Kalshi prices
 
