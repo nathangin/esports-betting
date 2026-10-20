@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-20 13:54 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-20 14:04 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 270 | 28 | 242 | 64 | -$442.94 | -16.8% | -1.1c (264) | $557.06 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 419 | 40 | 379 | 263 | -$94.65 | -3.4% | -1.4c (415) | $905.35 |
+| model-only | Elo win model alone (control: ignores the market) | 270 | 27 | 243 | 64 | -$452.53 | -17.1% | -1.1c (264) | $547.47 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 419 | 38 | 381 | 265 | -$87.52 | -3.1% | -1.4c (415) | $912.48 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-893 finished matches. Lower is better; the market line is the bar to beat.
+896 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5687 | 0.1936 |
-| model | 0.6556 | 0.2319 |
-| blend | 0.5675 | 0.1931 |
+| market | 0.5686 | 0.1935 |
+| model | 0.6553 | 0.2318 |
+| blend | 0.5673 | 0.1931 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 571 | 0.5762 | 0.6598 |
+| cs2 | 574 | 0.5760 | 0.6594 |
 | dota2 | 145 | 0.5462 | 0.6483 |
 | lol | 60 | 0.5511 | 0.7049 |
 | ow | 60 | 0.4906 | 0.5267 |
@@ -53,14 +53,14 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-20 10:54 | model-only | dota2 | Team Lynx | Power Rangers | YES Team Lynx | 14 | 0.64 | 0.76 | 0.63 | open | - |
 | 2026-10-20 10:54 | favourite | cs2 | Liquid | magic | YES Liquid | 15 | 0.56 | 0.56 | 0.56 | lost | -$8.66 |
 | 2026-10-20 10:54 | favourite | dota2 | Team Lynx | Power Rangers | YES Team Lynx | 13 | 0.64 | 0.63 | 0.63 | open | - |
-| 2026-10-20 09:54 | model-only | cs2 | ILLYRIANS | BakS eSports | NO BakS eSports | 23 | 0.40 | 0.47 | 0.38 | open | - |
+| 2026-10-20 09:54 | model-only | cs2 | ILLYRIANS | BakS eSports | NO BakS eSports | 23 | 0.40 | 0.47 | 0.38 | lost | -$9.59 |
 | 2026-10-20 09:54 | model-only | cs2 | BBL | BC.Game Esports | YES BBL | 25 | 0.36 | 0.53 | 0.36 | lost | -$9.41 |
 | 2026-10-20 09:54 | favourite | cs2 | BC.Game Esports | BBL | YES BC.Game Esports | 13 | 0.64 | 0.64 | 0.64 | won | $4.47 |
 | 2026-10-20 09:54 | model-only | cs2 | BASEMENT BOYS | FaZe | NO FaZe | 24 | 0.37 | 0.44 | 0.34 | open | - |
 | 2026-10-20 09:54 | favourite | cs2 | FaZe | BASEMENT BOYS | YES FaZe | 13 | 0.68 | 0.66 | 0.66 | open | - |
 | 2026-10-20 09:54 | model-only | cs2 | ex-Zero Tenacity | FORZE Reload | YES ex-Zero Tenacity | 22 | 0.41 | 0.50 | 0.40 | open | - |
 | 2026-10-20 09:54 | favourite | cs2 | FORZE Reload | ex-Zero Tenacity | YES FORZE Reload | 14 | 0.60 | 0.60 | 0.60 | open | - |
-| 2026-10-20 09:54 | favourite | cs2 | BakS eSports | ILLYRIANS | YES BakS eSports | 14 | 0.63 | 0.62 | 0.62 | open | - |
+| 2026-10-20 09:54 | favourite | cs2 | BakS eSports | ILLYRIANS | YES BakS eSports | 14 | 0.63 | 0.62 | 0.62 | won | $4.95 |
 | 2026-10-20 09:54 | favourite | cs2 | Eternal Fire | Infinite | YES Eternal Fire | 11 | 0.75 | 0.74 | 0.74 | won | $2.60 |
 | 2026-10-20 09:54 | favourite | cs2 | MORROW | maybe | YES MORROW | 16 | 0.55 | 0.53 | 0.53 | won | $6.92 |
 | 2026-10-20 09:54 | model-only | cs2 | Nexus | Envy | YES Nexus | 18 | 0.50 | 0.63 | 0.48 | open | - |
