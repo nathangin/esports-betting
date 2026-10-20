@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-20 05:43 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-20 05:53 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-20 05:43 UTC. Model fitted 2026-10-19T16:33. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 255 | 20 | 235 | 60 | -$518.90 | -20.1% | -1.0c (251) | $481.10 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 393 | 28 | 365 | 253 | -$91.90 | -3.4% | -1.5c (388) | $908.10 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 395 | 30 | 365 | 253 | -$91.90 | -3.4% | -1.5c (389) | $908.10 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-20 05:53 | favourite | cs2 | TrafficPills Esports | NEXORA | NO NEXORA | 12 | 0.70 | 0.67 | 0.67 | open | - |
+| 2026-10-20 05:53 | favourite | cs2 | Chinggis Warriors | Wept Xyloid Melancholy | NO Wept Xyloid Melancholy | 10 | 0.89 | 0.88 | 0.88 | open | - |
 | 2026-10-20 04:53 | favourite | dota2 | Yangon Galacticos | Resp Gaming | NO Resp Gaming | 8 | 0.79 | 0.78 | 0.78 | open | - |
 | 2026-10-20 03:52 | favourite | cs2 | Alter Ego | Rare Atom | YES Alter Ego | 16 | 0.52 | 0.50 | 0.50 | open | - |
 | 2026-10-20 03:52 | model-only | cs2 | Alter Ego | Rare Atom | YES Alter Ego | 14 | 0.52 | 0.57 | 0.50 | open | - |
@@ -48,9 +50,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-19 15:51 | favourite | cs2 | ex-6666 | Fire Flux Esports | NO Fire Flux Esports | 2 | 0.52 | 0.51 | 0.51 | won | $0.92 |
 | 2026-10-19 14:51 | model-only | cs2 | Pandaric eSports | Regnum4Games | YES Pandaric eSports | 1 | 0.25 | 0.38 | 0.23 | lost | -$0.27 |
 | 2026-10-19 14:51 | favourite | cs2 | MASONIC | Linx Legacy Esport | NO Linx Legacy Esport | 5 | 0.65 | 0.61 | 0.61 | lost | -$3.33 |
+| 2026-10-19 13:51 | model-only | cs2 | fnatic | Liquid | NO Liquid | 20 | 0.44 | 0.55 | 0.44 | won | $10.85 |
 | 2026-10-19 13:51 | favourite | cs2 | Phantom | Brute | YES Phantom | 3 | 0.60 | 0.60 | 0.60 | lost | -$1.86 |
 | 2026-10-19 13:51 | model-only | cs2 | Brute | Phantom | YES Brute | 22 | 0.40 | 0.49 | 0.40 | won | $12.83 |
-| 2026-10-19 13:51 | model-only | cs2 | fnatic | Liquid | NO Liquid | 20 | 0.44 | 0.55 | 0.44 | won | $10.85 |
 | 2026-10-19 12:51 | favourite | cs2 | Saint Sinners | Lilmix | NO Lilmix | 11 | 0.80 | 0.79 | 0.79 | won | $2.07 |
 | 2026-10-19 12:51 | model-only | cs2 | Lilmix | Saint Sinners | YES Lilmix | 30 | 0.23 | 0.29 | 0.21 | lost | -$7.28 |
 | 2026-10-19 12:51 | favourite | cs2 | mellren | G2 Ares | NO G2 Ares | 13 | 0.67 | 0.65 | 0.65 | lost | -$8.92 |
@@ -62,8 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-19 10:50 | model-only | cs2 | GenOne | Omega | YES GenOne | 17 | 0.54 | 0.59 | 0.53 | won | $7.52 |
 | 2026-10-19 10:50 | favourite | dota2 | HULIGANI | Nemiga Gaming | YES HULIGANI | 12 | 0.69 | 0.69 | 0.69 | won | $3.54 |
 | 2026-10-19 10:50 | model-only | dota2 | Nemiga Gaming | HULIGANI | NO HULIGANI | 29 | 0.32 | 0.46 | 0.31 | lost | -$9.73 |
-| 2026-10-19 09:50 | favourite | cs2 | Bushido Wildcats | Saint Sinners | YES Bushido Wildcats | 16 | 0.54 | 0.52 | 0.52 | lost | -$8.92 |
-| 2026-10-19 09:50 | model-only | cs2 | Saint Sinners | Bushido Wildcats | NO Bushido Wildcats | 19 | 0.50 | 0.57 | 0.48 | won | $9.16 |
 
 ## Backtest on real Kalshi prices
 
