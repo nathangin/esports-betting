@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-21 18:42 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-21 19:02 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 287 | 23 | 264 | 74 | -$404.65 | -14.3% | -1.1c (283) | $595.35 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 450 | 33 | 417 | 287 | -$142.02 | -4.6% | -1.3c (446) | $857.98 |
+| model-only | Elo win model alone (control: ignores the market) | 287 | 22 | 265 | 74 | -$414.17 | -14.6% | -1.1c (283) | $585.83 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 450 | 32 | 418 | 288 | -$138.37 | -4.5% | -1.3c (446) | $861.63 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,22 +16,22 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-985 finished matches. Lower is better; the market line is the bar to beat.
+989 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5731 | 0.1957 |
-| model | 0.6594 | 0.2338 |
-| blend | 0.5722 | 0.1954 |
+| market | 0.5727 | 0.1955 |
+| model | 0.6590 | 0.2336 |
+| blend | 0.5717 | 0.1952 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 649 | 0.5847 | 0.6659 |
+| cs2 | 652 | 0.5839 | 0.6654 |
 | dota2 | 153 | 0.5448 | 0.6466 |
 | lol | 61 | 0.5472 | 0.7010 |
 | ow | 60 | 0.4906 | 0.5267 |
 | r6 | 35 | 0.6531 | 0.7263 |
-| valorant | 27 | 0.5944 | 0.6905 |
+| valorant | 28 | 0.5967 | 0.6846 |
 
 ## Latest bets
 
@@ -44,11 +44,11 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-21 12:51 | favourite | cs2 | Fluxo W7M | Galorys | YES Fluxo W7M | 3 | 0.64 | 0.62 | 0.62 | won | $1.03 |
 | 2026-10-21 11:51 | favourite | cs2 | GenOne | Dark Moon | YES GenOne | 6 | 0.86 | 0.85 | 0.85 | open | - |
 | 2026-10-21 11:51 | favourite | cs2 | mellren | Four Magic | YES mellren | 10 | 0.84 | 0.83 | 0.83 | lost | -$8.50 |
-| 2026-10-21 10:51 | model-only | cs2 | GenOne | Metizport | YES GenOne | 26 | 0.35 | 0.42 | 0.34 | open | - |
+| 2026-10-21 10:51 | model-only | cs2 | GenOne | Metizport | YES GenOne | 26 | 0.35 | 0.42 | 0.34 | lost | -$9.52 |
 | 2026-10-21 10:51 | favourite | cs2 | Apogee Esports | aimclub | NO aimclub | 10 | 0.84 | 0.83 | 0.83 | won | $1.50 |
 | 2026-10-21 10:51 | model-only | cs2 | PRIVATE | fnatic | YES PRIVATE | 32 | 0.32 | 0.45 | 0.32 | won | $21.27 |
 | 2026-10-21 10:51 | favourite | cs2 | fnatic | PRIVATE | YES fnatic | 12 | 0.68 | 0.68 | 0.68 | lost | -$8.35 |
-| 2026-10-21 10:51 | favourite | cs2 | Metizport | GenOne | YES Metizport | 12 | 0.68 | 0.67 | 0.67 | open | - |
+| 2026-10-21 10:51 | favourite | cs2 | Metizport | GenOne | YES Metizport | 12 | 0.68 | 0.67 | 0.67 | won | $3.65 |
 | 2026-10-21 10:51 | favourite | dota2 | Dawn Bulls | Zero Tenacity | YES Dawn Bulls | 11 | 0.74 | 0.73 | 0.73 | lost | -$8.29 |
 | 2026-10-21 09:51 | model-only | cs2 | NOCTIS | eternal premium | NO eternal premium | 24 | 0.40 | 0.50 | 0.38 | won | $13.99 |
 | 2026-10-21 09:51 | model-only | cs2 | BASEMENT BOYS | Eternal Fire | YES BASEMENT BOYS | 44 | 0.22 | 0.41 | 0.21 | lost | -$10.21 |
