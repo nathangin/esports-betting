@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-21 10:21 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-21 10:31 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 284 | 33 | 251 | 67 | -$482.76 | -17.8% | -1.1c (274) | $517.24 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 442 | 49 | 393 | 273 | -$105.48 | -3.7% | -1.3c (430) | $894.52 |
+| model-only | Elo win model alone (control: ignores the market) | 284 | 32 | 252 | 68 | -$450.19 | -16.5% | -1.1c (274) | $549.81 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 442 | 47 | 395 | 273 | -$122.45 | -4.2% | -1.3c (430) | $877.55 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-942 finished matches. Lower is better; the market line is the bar to beat.
+943 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5690 | 0.1938 |
-| model | 0.6560 | 0.2322 |
-| blend | 0.5678 | 0.1934 |
+| market | 0.5688 | 0.1938 |
+| model | 0.6558 | 0.2321 |
+| blend | 0.5676 | 0.1933 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 613 | 0.5786 | 0.6621 |
+| cs2 | 614 | 0.5784 | 0.6618 |
 | dota2 | 149 | 0.5417 | 0.6429 |
 | lol | 61 | 0.5472 | 0.7010 |
 | ow | 60 | 0.4906 | 0.5267 |
@@ -63,7 +63,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-21 07:51 | model-only | cs2 | Brute | Sangal | YES Brute | 25 | 0.39 | 0.51 | 0.38 | open | - |
 | 2026-10-21 07:51 | favourite | cs2 | Sangal | Brute | YES Sangal | 13 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-10-21 07:51 | favourite | dota2 | Inner Circle | Power Rangers | YES Inner Circle | 14 | 0.58 | 0.56 | 0.56 | open | - |
-| 2026-10-21 06:50 | favourite | valorant | Octagonal Disposition Gaming | Unsettled Resentment | YES Octagonal Disposition Gaming | 16 | 0.53 | 0.52 | 0.52 | open | - |
+| 2026-10-21 06:50 | favourite | valorant | Octagonal Disposition Gaming | Unsettled Resentment | YES Octagonal Disposition Gaming | 16 | 0.53 | 0.52 | 0.52 | lost | -$8.76 |
 
 ## Backtest on real Kalshi prices
 
