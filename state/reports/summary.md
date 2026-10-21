@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-21 06:51 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-21 06:56 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-21 06:51 UTC. Model fitted 2026-10-19T16:33. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 274 | 24 | 250 | 67 | -$472.09 | -17.5% | -1.1c (269) | $527.91 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 428 | 38 | 390 | 270 | -$111.48 | -3.9% | -1.3c (420) | $888.52 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 428 | 37 | 391 | 271 | -$109.60 | -3.8% | -1.3c (420) | $890.40 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-937 finished matches. Lower is better; the market line is the bar to beat.
+938 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5710 | 0.1947 |
+| market | 0.5706 | 0.1945 |
 | model | 0.6564 | 0.2323 |
-| blend | 0.5699 | 0.1943 |
+| blend | 0.5695 | 0.1941 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 609 | 0.5813 | 0.6625 |
+| cs2 | 610 | 0.5807 | 0.6625 |
 | dota2 | 149 | 0.5417 | 0.6429 |
 | lol | 61 | 0.5472 | 0.7010 |
 | ow | 60 | 0.4906 | 0.5267 |
@@ -47,7 +47,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-21 05:50 | favourite | cs2 | Lynn Vision | Rare Atom | YES Lynn Vision | 11 | 0.78 | 0.77 | 0.77 | open | - |
 | 2026-10-21 04:50 | favourite | valorant | Any Questions Gaming | World Sports Invictus Gaming | YES Any Questions Gaming | 2 | 0.75 | 0.75 | 0.75 | open | - |
 | 2026-10-21 04:50 | model-only | valorant | World Sports Invictus Gaming | Any Questions Gaming | NO Any Questions Gaming | 39 | 0.26 | 0.41 | 0.25 | open | - |
-| 2026-10-21 03:50 | favourite | cs2 | Vitalem Aerem | Wept Xyloid Melancholy | NO Wept Xyloid Melancholy | 10 | 0.80 | 0.80 | 0.80 | open | - |
+| 2026-10-21 03:50 | favourite | cs2 | Vitalem Aerem | Wept Xyloid Melancholy | NO Wept Xyloid Melancholy | 10 | 0.80 | 0.80 | 0.80 | won | $1.88 |
 | 2026-10-21 02:50 | model-only | valorant | A Team | Wolves Esports | NO Wolves Esports | 32 | 0.32 | 0.49 | 0.32 | lost | -$10.73 |
 | 2026-10-21 02:50 | favourite | valorant | Wolves Esports | A Team | NO A Team | 1 | 0.68 | 0.68 | 0.68 | won | $0.30 |
 | 2026-10-20 15:54 | model-only | cs2 | Lavked | ex-6666 | NO ex-6666 | 2 | 0.38 | 0.48 | 0.37 | won | $1.20 |
