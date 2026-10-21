@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-21 14:07 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-21 14:12 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 286 | 32 | 254 | 68 | -$470.77 | -17.2% | -1.1c (282) | $529.23 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 450 | 48 | 402 | 279 | -$103.66 | -3.5% | -1.3c (445) | $896.34 |
+| model-only | Elo win model alone (control: ignores the market) | 286 | 30 | 256 | 69 | -$466.99 | -16.9% | -1.1c (282) | $533.01 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 450 | 45 | 405 | 281 | -$108.39 | -3.6% | -1.3c (445) | $891.61 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -44,20 +44,20 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-21 11:51 | favourite | cs2 | GenOne | Dark Moon | YES GenOne | 6 | 0.86 | 0.85 | 0.85 | open | - |
 | 2026-10-21 11:51 | favourite | cs2 | mellren | Four Magic | YES mellren | 10 | 0.84 | 0.83 | 0.83 | open | - |
 | 2026-10-21 10:51 | model-only | cs2 | GenOne | Metizport | YES GenOne | 26 | 0.35 | 0.42 | 0.34 | open | - |
-| 2026-10-21 10:51 | favourite | cs2 | Apogee Esports | aimclub | NO aimclub | 10 | 0.84 | 0.83 | 0.83 | open | - |
+| 2026-10-21 10:51 | favourite | cs2 | Apogee Esports | aimclub | NO aimclub | 10 | 0.84 | 0.83 | 0.83 | won | $1.50 |
 | 2026-10-21 10:51 | model-only | cs2 | PRIVATE | fnatic | YES PRIVATE | 32 | 0.32 | 0.45 | 0.32 | open | - |
 | 2026-10-21 10:51 | favourite | cs2 | fnatic | PRIVATE | YES fnatic | 12 | 0.68 | 0.68 | 0.68 | open | - |
 | 2026-10-21 10:51 | favourite | cs2 | Metizport | GenOne | YES Metizport | 12 | 0.68 | 0.67 | 0.67 | open | - |
 | 2026-10-21 10:51 | favourite | dota2 | Dawn Bulls | Zero Tenacity | YES Dawn Bulls | 11 | 0.74 | 0.73 | 0.73 | open | - |
-| 2026-10-21 09:51 | model-only | cs2 | NOCTIS | eternal premium | NO eternal premium | 24 | 0.40 | 0.50 | 0.38 | open | - |
-| 2026-10-21 09:51 | model-only | cs2 | BASEMENT BOYS | Eternal Fire | YES BASEMENT BOYS | 44 | 0.22 | 0.41 | 0.21 | open | - |
-| 2026-10-21 09:51 | favourite | cs2 | Eternal Fire | BASEMENT BOYS | NO BASEMENT BOYS | 11 | 0.79 | 0.79 | 0.79 | open | - |
+| 2026-10-21 09:51 | model-only | cs2 | NOCTIS | eternal premium | NO eternal premium | 24 | 0.40 | 0.50 | 0.38 | won | $13.99 |
+| 2026-10-21 09:51 | model-only | cs2 | BASEMENT BOYS | Eternal Fire | YES BASEMENT BOYS | 44 | 0.22 | 0.41 | 0.21 | lost | -$10.21 |
+| 2026-10-21 09:51 | favourite | cs2 | Eternal Fire | BASEMENT BOYS | NO BASEMENT BOYS | 11 | 0.79 | 0.79 | 0.79 | won | $2.18 |
 | 2026-10-21 09:51 | model-only | cs2 | Sinners | Heroic | YES Sinners | 20 | 0.30 | 0.35 | 0.29 | open | - |
 | 2026-10-21 09:51 | favourite | cs2 | Heroic | Sinners | YES Heroic | 12 | 0.72 | 0.71 | 0.71 | open | - |
 | 2026-10-21 09:51 | model-only | cs2 | JiJieHao | FaZe | NO FaZe | 35 | 0.28 | 0.49 | 0.27 | open | - |
 | 2026-10-21 09:51 | favourite | cs2 | FaZe | JiJieHao | NO JiJieHao | 11 | 0.74 | 0.73 | 0.73 | open | - |
 | 2026-10-21 09:51 | favourite | cs2 | Inner Circle Academy | HAVU | YES Inner Circle Academy | 14 | 0.61 | 0.60 | 0.60 | won | $5.22 |
-| 2026-10-21 09:51 | favourite | cs2 | eternal premium | NOCTIS | NO NOCTIS | 13 | 0.63 | 0.62 | 0.62 | open | - |
+| 2026-10-21 09:51 | favourite | cs2 | eternal premium | NOCTIS | NO NOCTIS | 13 | 0.63 | 0.62 | 0.62 | lost | -$8.41 |
 | 2026-10-21 09:51 | favourite | cs2 | BC.Game Esports | Nexus | YES BC.Game Esports | 10 | 0.80 | 0.80 | 0.80 | open | - |
 | 2026-10-21 09:51 | model-only | cs2 | Privateer Gaming | Falcons Force | YES Privateer Gaming | 51 | 0.19 | 0.39 | 0.18 | open | - |
 | 2026-10-21 09:51 | favourite | cs2 | Falcons Force | Privateer Gaming | YES Falcons Force | 10 | 0.83 | 0.82 | 0.82 | open | - |
