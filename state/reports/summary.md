@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-21 08:06 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-21 08:41 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 277 | 27 | 250 | 67 | -$472.09 | -17.5% | -1.1c (270) | $527.91 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 432 | 41 | 391 | 271 | -$109.60 | -3.8% | -1.3c (424) | $890.40 |
+| model-only | Elo win model alone (control: ignores the market) | 277 | 26 | 251 | 67 | -$482.76 | -17.8% | -1.1c (270) | $517.24 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 432 | 40 | 392 | 272 | -$109.13 | -3.8% | -1.3c (424) | $890.87 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -52,8 +52,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-21 06:50 | favourite | cs2 | BakS eSports | Sokerorg | YES BakS eSports | 10 | 0.81 | 0.79 | 0.79 | open | - |
 | 2026-10-21 06:50 | favourite | valorant | Octagonal Disposition Gaming | Unsettled Resentment | YES Octagonal Disposition Gaming | 16 | 0.53 | 0.52 | 0.52 | open | - |
 | 2026-10-21 05:50 | favourite | cs2 | Lynn Vision | Rare Atom | YES Lynn Vision | 11 | 0.78 | 0.77 | 0.77 | open | - |
-| 2026-10-21 04:50 | favourite | valorant | Any Questions Gaming | World Sports Invictus Gaming | YES Any Questions Gaming | 2 | 0.75 | 0.75 | 0.75 | open | - |
-| 2026-10-21 04:50 | model-only | valorant | World Sports Invictus Gaming | Any Questions Gaming | NO Any Questions Gaming | 39 | 0.26 | 0.41 | 0.25 | open | - |
+| 2026-10-21 04:50 | favourite | valorant | Any Questions Gaming | World Sports Invictus Gaming | YES Any Questions Gaming | 2 | 0.75 | 0.75 | 0.75 | won | $0.47 |
+| 2026-10-21 04:50 | model-only | valorant | World Sports Invictus Gaming | Any Questions Gaming | NO Any Questions Gaming | 39 | 0.26 | 0.41 | 0.25 | lost | -$10.67 |
 | 2026-10-21 03:50 | favourite | cs2 | Vitalem Aerem | Wept Xyloid Melancholy | NO Wept Xyloid Melancholy | 10 | 0.80 | 0.80 | 0.80 | won | $1.88 |
 | 2026-10-21 02:50 | favourite | valorant | Wolves Esports | A Team | NO A Team | 1 | 0.68 | 0.68 | 0.68 | won | $0.30 |
 | 2026-10-21 02:50 | model-only | valorant | A Team | Wolves Esports | NO Wolves Esports | 32 | 0.32 | 0.49 | 0.32 | lost | -$10.73 |
