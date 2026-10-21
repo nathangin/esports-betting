@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-21 12:06 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-21 12:41 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-21 12:06 UTC. Model fitted 2026-10-19T16:33. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 286 | 33 | 253 | 68 | -$460.48 | -16.9% | -1.1c (282) | $539.52 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 448 | 50 | 398 | 275 | -$122.34 | -4.2% | -1.3c (442) | $877.66 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 448 | 48 | 400 | 277 | -$114.10 | -3.9% | -1.3c (442) | $885.90 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -63,7 +63,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-21 09:51 | favourite | cs2 | Bebop | Phantom Academy | YES Bebop | 15 | 0.54 | 0.53 | 0.53 | open | - |
 | 2026-10-21 09:21 | favourite | cs2 | 9INE Academy | CTRL Esports | YES 9INE Academy | 14 | 0.61 | 0.59 | 0.59 | open | - |
 | 2026-10-21 09:21 | model-only | cs2 | CTRL Esports | 9INE Academy | YES CTRL Esports | 23 | 0.43 | 0.50 | 0.41 | open | - |
-| 2026-10-21 08:51 | favourite | valorant | Dragon Ranger Gaming | Rare Atom | YES Dragon Ranger Gaming | 11 | 0.75 | 0.74 | 0.74 | open | - |
+| 2026-10-21 08:51 | favourite | valorant | Dragon Ranger Gaming | Rare Atom | YES Dragon Ranger Gaming | 11 | 0.75 | 0.74 | 0.74 | won | $2.60 |
 
 ## Backtest on real Kalshi prices
 
