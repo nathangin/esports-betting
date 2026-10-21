@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-21 12:41 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-21 12:51 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-21 12:41 UTC. Model fitted 2026-10-19T16:33. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 286 | 33 | 253 | 68 | -$460.48 | -16.9% | -1.1c (282) | $539.52 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 448 | 48 | 400 | 277 | -$114.10 | -3.9% | -1.3c (442) | $885.90 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 449 | 49 | 400 | 277 | -$114.10 | -3.9% | -1.3c (444) | $885.90 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,22 +16,22 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-949 finished matches. Lower is better; the market line is the bar to beat.
+951 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5699 | 0.1942 |
-| model | 0.6567 | 0.2325 |
-| blend | 0.5686 | 0.1938 |
+| market | 0.5696 | 0.1941 |
+| model | 0.6568 | 0.2325 |
+| blend | 0.5683 | 0.1936 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 618 | 0.5798 | 0.6629 |
-| dota2 | 150 | 0.5410 | 0.6432 |
+| dota2 | 151 | 0.5413 | 0.6429 |
 | lol | 61 | 0.5472 | 0.7010 |
 | ow | 60 | 0.4906 | 0.5267 |
 | r6 | 35 | 0.6531 | 0.7263 |
-| valorant | 25 | 0.6257 | 0.6929 |
+| valorant | 26 | 0.6134 | 0.6970 |
 
 ## Latest bets
 
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-21 12:51 | favourite | cs2 | Fluxo W7M | Galorys | YES Fluxo W7M | 3 | 0.64 | 0.62 | 0.62 | open | - |
 | 2026-10-21 11:51 | favourite | cs2 | GenOne | Dark Moon | YES GenOne | 6 | 0.86 | 0.85 | 0.85 | open | - |
 | 2026-10-21 11:51 | favourite | cs2 | mellren | Four Magic | YES mellren | 10 | 0.84 | 0.83 | 0.83 | open | - |
 | 2026-10-21 10:51 | favourite | dota2 | Dawn Bulls | Zero Tenacity | YES Dawn Bulls | 11 | 0.74 | 0.73 | 0.73 | open | - |
@@ -63,7 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-21 09:51 | favourite | cs2 | Bebop | Phantom Academy | YES Bebop | 15 | 0.54 | 0.53 | 0.53 | open | - |
 | 2026-10-21 09:21 | favourite | cs2 | 9INE Academy | CTRL Esports | YES 9INE Academy | 14 | 0.61 | 0.59 | 0.59 | open | - |
 | 2026-10-21 09:21 | model-only | cs2 | CTRL Esports | 9INE Academy | YES CTRL Esports | 23 | 0.43 | 0.50 | 0.41 | open | - |
-| 2026-10-21 08:51 | favourite | valorant | Dragon Ranger Gaming | Rare Atom | YES Dragon Ranger Gaming | 11 | 0.75 | 0.74 | 0.74 | won | $2.60 |
 
 ## Backtest on real Kalshi prices
 
