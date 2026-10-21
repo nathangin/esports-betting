@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-21 03:41 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-21 03:51 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 272 | 23 | 249 | 67 | -$461.36 | -17.1% | -1.1c (267) | $538.64 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 421 | 32 | 389 | 269 | -$111.78 | -3.9% | -1.4c (416) | $888.22 |
+| model-only | Elo win model alone (control: ignores the market) | 272 | 23 | 249 | 67 | -$461.36 | -17.1% | -1.1c (268) | $538.64 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 422 | 33 | 389 | 269 | -$111.78 | -3.9% | -1.4c (417) | $888.22 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-21 03:50 | favourite | cs2 | Vitalem Aerem | Wept Xyloid Melancholy | NO Wept Xyloid Melancholy | 10 | 0.80 | 0.80 | 0.80 | open | - |
 | 2026-10-21 02:50 | favourite | valorant | Wolves Esports | A Team | NO A Team | 1 | 0.68 | 0.68 | 0.68 | open | - |
 | 2026-10-21 02:50 | model-only | valorant | A Team | Wolves Esports | NO Wolves Esports | 32 | 0.32 | 0.49 | 0.32 | open | - |
 | 2026-10-20 15:54 | model-only | cs2 | Lavked | ex-6666 | NO ex-6666 | 2 | 0.38 | 0.48 | 0.37 | won | $1.20 |
@@ -63,7 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-20 09:54 | model-only | cs2 | BASEMENT BOYS | FaZe | NO FaZe | 24 | 0.37 | 0.44 | 0.34 | open | - |
 | 2026-10-20 09:54 | favourite | cs2 | FaZe | BASEMENT BOYS | YES FaZe | 13 | 0.68 | 0.66 | 0.66 | open | - |
 | 2026-10-20 09:54 | model-only | cs2 | ex-Zero Tenacity | FORZE Reload | YES ex-Zero Tenacity | 22 | 0.41 | 0.50 | 0.40 | won | $12.60 |
-| 2026-10-20 09:54 | favourite | cs2 | FORZE Reload | ex-Zero Tenacity | YES FORZE Reload | 14 | 0.60 | 0.60 | 0.60 | lost | -$8.64 |
 
 ## Backtest on real Kalshi prices
 
