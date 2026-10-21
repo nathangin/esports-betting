@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-21 16:12 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-21 16:42 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 287 | 27 | 260 | 72 | -$407.83 | -14.6% | -1.1c (283) | $592.17 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 450 | 38 | 412 | 283 | -$141.35 | -4.7% | -1.3c (446) | $858.65 |
+| model-only | Elo win model alone (control: ignores the market) | 287 | 25 | 262 | 73 | -$411.04 | -14.6% | -1.1c (283) | $588.96 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 450 | 36 | 414 | 284 | -$148.12 | -4.9% | -1.3c (446) | $851.88 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -60,10 +60,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-21 09:51 | model-only | cs2 | Sinners | Heroic | YES Sinners | 20 | 0.30 | 0.35 | 0.29 | won | $13.70 |
 | 2026-10-21 09:51 | favourite | cs2 | eternal premium | NOCTIS | NO NOCTIS | 13 | 0.63 | 0.62 | 0.62 | lost | -$8.41 |
 | 2026-10-21 09:51 | favourite | cs2 | BC.Game Esports | Nexus | YES BC.Game Esports | 10 | 0.80 | 0.80 | 0.80 | won | $1.88 |
-| 2026-10-21 09:51 | model-only | cs2 | Privateer Gaming | Falcons Force | YES Privateer Gaming | 51 | 0.19 | 0.39 | 0.18 | open | - |
-| 2026-10-21 09:51 | favourite | cs2 | Falcons Force | Privateer Gaming | YES Falcons Force | 10 | 0.83 | 0.82 | 0.82 | open | - |
-| 2026-10-21 09:51 | model-only | cs2 | Phantom Academy | Bebop | YES Phantom Academy | 14 | 0.48 | 0.57 | 0.47 | open | - |
-| 2026-10-21 09:51 | favourite | cs2 | Bebop | Phantom Academy | YES Bebop | 15 | 0.54 | 0.53 | 0.53 | open | - |
+| 2026-10-21 09:51 | model-only | cs2 | Privateer Gaming | Falcons Force | YES Privateer Gaming | 51 | 0.19 | 0.39 | 0.18 | lost | -$10.24 |
+| 2026-10-21 09:51 | favourite | cs2 | Falcons Force | Privateer Gaming | YES Falcons Force | 10 | 0.83 | 0.82 | 0.82 | won | $1.60 |
+| 2026-10-21 09:51 | model-only | cs2 | Phantom Academy | Bebop | YES Phantom Academy | 14 | 0.48 | 0.57 | 0.47 | won | $7.03 |
+| 2026-10-21 09:51 | favourite | cs2 | Bebop | Phantom Academy | YES Bebop | 15 | 0.54 | 0.53 | 0.53 | lost | -$8.37 |
 
 ## Backtest on real Kalshi prices
 
