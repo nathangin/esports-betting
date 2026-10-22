@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-22 12:08 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-22 12:33 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 302 | 32 | 270 | 77 | -$393.25 | -13.6% | -1.0c (295) | $606.75 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 479 | 50 | 429 | 295 | -$134.79 | -4.3% | -1.3c (470) | $865.21 |
+| model-only | Elo win model alone (control: ignores the market) | 302 | 31 | 271 | 78 | -$381.70 | -13.2% | -1.0c (295) | $618.30 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 479 | 49 | 430 | 295 | -$143.30 | -4.5% | -1.3c (470) | $856.70 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1017 finished matches. Lower is better; the market line is the bar to beat.
+1018 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5719 | 0.1952 |
-| model | 0.6565 | 0.2324 |
-| blend | 0.5708 | 0.1949 |
+| market | 0.5720 | 0.1953 |
+| model | 0.6563 | 0.2323 |
+| blend | 0.5711 | 0.1950 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 670 | 0.5845 | 0.6635 |
+| cs2 | 671 | 0.5848 | 0.6632 |
 | dota2 | 157 | 0.5372 | 0.6393 |
 | lol | 61 | 0.5472 | 0.7010 |
 | ow | 60 | 0.4906 | 0.5267 |
@@ -63,7 +63,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-22 09:52 | model-only | valorant | Natus Vincere | Eternal Fire | NO Eternal Fire | 26 | 0.42 | 0.48 | 0.41 | open | - |
 | 2026-10-22 09:52 | favourite | valorant | Eternal Fire | Natus Vincere | YES Eternal Fire | 13 | 0.61 | 0.59 | 0.59 | open | - |
 | 2026-10-22 09:52 | model-only | valorant | Any Questions Gaming | Nova Esports | YES Any Questions Gaming | 37 | 0.30 | 0.44 | 0.29 | open | - |
-| 2026-10-22 09:22 | favourite | cs2 | Elite Klan | Revenge | YES Elite Klan | 15 | 0.55 | 0.54 | 0.54 | open | - |
+| 2026-10-22 09:22 | favourite | cs2 | Elite Klan | Revenge | YES Elite Klan | 15 | 0.55 | 0.54 | 0.54 | lost | -$8.51 |
 
 ## Backtest on real Kalshi prices
 
