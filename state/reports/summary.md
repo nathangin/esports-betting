@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-22 12:33 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-22 12:38 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 302 | 31 | 271 | 78 | -$381.70 | -13.2% | -1.0c (295) | $618.30 |
+| model-only | Elo win model alone (control: ignores the market) | 303 | 32 | 271 | 78 | -$381.70 | -13.2% | -1.0c (295) | $618.30 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 479 | 49 | 430 | 295 | -$143.30 | -4.5% | -1.3c (470) | $856.70 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-22 11:53 | model-only | cs2 | TheChampionGG | ENCE Prospects | YES TheChampionGG | 1 | 0.52 | 0.60 | 0.51 | open | - |
-| 2026-10-22 11:53 | favourite | cs2 | Tropa do KinGui | Martians | NO Martians | 9 | 0.90 | 0.89 | 0.89 | open | - |
+| 2026-10-22 12:38 | model-only | cs2 | Quintessence | Ryvex | YES Quintessence | 10 | 0.62 | 0.67 | 0.61 | open | - |
+| 2026-10-22 11:53 | model-only | cs2 | Nexus | JiJieHao | YES Nexus | 30 | 0.37 | 0.53 | 0.36 | open | - |
 | 2026-10-22 11:53 | model-only | cs2 | KUUSAMO.gg | LPH Gaming | YES KUUSAMO.gg | 40 | 0.28 | 0.44 | 0.28 | open | - |
 | 2026-10-22 11:53 | favourite | cs2 | LPH Gaming | KUUSAMO.gg | NO KUUSAMO.gg | 11 | 0.73 | 0.72 | 0.72 | open | - |
+| 2026-10-22 11:53 | favourite | cs2 | Tropa do KinGui | Martians | NO Martians | 9 | 0.90 | 0.89 | 0.89 | open | - |
 | 2026-10-22 11:53 | favourite | cs2 | FaZe | BC.Game Esports | NO BC.Game Esports | 14 | 0.57 | 0.56 | 0.56 | open | - |
-| 2026-10-22 11:53 | model-only | cs2 | Nexus | JiJieHao | YES Nexus | 30 | 0.37 | 0.53 | 0.36 | open | - |
 | 2026-10-22 11:53 | favourite | cs2 | JiJieHao | Nexus | YES JiJieHao | 13 | 0.65 | 0.64 | 0.64 | open | - |
 | 2026-10-22 11:53 | favourite | cs2 | Spirit Academy Green | maybe | YES Spirit Academy Green | 9 | 0.58 | 0.55 | 0.54 | open | - |
+| 2026-10-22 11:53 | model-only | cs2 | TheChampionGG | ENCE Prospects | YES TheChampionGG | 1 | 0.52 | 0.60 | 0.51 | open | - |
 | 2026-10-22 10:53 | favourite | lol | Galions | Solary | NO Solary | 14 | 0.58 | 0.58 | 0.58 | open | - |
 | 2026-10-22 10:53 | model-only | lol | Solary | Galions | NO Galions | 26 | 0.42 | 0.55 | 0.42 | open | - |
 | 2026-10-22 10:53 | favourite | dota2 | HULIGANI | Team Lynx | YES HULIGANI | 14 | 0.56 | 0.55 | 0.55 | open | - |
 | 2026-10-22 09:52 | favourite | cs2 | TheMongolz | BIG | NO BIG | 16 | 0.51 | 0.50 | 0.50 | open | - |
-| 2026-10-22 09:52 | favourite | cs2 | Falcons Force | Phantom Academy | YES Falcons Force | 12 | 0.66 | 0.65 | 0.65 | open | - |
+| 2026-10-22 09:52 | model-only | cs2 | Phantom Academy | Falcons Force | NO Falcons Force | 30 | 0.37 | 0.47 | 0.35 | open | - |
 | 2026-10-22 09:52 | model-only | cs2 | Just_Players | FORZE Reload | NO FORZE Reload | 18 | 0.36 | 0.41 | 0.34 | open | - |
 | 2026-10-22 09:52 | favourite | cs2 | FORZE Reload | Just_Players | YES FORZE Reload | 12 | 0.67 | 0.66 | 0.66 | open | - |
 | 2026-10-22 09:52 | favourite | cs2 | Butterfly | Lavked | YES Butterfly | 14 | 0.59 | 0.56 | 0.56 | open | - |
 | 2026-10-22 09:52 | favourite | cs2 | Walczaki | mellren | YES Walczaki | 14 | 0.59 | 0.54 | 0.54 | open | - |
-| 2026-10-22 09:52 | model-only | cs2 | Phantom Academy | Falcons Force | NO Falcons Force | 30 | 0.37 | 0.47 | 0.35 | open | - |
+| 2026-10-22 09:52 | favourite | cs2 | Falcons Force | Phantom Academy | YES Falcons Force | 12 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-10-22 09:52 | favourite | dota2 | Team Spirit | LEGION | YES Team Spirit | 9 | 0.90 | 0.90 | 0.90 | open | - |
 | 2026-10-22 09:52 | favourite | valorant | Nova Esports | Any Questions Gaming | YES Nova Esports | 11 | 0.71 | 0.71 | 0.71 | open | - |
 | 2026-10-22 09:52 | favourite | valorant | Blezz | Team George | YES Blezz | 15 | 0.54 | 0.53 | 0.53 | won | $6.63 |
 | 2026-10-22 09:52 | model-only | valorant | Natus Vincere | Eternal Fire | NO Eternal Fire | 26 | 0.42 | 0.48 | 0.41 | open | - |
-| 2026-10-22 09:52 | favourite | valorant | Eternal Fire | Natus Vincere | YES Eternal Fire | 13 | 0.61 | 0.59 | 0.59 | open | - |
 | 2026-10-22 09:52 | model-only | valorant | Any Questions Gaming | Nova Esports | YES Any Questions Gaming | 37 | 0.30 | 0.44 | 0.29 | open | - |
-| 2026-10-22 09:22 | favourite | cs2 | Elite Klan | Revenge | YES Elite Klan | 15 | 0.55 | 0.54 | 0.54 | lost | -$8.51 |
+| 2026-10-22 09:52 | favourite | valorant | Eternal Fire | Natus Vincere | YES Eternal Fire | 13 | 0.61 | 0.59 | 0.59 | open | - |
 
 ## Backtest on real Kalshi prices
 
