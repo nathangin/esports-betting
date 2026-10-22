@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-22 10:07 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-22 10:32 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 298 | 31 | 267 | 74 | -$428.11 | -15.0% | -1.0c (289) | $571.89 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 472 | 50 | 422 | 292 | -$127.74 | -4.1% | -1.4c (458) | $872.26 |
+| model-only | Elo win model alone (control: ignores the market) | 298 | 31 | 267 | 74 | -$428.11 | -15.0% | -1.0c (290) | $571.89 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 472 | 49 | 423 | 292 | -$135.71 | -4.4% | -1.4c (459) | $864.29 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -62,7 +62,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-22 06:54 | favourite | cs2 | BakS eSports | Azuolas | NO Azuolas | 11 | 0.75 | 0.71 | 0.71 | won | $2.60 |
 | 2026-10-22 06:54 | model-only | cs2 | Bushido Wildcats | ex-6666 | YES Bushido Wildcats | 31 | 0.36 | 0.46 | 0.34 | lost | -$11.66 |
 | 2026-10-22 06:54 | favourite | cs2 | ex-6666 | Bushido Wildcats | YES ex-6666 | 12 | 0.67 | 0.66 | 0.66 | won | $3.77 |
-| 2026-10-22 06:54 | favourite | cs2 | Passion Academy | WonderKids | YES Passion Academy | 11 | 0.71 | 0.70 | 0.70 | open | - |
+| 2026-10-22 06:54 | favourite | cs2 | Passion Academy | WonderKids | YES Passion Academy | 11 | 0.71 | 0.70 | 0.70 | lost | -$7.97 |
 | 2026-10-22 06:54 | model-only | cs2 | Spirit Academy | GenOne | YES Spirit Academy | 19 | 0.57 | 0.63 | 0.58 | open | - |
 
 ## Backtest on real Kalshi prices
