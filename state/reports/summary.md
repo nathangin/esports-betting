@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-22 08:32 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-22 08:52 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 293 | 28 | 265 | 74 | -$414.17 | -14.6% | -1.0c (288) | $585.83 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 461 | 43 | 418 | 288 | -$138.37 | -4.5% | -1.3c (455) | $861.63 |
+| model-only | Elo win model alone (control: ignores the market) | 293 | 28 | 265 | 74 | -$414.17 | -14.6% | -1.0c (289) | $585.83 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 462 | 44 | 418 | 288 | -$138.37 | -4.5% | -1.3c (457) | $861.63 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,16 +39,17 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-22 08:52 | favourite | cs2 | Team Nemesis | WW Team | YES Team Nemesis | 9 | 0.88 | 0.79 | 0.79 | open | - |
 | 2026-10-22 07:57 | favourite | valorant | Wolves Esports | KeepBest Gaming | NO KeepBest Gaming | 5 | 0.56 | 0.53 | 0.53 | open | - |
 | 2026-10-22 07:57 | model-only | valorant | KeepBest Gaming | Wolves Esports | YES KeepBest Gaming | 23 | 0.48 | 0.62 | 0.47 | open | - |
 | 2026-10-22 07:57 | favourite | dota2 | Yangon Galacticos | Team Nemesis Academy | NO Team Nemesis Academy | 1 | 0.88 | 0.83 | 0.83 | open | - |
-| 2026-10-22 06:54 | favourite | cs2 | Spirit Academy | GenOne | YES Spirit Academy | 14 | 0.57 | 0.58 | 0.58 | open | - |
+| 2026-10-22 06:54 | model-only | cs2 | Spirit Academy | GenOne | YES Spirit Academy | 19 | 0.57 | 0.63 | 0.58 | open | - |
 | 2026-10-22 06:54 | favourite | cs2 | BakS eSports | Azuolas | NO Azuolas | 11 | 0.75 | 0.71 | 0.71 | open | - |
+| 2026-10-22 06:54 | model-only | cs2 | Bushido Wildcats | ex-6666 | YES Bushido Wildcats | 31 | 0.36 | 0.46 | 0.34 | open | - |
 | 2026-10-22 06:54 | favourite | cs2 | ex-6666 | Bushido Wildcats | YES ex-6666 | 12 | 0.67 | 0.66 | 0.66 | open | - |
 | 2026-10-22 06:54 | favourite | cs2 | Passion Academy | WonderKids | YES Passion Academy | 11 | 0.71 | 0.70 | 0.70 | open | - |
-| 2026-10-22 06:54 | model-only | cs2 | Spirit Academy | GenOne | YES Spirit Academy | 19 | 0.57 | 0.63 | 0.58 | open | - |
-| 2026-10-22 06:54 | model-only | cs2 | Bushido Wildcats | ex-6666 | YES Bushido Wildcats | 31 | 0.36 | 0.46 | 0.34 | open | - |
 | 2026-10-22 06:54 | favourite | cs2 | eSuba | TTG Esports | YES eSuba | 14 | 0.56 | 0.54 | 0.54 | open | - |
+| 2026-10-22 06:54 | favourite | cs2 | Spirit Academy | GenOne | YES Spirit Academy | 14 | 0.57 | 0.58 | 0.58 | open | - |
 | 2026-10-22 06:54 | favourite | valorant | Joblife | Habos Babos | NO Habos Babos | 9 | 0.90 | 0.89 | 0.89 | open | - |
 | 2026-10-22 06:54 | model-only | valorant | CGN Esports | Eintracht Frankfurt | YES CGN Esports | 27 | 0.41 | 0.61 | 0.41 | open | - |
 | 2026-10-22 06:54 | favourite | valorant | Eintracht Frankfurt | CGN Esports | YES Eintracht Frankfurt | 1 | 0.59 | 0.59 | 0.59 | open | - |
@@ -62,8 +63,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-21 11:51 | favourite | cs2 | GenOne | Dark Moon | YES GenOne | 6 | 0.86 | 0.85 | 0.85 | open | - |
 | 2026-10-21 11:51 | favourite | cs2 | mellren | Four Magic | YES mellren | 10 | 0.84 | 0.83 | 0.83 | lost | -$8.50 |
 | 2026-10-21 10:51 | favourite | cs2 | fnatic | PRIVATE | YES fnatic | 12 | 0.68 | 0.68 | 0.68 | lost | -$8.35 |
-| 2026-10-21 10:51 | favourite | cs2 | Apogee Esports | aimclub | NO aimclub | 10 | 0.84 | 0.83 | 0.83 | won | $1.50 |
-| 2026-10-21 10:51 | model-only | cs2 | PRIVATE | fnatic | YES PRIVATE | 32 | 0.32 | 0.45 | 0.32 | won | $21.27 |
+| 2026-10-21 10:51 | favourite | dota2 | Dawn Bulls | Zero Tenacity | YES Dawn Bulls | 11 | 0.74 | 0.73 | 0.73 | lost | -$8.29 |
 
 ## Backtest on real Kalshi prices
 
