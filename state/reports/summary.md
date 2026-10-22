@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-22 10:53 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-22 11:03 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 299 | 32 | 267 | 74 | -$428.11 | -15.0% | -1.0c (294) | $571.89 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 474 | 51 | 423 | 292 | -$135.71 | -4.4% | -1.3c (468) | $864.29 |
+| model-only | Elo win model alone (control: ignores the market) | 299 | 31 | 268 | 75 | -$416.56 | -14.5% | -1.0c (294) | $583.44 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 474 | 49 | 425 | 292 | -$146.69 | -4.7% | -1.3c (468) | $853.31 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,22 +16,22 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1009 finished matches. Lower is better; the market line is the bar to beat.
+1012 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5719 | 0.1952 |
-| model | 0.6577 | 0.2330 |
-| blend | 0.5709 | 0.1948 |
+| market | 0.5718 | 0.1952 |
+| model | 0.6571 | 0.2327 |
+| blend | 0.5708 | 0.1948 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 668 | 0.5843 | 0.6638 |
-| dota2 | 154 | 0.5420 | 0.6440 |
+| cs2 | 669 | 0.5846 | 0.6638 |
+| dota2 | 155 | 0.5391 | 0.6412 |
 | lol | 61 | 0.5472 | 0.7010 |
 | ow | 60 | 0.4906 | 0.5267 |
 | r6 | 35 | 0.6531 | 0.7263 |
-| valorant | 31 | 0.5695 | 0.6843 |
+| valorant | 32 | 0.5749 | 0.6781 |
 
 ## Latest bets
 
@@ -58,9 +58,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-22 09:22 | favourite | cs2 | Elite Klan | Revenge | YES Elite Klan | 15 | 0.55 | 0.54 | 0.54 | open | - |
 | 2026-10-22 09:22 | model-only | cs2 | Revenge | Elite Klan | YES Revenge | 23 | 0.48 | 0.63 | 0.46 | open | - |
 | 2026-10-22 08:52 | favourite | cs2 | Team Nemesis | WW Team | YES Team Nemesis | 9 | 0.88 | 0.79 | 0.79 | open | - |
-| 2026-10-22 07:57 | model-only | valorant | KeepBest Gaming | Wolves Esports | YES KeepBest Gaming | 23 | 0.48 | 0.62 | 0.47 | open | - |
+| 2026-10-22 07:57 | model-only | valorant | KeepBest Gaming | Wolves Esports | YES KeepBest Gaming | 23 | 0.48 | 0.62 | 0.47 | won | $11.55 |
 | 2026-10-22 07:57 | favourite | dota2 | Yangon Galacticos | Team Nemesis Academy | NO Team Nemesis Academy | 1 | 0.88 | 0.83 | 0.83 | open | - |
-| 2026-10-22 07:57 | favourite | valorant | Wolves Esports | KeepBest Gaming | NO KeepBest Gaming | 5 | 0.56 | 0.53 | 0.53 | open | - |
+| 2026-10-22 07:57 | favourite | valorant | Wolves Esports | KeepBest Gaming | NO KeepBest Gaming | 5 | 0.56 | 0.53 | 0.53 | lost | -$2.89 |
 | 2026-10-22 06:54 | favourite | cs2 | Spirit Academy | GenOne | YES Spirit Academy | 14 | 0.57 | 0.58 | 0.58 | open | - |
 | 2026-10-22 06:54 | model-only | cs2 | Bushido Wildcats | ex-6666 | YES Bushido Wildcats | 31 | 0.36 | 0.46 | 0.34 | lost | -$11.66 |
 | 2026-10-22 06:54 | favourite | cs2 | ex-6666 | Bushido Wildcats | YES ex-6666 | 12 | 0.67 | 0.66 | 0.66 | won | $3.77 |
