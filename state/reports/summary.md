@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-22 09:22 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-22 09:42 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 294 | 29 | 265 | 74 | -$414.17 | -14.6% | -1.0c (289) | $585.83 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 463 | 44 | 419 | 289 | -$137.53 | -4.5% | -1.3c (457) | $862.47 |
+| model-only | Elo win model alone (control: ignores the market) | 294 | 28 | 266 | 74 | -$416.45 | -14.7% | -1.0c (289) | $583.55 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 463 | 43 | 420 | 290 | -$134.11 | -4.3% | -1.3c (457) | $865.89 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -57,8 +57,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-22 06:54 | favourite | valorant | Eintracht Frankfurt | CGN Esports | YES Eintracht Frankfurt | 1 | 0.59 | 0.59 | 0.59 | open | - |
 | 2026-10-22 04:53 | favourite | dota2 | Team Kinetix | Novus Gaming | YES Team Kinetix | 11 | 0.71 | 0.69 | 0.69 | open | - |
 | 2026-10-22 04:53 | model-only | dota2 | Novus Gaming | Team Kinetix | NO Team Kinetix | 33 | 0.33 | 0.51 | 0.31 | open | - |
-| 2026-10-22 03:53 | model-only | cs2 | Vitalem Aerem | Rare Atom | NO Rare Atom | 7 | 0.31 | 0.43 | 0.31 | open | - |
-| 2026-10-22 03:53 | favourite | cs2 | Rare Atom | Vitalem Aerem | NO Vitalem Aerem | 12 | 0.70 | 0.69 | 0.69 | open | - |
+| 2026-10-22 03:53 | model-only | cs2 | Vitalem Aerem | Rare Atom | NO Rare Atom | 7 | 0.31 | 0.43 | 0.31 | lost | -$2.28 |
+| 2026-10-22 03:53 | favourite | cs2 | Rare Atom | Vitalem Aerem | NO Vitalem Aerem | 12 | 0.70 | 0.69 | 0.69 | won | $3.42 |
 | 2026-10-21 14:52 | model-only | cs2 | Martians | Joga de terno | YES Martians | 27 | 0.37 | 0.48 | 0.36 | won | $16.56 |
 | 2026-10-21 13:52 | favourite | cs2 | CYBERSHOKE Esports | BlinkDagger | NO BlinkDagger | 3 | 0.83 | 0.80 | 0.80 | won | $0.48 |
 | 2026-10-21 12:51 | favourite | cs2 | Fluxo W7M | Galorys | YES Fluxo W7M | 3 | 0.64 | 0.62 | 0.62 | won | $1.03 |
