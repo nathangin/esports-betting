@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-22 14:33 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-22 14:43 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-22 14:33 UTC. Model fitted 2026-10-19T16:33. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 305 | 29 | 276 | 79 | -$404.86 | -13.7% | -1.0c (300) | $595.14 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 479 | 39 | 440 | 303 | -$135.20 | -4.2% | -1.3c (475) | $864.80 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 479 | 38 | 441 | 304 | -$129.29 | -4.0% | -1.3c (475) | $870.71 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -52,7 +52,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-22 11:53 | model-only | cs2 | TheChampionGG | ENCE Prospects | YES TheChampionGG | 1 | 0.52 | 0.60 | 0.51 | open | - |
 | 2026-10-22 10:53 | favourite | lol | Galions | Solary | NO Solary | 14 | 0.58 | 0.58 | 0.58 | open | - |
 | 2026-10-22 10:53 | model-only | lol | Solary | Galions | NO Galions | 26 | 0.42 | 0.55 | 0.42 | open | - |
-| 2026-10-22 10:53 | favourite | dota2 | HULIGANI | Team Lynx | YES HULIGANI | 14 | 0.56 | 0.55 | 0.55 | open | - |
+| 2026-10-22 10:53 | favourite | dota2 | HULIGANI | Team Lynx | YES HULIGANI | 14 | 0.56 | 0.55 | 0.55 | won | $5.91 |
 | 2026-10-22 09:52 | favourite | cs2 | TheMongolz | BIG | NO BIG | 16 | 0.51 | 0.50 | 0.50 | won | $7.56 |
 | 2026-10-22 09:52 | model-only | cs2 | Phantom Academy | Falcons Force | NO Falcons Force | 30 | 0.37 | 0.47 | 0.35 | won | $18.41 |
 | 2026-10-22 09:52 | favourite | cs2 | Falcons Force | Phantom Academy | YES Falcons Force | 12 | 0.66 | 0.65 | 0.65 | lost | -$8.11 |
