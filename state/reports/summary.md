@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-22 13:53 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-22 14:03 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 305 | 32 | 273 | 79 | -$374.66 | -12.8% | -1.0c (300) | $625.34 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 479 | 46 | 433 | 297 | -$145.72 | -4.6% | -1.3c (475) | $854.28 |
+| model-only | Elo win model alone (control: ignores the market) | 305 | 31 | 274 | 79 | -$386.31 | -13.2% | -1.0c (300) | $613.69 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 479 | 44 | 435 | 299 | -$141.85 | -4.4% | -1.3c (475) | $858.15 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,22 +16,22 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1022 finished matches. Lower is better; the market line is the bar to beat.
+1024 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5720 | 0.1953 |
-| model | 0.6566 | 0.2324 |
-| blend | 0.5710 | 0.1950 |
+| market | 0.5714 | 0.1950 |
+| model | 0.6565 | 0.2324 |
+| blend | 0.5703 | 0.1947 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 673 | 0.5855 | 0.6640 |
+| cs2 | 674 | 0.5848 | 0.6640 |
 | dota2 | 158 | 0.5345 | 0.6381 |
 | lol | 61 | 0.5472 | 0.7010 |
 | ow | 60 | 0.4906 | 0.5267 |
+| valorant | 36 | 0.5780 | 0.6699 |
 | r6 | 35 | 0.6531 | 0.7263 |
-| valorant | 35 | 0.5846 | 0.6727 |
 
 ## Latest bets
 
@@ -45,7 +45,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-22 11:53 | model-only | cs2 | Nexus | JiJieHao | YES Nexus | 30 | 0.37 | 0.53 | 0.36 | open | - |
 | 2026-10-22 11:53 | favourite | cs2 | FaZe | BC.Game Esports | NO BC.Game Esports | 14 | 0.57 | 0.56 | 0.56 | open | - |
 | 2026-10-22 11:53 | favourite | cs2 | LPH Gaming | KUUSAMO.gg | NO KUUSAMO.gg | 11 | 0.73 | 0.72 | 0.72 | open | - |
-| 2026-10-22 11:53 | favourite | cs2 | Tropa do KinGui | Martians | NO Martians | 9 | 0.90 | 0.89 | 0.89 | open | - |
+| 2026-10-22 11:53 | favourite | cs2 | Tropa do KinGui | Martians | NO Martians | 9 | 0.90 | 0.89 | 0.89 | won | $0.84 |
 | 2026-10-22 11:53 | model-only | cs2 | KUUSAMO.gg | LPH Gaming | YES KUUSAMO.gg | 40 | 0.28 | 0.44 | 0.28 | open | - |
 | 2026-10-22 11:53 | favourite | cs2 | JiJieHao | Nexus | YES JiJieHao | 13 | 0.65 | 0.64 | 0.64 | open | - |
 | 2026-10-22 11:53 | favourite | cs2 | Spirit Academy Green | maybe | YES Spirit Academy Green | 9 | 0.58 | 0.55 | 0.54 | open | - |
@@ -61,8 +61,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-22 09:52 | favourite | cs2 | Walczaki | mellren | YES Walczaki | 14 | 0.59 | 0.54 | 0.54 | open | - |
 | 2026-10-22 09:52 | favourite | cs2 | Butterfly | Lavked | YES Butterfly | 14 | 0.59 | 0.56 | 0.56 | open | - |
 | 2026-10-22 09:52 | favourite | dota2 | Team Spirit | LEGION | YES Team Spirit | 9 | 0.90 | 0.90 | 0.90 | won | $0.84 |
-| 2026-10-22 09:52 | model-only | valorant | Any Questions Gaming | Nova Esports | YES Any Questions Gaming | 37 | 0.30 | 0.44 | 0.29 | open | - |
-| 2026-10-22 09:52 | favourite | valorant | Nova Esports | Any Questions Gaming | YES Nova Esports | 11 | 0.71 | 0.71 | 0.71 | open | - |
+| 2026-10-22 09:52 | model-only | valorant | Any Questions Gaming | Nova Esports | YES Any Questions Gaming | 37 | 0.30 | 0.44 | 0.29 | lost | -$11.65 |
+| 2026-10-22 09:52 | favourite | valorant | Nova Esports | Any Questions Gaming | YES Nova Esports | 11 | 0.71 | 0.71 | 0.71 | won | $3.03 |
 | 2026-10-22 09:52 | favourite | valorant | Blezz | Team George | YES Blezz | 15 | 0.54 | 0.53 | 0.53 | won | $6.63 |
 
 ## Backtest on real Kalshi prices
