@@ -65,11 +65,26 @@ class Http:
                 time.sleep(wait)
             self._last[host] = time.monotonic()
 
-    def get(self, url: str, params: dict | None = None, headers: dict | None = None) -> requests.Response:
+    # a download cut off midway (requests' ChunkedEncodingError: IEM, Oct 21 2026) or a dropped
+    # connection is retried a few times, then reported as HttpError(status 0) so that the callers'
+    # usual "skip this request" handling applies instead of the whole job stopping
+    NETWORK_ERRORS = (requests.exceptions.ChunkedEncodingError, requests.exceptions.ConnectionError,
+                      requests.exceptions.Timeout)
+
+    def get(self, url: str, params: dict | None = None, headers: dict | None = None,
+            attempts: int = 3) -> requests.Response:
         host = urlparse(url).netloc
-        self._pace(host)
-        self.calls += 1
-        return self.session.get(url, params=params, headers=headers, timeout=self.timeout)
+        for i in range(attempts):
+            self._pace(host)
+            self.calls += 1
+            try:
+                return self.session.get(url, params=params, headers=headers, timeout=self.timeout)
+            except self.NETWORK_ERRORS as e:
+                if i == attempts - 1:
+                    raise HttpError(url, 0, f"{type(e).__name__}: {e}") from e
+                log.warning("%s: %s, retrying", host, type(e).__name__)
+                time.sleep(2.0 * (i + 1))
+        raise AssertionError("unreachable")
 
     def get_json(self, url: str, params: dict | None = None, headers: dict | None = None,
                  sample: str | None = None) -> Any:
