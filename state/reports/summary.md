@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-23 12:51 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-23 13:01 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 321 | 32 | 289 | 84 | -$419.01 | -13.8% | -1.0c (317) | $580.99 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 507 | 51 | 456 | 315 | -$127.00 | -3.8% | -1.4c (501) | $873.00 |
+| model-only | Elo win model alone (control: ignores the market) | 321 | 31 | 290 | 84 | -$430.53 | -14.1% | -1.0c (317) | $569.47 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 507 | 50 | 457 | 316 | -$125.91 | -3.8% | -1.4c (501) | $874.09 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -51,8 +51,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-23 10:51 | favourite | dota2 | Dawn Bulls | Team Synapse | YES Dawn Bulls | 14 | 0.61 | 0.59 | 0.59 | open | - |
 | 2026-10-23 10:51 | model-only | dota2 | Team Synapse | Dawn Bulls | YES Team Synapse | 26 | 0.42 | 0.51 | 0.41 | open | - |
 | 2026-10-23 09:51 | model-only | dota2 | GamerLegion | Team Liquid | YES GamerLegion | 50 | 0.22 | 0.37 | 0.23 | open | - |
-| 2026-10-23 09:51 | model-only | cs2 | ILLYRIANS | Nuclear TigeRES | NO Nuclear TigeRES | 64 | 0.17 | 0.36 | 0.15 | open | - |
-| 2026-10-23 09:51 | favourite | cs2 | Nuclear TigeRES | ILLYRIANS | NO ILLYRIANS | 9 | 0.87 | 0.85 | 0.85 | open | - |
+| 2026-10-23 09:51 | model-only | cs2 | ILLYRIANS | Nuclear TigeRES | NO Nuclear TigeRES | 64 | 0.17 | 0.36 | 0.15 | lost | -$11.52 |
+| 2026-10-23 09:51 | favourite | cs2 | Nuclear TigeRES | ILLYRIANS | NO ILLYRIANS | 9 | 0.87 | 0.85 | 0.85 | won | $1.09 |
 | 2026-10-23 09:51 | model-only | cs2 | Spirit Academy | Inner Circle Academy | NO Inner Circle Academy | 20 | 0.56 | 0.63 | 0.55 | open | - |
 | 2026-10-23 09:51 | favourite | cs2 | Spirit Academy | Inner Circle Academy | NO Inner Circle Academy | 15 | 0.56 | 0.56 | 0.55 | open | - |
 | 2026-10-23 09:51 | favourite | cs2 | XI Esport | eSuba | YES XI Esport | 14 | 0.57 | 0.55 | 0.55 | open | - |
