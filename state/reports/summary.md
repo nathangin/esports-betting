@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-23 17:37 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-23 17:52 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 325 | 29 | 296 | 88 | -$362.84 | -11.7% | -0.9c (318) | $637.16 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 509 | 41 | 468 | 320 | -$169.41 | -4.9% | -1.4c (505) | $830.59 |
+| model-only | Elo win model alone (control: ignores the market) | 325 | 29 | 296 | 88 | -$362.84 | -11.7% | -0.9c (320) | $637.16 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 509 | 40 | 469 | 321 | -$167.50 | -4.9% | -1.4c (505) | $832.50 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -46,7 +46,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-23 14:52 | model-only | cs2 | QUINTESSENCIA | BORRACHEIROS | NO BORRACHEIROS | 3 | 0.32 | 0.55 | 0.31 | open | - |
 | 2026-10-23 13:51 | favourite | dota2 | Team Lynx | Inner Circle | YES Team Lynx | 11 | 0.73 | 0.72 | 0.72 | open | - |
 | 2026-10-23 12:51 | favourite | dota2 | BetBoom Team | Astra Invicta | YES BetBoom Team | 15 | 0.54 | 0.53 | 0.53 | lost | -$8.37 |
-| 2026-10-23 12:51 | favourite | cs2 | INOX Division | Team ACES | NO Team ACES | 5 | 0.60 | 0.56 | 0.56 | open | - |
+| 2026-10-23 12:51 | favourite | cs2 | INOX Division | Team ACES | NO Team ACES | 5 | 0.60 | 0.56 | 0.56 | won | $1.91 |
 | 2026-10-23 11:51 | favourite | cs2 | ALKA | Los Ninos | YES ALKA | 11 | 0.78 | 0.77 | 0.77 | open | - |
 | 2026-10-23 11:51 | model-only | cs2 | JiJieHao | Eternal Fire | NO Eternal Fire | 20 | 0.43 | 0.48 | 0.43 | open | - |
 | 2026-10-23 11:51 | favourite | cs2 | Eternal Fire | JiJieHao | NO JiJieHao | 15 | 0.57 | 0.57 | 0.57 | open | - |
