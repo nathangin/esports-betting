@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-23 09:36 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-23 09:41 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 313 | 31 | 282 | 82 | -$417.90 | -14.0% | -0.9c (309) | $582.10 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 493 | 46 | 447 | 308 | -$129.18 | -3.9% | -1.4c (488) | $870.82 |
+| model-only | Elo win model alone (control: ignores the market) | 313 | 30 | 283 | 82 | -$418.84 | -14.0% | -0.9c (309) | $581.16 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 493 | 45 | 448 | 309 | -$127.12 | -3.9% | -1.4c (488) | $872.88 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -57,8 +57,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-23 06:50 | model-only | valorant | CGN Esports | Natus Vincere | NO Natus Vincere | 20 | 0.56 | 0.80 | 0.56 | open | - |
 | 2026-10-23 06:50 | favourite | valorant | CGN Esports | Natus Vincere | NO Natus Vincere | 15 | 0.56 | 0.56 | 0.56 | open | - |
 | 2026-10-23 04:50 | favourite | dota2 | Yangon Galacticos | Cloud Dawning | YES Yangon Galacticos | 11 | 0.71 | 0.67 | 0.67 | open | - |
-| 2026-10-23 03:50 | favourite | cs2 | Rare Atom | NEXVOID | NO NEXVOID | 5 | 0.57 | 0.56 | 0.55 | open | - |
-| 2026-10-23 03:50 | model-only | cs2 | NEXVOID | Rare Atom | NO Rare Atom | 2 | 0.45 | 0.59 | 0.45 | open | - |
+| 2026-10-23 03:50 | favourite | cs2 | Rare Atom | NEXVOID | NO NEXVOID | 5 | 0.57 | 0.56 | 0.55 | won | $2.06 |
+| 2026-10-23 03:50 | model-only | cs2 | NEXVOID | Rare Atom | NO Rare Atom | 2 | 0.45 | 0.59 | 0.45 | lost | -$0.94 |
 | 2026-10-23 01:50 | favourite | cs2 | Lynn Vision | Chinggis Warriors | YES Lynn Vision | 11 | 0.77 | 0.76 | 0.76 | won | $2.39 |
 | 2026-10-22 14:53 | favourite | cs2 | Sinners | Eternal Fire | NO Eternal Fire | 3 | 0.53 | 0.53 | 0.53 | won | $1.35 |
 | 2026-10-22 13:53 | model-only | dota2 | CyberHero | Yellow Submarine | YES CyberHero | 8 | 0.21 | 0.28 | 0.20 | won | $6.22 |
