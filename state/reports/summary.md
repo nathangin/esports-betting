@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-23 18:07 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-23 18:37 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 325 | 28 | 297 | 88 | -$371.79 | -11.9% | -0.9c (320) | $628.21 |
+| model-only | Elo win model alone (control: ignores the market) | 325 | 28 | 297 | 88 | -$371.79 | -11.9% | -0.9c (321) | $628.21 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 509 | 38 | 471 | 322 | -$169.50 | -4.9% | -1.4c (505) | $830.50 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1114 finished matches. Lower is better; the market line is the bar to beat.
+1116 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5721 | 0.1955 |
-| model | 0.6565 | 0.2325 |
-| blend | 0.5709 | 0.1951 |
+| market | 0.5723 | 0.1955 |
+| model | 0.6566 | 0.2325 |
+| blend | 0.5710 | 0.1951 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 733 | 0.5859 | 0.6636 |
+| cs2 | 735 | 0.5861 | 0.6637 |
 | dota2 | 171 | 0.5544 | 0.6509 |
 | lol | 63 | 0.5425 | 0.6970 |
 | ow | 63 | 0.4710 | 0.5157 |
