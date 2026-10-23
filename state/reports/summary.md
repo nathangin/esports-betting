@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-23 04:26 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-23 04:51 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 306 | 24 | 282 | 82 | -$417.90 | -14.0% | -1.0c (301) | $582.10 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 482 | 36 | 446 | 307 | -$131.57 | -4.0% | -1.3c (477) | $868.43 |
+| model-only | Elo win model alone (control: ignores the market) | 306 | 24 | 282 | 82 | -$417.90 | -14.0% | -1.0c (302) | $582.10 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 483 | 37 | 446 | 307 | -$131.57 | -4.0% | -1.4c (478) | $868.43 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-23 04:50 | favourite | dota2 | Yangon Galacticos | Cloud Dawning | YES Yangon Galacticos | 11 | 0.71 | 0.67 | 0.67 | open | - |
 | 2026-10-23 03:50 | favourite | cs2 | Rare Atom | NEXVOID | NO NEXVOID | 5 | 0.57 | 0.56 | 0.55 | open | - |
 | 2026-10-23 03:50 | model-only | cs2 | NEXVOID | Rare Atom | NO Rare Atom | 2 | 0.45 | 0.59 | 0.45 | open | - |
 | 2026-10-23 01:50 | favourite | cs2 | Lynn Vision | Chinggis Warriors | YES Lynn Vision | 11 | 0.77 | 0.76 | 0.76 | open | - |
@@ -63,7 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-22 09:52 | model-only | cs2 | Just_Players | FORZE Reload | NO FORZE Reload | 18 | 0.36 | 0.41 | 0.34 | lost | -$6.78 |
 | 2026-10-22 09:52 | favourite | cs2 | FORZE Reload | Just_Players | YES FORZE Reload | 12 | 0.67 | 0.66 | 0.66 | won | $3.77 |
 | 2026-10-22 09:52 | favourite | cs2 | Butterfly | Lavked | YES Butterfly | 14 | 0.59 | 0.56 | 0.56 | lost | -$8.50 |
-| 2026-10-22 09:52 | favourite | cs2 | Walczaki | mellren | YES Walczaki | 14 | 0.59 | 0.54 | 0.54 | open | - |
 
 ## Backtest on real Kalshi prices
 
