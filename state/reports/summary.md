@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-23 18:37 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-23 18:42 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 325 | 28 | 297 | 88 | -$371.79 | -11.9% | -0.9c (321) | $628.21 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 509 | 38 | 471 | 322 | -$169.50 | -4.9% | -1.4c (505) | $830.50 |
+| model-only | Elo win model alone (control: ignores the market) | 325 | 27 | 298 | 88 | -$372.80 | -11.9% | -0.9c (321) | $627.20 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 509 | 37 | 472 | 323 | -$168.32 | -4.9% | -1.4c (505) | $831.68 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -42,8 +42,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-23 17:22 | model-only | cs2 | Younglings | SINQU | YES Younglings | 5 | 0.60 | 0.67 | 0.59 | open | - |
 | 2026-10-23 16:52 | model-only | valorant | Gentle Mates GC | Team Liquid Brazil | YES Gentle Mates GC | 1 | 0.36 | 0.48 | 0.36 | open | - |
 | 2026-10-23 16:52 | model-only | cs2 | OldBoys | Hermine Esports Club | NO Hermine Esports Club | 16 | 0.55 | 0.67 | 0.53 | open | - |
-| 2026-10-23 14:52 | favourite | cs2 | BORRACHEIROS | QUINTESSENCIA | YES BORRACHEIROS | 4 | 0.69 | 0.69 | 0.69 | open | - |
-| 2026-10-23 14:52 | model-only | cs2 | QUINTESSENCIA | BORRACHEIROS | NO BORRACHEIROS | 3 | 0.32 | 0.55 | 0.31 | open | - |
+| 2026-10-23 14:52 | favourite | cs2 | BORRACHEIROS | QUINTESSENCIA | YES BORRACHEIROS | 4 | 0.69 | 0.69 | 0.69 | won | $1.18 |
+| 2026-10-23 14:52 | model-only | cs2 | QUINTESSENCIA | BORRACHEIROS | NO BORRACHEIROS | 3 | 0.32 | 0.55 | 0.31 | lost | -$1.01 |
 | 2026-10-23 13:51 | favourite | dota2 | Team Lynx | Inner Circle | YES Team Lynx | 11 | 0.73 | 0.72 | 0.72 | lost | -$8.19 |
 | 2026-10-23 12:51 | favourite | dota2 | BetBoom Team | Astra Invicta | YES BetBoom Team | 15 | 0.54 | 0.53 | 0.53 | lost | -$8.37 |
 | 2026-10-23 12:51 | favourite | cs2 | INOX Division | Team ACES | NO Team ACES | 5 | 0.60 | 0.56 | 0.56 | won | $1.91 |
