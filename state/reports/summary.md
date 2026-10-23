@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-23 10:51 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-23 11:01 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 319 | 34 | 285 | 82 | -$431.58 | -14.4% | -1.0c (314) | $568.42 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 500 | 49 | 451 | 312 | -$120.25 | -3.6% | -1.3c (495) | $879.75 |
+| model-only | Elo win model alone (control: ignores the market) | 319 | 33 | 286 | 82 | -$443.21 | -14.7% | -1.0c (314) | $556.79 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 500 | 48 | 452 | 313 | -$119.02 | -3.6% | -1.3c (495) | $880.98 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -55,8 +55,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-23 08:51 | favourite | cs2 | Team Nemesis | Team ACES | YES Team Nemesis | 7 | 0.85 | 0.81 | 0.81 | open | - |
 | 2026-10-23 08:20 | favourite | ow | Falcons | ZANSIDE GAMING | YES Falcons | 9 | 0.89 | 0.86 | 0.86 | won | $0.92 |
 | 2026-10-23 08:20 | model-only | ow | ZANSIDE GAMING | Falcons | YES ZANSIDE GAMING | 8 | 0.16 | 0.35 | 0.14 | lost | -$1.36 |
-| 2026-10-23 07:50 | favourite | valorant | TEC Esports | Unsettled Resentment | YES TEC Esports | 3 | 0.57 | 0.57 | 0.57 | open | - |
-| 2026-10-23 07:50 | model-only | valorant | Unsettled Resentment | TEC Esports | YES Unsettled Resentment | 26 | 0.43 | 0.50 | 0.43 | open | - |
+| 2026-10-23 07:50 | favourite | valorant | TEC Esports | Unsettled Resentment | YES TEC Esports | 3 | 0.57 | 0.57 | 0.57 | won | $1.23 |
+| 2026-10-23 07:50 | model-only | valorant | Unsettled Resentment | TEC Esports | YES Unsettled Resentment | 26 | 0.43 | 0.50 | 0.43 | lost | -$11.63 |
 | 2026-10-23 07:50 | favourite | dota2 | Novus Gaming | Team Nemesis Academy | NO Team Nemesis Academy | 11 | 0.75 | 0.74 | 0.74 | open | - |
 | 2026-10-23 07:50 | model-only | dota2 | Team Nemesis Academy | Novus Gaming | YES Team Nemesis Academy | 3 | 0.27 | 0.40 | 0.26 | open | - |
 | 2026-10-23 07:50 | favourite | dota2 | salamit | Nemiga Gaming | YES salamit | 15 | 0.55 | 0.54 | 0.54 | open | - |
