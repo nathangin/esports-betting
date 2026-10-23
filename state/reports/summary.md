@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-23 08:06 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-23 08:21 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 312 | 30 | 282 | 82 | -$417.90 | -14.0% | -1.0c (306) | $582.10 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 491 | 44 | 447 | 308 | -$129.18 | -3.9% | -1.3c (484) | $870.82 |
+| model-only | Elo win model alone (control: ignores the market) | 313 | 31 | 282 | 82 | -$417.90 | -14.0% | -1.0c (306) | $582.10 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 492 | 45 | 447 | 308 | -$129.18 | -3.9% | -1.3c (484) | $870.82 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-23 08:20 | favourite | ow | Falcons | ZANSIDE GAMING | YES Falcons | 9 | 0.89 | 0.86 | 0.86 | open | - |
+| 2026-10-23 08:20 | model-only | ow | ZANSIDE GAMING | Falcons | YES ZANSIDE GAMING | 8 | 0.16 | 0.35 | 0.14 | open | - |
 | 2026-10-23 07:50 | favourite | valorant | TEC Esports | Unsettled Resentment | YES TEC Esports | 3 | 0.57 | 0.57 | 0.57 | open | - |
 | 2026-10-23 07:50 | model-only | valorant | Unsettled Resentment | TEC Esports | YES Unsettled Resentment | 26 | 0.43 | 0.50 | 0.43 | open | - |
 | 2026-10-23 07:50 | favourite | dota2 | Novus Gaming | Team Nemesis Academy | NO Team Nemesis Academy | 11 | 0.75 | 0.74 | 0.74 | open | - |
@@ -46,9 +48,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-23 07:50 | favourite | dota2 | salamit | Nemiga Gaming | YES salamit | 15 | 0.55 | 0.54 | 0.54 | open | - |
 | 2026-10-23 06:50 | favourite | cs2 | Copenhagen Wolves | The Chosen Few | YES Copenhagen Wolves | 11 | 0.72 | 0.70 | 0.70 | open | - |
 | 2026-10-23 06:50 | model-only | cs2 | NOCTIS | eternal premium | NO eternal premium | 35 | 0.31 | 0.51 | 0.30 | open | - |
+| 2026-10-23 06:50 | favourite | cs2 | eternal premium | NOCTIS | YES eternal premium | 11 | 0.72 | 0.70 | 0.70 | open | - |
 | 2026-10-23 06:50 | favourite | cs2 | ex-Zero Tenacity | ex-RUSTEC | NO ex-RUSTEC | 8 | 0.60 | 0.58 | 0.58 | open | - |
 | 2026-10-23 06:50 | model-only | cs2 | The Chosen Few | Copenhagen Wolves | YES The Chosen Few | 35 | 0.31 | 0.47 | 0.30 | open | - |
-| 2026-10-23 06:50 | favourite | cs2 | eternal premium | NOCTIS | YES eternal premium | 11 | 0.72 | 0.70 | 0.70 | open | - |
 | 2026-10-23 06:50 | model-only | dota2 | OG | 1win | NO 1win | 28 | 0.39 | 0.56 | 0.38 | open | - |
 | 2026-10-23 06:50 | favourite | dota2 | 1win | OG | YES 1win | 13 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-10-23 06:50 | model-only | valorant | CGN Esports | Natus Vincere | NO Natus Vincere | 20 | 0.56 | 0.80 | 0.56 | open | - |
@@ -61,9 +63,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-22 13:53 | model-only | dota2 | CyberHero | Yellow Submarine | YES CyberHero | 8 | 0.21 | 0.28 | 0.20 | won | $6.22 |
 | 2026-10-22 12:53 | model-only | cs2 | mellren | 33 | YES mellren | 1 | 0.37 | 0.56 | 0.36 | won | $0.61 |
 | 2026-10-22 12:38 | model-only | cs2 | Quintessence | Ryvex | YES Quintessence | 10 | 0.62 | 0.67 | 0.61 | won | $3.63 |
-| 2026-10-22 11:53 | favourite | cs2 | Tropa do KinGui | Martians | NO Martians | 9 | 0.90 | 0.89 | 0.89 | won | $0.84 |
-| 2026-10-22 11:53 | favourite | cs2 | FaZe | BC.Game Esports | NO BC.Game Esports | 14 | 0.57 | 0.56 | 0.56 | lost | -$8.23 |
-| 2026-10-22 11:53 | model-only | cs2 | KUUSAMO.gg | LPH Gaming | YES KUUSAMO.gg | 40 | 0.28 | 0.44 | 0.28 | lost | -$11.77 |
+| 2026-10-22 11:53 | favourite | cs2 | Spirit Academy Green | maybe | YES Spirit Academy Green | 9 | 0.58 | 0.55 | 0.54 | lost | -$5.38 |
 
 ## Backtest on real Kalshi prices
 
