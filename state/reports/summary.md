@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-23 10:06 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-23 10:11 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 318 | 35 | 283 | 82 | -$418.84 | -14.0% | -0.9c (309) | $581.16 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 499 | 50 | 449 | 310 | -$124.09 | -3.8% | -1.4c (489) | $875.91 |
+| model-only | Elo win model alone (control: ignores the market) | 318 | 34 | 284 | 82 | -$430.22 | -14.4% | -0.9c (309) | $569.78 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 499 | 49 | 450 | 311 | -$121.17 | -3.7% | -1.4c (489) | $878.83 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -58,10 +58,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-23 07:50 | favourite | dota2 | Novus Gaming | Team Nemesis Academy | NO Team Nemesis Academy | 11 | 0.75 | 0.74 | 0.74 | open | - |
 | 2026-10-23 07:50 | model-only | dota2 | Team Nemesis Academy | Novus Gaming | YES Team Nemesis Academy | 3 | 0.27 | 0.40 | 0.26 | open | - |
 | 2026-10-23 07:50 | favourite | dota2 | salamit | Nemiga Gaming | YES salamit | 15 | 0.55 | 0.54 | 0.54 | open | - |
-| 2026-10-23 06:50 | favourite | cs2 | Copenhagen Wolves | The Chosen Few | YES Copenhagen Wolves | 11 | 0.72 | 0.70 | 0.70 | open | - |
+| 2026-10-23 06:50 | favourite | cs2 | Copenhagen Wolves | The Chosen Few | YES Copenhagen Wolves | 11 | 0.72 | 0.70 | 0.70 | won | $2.92 |
 | 2026-10-23 06:50 | model-only | cs2 | NOCTIS | eternal premium | NO eternal premium | 35 | 0.31 | 0.51 | 0.30 | open | - |
 | 2026-10-23 06:50 | favourite | cs2 | ex-Zero Tenacity | ex-RUSTEC | NO ex-RUSTEC | 8 | 0.60 | 0.58 | 0.58 | open | - |
-| 2026-10-23 06:50 | model-only | cs2 | The Chosen Few | Copenhagen Wolves | YES The Chosen Few | 35 | 0.31 | 0.47 | 0.30 | open | - |
+| 2026-10-23 06:50 | model-only | cs2 | The Chosen Few | Copenhagen Wolves | YES The Chosen Few | 35 | 0.31 | 0.47 | 0.30 | lost | -$11.38 |
 | 2026-10-23 06:50 | favourite | cs2 | eternal premium | NOCTIS | YES eternal premium | 11 | 0.72 | 0.70 | 0.70 | open | - |
 | 2026-10-23 06:50 | model-only | dota2 | OG | 1win | NO 1win | 28 | 0.39 | 0.56 | 0.38 | open | - |
 
