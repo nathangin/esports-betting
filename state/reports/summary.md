@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-23 15:22 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-23 15:52 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 322 | 29 | 293 | 85 | -$414.91 | -13.5% | -1.0c (317) | $585.09 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 509 | 47 | 462 | 318 | -$144.37 | -4.3% | -1.4c (504) | $855.63 |
+| model-only | Elo win model alone (control: ignores the market) | 322 | 29 | 293 | 85 | -$414.91 | -13.5% | -0.9c (318) | $585.09 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 509 | 47 | 462 | 318 | -$144.37 | -4.3% | -1.4c (505) | $855.63 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
