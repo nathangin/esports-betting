@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-23 16:17 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-23 16:22 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-23 16:17 UTC. Model fitted 2026-10-19T16:33. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 322 | 28 | 294 | 86 | -$400.28 | -13.0% | -0.9c (318) | $599.72 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 509 | 46 | 463 | 318 | -$153.15 | -4.5% | -1.4c (505) | $846.85 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 509 | 44 | 465 | 320 | -$144.60 | -4.2% | -1.4c (505) | $855.40 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -44,9 +44,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-23 13:51 | favourite | dota2 | Team Lynx | Inner Circle | YES Team Lynx | 11 | 0.73 | 0.72 | 0.72 | open | - |
 | 2026-10-23 12:51 | favourite | dota2 | BetBoom Team | Astra Invicta | YES BetBoom Team | 15 | 0.54 | 0.53 | 0.53 | open | - |
 | 2026-10-23 12:51 | favourite | cs2 | INOX Division | Team ACES | NO Team ACES | 5 | 0.60 | 0.56 | 0.56 | open | - |
-| 2026-10-23 11:51 | favourite | cs2 | WBT Academy | LPH Gaming | NO LPH Gaming | 13 | 0.65 | 0.63 | 0.63 | open | - |
+| 2026-10-23 11:51 | favourite | cs2 | WBT Academy | LPH Gaming | NO LPH Gaming | 13 | 0.65 | 0.63 | 0.63 | won | $4.34 |
 | 2026-10-23 11:51 | favourite | cs2 | K27 | Virtus.pro | YES K27 | 15 | 0.55 | 0.55 | 0.55 | lost | -$8.51 |
-| 2026-10-23 11:51 | favourite | cs2 | Sokerorg | maybe | YES Sokerorg | 13 | 0.66 | 0.64 | 0.64 | open | - |
+| 2026-10-23 11:51 | favourite | cs2 | Sokerorg | maybe | YES Sokerorg | 13 | 0.66 | 0.64 | 0.64 | won | $4.21 |
 | 2026-10-23 11:51 | favourite | cs2 | ALKA | Los Ninos | YES ALKA | 11 | 0.78 | 0.77 | 0.77 | open | - |
 | 2026-10-23 11:51 | model-only | cs2 | Los Ninos | ALKA | YES Los Ninos | 29 | 0.24 | 0.42 | 0.23 | open | - |
 | 2026-10-23 11:51 | favourite | cs2 | Eternal Fire | JiJieHao | NO JiJieHao | 15 | 0.57 | 0.57 | 0.57 | open | - |
