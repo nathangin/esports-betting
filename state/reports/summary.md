@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-23 17:52 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-23 18:02 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 325 | 29 | 296 | 88 | -$362.84 | -11.7% | -0.9c (320) | $637.16 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 509 | 40 | 469 | 321 | -$167.50 | -4.9% | -1.4c (505) | $832.50 |
+| model-only | Elo win model alone (control: ignores the market) | 325 | 28 | 297 | 88 | -$371.79 | -11.9% | -0.9c (320) | $628.21 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 509 | 38 | 471 | 322 | -$169.50 | -4.9% | -1.4c (505) | $830.50 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,20 +16,20 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1110 finished matches. Lower is better; the market line is the bar to beat.
+1112 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5718 | 0.1953 |
-| model | 0.6562 | 0.2323 |
-| blend | 0.5705 | 0.1949 |
+| market | 0.5715 | 0.1952 |
+| model | 0.6561 | 0.2322 |
+| blend | 0.5702 | 0.1948 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 731 | 0.5859 | 0.6634 |
+| cs2 | 732 | 0.5859 | 0.6636 |
 | dota2 | 170 | 0.5501 | 0.6477 |
+| lol | 63 | 0.5425 | 0.6970 |
 | ow | 63 | 0.4710 | 0.5157 |
-| lol | 62 | 0.5472 | 0.7027 |
 | valorant | 46 | 0.5477 | 0.6593 |
 | r6 | 38 | 0.6330 | 0.7095 |
 
@@ -44,12 +44,12 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-23 16:52 | model-only | cs2 | OldBoys | Hermine Esports Club | NO Hermine Esports Club | 16 | 0.55 | 0.67 | 0.53 | open | - |
 | 2026-10-23 14:52 | favourite | cs2 | BORRACHEIROS | QUINTESSENCIA | YES BORRACHEIROS | 4 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-10-23 14:52 | model-only | cs2 | QUINTESSENCIA | BORRACHEIROS | NO BORRACHEIROS | 3 | 0.32 | 0.55 | 0.31 | open | - |
-| 2026-10-23 13:51 | favourite | dota2 | Team Lynx | Inner Circle | YES Team Lynx | 11 | 0.73 | 0.72 | 0.72 | open | - |
+| 2026-10-23 13:51 | favourite | dota2 | Team Lynx | Inner Circle | YES Team Lynx | 11 | 0.73 | 0.72 | 0.72 | lost | -$8.19 |
 | 2026-10-23 12:51 | favourite | dota2 | BetBoom Team | Astra Invicta | YES BetBoom Team | 15 | 0.54 | 0.53 | 0.53 | lost | -$8.37 |
 | 2026-10-23 12:51 | favourite | cs2 | INOX Division | Team ACES | NO Team ACES | 5 | 0.60 | 0.56 | 0.56 | won | $1.91 |
 | 2026-10-23 11:51 | favourite | cs2 | ALKA | Los Ninos | YES ALKA | 11 | 0.78 | 0.77 | 0.77 | open | - |
-| 2026-10-23 11:51 | model-only | cs2 | JiJieHao | Eternal Fire | NO Eternal Fire | 20 | 0.43 | 0.48 | 0.43 | open | - |
-| 2026-10-23 11:51 | favourite | cs2 | Eternal Fire | JiJieHao | NO JiJieHao | 15 | 0.57 | 0.57 | 0.57 | open | - |
+| 2026-10-23 11:51 | model-only | cs2 | JiJieHao | Eternal Fire | NO Eternal Fire | 20 | 0.43 | 0.48 | 0.43 | lost | -$8.95 |
+| 2026-10-23 11:51 | favourite | cs2 | Eternal Fire | JiJieHao | NO JiJieHao | 15 | 0.57 | 0.57 | 0.57 | won | $6.19 |
 | 2026-10-23 11:51 | model-only | cs2 | Los Ninos | ALKA | YES Los Ninos | 29 | 0.24 | 0.42 | 0.23 | open | - |
 | 2026-10-23 11:51 | favourite | cs2 | Sokerorg | maybe | YES Sokerorg | 13 | 0.66 | 0.64 | 0.64 | won | $4.21 |
 | 2026-10-23 11:51 | favourite | cs2 | K27 | Virtus.pro | YES K27 | 15 | 0.55 | 0.55 | 0.55 | lost | -$8.51 |
