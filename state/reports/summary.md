@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-23 10:36 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-23 10:51 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 318 | 33 | 285 | 82 | -$431.58 | -14.4% | -0.9c (309) | $568.42 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 499 | 48 | 451 | 312 | -$120.25 | -3.6% | -1.4c (489) | $879.75 |
+| model-only | Elo win model alone (control: ignores the market) | 319 | 34 | 285 | 82 | -$431.58 | -14.4% | -1.0c (314) | $568.42 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 500 | 49 | 451 | 312 | -$120.25 | -3.6% | -1.3c (495) | $879.75 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,17 +39,19 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-23 09:51 | favourite | valorant | Eternal Fire | Eintracht Frankfurt | YES Eternal Fire | 14 | 0.58 | 0.57 | 0.57 | open | - |
+| 2026-10-23 10:51 | favourite | dota2 | Dawn Bulls | Team Synapse | YES Dawn Bulls | 14 | 0.61 | 0.59 | 0.59 | open | - |
+| 2026-10-23 10:51 | model-only | dota2 | Team Synapse | Dawn Bulls | YES Team Synapse | 26 | 0.42 | 0.51 | 0.41 | open | - |
 | 2026-10-23 09:51 | model-only | dota2 | GamerLegion | Team Liquid | YES GamerLegion | 50 | 0.22 | 0.37 | 0.23 | open | - |
-| 2026-10-23 09:51 | favourite | cs2 | Nuclear TigeRES | ILLYRIANS | NO ILLYRIANS | 9 | 0.87 | 0.85 | 0.85 | open | - |
+| 2026-10-23 09:51 | model-only | cs2 | ILLYRIANS | Nuclear TigeRES | NO Nuclear TigeRES | 64 | 0.17 | 0.36 | 0.15 | open | - |
 | 2026-10-23 09:51 | model-only | cs2 | Spirit Academy | Inner Circle Academy | NO Inner Circle Academy | 20 | 0.56 | 0.63 | 0.55 | open | - |
 | 2026-10-23 09:51 | favourite | cs2 | Spirit Academy | Inner Circle Academy | NO Inner Circle Academy | 15 | 0.56 | 0.56 | 0.55 | open | - |
 | 2026-10-23 09:51 | favourite | cs2 | XI Esport | eSuba | YES XI Esport | 14 | 0.57 | 0.55 | 0.55 | open | - |
-| 2026-10-23 09:51 | model-only | cs2 | ILLYRIANS | Nuclear TigeRES | NO Nuclear TigeRES | 64 | 0.17 | 0.36 | 0.15 | open | - |
+| 2026-10-23 09:51 | favourite | cs2 | Nuclear TigeRES | ILLYRIANS | NO ILLYRIANS | 9 | 0.87 | 0.85 | 0.85 | open | - |
 | 2026-10-23 09:51 | favourite | dota2 | Team Liquid | GamerLegion | YES Team Liquid | 11 | 0.77 | 0.78 | 0.78 | open | - |
-| 2026-10-23 09:51 | model-only | valorant | FunPlus Phoenix | Dragon Ranger Gaming | YES FunPlus Phoenix | 24 | 0.45 | 0.65 | 0.45 | open | - |
 | 2026-10-23 09:51 | favourite | valorant | Dragon Ranger Gaming | FunPlus Phoenix | YES Dragon Ranger Gaming | 15 | 0.56 | 0.55 | 0.55 | open | - |
 | 2026-10-23 09:51 | model-only | valorant | Eintracht Frankfurt | Eternal Fire | NO Eternal Fire | 25 | 0.43 | 0.62 | 0.43 | open | - |
+| 2026-10-23 09:51 | model-only | valorant | FunPlus Phoenix | Dragon Ranger Gaming | YES FunPlus Phoenix | 24 | 0.45 | 0.65 | 0.45 | open | - |
+| 2026-10-23 09:51 | favourite | valorant | Eternal Fire | Eintracht Frankfurt | YES Eternal Fire | 14 | 0.58 | 0.57 | 0.57 | open | - |
 | 2026-10-23 08:51 | favourite | cs2 | Team Nemesis | Team ACES | YES Team Nemesis | 7 | 0.85 | 0.81 | 0.81 | open | - |
 | 2026-10-23 08:20 | favourite | ow | Falcons | ZANSIDE GAMING | YES Falcons | 9 | 0.89 | 0.86 | 0.86 | won | $0.92 |
 | 2026-10-23 08:20 | model-only | ow | ZANSIDE GAMING | Falcons | YES ZANSIDE GAMING | 8 | 0.16 | 0.35 | 0.14 | lost | -$1.36 |
@@ -60,10 +62,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-23 07:50 | favourite | dota2 | salamit | Nemiga Gaming | YES salamit | 15 | 0.55 | 0.54 | 0.54 | open | - |
 | 2026-10-23 06:50 | favourite | cs2 | Copenhagen Wolves | The Chosen Few | YES Copenhagen Wolves | 11 | 0.72 | 0.70 | 0.70 | won | $2.92 |
 | 2026-10-23 06:50 | model-only | cs2 | NOCTIS | eternal premium | NO eternal premium | 35 | 0.31 | 0.51 | 0.30 | open | - |
-| 2026-10-23 06:50 | favourite | cs2 | ex-Zero Tenacity | ex-RUSTEC | NO ex-RUSTEC | 8 | 0.60 | 0.58 | 0.58 | open | - |
-| 2026-10-23 06:50 | model-only | cs2 | The Chosen Few | Copenhagen Wolves | YES The Chosen Few | 35 | 0.31 | 0.47 | 0.30 | lost | -$11.38 |
 | 2026-10-23 06:50 | favourite | cs2 | eternal premium | NOCTIS | YES eternal premium | 11 | 0.72 | 0.70 | 0.70 | open | - |
-| 2026-10-23 06:50 | model-only | dota2 | OG | 1win | NO 1win | 28 | 0.39 | 0.56 | 0.38 | open | - |
+| 2026-10-23 06:50 | model-only | cs2 | The Chosen Few | Copenhagen Wolves | YES The Chosen Few | 35 | 0.31 | 0.47 | 0.30 | lost | -$11.38 |
 
 ## Backtest on real Kalshi prices
 
