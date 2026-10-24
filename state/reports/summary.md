@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-24 10:54 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-24 11:09 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-24 10:54 UTC. Model fitted 2026-10-19T16:33. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 342 | 36 | 306 | 93 | -$338.54 | -10.6% | -0.9c (337) | $661.46 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 536 | 53 | 483 | 330 | -$173.24 | -4.9% | -1.4c (530) | $826.76 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 536 | 53 | 483 | 330 | -$173.24 | -4.9% | -1.3c (530) | $826.76 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1147 finished matches. Lower is better; the market line is the bar to beat.
+1148 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5721 | 0.1955 |
+| market | 0.5724 | 0.1956 |
 | model | 0.6565 | 0.2325 |
-| blend | 0.5708 | 0.1951 |
+| blend | 0.5711 | 0.1952 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 750 | 0.5866 | 0.6628 |
-| dota2 | 174 | 0.5504 | 0.6482 |
+| dota2 | 175 | 0.5525 | 0.6482 |
 | lol | 68 | 0.5539 | 0.7164 |
 | ow | 66 | 0.4712 | 0.5150 |
 | valorant | 49 | 0.5508 | 0.6655 |
