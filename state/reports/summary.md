@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-24 14:20 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-24 14:50 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 344 | 30 | 314 | 96 | -$232.71 | -7.1% | -0.9c (338) | $767.29 |
+| model-only | Elo win model alone (control: ignores the market) | 345 | 31 | 314 | 96 | -$232.71 | -7.1% | -0.9c (338) | $767.29 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 540 | 44 | 496 | 338 | -$181.94 | -5.0% | -1.4c (536) | $818.06 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -16,20 +16,20 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1163 finished matches. Lower is better; the market line is the bar to beat.
+1164 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5737 | 0.1961 |
+| market | 0.5745 | 0.1965 |
 | model | 0.6577 | 0.2330 |
-| blend | 0.5726 | 0.1958 |
+| blend | 0.5735 | 0.1962 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 760 | 0.5890 | 0.6639 |
 | dota2 | 176 | 0.5544 | 0.6535 |
 | lol | 68 | 0.5539 | 0.7164 |
-| ow | 67 | 0.4719 | 0.5139 |
+| ow | 68 | 0.4862 | 0.5160 |
 | valorant | 51 | 0.5433 | 0.6613 |
 | r6 | 41 | 0.6110 | 0.6928 |
 
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-24 14:50 | model-only | cs2 | DENDELE CS | FURIA | YES DENDELE CS | 1 | 0.18 | 0.36 | 0.17 | open | - |
 | 2026-10-24 14:20 | model-only | cs2 | SPARX | X-CITY | YES SPARX | 22 | 0.48 | 0.54 | 0.46 | open | - |
 | 2026-10-24 14:20 | model-only | cs2 | ZOTIX | prodigy | NO prodigy | 35 | 0.42 | 0.50 | 0.40 | open | - |
 | 2026-10-24 12:35 | favourite | cs2 | Phantom Academy | TitanFlow | NO TitanFlow | 1 | 0.68 | 0.68 | 0.68 | open | - |
@@ -53,8 +54,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-24 09:54 | favourite | cs2 | HAVU | Azuolas | NO Azuolas | 10 | 0.79 | 0.79 | 0.79 | won | $1.98 |
 | 2026-10-24 09:54 | favourite | cs2 | Spirit Academy | Lavked | YES Spirit Academy | 12 | 0.65 | 0.65 | 0.65 | won | $4.00 |
 | 2026-10-24 09:54 | model-only | cs2 | mellren | Team Nemesis | YES mellren | 6 | 0.25 | 0.38 | 0.24 | lost | -$1.58 |
-| 2026-10-24 09:54 | favourite | cs2 | Donstu Esports | Quintessence | NO Quintessence | 14 | 0.55 | 0.54 | 0.54 | won | $6.05 |
 | 2026-10-24 09:54 | favourite | cs2 | XI Esport | Wingman | YES XI Esport | 13 | 0.61 | 0.58 | 0.58 | lost | -$8.15 |
+| 2026-10-24 09:54 | favourite | cs2 | Donstu Esports | Quintessence | NO Quintessence | 14 | 0.55 | 0.54 | 0.54 | won | $6.05 |
 | 2026-10-24 09:54 | favourite | dota2 | Team Yandex | OG | NO OG | 5 | 0.81 | 0.80 | 0.80 | open | - |
 | 2026-10-24 09:54 | favourite | valorant | Dragon Ranger Gaming | TEC Esports | YES Dragon Ranger Gaming | 13 | 0.61 | 0.60 | 0.60 | won | $4.85 |
 | 2026-10-24 09:24 | favourite | valorant | FUT Esports | Fire Flux Esports | NO Fire Flux Esports | 15 | 0.53 | 0.53 | 0.53 | open | - |
@@ -63,7 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-24 09:24 | model-only | cs2 | RoundsGG | megoshort | NO megoshort | 49 | 0.24 | 0.40 | 0.21 | lost | -$12.39 |
 | 2026-10-24 09:24 | favourite | cs2 | Passion Academy | Revenge | YES Passion Academy | 13 | 0.59 | 0.58 | 0.58 | lost | -$7.90 |
 | 2026-10-24 09:24 | model-only | cs2 | Revenge | Passion Academy | YES Revenge | 29 | 0.41 | 0.66 | 0.42 | won | $16.61 |
-| 2026-10-24 08:54 | favourite | cs2 | Spirit | BetBoom Team | YES Spirit | 10 | 0.79 | 0.79 | 0.79 | lost | -$8.02 |
 
 ## Backtest on real Kalshi prices
 
