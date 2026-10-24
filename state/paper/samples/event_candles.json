@@ -1,15 +1,97 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/events/KXCS2GAME-26OCT220400AZUBAKS/candlesticks?start_ts=1792654200&end_ts=1792656060&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXDOTA2GAME/events/KXDOTA2GAME-26OCT220500NEMAYG/candlesticks?start_ts=1792657800&end_ts=1792659660&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1792656060,
+  "adjusted_end_ts": 1792659660,
   "market_candlesticks": [
-   [],
-   []
+   [
+    {
+     "end_period_ts": 1792658340,
+     "open_interest_fp": "20.00",
+     "price": {
+      "previous_dollars": "0.1300"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4400",
+      "high_dollars": "0.4400",
+      "low_dollars": "0.2000",
+      "open_dollars": "0.2000"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1200",
+      "high_dollars": "0.1200",
+      "low_dollars": "0.1200",
+      "open_dollars": "0.1200"
+     }
+    },
+    {
+     "end_period_ts": 1792659660,
+     "open_interest_fp": "20.00",
+     "price": {
+      "previous_dollars": "0.1300"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.4400",
+      "high_dollars": "0.4400",
+      "low_dollars": "0.4400",
+      "open_dollars": "0.4400"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1200",
+      "high_dollars": "0.1200",
+      "low_dollars": "0.1200",
+      "open_dollars": "0.1200"
+     }
+    }
+   ],
+   [
+    {
+     "end_period_ts": 1792658340,
+     "open_interest_fp": "877.88",
+     "price": {
+      "previous_dollars": "0.8700"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.9000",
+      "high_dollars": "0.9000",
+      "low_dollars": "0.8800",
+      "open_dollars": "0.8800"
+     },
+     "yes_bid": {
+      "close_dollars": "0.7500",
+      "high_dollars": "0.7500",
+      "low_dollars": "0.7500",
+      "open_dollars": "0.7500"
+     }
+    },
+    {
+     "end_period_ts": 1792659660,
+     "open_interest_fp": "877.88",
+     "price": {
+      "previous_dollars": "0.8700"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.8800",
+      "high_dollars": "0.9000",
+      "low_dollars": "0.8800",
+      "open_dollars": "0.9000"
+     },
+     "yes_bid": {
+      "close_dollars": "0.7500",
+      "high_dollars": "0.7500",
+      "low_dollars": "0.7500",
+      "open_dollars": "0.7500"
+     }
+    }
+   ]
   ],
   "market_tickers": [
-   "KXCS2GAME-26OCT220400AZUBAKS-AZU",
-   "KXCS2GAME-26OCT220400AZUBAKS-BAKS"
+   "KXDOTA2GAME-26OCT220500NEMAYG-NEMA",
+   "KXDOTA2GAME-26OCT220500NEMAYG-YG"
   ]
  }
 }
