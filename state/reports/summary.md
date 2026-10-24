@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-24 04:54 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-24 05:14 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 327 | 27 | 300 | 90 | -$350.52 | -11.2% | -0.9c (323) | $649.48 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 511 | 37 | 474 | 324 | -$171.27 | -4.9% | -1.4c (507) | $828.73 |
+| model-only | Elo win model alone (control: ignores the market) | 327 | 26 | 301 | 91 | -$344.19 | -11.0% | -0.9c (323) | $655.81 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 511 | 36 | 475 | 325 | -$164.94 | -4.7% | -1.4c (507) | $835.06 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,8 +39,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-24 01:54 | favourite | dota2 | Resp Gaming | Team Nemesis Academy | NO Team Nemesis Academy | 14 | 0.53 | 0.51 | 0.51 | open | - |
-| 2026-10-24 01:54 | model-only | dota2 | Resp Gaming | Team Nemesis Academy | NO Team Nemesis Academy | 14 | 0.53 | 0.68 | 0.51 | open | - |
+| 2026-10-24 01:54 | favourite | dota2 | Resp Gaming | Team Nemesis Academy | NO Team Nemesis Academy | 14 | 0.53 | 0.51 | 0.51 | won | $6.33 |
+| 2026-10-24 01:54 | model-only | dota2 | Resp Gaming | Team Nemesis Academy | NO Team Nemesis Academy | 14 | 0.53 | 0.68 | 0.51 | won | $6.33 |
 | 2026-10-24 01:54 | favourite | cs2 | Chinggis Warriors | Rare Atom | NO Rare Atom | 1 | 0.65 | 0.65 | 0.65 | open | - |
 | 2026-10-24 01:54 | model-only | cs2 | Rare Atom | Chinggis Warriors | NO Chinggis Warriors | 33 | 0.37 | 0.50 | 0.35 | open | - |
 | 2026-10-23 17:22 | model-only | cs2 | Younglings | SINQU | YES Younglings | 5 | 0.60 | 0.67 | 0.59 | open | - |
