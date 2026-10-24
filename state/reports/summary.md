@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-24 16:25 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-24 16:50 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 345 | 30 | 315 | 97 | -$212.66 | -6.5% | -0.8c (341) | $787.34 |
+| model-only | Elo win model alone (control: ignores the market) | 347 | 32 | 315 | 97 | -$212.66 | -6.5% | -0.8c (341) | $787.34 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 540 | 38 | 502 | 341 | -$186.25 | -5.1% | -1.4c (536) | $813.75 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1170 finished matches. Lower is better; the market line is the bar to beat.
+1172 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
 | market | 0.5756 | 0.1970 |
-| model | 0.6568 | 0.2326 |
+| model | 0.6566 | 0.2325 |
 | blend | 0.5748 | 0.1968 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 764 | 0.5909 | 0.6632 |
-| dota2 | 177 | 0.5525 | 0.6515 |
+| cs2 | 765 | 0.5907 | 0.6632 |
+| dota2 | 178 | 0.5532 | 0.6505 |
 | lol | 68 | 0.5539 | 0.7164 |
 | ow | 68 | 0.4862 | 0.5160 |
 | valorant | 52 | 0.5472 | 0.6574 |
@@ -39,6 +39,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-24 16:50 | model-only | dota2 | TheBot$ | CyberHero | NO CyberHero | 1 | 0.19 | 0.31 | 0.18 | open | - |
+| 2026-10-24 16:50 | model-only | cs2 | Galorys | paiN | NO paiN | 11 | 0.42 | 0.64 | 0.42 | open | - |
 | 2026-10-24 14:50 | model-only | cs2 | DENDELE CS | FURIA | YES DENDELE CS | 1 | 0.18 | 0.36 | 0.17 | open | - |
 | 2026-10-24 14:20 | model-only | cs2 | SPARX | X-CITY | YES SPARX | 22 | 0.48 | 0.54 | 0.46 | open | - |
 | 2026-10-24 14:20 | model-only | cs2 | ZOTIX | prodigy | NO prodigy | 35 | 0.42 | 0.50 | 0.40 | open | - |
@@ -46,23 +48,21 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-24 11:50 | favourite | cs2 | Legacy | Nemiga | YES Legacy | 7 | 0.67 | 0.66 | 0.66 | lost | -$4.80 |
 | 2026-10-24 11:50 | favourite | cs2 | Tropa do KinGui | MEIA NOITE | NO MEIA NOITE | 12 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-10-24 11:50 | favourite | cs2 | Vitality | 9z | NO 9z | 9 | 0.84 | 0.83 | 0.83 | won | $1.35 |
-| 2026-10-24 10:54 | favourite | dota2 | Team Synapse | Zero Tenacity | YES Team Synapse | 15 | 0.53 | 0.51 | 0.51 | won | $6.78 |
 | 2026-10-24 10:54 | favourite | cs2 | G2 Ares | The Last Resort | YES G2 Ares | 10 | 0.77 | 0.75 | 0.75 | lost | -$7.83 |
 | 2026-10-24 10:54 | model-only | cs2 | The Last Resort | G2 Ares | NO G2 Ares | 28 | 0.27 | 0.45 | 0.25 | won | $20.05 |
-| 2026-10-24 09:54 | favourite | cs2 | Team Nemesis | mellren | YES Team Nemesis | 10 | 0.76 | 0.76 | 0.76 | won | $2.27 |
-| 2026-10-24 09:54 | model-only | cs2 | Azuolas | HAVU | YES Azuolas | 2 | 0.23 | 0.38 | 0.21 | lost | -$0.49 |
-| 2026-10-24 09:54 | favourite | cs2 | HAVU | Azuolas | NO Azuolas | 10 | 0.79 | 0.79 | 0.79 | won | $1.98 |
-| 2026-10-24 09:54 | favourite | cs2 | Spirit Academy | Lavked | YES Spirit Academy | 12 | 0.65 | 0.65 | 0.65 | won | $4.00 |
-| 2026-10-24 09:54 | model-only | cs2 | mellren | Team Nemesis | YES mellren | 6 | 0.25 | 0.38 | 0.24 | lost | -$1.58 |
+| 2026-10-24 10:54 | favourite | dota2 | Team Synapse | Zero Tenacity | YES Team Synapse | 15 | 0.53 | 0.51 | 0.51 | won | $6.78 |
+| 2026-10-24 09:54 | favourite | valorant | Dragon Ranger Gaming | TEC Esports | YES Dragon Ranger Gaming | 13 | 0.61 | 0.60 | 0.60 | won | $4.85 |
+| 2026-10-24 09:54 | favourite | dota2 | Team Yandex | OG | NO OG | 5 | 0.81 | 0.80 | 0.80 | won | $0.89 |
 | 2026-10-24 09:54 | favourite | cs2 | XI Esport | Wingman | YES XI Esport | 13 | 0.61 | 0.58 | 0.58 | lost | -$8.15 |
 | 2026-10-24 09:54 | favourite | cs2 | Donstu Esports | Quintessence | NO Quintessence | 14 | 0.55 | 0.54 | 0.54 | won | $6.05 |
-| 2026-10-24 09:54 | favourite | dota2 | Team Yandex | OG | NO OG | 5 | 0.81 | 0.80 | 0.80 | won | $0.89 |
-| 2026-10-24 09:54 | favourite | valorant | Dragon Ranger Gaming | TEC Esports | YES Dragon Ranger Gaming | 13 | 0.61 | 0.60 | 0.60 | won | $4.85 |
-| 2026-10-24 09:24 | favourite | valorant | FUT Esports | Fire Flux Esports | NO Fire Flux Esports | 15 | 0.53 | 0.53 | 0.53 | open | - |
-| 2026-10-24 09:24 | model-only | valorant | Fire Flux Esports | FUT Esports | YES Fire Flux Esports | 25 | 0.48 | 0.57 | 0.47 | open | - |
+| 2026-10-24 09:54 | favourite | cs2 | Team Nemesis | mellren | YES Team Nemesis | 10 | 0.76 | 0.76 | 0.76 | won | $2.27 |
+| 2026-10-24 09:54 | model-only | cs2 | mellren | Team Nemesis | YES mellren | 6 | 0.25 | 0.38 | 0.24 | lost | -$1.58 |
+| 2026-10-24 09:54 | favourite | cs2 | Spirit Academy | Lavked | YES Spirit Academy | 12 | 0.65 | 0.65 | 0.65 | won | $4.00 |
+| 2026-10-24 09:54 | favourite | cs2 | HAVU | Azuolas | NO Azuolas | 10 | 0.79 | 0.79 | 0.79 | won | $1.98 |
+| 2026-10-24 09:54 | model-only | cs2 | Azuolas | HAVU | YES Azuolas | 2 | 0.23 | 0.38 | 0.21 | lost | -$0.49 |
 | 2026-10-24 09:24 | favourite | cs2 | megoshort | RoundsGG | NO RoundsGG | 10 | 0.81 | 0.79 | 0.79 | won | $1.79 |
-| 2026-10-24 09:24 | model-only | cs2 | RoundsGG | megoshort | NO megoshort | 49 | 0.24 | 0.40 | 0.21 | lost | -$12.39 |
 | 2026-10-24 09:24 | favourite | cs2 | Passion Academy | Revenge | YES Passion Academy | 13 | 0.59 | 0.58 | 0.58 | lost | -$7.90 |
+| 2026-10-24 09:24 | model-only | cs2 | RoundsGG | megoshort | NO megoshort | 49 | 0.24 | 0.40 | 0.21 | lost | -$12.39 |
 | 2026-10-24 09:24 | model-only | cs2 | Revenge | Passion Academy | YES Revenge | 29 | 0.41 | 0.66 | 0.42 | won | $16.61 |
 
 ## Backtest on real Kalshi prices
