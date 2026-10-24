@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-24 15:50 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-24 15:55 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 345 | 31 | 314 | 96 | -$232.71 | -7.1% | -0.8c (341) | $767.29 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 540 | 42 | 498 | 339 | -$181.75 | -5.0% | -1.4c (536) | $818.25 |
+| model-only | Elo win model alone (control: ignores the market) | 345 | 30 | 315 | 97 | -$212.66 | -6.5% | -0.8c (341) | $787.34 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 540 | 41 | 499 | 339 | -$189.58 | -5.2% | -1.4c (536) | $810.42 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1166 finished matches. Lower is better; the market line is the bar to beat.
+1167 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5747 | 0.1966 |
-| model | 0.6573 | 0.2328 |
-| blend | 0.5737 | 0.1963 |
+| market | 0.5754 | 0.1969 |
+| model | 0.6574 | 0.2329 |
+| blend | 0.5745 | 0.1966 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 761 | 0.5897 | 0.6638 |
+| cs2 | 762 | 0.5908 | 0.6640 |
 | dota2 | 177 | 0.5525 | 0.6515 |
 | lol | 68 | 0.5539 | 0.7164 |
 | ow | 68 | 0.4862 | 0.5160 |
@@ -47,8 +47,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-24 11:50 | favourite | cs2 | Tropa do KinGui | MEIA NOITE | NO MEIA NOITE | 12 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-10-24 11:50 | favourite | cs2 | Vitality | 9z | NO 9z | 9 | 0.84 | 0.83 | 0.83 | open | - |
 | 2026-10-24 10:54 | favourite | dota2 | Team Synapse | Zero Tenacity | YES Team Synapse | 15 | 0.53 | 0.51 | 0.51 | open | - |
-| 2026-10-24 10:54 | favourite | cs2 | G2 Ares | The Last Resort | YES G2 Ares | 10 | 0.77 | 0.75 | 0.75 | open | - |
-| 2026-10-24 10:54 | model-only | cs2 | The Last Resort | G2 Ares | NO G2 Ares | 28 | 0.27 | 0.45 | 0.25 | open | - |
+| 2026-10-24 10:54 | favourite | cs2 | G2 Ares | The Last Resort | YES G2 Ares | 10 | 0.77 | 0.75 | 0.75 | lost | -$7.83 |
+| 2026-10-24 10:54 | model-only | cs2 | The Last Resort | G2 Ares | NO G2 Ares | 28 | 0.27 | 0.45 | 0.25 | won | $20.05 |
 | 2026-10-24 09:54 | favourite | cs2 | Team Nemesis | mellren | YES Team Nemesis | 10 | 0.76 | 0.76 | 0.76 | won | $2.27 |
 | 2026-10-24 09:54 | model-only | cs2 | Azuolas | HAVU | YES Azuolas | 2 | 0.23 | 0.38 | 0.21 | lost | -$0.49 |
 | 2026-10-24 09:54 | favourite | cs2 | HAVU | Azuolas | NO Azuolas | 10 | 0.79 | 0.79 | 0.79 | won | $1.98 |
