@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-24 19:41 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-24 19:51 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 348 | 29 | 319 | 98 | -$226.55 | -6.8% | -0.8c (344) | $773.45 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 540 | 36 | 504 | 342 | -$190.23 | -5.2% | -1.4c (536) | $809.77 |
+| model-only | Elo win model alone (control: ignores the market) | 349 | 29 | 320 | 99 | -$206.30 | -6.2% | -0.8c (344) | $793.70 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 540 | 35 | 505 | 342 | -$198.11 | -5.4% | -1.4c (536) | $801.89 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1186 finished matches. Lower is better; the market line is the bar to beat.
+1187 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5750 | 0.1967 |
-| model | 0.6568 | 0.2326 |
-| blend | 0.5740 | 0.1964 |
+| market | 0.5753 | 0.1969 |
+| model | 0.6569 | 0.2326 |
+| blend | 0.5744 | 0.1966 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 773 | 0.5903 | 0.6638 |
+| cs2 | 774 | 0.5908 | 0.6640 |
 | dota2 | 180 | 0.5503 | 0.6476 |
 | lol | 69 | 0.5514 | 0.7152 |
 | ow | 69 | 0.4926 | 0.5285 |
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-24 19:51 | model-only | valorant | SK Nebula | Shopify Rebellion GC | YES SK Nebula | 3 | 0.34 | 0.42 | 0.33 | open | - |
 | 2026-10-24 17:51 | model-only | cs2 | Los Ninos | BORRACHEIROS | NO BORRACHEIROS | 1 | 0.33 | 0.41 | 0.31 | open | - |
 | 2026-10-24 16:50 | model-only | dota2 | TheBot$ | CyberHero | NO CyberHero | 1 | 0.19 | 0.31 | 0.18 | open | - |
 | 2026-10-24 16:50 | model-only | cs2 | Galorys | paiN | NO paiN | 11 | 0.42 | 0.64 | 0.42 | open | - |
@@ -63,7 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-24 09:54 | model-only | cs2 | Azuolas | HAVU | YES Azuolas | 2 | 0.23 | 0.38 | 0.21 | lost | -$0.49 |
 | 2026-10-24 09:24 | favourite | cs2 | megoshort | RoundsGG | NO RoundsGG | 10 | 0.81 | 0.79 | 0.79 | won | $1.79 |
 | 2026-10-24 09:24 | model-only | cs2 | Revenge | Passion Academy | YES Revenge | 29 | 0.41 | 0.66 | 0.42 | won | $16.61 |
-| 2026-10-24 09:24 | model-only | cs2 | RoundsGG | megoshort | NO megoshort | 49 | 0.24 | 0.40 | 0.21 | lost | -$12.39 |
 
 ## Backtest on real Kalshi prices
 
