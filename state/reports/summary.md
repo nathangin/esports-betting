@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-24 14:50 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-24 14:55 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-24 14:50 UTC. Model fitted 2026-10-19T16:33. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 345 | 31 | 314 | 96 | -$232.71 | -7.1% | -0.9c (338) | $767.29 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 540 | 44 | 496 | 338 | -$181.94 | -5.0% | -1.4c (536) | $818.06 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 540 | 43 | 497 | 339 | -$181.05 | -5.0% | -1.4c (536) | $818.95 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -56,7 +56,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-24 09:54 | model-only | cs2 | mellren | Team Nemesis | YES mellren | 6 | 0.25 | 0.38 | 0.24 | lost | -$1.58 |
 | 2026-10-24 09:54 | favourite | cs2 | XI Esport | Wingman | YES XI Esport | 13 | 0.61 | 0.58 | 0.58 | lost | -$8.15 |
 | 2026-10-24 09:54 | favourite | cs2 | Donstu Esports | Quintessence | NO Quintessence | 14 | 0.55 | 0.54 | 0.54 | won | $6.05 |
-| 2026-10-24 09:54 | favourite | dota2 | Team Yandex | OG | NO OG | 5 | 0.81 | 0.80 | 0.80 | open | - |
+| 2026-10-24 09:54 | favourite | dota2 | Team Yandex | OG | NO OG | 5 | 0.81 | 0.80 | 0.80 | won | $0.89 |
 | 2026-10-24 09:54 | favourite | valorant | Dragon Ranger Gaming | TEC Esports | YES Dragon Ranger Gaming | 13 | 0.61 | 0.60 | 0.60 | won | $4.85 |
 | 2026-10-24 09:24 | favourite | valorant | FUT Esports | Fire Flux Esports | NO Fire Flux Esports | 15 | 0.53 | 0.53 | 0.53 | open | - |
 | 2026-10-24 09:24 | model-only | valorant | Fire Flux Esports | FUT Esports | YES Fire Flux Esports | 25 | 0.48 | 0.57 | 0.47 | open | - |
