@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-25 16:38 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-25 16:53 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 365 | 30 | 335 | 105 | -$244.42 | -7.0% | -0.8c (361) | $755.58 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 569 | 45 | 524 | 354 | -$192.81 | -5.0% | -1.3c (564) | $807.19 |
+| model-only | Elo win model alone (control: ignores the market) | 365 | 29 | 336 | 106 | -$230.43 | -6.6% | -0.8c (361) | $769.57 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 569 | 44 | 525 | 354 | -$200.33 | -5.2% | -1.4c (565) | $799.67 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,13 +16,13 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1236 finished matches. Lower is better; the market line is the bar to beat.
+1237 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5778 | 0.1979 |
-| model | 0.6574 | 0.2329 |
-| blend | 0.5771 | 0.1976 |
+| market | 0.5781 | 0.1980 |
+| model | 0.6575 | 0.2329 |
+| blend | 0.5774 | 0.1978 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
@@ -30,7 +30,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | dota2 | 184 | 0.5605 | 0.6466 |
 | ow | 78 | 0.5178 | 0.5419 |
 | lol | 74 | 0.5528 | 0.7199 |
-| valorant | 56 | 0.5588 | 0.6651 |
+| valorant | 57 | 0.5654 | 0.6675 |
 | r6 | 43 | 0.6007 | 0.6818 |
 
 ## Latest bets
@@ -59,8 +59,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-25 10:52 | favourite | cs2 | Spirit Academy | Sokerorg | YES Spirit Academy | 10 | 0.74 | 0.72 | 0.72 | won | $2.46 |
 | 2026-10-25 10:52 | favourite | cs2 | Metizport | BakS eSports | NO BakS eSports | 12 | 0.64 | 0.62 | 0.62 | won | $4.12 |
 | 2026-10-25 10:52 | model-only | cs2 | BakS eSports | Metizport | NO Metizport | 38 | 0.38 | 0.45 | 0.38 | lost | -$15.07 |
-| 2026-10-25 10:22 | favourite | valorant | Fire Flux Esports | BBL Esports | NO BBL Esports | 12 | 0.61 | 0.61 | 0.61 | open | - |
-| 2026-10-25 10:22 | model-only | valorant | BBL Esports | Fire Flux Esports | YES BBL Esports | 24 | 0.40 | 0.45 | 0.39 | open | - |
+| 2026-10-25 10:22 | favourite | valorant | Fire Flux Esports | BBL Esports | NO BBL Esports | 12 | 0.61 | 0.61 | 0.61 | lost | -$7.52 |
+| 2026-10-25 10:22 | model-only | valorant | BBL Esports | Fire Flux Esports | YES BBL Esports | 24 | 0.40 | 0.45 | 0.39 | won | $13.99 |
 | 2026-10-25 10:22 | favourite | cs2 | Bread Eaters Esports | Gatorian | YES Bread Eaters Esports | 14 | 0.54 | 0.53 | 0.53 | lost | -$7.81 |
 | 2026-10-25 10:22 | model-only | cs2 | Gatorian | Bread Eaters Esports | YES Gatorian | 29 | 0.49 | 0.58 | 0.47 | won | $14.28 |
 | 2026-10-25 10:22 | favourite | cs2 | ILLYRIANS | eSuba | YES ILLYRIANS | 14 | 0.52 | 0.51 | 0.51 | open | - |
