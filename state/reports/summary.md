@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-25 09:43 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-25 09:53 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 356 | 32 | 324 | 99 | -$228.19 | -6.8% | -0.8c (352) | $771.81 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 549 | 43 | 506 | 343 | -$197.37 | -5.3% | -1.4c (545) | $802.63 |
+| model-only | Elo win model alone (control: ignores the market) | 357 | 33 | 324 | 99 | -$228.19 | -6.8% | -0.8c (352) | $771.81 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 552 | 46 | 506 | 343 | -$197.37 | -5.3% | -1.4c (545) | $802.63 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-25 07:52 | favourite | valorant | Nova Esports | Dragon Ranger Gaming | NO Dragon Ranger Gaming | 13 | 0.58 | 0.58 | 0.58 | open | - |
-| 2026-10-25 07:52 | model-only | valorant | Nova Esports | Dragon Ranger Gaming | NO Dragon Ranger Gaming | 26 | 0.58 | 0.67 | 0.58 | open | - |
-| 2026-10-25 07:52 | favourite | ow | Crazy Raccoon | ZETA DIVISION | YES Crazy Raccoon | 1 | 0.53 | 0.53 | 0.53 | open | - |
-| 2026-10-25 07:52 | model-only | ow | ZETA DIVISION | Crazy Raccoon | YES ZETA DIVISION | 6 | 0.48 | 0.59 | 0.47 | open | - |
+| 2026-10-25 09:52 | favourite | cs2 | BetBoom Team | Nemiga | YES BetBoom Team | 13 | 0.59 | 0.58 | 0.58 | open | - |
+| 2026-10-25 09:52 | model-only | cs2 | Nemiga | BetBoom Team | NO BetBoom Team | 35 | 0.42 | 0.65 | 0.42 | open | - |
+| 2026-10-25 09:52 | favourite | cs2 | Vitality | TheMongolz | NO TheMongolz | 10 | 0.74 | 0.73 | 0.73 | open | - |
+| 2026-10-25 09:52 | favourite | cs2 | ex-Zero Tenacity | Spirit Academy | YES ex-Zero Tenacity | 13 | 0.58 | 0.55 | 0.55 | open | - |
 | 2026-10-25 07:52 | favourite | dota2 | Team Lynx | salamit | YES Team Lynx | 12 | 0.62 | 0.61 | 0.61 | open | - |
-| 2026-10-25 07:52 | model-only | dota2 | Team Lynx | salamit | YES Team Lynx | 24 | 0.62 | 0.75 | 0.61 | open | - |
-| 2026-10-25 07:52 | favourite | cs2 | UNiTY esports | Acend | NO Acend | 13 | 0.59 | 0.59 | 0.59 | open | - |
-| 2026-10-25 07:52 | model-only | cs2 | UNiTY esports | Acend | NO Acend | 25 | 0.59 | 0.66 | 0.59 | open | - |
-| 2026-10-25 07:52 | favourite | cs2 | MOUZ NXT | Vexar | YES MOUZ NXT | 13 | 0.56 | 0.52 | 0.52 | open | - |
 | 2026-10-25 07:52 | favourite | cs2 | mellren | Lavked | NO Lavked | 12 | 0.64 | 0.63 | 0.63 | open | - |
-| 2026-10-25 06:52 | model-only | cs2 | TYLOO | Spirit | NO Spirit | 134 | 0.11 | 0.23 | 0.10 | lost | -$15.66 |
+| 2026-10-25 07:52 | model-only | cs2 | UNiTY esports | Acend | NO Acend | 25 | 0.59 | 0.66 | 0.59 | open | - |
+| 2026-10-25 07:52 | favourite | cs2 | UNiTY esports | Acend | NO Acend | 13 | 0.59 | 0.59 | 0.59 | open | - |
+| 2026-10-25 07:52 | model-only | dota2 | Team Lynx | salamit | YES Team Lynx | 24 | 0.62 | 0.75 | 0.61 | open | - |
+| 2026-10-25 07:52 | favourite | cs2 | MOUZ NXT | Vexar | YES MOUZ NXT | 13 | 0.56 | 0.52 | 0.52 | open | - |
+| 2026-10-25 07:52 | model-only | ow | ZETA DIVISION | Crazy Raccoon | YES ZETA DIVISION | 6 | 0.48 | 0.59 | 0.47 | open | - |
+| 2026-10-25 07:52 | model-only | valorant | Nova Esports | Dragon Ranger Gaming | NO Dragon Ranger Gaming | 26 | 0.58 | 0.67 | 0.58 | open | - |
+| 2026-10-25 07:52 | favourite | valorant | Nova Esports | Dragon Ranger Gaming | NO Dragon Ranger Gaming | 13 | 0.58 | 0.58 | 0.58 | open | - |
+| 2026-10-25 07:52 | favourite | ow | Crazy Raccoon | ZETA DIVISION | YES Crazy Raccoon | 1 | 0.53 | 0.53 | 0.53 | open | - |
+| 2026-10-25 06:52 | favourite | cs2 | Spirit | TYLOO | YES Spirit | 8 | 0.90 | 0.90 | 0.90 | won | $0.74 |
 | 2026-10-25 06:52 | model-only | cs2 | Liquid | FUT Esports | NO FUT Esports | 53 | 0.28 | 0.44 | 0.28 | open | - |
 | 2026-10-25 06:52 | favourite | cs2 | FUT Esports | Liquid | YES FUT Esports | 10 | 0.73 | 0.72 | 0.72 | open | - |
+| 2026-10-25 06:52 | model-only | cs2 | TYLOO | Spirit | NO Spirit | 134 | 0.11 | 0.23 | 0.10 | lost | -$15.66 |
 | 2026-10-25 06:52 | model-only | dota2 | OG | Team Liquid | NO Team Liquid | 36 | 0.42 | 0.50 | 0.41 | open | - |
-| 2026-10-25 06:52 | favourite | cs2 | Spirit | TYLOO | YES Spirit | 8 | 0.90 | 0.90 | 0.90 | won | $0.74 |
 | 2026-10-25 06:52 | favourite | dota2 | Team Liquid | OG | YES Team Liquid | 13 | 0.60 | 0.59 | 0.59 | open | - |
 | 2026-10-24 19:51 | model-only | valorant | SK Nebula | Shopify Rebellion GC | YES SK Nebula | 3 | 0.34 | 0.42 | 0.33 | lost | -$1.07 |
 | 2026-10-24 17:51 | model-only | cs2 | Los Ninos | BORRACHEIROS | NO BORRACHEIROS | 1 | 0.33 | 0.41 | 0.31 | lost | -$0.35 |
 | 2026-10-24 16:50 | model-only | dota2 | TheBot$ | CyberHero | NO CyberHero | 1 | 0.19 | 0.31 | 0.18 | open | - |
 | 2026-10-24 16:50 | model-only | cs2 | Galorys | paiN | NO paiN | 11 | 0.42 | 0.64 | 0.42 | lost | -$4.81 |
 | 2026-10-24 14:50 | model-only | cs2 | DENDELE CS | FURIA | YES DENDELE CS | 1 | 0.18 | 0.36 | 0.17 | lost | -$0.20 |
-| 2026-10-24 14:20 | model-only | cs2 | SPARX | X-CITY | YES SPARX | 22 | 0.48 | 0.54 | 0.46 | lost | -$10.95 |
-| 2026-10-24 14:20 | model-only | cs2 | ZOTIX | prodigy | NO prodigy | 35 | 0.42 | 0.50 | 0.40 | lost | -$15.30 |
-| 2026-10-24 12:35 | favourite | cs2 | Phantom Academy | TitanFlow | NO TitanFlow | 1 | 0.68 | 0.68 | 0.68 | lost | -$0.70 |
-| 2026-10-24 11:50 | favourite | cs2 | Vitality | 9z | NO 9z | 9 | 0.84 | 0.83 | 0.83 | won | $1.35 |
 
 ## Backtest on real Kalshi prices
 
