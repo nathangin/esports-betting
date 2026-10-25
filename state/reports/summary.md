@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-25 15:23 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-25 15:43 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 365 | 31 | 334 | 104 | -$254.49 | -7.3% | -0.8c (360) | $745.51 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 568 | 48 | 520 | 351 | -$200.63 | -5.3% | -1.3c (562) | $799.37 |
+| model-only | Elo win model alone (control: ignores the market) | 365 | 30 | 335 | 105 | -$244.42 | -7.0% | -0.8c (360) | $755.58 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 568 | 46 | 522 | 352 | -$203.27 | -5.3% | -1.3c (562) | $796.73 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1230 finished matches. Lower is better; the market line is the bar to beat.
+1232 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5778 | 0.1978 |
-| model | 0.6578 | 0.2330 |
-| blend | 0.5770 | 0.1976 |
+| market | 0.5774 | 0.1977 |
+| model | 0.6572 | 0.2328 |
+| blend | 0.5766 | 0.1974 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 797 | 0.5901 | 0.6640 |
-| dota2 | 182 | 0.5599 | 0.6472 |
+| cs2 | 798 | 0.5901 | 0.6636 |
+| dota2 | 183 | 0.5573 | 0.6446 |
 | ow | 78 | 0.5178 | 0.5419 |
 | lol | 74 | 0.5528 | 0.7199 |
 | valorant | 56 | 0.5588 | 0.6651 |
@@ -52,11 +52,11 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-25 12:52 | favourite | dota2 | Team Spirit | Astra Invicta | YES Team Spirit | 9 | 0.83 | 0.83 | 0.83 | open | - |
 | 2026-10-25 12:52 | model-only | cs2 | Acend | INOX Division | YES Acend | 4 | 0.36 | 0.41 | 0.34 | won | $2.49 |
 | 2026-10-25 12:52 | favourite | cs2 | INOX Division | Acend | YES INOX Division | 1 | 0.67 | 0.66 | 0.66 | lost | -$0.69 |
-| 2026-10-25 11:52 | favourite | cs2 | STATE | G2 Ares | NO G2 Ares | 13 | 0.58 | 0.56 | 0.56 | open | - |
-| 2026-10-25 11:52 | model-only | cs2 | STATE | G2 Ares | NO G2 Ares | 25 | 0.58 | 0.67 | 0.56 | open | - |
+| 2026-10-25 11:52 | favourite | cs2 | STATE | G2 Ares | NO G2 Ares | 13 | 0.58 | 0.56 | 0.56 | won | $5.23 |
+| 2026-10-25 11:52 | model-only | cs2 | STATE | G2 Ares | NO G2 Ares | 25 | 0.58 | 0.67 | 0.56 | won | $10.07 |
 | 2026-10-25 10:52 | favourite | cs2 | Metizport | BakS eSports | NO BakS eSports | 12 | 0.64 | 0.62 | 0.62 | won | $4.12 |
 | 2026-10-25 10:52 | model-only | cs2 | BakS eSports | Metizport | NO Metizport | 38 | 0.38 | 0.45 | 0.38 | lost | -$15.07 |
-| 2026-10-25 10:52 | favourite | dota2 | Inner Circle | Nemiga Gaming | YES Inner Circle | 11 | 0.70 | 0.68 | 0.68 | open | - |
+| 2026-10-25 10:52 | favourite | dota2 | Inner Circle | Nemiga Gaming | YES Inner Circle | 11 | 0.70 | 0.68 | 0.68 | lost | -$7.87 |
 | 2026-10-25 10:52 | favourite | cs2 | Spirit Academy | Sokerorg | YES Spirit Academy | 10 | 0.74 | 0.72 | 0.72 | won | $2.46 |
 | 2026-10-25 10:22 | favourite | valorant | Fire Flux Esports | BBL Esports | NO BBL Esports | 12 | 0.61 | 0.61 | 0.61 | open | - |
 | 2026-10-25 10:22 | model-only | valorant | BBL Esports | Fire Flux Esports | YES BBL Esports | 24 | 0.40 | 0.45 | 0.39 | open | - |
