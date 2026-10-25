@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-25 11:38 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-25 11:43 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 360 | 34 | 326 | 100 | -$233.96 | -6.9% | -0.9c (355) | $766.04 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 558 | 48 | 510 | 347 | -$181.76 | -4.9% | -1.3c (551) | $818.24 |
+| model-only | Elo win model alone (control: ignores the market) | 360 | 32 | 328 | 101 | -$246.48 | -7.3% | -0.9c (355) | $753.52 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 558 | 46 | 512 | 347 | -$190.08 | -5.1% | -1.3c (551) | $809.92 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,21 +16,21 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1218 finished matches. Lower is better; the market line is the bar to beat.
+1220 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5769 | 0.1974 |
-| model | 0.6575 | 0.2329 |
-| blend | 0.5760 | 0.1971 |
+| market | 0.5772 | 0.1976 |
+| model | 0.6578 | 0.2330 |
+| blend | 0.5764 | 0.1973 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 789 | 0.5893 | 0.6639 |
 | dota2 | 181 | 0.5581 | 0.6470 |
-| ow | 76 | 0.5189 | 0.5424 |
+| ow | 77 | 0.5218 | 0.5423 |
 | lol | 74 | 0.5528 | 0.7199 |
-| valorant | 55 | 0.5533 | 0.6569 |
+| valorant | 56 | 0.5588 | 0.6651 |
 | r6 | 43 | 0.6007 | 0.6818 |
 
 ## Latest bets
@@ -52,10 +52,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-25 09:52 | favourite | cs2 | Vitality | TheMongolz | NO TheMongolz | 10 | 0.74 | 0.73 | 0.73 | won | $2.46 |
 | 2026-10-25 09:52 | favourite | cs2 | ex-Zero Tenacity | Spirit Academy | YES ex-Zero Tenacity | 13 | 0.58 | 0.55 | 0.55 | open | - |
 | 2026-10-25 09:52 | favourite | cs2 | BetBoom Team | Nemiga | YES BetBoom Team | 13 | 0.59 | 0.58 | 0.58 | open | - |
-| 2026-10-25 07:52 | favourite | valorant | Nova Esports | Dragon Ranger Gaming | NO Dragon Ranger Gaming | 13 | 0.58 | 0.58 | 0.58 | open | - |
-| 2026-10-25 07:52 | model-only | valorant | Nova Esports | Dragon Ranger Gaming | NO Dragon Ranger Gaming | 26 | 0.58 | 0.67 | 0.58 | open | - |
-| 2026-10-25 07:52 | favourite | ow | Crazy Raccoon | ZETA DIVISION | YES Crazy Raccoon | 1 | 0.53 | 0.53 | 0.53 | open | - |
-| 2026-10-25 07:52 | model-only | ow | ZETA DIVISION | Crazy Raccoon | YES ZETA DIVISION | 6 | 0.48 | 0.59 | 0.47 | open | - |
+| 2026-10-25 07:52 | favourite | valorant | Nova Esports | Dragon Ranger Gaming | NO Dragon Ranger Gaming | 13 | 0.58 | 0.58 | 0.58 | lost | -$7.77 |
+| 2026-10-25 07:52 | model-only | valorant | Nova Esports | Dragon Ranger Gaming | NO Dragon Ranger Gaming | 26 | 0.58 | 0.67 | 0.58 | lost | -$15.53 |
+| 2026-10-25 07:52 | favourite | ow | Crazy Raccoon | ZETA DIVISION | YES Crazy Raccoon | 1 | 0.53 | 0.53 | 0.53 | lost | -$0.55 |
+| 2026-10-25 07:52 | model-only | ow | ZETA DIVISION | Crazy Raccoon | YES ZETA DIVISION | 6 | 0.48 | 0.59 | 0.47 | won | $3.01 |
 | 2026-10-25 07:52 | favourite | dota2 | Team Lynx | salamit | YES Team Lynx | 12 | 0.62 | 0.61 | 0.61 | open | - |
 | 2026-10-25 07:52 | model-only | dota2 | Team Lynx | salamit | YES Team Lynx | 24 | 0.62 | 0.75 | 0.61 | open | - |
 | 2026-10-25 07:52 | favourite | cs2 | UNiTY esports | Acend | NO Acend | 13 | 0.59 | 0.59 | 0.59 | won | $5.10 |
