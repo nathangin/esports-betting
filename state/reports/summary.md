@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-25 14:08 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-25 14:13 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-25 14:08 UTC. Model fitted 2026-10-19T16:33. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 364 | 34 | 330 | 102 | -$241.52 | -7.1% | -0.8c (359) | $758.48 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 566 | 51 | 515 | 348 | -$200.88 | -5.3% | -1.3c (559) | $799.12 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 566 | 50 | 516 | 349 | -$198.42 | -5.3% | -1.3c (559) | $801.58 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -51,7 +51,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-25 12:52 | model-only | cs2 | 9z | MOUZ | YES 9z | 58 | 0.24 | 0.32 | 0.23 | open | - |
 | 2026-10-25 11:52 | favourite | cs2 | STATE | G2 Ares | NO G2 Ares | 13 | 0.58 | 0.56 | 0.56 | open | - |
 | 2026-10-25 11:52 | model-only | cs2 | STATE | G2 Ares | NO G2 Ares | 25 | 0.58 | 0.67 | 0.56 | open | - |
-| 2026-10-25 10:52 | favourite | cs2 | Spirit Academy | Sokerorg | YES Spirit Academy | 10 | 0.74 | 0.72 | 0.72 | open | - |
+| 2026-10-25 10:52 | favourite | cs2 | Spirit Academy | Sokerorg | YES Spirit Academy | 10 | 0.74 | 0.72 | 0.72 | won | $2.46 |
 | 2026-10-25 10:52 | model-only | cs2 | BakS eSports | Metizport | NO Metizport | 38 | 0.38 | 0.45 | 0.38 | open | - |
 | 2026-10-25 10:52 | favourite | cs2 | Metizport | BakS eSports | NO BakS eSports | 12 | 0.64 | 0.62 | 0.62 | open | - |
 | 2026-10-25 10:52 | favourite | dota2 | Inner Circle | Nemiga Gaming | YES Inner Circle | 11 | 0.70 | 0.68 | 0.68 | open | - |
