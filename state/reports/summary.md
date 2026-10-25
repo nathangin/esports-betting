@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-25 18:08 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-25 18:33 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-25 18:08 UTC. Model fitted 2026-10-19T16:33. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 365 | 28 | 337 | 107 | -$225.60 | -6.4% | -0.8c (361) | $774.40 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 569 | 40 | 529 | 357 | -$197.50 | -5.1% | -1.4c (565) | $802.50 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 569 | 39 | 530 | 357 | -$198.74 | -5.1% | -1.4c (565) | $801.26 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,20 +16,20 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1243 finished matches. Lower is better; the market line is the bar to beat.
+1246 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5776 | 0.1978 |
-| model | 0.6574 | 0.2329 |
-| blend | 0.5768 | 0.1976 |
+| market | 0.5781 | 0.1981 |
+| model | 0.6579 | 0.2331 |
+| blend | 0.5773 | 0.1979 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 805 | 0.5892 | 0.6635 |
+| cs2 | 807 | 0.5889 | 0.6640 |
 | dota2 | 185 | 0.5585 | 0.6444 |
 | ow | 79 | 0.5243 | 0.5464 |
-| lol | 74 | 0.5528 | 0.7199 |
+| lol | 75 | 0.5627 | 0.7229 |
 | valorant | 57 | 0.5654 | 0.6675 |
 | r6 | 43 | 0.6007 | 0.6818 |
 
@@ -40,7 +40,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-10-25 15:53 | favourite | cs2 | FURIA | Natus Vincere | YES FURIA | 9 | 0.54 | 0.54 | 0.54 | lost | -$5.02 |
-| 2026-10-25 15:23 | favourite | cs2 | DINERO | DimoniX Esports | NO DimoniX Esports | 2 | 0.60 | 0.61 | 0.61 | open | - |
+| 2026-10-25 15:23 | favourite | cs2 | DINERO | DimoniX Esports | NO DimoniX Esports | 2 | 0.60 | 0.61 | 0.61 | lost | -$1.24 |
 | 2026-10-25 14:53 | favourite | r6 | FaZe Clan | FURIA Esports | NO FURIA Esports | 11 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-10-25 14:53 | model-only | r6 | FURIA Esports | FaZe Clan | YES FURIA Esports | 13 | 0.32 | 0.37 | 0.31 | open | - |
 | 2026-10-25 13:52 | favourite | dota2 | CyberHero | Zero Tenacity | YES CyberHero | 10 | 0.75 | 0.74 | 0.74 | open | - |
