@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-26 16:36 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-26 16:41 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 382 | 37 | 345 | 110 | -$228.47 | -6.4% | -0.8c (376) | $771.53 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 599 | 52 | 547 | 367 | -$225.43 | -5.7% | -1.4c (591) | $774.57 |
+| model-only | Elo win model alone (control: ignores the market) | 382 | 35 | 347 | 111 | -$205.76 | -5.7% | -0.8c (376) | $794.24 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 599 | 50 | 549 | 368 | -$232.05 | -5.8% | -1.4c (591) | $767.95 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -51,10 +51,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-26 13:51 | favourite | cs2 | Nuclear TigeRES | UNiTY esports | YES Nuclear TigeRES | 1 | 0.65 | 0.65 | 0.65 | open | - |
 | 2026-10-26 13:51 | model-only | cs2 | UNiTY esports | Nuclear TigeRES | YES UNiTY esports | 42 | 0.35 | 0.55 | 0.35 | open | - |
 | 2026-10-26 13:51 | favourite | cs2 | ILLYRIANS | HAVU | NO HAVU | 14 | 0.53 | 0.52 | 0.52 | open | - |
-| 2026-10-26 12:51 | favourite | cs2 | Legacy | Liquid | YES Legacy | 11 | 0.71 | 0.70 | 0.70 | open | - |
+| 2026-10-26 12:51 | favourite | cs2 | Legacy | Liquid | YES Legacy | 11 | 0.71 | 0.70 | 0.70 | lost | -$7.97 |
 | 2026-10-26 12:51 | model-only | cs2 | FURIA | Spirit | NO Spirit | 27 | 0.37 | 0.42 | 0.36 | open | - |
 | 2026-10-26 12:51 | favourite | cs2 | Spirit | FURIA | NO FURIA | 12 | 0.64 | 0.64 | 0.64 | open | - |
-| 2026-10-26 12:51 | model-only | cs2 | Liquid | Legacy | NO Legacy | 47 | 0.30 | 0.43 | 0.30 | open | - |
+| 2026-10-26 12:51 | model-only | cs2 | Liquid | Legacy | NO Legacy | 47 | 0.30 | 0.43 | 0.30 | won | $32.20 |
 | 2026-10-26 12:51 | model-only | dota2 | Team Spirit | PARIVISION | NO PARIVISION | 38 | 0.37 | 0.48 | 0.36 | open | - |
 | 2026-10-26 12:51 | favourite | dota2 | PARIVISION | Team Spirit | YES PARIVISION | 12 | 0.64 | 0.64 | 0.64 | open | - |
 | 2026-10-26 10:50 | favourite | cs2 | Walczaki | Wingman | YES Walczaki | 12 | 0.62 | 0.61 | 0.61 | open | - |
@@ -62,8 +62,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-26 10:50 | favourite | cs2 | ex-6666 | Sokerorg | YES ex-6666 | 11 | 0.66 | 0.62 | 0.62 | lost | -$7.44 |
 | 2026-10-26 10:50 | favourite | cs2 | Metizport | Brute | YES Metizport | 13 | 0.58 | 0.57 | 0.57 | open | - |
 | 2026-10-26 10:20 | favourite | cs2 | Copenhagen Wolves | WonderKids | NO WonderKids | 6 | 0.85 | 0.84 | 0.84 | won | $0.84 |
-| 2026-10-26 09:50 | favourite | dota2 | Team Yandex | Team Liquid | YES Team Yandex | 9 | 0.84 | 0.84 | 0.84 | open | - |
-| 2026-10-26 09:50 | model-only | dota2 | Team Liquid | Team Yandex | YES Team Liquid | 56 | 0.16 | 0.21 | 0.16 | open | - |
+| 2026-10-26 09:50 | favourite | dota2 | Team Yandex | Team Liquid | YES Team Yandex | 9 | 0.84 | 0.84 | 0.84 | won | $1.35 |
+| 2026-10-26 09:50 | model-only | dota2 | Team Liquid | Team Yandex | YES Team Liquid | 56 | 0.16 | 0.21 | 0.16 | lost | -$9.49 |
 
 ## Backtest on real Kalshi prices
 
