@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-26 11:36 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-26 12:01 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 375 | 32 | 343 | 109 | -$241.51 | -6.8% | -0.8c (370) | $758.49 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 588 | 48 | 540 | 364 | -$199.61 | -5.1% | -1.4c (581) | $800.39 |
+| model-only | Elo win model alone (control: ignores the market) | 375 | 31 | 344 | 109 | -$256.80 | -7.2% | -0.8c (371) | $743.20 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 588 | 47 | 541 | 365 | -$198.87 | -5.1% | -1.4c (584) | $801.13 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -54,8 +54,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-26 07:50 | favourite | cs2 | Team Nemesis | INOX Division | NO INOX Division | 10 | 0.76 | 0.75 | 0.75 | won | $2.27 |
 | 2026-10-26 07:50 | favourite | cs2 | Falcons Force | KUUSAMO.gg | YES Falcons Force | 11 | 0.70 | 0.69 | 0.69 | open | - |
 | 2026-10-26 07:50 | favourite | cs2 | Nexus | Revise | YES Nexus | 9 | 0.79 | 0.77 | 0.77 | lost | -$7.22 |
-| 2026-10-26 07:50 | model-only | cs2 | gothboiclique | UNiTY esports | YES gothboiclique | 103 | 0.14 | 0.24 | 0.12 | open | - |
-| 2026-10-26 07:50 | favourite | cs2 | UNiTY esports | gothboiclique | NO gothboiclique | 8 | 0.90 | 0.88 | 0.88 | open | - |
+| 2026-10-26 07:50 | model-only | cs2 | gothboiclique | UNiTY esports | YES gothboiclique | 103 | 0.14 | 0.24 | 0.12 | lost | -$15.29 |
+| 2026-10-26 07:50 | favourite | cs2 | UNiTY esports | gothboiclique | NO gothboiclique | 8 | 0.90 | 0.88 | 0.88 | won | $0.74 |
 | 2026-10-26 06:50 | favourite | dota2 | OG | GamerLegion | NO GamerLegion | 13 | 0.59 | 0.59 | 0.59 | open | - |
 | 2026-10-26 06:50 | favourite | cs2 | MOUZ | TheMongolz | NO TheMongolz | 10 | 0.76 | 0.76 | 0.76 | won | $2.27 |
 | 2026-10-26 06:50 | model-only | cs2 | TheMongolz | MOUZ | YES TheMongolz | 59 | 0.25 | 0.39 | 0.24 | lost | -$15.53 |
