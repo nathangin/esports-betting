@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-26 10:21 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-26 10:31 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 374 | 35 | 339 | 108 | -$232.57 | -6.6% | -0.8c (368) | $767.43 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 585 | 50 | 535 | 360 | -$202.03 | -5.2% | -1.4c (577) | $797.97 |
+| model-only | Elo win model alone (control: ignores the market) | 374 | 34 | 340 | 108 | -$233.50 | -6.6% | -0.8c (368) | $766.50 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 585 | 49 | 536 | 361 | -$199.96 | -5.1% | -1.4c (577) | $800.04 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -56,8 +56,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-26 06:50 | favourite | cs2 | Aurora Gaming | Nemiga | YES Aurora Gaming | 11 | 0.71 | 0.70 | 0.70 | open | - |
 | 2026-10-26 06:50 | favourite | dota2 | OG | GamerLegion | NO GamerLegion | 13 | 0.59 | 0.59 | 0.59 | open | - |
 | 2026-10-26 06:50 | favourite | cs2 | MOUZ | TheMongolz | NO TheMongolz | 10 | 0.76 | 0.76 | 0.76 | open | - |
-| 2026-10-26 04:50 | favourite | dota2 | Direborn | Team Kinetix | NO Team Kinetix | 10 | 0.78 | 0.78 | 0.78 | open | - |
-| 2026-10-26 04:50 | model-only | dota2 | Team Kinetix | Direborn | NO Direborn | 4 | 0.22 | 0.37 | 0.22 | open | - |
+| 2026-10-26 04:50 | favourite | dota2 | Direborn | Team Kinetix | NO Team Kinetix | 10 | 0.78 | 0.78 | 0.78 | won | $2.07 |
+| 2026-10-26 04:50 | model-only | dota2 | Team Kinetix | Direborn | NO Direborn | 4 | 0.22 | 0.37 | 0.22 | lost | -$0.93 |
 | 2026-10-26 01:50 | favourite | dota2 | Direborn | Cloud Dawning | YES Direborn | 5 | 0.77 | 0.76 | 0.76 | won | $1.08 |
 | 2026-10-26 01:50 | model-only | dota2 | Cloud Dawning | Direborn | NO Direborn | 55 | 0.27 | 0.35 | 0.24 | lost | -$15.61 |
 | 2026-10-26 01:50 | favourite | cs2 | Off Chops | Ground Zero | NO Ground Zero | 9 | 0.80 | 0.79 | 0.79 | won | $1.69 |
