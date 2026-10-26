@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-26 18:37 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-26 18:52 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 383 | 34 | 349 | 112 | -$212.09 | -5.9% | -0.7c (379) | $787.91 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 599 | 45 | 554 | 371 | -$234.16 | -5.8% | -1.4c (595) | $765.84 |
+| model-only | Elo win model alone (control: ignores the market) | 383 | 33 | 350 | 112 | -$212.36 | -5.9% | -0.7c (379) | $787.64 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 599 | 44 | 555 | 372 | -$233.96 | -5.8% | -1.4c (595) | $766.04 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -46,8 +46,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-26 15:51 | favourite | cs2 | G2 | DENDELE CS | NO DENDELE CS | 10 | 0.75 | 0.74 | 0.74 | open | - |
 | 2026-10-26 15:51 | model-only | cs2 | DENDELE CS | G2 | YES DENDELE CS | 56 | 0.26 | 0.43 | 0.26 | open | - |
 | 2026-10-26 15:51 | favourite | cs2 | BIG Academy | Sissi State Punks | YES BIG Academy | 8 | 0.89 | 0.87 | 0.87 | open | - |
-| 2026-10-26 15:21 | favourite | cs2 | TTG Esports | DINERO | NO DINERO | 1 | 0.78 | 0.73 | 0.73 | open | - |
-| 2026-10-26 15:21 | model-only | cs2 | DINERO | TTG Esports | YES DINERO | 1 | 0.25 | 0.43 | 0.27 | open | - |
+| 2026-10-26 15:21 | favourite | cs2 | TTG Esports | DINERO | NO DINERO | 1 | 0.78 | 0.73 | 0.73 | won | $0.20 |
+| 2026-10-26 15:21 | model-only | cs2 | DINERO | TTG Esports | YES DINERO | 1 | 0.25 | 0.43 | 0.27 | lost | -$0.27 |
 | 2026-10-26 15:21 | favourite | cs2 | Aurora Young Blood | Four Magic | YES Aurora Young Blood | 10 | 0.71 | 0.67 | 0.67 | won | $2.75 |
 | 2026-10-26 13:51 | model-only | cs2 | UNiTY esports | Nuclear TigeRES | YES UNiTY esports | 42 | 0.35 | 0.55 | 0.35 | open | - |
 | 2026-10-26 13:51 | favourite | cs2 | ILLYRIANS | HAVU | NO HAVU | 14 | 0.53 | 0.52 | 0.52 | won | $6.33 |
