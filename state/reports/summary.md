@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-26 16:26 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-26 16:36 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -67,36 +67,36 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 ## Backtest on real Kalshi prices
 
-8346 settled matches from 2026-05-28 to 2026-10-19, decided 60 min before scheduled start at the quoted bid/ask, with Kalshi's taker fee. Ratings, the win model and the blend only ever use earlier matches (weekly walk-forward refits).
+8779 settled matches from 2026-05-28 to 2026-10-26, decided 60 min before scheduled start at the quoted bid/ask, with Kalshi's taker fee. Ratings, the win model and the blend only ever use earlier matches (weekly walk-forward refits).
 
 | Strategy | Bets | Staked | P&L | ROI | 95% range | Hit rate | Closing-line value | Max drawdown |
 |---|---:|---:|---:|---:|---|---:|---:|---:|
-| model + market blend | 23 | $422.99 | -$10.99 | -2.6% | -39.0% to +46.3% | 57% | -0.0c | 8% |
-| model only | 1998 | $8,526.95 | -$990.95 | -11.6% | -20.1% to -3.0% | 33% | -0.6c | 99% |
-| always the favourite (1% flat) | 4018 | $16,341.50 | -$762.50 | -4.7% | -6.9% to -2.4% | 67% | -1.6c | 81% |
-| always the underdog (1% flat) | 3742 | $8,889.87 | -$982.87 | -11.1% | -16.6% to -5.4% | 31% | -1.3c | 98% |
+| model + market blend | 24 | $444.79 | -$1.79 | -0.4% | -34.5% to +46.3% | 58% | +0.0c | 8% |
+| model only | 2012 | $8,014.92 | -$990.92 | -12.4% | -20.6% to -4.1% | 33% | -0.6c | 99% |
+| always the favourite (1% flat) | 4205 | $16,392.93 | -$775.93 | -4.7% | -7.0% to -2.5% | 67% | -1.6c | 81% |
+| always the underdog (1% flat) | 3757 | $9,447.49 | -$982.49 | -10.4% | -15.7% to -4.8% | 31% | -1.3c | 98% |
 
 Closing-line value: the market's probability at the scheduled start of the side bought, minus the price paid, averaged over bets. Around zero means the bets saw nothing the market did not price in by the start.
 
-Forecast quality on the same 8121 matches (lower is better):
+Forecast quality on the same 8554 matches (lower is better):
 
 | Forecast | Log loss | Brier | Picks the winner |
 |---|---:|---:|---:|
-| market | 0.5723 | 0.1955 | 69.3% |
-| model | 0.6605 | 0.2343 | 59.6% |
-| blend | 0.5719 | 0.1954 | - |
+| market | 0.5736 | 0.1961 | 69.2% |
+| model | 0.6609 | 0.2344 | 59.5% |
+| blend | 0.5732 | 0.1960 | - |
 
 Is the market's favourite priced right?
 
 | Market favourite at | Matches | Average price | Won |
 |---|---:|---:|---:|
-| (0.499, 0.55] | 1335 | 0.525 | 0.524 |
-| (0.55, 0.6] | 1359 | 0.577 | 0.550 |
-| (0.6, 0.65] | 1254 | 0.626 | 0.635 |
-| (0.65, 0.7] | 1092 | 0.676 | 0.702 |
-| (0.7, 0.75] | 921 | 0.726 | 0.773 |
-| (0.75, 0.8] | 786 | 0.776 | 0.812 |
-| (0.8, 0.85] | 668 | 0.826 | 0.826 |
-| (0.85, 0.9] | 503 | 0.877 | 0.903 |
-| (0.9, 1.0] | 428 | 0.932 | 0.956 |
+| (0.499, 0.55] | 1402 | 0.525 | 0.529 |
+| (0.55, 0.6] | 1444 | 0.577 | 0.551 |
+| (0.6, 0.65] | 1325 | 0.626 | 0.629 |
+| (0.65, 0.7] | 1152 | 0.676 | 0.702 |
+| (0.7, 0.75] | 964 | 0.726 | 0.772 |
+| (0.75, 0.8] | 823 | 0.776 | 0.810 |
+| (0.8, 0.85] | 698 | 0.826 | 0.827 |
+| (0.85, 0.9] | 521 | 0.877 | 0.902 |
+| (0.9, 1.0] | 450 | 0.932 | 0.956 |
 
