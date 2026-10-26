@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-26 06:45 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-26 06:50 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 368 | 30 | 338 | 108 | -$216.96 | -6.2% | -0.8c (364) | $783.04 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 574 | 40 | 534 | 359 | -$203.11 | -5.2% | -1.4c (570) | $796.89 |
+| model-only | Elo win model alone (control: ignores the market) | 369 | 31 | 338 | 108 | -$216.96 | -6.2% | -0.8c (364) | $783.04 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 577 | 43 | 534 | 359 | -$203.11 | -5.2% | -1.4c (570) | $796.89 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-26 06:50 | favourite | dota2 | OG | GamerLegion | NO GamerLegion | 13 | 0.59 | 0.59 | 0.59 | open | - |
+| 2026-10-26 06:50 | favourite | cs2 | MOUZ | TheMongolz | NO TheMongolz | 10 | 0.76 | 0.76 | 0.76 | open | - |
+| 2026-10-26 06:50 | model-only | cs2 | TheMongolz | MOUZ | YES TheMongolz | 59 | 0.25 | 0.39 | 0.24 | open | - |
+| 2026-10-26 06:50 | favourite | cs2 | Aurora Gaming | Nemiga | YES Aurora Gaming | 11 | 0.71 | 0.70 | 0.70 | open | - |
 | 2026-10-26 04:50 | favourite | dota2 | Direborn | Team Kinetix | NO Team Kinetix | 10 | 0.78 | 0.78 | 0.78 | open | - |
 | 2026-10-26 04:50 | model-only | dota2 | Team Kinetix | Direborn | NO Direborn | 4 | 0.22 | 0.37 | 0.22 | open | - |
 | 2026-10-26 01:50 | favourite | dota2 | Direborn | Cloud Dawning | YES Direborn | 5 | 0.77 | 0.76 | 0.76 | open | - |
@@ -51,19 +55,15 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-25 15:23 | favourite | cs2 | DINERO | DimoniX Esports | NO DimoniX Esports | 2 | 0.60 | 0.61 | 0.61 | lost | -$1.24 |
 | 2026-10-25 14:53 | favourite | r6 | FaZe Clan | FURIA Esports | NO FURIA Esports | 11 | 0.69 | 0.69 | 0.69 | lost | -$7.76 |
 | 2026-10-25 14:53 | model-only | r6 | FURIA Esports | FaZe Clan | YES FURIA Esports | 13 | 0.32 | 0.37 | 0.31 | won | $8.64 |
-| 2026-10-25 13:52 | favourite | cs2 | Brute | Infinite | YES Brute | 13 | 0.58 | 0.56 | 0.56 | won | $5.23 |
-| 2026-10-25 13:52 | favourite | cs2 | Team ACES | Inner Circle Academy | YES Team ACES | 9 | 0.86 | 0.82 | 0.82 | won | $1.18 |
-| 2026-10-25 13:52 | model-only | cs2 | Brute | Infinite | YES Brute | 12 | 0.58 | 0.67 | 0.56 | won | $4.83 |
 | 2026-10-25 13:52 | favourite | dota2 | CyberHero | Zero Tenacity | YES CyberHero | 10 | 0.75 | 0.74 | 0.74 | won | $2.36 |
+| 2026-10-25 13:52 | favourite | cs2 | Brute | Infinite | YES Brute | 13 | 0.58 | 0.56 | 0.56 | won | $5.23 |
+| 2026-10-25 13:52 | model-only | cs2 | Brute | Infinite | YES Brute | 12 | 0.58 | 0.67 | 0.56 | won | $4.83 |
+| 2026-10-25 13:52 | favourite | cs2 | Team ACES | Inner Circle Academy | YES Team ACES | 9 | 0.86 | 0.82 | 0.82 | won | $1.18 |
 | 2026-10-25 12:52 | favourite | dota2 | Team Spirit | Astra Invicta | YES Team Spirit | 9 | 0.83 | 0.83 | 0.83 | won | $1.44 |
 | 2026-10-25 12:52 | favourite | cs2 | INOX Division | Acend | YES INOX Division | 1 | 0.67 | 0.66 | 0.66 | lost | -$0.69 |
 | 2026-10-25 12:52 | model-only | cs2 | Acend | INOX Division | YES Acend | 4 | 0.36 | 0.41 | 0.34 | won | $2.49 |
 | 2026-10-25 12:52 | favourite | cs2 | Aurora Gaming | G2 | NO G2 | 13 | 0.58 | 0.58 | 0.58 | won | $5.23 |
 | 2026-10-25 12:52 | favourite | cs2 | MOUZ | 9z | NO 9z | 10 | 0.77 | 0.77 | 0.77 | won | $2.17 |
-| 2026-10-25 12:52 | model-only | cs2 | 9z | MOUZ | YES 9z | 58 | 0.24 | 0.32 | 0.23 | lost | -$14.67 |
-| 2026-10-25 11:52 | favourite | cs2 | STATE | G2 Ares | NO G2 Ares | 13 | 0.58 | 0.56 | 0.56 | won | $5.23 |
-| 2026-10-25 11:52 | model-only | cs2 | STATE | G2 Ares | NO G2 Ares | 25 | 0.58 | 0.67 | 0.56 | won | $10.07 |
-| 2026-10-25 10:52 | favourite | dota2 | Inner Circle | Nemiga Gaming | YES Inner Circle | 11 | 0.70 | 0.68 | 0.68 | lost | -$7.87 |
 
 ## Backtest on real Kalshi prices
 
