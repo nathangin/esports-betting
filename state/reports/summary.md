@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-26 11:06 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-26 11:21 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 375 | 33 | 342 | 109 | -$226.19 | -6.4% | -0.8c (370) | $773.81 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 588 | 49 | 539 | 363 | -$201.88 | -5.2% | -1.4c (580) | $798.12 |
+| model-only | Elo win model alone (control: ignores the market) | 375 | 32 | 343 | 109 | -$241.51 | -6.8% | -0.8c (370) | $758.49 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 588 | 48 | 540 | 364 | -$199.61 | -5.1% | -1.4c (581) | $800.39 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -50,8 +50,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-26 09:50 | favourite | cs2 | Vitality | FUT Esports | YES Vitality | 10 | 0.74 | 0.74 | 0.74 | open | - |
 | 2026-10-26 09:50 | model-only | cs2 | FUT Esports | Vitality | YES FUT Esports | 39 | 0.26 | 0.31 | 0.26 | open | - |
 | 2026-10-26 07:50 | model-only | cs2 | Revise | Nexus | NO Nexus | 31 | 0.25 | 0.30 | 0.23 | won | $22.84 |
-| 2026-10-26 07:50 | model-only | cs2 | INOX Division | Team Nemesis | NO Team Nemesis | 56 | 0.26 | 0.37 | 0.25 | open | - |
-| 2026-10-26 07:50 | favourite | cs2 | Team Nemesis | INOX Division | NO INOX Division | 10 | 0.76 | 0.75 | 0.75 | open | - |
+| 2026-10-26 07:50 | model-only | cs2 | INOX Division | Team Nemesis | NO Team Nemesis | 56 | 0.26 | 0.37 | 0.25 | lost | -$15.32 |
+| 2026-10-26 07:50 | favourite | cs2 | Team Nemesis | INOX Division | NO INOX Division | 10 | 0.76 | 0.75 | 0.75 | won | $2.27 |
 | 2026-10-26 07:50 | favourite | cs2 | Falcons Force | KUUSAMO.gg | YES Falcons Force | 11 | 0.70 | 0.69 | 0.69 | open | - |
 | 2026-10-26 07:50 | favourite | cs2 | Nexus | Revise | YES Nexus | 9 | 0.79 | 0.77 | 0.77 | lost | -$7.22 |
 | 2026-10-26 07:50 | model-only | cs2 | gothboiclique | UNiTY esports | YES gothboiclique | 103 | 0.14 | 0.24 | 0.12 | open | - |
