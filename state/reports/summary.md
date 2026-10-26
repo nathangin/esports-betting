@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-26 20:22 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-26 20:52 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 385 | 33 | 352 | 114 | -$148.37 | -4.1% | -0.7c (379) | $851.63 |
+| model-only | Elo win model alone (control: ignores the market) | 385 | 33 | 352 | 114 | -$148.37 | -4.1% | -0.7c (380) | $851.63 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 599 | 40 | 559 | 373 | -$252.54 | -6.2% | -1.4c (595) | $747.46 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1303 finished matches. Lower is better; the market line is the bar to beat.
+1304 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5782 | 0.1982 |
-| model | 0.6580 | 0.2332 |
-| blend | 0.5775 | 0.1981 |
+| market | 0.5784 | 0.1984 |
+| model | 0.6578 | 0.2331 |
+| blend | 0.5778 | 0.1982 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 843 | 0.5928 | 0.6658 |
+| cs2 | 844 | 0.5931 | 0.6654 |
 | dota2 | 194 | 0.5526 | 0.6373 |
 | ow | 83 | 0.5090 | 0.5369 |
 | lol | 79 | 0.5511 | 0.7245 |
