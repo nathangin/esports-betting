@@ -1,8 +1,8 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXR6GAME/markets/KXR6GAME-26OCT241500FAZELOS-FAZE/candlesticks?start_ts=1792866600&end_ts=1792868460&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/markets/KXCS2GAME-26OCT251500CHAMAREDA-CHAMA/candlesticks?start_ts=1792953000&end_ts=1792954860&period_interval=1",
  "status": 200,
  "body": {
   "candlesticks": [],
-  "ticker": "KXR6GAME-26OCT241500FAZELOS-FAZE"
+  "ticker": "KXCS2GAME-26OCT251500CHAMAREDA-CHAMA"
  }
 }
