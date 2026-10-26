@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-26 19:07 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-26 19:12 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-26 19:07 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 383 | 33 | 350 | 112 | -$212.36 | -5.9% | -0.7c (379) | $787.64 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 599 | 44 | 555 | 372 | -$233.96 | -5.8% | -1.4c (595) | $766.04 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 599 | 43 | 556 | 372 | -$237.84 | -5.9% | -1.4c (595) | $762.16 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -40,7 +40,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-10-26 16:51 | model-only | cs2 | TTG Esports | Diamant Esports | YES TTG Esports | 5 | 0.59 | 0.70 | 0.59 | open | - |
-| 2026-10-26 15:51 | favourite | cs2 | Natus Vincere | BetBoom Team | NO BetBoom Team | 6 | 0.63 | 0.62 | 0.62 | open | - |
+| 2026-10-26 15:51 | favourite | cs2 | Natus Vincere | BetBoom Team | NO BetBoom Team | 6 | 0.63 | 0.62 | 0.62 | lost | -$3.88 |
 | 2026-10-26 15:51 | favourite | cs2 | ECSTATIC | MASQ | YES ECSTATIC | 10 | 0.74 | 0.72 | 0.72 | lost | -$7.54 |
 | 2026-10-26 15:51 | model-only | cs2 | MASQ | ECSTATIC | NO ECSTATIC | 6 | 0.30 | 0.51 | 0.28 | won | $4.11 |
 | 2026-10-26 15:51 | favourite | cs2 | G2 | DENDELE CS | NO DENDELE CS | 10 | 0.75 | 0.74 | 0.74 | open | - |
