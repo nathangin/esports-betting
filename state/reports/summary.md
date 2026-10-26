@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-26 13:41 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-26 13:51 UTC. Model fitted 2026-10-19T16:33. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 378 | 33 | 345 | 110 | -$228.47 | -6.4% | -0.8c (371) | $771.53 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 591 | 46 | 545 | 367 | -$210.34 | -5.3% | -1.4c (584) | $789.66 |
+| model-only | Elo win model alone (control: ignores the market) | 379 | 34 | 345 | 110 | -$228.47 | -6.4% | -0.8c (374) | $771.53 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 593 | 46 | 547 | 367 | -$225.43 | -5.7% | -1.4c (587) | $774.57 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1280 finished matches. Lower is better; the market line is the bar to beat.
+1281 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5759 | 0.1972 |
-| model | 0.6571 | 0.2328 |
-| blend | 0.5751 | 0.1970 |
+| market | 0.5756 | 0.1971 |
+| model | 0.6572 | 0.2328 |
+| blend | 0.5747 | 0.1969 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 826 | 0.5884 | 0.6642 |
+| cs2 | 827 | 0.5879 | 0.6643 |
 | dota2 | 191 | 0.5528 | 0.6397 |
 | ow | 83 | 0.5090 | 0.5369 |
 | lol | 77 | 0.5593 | 0.7265 |
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-26 13:51 | favourite | cs2 | Nuclear TigeRES | UNiTY esports | YES Nuclear TigeRES | 1 | 0.65 | 0.65 | 0.65 | open | - |
+| 2026-10-26 13:51 | model-only | cs2 | UNiTY esports | Nuclear TigeRES | YES UNiTY esports | 42 | 0.35 | 0.55 | 0.35 | open | - |
+| 2026-10-26 13:51 | favourite | cs2 | ILLYRIANS | HAVU | NO HAVU | 14 | 0.53 | 0.52 | 0.52 | open | - |
 | 2026-10-26 12:51 | favourite | dota2 | PARIVISION | Team Spirit | YES PARIVISION | 12 | 0.64 | 0.64 | 0.64 | open | - |
 | 2026-10-26 12:51 | model-only | dota2 | Team Spirit | PARIVISION | NO PARIVISION | 38 | 0.37 | 0.48 | 0.36 | open | - |
 | 2026-10-26 12:51 | favourite | cs2 | Legacy | Liquid | YES Legacy | 11 | 0.71 | 0.70 | 0.70 | open | - |
 | 2026-10-26 12:51 | model-only | cs2 | Liquid | Legacy | NO Legacy | 47 | 0.30 | 0.43 | 0.30 | open | - |
 | 2026-10-26 12:51 | favourite | cs2 | Spirit | FURIA | NO FURIA | 12 | 0.64 | 0.64 | 0.64 | open | - |
 | 2026-10-26 12:51 | model-only | cs2 | FURIA | Spirit | NO Spirit | 27 | 0.37 | 0.42 | 0.36 | open | - |
+| 2026-10-26 10:50 | favourite | cs2 | Metizport | Brute | YES Metizport | 13 | 0.58 | 0.57 | 0.57 | open | - |
 | 2026-10-26 10:50 | favourite | cs2 | Walczaki | Wingman | YES Walczaki | 12 | 0.62 | 0.61 | 0.61 | open | - |
 | 2026-10-26 10:50 | model-only | cs2 | Wingman | Walczaki | YES Wingman | 36 | 0.40 | 0.55 | 0.39 | open | - |
-| 2026-10-26 10:50 | favourite | cs2 | ex-6666 | Sokerorg | YES ex-6666 | 11 | 0.66 | 0.62 | 0.62 | open | - |
-| 2026-10-26 10:50 | favourite | cs2 | Metizport | Brute | YES Metizport | 13 | 0.58 | 0.57 | 0.57 | open | - |
+| 2026-10-26 10:50 | favourite | cs2 | ex-6666 | Sokerorg | YES ex-6666 | 11 | 0.66 | 0.62 | 0.62 | lost | -$7.44 |
 | 2026-10-26 10:20 | favourite | cs2 | Copenhagen Wolves | WonderKids | NO WonderKids | 6 | 0.85 | 0.84 | 0.84 | won | $0.84 |
-| 2026-10-26 09:50 | favourite | cs2 | 9z | TYLOO | YES 9z | 9 | 0.84 | 0.84 | 0.84 | open | - |
+| 2026-10-26 09:50 | favourite | dota2 | Team Yandex | Team Liquid | YES Team Yandex | 9 | 0.84 | 0.84 | 0.84 | open | - |
+| 2026-10-26 09:50 | model-only | dota2 | Team Liquid | Team Yandex | YES Team Liquid | 56 | 0.16 | 0.21 | 0.16 | open | - |
+| 2026-10-26 09:50 | favourite | cs2 | 9z | TYLOO | YES 9z | 9 | 0.84 | 0.84 | 0.84 | lost | -$7.65 |
 | 2026-10-26 09:50 | favourite | cs2 | Vitality | FUT Esports | YES Vitality | 10 | 0.74 | 0.74 | 0.74 | lost | -$7.54 |
 | 2026-10-26 09:50 | model-only | cs2 | FUT Esports | Vitality | YES FUT Esports | 39 | 0.26 | 0.31 | 0.26 | won | $28.33 |
-| 2026-10-26 09:50 | model-only | dota2 | Team Liquid | Team Yandex | YES Team Liquid | 56 | 0.16 | 0.21 | 0.16 | open | - |
-| 2026-10-26 09:50 | favourite | dota2 | Team Yandex | Team Liquid | YES Team Yandex | 9 | 0.84 | 0.84 | 0.84 | open | - |
-| 2026-10-26 07:50 | model-only | cs2 | Revise | Nexus | NO Nexus | 31 | 0.25 | 0.30 | 0.23 | won | $22.84 |
-| 2026-10-26 07:50 | favourite | cs2 | Team Nemesis | INOX Division | NO INOX Division | 10 | 0.76 | 0.75 | 0.75 | won | $2.27 |
-| 2026-10-26 07:50 | favourite | cs2 | Falcons Force | KUUSAMO.gg | YES Falcons Force | 11 | 0.70 | 0.69 | 0.69 | won | $3.13 |
-| 2026-10-26 07:50 | model-only | cs2 | INOX Division | Team Nemesis | NO Team Nemesis | 56 | 0.26 | 0.37 | 0.25 | lost | -$15.32 |
-| 2026-10-26 07:50 | favourite | cs2 | Nexus | Revise | YES Nexus | 9 | 0.79 | 0.77 | 0.77 | lost | -$7.22 |
-| 2026-10-26 07:50 | model-only | cs2 | gothboiclique | UNiTY esports | YES gothboiclique | 103 | 0.14 | 0.24 | 0.12 | lost | -$15.29 |
 | 2026-10-26 07:50 | favourite | cs2 | UNiTY esports | gothboiclique | NO gothboiclique | 8 | 0.90 | 0.88 | 0.88 | won | $0.74 |
-| 2026-10-26 06:50 | favourite | dota2 | OG | GamerLegion | NO GamerLegion | 13 | 0.59 | 0.59 | 0.59 | lost | -$7.90 |
-| 2026-10-26 06:50 | favourite | cs2 | MOUZ | TheMongolz | NO TheMongolz | 10 | 0.76 | 0.76 | 0.76 | won | $2.27 |
+| 2026-10-26 07:50 | model-only | cs2 | gothboiclique | UNiTY esports | YES gothboiclique | 103 | 0.14 | 0.24 | 0.12 | lost | -$15.29 |
+| 2026-10-26 07:50 | favourite | cs2 | Nexus | Revise | YES Nexus | 9 | 0.79 | 0.77 | 0.77 | lost | -$7.22 |
+| 2026-10-26 07:50 | model-only | cs2 | Revise | Nexus | NO Nexus | 31 | 0.25 | 0.30 | 0.23 | won | $22.84 |
+| 2026-10-26 07:50 | favourite | cs2 | Falcons Force | KUUSAMO.gg | YES Falcons Force | 11 | 0.70 | 0.69 | 0.69 | won | $3.13 |
+| 2026-10-26 07:50 | favourite | cs2 | Team Nemesis | INOX Division | NO INOX Division | 10 | 0.76 | 0.75 | 0.75 | won | $2.27 |
 
 ## Backtest on real Kalshi prices
 
