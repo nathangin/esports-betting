@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-27 10:24 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-27 10:54 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 394 | 40 | 354 | 115 | -$145.45 | -3.9% | -0.7c (385) | $854.55 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 612 | 50 | 562 | 375 | -$258.96 | -6.4% | -1.4c (602) | $741.04 |
+| model-only | Elo win model alone (control: ignores the market) | 395 | 41 | 354 | 115 | -$145.45 | -3.9% | -0.7c (389) | $854.55 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 614 | 52 | 562 | 375 | -$258.96 | -6.4% | -1.4c (607) | $741.04 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-27 10:54 | favourite | cs2 | ex-RUSTEC | Spirit Academy | YES ex-RUSTEC | 13 | 0.53 | 0.52 | 0.52 | open | - |
+| 2026-10-27 10:54 | model-only | cs2 | Spirit Academy | ex-RUSTEC | NO ex-RUSTEC | 4 | 0.49 | 0.57 | 0.48 | open | - |
+| 2026-10-27 10:54 | favourite | cs2 | Nuclear TigeRES | FOKUS | YES Nuclear TigeRES | 14 | 0.51 | 0.51 | 0.51 | open | - |
 | 2026-10-27 10:24 | favourite | cs2 | gothboiclique | WonderKids | NO WonderKids | 1 | 0.77 | 0.78 | 0.78 | open | - |
-| 2026-10-27 09:53 | favourite | valorant | Wolves Esports | World Sports Invictus Gaming | NO World Sports Invictus Gaming | 10 | 0.70 | 0.70 | 0.70 | open | - |
-| 2026-10-27 09:53 | favourite | cs2 | BIG | magic | YES BIG | 12 | 0.58 | 0.58 | 0.58 | open | - |
-| 2026-10-27 09:53 | model-only | cs2 | magic | BIG | YES magic | 39 | 0.42 | 0.54 | 0.42 | open | - |
-| 2026-10-27 09:53 | favourite | cs2 | FaZe | Alliance | NO Alliance | 10 | 0.70 | 0.69 | 0.70 | open | - |
 | 2026-10-27 09:53 | model-only | cs2 | Alliance | FaZe | NO FaZe | 52 | 0.31 | 0.42 | 0.30 | open | - |
-| 2026-10-27 09:53 | favourite | cs2 | Nemiga | DENDELE CS | NO DENDELE CS | 12 | 0.60 | 0.59 | 0.59 | open | - |
-| 2026-10-27 09:53 | model-only | cs2 | Nemiga | DENDELE CS | NO DENDELE CS | 27 | 0.60 | 0.69 | 0.59 | open | - |
-| 2026-10-27 09:53 | favourite | cs2 | Aurora Gaming | Liquid | YES Aurora Gaming | 9 | 0.73 | 0.72 | 0.72 | open | - |
 | 2026-10-27 09:53 | model-only | cs2 | Liquid | Aurora Gaming | NO Aurora Gaming | 58 | 0.28 | 0.37 | 0.28 | open | - |
-| 2026-10-27 07:53 | model-only | cs2 | Brute | Team Nemesis | NO Team Nemesis | 62 | 0.26 | 0.39 | 0.26 | open | - |
+| 2026-10-27 09:53 | favourite | cs2 | Aurora Gaming | Liquid | YES Aurora Gaming | 9 | 0.73 | 0.72 | 0.72 | open | - |
+| 2026-10-27 09:53 | model-only | cs2 | Nemiga | DENDELE CS | NO DENDELE CS | 27 | 0.60 | 0.69 | 0.59 | open | - |
+| 2026-10-27 09:53 | favourite | cs2 | Nemiga | DENDELE CS | NO DENDELE CS | 12 | 0.60 | 0.59 | 0.59 | open | - |
+| 2026-10-27 09:53 | favourite | cs2 | FaZe | Alliance | NO Alliance | 10 | 0.70 | 0.69 | 0.70 | open | - |
+| 2026-10-27 09:53 | model-only | cs2 | magic | BIG | YES magic | 39 | 0.42 | 0.54 | 0.42 | open | - |
+| 2026-10-27 09:53 | favourite | cs2 | BIG | magic | YES BIG | 12 | 0.58 | 0.58 | 0.58 | open | - |
+| 2026-10-27 09:53 | favourite | valorant | Wolves Esports | World Sports Invictus Gaming | NO World Sports Invictus Gaming | 10 | 0.70 | 0.70 | 0.70 | open | - |
+| 2026-10-27 07:53 | favourite | cs2 | Team Nemesis | Brute | NO Brute | 9 | 0.75 | 0.74 | 0.74 | open | - |
 | 2026-10-27 07:53 | model-only | cs2 | Bread Eaters Esports | Prestige | YES Bread Eaters Esports | 14 | 0.30 | 0.40 | 0.28 | open | - |
 | 2026-10-27 07:53 | favourite | cs2 | Prestige | Bread Eaters Esports | NO Bread Eaters Esports | 9 | 0.74 | 0.72 | 0.72 | open | - |
-| 2026-10-27 07:53 | favourite | cs2 | Team Nemesis | Brute | NO Brute | 9 | 0.75 | 0.74 | 0.74 | open | - |
-| 2026-10-27 07:53 | favourite | cs2 | Revise | eternal premium | NO eternal premium | 12 | 0.57 | 0.54 | 0.54 | open | - |
+| 2026-10-27 07:53 | model-only | cs2 | Brute | Team Nemesis | NO Team Nemesis | 62 | 0.26 | 0.39 | 0.26 | open | - |
 | 2026-10-27 07:53 | model-only | dota2 | Mena Warriors | No Hoodwink | YES Mena Warriors | 70 | 0.23 | 0.41 | 0.23 | open | - |
+| 2026-10-27 07:53 | favourite | cs2 | Revise | eternal premium | NO eternal premium | 12 | 0.57 | 0.54 | 0.54 | open | - |
 | 2026-10-27 07:53 | favourite | valorant | Unsettled Resentment | Victory No Limits | YES Unsettled Resentment | 9 | 0.73 | 0.72 | 0.72 | open | - |
 | 2026-10-27 06:53 | favourite | cs2 | B8 | K27 | YES B8 | 11 | 0.66 | 0.66 | 0.66 | open | - |
 | 2026-10-27 06:53 | model-only | cs2 | K27 | B8 | NO B8 | 45 | 0.35 | 0.54 | 0.34 | open | - |
 | 2026-10-27 02:53 | favourite | dota2 | Royal Bear | Cloud Dawning | NO Cloud Dawning | 2 | 0.84 | 0.84 | 0.84 | won | $0.30 |
 | 2026-10-27 01:53 | favourite | cs2 | Abyssal | Rooster | YES Abyssal | 12 | 0.57 | 0.55 | 0.55 | lost | -$7.05 |
 | 2026-10-27 01:53 | model-only | cs2 | Rooster | Abyssal | YES Rooster | 35 | 0.46 | 0.54 | 0.45 | won | $18.29 |
-| 2026-10-26 19:52 | model-only | cs2 | QUINTESSENCIA | MEIA NOITE | YES QUINTESSENCIA | 1 | 0.43 | 0.57 | 0.40 | open | - |
-| 2026-10-26 19:52 | model-only | cs2 | ARK E-sports | ALKA | NO ALKA | 1 | 0.21 | 0.41 | 0.19 | open | - |
-| 2026-10-26 16:51 | model-only | cs2 | TTG Esports | Diamant Esports | YES TTG Esports | 5 | 0.59 | 0.70 | 0.59 | open | - |
 
 ## Backtest on real Kalshi prices
 
