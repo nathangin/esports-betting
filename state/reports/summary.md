@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-27 07:44 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-27 07:54 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 387 | 33 | 354 | 115 | -$145.45 | -3.9% | -0.7c (381) | $854.55 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 602 | 40 | 562 | 375 | -$258.96 | -6.4% | -1.4c (597) | $741.04 |
+| model-only | Elo win model alone (control: ignores the market) | 390 | 36 | 354 | 115 | -$145.45 | -3.9% | -0.7c (382) | $854.55 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 606 | 44 | 562 | 375 | -$258.96 | -6.4% | -1.4c (598) | $741.04 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-27 07:53 | favourite | valorant | Unsettled Resentment | Victory No Limits | YES Unsettled Resentment | 9 | 0.73 | 0.72 | 0.72 | open | - |
+| 2026-10-27 07:53 | model-only | dota2 | Mena Warriors | No Hoodwink | YES Mena Warriors | 70 | 0.23 | 0.41 | 0.23 | open | - |
+| 2026-10-27 07:53 | favourite | cs2 | Revise | eternal premium | NO eternal premium | 12 | 0.57 | 0.54 | 0.54 | open | - |
+| 2026-10-27 07:53 | favourite | cs2 | Team Nemesis | Brute | NO Brute | 9 | 0.75 | 0.74 | 0.74 | open | - |
+| 2026-10-27 07:53 | model-only | cs2 | Brute | Team Nemesis | NO Team Nemesis | 62 | 0.26 | 0.39 | 0.26 | open | - |
+| 2026-10-27 07:53 | favourite | cs2 | Prestige | Bread Eaters Esports | NO Bread Eaters Esports | 9 | 0.74 | 0.72 | 0.72 | open | - |
+| 2026-10-27 07:53 | model-only | cs2 | Bread Eaters Esports | Prestige | YES Bread Eaters Esports | 14 | 0.30 | 0.40 | 0.28 | open | - |
 | 2026-10-27 06:53 | favourite | cs2 | B8 | K27 | YES B8 | 11 | 0.66 | 0.66 | 0.66 | open | - |
 | 2026-10-27 06:53 | model-only | cs2 | K27 | B8 | NO B8 | 45 | 0.35 | 0.54 | 0.34 | open | - |
 | 2026-10-27 02:53 | favourite | dota2 | Royal Bear | Cloud Dawning | NO Cloud Dawning | 2 | 0.84 | 0.84 | 0.84 | won | $0.30 |
 | 2026-10-27 01:53 | favourite | cs2 | Abyssal | Rooster | YES Abyssal | 12 | 0.57 | 0.55 | 0.55 | lost | -$7.05 |
 | 2026-10-27 01:53 | model-only | cs2 | Rooster | Abyssal | YES Rooster | 35 | 0.46 | 0.54 | 0.45 | won | $18.29 |
-| 2026-10-26 19:52 | model-only | cs2 | QUINTESSENCIA | MEIA NOITE | YES QUINTESSENCIA | 1 | 0.43 | 0.57 | 0.40 | open | - |
 | 2026-10-26 19:52 | model-only | cs2 | ARK E-sports | ALKA | NO ALKA | 1 | 0.21 | 0.41 | 0.19 | open | - |
+| 2026-10-26 19:52 | model-only | cs2 | QUINTESSENCIA | MEIA NOITE | YES QUINTESSENCIA | 1 | 0.43 | 0.57 | 0.40 | open | - |
 | 2026-10-26 16:51 | model-only | cs2 | TTG Esports | Diamant Esports | YES TTG Esports | 5 | 0.59 | 0.70 | 0.59 | open | - |
-| 2026-10-26 15:51 | model-only | cs2 | MASQ | ECSTATIC | NO ECSTATIC | 6 | 0.30 | 0.51 | 0.28 | won | $4.11 |
-| 2026-10-26 15:51 | model-only | cs2 | DENDELE CS | G2 | YES DENDELE CS | 56 | 0.26 | 0.43 | 0.26 | won | $40.68 |
-| 2026-10-26 15:51 | favourite | cs2 | G2 | DENDELE CS | NO DENDELE CS | 10 | 0.75 | 0.74 | 0.74 | lost | -$7.64 |
-| 2026-10-26 15:51 | favourite | cs2 | BIG Academy | Sissi State Punks | YES BIG Academy | 8 | 0.89 | 0.87 | 0.87 | won | $0.82 |
-| 2026-10-26 15:51 | favourite | cs2 | ECSTATIC | MASQ | YES ECSTATIC | 10 | 0.74 | 0.72 | 0.72 | lost | -$7.54 |
 | 2026-10-26 15:51 | favourite | cs2 | Natus Vincere | BetBoom Team | NO BetBoom Team | 6 | 0.63 | 0.62 | 0.62 | lost | -$3.88 |
+| 2026-10-26 15:51 | favourite | cs2 | ECSTATIC | MASQ | YES ECSTATIC | 10 | 0.74 | 0.72 | 0.72 | lost | -$7.54 |
+| 2026-10-26 15:51 | model-only | cs2 | MASQ | ECSTATIC | NO ECSTATIC | 6 | 0.30 | 0.51 | 0.28 | won | $4.11 |
+| 2026-10-26 15:51 | favourite | cs2 | G2 | DENDELE CS | NO DENDELE CS | 10 | 0.75 | 0.74 | 0.74 | lost | -$7.64 |
+| 2026-10-26 15:51 | model-only | cs2 | DENDELE CS | G2 | YES DENDELE CS | 56 | 0.26 | 0.43 | 0.26 | won | $40.68 |
+| 2026-10-26 15:51 | favourite | cs2 | BIG Academy | Sissi State Punks | YES BIG Academy | 8 | 0.89 | 0.87 | 0.87 | won | $0.82 |
 | 2026-10-26 15:21 | favourite | cs2 | TTG Esports | DINERO | NO DINERO | 1 | 0.78 | 0.73 | 0.73 | won | $0.20 |
 | 2026-10-26 15:21 | model-only | cs2 | DINERO | TTG Esports | YES DINERO | 1 | 0.25 | 0.43 | 0.27 | lost | -$0.27 |
 | 2026-10-26 15:21 | favourite | cs2 | Aurora Young Blood | Four Magic | YES Aurora Young Blood | 10 | 0.71 | 0.67 | 0.67 | won | $2.75 |
 | 2026-10-26 13:51 | favourite | cs2 | Nuclear TigeRES | UNiTY esports | YES Nuclear TigeRES | 1 | 0.65 | 0.65 | 0.65 | won | $0.33 |
-| 2026-10-26 13:51 | model-only | cs2 | UNiTY esports | Nuclear TigeRES | YES UNiTY esports | 42 | 0.35 | 0.55 | 0.35 | lost | -$15.37 |
-| 2026-10-26 13:51 | favourite | cs2 | ILLYRIANS | HAVU | NO HAVU | 14 | 0.53 | 0.52 | 0.52 | won | $6.33 |
-| 2026-10-26 12:51 | favourite | dota2 | PARIVISION | Team Spirit | YES PARIVISION | 12 | 0.64 | 0.64 | 0.64 | lost | -$7.88 |
-| 2026-10-26 12:51 | model-only | dota2 | Team Spirit | PARIVISION | NO PARIVISION | 38 | 0.37 | 0.48 | 0.36 | won | $23.31 |
-| 2026-10-26 12:51 | favourite | cs2 | Legacy | Liquid | YES Legacy | 11 | 0.71 | 0.70 | 0.70 | lost | -$7.97 |
-| 2026-10-26 12:51 | model-only | cs2 | Liquid | Legacy | NO Legacy | 47 | 0.30 | 0.43 | 0.30 | won | $32.20 |
-| 2026-10-26 12:51 | favourite | cs2 | Spirit | FURIA | NO FURIA | 12 | 0.64 | 0.64 | 0.64 | won | $4.12 |
 
 ## Backtest on real Kalshi prices
 
