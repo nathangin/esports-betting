@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-27 06:28 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-27 06:33 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-27 06:28 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 386 | 33 | 353 | 114 | -$163.74 | -4.5% | -0.7c (381) | $836.26 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 601 | 41 | 560 | 374 | -$252.21 | -6.2% | -1.4c (597) | $747.79 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 601 | 40 | 561 | 375 | -$251.91 | -6.2% | -1.4c (597) | $748.09 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,7 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-27 02:53 | favourite | dota2 | Royal Bear | Cloud Dawning | NO Cloud Dawning | 2 | 0.84 | 0.84 | 0.84 | open | - |
+| 2026-10-27 02:53 | favourite | dota2 | Royal Bear | Cloud Dawning | NO Cloud Dawning | 2 | 0.84 | 0.84 | 0.84 | won | $0.30 |
 | 2026-10-27 01:53 | favourite | cs2 | Abyssal | Rooster | YES Abyssal | 12 | 0.57 | 0.55 | 0.55 | open | - |
 | 2026-10-27 01:53 | model-only | cs2 | Rooster | Abyssal | YES Rooster | 35 | 0.46 | 0.54 | 0.45 | open | - |
 | 2026-10-26 19:52 | model-only | cs2 | QUINTESSENCIA | MEIA NOITE | YES QUINTESSENCIA | 1 | 0.43 | 0.57 | 0.40 | open | - |
