@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-27 11:39 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-27 11:54 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 395 | 38 | 357 | 117 | -$76.29 | -2.0% | -0.7c (389) | $923.71 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 614 | 48 | 566 | 376 | -$278.11 | -6.8% | -1.4c (608) | $721.89 |
+| model-only | Elo win model alone (control: ignores the market) | 395 | 38 | 357 | 117 | -$76.29 | -2.0% | -0.7c (390) | $923.71 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 615 | 49 | 566 | 376 | -$278.11 | -6.8% | -1.4c (610) | $721.89 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-27 11:54 | favourite | dota2 | Astra Invicta | LEGION | YES Astra Invicta | 10 | 0.68 | 0.67 | 0.67 | open | - |
 | 2026-10-27 10:54 | favourite | cs2 | ex-RUSTEC | Spirit Academy | YES ex-RUSTEC | 13 | 0.53 | 0.52 | 0.52 | open | - |
 | 2026-10-27 10:54 | model-only | cs2 | Spirit Academy | ex-RUSTEC | NO ex-RUSTEC | 4 | 0.49 | 0.57 | 0.48 | open | - |
 | 2026-10-27 10:54 | favourite | cs2 | Nuclear TigeRES | FOKUS | YES Nuclear TigeRES | 14 | 0.51 | 0.51 | 0.51 | open | - |
@@ -63,7 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-27 06:53 | model-only | cs2 | K27 | B8 | NO B8 | 45 | 0.35 | 0.54 | 0.34 | won | $28.53 |
 | 2026-10-27 02:53 | favourite | dota2 | Royal Bear | Cloud Dawning | NO Cloud Dawning | 2 | 0.84 | 0.84 | 0.84 | won | $0.30 |
 | 2026-10-27 01:53 | favourite | cs2 | Abyssal | Rooster | YES Abyssal | 12 | 0.57 | 0.55 | 0.55 | lost | -$7.05 |
-| 2026-10-27 01:53 | model-only | cs2 | Rooster | Abyssal | YES Rooster | 35 | 0.46 | 0.54 | 0.45 | won | $18.29 |
 
 ## Backtest on real Kalshi prices
 
