@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-27 11:09 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-27 11:14 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 395 | 40 | 355 | 116 | -$116.92 | -3.2% | -0.7c (389) | $883.08 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 614 | 51 | 563 | 375 | -$266.40 | -6.5% | -1.4c (607) | $733.60 |
+| model-only | Elo win model alone (control: ignores the market) | 395 | 39 | 356 | 117 | -$71.88 | -1.9% | -0.7c (389) | $928.12 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 614 | 49 | 565 | 375 | -$280.32 | -6.9% | -1.4c (607) | $719.68 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1320 finished matches. Lower is better; the market line is the bar to beat.
+1322 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5787 | 0.1985 |
-| model | 0.6570 | 0.2327 |
-| blend | 0.5782 | 0.1984 |
+| market | 0.5794 | 0.1988 |
+| model | 0.6572 | 0.2328 |
+| blend | 0.5790 | 0.1988 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 854 | 0.5924 | 0.6644 |
+| cs2 | 856 | 0.5935 | 0.6647 |
 | dota2 | 197 | 0.5507 | 0.6363 |
 | ow | 83 | 0.5090 | 0.5369 |
 | lol | 81 | 0.5680 | 0.7211 |
@@ -52,12 +52,12 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-27 09:53 | model-only | cs2 | magic | BIG | YES magic | 39 | 0.42 | 0.54 | 0.42 | open | - |
 | 2026-10-27 09:53 | favourite | cs2 | BIG | magic | YES BIG | 12 | 0.58 | 0.58 | 0.58 | open | - |
 | 2026-10-27 09:53 | favourite | valorant | Wolves Esports | World Sports Invictus Gaming | NO World Sports Invictus Gaming | 10 | 0.70 | 0.70 | 0.70 | open | - |
-| 2026-10-27 07:53 | favourite | cs2 | Team Nemesis | Brute | NO Brute | 9 | 0.75 | 0.74 | 0.74 | open | - |
+| 2026-10-27 07:53 | favourite | cs2 | Team Nemesis | Brute | NO Brute | 9 | 0.75 | 0.74 | 0.74 | lost | -$6.87 |
 | 2026-10-27 07:53 | model-only | cs2 | Bread Eaters Esports | Prestige | YES Bread Eaters Esports | 14 | 0.30 | 0.40 | 0.28 | open | - |
 | 2026-10-27 07:53 | favourite | cs2 | Prestige | Bread Eaters Esports | NO Bread Eaters Esports | 9 | 0.74 | 0.72 | 0.72 | open | - |
-| 2026-10-27 07:53 | model-only | cs2 | Brute | Team Nemesis | NO Team Nemesis | 62 | 0.26 | 0.39 | 0.26 | open | - |
+| 2026-10-27 07:53 | model-only | cs2 | Brute | Team Nemesis | NO Team Nemesis | 62 | 0.26 | 0.39 | 0.26 | won | $45.04 |
 | 2026-10-27 07:53 | model-only | dota2 | Mena Warriors | No Hoodwink | YES Mena Warriors | 70 | 0.23 | 0.41 | 0.23 | open | - |
-| 2026-10-27 07:53 | favourite | cs2 | Revise | eternal premium | NO eternal premium | 12 | 0.57 | 0.54 | 0.54 | open | - |
+| 2026-10-27 07:53 | favourite | cs2 | Revise | eternal premium | NO eternal premium | 12 | 0.57 | 0.54 | 0.54 | lost | -$7.05 |
 | 2026-10-27 07:53 | favourite | valorant | Unsettled Resentment | Victory No Limits | YES Unsettled Resentment | 9 | 0.73 | 0.72 | 0.72 | open | - |
 | 2026-10-27 06:53 | favourite | cs2 | B8 | K27 | YES B8 | 11 | 0.66 | 0.66 | 0.66 | lost | -$7.44 |
 | 2026-10-27 06:53 | model-only | cs2 | K27 | B8 | NO B8 | 45 | 0.35 | 0.54 | 0.34 | won | $28.53 |
