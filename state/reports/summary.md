@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-27 10:09 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-27 10:24 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-27 10:09 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 394 | 40 | 354 | 115 | -$145.45 | -3.9% | -0.7c (385) | $854.55 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 611 | 49 | 562 | 375 | -$258.96 | -6.4% | -1.4c (602) | $741.04 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 612 | 50 | 562 | 375 | -$258.96 | -6.4% | -1.4c (602) | $741.04 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-27 10:24 | favourite | cs2 | gothboiclique | WonderKids | NO WonderKids | 1 | 0.77 | 0.78 | 0.78 | open | - |
 | 2026-10-27 09:53 | favourite | valorant | Wolves Esports | World Sports Invictus Gaming | NO World Sports Invictus Gaming | 10 | 0.70 | 0.70 | 0.70 | open | - |
 | 2026-10-27 09:53 | favourite | cs2 | BIG | magic | YES BIG | 12 | 0.58 | 0.58 | 0.58 | open | - |
 | 2026-10-27 09:53 | model-only | cs2 | magic | BIG | YES magic | 39 | 0.42 | 0.54 | 0.42 | open | - |
@@ -63,7 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-26 19:52 | model-only | cs2 | QUINTESSENCIA | MEIA NOITE | YES QUINTESSENCIA | 1 | 0.43 | 0.57 | 0.40 | open | - |
 | 2026-10-26 19:52 | model-only | cs2 | ARK E-sports | ALKA | NO ALKA | 1 | 0.21 | 0.41 | 0.19 | open | - |
 | 2026-10-26 16:51 | model-only | cs2 | TTG Esports | Diamant Esports | YES TTG Esports | 5 | 0.59 | 0.70 | 0.59 | open | - |
-| 2026-10-26 15:51 | model-only | cs2 | MASQ | ECSTATIC | NO ECSTATIC | 6 | 0.30 | 0.51 | 0.28 | won | $4.11 |
 
 ## Backtest on real Kalshi prices
 
