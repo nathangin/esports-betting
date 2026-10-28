@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-28 15:08 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-28 15:23 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 415 | 37 | 378 | 125 | -$159.11 | -4.0% | -0.5c (409) | $840.89 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 651 | 49 | 602 | 399 | -$294.58 | -6.8% | -1.4c (645) | $705.42 |
+| model-only | Elo win model alone (control: ignores the market) | 416 | 38 | 378 | 125 | -$159.11 | -4.0% | -0.5c (409) | $840.89 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 653 | 50 | 603 | 400 | -$293.80 | -6.8% | -1.4c (645) | $706.20 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-28 15:23 | favourite | cs2 | Team Nemesis Academy | SPARX | NO SPARX | 6 | 0.66 | 0.63 | 0.63 | open | - |
+| 2026-10-28 15:23 | favourite | cs2 | Aurora Young Blood | DimoniX Esports | YES Aurora Young Blood | 4 | 0.64 | 0.64 | 0.64 | open | - |
+| 2026-10-28 15:23 | model-only | cs2 | DimoniX Esports | Aurora Young Blood | NO Aurora Young Blood | 1 | 0.37 | 0.45 | 0.36 | open | - |
 | 2026-10-28 14:53 | favourite | cs2 | BIG | fnatic | YES BIG | 12 | 0.57 | 0.56 | 0.56 | open | - |
 | 2026-10-28 14:53 | model-only | cs2 | fnatic | BIG | NO BIG | 36 | 0.44 | 0.60 | 0.44 | open | - |
 | 2026-10-28 13:53 | favourite | dota2 | Team Synapse | SOLID | YES Team Synapse | 10 | 0.68 | 0.66 | 0.66 | open | - |
@@ -46,24 +49,21 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-28 13:53 | model-only | dota2 | Roshan Hunters | angry birds | NO angry birds | 56 | 0.28 | 0.45 | 0.27 | open | - |
 | 2026-10-28 13:53 | model-only | dota2 | OG | Team Spirit | YES OG | 91 | 0.17 | 0.27 | 0.17 | open | - |
 | 2026-10-28 13:53 | favourite | cs2 | 6yuBoJlbl | Sokerorg | YES 6yuBoJlbl | 12 | 0.56 | 0.53 | 0.53 | open | - |
-| 2026-10-28 12:52 | favourite | cs2 | GamerLegion | HOTU | YES GamerLegion | 12 | 0.53 | 0.53 | 0.53 | open | - |
 | 2026-10-28 12:52 | model-only | cs2 | HOTU | GamerLegion | NO GamerLegion | 33 | 0.48 | 0.65 | 0.47 | open | - |
 | 2026-10-28 12:52 | favourite | cs2 | FURIA | Liquid | YES FURIA | 9 | 0.75 | 0.74 | 0.74 | open | - |
 | 2026-10-28 12:52 | model-only | cs2 | Liquid | FURIA | NO FURIA | 60 | 0.26 | 0.38 | 0.26 | open | - |
+| 2026-10-28 12:52 | favourite | cs2 | GamerLegion | HOTU | YES GamerLegion | 12 | 0.53 | 0.53 | 0.53 | open | - |
 | 2026-10-28 12:22 | favourite | cs2 | Eternal Fire | Team Nemesis | YES Eternal Fire | 8 | 0.79 | 0.79 | 0.79 | open | - |
-| 2026-10-28 10:52 | favourite | dota2 | angry birds | Level Up Academy | YES angry birds | 7 | 0.88 | 0.87 | 0.87 | open | - |
+| 2026-10-28 10:52 | favourite | dota2 | angry birds | Level Up Academy | YES angry birds | 7 | 0.88 | 0.87 | 0.87 | won | $0.78 |
 | 2026-10-28 10:52 | favourite | cs2 | Inner Circle Academy | Saint Sinners | YES Inner Circle Academy | 11 | 0.60 | 0.57 | 0.57 | lost | -$6.79 |
 | 2026-10-28 10:52 | favourite | cs2 | SINQU | Fortress | NO Fortress | 12 | 0.54 | 0.52 | 0.52 | open | - |
-| 2026-10-28 10:22 | model-only | cs2 | Copenhagen Wolves | UNiTY esports | NO UNiTY esports | 5 | 0.28 | 0.33 | 0.28 | lost | -$1.48 |
 | 2026-10-28 10:22 | favourite | cs2 | UNiTY esports | Copenhagen Wolves | NO Copenhagen Wolves | 9 | 0.73 | 0.72 | 0.72 | won | $2.30 |
+| 2026-10-28 10:22 | model-only | cs2 | Copenhagen Wolves | UNiTY esports | NO UNiTY esports | 5 | 0.28 | 0.33 | 0.28 | lost | -$1.48 |
 | 2026-10-28 09:52 | favourite | valorant | Any Questions Gaming | Rare Atom | YES Any Questions Gaming | 9 | 0.69 | 0.68 | 0.68 | won | $2.65 |
 | 2026-10-28 09:52 | favourite | cs2 | TheMongolz | Nemiga | YES TheMongolz | 12 | 0.55 | 0.55 | 0.55 | lost | -$6.81 |
 | 2026-10-28 09:52 | model-only | cs2 | Nemiga | TheMongolz | NO TheMongolz | 36 | 0.46 | 0.64 | 0.45 | won | $18.81 |
 | 2026-10-28 09:52 | favourite | cs2 | Astralis | magic | YES Astralis | 12 | 0.54 | 0.54 | 0.54 | won | $5.31 |
 | 2026-10-28 09:52 | model-only | cs2 | Astralis | magic | YES Astralis | 31 | 0.54 | 0.60 | 0.54 | won | $13.72 |
-| 2026-10-28 07:51 | favourite | valorant | A Team | Octagonal Disposition Gaming | YES A Team | 11 | 0.61 | 0.60 | 0.60 | won | $4.10 |
-| 2026-10-28 07:51 | model-only | valorant | Octagonal Disposition Gaming | A Team | YES Octagonal Disposition Gaming | 42 | 0.40 | 0.64 | 0.40 | lost | -$17.51 |
-| 2026-10-28 07:51 | favourite | dota2 | oveA | Mena Warriors | YES oveA | 5 | 0.53 | 0.52 | 0.52 | lost | -$2.74 |
 
 ## Backtest on real Kalshi prices
 
