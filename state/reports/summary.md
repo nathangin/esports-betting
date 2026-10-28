@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-28 07:41 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-28 07:51 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 404 | 33 | 371 | 123 | -$120.14 | -3.1% | -0.5c (398) | $879.86 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 631 | 42 | 589 | 390 | -$303.63 | -7.2% | -1.4c (625) | $696.37 |
+| model-only | Elo win model alone (control: ignores the market) | 407 | 36 | 371 | 123 | -$120.14 | -3.1% | -0.5c (399) | $879.86 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 637 | 48 | 589 | 390 | -$303.63 | -7.2% | -1.4c (626) | $696.37 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-28 07:51 | favourite | valorant | A Team | Octagonal Disposition Gaming | YES A Team | 11 | 0.61 | 0.60 | 0.60 | open | - |
+| 2026-10-28 07:51 | model-only | valorant | Octagonal Disposition Gaming | A Team | YES Octagonal Disposition Gaming | 42 | 0.40 | 0.64 | 0.40 | open | - |
+| 2026-10-28 07:51 | favourite | dota2 | oveA | Mena Warriors | YES oveA | 5 | 0.53 | 0.52 | 0.52 | open | - |
+| 2026-10-28 07:51 | favourite | dota2 | PARIVISION | Team Liquid | YES PARIVISION | 8 | 0.82 | 0.82 | 0.82 | open | - |
+| 2026-10-28 07:51 | model-only | dota2 | Team Liquid | PARIVISION | YES Team Liquid | 92 | 0.18 | 0.27 | 0.18 | open | - |
+| 2026-10-28 07:51 | favourite | cs2 | Ryvex | RoundsGG | NO RoundsGG | 12 | 0.55 | 0.55 | 0.54 | open | - |
+| 2026-10-28 07:51 | favourite | cs2 | Gatorian | Revenge | YES Gatorian | 11 | 0.60 | 0.58 | 0.58 | open | - |
+| 2026-10-28 07:51 | model-only | cs2 | Revenge | Gatorian | NO Gatorian | 39 | 0.43 | 0.50 | 0.42 | open | - |
+| 2026-10-28 07:51 | favourite | cs2 | Dark Moon | DNK | YES Dark Moon | 11 | 0.59 | 0.56 | 0.56 | open | - |
 | 2026-10-28 06:51 | favourite | cs2 | B8 | Alliance | YES B8 | 9 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-10-28 06:51 | model-only | cs2 | Alliance | B8 | YES Alliance | 54 | 0.31 | 0.38 | 0.31 | open | - |
 | 2026-10-28 04:51 | favourite | cs2 | Rooster | Abyssal | NO Abyssal | 12 | 0.54 | 0.52 | 0.52 | open | - |
 | 2026-10-28 01:51 | favourite | cs2 | NEXVOID | Off Chops | YES NEXVOID | 10 | 0.63 | 0.61 | 0.61 | won | $3.53 |
-| 2026-10-27 15:50 | favourite | cs2 | HOTU | Luminosity | NO Luminosity | 1 | 0.59 | 0.60 | 0.60 | won | $0.39 |
+| 2026-10-27 15:50 | model-only | cs2 | HOTU | Luminosity | NO Luminosity | 1 | 0.59 | 0.65 | 0.60 | won | $0.39 |
 | 2026-10-27 15:50 | model-only | cs2 | Banger Gang | aimers | YES Banger Gang | 30 | 0.57 | 0.67 | 0.56 | open | - |
 | 2026-10-27 15:50 | favourite | cs2 | Banger Gang | aimers | YES Banger Gang | 11 | 0.57 | 0.56 | 0.56 | open | - |
-| 2026-10-27 15:50 | model-only | cs2 | HOTU | Luminosity | NO Luminosity | 1 | 0.59 | 0.65 | 0.60 | won | $0.39 |
 | 2026-10-27 15:50 | favourite | cs2 | Vitality | Natus Vincere | NO Natus Vincere | 5 | 0.69 | 0.69 | 0.69 | won | $1.47 |
+| 2026-10-27 15:50 | favourite | cs2 | HOTU | Luminosity | NO Luminosity | 1 | 0.59 | 0.60 | 0.60 | won | $0.39 |
 | 2026-10-27 15:50 | model-only | lol | Mental Rush | Rising Bees | NO Rising Bees | 5 | 0.32 | 0.47 | 0.31 | lost | -$1.68 |
 | 2026-10-27 15:24 | favourite | cs2 | Winx | eSuba | YES Winx | 12 | 0.54 | 0.53 | 0.53 | won | $5.31 |
 | 2026-10-27 15:24 | model-only | cs2 | eSuba | Winx | NO Winx | 28 | 0.48 | 0.55 | 0.47 | lost | -$13.93 |
 | 2026-10-27 14:54 | favourite | dota2 | BetBoom Team | Astra Invicta | NO Astra Invicta | 10 | 0.66 | 0.66 | 0.66 | lost | -$6.76 |
 | 2026-10-27 14:54 | favourite | cs2 | fnatic | Astralis | NO Astralis | 11 | 0.59 | 0.58 | 0.58 | won | $4.32 |
 | 2026-10-27 14:54 | model-only | cs2 | Astralis | fnatic | YES Astralis | 40 | 0.42 | 0.53 | 0.41 | lost | -$17.49 |
-| 2026-10-27 13:54 | model-only | cs2 | Saint Sinners | BakS eSports | NO BakS eSports | 1 | 0.37 | 0.42 | 0.36 | lost | -$0.39 |
-| 2026-10-27 13:54 | favourite | cs2 | Wingman | Revise | YES Wingman | 12 | 0.56 | 0.54 | 0.54 | lost | -$6.93 |
-| 2026-10-27 13:54 | favourite | cs2 | BakS eSports | Saint Sinners | YES BakS eSports | 10 | 0.65 | 0.64 | 0.64 | won | $3.34 |
 | 2026-10-27 13:54 | favourite | dota2 | Zero Tenacity | Pibbles Corp | NO Pibbles Corp | 2 | 0.84 | 0.80 | 0.80 | won | $0.30 |
-| 2026-10-27 13:24 | favourite | dota2 | BetBoom Team | LEGION | NO LEGION | 10 | 0.68 | 0.68 | 0.68 | lost | -$6.96 |
-| 2026-10-27 13:24 | model-only | dota2 | LEGION | BetBoom Team | NO BetBoom Team | 39 | 0.32 | 0.51 | 0.32 | won | $25.92 |
-| 2026-10-27 12:54 | favourite | cs2 | Spirit | MOUZ | NO MOUZ | 12 | 0.55 | 0.55 | 0.54 | lost | -$6.81 |
-| 2026-10-27 12:54 | favourite | cs2 | Legacy | TheMongolz | YES Legacy | 12 | 0.57 | 0.56 | 0.56 | lost | -$7.05 |
-| 2026-10-27 12:54 | model-only | cs2 | TheMongolz | Legacy | NO Legacy | 34 | 0.44 | 0.49 | 0.44 | won | $18.45 |
-| 2026-10-27 12:24 | favourite | cs2 | Inner Circle Esports | Team Nemesis | YES Inner Circle Esports | 9 | 0.78 | 0.77 | 0.77 | won | $1.87 |
 
 ## Backtest on real Kalshi prices
 
