@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-28 10:22 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-28 10:52 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 410 | 39 | 371 | 123 | -$120.14 | -3.1% | -0.5c (402) | $879.86 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 641 | 51 | 590 | 390 | -$310.32 | -7.3% | -1.4c (632) | $689.68 |
+| model-only | Elo win model alone (control: ignores the market) | 410 | 39 | 371 | 123 | -$120.14 | -3.1% | -0.5c (404) | $879.86 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 644 | 54 | 590 | 390 | -$310.32 | -7.3% | -1.4c (635) | $689.68 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-28 10:52 | favourite | dota2 | angry birds | Level Up Academy | YES angry birds | 7 | 0.88 | 0.87 | 0.87 | open | - |
+| 2026-10-28 10:52 | favourite | cs2 | Inner Circle Academy | Saint Sinners | YES Inner Circle Academy | 11 | 0.60 | 0.57 | 0.57 | open | - |
+| 2026-10-28 10:52 | favourite | cs2 | SINQU | Fortress | NO Fortress | 12 | 0.54 | 0.52 | 0.52 | open | - |
 | 2026-10-28 10:22 | favourite | cs2 | UNiTY esports | Copenhagen Wolves | NO Copenhagen Wolves | 9 | 0.73 | 0.72 | 0.72 | open | - |
 | 2026-10-28 10:22 | model-only | cs2 | Copenhagen Wolves | UNiTY esports | NO UNiTY esports | 5 | 0.28 | 0.33 | 0.28 | open | - |
 | 2026-10-28 09:52 | favourite | valorant | Any Questions Gaming | Rare Atom | YES Any Questions Gaming | 9 | 0.69 | 0.68 | 0.68 | open | - |
@@ -46,11 +49,11 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-28 09:52 | model-only | cs2 | Nemiga | TheMongolz | NO TheMongolz | 36 | 0.46 | 0.64 | 0.45 | open | - |
 | 2026-10-28 09:52 | favourite | cs2 | Astralis | magic | YES Astralis | 12 | 0.54 | 0.54 | 0.54 | open | - |
 | 2026-10-28 09:52 | model-only | cs2 | Astralis | magic | YES Astralis | 31 | 0.54 | 0.60 | 0.54 | open | - |
-| 2026-10-28 07:51 | model-only | dota2 | Team Liquid | PARIVISION | YES Team Liquid | 92 | 0.18 | 0.27 | 0.18 | open | - |
+| 2026-10-28 07:51 | favourite | cs2 | Ryvex | RoundsGG | NO RoundsGG | 12 | 0.55 | 0.55 | 0.54 | open | - |
 | 2026-10-28 07:51 | favourite | cs2 | Dark Moon | DNK | YES Dark Moon | 11 | 0.59 | 0.56 | 0.56 | open | - |
 | 2026-10-28 07:51 | model-only | cs2 | Revenge | Gatorian | NO Gatorian | 39 | 0.43 | 0.50 | 0.42 | open | - |
-| 2026-10-28 07:51 | favourite | cs2 | Ryvex | RoundsGG | NO RoundsGG | 12 | 0.55 | 0.55 | 0.54 | open | - |
 | 2026-10-28 07:51 | favourite | cs2 | Gatorian | Revenge | YES Gatorian | 11 | 0.60 | 0.58 | 0.58 | open | - |
+| 2026-10-28 07:51 | model-only | dota2 | Team Liquid | PARIVISION | YES Team Liquid | 92 | 0.18 | 0.27 | 0.18 | open | - |
 | 2026-10-28 07:51 | favourite | dota2 | PARIVISION | Team Liquid | YES PARIVISION | 8 | 0.82 | 0.82 | 0.82 | open | - |
 | 2026-10-28 07:51 | favourite | dota2 | oveA | Mena Warriors | YES oveA | 5 | 0.53 | 0.52 | 0.52 | open | - |
 | 2026-10-28 07:51 | model-only | valorant | Octagonal Disposition Gaming | A Team | YES Octagonal Disposition Gaming | 42 | 0.40 | 0.64 | 0.40 | open | - |
@@ -61,9 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-28 01:51 | favourite | cs2 | NEXVOID | Off Chops | YES NEXVOID | 10 | 0.63 | 0.61 | 0.61 | won | $3.53 |
 | 2026-10-27 15:50 | model-only | lol | Mental Rush | Rising Bees | NO Rising Bees | 5 | 0.32 | 0.47 | 0.31 | lost | -$1.68 |
 | 2026-10-27 15:50 | favourite | cs2 | Vitality | Natus Vincere | NO Natus Vincere | 5 | 0.69 | 0.69 | 0.69 | won | $1.47 |
-| 2026-10-27 15:50 | favourite | cs2 | HOTU | Luminosity | NO Luminosity | 1 | 0.59 | 0.60 | 0.60 | won | $0.39 |
-| 2026-10-27 15:50 | model-only | cs2 | HOTU | Luminosity | NO Luminosity | 1 | 0.59 | 0.65 | 0.60 | won | $0.39 |
-| 2026-10-27 15:50 | favourite | cs2 | Banger Gang | aimers | YES Banger Gang | 11 | 0.57 | 0.56 | 0.56 | open | - |
 
 ## Backtest on real Kalshi prices
 
