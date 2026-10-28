@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-28 11:07 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-28 11:12 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 410 | 38 | 372 | 123 | -$137.65 | -3.5% | -0.5c (404) | $862.35 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 644 | 53 | 591 | 391 | -$306.22 | -7.2% | -1.4c (635) | $693.78 |
+| model-only | Elo win model alone (control: ignores the market) | 410 | 37 | 373 | 123 | -$155.09 | -4.0% | -0.5c (404) | $844.91 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 644 | 52 | 592 | 392 | -$302.01 | -7.1% | -1.4c (635) | $697.99 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -51,8 +51,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-28 09:52 | model-only | cs2 | Astralis | magic | YES Astralis | 31 | 0.54 | 0.60 | 0.54 | open | - |
 | 2026-10-28 07:51 | favourite | cs2 | Ryvex | RoundsGG | NO RoundsGG | 12 | 0.55 | 0.55 | 0.54 | open | - |
 | 2026-10-28 07:51 | favourite | cs2 | Dark Moon | DNK | YES Dark Moon | 11 | 0.59 | 0.56 | 0.56 | open | - |
-| 2026-10-28 07:51 | model-only | cs2 | Revenge | Gatorian | NO Gatorian | 39 | 0.43 | 0.50 | 0.42 | open | - |
-| 2026-10-28 07:51 | favourite | cs2 | Gatorian | Revenge | YES Gatorian | 11 | 0.60 | 0.58 | 0.58 | open | - |
+| 2026-10-28 07:51 | model-only | cs2 | Revenge | Gatorian | NO Gatorian | 39 | 0.43 | 0.50 | 0.42 | lost | -$17.44 |
+| 2026-10-28 07:51 | favourite | cs2 | Gatorian | Revenge | YES Gatorian | 11 | 0.60 | 0.58 | 0.58 | won | $4.21 |
 | 2026-10-28 07:51 | model-only | dota2 | Team Liquid | PARIVISION | YES Team Liquid | 92 | 0.18 | 0.27 | 0.18 | open | - |
 | 2026-10-28 07:51 | favourite | dota2 | PARIVISION | Team Liquid | YES PARIVISION | 8 | 0.82 | 0.82 | 0.82 | open | - |
 | 2026-10-28 07:51 | favourite | dota2 | oveA | Mena Warriors | YES oveA | 5 | 0.53 | 0.52 | 0.52 | open | - |
