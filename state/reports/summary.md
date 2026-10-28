@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-28 08:07 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-28 08:32 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-28 08:07 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 407 | 36 | 371 | 123 | -$120.14 | -3.1% | -0.5c (399) | $879.86 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 637 | 48 | 589 | 390 | -$303.63 | -7.2% | -1.4c (626) | $696.37 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 637 | 47 | 590 | 390 | -$310.32 | -7.3% | -1.4c (626) | $689.68 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -50,7 +50,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-28 07:51 | favourite | cs2 | Dark Moon | DNK | YES Dark Moon | 11 | 0.59 | 0.56 | 0.56 | open | - |
 | 2026-10-28 06:51 | favourite | cs2 | B8 | Alliance | YES B8 | 9 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-10-28 06:51 | model-only | cs2 | Alliance | B8 | YES Alliance | 54 | 0.31 | 0.38 | 0.31 | open | - |
-| 2026-10-28 04:51 | favourite | cs2 | Rooster | Abyssal | NO Abyssal | 12 | 0.54 | 0.52 | 0.52 | open | - |
+| 2026-10-28 04:51 | favourite | cs2 | Rooster | Abyssal | NO Abyssal | 12 | 0.54 | 0.52 | 0.52 | lost | -$6.69 |
 | 2026-10-28 01:51 | favourite | cs2 | NEXVOID | Off Chops | YES NEXVOID | 10 | 0.63 | 0.61 | 0.61 | won | $3.53 |
 | 2026-10-27 15:50 | model-only | cs2 | HOTU | Luminosity | NO Luminosity | 1 | 0.59 | 0.65 | 0.60 | won | $0.39 |
 | 2026-10-27 15:50 | model-only | cs2 | Banger Gang | aimers | YES Banger Gang | 30 | 0.57 | 0.67 | 0.56 | open | - |
