@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-27 23:51 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-28 00:11 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 403 | 33 | 370 | 122 | -$120.69 | -3.1% | -0.5c (398) | $879.31 |
+| model-only | Elo win model alone (control: ignores the market) | 403 | 32 | 371 | 123 | -$120.14 | -3.1% | -0.5c (398) | $879.86 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 628 | 40 | 588 | 389 | -$307.16 | -7.3% | -1.5c (623) | $692.84 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1371 finished matches. Lower is better; the market line is the bar to beat.
+1372 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5794 | 0.1989 |
+| market | 0.5796 | 0.1990 |
 | model | 0.6565 | 0.2325 |
-| blend | 0.5789 | 0.1988 |
+| blend | 0.5792 | 0.1990 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 892 | 0.5928 | 0.6638 |
+| cs2 | 893 | 0.5931 | 0.6637 |
 | dota2 | 205 | 0.5521 | 0.6362 |
 | ow | 83 | 0.5090 | 0.5369 |
 | lol | 82 | 0.5655 | 0.7200 |
