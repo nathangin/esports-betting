@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-28 16:23 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-28 16:33 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 418 | 39 | 379 | 125 | -$175.52 | -4.4% | -0.6c (411) | $824.48 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 656 | 51 | 605 | 402 | -$286.36 | -6.6% | -1.4c (648) | $713.64 |
+| model-only | Elo win model alone (control: ignores the market) | 418 | 38 | 380 | 126 | -$158.94 | -4.0% | -0.6c (411) | $841.06 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 656 | 50 | 606 | 402 | -$292.93 | -6.7% | -1.4c (648) | $707.07 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -56,8 +56,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-28 13:53 | favourite | cs2 | 6yuBoJlbl | Sokerorg | YES 6yuBoJlbl | 12 | 0.56 | 0.53 | 0.53 | open | - |
 | 2026-10-28 12:52 | favourite | cs2 | FURIA | Liquid | YES FURIA | 9 | 0.75 | 0.74 | 0.74 | won | $2.13 |
 | 2026-10-28 12:52 | model-only | cs2 | Liquid | FURIA | NO FURIA | 60 | 0.26 | 0.38 | 0.26 | lost | -$16.41 |
-| 2026-10-28 12:52 | model-only | cs2 | HOTU | GamerLegion | NO GamerLegion | 33 | 0.48 | 0.65 | 0.47 | open | - |
-| 2026-10-28 12:52 | favourite | cs2 | GamerLegion | HOTU | YES GamerLegion | 12 | 0.53 | 0.53 | 0.53 | open | - |
+| 2026-10-28 12:52 | model-only | cs2 | HOTU | GamerLegion | NO GamerLegion | 33 | 0.48 | 0.65 | 0.47 | won | $16.58 |
+| 2026-10-28 12:52 | favourite | cs2 | GamerLegion | HOTU | YES GamerLegion | 12 | 0.53 | 0.53 | 0.53 | lost | -$6.57 |
 | 2026-10-28 12:22 | favourite | cs2 | Eternal Fire | Team Nemesis | YES Eternal Fire | 8 | 0.79 | 0.79 | 0.79 | open | - |
 | 2026-10-28 10:52 | favourite | dota2 | angry birds | Level Up Academy | YES angry birds | 7 | 0.88 | 0.87 | 0.87 | won | $0.78 |
 | 2026-10-28 10:52 | favourite | cs2 | Inner Circle Academy | Saint Sinners | YES Inner Circle Academy | 11 | 0.60 | 0.57 | 0.57 | lost | -$6.79 |
