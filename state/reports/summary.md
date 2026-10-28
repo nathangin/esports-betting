@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-28 12:07 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-28 12:12 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-28 12:07 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 410 | 36 | 374 | 123 | -$172.64 | -4.4% | -0.5c (405) | $827.36 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 644 | 51 | 593 | 393 | -$299.36 | -7.0% | -1.4c (639) | $700.64 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 644 | 50 | 594 | 393 | -$302.10 | -7.1% | -1.4c (639) | $697.90 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -55,7 +55,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-28 07:51 | favourite | cs2 | Gatorian | Revenge | YES Gatorian | 11 | 0.60 | 0.58 | 0.58 | won | $4.21 |
 | 2026-10-28 07:51 | model-only | dota2 | Team Liquid | PARIVISION | YES Team Liquid | 92 | 0.18 | 0.27 | 0.18 | open | - |
 | 2026-10-28 07:51 | favourite | dota2 | PARIVISION | Team Liquid | YES PARIVISION | 8 | 0.82 | 0.82 | 0.82 | open | - |
-| 2026-10-28 07:51 | favourite | dota2 | oveA | Mena Warriors | YES oveA | 5 | 0.53 | 0.52 | 0.52 | open | - |
+| 2026-10-28 07:51 | favourite | dota2 | oveA | Mena Warriors | YES oveA | 5 | 0.53 | 0.52 | 0.52 | lost | -$2.74 |
 | 2026-10-28 07:51 | model-only | valorant | Octagonal Disposition Gaming | A Team | YES Octagonal Disposition Gaming | 42 | 0.40 | 0.64 | 0.40 | lost | -$17.51 |
 | 2026-10-28 07:51 | favourite | valorant | A Team | Octagonal Disposition Gaming | YES A Team | 11 | 0.61 | 0.60 | 0.60 | won | $4.10 |
 | 2026-10-28 06:51 | favourite | cs2 | B8 | Alliance | YES B8 | 9 | 0.69 | 0.69 | 0.69 | won | $2.65 |
