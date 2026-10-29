@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-29 19:06 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-29 19:11 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-29 19:06 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 434 | 33 | 401 | 135 | -$86.11 | -2.0% | -0.4c (429) | $913.89 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 692 | 53 | 639 | 421 | -$329.30 | -7.3% | -1.5c (686) | $670.70 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 692 | 52 | 640 | 422 | -$325.47 | -7.2% | -1.5c (686) | $674.53 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -52,7 +52,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-29 16:31 | favourite | cs2 | Iberian Soul | TYLOO | NO TYLOO | 1 | 0.57 | 0.54 | 0.54 | open | - |
 | 2026-10-29 15:50 | favourite | cs2 | FURIA | BetBoom Team | NO BetBoom Team | 8 | 0.75 | 0.74 | 0.74 | won | $1.89 |
 | 2026-10-29 15:20 | favourite | cs2 | TTG Esports | Winx | YES TTG Esports | 12 | 0.53 | 0.51 | 0.51 | won | $5.43 |
-| 2026-10-29 15:20 | favourite | cs2 | Aurora Young Blood | SPARX | YES Aurora Young Blood | 10 | 0.60 | 0.60 | 0.60 | open | - |
+| 2026-10-29 15:20 | favourite | cs2 | Aurora Young Blood | SPARX | YES Aurora Young Blood | 10 | 0.60 | 0.60 | 0.60 | won | $3.83 |
 | 2026-10-29 14:50 | model-only | cs2 | fnatic | MIBR | YES fnatic | 30 | 0.43 | 0.49 | 0.42 | won | $16.58 |
 | 2026-10-29 14:50 | favourite | cs2 | MIBR | fnatic | NO fnatic | 11 | 0.58 | 0.57 | 0.57 | lost | -$6.57 |
 | 2026-10-29 14:50 | favourite | cs2 | Spirit Academy Green | RoundsGG | NO RoundsGG | 1 | 0.80 | 0.78 | 0.78 | won | $0.18 |
