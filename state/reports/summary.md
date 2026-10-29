@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-29 12:05 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-29 12:20 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 429 | 39 | 390 | 132 | -$26.55 | -0.6% | -0.4c (422) | $973.45 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 670 | 51 | 619 | 407 | -$326.76 | -7.4% | -1.5c (663) | $673.24 |
+| model-only | Elo win model alone (control: ignores the market) | 430 | 40 | 390 | 132 | -$26.55 | -0.6% | -0.4c (422) | $973.45 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 671 | 52 | 619 | 407 | -$326.76 | -7.4% | -1.5c (663) | $673.24 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-29 12:20 | favourite | cs2 | Astralis | Inner Circle Esports | YES Astralis | 10 | 0.60 | 0.59 | 0.59 | open | - |
+| 2026-10-29 12:20 | model-only | cs2 | Inner Circle Esports | Astralis | NO Astralis | 45 | 0.41 | 0.49 | 0.41 | open | - |
 | 2026-10-29 11:50 | favourite | cs2 | PRIVATE | Fire Flux Esports | NO Fire Flux Esports | 1 | 0.72 | 0.72 | 0.72 | open | - |
 | 2026-10-29 11:50 | model-only | cs2 | Fire Flux Esports | PRIVATE | NO PRIVATE | 67 | 0.28 | 0.51 | 0.28 | open | - |
 | 2026-10-29 11:50 | favourite | cs2 | BARCA | Bounty Hunters Esports | NO Bounty Hunters Esports | 1 | 0.57 | 0.57 | 0.57 | open | - |
@@ -52,18 +54,16 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-29 10:20 | favourite | cs2 | MOUZ NXT | eSuba | NO eSuba | 9 | 0.67 | 0.67 | 0.67 | open | - |
 | 2026-10-29 10:20 | model-only | cs2 | eSuba | MOUZ NXT | YES eSuba | 52 | 0.34 | 0.58 | 0.34 | open | - |
 | 2026-10-29 09:50 | model-only | valorant | World Sports Invictus Gaming | TEC Esports | NO TEC Esports | 52 | 0.34 | 0.44 | 0.33 | open | - |
-| 2026-10-29 09:50 | favourite | cs2 | Vitality | Natus Vincere | YES Vitality | 9 | 0.71 | 0.71 | 0.71 | open | - |
 | 2026-10-29 09:50 | favourite | cs2 | BIG | Eternal Fire | YES BIG | 10 | 0.63 | 0.63 | 0.63 | open | - |
+| 2026-10-29 09:50 | favourite | cs2 | Vitality | Natus Vincere | YES Vitality | 9 | 0.71 | 0.71 | 0.71 | open | - |
 | 2026-10-29 09:50 | favourite | valorant | TEC Esports | World Sports Invictus Gaming | YES TEC Esports | 9 | 0.67 | 0.67 | 0.67 | open | - |
-| 2026-10-29 07:50 | model-only | dota2 | Astra Invicta | Team Liquid | YES Astra Invicta | 34 | 0.36 | 0.41 | 0.31 | lost | -$12.79 |
-| 2026-10-29 07:50 | favourite | cs2 | B8 | HOTU | YES B8 | 11 | 0.59 | 0.55 | 0.55 | lost | -$6.68 |
-| 2026-10-29 07:50 | blend | dota2 | Team Liquid | Astra Invicta | NO Astra Invicta | 30 | 0.65 | 0.71 | 0.69 | won | $10.02 |
-| 2026-10-29 07:50 | model-only | cs2 | HOTU | B8 | NO B8 | 42 | 0.42 | 0.53 | 0.45 | won | $23.64 |
-| 2026-10-29 07:50 | favourite | dota2 | Team Liquid | Astra Invicta | NO Astra Invicta | 10 | 0.65 | 0.69 | 0.69 | won | $3.34 |
-| 2026-10-29 07:50 | model-only | valorant | Unsettled Resentment | KeepBest Gaming | NO KeepBest Gaming | 50 | 0.35 | 0.55 | 0.40 | won | $31.70 |
 | 2026-10-29 07:50 | favourite | valorant | KeepBest Gaming | Unsettled Resentment | YES KeepBest Gaming | 3 | 0.68 | 0.60 | 0.60 | lost | -$2.09 |
-| 2026-10-29 06:50 | favourite | cs2 | FUT Esports | Nemiga | YES FUT Esports | 9 | 0.69 | 0.69 | 0.69 | lost | -$6.35 |
-| 2026-10-28 19:53 | model-only | valorant | KRÜ Blaze | Team Liquid Brazil | YES KRÜ Blaze | 8 | 0.16 | 0.35 | 0.15 | won | $6.64 |
+| 2026-10-29 07:50 | model-only | valorant | Unsettled Resentment | KeepBest Gaming | NO KeepBest Gaming | 50 | 0.35 | 0.55 | 0.40 | won | $31.70 |
+| 2026-10-29 07:50 | favourite | dota2 | Team Liquid | Astra Invicta | NO Astra Invicta | 10 | 0.65 | 0.69 | 0.69 | won | $3.34 |
+| 2026-10-29 07:50 | model-only | dota2 | Astra Invicta | Team Liquid | YES Astra Invicta | 34 | 0.36 | 0.41 | 0.31 | lost | -$12.79 |
+| 2026-10-29 07:50 | blend | dota2 | Team Liquid | Astra Invicta | NO Astra Invicta | 30 | 0.65 | 0.71 | 0.69 | won | $10.02 |
+| 2026-10-29 07:50 | favourite | cs2 | B8 | HOTU | YES B8 | 11 | 0.59 | 0.55 | 0.55 | lost | -$6.68 |
+| 2026-10-29 07:50 | model-only | cs2 | HOTU | B8 | NO B8 | 42 | 0.42 | 0.53 | 0.45 | won | $23.64 |
 
 ## Backtest on real Kalshi prices
 
