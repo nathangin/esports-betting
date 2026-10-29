@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-29 17:21 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-29 17:31 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 434 | 36 | 398 | 134 | -$83.38 | -2.0% | -0.4c (429) | $916.62 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 688 | 56 | 632 | 415 | -$338.90 | -7.6% | -1.5c (677) | $661.10 |
+| model-only | Elo win model alone (control: ignores the market) | 434 | 35 | 399 | 134 | -$83.80 | -2.0% | -0.4c (429) | $916.20 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 688 | 55 | 633 | 416 | -$335.27 | -7.5% | -1.5c (677) | $664.73 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -54,9 +54,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-29 14:50 | model-only | cs2 | fnatic | MIBR | YES fnatic | 30 | 0.43 | 0.49 | 0.42 | open | - |
 | 2026-10-29 13:50 | favourite | cs2 | DNK | Fortress | NO Fortress | 1 | 0.68 | 0.69 | 0.69 | open | - |
 | 2026-10-29 13:50 | model-only | cs2 | Fortress | DNK | NO DNK | 60 | 0.30 | 0.38 | 0.31 | open | - |
-| 2026-10-29 13:50 | model-only | cs2 | Saint Sinners | Acend | NO Acend | 1 | 0.40 | 0.45 | 0.40 | open | - |
+| 2026-10-29 13:50 | model-only | cs2 | Saint Sinners | Acend | NO Acend | 1 | 0.40 | 0.45 | 0.40 | lost | -$0.42 |
 | 2026-10-29 13:50 | favourite | dota2 | Team Yandex | PARIVISION | NO PARIVISION | 11 | 0.57 | 0.57 | 0.57 | open | - |
-| 2026-10-29 13:50 | favourite | cs2 | Acend | Saint Sinners | YES Acend | 10 | 0.62 | 0.60 | 0.60 | open | - |
+| 2026-10-29 13:50 | favourite | cs2 | Acend | Saint Sinners | YES Acend | 10 | 0.62 | 0.60 | 0.60 | won | $3.63 |
 | 2026-10-29 12:50 | favourite | cs2 | Iberian Soul | ZOTIX | YES Iberian Soul | 7 | 0.86 | 0.85 | 0.85 | won | $0.92 |
 | 2026-10-29 12:50 | favourite | cs2 | MOUZ | Aurora Gaming | YES MOUZ | 10 | 0.63 | 0.63 | 0.63 | won | $3.53 |
 | 2026-10-29 12:50 | model-only | cs2 | Aurora Gaming | MOUZ | YES Aurora Gaming | 50 | 0.37 | 0.47 | 0.37 | lost | -$19.32 |
