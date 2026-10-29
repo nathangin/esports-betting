@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-29 11:35 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-29 11:40 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 1 | 0 | 0 | $0.00 | - | +4.0c (1) | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 427 | 39 | 388 | 131 | -$45.46 | -1.1% | -0.4c (421) | $954.54 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 668 | 51 | 617 | 406 | -$328.01 | -7.4% | -1.5c (660) | $671.99 |
+| model-only | Elo win model alone (control: ignores the market) | 427 | 38 | 389 | 132 | -$13.76 | -0.3% | -0.4c (421) | $986.24 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 668 | 50 | 618 | 406 | -$330.10 | -7.5% | -1.5c (660) | $669.90 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -56,8 +56,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-29 07:50 | favourite | cs2 | B8 | HOTU | YES B8 | 11 | 0.59 | 0.55 | 0.55 | lost | -$6.68 |
 | 2026-10-29 07:50 | blend | dota2 | Team Liquid | Astra Invicta | NO Astra Invicta | 30 | 0.65 | 0.71 | 0.69 | open | - |
 | 2026-10-29 07:50 | favourite | dota2 | Team Liquid | Astra Invicta | NO Astra Invicta | 10 | 0.65 | 0.69 | 0.69 | open | - |
-| 2026-10-29 07:50 | model-only | valorant | Unsettled Resentment | KeepBest Gaming | NO KeepBest Gaming | 50 | 0.35 | 0.55 | 0.40 | open | - |
-| 2026-10-29 07:50 | favourite | valorant | KeepBest Gaming | Unsettled Resentment | YES KeepBest Gaming | 3 | 0.68 | 0.60 | 0.60 | open | - |
+| 2026-10-29 07:50 | model-only | valorant | Unsettled Resentment | KeepBest Gaming | NO KeepBest Gaming | 50 | 0.35 | 0.55 | 0.40 | won | $31.70 |
+| 2026-10-29 07:50 | favourite | valorant | KeepBest Gaming | Unsettled Resentment | YES KeepBest Gaming | 3 | 0.68 | 0.60 | 0.60 | lost | -$2.09 |
 | 2026-10-29 06:50 | favourite | cs2 | FUT Esports | Nemiga | YES FUT Esports | 9 | 0.69 | 0.69 | 0.69 | lost | -$6.35 |
 | 2026-10-28 19:53 | model-only | valorant | KRÜ Blaze | Team Liquid Brazil | YES KRÜ Blaze | 8 | 0.16 | 0.35 | 0.15 | won | $6.64 |
 | 2026-10-28 16:53 | model-only | dota2 | LEGION | GamerLegion | NO GamerLegion | 13 | 0.32 | 0.55 | 0.31 | lost | -$4.36 |
