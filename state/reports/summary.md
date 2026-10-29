@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-29 15:05 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-29 15:10 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 434 | 41 | 393 | 133 | -$29.85 | -0.7% | -0.4c (428) | $970.15 |
+| model-only | Elo win model alone (control: ignores the market) | 434 | 40 | 394 | 133 | -$48.46 | -1.2% | -0.4c (428) | $951.54 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 678 | 53 | 625 | 410 | -$340.46 | -7.6% | -1.5c (671) | $659.54 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -56,7 +56,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-29 11:50 | model-only | cs2 | Bounty Hunters Esports | BARCA | NO BARCA | 43 | 0.44 | 0.63 | 0.43 | open | - |
 | 2026-10-29 11:50 | favourite | cs2 | BARCA | Bounty Hunters Esports | NO Bounty Hunters Esports | 1 | 0.57 | 0.57 | 0.57 | open | - |
 | 2026-10-29 11:50 | favourite | cs2 | PRIVATE | Fire Flux Esports | NO Fire Flux Esports | 1 | 0.72 | 0.72 | 0.72 | open | - |
-| 2026-10-29 10:50 | model-only | dota2 | LEGION | Team Spirit | NO Team Spirit | 175 | 0.10 | 0.31 | 0.09 | open | - |
+| 2026-10-29 10:50 | model-only | dota2 | LEGION | Team Spirit | NO Team Spirit | 175 | 0.10 | 0.31 | 0.09 | lost | -$18.61 |
 | 2026-10-29 10:50 | favourite | cs2 | ex-INOX Division | Spirit Academy | YES ex-INOX Division | 12 | 0.53 | 0.51 | 0.51 | open | - |
 | 2026-10-29 10:50 | favourite | cs2 | MORROW | Honvéd | NO Honvéd | 12 | 0.51 | 0.51 | 0.51 | open | - |
 | 2026-10-29 10:50 | favourite | cs2 | FaZe | GamerLegion | YES FaZe | 11 | 0.59 | 0.59 | 0.59 | lost | -$6.68 |
