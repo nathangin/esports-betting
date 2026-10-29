@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-29 16:36 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-29 16:41 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 434 | 37 | 397 | 134 | -$64.16 | -1.5% | -0.4c (429) | $935.84 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 682 | 52 | 630 | 413 | -$342.91 | -7.7% | -1.5c (676) | $657.09 |
+| model-only | Elo win model alone (control: ignores the market) | 434 | 36 | 398 | 134 | -$83.38 | -2.0% | -0.4c (429) | $916.62 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 682 | 51 | 631 | 414 | -$339.08 | -7.6% | -1.5c (676) | $660.92 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -54,8 +54,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-29 12:50 | favourite | cs2 | Iberian Soul | ZOTIX | YES Iberian Soul | 7 | 0.86 | 0.85 | 0.85 | won | $0.92 |
 | 2026-10-29 12:50 | favourite | cs2 | MOUZ | Aurora Gaming | YES MOUZ | 10 | 0.63 | 0.63 | 0.63 | won | $3.53 |
 | 2026-10-29 12:50 | model-only | cs2 | Aurora Gaming | MOUZ | YES Aurora Gaming | 50 | 0.37 | 0.47 | 0.37 | lost | -$19.32 |
-| 2026-10-29 12:20 | favourite | cs2 | Astralis | Inner Circle Esports | YES Astralis | 10 | 0.60 | 0.59 | 0.59 | open | - |
-| 2026-10-29 12:20 | model-only | cs2 | Inner Circle Esports | Astralis | NO Astralis | 45 | 0.41 | 0.49 | 0.41 | open | - |
+| 2026-10-29 12:20 | favourite | cs2 | Astralis | Inner Circle Esports | YES Astralis | 10 | 0.60 | 0.59 | 0.59 | won | $3.83 |
+| 2026-10-29 12:20 | model-only | cs2 | Inner Circle Esports | Astralis | NO Astralis | 45 | 0.41 | 0.49 | 0.41 | lost | -$19.22 |
 | 2026-10-29 11:50 | favourite | cs2 | BARCA | Bounty Hunters Esports | NO Bounty Hunters Esports | 1 | 0.57 | 0.57 | 0.57 | lost | -$0.59 |
 | 2026-10-29 11:50 | model-only | cs2 | Bounty Hunters Esports | BARCA | NO BARCA | 43 | 0.44 | 0.63 | 0.43 | won | $23.33 |
 | 2026-10-29 11:50 | favourite | cs2 | PRIVATE | Fire Flux Esports | NO Fire Flux Esports | 1 | 0.72 | 0.72 | 0.72 | won | $0.26 |
