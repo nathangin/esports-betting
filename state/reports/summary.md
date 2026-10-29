@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-29 11:50 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-29 12:05 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| blend | model + market blend (the strategy under test) | 1 | 1 | 0 | 0 | $0.00 | - | +4.0c (1) | $1,000.00 |
-| model-only | Elo win model alone (control: ignores the market) | 429 | 40 | 389 | 132 | -$13.76 | -0.3% | -0.4c (422) | $986.24 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 670 | 52 | 618 | 406 | -$330.10 | -7.5% | -1.5c (663) | $669.90 |
+| blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
+| model-only | Elo win model alone (control: ignores the market) | 429 | 39 | 390 | 132 | -$26.55 | -0.6% | -0.4c (422) | $973.45 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 670 | 51 | 619 | 407 | -$326.76 | -7.4% | -1.5c (663) | $673.24 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1430 finished matches. Lower is better; the market line is the bar to beat.
+1431 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5825 | 0.2002 |
-| model | 0.6561 | 0.2323 |
-| blend | 0.5823 | 0.2003 |
+| market | 0.5823 | 0.2001 |
+| model | 0.6560 | 0.2323 |
+| blend | 0.5821 | 0.2002 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 931 | 0.5968 | 0.6633 |
-| dota2 | 219 | 0.5493 | 0.6323 |
+| dota2 | 220 | 0.5485 | 0.6318 |
 | lol | 83 | 0.5638 | 0.7223 |
 | ow | 83 | 0.5090 | 0.5369 |
 | valorant | 70 | 0.5852 | 0.6769 |
@@ -55,11 +55,11 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-29 09:50 | favourite | cs2 | Vitality | Natus Vincere | YES Vitality | 9 | 0.71 | 0.71 | 0.71 | open | - |
 | 2026-10-29 09:50 | favourite | cs2 | BIG | Eternal Fire | YES BIG | 10 | 0.63 | 0.63 | 0.63 | open | - |
 | 2026-10-29 09:50 | favourite | valorant | TEC Esports | World Sports Invictus Gaming | YES TEC Esports | 9 | 0.67 | 0.67 | 0.67 | open | - |
-| 2026-10-29 07:50 | model-only | dota2 | Astra Invicta | Team Liquid | YES Astra Invicta | 34 | 0.36 | 0.41 | 0.31 | open | - |
+| 2026-10-29 07:50 | model-only | dota2 | Astra Invicta | Team Liquid | YES Astra Invicta | 34 | 0.36 | 0.41 | 0.31 | lost | -$12.79 |
 | 2026-10-29 07:50 | favourite | cs2 | B8 | HOTU | YES B8 | 11 | 0.59 | 0.55 | 0.55 | lost | -$6.68 |
-| 2026-10-29 07:50 | blend | dota2 | Team Liquid | Astra Invicta | NO Astra Invicta | 30 | 0.65 | 0.71 | 0.69 | open | - |
+| 2026-10-29 07:50 | blend | dota2 | Team Liquid | Astra Invicta | NO Astra Invicta | 30 | 0.65 | 0.71 | 0.69 | won | $10.02 |
 | 2026-10-29 07:50 | model-only | cs2 | HOTU | B8 | NO B8 | 42 | 0.42 | 0.53 | 0.45 | won | $23.64 |
-| 2026-10-29 07:50 | favourite | dota2 | Team Liquid | Astra Invicta | NO Astra Invicta | 10 | 0.65 | 0.69 | 0.69 | open | - |
+| 2026-10-29 07:50 | favourite | dota2 | Team Liquid | Astra Invicta | NO Astra Invicta | 10 | 0.65 | 0.69 | 0.69 | won | $3.34 |
 | 2026-10-29 07:50 | model-only | valorant | Unsettled Resentment | KeepBest Gaming | NO KeepBest Gaming | 50 | 0.35 | 0.55 | 0.40 | won | $31.70 |
 | 2026-10-29 07:50 | favourite | valorant | KeepBest Gaming | Unsettled Resentment | YES KeepBest Gaming | 3 | 0.68 | 0.60 | 0.60 | lost | -$2.09 |
 | 2026-10-29 06:50 | favourite | cs2 | FUT Esports | Nemiga | YES FUT Esports | 9 | 0.69 | 0.69 | 0.69 | lost | -$6.35 |
