@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-29 06:40 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-29 06:50 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-29 06:40 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 0 | 0 | 0 | 0 | $0.00 | - | - | $1,000.00 |
 | model-only | Elo win model alone (control: ignores the market) | 420 | 33 | 387 | 130 | -$69.10 | -1.7% | -0.4c (415) | $930.90 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 656 | 41 | 615 | 406 | -$314.98 | -7.2% | -1.4c (651) | $685.02 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 657 | 42 | 615 | 406 | -$314.98 | -7.2% | -1.4c (651) | $685.02 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-29 06:50 | favourite | cs2 | FUT Esports | Nemiga | YES FUT Esports | 9 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-10-28 19:53 | model-only | valorant | KRÜ Blaze | Team Liquid Brazil | YES KRÜ Blaze | 8 | 0.16 | 0.35 | 0.15 | won | $6.64 |
 | 2026-10-28 16:53 | model-only | dota2 | LEGION | GamerLegion | NO GamerLegion | 13 | 0.32 | 0.55 | 0.31 | lost | -$4.36 |
 | 2026-10-28 16:23 | favourite | cs2 | Privateer Gaming | wnT | YES Privateer Gaming | 11 | 0.61 | 0.59 | 0.59 | won | $4.10 |
@@ -63,7 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-28 12:22 | favourite | cs2 | Eternal Fire | Team Nemesis | YES Eternal Fire | 8 | 0.79 | 0.79 | 0.79 | won | $1.58 |
 | 2026-10-28 10:52 | favourite | dota2 | angry birds | Level Up Academy | YES angry birds | 7 | 0.88 | 0.87 | 0.87 | won | $0.78 |
 | 2026-10-28 10:52 | favourite | cs2 | Inner Circle Academy | Saint Sinners | YES Inner Circle Academy | 11 | 0.60 | 0.57 | 0.57 | lost | -$6.79 |
-| 2026-10-28 10:52 | favourite | cs2 | SINQU | Fortress | NO Fortress | 12 | 0.54 | 0.52 | 0.52 | won | $5.31 |
 
 ## Backtest on real Kalshi prices
 
