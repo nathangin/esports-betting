@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-29 15:10 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-29 15:15 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 434 | 40 | 394 | 133 | -$48.46 | -1.2% | -0.4c (428) | $951.54 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 678 | 53 | 625 | 410 | -$340.46 | -7.6% | -1.5c (671) | $659.54 |
+| model-only | Elo win model alone (control: ignores the market) | 434 | 39 | 395 | 133 | -$67.78 | -1.6% | -0.4c (428) | $932.22 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 678 | 52 | 626 | 411 | -$336.93 | -7.6% | -1.5c (671) | $663.07 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1442 finished matches. Lower is better; the market line is the bar to beat.
+1445 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5822 | 0.2001 |
-| model | 0.6558 | 0.2322 |
-| blend | 0.5820 | 0.2002 |
+| market | 0.5814 | 0.1998 |
+| model | 0.6554 | 0.2320 |
+| blend | 0.5812 | 0.1998 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 940 | 0.5964 | 0.6632 |
-| dota2 | 221 | 0.5468 | 0.6300 |
+| cs2 | 942 | 0.5956 | 0.6628 |
+| dota2 | 222 | 0.5448 | 0.6289 |
 | lol | 83 | 0.5638 | 0.7223 |
 | ow | 83 | 0.5090 | 0.5369 |
 | valorant | 71 | 0.5927 | 0.6790 |
@@ -48,8 +48,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-29 13:50 | favourite | cs2 | DNK | Fortress | NO Fortress | 1 | 0.68 | 0.69 | 0.69 | open | - |
 | 2026-10-29 13:50 | model-only | cs2 | Fortress | DNK | NO DNK | 60 | 0.30 | 0.38 | 0.31 | open | - |
 | 2026-10-29 12:50 | favourite | cs2 | Iberian Soul | ZOTIX | YES Iberian Soul | 7 | 0.86 | 0.85 | 0.85 | open | - |
-| 2026-10-29 12:50 | favourite | cs2 | MOUZ | Aurora Gaming | YES MOUZ | 10 | 0.63 | 0.63 | 0.63 | open | - |
-| 2026-10-29 12:50 | model-only | cs2 | Aurora Gaming | MOUZ | YES Aurora Gaming | 50 | 0.37 | 0.47 | 0.37 | open | - |
+| 2026-10-29 12:50 | favourite | cs2 | MOUZ | Aurora Gaming | YES MOUZ | 10 | 0.63 | 0.63 | 0.63 | won | $3.53 |
+| 2026-10-29 12:50 | model-only | cs2 | Aurora Gaming | MOUZ | YES Aurora Gaming | 50 | 0.37 | 0.47 | 0.37 | lost | -$19.32 |
 | 2026-10-29 12:20 | favourite | cs2 | Astralis | Inner Circle Esports | YES Astralis | 10 | 0.60 | 0.59 | 0.59 | open | - |
 | 2026-10-29 12:20 | model-only | cs2 | Inner Circle Esports | Astralis | NO Astralis | 45 | 0.41 | 0.49 | 0.41 | open | - |
 | 2026-10-29 11:50 | model-only | cs2 | Fire Flux Esports | PRIVATE | NO PRIVATE | 67 | 0.28 | 0.51 | 0.28 | open | - |
