@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-29 18:51 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-29 19:01 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-29 18:51 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 434 | 33 | 401 | 135 | -$86.11 | -2.0% | -0.4c (429) | $913.89 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 692 | 54 | 638 | 420 | -$333.84 | -7.4% | -1.5c (684) | $666.16 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 692 | 53 | 639 | 421 | -$329.30 | -7.3% | -1.5c (686) | $670.70 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1458 finished matches. Lower is better; the market line is the bar to beat.
+1460 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5805 | 0.1994 |
+| market | 0.5801 | 0.1992 |
 | model | 0.6543 | 0.2315 |
-| blend | 0.5802 | 0.1994 |
+| blend | 0.5798 | 0.1992 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 955 | 0.5941 | 0.6611 |
+| cs2 | 957 | 0.5935 | 0.6611 |
 | dota2 | 222 | 0.5448 | 0.6289 |
 | lol | 83 | 0.5638 | 0.7223 |
 | ow | 83 | 0.5090 | 0.5369 |
@@ -56,7 +56,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-29 14:50 | model-only | cs2 | fnatic | MIBR | YES fnatic | 30 | 0.43 | 0.49 | 0.42 | won | $16.58 |
 | 2026-10-29 14:50 | favourite | cs2 | MIBR | fnatic | NO fnatic | 11 | 0.58 | 0.57 | 0.57 | lost | -$6.57 |
 | 2026-10-29 14:50 | favourite | cs2 | Spirit Academy Green | RoundsGG | NO RoundsGG | 1 | 0.80 | 0.78 | 0.78 | won | $0.18 |
-| 2026-10-29 13:50 | favourite | dota2 | Team Yandex | PARIVISION | NO PARIVISION | 11 | 0.57 | 0.57 | 0.57 | open | - |
+| 2026-10-29 13:50 | favourite | dota2 | Team Yandex | PARIVISION | NO PARIVISION | 11 | 0.57 | 0.57 | 0.57 | won | $4.54 |
 | 2026-10-29 13:50 | favourite | cs2 | Acend | Saint Sinners | YES Acend | 10 | 0.62 | 0.60 | 0.60 | won | $3.63 |
 | 2026-10-29 13:50 | model-only | cs2 | Saint Sinners | Acend | NO Acend | 1 | 0.40 | 0.45 | 0.40 | lost | -$0.42 |
 | 2026-10-29 13:50 | favourite | cs2 | DNK | Fortress | NO Fortress | 1 | 0.68 | 0.69 | 0.69 | won | $0.30 |
