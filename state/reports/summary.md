@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-29 16:41 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-29 16:51 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-29 16:41 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 434 | 36 | 398 | 134 | -$83.38 | -2.0% | -0.4c (429) | $916.62 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 682 | 51 | 631 | 414 | -$339.08 | -7.6% | -1.5c (676) | $660.92 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 687 | 55 | 632 | 415 | -$338.90 | -7.6% | -1.5c (677) | $661.10 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1450 finished matches. Lower is better; the market line is the bar to beat.
+1451 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5812 | 0.1997 |
+| market | 0.5811 | 0.1997 |
 | model | 0.6550 | 0.2318 |
-| blend | 0.5809 | 0.1998 |
+| blend | 0.5809 | 0.1997 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 947 | 0.5952 | 0.6622 |
+| cs2 | 948 | 0.5951 | 0.6622 |
 | dota2 | 222 | 0.5448 | 0.6289 |
 | lol | 83 | 0.5638 | 0.7223 |
 | ow | 83 | 0.5090 | 0.5369 |
@@ -39,11 +39,16 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-29 16:51 | favourite | dota2 | OG | GamerLegion | NO GamerLegion | 11 | 0.56 | 0.56 | 0.55 | open | - |
+| 2026-10-29 16:51 | favourite | cs2 | OldBoys | Hermine Esports Club | YES OldBoys | 1 | 0.54 | 0.53 | 0.53 | open | - |
+| 2026-10-29 16:51 | favourite | cs2 | GamerLegion | HOTU | YES GamerLegion | 1 | 0.54 | 0.52 | 0.52 | open | - |
+| 2026-10-29 16:51 | favourite | cs2 | B8 Academy | BANGARANGA | NO BANGARANGA | 1 | 0.60 | 0.60 | 0.60 | open | - |
+| 2026-10-29 16:51 | favourite | cs2 | Team ACES | 9INE | NO 9INE | 11 | 0.54 | 0.50 | 0.50 | open | - |
 | 2026-10-29 16:31 | favourite | cs2 | Iberian Soul | TYLOO | NO TYLOO | 1 | 0.57 | 0.54 | 0.54 | open | - |
 | 2026-10-29 15:50 | favourite | cs2 | FURIA | BetBoom Team | NO BetBoom Team | 8 | 0.75 | 0.74 | 0.74 | open | - |
 | 2026-10-29 15:20 | favourite | cs2 | TTG Esports | Winx | YES TTG Esports | 12 | 0.53 | 0.51 | 0.51 | open | - |
 | 2026-10-29 15:20 | favourite | cs2 | Aurora Young Blood | SPARX | YES Aurora Young Blood | 10 | 0.60 | 0.60 | 0.60 | open | - |
-| 2026-10-29 14:50 | favourite | cs2 | Spirit Academy Green | RoundsGG | NO RoundsGG | 1 | 0.80 | 0.78 | 0.78 | open | - |
+| 2026-10-29 14:50 | favourite | cs2 | Spirit Academy Green | RoundsGG | NO RoundsGG | 1 | 0.80 | 0.78 | 0.78 | won | $0.18 |
 | 2026-10-29 14:50 | favourite | cs2 | MIBR | fnatic | NO fnatic | 11 | 0.58 | 0.57 | 0.57 | open | - |
 | 2026-10-29 14:50 | model-only | cs2 | fnatic | MIBR | YES fnatic | 30 | 0.43 | 0.49 | 0.42 | open | - |
 | 2026-10-29 13:50 | model-only | cs2 | Saint Sinners | Acend | NO Acend | 1 | 0.40 | 0.45 | 0.40 | open | - |
@@ -59,11 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-29 11:50 | favourite | cs2 | BARCA | Bounty Hunters Esports | NO Bounty Hunters Esports | 1 | 0.57 | 0.57 | 0.57 | lost | -$0.59 |
 | 2026-10-29 11:50 | model-only | cs2 | Bounty Hunters Esports | BARCA | NO BARCA | 43 | 0.44 | 0.63 | 0.43 | won | $23.33 |
 | 2026-10-29 11:50 | favourite | cs2 | PRIVATE | Fire Flux Esports | NO Fire Flux Esports | 1 | 0.72 | 0.72 | 0.72 | won | $0.26 |
-| 2026-10-29 11:50 | model-only | cs2 | Fire Flux Esports | PRIVATE | NO PRIVATE | 67 | 0.28 | 0.51 | 0.28 | lost | -$19.71 |
-| 2026-10-29 10:50 | model-only | dota2 | LEGION | Team Spirit | NO Team Spirit | 175 | 0.10 | 0.31 | 0.09 | lost | -$18.61 |
-| 2026-10-29 10:50 | favourite | cs2 | ex-INOX Division | Spirit Academy | YES ex-INOX Division | 12 | 0.53 | 0.51 | 0.51 | lost | -$6.57 |
-| 2026-10-29 10:50 | favourite | cs2 | MORROW | Honvéd | NO Honvéd | 12 | 0.51 | 0.51 | 0.51 | open | - |
-| 2026-10-29 10:50 | favourite | cs2 | FaZe | GamerLegion | YES FaZe | 11 | 0.59 | 0.59 | 0.59 | lost | -$6.68 |
 
 ## Backtest on real Kalshi prices
 
