@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-29 19:36 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-29 19:41 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-29 19:36 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 434 | 33 | 401 | 135 | -$86.11 | -2.0% | -0.4c (429) | $913.89 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 692 | 52 | 640 | 422 | -$325.47 | -7.2% | -1.5c (687) | $674.53 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 692 | 51 | 641 | 422 | -$326.03 | -7.2% | -1.5c (687) | $673.97 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -46,7 +46,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-29 17:21 | favourite | cs2 | Astralis | Eternal Fire | YES Astralis | 10 | 0.59 | 0.58 | 0.58 | open | - |
 | 2026-10-29 16:51 | favourite | dota2 | OG | GamerLegion | NO GamerLegion | 11 | 0.56 | 0.56 | 0.55 | open | - |
 | 2026-10-29 16:51 | favourite | cs2 | OldBoys | Hermine Esports Club | YES OldBoys | 1 | 0.54 | 0.53 | 0.53 | open | - |
-| 2026-10-29 16:51 | favourite | cs2 | GamerLegion | HOTU | YES GamerLegion | 1 | 0.54 | 0.52 | 0.52 | open | - |
+| 2026-10-29 16:51 | favourite | cs2 | GamerLegion | HOTU | YES GamerLegion | 1 | 0.54 | 0.52 | 0.52 | lost | -$0.56 |
 | 2026-10-29 16:51 | favourite | cs2 | B8 Academy | BANGARANGA | NO BANGARANGA | 1 | 0.60 | 0.60 | 0.60 | won | $0.38 |
 | 2026-10-29 16:51 | favourite | cs2 | Team ACES | 9INE | NO 9INE | 11 | 0.54 | 0.50 | 0.50 | open | - |
 | 2026-10-29 16:31 | favourite | cs2 | Iberian Soul | TYLOO | NO TYLOO | 1 | 0.57 | 0.54 | 0.54 | open | - |
