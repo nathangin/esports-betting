@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-30 15:09 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-30 15:14 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 448 | 40 | 408 | 138 | -$93.17 | -2.1% | -0.5c (442) | $906.83 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 719 | 58 | 661 | 433 | -$362.80 | -7.8% | -1.4c (711) | $637.20 |
+| model-only | Elo win model alone (control: ignores the market) | 448 | 38 | 410 | 139 | -$85.97 | -1.9% | -0.5c (442) | $914.03 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 719 | 55 | 664 | 435 | -$366.84 | -7.9% | -1.4c (711) | $633.16 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1506 finished matches. Lower is better; the market line is the bar to beat.
+1509 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5796 | 0.1990 |
-| model | 0.6526 | 0.2307 |
-| blend | 0.5793 | 0.1991 |
+| market | 0.5793 | 0.1989 |
+| model | 0.6525 | 0.2306 |
+| blend | 0.5790 | 0.1990 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 986 | 0.5930 | 0.6593 |
+| cs2 | 989 | 0.5926 | 0.6592 |
 | dota2 | 232 | 0.5447 | 0.6304 |
 | ow | 86 | 0.5026 | 0.5286 |
 | lol | 85 | 0.5694 | 0.7245 |
@@ -48,12 +48,12 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-30 13:53 | favourite | cs2 | Leo Team | Honvéd | NO Honvéd | 6 | 0.76 | 0.76 | 0.76 | open | - |
 | 2026-10-30 13:53 | model-only | cs2 | Honvéd | Leo Team | NO Leo Team | 63 | 0.25 | 0.35 | 0.24 | open | - |
 | 2026-10-30 13:53 | favourite | cs2 | MOUZ | FURIA | YES MOUZ | 10 | 0.59 | 0.59 | 0.59 | open | - |
-| 2026-10-30 11:53 | favourite | cs2 | ShindeN | Isurus | NO Isurus | 1 | 0.82 | 0.82 | 0.82 | open | - |
-| 2026-10-30 11:53 | model-only | cs2 | Eternal Fire | MIBR | YES Eternal Fire | 43 | 0.40 | 0.56 | 0.40 | open | - |
-| 2026-10-30 11:53 | favourite | cs2 | MIBR | Eternal Fire | YES MIBR | 10 | 0.60 | 0.60 | 0.60 | open | - |
-| 2026-10-30 11:53 | model-only | cs2 | Isurus | ShindeN | YES Isurus | 89 | 0.19 | 0.38 | 0.18 | open | - |
+| 2026-10-30 11:53 | favourite | cs2 | ShindeN | Isurus | NO Isurus | 1 | 0.82 | 0.82 | 0.82 | won | $0.16 |
+| 2026-10-30 11:53 | model-only | cs2 | Eternal Fire | MIBR | YES Eternal Fire | 43 | 0.40 | 0.56 | 0.40 | won | $25.07 |
+| 2026-10-30 11:53 | favourite | cs2 | MIBR | Eternal Fire | YES MIBR | 10 | 0.60 | 0.60 | 0.60 | lost | -$6.17 |
+| 2026-10-30 11:53 | model-only | cs2 | Isurus | ShindeN | YES Isurus | 89 | 0.19 | 0.38 | 0.18 | lost | -$17.87 |
 | 2026-10-30 11:53 | favourite | dota2 | Team Liquid | OG | NO OG | 1 | 0.65 | 0.65 | 0.65 | open | - |
-| 2026-10-30 11:53 | favourite | cs2 | naocopulas | QUINTESSENCIA | YES naocopulas | 8 | 0.74 | 0.74 | 0.74 | open | - |
+| 2026-10-30 11:53 | favourite | cs2 | naocopulas | QUINTESSENCIA | YES naocopulas | 8 | 0.74 | 0.74 | 0.74 | won | $1.97 |
 | 2026-10-30 11:53 | model-only | dota2 | OG | Team Liquid | NO Team Liquid | 49 | 0.35 | 0.54 | 0.35 | open | - |
 | 2026-10-30 10:53 | model-only | cs2 | Sokerorg | FOKUS | YES Sokerorg | 102 | 0.17 | 0.29 | 0.17 | lost | -$18.35 |
 | 2026-10-30 10:53 | favourite | cs2 | Dark Moon | Lilmix | NO Lilmix | 7 | 0.76 | 0.72 | 0.72 | won | $1.59 |
