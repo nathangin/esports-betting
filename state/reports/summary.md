@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-30 01:22 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-30 01:52 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 434 | 33 | 401 | 135 | -$86.11 | -2.0% | -0.4c (429) | $913.89 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 692 | 44 | 648 | 425 | -$345.38 | -7.6% | -1.5c (687) | $654.62 |
+| model-only | Elo win model alone (control: ignores the market) | 435 | 34 | 401 | 135 | -$86.11 | -2.0% | -0.4c (429) | $913.89 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 694 | 46 | 648 | 425 | -$345.38 | -7.6% | -1.5c (687) | $654.62 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,19 +16,19 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1484 finished matches. Lower is better; the market line is the bar to beat.
+1485 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5806 | 0.1995 |
-| model | 0.6541 | 0.2314 |
-| blend | 0.5803 | 0.1995 |
+| market | 0.5812 | 0.1997 |
+| model | 0.6545 | 0.2316 |
+| blend | 0.5809 | 0.1998 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 975 | 0.5940 | 0.6608 |
 | dota2 | 227 | 0.5472 | 0.6304 |
-| lol | 84 | 0.5592 | 0.7181 |
+| lol | 85 | 0.5694 | 0.7245 |
 | ow | 83 | 0.5090 | 0.5369 |
 | valorant | 71 | 0.5927 | 0.6790 |
 | r6 | 44 | 0.6133 | 0.6886 |
@@ -39,6 +39,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-10-30 01:52 | favourite | cs2 | FlyQuest | NEXVOID | YES FlyQuest | 8 | 0.75 | 0.74 | 0.74 | open | - |
+| 2026-10-30 01:52 | model-only | cs2 | NEXVOID | FlyQuest | NO FlyQuest | 64 | 0.27 | 0.40 | 0.26 | open | - |
+| 2026-10-30 01:52 | favourite | cs2 | Alter Ego | Abyssal | NO Abyssal | 7 | 0.89 | 0.89 | 0.89 | open | - |
 | 2026-10-29 18:21 | favourite | cs2 | Diamant Esports | Esport BERG | YES Diamant Esports | 1 | 0.54 | 0.53 | 0.53 | open | - |
 | 2026-10-29 18:06 | favourite | cs2 | Monte | Spirit Academy Black | YES Monte | 8 | 0.81 | 0.80 | 0.80 | won | $1.43 |
 | 2026-10-29 18:06 | favourite | cs2 | prodigy | Ducks | NO Ducks | 10 | 0.62 | 0.60 | 0.60 | won | $3.63 |
@@ -51,19 +54,16 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-29 16:51 | favourite | cs2 | Team ACES | 9INE | NO 9INE | 11 | 0.54 | 0.50 | 0.50 | lost | -$6.14 |
 | 2026-10-29 16:31 | favourite | cs2 | Iberian Soul | TYLOO | NO TYLOO | 1 | 0.57 | 0.54 | 0.54 | won | $0.41 |
 | 2026-10-29 15:50 | favourite | cs2 | FURIA | BetBoom Team | NO BetBoom Team | 8 | 0.75 | 0.74 | 0.74 | won | $1.89 |
-| 2026-10-29 15:20 | favourite | cs2 | TTG Esports | Winx | YES TTG Esports | 12 | 0.53 | 0.51 | 0.51 | won | $5.43 |
 | 2026-10-29 15:20 | favourite | cs2 | Aurora Young Blood | SPARX | YES Aurora Young Blood | 10 | 0.60 | 0.60 | 0.60 | won | $3.83 |
-| 2026-10-29 14:50 | model-only | cs2 | fnatic | MIBR | YES fnatic | 30 | 0.43 | 0.49 | 0.42 | won | $16.58 |
-| 2026-10-29 14:50 | favourite | cs2 | MIBR | fnatic | NO fnatic | 11 | 0.58 | 0.57 | 0.57 | lost | -$6.57 |
+| 2026-10-29 15:20 | favourite | cs2 | TTG Esports | Winx | YES TTG Esports | 12 | 0.53 | 0.51 | 0.51 | won | $5.43 |
 | 2026-10-29 14:50 | favourite | cs2 | Spirit Academy Green | RoundsGG | NO RoundsGG | 1 | 0.80 | 0.78 | 0.78 | won | $0.18 |
+| 2026-10-29 14:50 | favourite | cs2 | MIBR | fnatic | NO fnatic | 11 | 0.58 | 0.57 | 0.57 | lost | -$6.57 |
+| 2026-10-29 14:50 | model-only | cs2 | fnatic | MIBR | YES fnatic | 30 | 0.43 | 0.49 | 0.42 | won | $16.58 |
 | 2026-10-29 13:50 | favourite | dota2 | Team Yandex | PARIVISION | NO PARIVISION | 11 | 0.57 | 0.57 | 0.57 | won | $4.54 |
 | 2026-10-29 13:50 | favourite | cs2 | Acend | Saint Sinners | YES Acend | 10 | 0.62 | 0.60 | 0.60 | won | $3.63 |
 | 2026-10-29 13:50 | model-only | cs2 | Saint Sinners | Acend | NO Acend | 1 | 0.40 | 0.45 | 0.40 | lost | -$0.42 |
 | 2026-10-29 13:50 | favourite | cs2 | DNK | Fortress | NO Fortress | 1 | 0.68 | 0.69 | 0.69 | won | $0.30 |
 | 2026-10-29 13:50 | model-only | cs2 | Fortress | DNK | NO DNK | 60 | 0.30 | 0.38 | 0.31 | lost | -$18.89 |
-| 2026-10-29 12:50 | favourite | cs2 | MOUZ | Aurora Gaming | YES MOUZ | 10 | 0.63 | 0.63 | 0.63 | won | $3.53 |
-| 2026-10-29 12:50 | favourite | cs2 | Iberian Soul | ZOTIX | YES Iberian Soul | 7 | 0.86 | 0.85 | 0.85 | won | $0.92 |
-| 2026-10-29 12:50 | model-only | cs2 | Aurora Gaming | MOUZ | YES Aurora Gaming | 50 | 0.37 | 0.47 | 0.37 | lost | -$19.32 |
 
 ## Backtest on real Kalshi prices
 
