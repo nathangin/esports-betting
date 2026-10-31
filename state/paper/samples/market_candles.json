@@ -1,8 +1,8 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/markets/KXCS2GAME-26OCT281530RYVAIM-AIM/candlesticks?start_ts=1793214000&end_ts=1793215860&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/markets/KXCS2GAME-26OCT311400FOKBAKS-BAKS/candlesticks?start_ts=1793467800&end_ts=1793469660&period_interval=1",
  "status": 200,
  "body": {
   "candlesticks": [],
-  "ticker": "KXCS2GAME-26OCT281530RYVAIM-AIM"
+  "ticker": "KXCS2GAME-26OCT311400FOKBAKS-BAKS"
  }
 }
