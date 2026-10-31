@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-31 19:23 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-31 19:33 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 467 | 34 | 433 | 146 | -$196.37 | -4.2% | -0.4c (461) | $803.63 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 753 | 51 | 702 | 462 | -$384.90 | -7.9% | -1.4c (746) | $615.10 |
+| model-only | Elo win model alone (control: ignores the market) | 467 | 33 | 434 | 147 | -$120.10 | -2.5% | -0.4c (461) | $879.90 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 753 | 50 | 703 | 462 | -$390.85 | -8.1% | -1.4c (746) | $609.15 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -48,8 +48,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-31 15:52 | favourite | lol | LYON | LOS | YES LYON | 8 | 0.76 | 0.76 | 0.76 | open | - |
 | 2026-10-31 15:22 | favourite | cs2 | Turma do Pagode | Low Cortisol | NO Low Cortisol | 9 | 0.63 | 0.60 | 0.60 | lost | -$5.82 |
 | 2026-10-31 15:22 | favourite | cs2 | Monte | prodigy | YES Monte | 7 | 0.79 | 0.76 | 0.76 | won | $1.38 |
-| 2026-10-31 15:07 | favourite | cs2 | ShindeN | Isurus | NO Isurus | 7 | 0.84 | 0.84 | 0.84 | open | - |
-| 2026-10-31 15:07 | model-only | cs2 | Isurus | ShindeN | YES Isurus | 93 | 0.17 | 0.38 | 0.16 | open | - |
+| 2026-10-31 15:07 | favourite | cs2 | ShindeN | Isurus | NO Isurus | 7 | 0.84 | 0.84 | 0.84 | lost | -$5.95 |
+| 2026-10-31 15:07 | model-only | cs2 | Isurus | ShindeN | YES Isurus | 93 | 0.17 | 0.38 | 0.16 | won | $76.27 |
 | 2026-10-31 14:52 | favourite | cs2 | PRIVATE | Omega | NO Omega | 8 | 0.77 | 0.76 | 0.76 | won | $1.74 |
 | 2026-10-31 14:52 | model-only | cs2 | Omega | PRIVATE | NO PRIVATE | 66 | 0.24 | 0.35 | 0.24 | lost | -$16.69 |
 | 2026-10-31 13:52 | favourite | cs2 | Sokerorg | Fortress | NO Fortress | 3 | 0.82 | 0.82 | 0.82 | won | $0.50 |
