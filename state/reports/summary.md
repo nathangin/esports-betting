@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-31 07:26 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-31 07:31 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-31 07:26 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 451 | 34 | 417 | 140 | -$148.57 | -3.3% | -0.5c (446) | $851.43 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 727 | 49 | 678 | 446 | -$368.46 | -7.8% | -1.4c (720) | $631.54 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 727 | 48 | 679 | 447 | -$368.21 | -7.8% | -1.4c (720) | $631.79 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -42,7 +42,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-31 06:51 | favourite | cs2 | Vitality | MOUZ | YES Vitality | 10 | 0.56 | 0.56 | 0.56 | open | - |
 | 2026-10-31 06:20 | favourite | ow | ZETA DIVISION | T1 | YES ZETA DIVISION | 6 | 0.73 | 0.71 | 0.71 | open | - |
 | 2026-10-31 06:20 | model-only | ow | ZETA DIVISION | T1 | YES ZETA DIVISION | 6 | 0.73 | 0.80 | 0.71 | open | - |
-| 2026-10-31 04:50 | favourite | ow | ZANSIDE GAMING | O2 Blast | YES ZANSIDE GAMING | 1 | 0.73 | 0.71 | 0.71 | open | - |
+| 2026-10-31 04:50 | favourite | ow | ZANSIDE GAMING | O2 Blast | YES ZANSIDE GAMING | 1 | 0.73 | 0.71 | 0.71 | won | $0.25 |
 | 2026-10-30 18:54 | favourite | cs2 | Imperial | paiN | YES Imperial | 2 | 0.70 | 0.70 | 0.70 | won | $0.57 |
 | 2026-10-30 16:54 | favourite | cs2 | Phantom | Lavked | NO Lavked | 1 | 0.76 | 0.76 | 0.76 | won | $0.22 |
 | 2026-10-30 15:54 | favourite | cs2 | Gremio Esports | DFX Peek | YES Gremio Esports | 7 | 0.71 | 0.71 | 0.71 | won | $1.92 |
