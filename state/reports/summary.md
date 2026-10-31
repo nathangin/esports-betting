@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-31 10:21 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-31 10:41 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 455 | 37 | 418 | 141 | -$147.04 | -3.2% | -0.5c (449) | $852.96 |
+| model-only | Elo win model alone (control: ignores the market) | 455 | 36 | 419 | 141 | -$164.05 | -3.6% | -0.5c (449) | $835.95 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 734 | 53 | 681 | 448 | -$372.46 | -7.9% | -1.4c (726) | $627.54 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -45,7 +45,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-31 08:51 | favourite | cs2 | Optibet | Fraternity | NO Fraternity | 9 | 0.66 | 0.64 | 0.64 | open | - |
 | 2026-10-31 08:51 | model-only | cs2 | Fraternity | Optibet | NO Optibet | 1 | 0.38 | 0.57 | 0.36 | open | - |
 | 2026-10-31 07:51 | favourite | valorant | Unsettled Resentment | World Sports Invictus Gaming | YES Unsettled Resentment | 10 | 0.57 | 0.55 | 0.55 | open | - |
-| 2026-10-31 07:51 | model-only | cs2 | The Huns Esports | HOTU | YES The Huns Esports | 160 | 0.10 | 0.23 | 0.09 | open | - |
+| 2026-10-31 07:51 | model-only | cs2 | The Huns Esports | HOTU | YES The Huns Esports | 160 | 0.10 | 0.23 | 0.09 | lost | -$17.01 |
 | 2026-10-31 07:51 | favourite | cs2 | Gatorian | gothboiclique | YES Gatorian | 11 | 0.54 | 0.52 | 0.52 | open | - |
 | 2026-10-31 07:51 | favourite | cs2 | PsychoFace | Donstu Esports | NO Donstu Esports | 8 | 0.62 | 0.60 | 0.60 | open | - |
 | 2026-10-31 07:51 | model-only | cs2 | Donstu Esports | PsychoFace | YES Donstu Esports | 37 | 0.44 | 0.59 | 0.40 | open | - |
