@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-31 13:52 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-31 14:02 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 463 | 42 | 421 | 142 | -$144.37 | -3.2% | -0.4c (456) | $855.63 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 744 | 59 | 685 | 450 | -$376.67 | -7.9% | -1.4c (734) | $623.33 |
+| model-only | Elo win model alone (control: ignores the market) | 463 | 41 | 422 | 142 | -$161.30 | -3.5% | -0.4c (456) | $838.70 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 744 | 58 | 686 | 451 | -$373.67 | -7.9% | -1.4c (734) | $626.33 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -57,9 +57,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-31 11:51 | model-only | cs2 | Bounty Hunters Esports | BARCA | NO BARCA | 1 | 0.44 | 0.63 | 0.44 | open | - |
 | 2026-10-31 10:51 | favourite | cs2 | Saint Sinners | Misa Esports | YES Saint Sinners | 10 | 0.60 | 0.59 | 0.59 | open | - |
 | 2026-10-31 10:51 | model-only | cs2 | Misa Esports | Saint Sinners | YES Misa Esports | 39 | 0.41 | 0.58 | 0.41 | open | - |
-| 2026-10-31 09:51 | model-only | valorant | Any Questions Gaming | Nova Esports | YES Any Questions Gaming | 45 | 0.36 | 0.45 | 0.35 | open | - |
+| 2026-10-31 09:51 | model-only | valorant | Any Questions Gaming | Nova Esports | YES Any Questions Gaming | 45 | 0.36 | 0.45 | 0.35 | lost | -$16.93 |
 | 2026-10-31 09:51 | favourite | cs2 | FURIA | Nemiga | YES FURIA | 8 | 0.73 | 0.72 | 0.72 | open | - |
-| 2026-10-31 09:51 | favourite | valorant | Nova Esports | Any Questions Gaming | NO Any Questions Gaming | 9 | 0.65 | 0.65 | 0.65 | open | - |
+| 2026-10-31 09:51 | favourite | valorant | Nova Esports | Any Questions Gaming | NO Any Questions Gaming | 9 | 0.65 | 0.65 | 0.65 | won | $3.00 |
 | 2026-10-31 08:51 | favourite | cs2 | Optibet | Fraternity | NO Fraternity | 9 | 0.66 | 0.64 | 0.64 | won | $2.91 |
 | 2026-10-31 08:51 | model-only | cs2 | Fraternity | Optibet | NO Optibet | 1 | 0.38 | 0.57 | 0.36 | lost | -$0.40 |
 | 2026-10-31 07:51 | favourite | cs2 | PsychoFace | Donstu Esports | NO Donstu Esports | 8 | 0.62 | 0.60 | 0.60 | lost | -$5.10 |
