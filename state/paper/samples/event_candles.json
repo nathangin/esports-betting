@@ -1,57 +1,157 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/events/KXCS2GAME-26OCT290500CWPRE/candlesticks?start_ts=1793262600&end_ts=1793264460&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/events/KXCS2GAME-26OCT291530OLDESB/candlesticks?start_ts=1793300400&end_ts=1793302260&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1793264460,
+  "adjusted_end_ts": 1793302260,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1793264460,
-     "open_interest_fp": "134.20",
+     "end_period_ts": 1793300520,
+     "open_interest_fp": "121.82",
      "price": {
-      "previous_dollars": "0.4700"
+      "previous_dollars": "0.4300"
      },
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9500",
-      "high_dollars": "0.9500",
-      "low_dollars": "0.9500",
-      "open_dollars": "0.9500"
+      "close_dollars": "0.5300",
+      "high_dollars": "0.5300",
+      "low_dollars": "0.5300",
+      "open_dollars": "0.5300"
      },
      "yes_bid": {
-      "close_dollars": "0.1200",
+      "close_dollars": "0.3700",
+      "high_dollars": "0.3700",
+      "low_dollars": "0.3700",
+      "open_dollars": "0.3700"
+     }
+    },
+    {
+     "end_period_ts": 1793300640,
+     "open_interest_fp": "121.82",
+     "price": {
+      "previous_dollars": "0.4300"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.5300",
+      "high_dollars": "0.5300",
+      "low_dollars": "0.5300",
+      "open_dollars": "0.5300"
+     },
+     "yes_bid": {
+      "close_dollars": "0.3600",
+      "high_dollars": "0.3700",
+      "low_dollars": "0.3600",
+      "open_dollars": "0.3700"
+     }
+    },
+    {
+     "end_period_ts": 1793300760,
+     "open_interest_fp": "121.82",
+     "price": {
+      "previous_dollars": "0.4300"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.5300",
+      "high_dollars": "0.5300",
+      "low_dollars": "0.5300",
+      "open_dollars": "0.5300"
+     },
+     "yes_bid": {
+      "close_dollars": "0.1700",
       "high_dollars": "0.3600",
-      "low_dollars": "0.1100",
-      "open_dollars": "0.1100"
+      "low_dollars": "0.1700",
+      "open_dollars": "0.3600"
+     }
+    },
+    {
+     "end_period_ts": 1793300820,
+     "open_interest_fp": "121.82",
+     "price": {
+      "previous_dollars": "0.4300"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "1.0000",
+      "high_dollars": "1.0000",
+      "low_dollars": "0.5300",
+      "open_dollars": "0.5300"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0000",
+      "high_dollars": "0.1700",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.1700"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1793264460,
-     "open_interest_fp": "296.52",
+     "end_period_ts": 1793300520,
+     "open_interest_fp": "71.36",
      "price": {
-      "previous_dollars": "0.5400"
+      "previous_dollars": "0.5900"
      },
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.5900",
-      "high_dollars": "0.5900",
-      "low_dollars": "0.5900",
-      "open_dollars": "0.5900"
+      "close_dollars": "0.5800",
+      "high_dollars": "0.5800",
+      "low_dollars": "0.5800",
+      "open_dollars": "0.5800"
      },
      "yes_bid": {
-      "close_dollars": "0.3200",
-      "high_dollars": "0.3300",
-      "low_dollars": "0.3200",
-      "open_dollars": "0.3200"
+      "close_dollars": "0.4700",
+      "high_dollars": "0.4700",
+      "low_dollars": "0.4700",
+      "open_dollars": "0.4700"
+     }
+    },
+    {
+     "end_period_ts": 1793300640,
+     "open_interest_fp": "71.36",
+     "price": {
+      "previous_dollars": "0.5900"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.5800",
+      "high_dollars": "0.5800",
+      "low_dollars": "0.5800",
+      "open_dollars": "0.5800"
+     },
+     "yes_bid": {
+      "close_dollars": "0.4700",
+      "high_dollars": "0.4700",
+      "low_dollars": "0.4700",
+      "open_dollars": "0.4700"
+     }
+    },
+    {
+     "end_period_ts": 1793300820,
+     "open_interest_fp": "71.36",
+     "price": {
+      "previous_dollars": "0.5900"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "1.0000",
+      "high_dollars": "1.0000",
+      "low_dollars": "0.5800",
+      "open_dollars": "0.5800"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0000",
+      "high_dollars": "0.4700",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.4700"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXCS2GAME-26OCT290500CWPRE-CW",
-   "KXCS2GAME-26OCT290500CWPRE-PRE"
+   "KXCS2GAME-26OCT291530OLDESB-OLD",
+   "KXCS2GAME-26OCT291530OLDESB-ESB"
   ]
  }
 }
