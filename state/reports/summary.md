@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-31 23:38 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-31 23:43 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 468 | 34 | 434 | 147 | -$120.10 | -2.5% | -0.4c (462) | $879.90 |
+| model-only | Elo win model alone (control: ignores the market) | 468 | 33 | 435 | 148 | -$97.59 | -2.1% | -0.4c (462) | $902.41 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 753 | 46 | 707 | 465 | -$382.89 | -7.9% | -1.4c (746) | $617.11 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -39,7 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-10-31 21:52 | model-only | lol | Bilibili Gaming | Hanwha Life Esports | YES Bilibili Gaming | 40 | 0.42 | 0.59 | 0.41 | open | - |
+| 2026-10-31 21:52 | model-only | lol | Bilibili Gaming | Hanwha Life Esports | YES Bilibili Gaming | 40 | 0.42 | 0.59 | 0.41 | won | $22.51 |
 | 2026-10-31 16:52 | favourite | cs2 | ILLYRIANS | Azuolas | NO Azuolas | 2 | 0.78 | 0.77 | 0.77 | lost | -$1.59 |
 | 2026-10-31 16:52 | favourite | cs2 | FOKUS | BakS eSports | YES FOKUS | 7 | 0.85 | 0.84 | 0.84 | won | $0.98 |
 | 2026-10-31 16:52 | model-only | cs2 | BakS eSports | FOKUS | YES BakS eSports | 36 | 0.17 | 0.37 | 0.16 | lost | -$6.48 |
