@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-31 13:07 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-31 13:12 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 461 | 41 | 420 | 142 | -$143.97 | -3.2% | -0.4c (456) | $856.03 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 740 | 56 | 684 | 449 | -$379.58 | -8.0% | -1.4c (734) | $620.42 |
+| model-only | Elo win model alone (control: ignores the market) | 461 | 40 | 421 | 142 | -$144.37 | -3.2% | -0.4c (456) | $855.63 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 740 | 55 | 685 | 450 | -$376.67 | -7.9% | -1.4c (734) | $623.33 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -54,8 +54,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-31 09:51 | favourite | valorant | Nova Esports | Any Questions Gaming | NO Any Questions Gaming | 9 | 0.65 | 0.65 | 0.65 | open | - |
 | 2026-10-31 09:51 | model-only | valorant | Any Questions Gaming | Nova Esports | YES Any Questions Gaming | 45 | 0.36 | 0.45 | 0.35 | open | - |
 | 2026-10-31 09:51 | favourite | cs2 | FURIA | Nemiga | YES FURIA | 8 | 0.73 | 0.72 | 0.72 | open | - |
-| 2026-10-31 08:51 | favourite | cs2 | Optibet | Fraternity | NO Fraternity | 9 | 0.66 | 0.64 | 0.64 | open | - |
-| 2026-10-31 08:51 | model-only | cs2 | Fraternity | Optibet | NO Optibet | 1 | 0.38 | 0.57 | 0.36 | open | - |
+| 2026-10-31 08:51 | favourite | cs2 | Optibet | Fraternity | NO Fraternity | 9 | 0.66 | 0.64 | 0.64 | won | $2.91 |
+| 2026-10-31 08:51 | model-only | cs2 | Fraternity | Optibet | NO Optibet | 1 | 0.38 | 0.57 | 0.36 | lost | -$0.40 |
 | 2026-10-31 07:51 | model-only | cs2 | The Huns Esports | HOTU | YES The Huns Esports | 160 | 0.10 | 0.23 | 0.09 | lost | -$17.01 |
 | 2026-10-31 07:51 | favourite | cs2 | Gatorian | gothboiclique | YES Gatorian | 11 | 0.54 | 0.52 | 0.52 | lost | -$6.14 |
 | 2026-10-31 07:51 | favourite | cs2 | PsychoFace | Donstu Esports | NO Donstu Esports | 8 | 0.62 | 0.60 | 0.60 | lost | -$5.10 |
