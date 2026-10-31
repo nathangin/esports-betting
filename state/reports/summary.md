@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-31 16:22 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-31 16:32 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 466 | 38 | 428 | 145 | -$163.51 | -3.5% | -0.4c (460) | $836.49 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 751 | 57 | 694 | 456 | -$379.89 | -7.9% | -1.4c (742) | $620.11 |
+| model-only | Elo win model alone (control: ignores the market) | 466 | 37 | 429 | 145 | -$180.45 | -3.9% | -0.4c (460) | $819.55 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 751 | 56 | 695 | 457 | -$378.37 | -7.9% | -1.5c (742) | $621.63 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1570 finished matches. Lower is better; the market line is the bar to beat.
+1571 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5788 | 0.1987 |
-| model | 0.6516 | 0.2303 |
-| blend | 0.5786 | 0.1988 |
+| market | 0.5793 | 0.1990 |
+| model | 0.6517 | 0.2303 |
+| blend | 0.5791 | 0.1991 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1027 | 0.5911 | 0.6591 |
+| cs2 | 1028 | 0.5918 | 0.6592 |
 | dota2 | 240 | 0.5443 | 0.6282 |
 | ow | 95 | 0.5020 | 0.5282 |
 | lol | 87 | 0.5779 | 0.7235 |
@@ -53,8 +53,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-31 13:52 | favourite | cs2 | Sokerorg | Fortress | NO Fortress | 3 | 0.82 | 0.82 | 0.82 | open | - |
 | 2026-10-31 13:52 | model-only | cs2 | Fortress | Sokerorg | NO Sokerorg | 85 | 0.19 | 0.29 | 0.18 | open | - |
 | 2026-10-31 13:52 | favourite | cs2 | Acend | Butterfly | NO Butterfly | 8 | 0.53 | 0.53 | 0.53 | open | - |
-| 2026-10-31 13:22 | favourite | cs2 | JiJieHao | BASEMENT BOYS | NO BASEMENT BOYS | 7 | 0.77 | 0.77 | 0.77 | open | - |
-| 2026-10-31 13:22 | model-only | cs2 | BASEMENT BOYS | JiJieHao | YES BASEMENT BOYS | 67 | 0.24 | 0.42 | 0.23 | open | - |
+| 2026-10-31 13:22 | favourite | cs2 | JiJieHao | BASEMENT BOYS | NO BASEMENT BOYS | 7 | 0.77 | 0.77 | 0.77 | won | $1.52 |
+| 2026-10-31 13:22 | model-only | cs2 | BASEMENT BOYS | JiJieHao | YES BASEMENT BOYS | 67 | 0.24 | 0.42 | 0.23 | lost | -$16.94 |
 | 2026-10-31 11:51 | model-only | cs2 | Procyon Gaming | Galorys | NO Galorys | 5 | 0.26 | 0.46 | 0.25 | won | $3.63 |
 | 2026-10-31 11:51 | model-only | cs2 | Bounty Hunters Esports | BARCA | NO BARCA | 1 | 0.44 | 0.63 | 0.44 | lost | -$0.46 |
 | 2026-10-31 11:51 | favourite | cs2 | BARCA | Bounty Hunters Esports | NO Bounty Hunters Esports | 10 | 0.56 | 0.56 | 0.56 | won | $4.22 |
