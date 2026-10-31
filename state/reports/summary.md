@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-10-31 17:23 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-10-31 17:32 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-10-31 17:23 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 467 | 36 | 431 | 145 | -$204.00 | -4.4% | -0.4c (461) | $796.00 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 753 | 56 | 697 | 459 | -$376.89 | -7.8% | -1.5c (745) | $623.11 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 753 | 55 | 698 | 460 | -$376.11 | -7.8% | -1.5c (745) | $623.89 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -55,7 +55,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-10-31 13:52 | favourite | cs2 | Sokerorg | Fortress | NO Fortress | 3 | 0.82 | 0.82 | 0.82 | won | $0.50 |
 | 2026-10-31 13:52 | model-only | cs2 | Fortress | Sokerorg | NO Sokerorg | 85 | 0.19 | 0.29 | 0.18 | lost | -$17.07 |
 | 2026-10-31 13:52 | favourite | cs2 | Acend | Butterfly | NO Butterfly | 8 | 0.53 | 0.53 | 0.53 | open | - |
-| 2026-10-31 13:52 | favourite | dota2 | potn9ki | Hokori | YES potn9ki | 7 | 0.88 | 0.84 | 0.84 | open | - |
+| 2026-10-31 13:52 | favourite | dota2 | potn9ki | Hokori | YES potn9ki | 7 | 0.88 | 0.84 | 0.84 | won | $0.78 |
 | 2026-10-31 13:22 | favourite | cs2 | JiJieHao | BASEMENT BOYS | NO BASEMENT BOYS | 7 | 0.77 | 0.77 | 0.77 | won | $1.52 |
 | 2026-10-31 13:22 | model-only | cs2 | BASEMENT BOYS | JiJieHao | YES BASEMENT BOYS | 67 | 0.24 | 0.42 | 0.23 | lost | -$16.94 |
 | 2026-10-31 11:51 | favourite | cs2 | Galorys | Procyon Gaming | YES Galorys | 8 | 0.75 | 0.75 | 0.75 | lost | -$6.11 |
