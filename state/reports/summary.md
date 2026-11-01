@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-01 14:35 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-01 14:45 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 483 | 39 | 444 | 149 | -$181.28 | -3.7% | -0.4c (475) | $818.72 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 775 | 54 | 721 | 477 | -$369.59 | -7.5% | -1.5c (766) | $630.41 |
+| model-only | Elo win model alone (control: ignores the market) | 483 | 38 | 445 | 150 | -$127.50 | -2.6% | -0.4c (475) | $872.50 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 775 | 53 | 722 | 477 | -$375.21 | -7.6% | -1.5c (766) | $624.79 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -51,8 +51,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-01 11:54 | model-only | cs2 | WBT Academy | Iberian Soul | NO Iberian Soul | 64 | 0.24 | 0.45 | 0.23 | open | - |
 | 2026-11-01 11:54 | favourite | dota2 | Team Yandex | Team Spirit | YES Team Yandex | 9 | 0.66 | 0.66 | 0.66 | open | - |
 | 2026-11-01 11:54 | model-only | dota2 | Team Spirit | Team Yandex | YES Team Spirit | 40 | 0.35 | 0.41 | 0.34 | open | - |
-| 2026-11-01 10:54 | favourite | dota2 | Xipto Esports | potn9ki | YES Xipto Esports | 7 | 0.79 | 0.78 | 0.78 | open | - |
-| 2026-11-01 10:54 | model-only | dota2 | potn9ki | Xipto Esports | YES potn9ki | 71 | 0.23 | 0.35 | 0.22 | open | - |
+| 2026-11-01 10:54 | favourite | dota2 | Xipto Esports | potn9ki | YES Xipto Esports | 7 | 0.79 | 0.78 | 0.78 | lost | -$5.62 |
+| 2026-11-01 10:54 | model-only | dota2 | potn9ki | Xipto Esports | YES potn9ki | 71 | 0.23 | 0.35 | 0.22 | won | $53.78 |
 | 2026-11-01 10:54 | favourite | cs2 | ILLYRIANS | Fortress | NO Fortress | 6 | 0.89 | 0.88 | 0.88 | won | $0.61 |
 | 2026-11-01 10:54 | model-only | cs2 | Fortress | ILLYRIANS | NO ILLYRIANS | 13 | 0.12 | 0.25 | 0.12 | lost | -$1.66 |
 | 2026-11-01 09:54 | model-only | cs2 | Phantom | Apogee Esports | YES Phantom | 36 | 0.47 | 0.54 | 0.47 | lost | -$17.55 |
