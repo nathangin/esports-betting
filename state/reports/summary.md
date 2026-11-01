@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-01 23:36 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-01 23:51 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-01 23:36 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 486 | 33 | 453 | 154 | -$44.56 | -0.9% | -0.4c (480) | $955.44 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 781 | 47 | 734 | 484 | -$386.05 | -7.7% | -1.4c (774) | $613.95 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 781 | 46 | 735 | 485 | -$384.04 | -7.6% | -1.4c (774) | $615.96 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,7 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-11-01 18:50 | favourite | cs2 | DENDELE CS | Imperial | NO Imperial | 5 | 0.58 | 0.58 | 0.58 | open | - |
+| 2026-11-01 18:50 | favourite | cs2 | DENDELE CS | Imperial | NO Imperial | 5 | 0.58 | 0.58 | 0.58 | won | $2.01 |
 | 2026-11-01 17:50 | favourite | cs2 | Metizport | WBT Academy | YES Metizport | 9 | 0.67 | 0.66 | 0.66 | lost | -$6.17 |
 | 2026-11-01 17:50 | model-only | cs2 | WBT Academy | Metizport | NO Metizport | 2 | 0.35 | 0.41 | 0.34 | won | $1.26 |
 | 2026-11-01 16:50 | favourite | valorant | Gentle Mates GC | KRÜ Blaze | NO KRÜ Blaze | 9 | 0.66 | 0.65 | 0.65 | lost | -$6.09 |
