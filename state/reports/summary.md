@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-01 11:10 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-01 11:24 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 478 | 41 | 437 | 148 | -$131.98 | -2.8% | -0.4c (470) | $868.02 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 768 | 58 | 710 | 468 | -$378.49 | -7.7% | -1.5c (759) | $621.51 |
+| model-only | Elo win model alone (control: ignores the market) | 478 | 39 | 439 | 148 | -$150.34 | -3.1% | -0.4c (470) | $849.66 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 768 | 56 | 712 | 470 | -$373.11 | -7.6% | -1.5c (759) | $626.89 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,21 +16,21 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1601 finished matches. Lower is better; the market line is the bar to beat.
+1603 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5804 | 0.1994 |
+| market | 0.5802 | 0.1993 |
 | model | 0.6514 | 0.2302 |
-| blend | 0.5805 | 0.1996 |
+| blend | 0.5802 | 0.1995 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1045 | 0.5917 | 0.6584 |
+| cs2 | 1046 | 0.5916 | 0.6586 |
 | dota2 | 243 | 0.5440 | 0.6292 |
 | ow | 101 | 0.5174 | 0.5335 |
 | lol | 89 | 0.5778 | 0.7239 |
-| valorant | 79 | 0.6091 | 0.6756 |
+| valorant | 80 | 0.6047 | 0.6734 |
 | r6 | 44 | 0.6133 | 0.6886 |
 
 ## Latest bets
@@ -52,15 +52,15 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-01 07:54 | favourite | cs2 | 5star | The Huns Esports | YES 5star | 9 | 0.64 | 0.63 | 0.63 | open | - |
 | 2026-11-01 07:54 | model-only | cs2 | gothboiclique | UNiTY esports | YES gothboiclique | 68 | 0.23 | 0.30 | 0.21 | lost | -$16.49 |
 | 2026-11-01 07:54 | favourite | cs2 | UNiTY esports | gothboiclique | NO gothboiclique | 7 | 0.79 | 0.79 | 0.79 | won | $1.38 |
-| 2026-11-01 07:54 | model-only | cs2 | eternal premium | maybe | NO maybe | 2 | 0.43 | 0.57 | 0.42 | open | - |
-| 2026-11-01 07:54 | favourite | cs2 | maybe | eternal premium | NO eternal premium | 10 | 0.59 | 0.58 | 0.58 | open | - |
+| 2026-11-01 07:54 | model-only | cs2 | eternal premium | maybe | NO maybe | 2 | 0.43 | 0.57 | 0.42 | lost | -$0.90 |
+| 2026-11-01 07:54 | favourite | cs2 | maybe | eternal premium | NO eternal premium | 10 | 0.59 | 0.58 | 0.58 | won | $3.93 |
 | 2026-11-01 07:54 | favourite | cs2 | PsychoFace | Saint Sinners | NO Saint Sinners | 11 | 0.52 | 0.51 | 0.51 | open | - |
 | 2026-11-01 07:54 | model-only | cs2 | Saint Sinners | PsychoFace | YES Saint Sinners | 34 | 0.50 | 0.61 | 0.49 | open | - |
 | 2026-11-01 07:54 | favourite | cs2 | Ryvex | ThePigs | NO ThePigs | 7 | 0.76 | 0.72 | 0.72 | open | - |
 | 2026-11-01 07:54 | model-only | dota2 | HellNight- | Team Synapse | NO Team Synapse | 51 | 0.33 | 0.42 | 0.29 | open | - |
 | 2026-11-01 07:54 | favourite | dota2 | Team Synapse | HellNight- | YES Team Synapse | 8 | 0.72 | 0.70 | 0.71 | open | - |
-| 2026-11-01 07:54 | model-only | valorant | Unsettled Resentment | Nova Esports | NO Nova Esports | 72 | 0.23 | 0.39 | 0.22 | open | - |
-| 2026-11-01 07:54 | favourite | valorant | Nova Esports | Unsettled Resentment | YES Nova Esports | 7 | 0.78 | 0.78 | 0.78 | open | - |
+| 2026-11-01 07:54 | model-only | valorant | Unsettled Resentment | Nova Esports | NO Nova Esports | 72 | 0.23 | 0.39 | 0.22 | lost | -$17.46 |
+| 2026-11-01 07:54 | favourite | valorant | Nova Esports | Unsettled Resentment | YES Nova Esports | 7 | 0.78 | 0.78 | 0.78 | won | $1.45 |
 | 2026-11-01 03:53 | favourite | ow | ZANSIDE GAMING | SEIJI ESPORTS | NO SEIJI ESPORTS | 8 | 0.74 | 0.69 | 0.69 | won | $1.97 |
 | 2026-11-01 01:53 | model-only | cs2 | Alter Ego | FlyQuest | YES Alter Ego | 94 | 0.18 | 0.38 | 0.17 | lost | -$17.90 |
 | 2026-11-01 01:53 | favourite | cs2 | FlyQuest | Alter Ego | NO Alter Ego | 7 | 0.84 | 0.83 | 0.83 | won | $1.05 |
