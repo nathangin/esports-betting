@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-01 15:45 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-01 15:50 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-01 15:45 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 483 | 38 | 445 | 150 | -$127.50 | -2.6% | -0.4c (477) | $872.50 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 776 | 53 | 723 | 478 | -$370.35 | -7.5% | -1.5c (768) | $629.65 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 777 | 54 | 723 | 478 | -$370.35 | -7.5% | -1.5c (768) | $629.65 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-01 15:50 | favourite | cs2 | Wildcard | BARCA | NO BARCA | 9 | 0.62 | 0.61 | 0.61 | open | - |
 | 2026-11-01 15:20 | favourite | cs2 | prodigy | Ducks | NO Ducks | 11 | 0.54 | 0.50 | 0.50 | open | - |
 | 2026-11-01 13:54 | favourite | cs2 | Misa Esports | Donstu Esports | YES Misa Esports | 10 | 0.59 | 0.58 | 0.58 | open | - |
 | 2026-11-01 13:54 | model-only | cs2 | Misa Esports | Donstu Esports | YES Misa Esports | 27 | 0.59 | 0.64 | 0.58 | open | - |
@@ -47,23 +48,22 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-01 12:54 | favourite | cs2 | 100 Thieves | BESTIA Academy | NO BESTIA Academy | 7 | 0.82 | 0.82 | 0.82 | open | - |
 | 2026-11-01 12:54 | favourite | cs2 | FOKUS | Acend | NO Acend | 8 | 0.75 | 0.74 | 0.74 | open | - |
 | 2026-11-01 12:54 | model-only | cs2 | Acend | FOKUS | YES Acend | 10 | 0.26 | 0.35 | 0.26 | open | - |
-| 2026-11-01 11:54 | favourite | cs2 | Iberian Soul | WBT Academy | YES Iberian Soul | 8 | 0.77 | 0.77 | 0.77 | open | - |
-| 2026-11-01 11:54 | favourite | cs2 | 1WIN | HOTU | YES 1WIN | 11 | 0.54 | 0.54 | 0.54 | won | $4.86 |
-| 2026-11-01 11:54 | model-only | cs2 | WBT Academy | Iberian Soul | NO Iberian Soul | 64 | 0.24 | 0.45 | 0.23 | open | - |
 | 2026-11-01 11:54 | favourite | dota2 | Team Yandex | Team Spirit | YES Team Yandex | 9 | 0.66 | 0.66 | 0.66 | open | - |
 | 2026-11-01 11:54 | model-only | dota2 | Team Spirit | Team Yandex | YES Team Spirit | 40 | 0.35 | 0.41 | 0.34 | open | - |
-| 2026-11-01 10:54 | favourite | dota2 | Xipto Esports | potn9ki | YES Xipto Esports | 7 | 0.79 | 0.78 | 0.78 | lost | -$5.62 |
+| 2026-11-01 11:54 | favourite | cs2 | Iberian Soul | WBT Academy | YES Iberian Soul | 8 | 0.77 | 0.77 | 0.77 | open | - |
+| 2026-11-01 11:54 | model-only | cs2 | WBT Academy | Iberian Soul | NO Iberian Soul | 64 | 0.24 | 0.45 | 0.23 | open | - |
+| 2026-11-01 11:54 | favourite | cs2 | 1WIN | HOTU | YES 1WIN | 11 | 0.54 | 0.54 | 0.54 | won | $4.86 |
 | 2026-11-01 10:54 | model-only | dota2 | potn9ki | Xipto Esports | YES potn9ki | 71 | 0.23 | 0.35 | 0.22 | won | $53.78 |
 | 2026-11-01 10:54 | favourite | cs2 | ILLYRIANS | Fortress | NO Fortress | 6 | 0.89 | 0.88 | 0.88 | won | $0.61 |
 | 2026-11-01 10:54 | model-only | cs2 | Fortress | ILLYRIANS | NO ILLYRIANS | 13 | 0.12 | 0.25 | 0.12 | lost | -$1.66 |
-| 2026-11-01 09:54 | model-only | cs2 | Phantom | Apogee Esports | YES Phantom | 36 | 0.47 | 0.54 | 0.47 | lost | -$17.55 |
-| 2026-11-01 09:54 | favourite | cs2 | Apogee Esports | Phantom | YES Apogee Esports | 11 | 0.53 | 0.53 | 0.53 | won | $4.97 |
+| 2026-11-01 10:54 | favourite | dota2 | Xipto Esports | potn9ki | YES Xipto Esports | 7 | 0.79 | 0.78 | 0.78 | lost | -$5.62 |
 | 2026-11-01 09:54 | favourite | ow | Weibo Gaming | JD Gaming | YES Weibo Gaming | 6 | 0.81 | 0.80 | 0.80 | won | $1.07 |
+| 2026-11-01 09:54 | favourite | cs2 | Apogee Esports | Phantom | YES Apogee Esports | 11 | 0.53 | 0.53 | 0.53 | won | $4.97 |
+| 2026-11-01 09:54 | model-only | cs2 | Phantom | Apogee Esports | YES Phantom | 36 | 0.47 | 0.54 | 0.47 | lost | -$17.55 |
 | 2026-11-01 08:54 | favourite | ow | T1 | Cheeseburger | NO Cheeseburger | 1 | 0.82 | 0.79 | 0.79 | won | $0.16 |
 | 2026-11-01 08:54 | favourite | cs2 | JiJieHao | Metizport | NO Metizport | 10 | 0.60 | 0.60 | 0.60 | lost | -$6.17 |
 | 2026-11-01 08:54 | model-only | cs2 | Metizport | JiJieHao | NO JiJieHao | 41 | 0.41 | 0.52 | 0.40 | won | $23.49 |
-| 2026-11-01 07:54 | favourite | cs2 | Ryvex | ThePigs | NO ThePigs | 7 | 0.76 | 0.72 | 0.72 | won | $1.59 |
-| 2026-11-01 07:54 | favourite | cs2 | PsychoFace | Saint Sinners | NO Saint Sinners | 11 | 0.52 | 0.51 | 0.51 | won | $5.08 |
+| 2026-11-01 07:54 | favourite | cs2 | 5star | The Huns Esports | YES 5star | 9 | 0.64 | 0.63 | 0.63 | lost | -$5.91 |
 
 ## Backtest on real Kalshi prices
 
