@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-01 13:10 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-01 13:34 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 481 | 40 | 441 | 148 | -$185.56 | -3.8% | -0.4c (474) | $814.44 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 773 | 55 | 718 | 475 | -$369.00 | -7.5% | -1.5c (764) | $631.00 |
+| model-only | Elo win model alone (control: ignores the market) | 481 | 39 | 442 | 149 | -$162.07 | -3.3% | -0.4c (474) | $837.93 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 773 | 54 | 719 | 475 | -$375.17 | -7.6% | -1.5c (764) | $624.83 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1610 finished matches. Lower is better; the market line is the bar to beat.
+1611 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5795 | 0.1990 |
+| market | 0.5797 | 0.1991 |
 | model | 0.6512 | 0.2301 |
-| blend | 0.5794 | 0.1991 |
+| blend | 0.5797 | 0.1992 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1049 | 0.5918 | 0.6594 |
+| cs2 | 1050 | 0.5921 | 0.6594 |
 | dota2 | 245 | 0.5413 | 0.6276 |
 | ow | 103 | 0.5118 | 0.5284 |
 | lol | 89 | 0.5778 | 0.7239 |
@@ -54,8 +54,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-01 09:54 | favourite | ow | Weibo Gaming | JD Gaming | YES Weibo Gaming | 6 | 0.81 | 0.80 | 0.80 | won | $1.07 |
 | 2026-11-01 09:54 | favourite | cs2 | Apogee Esports | Phantom | YES Apogee Esports | 11 | 0.53 | 0.53 | 0.53 | open | - |
 | 2026-11-01 09:54 | model-only | cs2 | Phantom | Apogee Esports | YES Phantom | 36 | 0.47 | 0.54 | 0.47 | open | - |
-| 2026-11-01 08:54 | favourite | cs2 | JiJieHao | Metizport | NO Metizport | 10 | 0.60 | 0.60 | 0.60 | open | - |
-| 2026-11-01 08:54 | model-only | cs2 | Metizport | JiJieHao | NO JiJieHao | 41 | 0.41 | 0.52 | 0.40 | open | - |
+| 2026-11-01 08:54 | favourite | cs2 | JiJieHao | Metizport | NO Metizport | 10 | 0.60 | 0.60 | 0.60 | lost | -$6.17 |
+| 2026-11-01 08:54 | model-only | cs2 | Metizport | JiJieHao | NO JiJieHao | 41 | 0.41 | 0.52 | 0.40 | won | $23.49 |
 | 2026-11-01 08:54 | favourite | ow | T1 | Cheeseburger | NO Cheeseburger | 1 | 0.82 | 0.79 | 0.79 | won | $0.16 |
 | 2026-11-01 07:54 | favourite | cs2 | 5star | The Huns Esports | YES 5star | 9 | 0.64 | 0.63 | 0.63 | lost | -$5.91 |
 | 2026-11-01 07:54 | model-only | cs2 | gothboiclique | UNiTY esports | YES gothboiclique | 68 | 0.23 | 0.30 | 0.21 | lost | -$16.49 |
