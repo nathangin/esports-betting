@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-01 21:41 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-01 22:11 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 486 | 35 | 451 | 152 | -$77.52 | -1.6% | -0.4c (480) | $922.48 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 781 | 49 | 732 | 484 | -$373.79 | -7.5% | -1.4c (774) | $626.21 |
+| model-only | Elo win model alone (control: ignores the market) | 486 | 34 | 452 | 153 | -$76.26 | -1.5% | -0.4c (480) | $923.74 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 781 | 48 | 733 | 484 | -$379.96 | -7.6% | -1.4c (774) | $620.04 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -40,8 +40,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-11-01 18:50 | favourite | cs2 | DENDELE CS | Imperial | NO Imperial | 5 | 0.58 | 0.58 | 0.58 | open | - |
-| 2026-11-01 17:50 | favourite | cs2 | Metizport | WBT Academy | YES Metizport | 9 | 0.67 | 0.66 | 0.66 | open | - |
-| 2026-11-01 17:50 | model-only | cs2 | WBT Academy | Metizport | NO Metizport | 2 | 0.35 | 0.41 | 0.34 | open | - |
+| 2026-11-01 17:50 | favourite | cs2 | Metizport | WBT Academy | YES Metizport | 9 | 0.67 | 0.66 | 0.66 | lost | -$6.17 |
+| 2026-11-01 17:50 | model-only | cs2 | WBT Academy | Metizport | NO Metizport | 2 | 0.35 | 0.41 | 0.34 | won | $1.26 |
 | 2026-11-01 16:50 | favourite | valorant | Gentle Mates GC | KRÜ Blaze | NO KRÜ Blaze | 9 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-01 16:50 | model-only | valorant | KRÜ Blaze | Gentle Mates GC | YES KRÜ Blaze | 50 | 0.35 | 0.44 | 0.35 | open | - |
 | 2026-11-01 16:50 | favourite | ow | Twisted Minds | 1234 | YES Twisted Minds | 5 | 0.89 | 0.86 | 0.86 | won | $0.51 |
