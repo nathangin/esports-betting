@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-01 17:05 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-01 17:35 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 485 | 38 | 447 | 151 | -$80.87 | -1.6% | -0.4c (477) | $919.13 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 779 | 53 | 726 | 480 | -$372.16 | -7.5% | -1.5c (770) | $627.84 |
+| model-only | Elo win model alone (control: ignores the market) | 485 | 36 | 449 | 151 | -$100.00 | -2.0% | -0.4c (477) | $900.00 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 779 | 51 | 728 | 481 | -$376.34 | -7.5% | -1.5c (770) | $623.66 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1622 finished matches. Lower is better; the market line is the bar to beat.
+1624 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
 | market | 0.5805 | 0.1995 |
-| model | 0.6514 | 0.2302 |
+| model | 0.6515 | 0.2302 |
 | blend | 0.5806 | 0.1997 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1059 | 0.5922 | 0.6594 |
+| cs2 | 1061 | 0.5922 | 0.6595 |
 | dota2 | 246 | 0.5452 | 0.6293 |
 | ow | 103 | 0.5118 | 0.5284 |
 | lol | 89 | 0.5778 | 0.7239 |
@@ -45,13 +45,13 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-01 16:50 | model-only | ow | 1234 | Twisted Minds | YES 1234 | 17 | 0.16 | 0.24 | 0.14 | open | - |
 | 2026-11-01 15:50 | favourite | cs2 | Wildcard | BARCA | NO BARCA | 9 | 0.62 | 0.61 | 0.61 | open | - |
 | 2026-11-01 15:20 | favourite | cs2 | prodigy | Ducks | NO Ducks | 11 | 0.54 | 0.50 | 0.50 | open | - |
-| 2026-11-01 13:54 | favourite | cs2 | Misa Esports | Donstu Esports | YES Misa Esports | 10 | 0.59 | 0.58 | 0.58 | open | - |
-| 2026-11-01 13:54 | model-only | cs2 | Misa Esports | Donstu Esports | YES Misa Esports | 27 | 0.59 | 0.64 | 0.58 | open | - |
+| 2026-11-01 13:54 | favourite | cs2 | Misa Esports | Donstu Esports | YES Misa Esports | 10 | 0.59 | 0.58 | 0.58 | lost | -$6.07 |
+| 2026-11-01 13:54 | model-only | cs2 | Misa Esports | Donstu Esports | YES Misa Esports | 27 | 0.59 | 0.64 | 0.58 | lost | -$16.39 |
 | 2026-11-01 13:54 | favourite | cs2 | Low Cortisol | naocopulas | NO naocopulas | 9 | 0.62 | 0.62 | 0.62 | won | $3.27 |
 | 2026-11-01 13:54 | model-only | cs2 | naocopulas | Low Cortisol | NO Low Cortisol | 3 | 0.38 | 0.62 | 0.38 | lost | -$1.19 |
 | 2026-11-01 12:54 | favourite | cs2 | 100 Thieves | BESTIA Academy | NO BESTIA Academy | 7 | 0.82 | 0.82 | 0.82 | won | $1.18 |
-| 2026-11-01 12:54 | favourite | cs2 | FOKUS | Acend | NO Acend | 8 | 0.75 | 0.74 | 0.74 | open | - |
-| 2026-11-01 12:54 | model-only | cs2 | Acend | FOKUS | YES Acend | 10 | 0.26 | 0.35 | 0.26 | open | - |
+| 2026-11-01 12:54 | favourite | cs2 | FOKUS | Acend | NO Acend | 8 | 0.75 | 0.74 | 0.74 | won | $1.89 |
+| 2026-11-01 12:54 | model-only | cs2 | Acend | FOKUS | YES Acend | 10 | 0.26 | 0.35 | 0.26 | lost | -$2.74 |
 | 2026-11-01 11:54 | favourite | cs2 | Iberian Soul | WBT Academy | YES Iberian Soul | 8 | 0.77 | 0.77 | 0.77 | lost | -$6.26 |
 | 2026-11-01 11:54 | favourite | cs2 | 1WIN | HOTU | YES 1WIN | 11 | 0.54 | 0.54 | 0.54 | won | $4.86 |
 | 2026-11-01 11:54 | model-only | cs2 | WBT Academy | Iberian Soul | NO Iberian Soul | 64 | 0.24 | 0.45 | 0.23 | won | $47.82 |
