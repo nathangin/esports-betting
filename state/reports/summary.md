@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-02 09:52 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-02 10:02 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-02 09:52 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 488 | 35 | 453 | 154 | -$44.56 | -0.9% | -0.4c (482) | $955.44 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 791 | 52 | 739 | 486 | -$397.90 | -7.9% | -1.4c (784) | $602.10 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 791 | 51 | 740 | 487 | -$394.90 | -7.8% | -1.4c (784) | $605.10 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -46,7 +46,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-02 07:52 | favourite | cs2 | maybe | Honvéd | NO Honvéd | 9 | 0.61 | 0.59 | 0.59 | open | - |
 | 2026-11-02 05:51 | favourite | cs2 | FURIA | FaZe | NO FaZe | 8 | 0.72 | 0.71 | 0.72 | open | - |
 | 2026-11-02 05:51 | model-only | cs2 | FaZe | FURIA | YES FaZe | 62 | 0.29 | 0.37 | 0.28 | open | - |
-| 2026-11-02 05:51 | favourite | cs2 | BetBoom Team | 9z | YES BetBoom Team | 9 | 0.65 | 0.65 | 0.65 | open | - |
+| 2026-11-02 05:51 | favourite | cs2 | BetBoom Team | 9z | YES BetBoom Team | 9 | 0.65 | 0.65 | 0.65 | won | $3.00 |
 | 2026-11-02 03:21 | favourite | cs2 | Aurora Gaming | Liquid | YES Aurora Gaming | 8 | 0.69 | 0.69 | 0.69 | lost | -$5.64 |
 | 2026-11-02 03:21 | favourite | cs2 | G2 | PARIVISION | YES G2 | 10 | 0.55 | 0.55 | 0.55 | lost | -$5.68 |
 | 2026-11-02 00:51 | favourite | cs2 | Legacy | TheMongolz | YES Legacy | 11 | 0.51 | 0.51 | 0.51 | lost | -$5.81 |
