@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-02 17:23 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-02 17:53 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 496 | 40 | 456 | 154 | -$83.99 | -1.7% | -0.3c (488) | $916.01 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 809 | 60 | 749 | 491 | -$413.48 | -8.1% | -1.5c (797) | $586.52 |
+| model-only | Elo win model alone (control: ignores the market) | 499 | 43 | 456 | 154 | -$83.99 | -1.7% | -0.3c (490) | $916.01 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 809 | 60 | 749 | 491 | -$413.48 | -8.1% | -1.5c (802) | $586.52 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1658 finished matches. Lower is better; the market line is the bar to beat.
+1659 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5823 | 0.2003 |
-| model | 0.6520 | 0.2305 |
-| blend | 0.5824 | 0.2005 |
+| market | 0.5825 | 0.2004 |
+| model | 0.6522 | 0.2306 |
+| blend | 0.5826 | 0.2006 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 1084 | 0.5934 | 0.6604 |
-| dota2 | 254 | 0.5518 | 0.6294 |
+| dota2 | 255 | 0.5530 | 0.6305 |
 | ow | 105 | 0.5083 | 0.5287 |
 | lol | 89 | 0.5778 | 0.7239 |
 | valorant | 82 | 0.6127 | 0.6718 |
@@ -39,6 +39,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-02 17:53 | model-only | cs2 | Huskies eSport | Playing Ducks | NO Playing Ducks | 91 | 0.19 | 0.27 | 0.17 | open | - |
+| 2026-11-02 17:53 | model-only | cs2 | Al Ahli | Fortress | YES Al Ahli | 2 | 0.70 | 0.77 | 0.69 | open | - |
+| 2026-11-02 17:53 | model-only | cs2 | Pandaric eSports | BLUEJAYS.de | NO BLUEJAYS.de | 10 | 0.15 | 0.37 | 0.15 | open | - |
 | 2026-11-02 16:53 | favourite | cs2 | STATE | ECSTATIC | NO ECSTATIC | 4 | 0.77 | 0.76 | 0.76 | open | - |
 | 2026-11-02 16:53 | favourite | cs2 | ILLYRIANS | Sokerorg | YES ILLYRIANS | 9 | 0.58 | 0.56 | 0.56 | open | - |
 | 2026-11-02 16:53 | favourite | cs2 | ex-ENCE | SINQU | YES ex-ENCE | 6 | 0.89 | 0.88 | 0.88 | open | - |
@@ -47,23 +50,20 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-02 16:53 | favourite | cs2 | KUUSAMO.gg | BOJONG | NO BOJONG | 8 | 0.66 | 0.64 | 0.64 | open | - |
 | 2026-11-02 16:53 | model-only | cs2 | BOJONG | KUUSAMO.gg | YES BOJONG | 47 | 0.38 | 0.51 | 0.36 | open | - |
 | 2026-11-02 15:53 | favourite | cs2 | PARTIZAN | Regnum4Games | YES PARTIZAN | 10 | 0.53 | 0.52 | 0.52 | open | - |
-| 2026-11-02 15:53 | model-only | cs2 | XI Esport | ECSTATIC | NO ECSTATIC | 14 | 0.58 | 0.66 | 0.55 | open | - |
 | 2026-11-02 15:53 | favourite | cs2 | XI Esport | ECSTATIC | NO ECSTATIC | 9 | 0.58 | 0.55 | 0.55 | open | - |
 | 2026-11-02 15:53 | favourite | cs2 | MASONIC | MASQ | NO MASQ | 7 | 0.76 | 0.73 | 0.73 | open | - |
 | 2026-11-02 15:53 | model-only | cs2 | Regnum4Games | PARTIZAN | NO PARTIZAN | 36 | 0.50 | 0.63 | 0.48 | open | - |
-| 2026-11-02 15:53 | favourite | cs2 | STATE | EAC Extra | NO EAC Extra | 7 | 0.79 | 0.78 | 0.78 | open | - |
+| 2026-11-02 15:53 | model-only | cs2 | XI Esport | ECSTATIC | NO ECSTATIC | 14 | 0.58 | 0.66 | 0.55 | open | - |
 | 2026-11-02 15:53 | model-only | cs2 | EAC Extra | STATE | YES EAC Extra | 14 | 0.24 | 0.41 | 0.23 | open | - |
 | 2026-11-02 15:53 | model-only | cs2 | Vitality Academy | Young TigeRES | YES Vitality Academy | 73 | 0.24 | 0.34 | 0.22 | open | - |
 | 2026-11-02 15:53 | favourite | cs2 | Young TigeRES | Vitality Academy | YES Young TigeRES | 3 | 0.78 | 0.78 | 0.78 | open | - |
+| 2026-11-02 15:53 | favourite | cs2 | STATE | EAC Extra | NO EAC Extra | 7 | 0.79 | 0.78 | 0.78 | open | - |
 | 2026-11-02 14:23 | favourite | cs2 | HAVU | Nordic Valor | YES HAVU | 6 | 0.87 | 0.86 | 0.86 | open | - |
-| 2026-11-02 13:53 | favourite | cs2 | Spirit Academy | Noir Verse | NO Noir Verse | 7 | 0.83 | 0.80 | 0.80 | open | - |
 | 2026-11-02 13:53 | model-only | cs2 | Misa Esports | PsychoFace | YES Misa Esports | 38 | 0.47 | 0.69 | 0.46 | lost | -$18.53 |
-| 2026-11-02 13:53 | favourite | cs2 | PsychoFace | Misa Esports | NO Misa Esports | 10 | 0.54 | 0.54 | 0.54 | won | $4.42 |
 | 2026-11-02 13:53 | favourite | cs2 | Saint Sinners | Lilmix | NO Lilmix | 7 | 0.74 | 0.72 | 0.72 | open | - |
 | 2026-11-02 13:53 | model-only | cs2 | Lilmix | Saint Sinners | YES Lilmix | 57 | 0.30 | 0.37 | 0.28 | open | - |
-| 2026-11-02 11:52 | favourite | dota2 | OG | Yellow Submarine | YES OG | 8 | 0.73 | 0.73 | 0.73 | lost | -$5.96 |
-| 2026-11-02 10:52 | favourite | dota2 | HellNight- | potn9ki | YES HellNight- | 10 | 0.56 | 0.54 | 0.54 | lost | -$5.78 |
-| 2026-11-02 10:52 | favourite | cs2 | Leo Team | Saint Sinners | NO Saint Sinners | 9 | 0.62 | 0.63 | 0.63 | won | $3.27 |
+| 2026-11-02 13:53 | favourite | cs2 | Spirit Academy | Noir Verse | NO Noir Verse | 7 | 0.83 | 0.80 | 0.80 | open | - |
+| 2026-11-02 13:53 | favourite | cs2 | PsychoFace | Misa Esports | NO Misa Esports | 10 | 0.54 | 0.54 | 0.54 | won | $4.42 |
 
 ## Backtest on real Kalshi prices
 
