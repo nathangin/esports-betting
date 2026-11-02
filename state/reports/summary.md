@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-02 05:52 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-02 06:11 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-02 05:52 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 487 | 34 | 453 | 154 | -$44.56 | -0.9% | -0.4c (480) | $955.44 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 787 | 50 | 737 | 486 | -$386.58 | -7.7% | -1.4c (778) | $613.42 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 787 | 49 | 738 | 486 | -$392.22 | -7.8% | -1.4c (778) | $607.78 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -42,7 +42,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-02 05:51 | favourite | cs2 | FURIA | FaZe | NO FaZe | 8 | 0.72 | 0.71 | 0.72 | open | - |
 | 2026-11-02 05:51 | model-only | cs2 | FaZe | FURIA | YES FaZe | 62 | 0.29 | 0.37 | 0.28 | open | - |
 | 2026-11-02 05:51 | favourite | cs2 | BetBoom Team | 9z | YES BetBoom Team | 9 | 0.65 | 0.65 | 0.65 | open | - |
-| 2026-11-02 03:21 | favourite | cs2 | Aurora Gaming | Liquid | YES Aurora Gaming | 8 | 0.69 | 0.69 | 0.69 | open | - |
+| 2026-11-02 03:21 | favourite | cs2 | Aurora Gaming | Liquid | YES Aurora Gaming | 8 | 0.69 | 0.69 | 0.69 | lost | -$5.64 |
 | 2026-11-02 03:21 | favourite | cs2 | G2 | PARIVISION | YES G2 | 10 | 0.55 | 0.55 | 0.55 | open | - |
 | 2026-11-02 00:51 | favourite | cs2 | Legacy | TheMongolz | YES Legacy | 11 | 0.51 | 0.51 | 0.51 | lost | -$5.81 |
 | 2026-11-02 00:51 | favourite | cs2 | Heroic | B8 | NO B8 | 9 | 0.62 | 0.61 | 0.61 | won | $3.27 |
