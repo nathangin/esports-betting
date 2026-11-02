@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-02 12:07 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-02 12:12 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 488 | 34 | 454 | 154 | -$63.44 | -1.3% | -0.4c (482) | $936.56 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 795 | 54 | 741 | 488 | -$392.78 | -7.8% | -1.5c (787) | $607.22 |
+| model-only | Elo win model alone (control: ignores the market) | 488 | 33 | 455 | 154 | -$65.46 | -1.3% | -0.4c (482) | $934.54 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 795 | 53 | 742 | 489 | -$392.68 | -7.8% | -1.5c (787) | $607.32 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -45,8 +45,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-02 10:52 | favourite | cs2 | Falcons Force | megoshort | YES Falcons Force | 8 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-02 08:52 | favourite | dota2 | LEGION | HULIGANI | YES LEGION | 9 | 0.60 | 0.60 | 0.60 | open | - |
 | 2026-11-02 08:22 | favourite | cs2 | Team Falcons | Natus Vincere | YES Team Falcons | 10 | 0.56 | 0.56 | 0.56 | open | - |
-| 2026-11-02 08:22 | favourite | cs2 | MOUZ | TYLOO | NO TYLOO | 1 | 0.89 | 0.90 | 0.90 | open | - |
-| 2026-11-02 08:22 | model-only | cs2 | TYLOO | MOUZ | NO MOUZ | 19 | 0.10 | 0.23 | 0.10 | open | - |
+| 2026-11-02 08:22 | favourite | cs2 | MOUZ | TYLOO | NO TYLOO | 1 | 0.89 | 0.90 | 0.90 | won | $0.10 |
+| 2026-11-02 08:22 | model-only | cs2 | TYLOO | MOUZ | NO MOUZ | 19 | 0.10 | 0.23 | 0.10 | lost | -$2.02 |
 | 2026-11-02 07:52 | favourite | cs2 | maybe | Honvéd | NO Honvéd | 9 | 0.61 | 0.59 | 0.59 | open | - |
 | 2026-11-02 05:51 | favourite | cs2 | FURIA | FaZe | NO FaZe | 8 | 0.72 | 0.71 | 0.72 | won | $2.12 |
 | 2026-11-02 05:51 | model-only | cs2 | FaZe | FURIA | YES FaZe | 62 | 0.29 | 0.37 | 0.28 | lost | -$18.88 |
