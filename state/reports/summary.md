@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-02 03:32 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-02 04:01 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-02 03:32 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 486 | 33 | 453 | 154 | -$44.56 | -0.9% | -0.4c (480) | $955.44 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 785 | 50 | 735 | 485 | -$384.04 | -7.6% | -1.4c (776) | $615.96 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 785 | 49 | 736 | 486 | -$380.77 | -7.6% | -1.4c (776) | $619.23 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -42,7 +42,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-02 03:21 | favourite | cs2 | Aurora Gaming | Liquid | YES Aurora Gaming | 8 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-11-02 03:21 | favourite | cs2 | G2 | PARIVISION | YES G2 | 10 | 0.55 | 0.55 | 0.55 | open | - |
 | 2026-11-02 00:51 | favourite | cs2 | Legacy | TheMongolz | YES Legacy | 11 | 0.51 | 0.51 | 0.51 | open | - |
-| 2026-11-02 00:51 | favourite | cs2 | Heroic | B8 | NO B8 | 9 | 0.62 | 0.61 | 0.61 | open | - |
+| 2026-11-02 00:51 | favourite | cs2 | Heroic | B8 | NO B8 | 9 | 0.62 | 0.61 | 0.61 | won | $3.27 |
 | 2026-11-01 18:50 | favourite | cs2 | DENDELE CS | Imperial | NO Imperial | 5 | 0.58 | 0.58 | 0.58 | won | $2.01 |
 | 2026-11-01 17:50 | favourite | cs2 | Metizport | WBT Academy | YES Metizport | 9 | 0.67 | 0.66 | 0.66 | lost | -$6.17 |
 | 2026-11-01 17:50 | model-only | cs2 | WBT Academy | Metizport | NO Metizport | 2 | 0.35 | 0.41 | 0.34 | won | $1.26 |
