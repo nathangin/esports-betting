@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-02 16:53 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-02 17:03 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-02 16:53 UTC. Model fitted 2026-10-26T16:12. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 496 | 41 | 455 | 154 | -$65.46 | -1.3% | -0.3c (488) | $934.54 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 809 | 62 | 747 | 490 | -$412.12 | -8.1% | -1.5c (797) | $587.88 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 809 | 61 | 748 | 490 | -$417.90 | -8.2% | -1.5c (797) | $582.10 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -62,7 +62,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-02 13:53 | favourite | cs2 | Saint Sinners | Lilmix | NO Lilmix | 7 | 0.74 | 0.72 | 0.72 | open | - |
 | 2026-11-02 13:53 | model-only | cs2 | Lilmix | Saint Sinners | YES Lilmix | 57 | 0.30 | 0.37 | 0.28 | open | - |
 | 2026-11-02 11:52 | favourite | dota2 | OG | Yellow Submarine | YES OG | 8 | 0.73 | 0.73 | 0.73 | lost | -$5.96 |
-| 2026-11-02 10:52 | favourite | dota2 | HellNight- | potn9ki | YES HellNight- | 10 | 0.56 | 0.54 | 0.54 | open | - |
+| 2026-11-02 10:52 | favourite | dota2 | HellNight- | potn9ki | YES HellNight- | 10 | 0.56 | 0.54 | 0.54 | lost | -$5.78 |
 | 2026-11-02 10:52 | favourite | cs2 | Leo Team | Saint Sinners | NO Saint Sinners | 9 | 0.62 | 0.63 | 0.63 | won | $3.27 |
 
 ## Backtest on real Kalshi prices
