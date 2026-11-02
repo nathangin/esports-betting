@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-02 19:38 UTC. Model fitted 2026-10-26T16:12. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-02 19:53 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1670 finished matches. Lower is better; the market line is the bar to beat.
+1672 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5831 | 0.2007 |
-| model | 0.6522 | 0.2306 |
-| blend | 0.5833 | 0.2010 |
+| market | 0.5827 | 0.2005 |
+| model | 0.6519 | 0.2304 |
+| blend | 0.5829 | 0.2008 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1094 | 0.5948 | 0.6607 |
+| cs2 | 1096 | 0.5941 | 0.6603 |
 | dota2 | 256 | 0.5510 | 0.6292 |
 | ow | 105 | 0.5083 | 0.5287 |
 | lol | 89 | 0.5778 | 0.7239 |
@@ -67,36 +67,36 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 ## Backtest on real Kalshi prices
 
-8779 settled matches from 2026-05-28 to 2026-10-26, decided 60 min before scheduled start at the quoted bid/ask, with Kalshi's taker fee. Ratings, the win model and the blend only ever use earlier matches (weekly walk-forward refits).
+9155 settled matches from 2026-05-28 to 2026-11-02, decided 60 min before scheduled start at the quoted bid/ask, with Kalshi's taker fee. Ratings, the win model and the blend only ever use earlier matches (weekly walk-forward refits).
 
 | Strategy | Bets | Staked | P&L | ROI | 95% range | Hit rate | Closing-line value | Max drawdown |
 |---|---:|---:|---:|---:|---|---:|---:|---:|
-| model + market blend | 24 | $444.79 | -$1.79 | -0.4% | -34.5% to +46.3% | 58% | +0.0c | 8% |
-| model only | 2012 | $8,014.92 | -$990.92 | -12.4% | -20.6% to -4.1% | 33% | -0.6c | 99% |
-| always the favourite (1% flat) | 4205 | $16,392.93 | -$775.93 | -4.7% | -7.0% to -2.5% | 67% | -1.6c | 81% |
-| always the underdog (1% flat) | 3757 | $9,447.49 | -$982.49 | -10.4% | -15.7% to -4.8% | 31% | -1.3c | 98% |
+| model + market blend | 26 | $481.86 | $33.14 | +6.9% | -29.7% to +53.7% | 62% | -0.4c | 8% |
+| model only | 2020 | $9,242.02 | -$992.02 | -10.7% | -18.4% to -3.0% | 33% | -0.7c | 99% |
+| always the favourite (1% flat) | 4414 | $17,347.39 | -$838.39 | -4.8% | -7.1% to -2.7% | 67% | -1.7c | 84% |
+| always the underdog (1% flat) | 3784 | $8,995.47 | -$985.47 | -11.0% | -16.5% to -4.9% | 31% | -1.3c | 99% |
 
 Closing-line value: the market's probability at the scheduled start of the side bought, minus the price paid, averaged over bets. Around zero means the bets saw nothing the market did not price in by the start.
 
-Forecast quality on the same 8554 matches (lower is better):
+Forecast quality on the same 8930 matches (lower is better):
 
 | Forecast | Log loss | Brier | Picks the winner |
 |---|---:|---:|---:|
-| market | 0.5736 | 0.1961 | 69.2% |
-| model | 0.6609 | 0.2344 | 59.5% |
-| blend | 0.5732 | 0.1960 | - |
+| market | 0.5749 | 0.1968 | 68.9% |
+| model | 0.6599 | 0.2340 | 59.6% |
+| blend | 0.5747 | 0.1968 | - |
 
 Is the market's favourite priced right?
 
 | Market favourite at | Matches | Average price | Won |
 |---|---:|---:|---:|
-| (0.499, 0.55] | 1402 | 0.525 | 0.529 |
-| (0.55, 0.6] | 1444 | 0.577 | 0.551 |
-| (0.6, 0.65] | 1325 | 0.626 | 0.629 |
-| (0.65, 0.7] | 1152 | 0.676 | 0.702 |
-| (0.7, 0.75] | 964 | 0.726 | 0.772 |
-| (0.75, 0.8] | 823 | 0.776 | 0.810 |
-| (0.8, 0.85] | 698 | 0.826 | 0.827 |
-| (0.85, 0.9] | 521 | 0.877 | 0.902 |
-| (0.9, 1.0] | 450 | 0.932 | 0.956 |
+| (0.499, 0.55] | 1475 | 0.525 | 0.525 |
+| (0.55, 0.6] | 1510 | 0.577 | 0.547 |
+| (0.6, 0.65] | 1371 | 0.626 | 0.628 |
+| (0.65, 0.7] | 1202 | 0.676 | 0.700 |
+| (0.7, 0.75] | 1004 | 0.726 | 0.770 |
+| (0.75, 0.8] | 855 | 0.776 | 0.807 |
+| (0.8, 0.85] | 729 | 0.826 | 0.823 |
+| (0.85, 0.9] | 536 | 0.877 | 0.903 |
+| (0.9, 1.0] | 473 | 0.932 | 0.958 |
 
