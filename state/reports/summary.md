@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-03 07:40 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-03 07:50 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 504 | 38 | 466 | 160 | -$36.50 | -0.7% | -0.3c (497) | $963.50 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 815 | 55 | 760 | 495 | -$449.08 | -8.7% | -1.5c (808) | $550.92 |
+| model-only | Elo win model alone (control: ignores the market) | 505 | 39 | 466 | 160 | -$36.50 | -0.7% | -0.3c (497) | $963.50 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 819 | 59 | 760 | 495 | -$449.08 | -8.7% | -1.5c (808) | $550.92 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-11-03 05:50 | favourite | dota2 | Direborn | Yangon Galacticos | YES Direborn | 7 | 0.69 | 0.67 | 0.67 | open | - |
+| 2026-11-03 07:50 | favourite | cs2 | Spirit Academy | Saint Sinners | NO Saint Sinners | 6 | 0.80 | 0.79 | 0.79 | open | - |
+| 2026-11-03 07:50 | favourite | cs2 | Leo Team | Noir Verse | YES Leo Team | 7 | 0.69 | 0.69 | 0.69 | open | - |
+| 2026-11-03 07:50 | favourite | cs2 | MOUZ NXT | megoshort | NO megoshort | 8 | 0.60 | 0.59 | 0.59 | open | - |
+| 2026-11-03 07:50 | model-only | cs2 | megoshort | MOUZ NXT | YES megoshort | 45 | 0.41 | 0.55 | 0.41 | open | - |
+| 2026-11-03 07:50 | favourite | cs2 | QUAZAR | Just_Players | YES QUAZAR | 9 | 0.54 | 0.51 | 0.51 | open | - |
 | 2026-11-03 05:50 | favourite | cs2 | Team Falcons | FaZe | YES Team Falcons | 7 | 0.73 | 0.73 | 0.73 | open | - |
 | 2026-11-03 05:50 | model-only | cs2 | FaZe | Team Falcons | YES FaZe | 65 | 0.27 | 0.44 | 0.27 | open | - |
+| 2026-11-03 05:50 | favourite | dota2 | Direborn | Yangon Galacticos | YES Direborn | 7 | 0.69 | 0.67 | 0.67 | open | - |
+| 2026-11-03 03:20 | favourite | cs2 | Legacy | B8 | NO B8 | 8 | 0.62 | 0.61 | 0.61 | open | - |
+| 2026-11-03 03:20 | model-only | cs2 | B8 | Legacy | NO Legacy | 45 | 0.39 | 0.53 | 0.39 | open | - |
 | 2026-11-03 03:20 | favourite | cs2 | MOUZ | BetBoom Team | NO BetBoom Team | 7 | 0.71 | 0.70 | 0.71 | open | - |
-| 2026-11-03 03:20 | model-only | cs2 | TYLOO | 9z | NO 9z | 49 | 0.36 | 0.48 | 0.35 | won | $30.56 |
 | 2026-11-03 03:20 | model-only | cs2 | BetBoom Team | MOUZ | YES BetBoom Team | 59 | 0.30 | 0.39 | 0.29 | open | - |
 | 2026-11-03 03:20 | favourite | cs2 | 9z | TYLOO | YES 9z | 8 | 0.65 | 0.65 | 0.65 | lost | -$5.33 |
-| 2026-11-03 03:20 | model-only | cs2 | B8 | Legacy | NO Legacy | 45 | 0.39 | 0.53 | 0.39 | open | - |
-| 2026-11-03 03:20 | favourite | cs2 | Legacy | B8 | NO B8 | 8 | 0.62 | 0.61 | 0.61 | open | - |
+| 2026-11-03 03:20 | model-only | cs2 | TYLOO | 9z | NO 9z | 49 | 0.36 | 0.48 | 0.35 | won | $30.56 |
 | 2026-11-03 00:50 | favourite | cs2 | Heroic | TheMongolz | YES Heroic | 10 | 0.51 | 0.51 | 0.51 | open | - |
 | 2026-11-03 00:50 | model-only | cs2 | Heroic | TheMongolz | YES Heroic | 35 | 0.51 | 0.61 | 0.51 | open | - |
-| 2026-11-02 17:53 | model-only | cs2 | Huskies eSport | Playing Ducks | NO Playing Ducks | 91 | 0.19 | 0.27 | 0.17 | lost | -$18.28 |
 | 2026-11-02 17:53 | model-only | cs2 | Al Ahli | Fortress | YES Al Ahli | 2 | 0.70 | 0.77 | 0.69 | won | $0.57 |
 | 2026-11-02 17:53 | model-only | cs2 | Pandaric eSports | BLUEJAYS.de | NO BLUEJAYS.de | 10 | 0.15 | 0.37 | 0.15 | lost | -$1.59 |
-| 2026-11-02 16:53 | favourite | cs2 | LPH Gaming | eSuba | NO eSuba | 8 | 0.65 | 0.64 | 0.64 | lost | -$5.33 |
-| 2026-11-02 16:53 | model-only | cs2 | BOJONG | KUUSAMO.gg | YES BOJONG | 47 | 0.38 | 0.51 | 0.36 | won | $28.36 |
-| 2026-11-02 16:53 | favourite | cs2 | KUUSAMO.gg | BOJONG | NO BOJONG | 8 | 0.66 | 0.64 | 0.64 | lost | -$5.41 |
-| 2026-11-02 16:53 | model-only | cs2 | eSuba | LPH Gaming | NO LPH Gaming | 11 | 0.36 | 0.48 | 0.36 | won | $6.86 |
-| 2026-11-02 16:53 | favourite | cs2 | ex-ENCE | SINQU | YES ex-ENCE | 6 | 0.89 | 0.88 | 0.88 | won | $0.61 |
-| 2026-11-02 16:53 | favourite | cs2 | ILLYRIANS | Sokerorg | YES ILLYRIANS | 9 | 0.58 | 0.56 | 0.56 | open | - |
+| 2026-11-02 17:53 | model-only | cs2 | Huskies eSport | Playing Ducks | NO Playing Ducks | 91 | 0.19 | 0.27 | 0.17 | lost | -$18.28 |
 | 2026-11-02 16:53 | favourite | cs2 | STATE | ECSTATIC | NO ECSTATIC | 4 | 0.77 | 0.76 | 0.76 | won | $0.87 |
-| 2026-11-02 15:53 | favourite | cs2 | PARTIZAN | Regnum4Games | YES PARTIZAN | 10 | 0.53 | 0.52 | 0.52 | lost | -$5.48 |
-| 2026-11-02 15:53 | model-only | cs2 | XI Esport | ECSTATIC | NO ECSTATIC | 14 | 0.58 | 0.66 | 0.55 | lost | -$8.36 |
-| 2026-11-02 15:53 | favourite | cs2 | XI Esport | ECSTATIC | NO ECSTATIC | 9 | 0.58 | 0.55 | 0.55 | lost | -$5.38 |
-| 2026-11-02 15:53 | model-only | cs2 | Regnum4Games | PARTIZAN | NO PARTIZAN | 36 | 0.50 | 0.63 | 0.48 | won | $17.37 |
+| 2026-11-02 16:53 | favourite | cs2 | ILLYRIANS | Sokerorg | YES ILLYRIANS | 9 | 0.58 | 0.56 | 0.56 | open | - |
+| 2026-11-02 16:53 | favourite | cs2 | ex-ENCE | SINQU | YES ex-ENCE | 6 | 0.89 | 0.88 | 0.88 | won | $0.61 |
+| 2026-11-02 16:53 | favourite | cs2 | LPH Gaming | eSuba | NO eSuba | 8 | 0.65 | 0.64 | 0.64 | lost | -$5.33 |
+| 2026-11-02 16:53 | model-only | cs2 | eSuba | LPH Gaming | NO LPH Gaming | 11 | 0.36 | 0.48 | 0.36 | won | $6.86 |
+| 2026-11-02 16:53 | favourite | cs2 | KUUSAMO.gg | BOJONG | NO BOJONG | 8 | 0.66 | 0.64 | 0.64 | lost | -$5.41 |
 
 ## Backtest on real Kalshi prices
 
