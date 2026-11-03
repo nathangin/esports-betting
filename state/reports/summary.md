@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-03 12:41 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-03 12:51 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 511 | 42 | 469 | 160 | -$91.99 | -1.8% | -0.3c (503) | $908.01 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 828 | 63 | 765 | 499 | -$444.61 | -8.6% | -1.5c (818) | $555.39 |
+| model-only | Elo win model alone (control: ignores the market) | 514 | 45 | 469 | 160 | -$91.99 | -1.8% | -0.3c (504) | $908.01 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 834 | 69 | 765 | 499 | -$444.61 | -8.6% | -1.5c (821) | $555.39 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-11-03 11:51 | favourite | dota2 | Xipto Esports | PuckChamp | YES Xipto Esports | 6 | 0.88 | 0.87 | 0.87 | open | - |
-| 2026-11-03 11:51 | model-only | dota2 | PuckChamp | Xipto Esports | YES PuckChamp | 98 | 0.14 | 0.20 | 0.13 | open | - |
+| 2026-11-03 12:51 | favourite | cs2 | Saint Sinners | Drama eSports | NO Drama eSports | 9 | 0.55 | 0.53 | 0.53 | open | - |
+| 2026-11-03 12:51 | model-only | cs2 | Drama eSports | Saint Sinners | YES Drama eSports | 35 | 0.50 | 0.64 | 0.47 | open | - |
+| 2026-11-03 12:51 | favourite | cs2 | Rebels Gaming | maybe | NO maybe | 6 | 0.83 | 0.83 | 0.83 | open | - |
+| 2026-11-03 12:51 | favourite | cs2 | mellren | Lilmix | NO Lilmix | 8 | 0.61 | 0.58 | 0.58 | open | - |
+| 2026-11-03 12:51 | model-only | cs2 | mellren | Lilmix | NO Lilmix | 26 | 0.61 | 0.75 | 0.58 | open | - |
+| 2026-11-03 12:51 | favourite | cs2 | BakS eSports | KUUSAMO.gg | YES BakS eSports | 6 | 0.90 | 0.90 | 0.90 | open | - |
+| 2026-11-03 12:51 | model-only | cs2 | KUUSAMO.gg | BakS eSports | NO BakS eSports | 155 | 0.11 | 0.26 | 0.10 | open | - |
+| 2026-11-03 12:51 | favourite | cs2 | WRAITH PCIFIC | Falcons Force | YES WRAITH PCIFIC | 9 | 0.57 | 0.57 | 0.57 | open | - |
+| 2026-11-03 12:51 | favourite | cs2 | Acend | Four Magic | NO Four Magic | 1 | 0.85 | 0.85 | 0.85 | open | - |
 | 2026-11-03 11:51 | favourite | dota2 | CyberHero | Nemiga Gaming | NO Nemiga Gaming | 7 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-11-03 11:51 | favourite | cs2 | Rush | MIBR fe | NO MIBR fe | 9 | 0.57 | 0.57 | 0.57 | open | - |
+| 2026-11-03 11:51 | favourite | dota2 | Xipto Esports | PuckChamp | YES Xipto Esports | 6 | 0.88 | 0.87 | 0.87 | open | - |
+| 2026-11-03 11:51 | model-only | dota2 | PuckChamp | Xipto Esports | YES PuckChamp | 98 | 0.14 | 0.20 | 0.13 | open | - |
 | 2026-11-03 10:51 | favourite | cs2 | Spirit Academy | PsychoFace | YES Spirit Academy | 9 | 0.55 | 0.54 | 0.53 | open | - |
 | 2026-11-03 10:51 | model-only | cs2 | Spirit Academy | PsychoFace | YES Spirit Academy | 32 | 0.55 | 0.77 | 0.53 | open | - |
 | 2026-11-03 10:51 | favourite | cs2 | GenOne | Lilmix | NO Lilmix | 2 | 0.79 | 0.76 | 0.76 | open | - |
-| 2026-11-03 10:20 | favourite | cs2 | Falcons Force | maybe | YES Falcons Force | 8 | 0.66 | 0.66 | 0.66 | open | - |
-| 2026-11-03 10:20 | model-only | cs2 | maybe | Falcons Force | YES maybe | 1 | 0.34 | 0.43 | 0.34 | open | - |
 | 2026-11-03 10:20 | favourite | cs2 | XI Esport | 9INE Academy | NO 9INE Academy | 7 | 0.73 | 0.72 | 0.72 | open | - |
 | 2026-11-03 10:20 | model-only | cs2 | 9INE Academy | XI Esport | YES 9INE Academy | 14 | 0.28 | 0.36 | 0.28 | open | - |
-| 2026-11-03 08:50 | favourite | dota2 | OG | LEGION | YES OG | 7 | 0.73 | 0.73 | 0.73 | open | - |
+| 2026-11-03 10:20 | favourite | cs2 | Falcons Force | maybe | YES Falcons Force | 8 | 0.66 | 0.66 | 0.66 | open | - |
+| 2026-11-03 10:20 | model-only | cs2 | maybe | Falcons Force | YES maybe | 1 | 0.34 | 0.43 | 0.34 | open | - |
 | 2026-11-03 08:50 | model-only | dota2 | LEGION | OG | YES LEGION | 20 | 0.28 | 0.49 | 0.27 | open | - |
+| 2026-11-03 08:50 | favourite | dota2 | OG | LEGION | YES OG | 7 | 0.73 | 0.73 | 0.73 | open | - |
 | 2026-11-03 08:20 | favourite | cs2 | FURIA | Natus Vincere | YES FURIA | 9 | 0.54 | 0.54 | 0.54 | open | - |
 | 2026-11-03 08:20 | model-only | cs2 | FURIA | Natus Vincere | YES FURIA | 33 | 0.54 | 0.63 | 0.54 | open | - |
-| 2026-11-03 07:50 | model-only | cs2 | megoshort | MOUZ NXT | YES megoshort | 45 | 0.41 | 0.55 | 0.41 | open | - |
-| 2026-11-03 07:50 | favourite | cs2 | QUAZAR | Just_Players | YES QUAZAR | 9 | 0.54 | 0.51 | 0.51 | won | $3.98 |
-| 2026-11-03 07:50 | favourite | cs2 | MOUZ NXT | megoshort | NO megoshort | 8 | 0.60 | 0.59 | 0.59 | open | - |
-| 2026-11-03 07:50 | favourite | cs2 | Leo Team | Noir Verse | YES Leo Team | 7 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-11-03 07:50 | favourite | cs2 | Spirit Academy | Saint Sinners | NO Saint Sinners | 6 | 0.80 | 0.79 | 0.79 | open | - |
-| 2026-11-03 05:50 | favourite | dota2 | Direborn | Yangon Galacticos | YES Direborn | 7 | 0.69 | 0.67 | 0.67 | won | $2.06 |
-| 2026-11-03 05:50 | favourite | cs2 | Team Falcons | FaZe | YES Team Falcons | 7 | 0.73 | 0.73 | 0.73 | won | $1.79 |
-| 2026-11-03 05:50 | model-only | cs2 | FaZe | Team Falcons | YES FaZe | 65 | 0.27 | 0.44 | 0.27 | lost | -$18.45 |
-| 2026-11-03 03:20 | model-only | cs2 | BetBoom Team | MOUZ | YES BetBoom Team | 59 | 0.30 | 0.39 | 0.29 | lost | -$18.57 |
-| 2026-11-03 03:20 | model-only | cs2 | TYLOO | 9z | NO 9z | 49 | 0.36 | 0.48 | 0.35 | won | $30.56 |
 
 ## Backtest on real Kalshi prices
 
