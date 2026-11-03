@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-03 18:07 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-03 18:12 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-03 18:07 UTC. Model fitted 2026-11-02T19:35. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 516 | 36 | 480 | 166 | -$104.59 | -2.0% | -0.3c (509) | $895.41 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 838 | 57 | 781 | 509 | -$458.38 | -8.7% | -1.5c (831) | $541.62 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 838 | 56 | 782 | 510 | -$456.32 | -8.7% | -1.5c (831) | $543.68 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -56,7 +56,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-03 12:51 | favourite | cs2 | Saint Sinners | Drama eSports | NO Drama eSports | 9 | 0.55 | 0.53 | 0.53 | open | - |
 | 2026-11-03 11:51 | favourite | dota2 | Xipto Esports | PuckChamp | YES Xipto Esports | 6 | 0.88 | 0.87 | 0.87 | won | $0.67 |
 | 2026-11-03 11:51 | model-only | dota2 | PuckChamp | Xipto Esports | YES PuckChamp | 98 | 0.14 | 0.20 | 0.13 | lost | -$14.55 |
-| 2026-11-03 11:51 | favourite | dota2 | CyberHero | Nemiga Gaming | NO Nemiga Gaming | 7 | 0.69 | 0.69 | 0.69 | open | - |
+| 2026-11-03 11:51 | favourite | dota2 | CyberHero | Nemiga Gaming | NO Nemiga Gaming | 7 | 0.69 | 0.69 | 0.69 | won | $2.06 |
 | 2026-11-03 11:51 | favourite | cs2 | Rush | MIBR fe | NO MIBR fe | 9 | 0.57 | 0.57 | 0.57 | open | - |
 | 2026-11-03 10:51 | model-only | cs2 | Spirit Academy | PsychoFace | YES Spirit Academy | 32 | 0.55 | 0.77 | 0.53 | lost | -$18.16 |
 | 2026-11-03 10:51 | favourite | cs2 | GenOne | Lilmix | NO Lilmix | 2 | 0.79 | 0.76 | 0.76 | won | $0.39 |
