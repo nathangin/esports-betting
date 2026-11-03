@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-03 11:06 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-03 11:21 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 510 | 41 | 469 | 160 | -$91.99 | -1.8% | -0.3c (500) | $908.01 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 825 | 61 | 764 | 498 | -$448.59 | -8.7% | -1.5c (814) | $551.41 |
+| model-only | Elo win model alone (control: ignores the market) | 510 | 41 | 469 | 160 | -$91.99 | -1.8% | -0.3c (502) | $908.01 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 825 | 60 | 765 | 499 | -$444.61 | -8.6% | -1.5c (816) | $555.39 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -54,7 +54,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-03 07:50 | favourite | cs2 | Leo Team | Noir Verse | YES Leo Team | 7 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-11-03 07:50 | favourite | cs2 | MOUZ NXT | megoshort | NO megoshort | 8 | 0.60 | 0.59 | 0.59 | open | - |
 | 2026-11-03 07:50 | model-only | cs2 | megoshort | MOUZ NXT | YES megoshort | 45 | 0.41 | 0.55 | 0.41 | open | - |
-| 2026-11-03 07:50 | favourite | cs2 | QUAZAR | Just_Players | YES QUAZAR | 9 | 0.54 | 0.51 | 0.51 | open | - |
+| 2026-11-03 07:50 | favourite | cs2 | QUAZAR | Just_Players | YES QUAZAR | 9 | 0.54 | 0.51 | 0.51 | won | $3.98 |
 | 2026-11-03 05:50 | favourite | dota2 | Direborn | Yangon Galacticos | YES Direborn | 7 | 0.69 | 0.67 | 0.67 | won | $2.06 |
 | 2026-11-03 05:50 | favourite | cs2 | Team Falcons | FaZe | YES Team Falcons | 7 | 0.73 | 0.73 | 0.73 | won | $1.79 |
 | 2026-11-03 05:50 | model-only | cs2 | FaZe | Team Falcons | YES FaZe | 65 | 0.27 | 0.44 | 0.27 | lost | -$18.45 |
