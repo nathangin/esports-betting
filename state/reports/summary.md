@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-03 09:35 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-03 09:50 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 507 | 40 | 467 | 160 | -$55.07 | -1.1% | -0.3c (499) | $944.93 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 821 | 60 | 761 | 496 | -$447.16 | -8.7% | -1.5c (813) | $552.84 |
+| model-only | Elo win model alone (control: ignores the market) | 507 | 40 | 467 | 160 | -$55.07 | -1.1% | -0.3c (500) | $944.93 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 821 | 59 | 762 | 497 | -$445.10 | -8.6% | -1.5c (814) | $554.90 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -48,7 +48,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-03 07:50 | favourite | cs2 | MOUZ NXT | megoshort | NO megoshort | 8 | 0.60 | 0.59 | 0.59 | open | - |
 | 2026-11-03 07:50 | model-only | cs2 | megoshort | MOUZ NXT | YES megoshort | 45 | 0.41 | 0.55 | 0.41 | open | - |
 | 2026-11-03 07:50 | favourite | cs2 | QUAZAR | Just_Players | YES QUAZAR | 9 | 0.54 | 0.51 | 0.51 | open | - |
-| 2026-11-03 05:50 | favourite | dota2 | Direborn | Yangon Galacticos | YES Direborn | 7 | 0.69 | 0.67 | 0.67 | open | - |
+| 2026-11-03 05:50 | favourite | dota2 | Direborn | Yangon Galacticos | YES Direborn | 7 | 0.69 | 0.67 | 0.67 | won | $2.06 |
 | 2026-11-03 05:50 | favourite | cs2 | Team Falcons | FaZe | YES Team Falcons | 7 | 0.73 | 0.73 | 0.73 | open | - |
 | 2026-11-03 05:50 | model-only | cs2 | FaZe | Team Falcons | YES FaZe | 65 | 0.27 | 0.44 | 0.27 | open | - |
 | 2026-11-03 03:20 | favourite | cs2 | MOUZ | BetBoom Team | NO BetBoom Team | 7 | 0.71 | 0.70 | 0.71 | won | $1.92 |
