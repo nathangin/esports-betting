@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-03 17:52 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-03 18:02 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 516 | 37 | 479 | 165 | -$107.00 | -2.0% | -0.3c (509) | $893.00 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 838 | 58 | 780 | 508 | -$460.79 | -8.8% | -1.5c (831) | $539.21 |
+| model-only | Elo win model alone (control: ignores the market) | 516 | 36 | 480 | 166 | -$104.59 | -2.0% | -0.3c (509) | $895.41 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 838 | 57 | 781 | 509 | -$458.38 | -8.7% | -1.5c (831) | $541.62 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -40,8 +40,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-11-03 14:21 | model-only | cs2 | BoyBand | RoundsGG | YES BoyBand | 15 | 0.57 | 0.62 | 0.56 | won | $6.19 |
-| 2026-11-03 13:51 | favourite | cs2 | Walczaki | SINQU | YES Walczaki | 6 | 0.58 | 0.58 | 0.58 | open | - |
-| 2026-11-03 13:51 | model-only | cs2 | Walczaki | SINQU | YES Walczaki | 6 | 0.58 | 0.71 | 0.58 | open | - |
+| 2026-11-03 13:51 | favourite | cs2 | Walczaki | SINQU | YES Walczaki | 6 | 0.58 | 0.58 | 0.58 | won | $2.41 |
+| 2026-11-03 13:51 | model-only | cs2 | Walczaki | SINQU | YES Walczaki | 6 | 0.58 | 0.71 | 0.58 | won | $2.41 |
 | 2026-11-03 13:51 | favourite | cs2 | Brute | Nexus | YES Brute | 9 | 0.60 | 0.59 | 0.59 | open | - |
 | 2026-11-03 13:51 | favourite | cs2 | Leo Team | ILLYRIANS | NO ILLYRIANS | 8 | 0.61 | 0.58 | 0.58 | won | $2.98 |
 | 2026-11-03 13:21 | favourite | dota2 | Daxak Team | Stray Team | YES Daxak Team | 8 | 0.67 | 0.65 | 0.65 | won | $2.51 |
