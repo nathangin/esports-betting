@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-03 14:41 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-03 14:51 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 516 | 43 | 473 | 163 | -$46.70 | -0.9% | -0.3c (507) | $953.30 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 838 | 67 | 771 | 502 | -$453.70 | -8.7% | -1.5c (828) | $546.30 |
+| model-only | Elo win model alone (control: ignores the market) | 516 | 42 | 474 | 163 | -$64.86 | -1.2% | -0.3c (508) | $935.14 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 838 | 66 | 772 | 502 | -$458.81 | -8.8% | -1.5c (831) | $541.19 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1699 finished matches. Lower is better; the market line is the bar to beat.
+1700 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5817 | 0.2001 |
-| model | 0.6511 | 0.2300 |
-| blend | 0.5819 | 0.2004 |
+| market | 0.5821 | 0.2003 |
+| model | 0.6514 | 0.2302 |
+| blend | 0.5822 | 0.2005 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1115 | 0.5941 | 0.6596 |
+| cs2 | 1116 | 0.5946 | 0.6600 |
 | dota2 | 264 | 0.5454 | 0.6268 |
 | ow | 105 | 0.5083 | 0.5287 |
 | lol | 89 | 0.5778 | 0.7239 |
@@ -58,9 +58,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-03 11:51 | model-only | dota2 | PuckChamp | Xipto Esports | YES PuckChamp | 98 | 0.14 | 0.20 | 0.13 | open | - |
 | 2026-11-03 11:51 | favourite | dota2 | CyberHero | Nemiga Gaming | NO Nemiga Gaming | 7 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-11-03 11:51 | favourite | cs2 | Rush | MIBR fe | NO MIBR fe | 9 | 0.57 | 0.57 | 0.57 | open | - |
-| 2026-11-03 10:51 | model-only | cs2 | Spirit Academy | PsychoFace | YES Spirit Academy | 32 | 0.55 | 0.77 | 0.53 | open | - |
+| 2026-11-03 10:51 | model-only | cs2 | Spirit Academy | PsychoFace | YES Spirit Academy | 32 | 0.55 | 0.77 | 0.53 | lost | -$18.16 |
 | 2026-11-03 10:51 | favourite | cs2 | GenOne | Lilmix | NO Lilmix | 2 | 0.79 | 0.76 | 0.76 | won | $0.39 |
-| 2026-11-03 10:51 | favourite | cs2 | Spirit Academy | PsychoFace | YES Spirit Academy | 9 | 0.55 | 0.54 | 0.53 | open | - |
+| 2026-11-03 10:51 | favourite | cs2 | Spirit Academy | PsychoFace | YES Spirit Academy | 9 | 0.55 | 0.54 | 0.53 | lost | -$5.11 |
 | 2026-11-03 10:20 | model-only | cs2 | 9INE Academy | XI Esport | YES 9INE Academy | 14 | 0.28 | 0.36 | 0.28 | won | $9.88 |
 | 2026-11-03 10:20 | favourite | cs2 | Falcons Force | maybe | YES Falcons Force | 8 | 0.66 | 0.66 | 0.66 | open | - |
 | 2026-11-03 10:20 | model-only | cs2 | maybe | Falcons Force | YES maybe | 1 | 0.34 | 0.43 | 0.34 | open | - |
