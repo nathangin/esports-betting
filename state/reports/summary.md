@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-03 13:21 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-03 13:41 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 514 | 45 | 469 | 160 | -$91.99 | -1.8% | -0.3c (504) | $908.01 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 835 | 69 | 766 | 500 | -$444.22 | -8.6% | -1.5c (821) | $555.78 |
+| model-only | Elo win model alone (control: ignores the market) | 514 | 44 | 470 | 160 | -$97.88 | -1.9% | -0.3c (504) | $902.12 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 835 | 68 | 767 | 501 | -$442.43 | -8.5% | -1.5c (821) | $557.57 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -60,8 +60,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-03 10:20 | favourite | cs2 | Falcons Force | maybe | YES Falcons Force | 8 | 0.66 | 0.66 | 0.66 | open | - |
 | 2026-11-03 10:20 | model-only | cs2 | maybe | Falcons Force | YES maybe | 1 | 0.34 | 0.43 | 0.34 | open | - |
 | 2026-11-03 10:20 | favourite | cs2 | XI Esport | 9INE Academy | NO 9INE Academy | 7 | 0.73 | 0.72 | 0.72 | open | - |
-| 2026-11-03 08:50 | favourite | dota2 | OG | LEGION | YES OG | 7 | 0.73 | 0.73 | 0.73 | open | - |
-| 2026-11-03 08:50 | model-only | dota2 | LEGION | OG | YES LEGION | 20 | 0.28 | 0.49 | 0.27 | open | - |
+| 2026-11-03 08:50 | favourite | dota2 | OG | LEGION | YES OG | 7 | 0.73 | 0.73 | 0.73 | won | $1.79 |
+| 2026-11-03 08:50 | model-only | dota2 | LEGION | OG | YES LEGION | 20 | 0.28 | 0.49 | 0.27 | lost | -$5.89 |
 | 2026-11-03 08:20 | favourite | cs2 | FURIA | Natus Vincere | YES FURIA | 9 | 0.54 | 0.54 | 0.54 | open | - |
 | 2026-11-03 08:20 | model-only | cs2 | FURIA | Natus Vincere | YES FURIA | 33 | 0.54 | 0.63 | 0.54 | open | - |
 
