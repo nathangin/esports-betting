@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-03 16:52 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-03 17:02 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 516 | 40 | 476 | 164 | -$82.34 | -1.6% | -0.3c (509) | $917.66 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 838 | 63 | 775 | 504 | -$463.52 | -8.9% | -1.5c (831) | $536.48 |
+| model-only | Elo win model alone (control: ignores the market) | 516 | 39 | 477 | 164 | -$96.89 | -1.8% | -0.3c (509) | $903.11 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 838 | 60 | 778 | 507 | -$457.36 | -8.7% | -1.5c (831) | $542.64 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -43,8 +43,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-03 13:51 | favourite | cs2 | Walczaki | SINQU | YES Walczaki | 6 | 0.58 | 0.58 | 0.58 | open | - |
 | 2026-11-03 13:51 | model-only | cs2 | Walczaki | SINQU | YES Walczaki | 6 | 0.58 | 0.71 | 0.58 | open | - |
 | 2026-11-03 13:51 | favourite | cs2 | Brute | Nexus | YES Brute | 9 | 0.60 | 0.59 | 0.59 | open | - |
-| 2026-11-03 13:51 | favourite | cs2 | Leo Team | ILLYRIANS | NO ILLYRIANS | 8 | 0.61 | 0.58 | 0.58 | open | - |
-| 2026-11-03 13:21 | favourite | dota2 | Daxak Team | Stray Team | YES Daxak Team | 8 | 0.67 | 0.65 | 0.65 | open | - |
+| 2026-11-03 13:51 | favourite | cs2 | Leo Team | ILLYRIANS | NO ILLYRIANS | 8 | 0.61 | 0.58 | 0.58 | won | $2.98 |
+| 2026-11-03 13:21 | favourite | dota2 | Daxak Team | Stray Team | YES Daxak Team | 8 | 0.67 | 0.65 | 0.65 | won | $2.51 |
 | 2026-11-03 12:51 | model-only | cs2 | mellren | Lilmix | NO Lilmix | 26 | 0.61 | 0.75 | 0.58 | open | - |
 | 2026-11-03 12:51 | favourite | cs2 | Acend | Four Magic | NO Four Magic | 1 | 0.85 | 0.85 | 0.85 | won | $0.14 |
 | 2026-11-03 12:51 | favourite | cs2 | WRAITH PCIFIC | Falcons Force | YES WRAITH PCIFIC | 9 | 0.57 | 0.57 | 0.57 | open | - |
@@ -54,8 +54,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-03 12:51 | favourite | cs2 | Rebels Gaming | maybe | NO maybe | 6 | 0.83 | 0.83 | 0.83 | open | - |
 | 2026-11-03 12:51 | model-only | cs2 | Drama eSports | Saint Sinners | YES Drama eSports | 35 | 0.50 | 0.64 | 0.47 | open | - |
 | 2026-11-03 12:51 | favourite | cs2 | Saint Sinners | Drama eSports | NO Drama eSports | 9 | 0.55 | 0.53 | 0.53 | open | - |
-| 2026-11-03 11:51 | favourite | dota2 | Xipto Esports | PuckChamp | YES Xipto Esports | 6 | 0.88 | 0.87 | 0.87 | open | - |
-| 2026-11-03 11:51 | model-only | dota2 | PuckChamp | Xipto Esports | YES PuckChamp | 98 | 0.14 | 0.20 | 0.13 | open | - |
+| 2026-11-03 11:51 | favourite | dota2 | Xipto Esports | PuckChamp | YES Xipto Esports | 6 | 0.88 | 0.87 | 0.87 | won | $0.67 |
+| 2026-11-03 11:51 | model-only | dota2 | PuckChamp | Xipto Esports | YES PuckChamp | 98 | 0.14 | 0.20 | 0.13 | lost | -$14.55 |
 | 2026-11-03 11:51 | favourite | dota2 | CyberHero | Nemiga Gaming | NO Nemiga Gaming | 7 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-11-03 11:51 | favourite | cs2 | Rush | MIBR fe | NO MIBR fe | 9 | 0.57 | 0.57 | 0.57 | open | - |
 | 2026-11-03 10:51 | model-only | cs2 | Spirit Academy | PsychoFace | YES Spirit Academy | 32 | 0.55 | 0.77 | 0.53 | lost | -$18.16 |
