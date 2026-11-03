@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-03 02:50 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-03 03:20 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 500 | 35 | 465 | 159 | -$67.06 | -1.3% | -0.3c (493) | $932.94 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 810 | 51 | 759 | 495 | -$443.75 | -8.6% | -1.5c (803) | $556.25 |
+| model-only | Elo win model alone (control: ignores the market) | 503 | 38 | 465 | 159 | -$67.06 | -1.3% | -0.3c (493) | $932.94 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 813 | 54 | 759 | 495 | -$443.75 | -8.6% | -1.5c (803) | $556.25 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,11 +39,17 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-03 03:20 | favourite | cs2 | Legacy | B8 | NO B8 | 8 | 0.62 | 0.61 | 0.61 | open | - |
+| 2026-11-03 03:20 | model-only | cs2 | B8 | Legacy | NO Legacy | 45 | 0.39 | 0.53 | 0.39 | open | - |
+| 2026-11-03 03:20 | favourite | cs2 | MOUZ | BetBoom Team | NO BetBoom Team | 7 | 0.71 | 0.70 | 0.71 | open | - |
+| 2026-11-03 03:20 | model-only | cs2 | BetBoom Team | MOUZ | YES BetBoom Team | 59 | 0.30 | 0.39 | 0.29 | open | - |
+| 2026-11-03 03:20 | favourite | cs2 | 9z | TYLOO | YES 9z | 8 | 0.65 | 0.65 | 0.65 | open | - |
+| 2026-11-03 03:20 | model-only | cs2 | TYLOO | 9z | NO 9z | 49 | 0.36 | 0.48 | 0.35 | open | - |
 | 2026-11-03 00:50 | favourite | cs2 | Heroic | TheMongolz | YES Heroic | 10 | 0.51 | 0.51 | 0.51 | open | - |
 | 2026-11-03 00:50 | model-only | cs2 | Heroic | TheMongolz | YES Heroic | 35 | 0.51 | 0.61 | 0.51 | open | - |
-| 2026-11-02 17:53 | model-only | cs2 | Huskies eSport | Playing Ducks | NO Playing Ducks | 91 | 0.19 | 0.27 | 0.17 | lost | -$18.28 |
 | 2026-11-02 17:53 | model-only | cs2 | Al Ahli | Fortress | YES Al Ahli | 2 | 0.70 | 0.77 | 0.69 | won | $0.57 |
 | 2026-11-02 17:53 | model-only | cs2 | Pandaric eSports | BLUEJAYS.de | NO BLUEJAYS.de | 10 | 0.15 | 0.37 | 0.15 | lost | -$1.59 |
+| 2026-11-02 17:53 | model-only | cs2 | Huskies eSport | Playing Ducks | NO Playing Ducks | 91 | 0.19 | 0.27 | 0.17 | lost | -$18.28 |
 | 2026-11-02 16:53 | favourite | cs2 | STATE | ECSTATIC | NO ECSTATIC | 4 | 0.77 | 0.76 | 0.76 | won | $0.87 |
 | 2026-11-02 16:53 | favourite | cs2 | ILLYRIANS | Sokerorg | YES ILLYRIANS | 9 | 0.58 | 0.56 | 0.56 | open | - |
 | 2026-11-02 16:53 | favourite | cs2 | ex-ENCE | SINQU | YES ex-ENCE | 6 | 0.89 | 0.88 | 0.88 | won | $0.61 |
@@ -53,17 +59,11 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-02 16:53 | model-only | cs2 | BOJONG | KUUSAMO.gg | YES BOJONG | 47 | 0.38 | 0.51 | 0.36 | won | $28.36 |
 | 2026-11-02 15:53 | favourite | cs2 | PARTIZAN | Regnum4Games | YES PARTIZAN | 10 | 0.53 | 0.52 | 0.52 | lost | -$5.48 |
 | 2026-11-02 15:53 | model-only | cs2 | XI Esport | ECSTATIC | NO ECSTATIC | 14 | 0.58 | 0.66 | 0.55 | lost | -$8.36 |
+| 2026-11-02 15:53 | favourite | cs2 | XI Esport | ECSTATIC | NO ECSTATIC | 9 | 0.58 | 0.55 | 0.55 | lost | -$5.38 |
 | 2026-11-02 15:53 | favourite | cs2 | MASONIC | MASQ | NO MASQ | 7 | 0.76 | 0.73 | 0.73 | open | - |
 | 2026-11-02 15:53 | model-only | cs2 | Regnum4Games | PARTIZAN | NO PARTIZAN | 36 | 0.50 | 0.63 | 0.48 | won | $17.37 |
-| 2026-11-02 15:53 | favourite | cs2 | XI Esport | ECSTATIC | NO ECSTATIC | 9 | 0.58 | 0.55 | 0.55 | lost | -$5.38 |
-| 2026-11-02 15:53 | model-only | cs2 | EAC Extra | STATE | YES EAC Extra | 14 | 0.24 | 0.41 | 0.23 | won | $10.46 |
 | 2026-11-02 15:53 | model-only | cs2 | Vitality Academy | Young TigeRES | YES Vitality Academy | 73 | 0.24 | 0.34 | 0.22 | lost | -$18.46 |
-| 2026-11-02 15:53 | favourite | cs2 | STATE | EAC Extra | NO EAC Extra | 7 | 0.79 | 0.78 | 0.78 | lost | -$5.62 |
-| 2026-11-02 15:53 | favourite | cs2 | Young TigeRES | Vitality Academy | YES Young TigeRES | 3 | 0.78 | 0.78 | 0.78 | won | $0.62 |
-| 2026-11-02 14:23 | favourite | cs2 | HAVU | Nordic Valor | YES HAVU | 6 | 0.87 | 0.86 | 0.86 | won | $0.73 |
-| 2026-11-02 13:53 | model-only | cs2 | Misa Esports | PsychoFace | YES Misa Esports | 38 | 0.47 | 0.69 | 0.46 | lost | -$18.53 |
-| 2026-11-02 13:53 | favourite | cs2 | Saint Sinners | Lilmix | NO Lilmix | 7 | 0.74 | 0.72 | 0.72 | open | - |
-| 2026-11-02 13:53 | model-only | cs2 | Lilmix | Saint Sinners | YES Lilmix | 57 | 0.30 | 0.37 | 0.28 | open | - |
+| 2026-11-02 15:53 | model-only | cs2 | EAC Extra | STATE | YES EAC Extra | 14 | 0.24 | 0.41 | 0.23 | won | $10.46 |
 
 ## Backtest on real Kalshi prices
 
