@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-03 15:36 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-03 15:41 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 516 | 42 | 474 | 163 | -$64.86 | -1.2% | -0.3c (509) | $935.14 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 838 | 66 | 772 | 502 | -$458.81 | -8.8% | -1.5c (831) | $541.19 |
+| model-only | Elo win model alone (control: ignores the market) | 516 | 41 | 475 | 164 | -$64.22 | -1.2% | -0.3c (509) | $935.78 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 838 | 64 | 774 | 503 | -$464.08 | -8.9% | -1.5c (831) | $535.92 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -46,7 +46,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-03 13:51 | favourite | cs2 | Leo Team | ILLYRIANS | NO ILLYRIANS | 8 | 0.61 | 0.58 | 0.58 | open | - |
 | 2026-11-03 13:21 | favourite | dota2 | Daxak Team | Stray Team | YES Daxak Team | 8 | 0.67 | 0.65 | 0.65 | open | - |
 | 2026-11-03 12:51 | model-only | cs2 | mellren | Lilmix | NO Lilmix | 26 | 0.61 | 0.75 | 0.58 | open | - |
-| 2026-11-03 12:51 | favourite | cs2 | Acend | Four Magic | NO Four Magic | 1 | 0.85 | 0.85 | 0.85 | open | - |
+| 2026-11-03 12:51 | favourite | cs2 | Acend | Four Magic | NO Four Magic | 1 | 0.85 | 0.85 | 0.85 | won | $0.14 |
 | 2026-11-03 12:51 | favourite | cs2 | WRAITH PCIFIC | Falcons Force | YES WRAITH PCIFIC | 9 | 0.57 | 0.57 | 0.57 | open | - |
 | 2026-11-03 12:51 | model-only | cs2 | KUUSAMO.gg | BakS eSports | NO BakS eSports | 155 | 0.11 | 0.26 | 0.10 | open | - |
 | 2026-11-03 12:51 | favourite | cs2 | BakS eSports | KUUSAMO.gg | YES BakS eSports | 6 | 0.90 | 0.90 | 0.90 | open | - |
@@ -62,8 +62,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-03 10:51 | favourite | cs2 | GenOne | Lilmix | NO Lilmix | 2 | 0.79 | 0.76 | 0.76 | won | $0.39 |
 | 2026-11-03 10:51 | favourite | cs2 | Spirit Academy | PsychoFace | YES Spirit Academy | 9 | 0.55 | 0.54 | 0.53 | lost | -$5.11 |
 | 2026-11-03 10:20 | model-only | cs2 | 9INE Academy | XI Esport | YES 9INE Academy | 14 | 0.28 | 0.36 | 0.28 | won | $9.88 |
-| 2026-11-03 10:20 | favourite | cs2 | Falcons Force | maybe | YES Falcons Force | 8 | 0.66 | 0.66 | 0.66 | open | - |
-| 2026-11-03 10:20 | model-only | cs2 | maybe | Falcons Force | YES maybe | 1 | 0.34 | 0.43 | 0.34 | open | - |
+| 2026-11-03 10:20 | favourite | cs2 | Falcons Force | maybe | YES Falcons Force | 8 | 0.66 | 0.66 | 0.66 | lost | -$5.41 |
+| 2026-11-03 10:20 | model-only | cs2 | maybe | Falcons Force | YES maybe | 1 | 0.34 | 0.43 | 0.34 | won | $0.64 |
 
 ## Backtest on real Kalshi prices
 
