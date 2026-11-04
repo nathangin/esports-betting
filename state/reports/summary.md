@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-04 14:15 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-04 14:20 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 527 | 42 | 485 | 169 | -$53.54 | -1.0% | -0.3c (519) | $946.46 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 862 | 66 | 796 | 518 | -$470.94 | -8.8% | -1.5c (852) | $529.06 |
+| model-only | Elo win model alone (control: ignores the market) | 528 | 43 | 485 | 169 | -$53.54 | -1.0% | -0.3c (519) | $946.46 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 863 | 67 | 796 | 518 | -$470.94 | -8.8% | -1.5c (852) | $529.06 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-04 14:20 | favourite | cs2 | HAVU | RoundsGG | YES HAVU | 6 | 0.83 | 0.82 | 0.82 | open | - |
+| 2026-11-04 14:20 | model-only | cs2 | RoundsGG | HAVU | NO HAVU | 99 | 0.18 | 0.32 | 0.18 | open | - |
 | 2026-11-04 13:50 | favourite | cs2 | Noir Verse | KUUSAMO.gg | NO KUUSAMO.gg | 8 | 0.64 | 0.64 | 0.64 | open | - |
 | 2026-11-04 13:50 | favourite | cs2 | ex-Zero Tenacity | Honvéd | YES ex-Zero Tenacity | 6 | 0.79 | 0.78 | 0.78 | open | - |
 | 2026-11-04 13:50 | model-only | cs2 | Honvéd | ex-Zero Tenacity | NO ex-Zero Tenacity | 4 | 0.22 | 0.27 | 0.22 | open | - |
 | 2026-11-04 13:24 | favourite | dota2 | iLTW TEAM | rostikfacekid TEAM | YES iLTW TEAM | 8 | 0.65 | 0.63 | 0.63 | open | - |
-| 2026-11-04 12:54 | favourite | cs2 | Saint Sinners | Drama eSports | NO Drama eSports | 9 | 0.53 | 0.51 | 0.51 | open | - |
-| 2026-11-04 12:54 | model-only | cs2 | Drama eSports | Saint Sinners | YES Drama eSports | 36 | 0.50 | 0.61 | 0.49 | open | - |
-| 2026-11-04 12:54 | favourite | cs2 | mellren | Lilmix | NO Lilmix | 6 | 0.85 | 0.83 | 0.83 | open | - |
 | 2026-11-04 12:54 | model-only | cs2 | Lilmix | mellren | NO mellren | 1 | 0.18 | 0.28 | 0.17 | open | - |
-| 2026-11-04 12:54 | favourite | cs2 | WRAITH PCIFIC | maybe | NO maybe | 7 | 0.67 | 0.67 | 0.67 | open | - |
 | 2026-11-04 12:54 | model-only | cs2 | maybe | WRAITH PCIFIC | YES maybe | 53 | 0.34 | 0.42 | 0.34 | open | - |
-| 2026-11-04 11:54 | model-only | dota2 | angry birds | Zero Tenacity | YES angry birds | 7 | 0.39 | 0.51 | 0.38 | open | - |
-| 2026-11-04 11:54 | model-only | cs2 | Damajuana | MEIA NOITE | NO MEIA NOITE | 79 | 0.21 | 0.35 | 0.21 | open | - |
-| 2026-11-04 11:54 | favourite | cs2 | MEIA NOITE | Damajuana | NO Damajuana | 6 | 0.79 | 0.79 | 0.79 | open | - |
+| 2026-11-04 12:54 | favourite | cs2 | WRAITH PCIFIC | maybe | NO maybe | 7 | 0.67 | 0.67 | 0.67 | open | - |
+| 2026-11-04 12:54 | favourite | cs2 | mellren | Lilmix | NO Lilmix | 6 | 0.85 | 0.83 | 0.83 | open | - |
+| 2026-11-04 12:54 | model-only | cs2 | Drama eSports | Saint Sinners | YES Drama eSports | 36 | 0.50 | 0.61 | 0.49 | open | - |
+| 2026-11-04 12:54 | favourite | cs2 | Saint Sinners | Drama eSports | NO Drama eSports | 9 | 0.53 | 0.51 | 0.51 | open | - |
 | 2026-11-04 11:54 | favourite | dota2 | GamerLegion | OG | YES GamerLegion | 10 | 0.51 | 0.50 | 0.50 | open | - |
 | 2026-11-04 11:54 | favourite | dota2 | Zero Tenacity | angry birds | NO angry birds | 8 | 0.64 | 0.62 | 0.62 | open | - |
-| 2026-11-04 10:54 | favourite | cs2 | ex-Zero Tenacity | PsychoFace | NO PsychoFace | 6 | 0.87 | 0.84 | 0.84 | won | $0.73 |
+| 2026-11-04 11:54 | model-only | dota2 | angry birds | Zero Tenacity | YES angry birds | 7 | 0.39 | 0.51 | 0.38 | open | - |
+| 2026-11-04 11:54 | favourite | cs2 | MEIA NOITE | Damajuana | NO Damajuana | 6 | 0.79 | 0.79 | 0.79 | open | - |
+| 2026-11-04 11:54 | model-only | cs2 | Damajuana | MEIA NOITE | NO MEIA NOITE | 79 | 0.21 | 0.35 | 0.21 | open | - |
 | 2026-11-04 10:54 | model-only | cs2 | PsychoFace | ex-Zero Tenacity | YES PsychoFace | 5 | 0.17 | 0.24 | 0.16 | lost | -$0.90 |
 | 2026-11-04 10:54 | favourite | cs2 | megoshort | Honvéd | NO Honvéd | 9 | 0.58 | 0.56 | 0.56 | lost | -$5.38 |
+| 2026-11-04 10:54 | favourite | cs2 | ex-Zero Tenacity | PsychoFace | NO PsychoFace | 6 | 0.87 | 0.84 | 0.84 | won | $0.73 |
 | 2026-11-04 10:24 | favourite | cs2 | Inner Circle Prospect | BRUTE SQ | YES Inner Circle Prospect | 9 | 0.55 | 0.52 | 0.52 | lost | -$5.11 |
 | 2026-11-04 09:54 | favourite | dota2 | Natus Vincere | Yellow Submarine | YES Natus Vincere | 7 | 0.75 | 0.75 | 0.75 | won | $1.65 |
 | 2026-11-04 08:54 | favourite | dota2 | Inner Circle | PuckChamp | YES Inner Circle | 6 | 0.84 | 0.81 | 0.81 | open | - |
-| 2026-11-04 08:24 | favourite | cs2 | Team Falcons | Natus Vincere | NO Natus Vincere | 9 | 0.54 | 0.54 | 0.54 | lost | -$5.02 |
-| 2026-11-04 08:24 | model-only | cs2 | TheMongolz | FURIA | NO FURIA | 61 | 0.27 | 0.36 | 0.27 | won | $43.68 |
 | 2026-11-04 08:24 | favourite | cs2 | FURIA | TheMongolz | YES FURIA | 7 | 0.74 | 0.73 | 0.73 | lost | -$5.28 |
-| 2026-11-04 07:53 | favourite | cs2 | Leo Team | Spirit Academy | YES Leo Team | 8 | 0.60 | 0.59 | 0.59 | lost | -$4.94 |
+| 2026-11-04 08:24 | model-only | cs2 | TheMongolz | FURIA | NO FURIA | 61 | 0.27 | 0.36 | 0.27 | won | $43.68 |
 
 ## Backtest on real Kalshi prices
 
