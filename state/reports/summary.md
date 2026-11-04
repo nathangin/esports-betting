@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-04 20:06 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-04 20:11 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 537 | 41 | 496 | 174 | -$93.46 | -1.7% | -0.3c (530) | $906.54 |
+| model-only | Elo win model alone (control: ignores the market) | 537 | 40 | 497 | 175 | -$92.76 | -1.7% | -0.3c (530) | $907.24 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 864 | 56 | 808 | 524 | -$490.09 | -9.1% | -1.5c (856) | $509.91 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -48,7 +48,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-04 14:50 | model-only | dota2 | CyberHero | HULIGANI | YES CyberHero | 45 | 0.39 | 0.54 | 0.39 | lost | -$18.30 |
 | 2026-11-04 14:50 | model-only | cs2 | Spirit Academy Green | Fire Flux Esports | YES Spirit Academy Green | 2 | 0.44 | 0.50 | 0.42 | won | $1.08 |
 | 2026-11-04 14:50 | favourite | cs2 | Fire Flux Esports | Spirit Academy Green | NO Spirit Academy Green | 7 | 0.61 | 0.58 | 0.58 | lost | -$4.39 |
-| 2026-11-04 14:50 | model-only | dota2 | Spirit Academy | Xipto Esports | NO Xipto Esports | 1 | 0.28 | 0.32 | 0.28 | open | - |
+| 2026-11-04 14:50 | model-only | dota2 | Spirit Academy | Xipto Esports | NO Xipto Esports | 1 | 0.28 | 0.32 | 0.28 | won | $0.70 |
 | 2026-11-04 14:20 | favourite | cs2 | HAVU | RoundsGG | YES HAVU | 6 | 0.83 | 0.82 | 0.82 | won | $0.96 |
 | 2026-11-04 14:20 | model-only | cs2 | RoundsGG | HAVU | NO HAVU | 99 | 0.18 | 0.32 | 0.18 | lost | -$18.85 |
 | 2026-11-04 13:50 | favourite | cs2 | Noir Verse | KUUSAMO.gg | NO KUUSAMO.gg | 8 | 0.64 | 0.64 | 0.64 | lost | -$5.25 |
