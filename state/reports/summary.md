@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-04 10:14 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-04 10:24 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-04 10:14 UTC. Model fitted 2026-11-02T19:35. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 520 | 39 | 481 | 166 | -$122.21 | -2.3% | -0.3c (513) | $877.79 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 850 | 63 | 787 | 515 | -$445.24 | -8.4% | -1.5c (841) | $554.76 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 851 | 64 | 787 | 515 | -$445.24 | -8.4% | -1.5c (841) | $554.76 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-04 10:24 | favourite | cs2 | Inner Circle Prospect | BRUTE SQ | YES Inner Circle Prospect | 9 | 0.55 | 0.52 | 0.52 | open | - |
 | 2026-11-04 09:54 | favourite | dota2 | Natus Vincere | Yellow Submarine | YES Natus Vincere | 7 | 0.75 | 0.75 | 0.75 | open | - |
 | 2026-11-04 08:54 | favourite | dota2 | Inner Circle | PuckChamp | YES Inner Circle | 6 | 0.84 | 0.81 | 0.81 | open | - |
 | 2026-11-04 08:24 | favourite | cs2 | FURIA | TheMongolz | YES FURIA | 7 | 0.74 | 0.73 | 0.73 | open | - |
@@ -56,14 +57,13 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-04 00:53 | favourite | cs2 | Team Falcons | Heroic | NO Heroic | 7 | 0.68 | 0.68 | 0.68 | won | $2.13 |
 | 2026-11-04 00:53 | model-only | cs2 | Heroic | Team Falcons | NO Team Falcons | 51 | 0.33 | 0.52 | 0.32 | lost | -$17.62 |
 | 2026-11-03 14:21 | model-only | cs2 | BoyBand | RoundsGG | YES BoyBand | 15 | 0.57 | 0.62 | 0.56 | won | $6.19 |
-| 2026-11-03 13:51 | model-only | cs2 | Walczaki | SINQU | YES Walczaki | 6 | 0.58 | 0.71 | 0.58 | won | $2.41 |
-| 2026-11-03 13:51 | favourite | cs2 | Leo Team | ILLYRIANS | NO ILLYRIANS | 8 | 0.61 | 0.58 | 0.58 | won | $2.98 |
 | 2026-11-03 13:51 | favourite | cs2 | Brute | Nexus | YES Brute | 9 | 0.60 | 0.59 | 0.59 | won | $3.44 |
+| 2026-11-03 13:51 | favourite | cs2 | Leo Team | ILLYRIANS | NO ILLYRIANS | 8 | 0.61 | 0.58 | 0.58 | won | $2.98 |
+| 2026-11-03 13:51 | model-only | cs2 | Walczaki | SINQU | YES Walczaki | 6 | 0.58 | 0.71 | 0.58 | won | $2.41 |
 | 2026-11-03 13:51 | favourite | cs2 | Walczaki | SINQU | YES Walczaki | 6 | 0.58 | 0.58 | 0.58 | won | $2.41 |
 | 2026-11-03 13:21 | favourite | dota2 | Daxak Team | Stray Team | YES Daxak Team | 8 | 0.67 | 0.65 | 0.65 | won | $2.51 |
 | 2026-11-03 12:51 | favourite | cs2 | WRAITH PCIFIC | Falcons Force | YES WRAITH PCIFIC | 9 | 0.57 | 0.57 | 0.57 | open | - |
 | 2026-11-03 12:51 | model-only | cs2 | mellren | Lilmix | NO Lilmix | 26 | 0.61 | 0.75 | 0.58 | lost | -$16.30 |
-| 2026-11-03 12:51 | favourite | cs2 | Acend | Four Magic | NO Four Magic | 1 | 0.85 | 0.85 | 0.85 | won | $0.14 |
 
 ## Backtest on real Kalshi prices
 
