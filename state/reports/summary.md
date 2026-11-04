@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-04 06:28 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-04 06:33 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 517 | 37 | 480 | 166 | -$104.59 | -2.0% | -0.3c (510) | $895.41 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 842 | 58 | 784 | 512 | -$451.09 | -8.6% | -1.5c (833) | $548.91 |
+| model-only | Elo win model alone (control: ignores the market) | 517 | 36 | 481 | 166 | -$122.21 | -2.3% | -0.3c (510) | $877.79 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 842 | 56 | 786 | 514 | -$447.83 | -8.5% | -1.5c (833) | $552.17 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1750 finished matches. Lower is better; the market line is the bar to beat.
+1752 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5823 | 0.2003 |
+| market | 0.5820 | 0.2002 |
 | model | 0.6519 | 0.2304 |
-| blend | 0.5824 | 0.2005 |
+| blend | 0.5821 | 0.2003 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1155 | 0.5956 | 0.6611 |
+| cs2 | 1157 | 0.5951 | 0.6612 |
 | dota2 | 272 | 0.5415 | 0.6244 |
 | ow | 105 | 0.5083 | 0.5287 |
 | lol | 90 | 0.5780 | 0.7232 |
@@ -40,10 +40,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-11-04 05:53 | favourite | cs2 | BetBoom Team | Liquid | YES BetBoom Team | 8 | 0.66 | 0.66 | 0.66 | open | - |
-| 2026-11-04 03:23 | favourite | cs2 | Natus Vincere | B8 | NO B8 | 6 | 0.80 | 0.80 | 0.80 | open | - |
+| 2026-11-04 03:23 | favourite | cs2 | Natus Vincere | B8 | NO B8 | 6 | 0.80 | 0.80 | 0.80 | won | $1.13 |
 | 2026-11-04 03:23 | favourite | cs2 | BetBoom Team | Aurora Gaming | YES BetBoom Team | 7 | 0.73 | 0.72 | 0.72 | won | $1.79 |
-| 2026-11-04 00:53 | favourite | cs2 | Team Falcons | Heroic | NO Heroic | 7 | 0.68 | 0.68 | 0.68 | open | - |
-| 2026-11-04 00:53 | model-only | cs2 | Heroic | Team Falcons | NO Team Falcons | 51 | 0.33 | 0.52 | 0.32 | open | - |
+| 2026-11-04 00:53 | favourite | cs2 | Team Falcons | Heroic | NO Heroic | 7 | 0.68 | 0.68 | 0.68 | won | $2.13 |
+| 2026-11-04 00:53 | model-only | cs2 | Heroic | Team Falcons | NO Team Falcons | 51 | 0.33 | 0.52 | 0.32 | lost | -$17.62 |
 | 2026-11-03 14:21 | model-only | cs2 | BoyBand | RoundsGG | YES BoyBand | 15 | 0.57 | 0.62 | 0.56 | won | $6.19 |
 | 2026-11-03 13:51 | favourite | cs2 | Leo Team | ILLYRIANS | NO ILLYRIANS | 8 | 0.61 | 0.58 | 0.58 | won | $2.98 |
 | 2026-11-03 13:51 | favourite | cs2 | Walczaki | SINQU | YES Walczaki | 6 | 0.58 | 0.58 | 0.58 | won | $2.41 |
