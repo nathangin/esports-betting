@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-04 15:35 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-04 15:50 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 531 | 45 | 486 | 169 | -$71.05 | -1.3% | -0.3c (521) | $928.95 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 864 | 66 | 798 | 520 | -$468.85 | -8.8% | -1.5c (855) | $531.15 |
+| model-only | Elo win model alone (control: ignores the market) | 533 | 47 | 486 | 169 | -$71.05 | -1.3% | -0.3c (524) | $928.95 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 864 | 66 | 798 | 520 | -$468.85 | -8.8% | -1.5c (856) | $531.15 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-04 15:50 | model-only | cs2 | Regnum4Games | BIG Academy | YES Regnum4Games | 80 | 0.22 | 0.46 | 0.22 | open | - |
+| 2026-11-04 15:50 | model-only | cs2 | Monkeys | SINNERS Legacy | NO SINNERS Legacy | 45 | 0.39 | 0.50 | 0.36 | open | - |
 | 2026-11-04 14:50 | model-only | dota2 | Spirit Academy | Xipto Esports | NO Xipto Esports | 1 | 0.28 | 0.32 | 0.28 | open | - |
 | 2026-11-04 14:50 | model-only | dota2 | CyberHero | HULIGANI | YES CyberHero | 45 | 0.39 | 0.54 | 0.39 | open | - |
 | 2026-11-04 14:50 | favourite | cs2 | Fire Flux Esports | Spirit Academy Green | NO Spirit Academy Green | 7 | 0.61 | 0.58 | 0.58 | open | - |
 | 2026-11-04 14:50 | model-only | cs2 | Spirit Academy Green | Fire Flux Esports | YES Spirit Academy Green | 2 | 0.44 | 0.50 | 0.42 | open | - |
 | 2026-11-04 14:20 | favourite | cs2 | HAVU | RoundsGG | YES HAVU | 6 | 0.83 | 0.82 | 0.82 | open | - |
 | 2026-11-04 14:20 | model-only | cs2 | RoundsGG | HAVU | NO HAVU | 99 | 0.18 | 0.32 | 0.18 | open | - |
-| 2026-11-04 13:50 | favourite | cs2 | Noir Verse | KUUSAMO.gg | NO KUUSAMO.gg | 8 | 0.64 | 0.64 | 0.64 | open | - |
-| 2026-11-04 13:50 | favourite | cs2 | ex-Zero Tenacity | Honvéd | YES ex-Zero Tenacity | 6 | 0.79 | 0.78 | 0.78 | open | - |
 | 2026-11-04 13:50 | model-only | cs2 | Honvéd | ex-Zero Tenacity | NO ex-Zero Tenacity | 4 | 0.22 | 0.27 | 0.22 | open | - |
+| 2026-11-04 13:50 | favourite | cs2 | ex-Zero Tenacity | Honvéd | YES ex-Zero Tenacity | 6 | 0.79 | 0.78 | 0.78 | open | - |
+| 2026-11-04 13:50 | favourite | cs2 | Noir Verse | KUUSAMO.gg | NO KUUSAMO.gg | 8 | 0.64 | 0.64 | 0.64 | open | - |
 | 2026-11-04 13:24 | favourite | dota2 | iLTW TEAM | rostikfacekid TEAM | YES iLTW TEAM | 8 | 0.65 | 0.63 | 0.63 | open | - |
-| 2026-11-04 12:54 | model-only | cs2 | Lilmix | mellren | NO mellren | 1 | 0.18 | 0.28 | 0.17 | open | - |
-| 2026-11-04 12:54 | model-only | cs2 | maybe | WRAITH PCIFIC | YES maybe | 53 | 0.34 | 0.42 | 0.34 | open | - |
-| 2026-11-04 12:54 | favourite | cs2 | WRAITH PCIFIC | maybe | NO maybe | 7 | 0.67 | 0.67 | 0.67 | open | - |
 | 2026-11-04 12:54 | favourite | cs2 | Saint Sinners | Drama eSports | NO Drama eSports | 9 | 0.53 | 0.51 | 0.51 | open | - |
-| 2026-11-04 12:54 | favourite | cs2 | mellren | Lilmix | NO Lilmix | 6 | 0.85 | 0.83 | 0.83 | open | - |
 | 2026-11-04 12:54 | model-only | cs2 | Drama eSports | Saint Sinners | YES Drama eSports | 36 | 0.50 | 0.61 | 0.49 | open | - |
-| 2026-11-04 11:54 | favourite | dota2 | GamerLegion | OG | YES GamerLegion | 10 | 0.51 | 0.50 | 0.50 | open | - |
-| 2026-11-04 11:54 | favourite | dota2 | Zero Tenacity | angry birds | NO angry birds | 8 | 0.64 | 0.62 | 0.62 | open | - |
-| 2026-11-04 11:54 | model-only | dota2 | angry birds | Zero Tenacity | YES angry birds | 7 | 0.39 | 0.51 | 0.38 | open | - |
+| 2026-11-04 12:54 | favourite | cs2 | mellren | Lilmix | NO Lilmix | 6 | 0.85 | 0.83 | 0.83 | open | - |
+| 2026-11-04 12:54 | model-only | cs2 | Lilmix | mellren | NO mellren | 1 | 0.18 | 0.28 | 0.17 | open | - |
+| 2026-11-04 12:54 | favourite | cs2 | WRAITH PCIFIC | maybe | NO maybe | 7 | 0.67 | 0.67 | 0.67 | open | - |
+| 2026-11-04 12:54 | model-only | cs2 | maybe | WRAITH PCIFIC | YES maybe | 53 | 0.34 | 0.42 | 0.34 | open | - |
 | 2026-11-04 11:54 | favourite | cs2 | MEIA NOITE | Damajuana | NO Damajuana | 6 | 0.79 | 0.79 | 0.79 | won | $1.19 |
 | 2026-11-04 11:54 | model-only | cs2 | Damajuana | MEIA NOITE | NO MEIA NOITE | 79 | 0.21 | 0.35 | 0.21 | lost | -$17.51 |
-| 2026-11-04 10:54 | model-only | cs2 | PsychoFace | ex-Zero Tenacity | YES PsychoFace | 5 | 0.17 | 0.24 | 0.16 | lost | -$0.90 |
-| 2026-11-04 10:54 | favourite | cs2 | megoshort | Honvéd | NO Honvéd | 9 | 0.58 | 0.56 | 0.56 | lost | -$5.38 |
+| 2026-11-04 11:54 | model-only | dota2 | angry birds | Zero Tenacity | YES angry birds | 7 | 0.39 | 0.51 | 0.38 | open | - |
+| 2026-11-04 11:54 | favourite | dota2 | Zero Tenacity | angry birds | NO angry birds | 8 | 0.64 | 0.62 | 0.62 | open | - |
+| 2026-11-04 11:54 | favourite | dota2 | GamerLegion | OG | YES GamerLegion | 10 | 0.51 | 0.50 | 0.50 | open | - |
 | 2026-11-04 10:54 | favourite | cs2 | ex-Zero Tenacity | PsychoFace | NO PsychoFace | 6 | 0.87 | 0.84 | 0.84 | won | $0.73 |
-| 2026-11-04 10:24 | favourite | cs2 | Inner Circle Prospect | BRUTE SQ | YES Inner Circle Prospect | 9 | 0.55 | 0.52 | 0.52 | lost | -$5.11 |
+| 2026-11-04 10:54 | model-only | cs2 | PsychoFace | ex-Zero Tenacity | YES PsychoFace | 5 | 0.17 | 0.24 | 0.16 | lost | -$0.90 |
 
 ## Backtest on real Kalshi prices
 
