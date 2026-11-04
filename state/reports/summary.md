@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-04 16:05 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-04 16:35 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 533 | 46 | 487 | 169 | -$71.25 | -1.3% | -0.3c (524) | $928.75 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 864 | 65 | 799 | 521 | -$468.01 | -8.8% | -1.5c (856) | $531.99 |
+| model-only | Elo win model alone (control: ignores the market) | 533 | 45 | 488 | 170 | -$67.10 | -1.2% | -0.3c (524) | $932.90 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 864 | 64 | 800 | 521 | -$473.26 | -8.8% | -1.5c (856) | $526.74 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -59,8 +59,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-04 12:54 | model-only | cs2 | maybe | WRAITH PCIFIC | YES maybe | 53 | 0.34 | 0.42 | 0.34 | open | - |
 | 2026-11-04 11:54 | favourite | cs2 | MEIA NOITE | Damajuana | NO Damajuana | 6 | 0.79 | 0.79 | 0.79 | won | $1.19 |
 | 2026-11-04 11:54 | model-only | cs2 | Damajuana | MEIA NOITE | NO MEIA NOITE | 79 | 0.21 | 0.35 | 0.21 | lost | -$17.51 |
-| 2026-11-04 11:54 | model-only | dota2 | angry birds | Zero Tenacity | YES angry birds | 7 | 0.39 | 0.51 | 0.38 | open | - |
-| 2026-11-04 11:54 | favourite | dota2 | Zero Tenacity | angry birds | NO angry birds | 8 | 0.64 | 0.62 | 0.62 | open | - |
+| 2026-11-04 11:54 | model-only | dota2 | angry birds | Zero Tenacity | YES angry birds | 7 | 0.39 | 0.51 | 0.38 | won | $4.15 |
+| 2026-11-04 11:54 | favourite | dota2 | Zero Tenacity | angry birds | NO angry birds | 8 | 0.64 | 0.62 | 0.62 | lost | -$5.25 |
 | 2026-11-04 11:54 | favourite | dota2 | GamerLegion | OG | YES GamerLegion | 10 | 0.51 | 0.50 | 0.50 | open | - |
 | 2026-11-04 10:54 | favourite | cs2 | ex-Zero Tenacity | PsychoFace | NO PsychoFace | 6 | 0.87 | 0.84 | 0.84 | won | $0.73 |
 | 2026-11-04 10:54 | model-only | cs2 | PsychoFace | ex-Zero Tenacity | YES PsychoFace | 5 | 0.17 | 0.24 | 0.16 | lost | -$0.90 |
