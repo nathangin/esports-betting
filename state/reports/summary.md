@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-04 17:05 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-04 17:15 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 536 | 47 | 489 | 171 | -$66.02 | -1.2% | -0.3c (526) | $933.98 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 864 | 62 | 802 | 522 | -$472.93 | -8.8% | -1.5c (856) | $527.07 |
+| model-only | Elo win model alone (control: ignores the market) | 536 | 45 | 491 | 172 | -$67.51 | -1.2% | -0.3c (526) | $932.49 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 864 | 60 | 804 | 523 | -$475.66 | -8.9% | -1.5c (856) | $524.34 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1779 finished matches. Lower is better; the market line is the bar to beat.
+1782 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
 | market | 0.5836 | 0.2009 |
-| model | 0.6517 | 0.2303 |
-| blend | 0.5838 | 0.2012 |
+| model | 0.6515 | 0.2302 |
+| blend | 0.5838 | 0.2011 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1174 | 0.5960 | 0.6608 |
+| cs2 | 1177 | 0.5960 | 0.6605 |
 | dota2 | 280 | 0.5468 | 0.6245 |
 | ow | 107 | 0.5130 | 0.5318 |
 | lol | 90 | 0.5780 | 0.7232 |
@@ -55,11 +55,11 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-04 13:50 | model-only | cs2 | Honvéd | ex-Zero Tenacity | NO ex-Zero Tenacity | 4 | 0.22 | 0.27 | 0.22 | open | - |
 | 2026-11-04 13:24 | favourite | dota2 | iLTW TEAM | rostikfacekid TEAM | YES iLTW TEAM | 8 | 0.65 | 0.63 | 0.63 | open | - |
 | 2026-11-04 12:54 | favourite | cs2 | mellren | Lilmix | NO Lilmix | 6 | 0.85 | 0.83 | 0.83 | won | $0.84 |
-| 2026-11-04 12:54 | favourite | cs2 | WRAITH PCIFIC | maybe | NO maybe | 7 | 0.67 | 0.67 | 0.67 | open | - |
+| 2026-11-04 12:54 | favourite | cs2 | WRAITH PCIFIC | maybe | NO maybe | 7 | 0.67 | 0.67 | 0.67 | won | $2.20 |
 | 2026-11-04 12:54 | model-only | cs2 | Lilmix | mellren | NO mellren | 1 | 0.18 | 0.28 | 0.17 | lost | -$0.20 |
-| 2026-11-04 12:54 | model-only | cs2 | maybe | WRAITH PCIFIC | YES maybe | 53 | 0.34 | 0.42 | 0.34 | open | - |
-| 2026-11-04 12:54 | model-only | cs2 | Drama eSports | Saint Sinners | YES Drama eSports | 36 | 0.50 | 0.61 | 0.49 | open | - |
-| 2026-11-04 12:54 | favourite | cs2 | Saint Sinners | Drama eSports | NO Drama eSports | 9 | 0.53 | 0.51 | 0.51 | open | - |
+| 2026-11-04 12:54 | model-only | cs2 | maybe | WRAITH PCIFIC | YES maybe | 53 | 0.34 | 0.42 | 0.34 | lost | -$18.86 |
+| 2026-11-04 12:54 | model-only | cs2 | Drama eSports | Saint Sinners | YES Drama eSports | 36 | 0.50 | 0.61 | 0.49 | won | $17.37 |
+| 2026-11-04 12:54 | favourite | cs2 | Saint Sinners | Drama eSports | NO Drama eSports | 9 | 0.53 | 0.51 | 0.51 | lost | -$4.93 |
 | 2026-11-04 11:54 | favourite | dota2 | GamerLegion | OG | YES GamerLegion | 10 | 0.51 | 0.50 | 0.50 | won | $4.72 |
 | 2026-11-04 11:54 | favourite | dota2 | Zero Tenacity | angry birds | NO angry birds | 8 | 0.64 | 0.62 | 0.62 | lost | -$5.25 |
 | 2026-11-04 11:54 | model-only | dota2 | angry birds | Zero Tenacity | YES angry birds | 7 | 0.39 | 0.51 | 0.38 | won | $4.15 |
