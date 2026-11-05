@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-05 16:43 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-05 16:54 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 547 | 44 | 503 | 179 | -$5.66 | -0.1% | -0.3c (538) | $994.34 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 888 | 74 | 814 | 529 | -$480.87 | -8.9% | -1.5c (874) | $519.13 |
+| model-only | Elo win model alone (control: ignores the market) | 553 | 49 | 504 | 179 | -$25.58 | -0.5% | -0.3c (539) | $974.42 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 895 | 80 | 815 | 530 | -$478.67 | -8.8% | -1.5c (879) | $521.33 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1826 finished matches. Lower is better; the market line is the bar to beat.
+1828 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5842 | 0.2012 |
-| model | 0.6508 | 0.2299 |
-| blend | 0.5845 | 0.2015 |
+| market | 0.5841 | 0.2012 |
+| model | 0.6509 | 0.2299 |
+| blend | 0.5844 | 0.2015 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1205 | 0.5968 | 0.6597 |
+| cs2 | 1207 | 0.5966 | 0.6598 |
 | dota2 | 289 | 0.5506 | 0.6276 |
 | ow | 111 | 0.5147 | 0.5254 |
 | lol | 91 | 0.5726 | 0.7204 |
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-05 16:53 | model-only | cs2 | Spirit HU | Phantom Academy | NO Phantom Academy | 115 | 0.16 | 0.35 | 0.15 | open | - |
+| 2026-11-05 16:53 | favourite | cs2 | Johnny Speeds | Drama eSports | NO Drama eSports | 7 | 0.66 | 0.65 | 0.65 | open | - |
+| 2026-11-05 16:53 | model-only | cs2 | The Chosen Few | BANGARANGA | NO BANGARANGA | 54 | 0.34 | 0.46 | 0.33 | open | - |
+| 2026-11-05 16:53 | favourite | cs2 | BANGARANGA | The Chosen Few | NO The Chosen Few | 7 | 0.67 | 0.67 | 0.67 | open | - |
+| 2026-11-05 16:53 | model-only | cs2 | Nordic Valor | BoyBand | NO BoyBand | 16 | 0.30 | 0.46 | 0.30 | open | - |
+| 2026-11-05 16:53 | favourite | cs2 | BoyBand | Nordic Valor | YES BoyBand | 7 | 0.71 | 0.70 | 0.70 | open | - |
+| 2026-11-05 16:53 | model-only | cs2 | Drama eSports | Johnny Speeds | YES Drama eSports | 51 | 0.36 | 0.55 | 0.35 | open | - |
+| 2026-11-05 16:53 | favourite | cs2 | Brute | GenOne | YES Brute | 1 | 0.67 | 0.66 | 0.66 | open | - |
+| 2026-11-05 16:53 | favourite | cs2 | IMAPROBLEM | Glitchtech Esports | NO Glitchtech Esports | 8 | 0.58 | 0.55 | 0.55 | open | - |
+| 2026-11-05 16:53 | model-only | cs2 | maybe | KUUSAMO.gg | NO KUUSAMO.gg | 30 | 0.62 | 0.68 | 0.61 | open | - |
+| 2026-11-05 16:53 | favourite | cs2 | maybe | KUUSAMO.gg | NO KUUSAMO.gg | 8 | 0.62 | 0.61 | 0.61 | open | - |
+| 2026-11-05 16:53 | model-only | cs2 | megoshort | Butterfly | NO Butterfly | 87 | 0.21 | 0.41 | 0.20 | open | - |
+| 2026-11-05 16:53 | favourite | cs2 | Butterfly | megoshort | YES Butterfly | 5 | 0.81 | 0.80 | 0.80 | open | - |
 | 2026-11-05 16:23 | favourite | cs2 | Al Ahli | SINQU | NO SINQU | 8 | 0.63 | 0.63 | 0.63 | open | - |
 | 2026-11-05 16:23 | model-only | cs2 | Al Ahli | SINQU | NO SINQU | 25 | 0.63 | 0.76 | 0.63 | open | - |
-| 2026-11-05 15:53 | favourite | cs2 | Vitality Academy | Growth Lab Esports | YES Vitality Academy | 8 | 0.62 | 0.59 | 0.59 | open | - |
-| 2026-11-05 15:53 | favourite | cs2 | UNiTY esports | Monkeys | NO Monkeys | 5 | 0.86 | 0.85 | 0.85 | open | - |
 | 2026-11-05 15:53 | model-only | cs2 | Monkeys | UNiTY esports | YES Monkeys | 14 | 0.15 | 0.31 | 0.14 | open | - |
-| 2026-11-05 15:53 | favourite | cs2 | PARTIZAN | PENSIONERS | YES PARTIZAN | 6 | 0.58 | 0.54 | 0.54 | open | - |
 | 2026-11-05 15:53 | favourite | cs2 | IMAPROBLEM | Hermine Esports Club | NO Hermine Esports Club | 8 | 0.56 | 0.52 | 0.52 | open | - |
+| 2026-11-05 15:53 | favourite | cs2 | PARTIZAN | PENSIONERS | YES PARTIZAN | 6 | 0.58 | 0.54 | 0.54 | open | - |
 | 2026-11-05 15:53 | favourite | cs2 | 99firepower 1utility | GamersLab Esports | YES 99firepower 1utility | 7 | 0.66 | 0.65 | 0.65 | open | - |
+| 2026-11-05 15:53 | favourite | cs2 | UNiTY esports | Monkeys | NO Monkeys | 5 | 0.86 | 0.85 | 0.85 | open | - |
+| 2026-11-05 15:53 | favourite | cs2 | Vitality Academy | Growth Lab Esports | YES Vitality Academy | 8 | 0.62 | 0.59 | 0.59 | open | - |
 | 2026-11-05 15:23 | favourite | cs2 | Revise | wnT | YES Revise | 5 | 0.51 | 0.50 | 0.50 | open | - |
 | 2026-11-05 15:23 | model-only | cs2 | Revise | wnT | YES Revise | 5 | 0.51 | 0.58 | 0.50 | open | - |
 | 2026-11-05 14:53 | favourite | dota2 | Xipto Esports | Zero Tenacity | YES Xipto Esports | 9 | 0.54 | 0.53 | 0.53 | open | - |
 | 2026-11-05 14:53 | favourite | cs2 | JUMBO TEAM | RoundsGG | YES JUMBO TEAM | 7 | 0.65 | 0.62 | 0.62 | open | - |
-| 2026-11-05 14:23 | favourite | cs2 | Prestige | KUUSAMO.gg | YES Prestige | 6 | 0.76 | 0.76 | 0.76 | open | - |
-| 2026-11-05 14:23 | model-only | cs2 | KUUSAMO.gg | Prestige | NO Prestige | 77 | 0.25 | 0.33 | 0.24 | open | - |
-| 2026-11-05 13:53 | favourite | cs2 | BASEMENT BOYS | Misa Esports | YES BASEMENT BOYS | 7 | 0.67 | 0.67 | 0.67 | open | - |
-| 2026-11-05 13:53 | model-only | cs2 | Misa Esports | BASEMENT BOYS | NO BASEMENT BOYS | 56 | 0.34 | 0.49 | 0.33 | open | - |
-| 2026-11-05 13:53 | favourite | cs2 | ILLYRIANS | Honvéd | NO Honvéd | 7 | 0.68 | 0.67 | 0.67 | open | - |
-| 2026-11-05 13:53 | model-only | cs2 | Honvéd | ILLYRIANS | YES Honvéd | 12 | 0.33 | 0.45 | 0.33 | open | - |
-| 2026-11-05 13:53 | favourite | cs2 | FORZE Reload | G2 Ares | YES FORZE Reload | 6 | 0.75 | 0.74 | 0.74 | open | - |
-| 2026-11-05 12:53 | favourite | cs2 | Rebels Gaming | mellren | YES Rebels Gaming | 8 | 0.58 | 0.55 | 0.55 | won | $3.22 |
-| 2026-11-05 11:53 | favourite | dota2 | GamerLegion | Yellow Submarine | YES GamerLegion | 6 | 0.72 | 0.71 | 0.71 | open | - |
-| 2026-11-05 11:53 | model-only | dota2 | Time to Sleep | Team Lynx | NO Team Lynx | 106 | 0.17 | 0.31 | 0.17 | lost | -$19.07 |
-| 2026-11-05 11:53 | favourite | dota2 | Team Lynx | Time to Sleep | YES Team Lynx | 2 | 0.84 | 0.83 | 0.83 | won | $0.30 |
-| 2026-11-05 10:52 | favourite | cs2 | Fire Flux Esports | ILLYRIANS | YES Fire Flux Esports | 8 | 0.58 | 0.56 | 0.56 | won | $3.22 |
-| 2026-11-05 10:22 | favourite | cs2 | ex-ENCE | Noir Verse | NO Noir Verse | 5 | 0.63 | 0.59 | 0.59 | open | - |
 
 ## Backtest on real Kalshi prices
 
