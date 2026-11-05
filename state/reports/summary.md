@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-05 19:09 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-05 19:14 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 556 | 48 | 508 | 181 | -$55.13 | -1.0% | -0.3c (549) | $944.87 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 897 | 70 | 827 | 540 | -$466.34 | -8.5% | -1.6c (888) | $533.66 |
+| model-only | Elo win model alone (control: ignores the market) | 556 | 47 | 509 | 182 | -$20.34 | -0.4% | -0.3c (549) | $979.66 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 897 | 69 | 828 | 540 | -$471.14 | -8.6% | -1.6c (888) | $528.86 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1846 finished matches. Lower is better; the market line is the bar to beat.
+1848 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5841 | 0.2011 |
-| model | 0.6505 | 0.2297 |
-| blend | 0.5844 | 0.2014 |
+| market | 0.5844 | 0.2013 |
+| model | 0.6506 | 0.2298 |
+| blend | 0.5847 | 0.2016 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1222 | 0.5965 | 0.6589 |
+| cs2 | 1224 | 0.5969 | 0.6590 |
 | dota2 | 292 | 0.5507 | 0.6292 |
 | ow | 111 | 0.5147 | 0.5254 |
 | lol | 91 | 0.5726 | 0.7204 |
@@ -45,8 +45,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-05 17:23 | favourite | cs2 | Gremio Esports | QUINTESSENCIA | NO QUINTESSENCIA | 1 | 0.51 | 0.51 | 0.51 | open | - |
 | 2026-11-05 17:23 | model-only | cs2 | QUINTESSENCIA | Gremio Esports | NO Gremio Esports | 22 | 0.50 | 0.64 | 0.49 | open | - |
 | 2026-11-05 16:53 | favourite | cs2 | Johnny Speeds | Drama eSports | NO Drama eSports | 7 | 0.66 | 0.65 | 0.65 | open | - |
-| 2026-11-05 16:53 | model-only | cs2 | The Chosen Few | BANGARANGA | NO BANGARANGA | 54 | 0.34 | 0.46 | 0.33 | open | - |
-| 2026-11-05 16:53 | favourite | cs2 | BANGARANGA | The Chosen Few | NO The Chosen Few | 7 | 0.67 | 0.67 | 0.67 | open | - |
+| 2026-11-05 16:53 | model-only | cs2 | The Chosen Few | BANGARANGA | NO BANGARANGA | 54 | 0.34 | 0.46 | 0.33 | won | $34.79 |
+| 2026-11-05 16:53 | favourite | cs2 | BANGARANGA | The Chosen Few | NO The Chosen Few | 7 | 0.67 | 0.67 | 0.67 | lost | -$4.80 |
 | 2026-11-05 16:53 | model-only | cs2 | Nordic Valor | BoyBand | NO BoyBand | 16 | 0.30 | 0.46 | 0.30 | open | - |
 | 2026-11-05 16:53 | favourite | cs2 | BoyBand | Nordic Valor | YES BoyBand | 7 | 0.71 | 0.70 | 0.70 | open | - |
 | 2026-11-05 16:53 | favourite | cs2 | Brute | GenOne | YES Brute | 1 | 0.67 | 0.66 | 0.66 | won | $0.31 |
