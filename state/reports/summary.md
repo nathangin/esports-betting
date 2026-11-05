@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-05 12:08 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-05 12:13 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 541 | 41 | 500 | 178 | -$37.67 | -0.7% | -0.3c (533) | $962.33 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 874 | 65 | 809 | 525 | -$486.71 | -9.0% | -1.5c (864) | $513.29 |
+| model-only | Elo win model alone (control: ignores the market) | 541 | 39 | 502 | 179 | $13.41 | +0.2% | -0.3c (533) | $1,013.41 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 874 | 63 | 811 | 526 | -$487.61 | -9.0% | -1.5c (864) | $512.39 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -44,11 +44,11 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-05 11:53 | favourite | dota2 | GamerLegion | Yellow Submarine | YES GamerLegion | 6 | 0.72 | 0.71 | 0.71 | open | - |
 | 2026-11-05 10:52 | favourite | cs2 | Fire Flux Esports | ILLYRIANS | YES Fire Flux Esports | 8 | 0.58 | 0.56 | 0.56 | open | - |
 | 2026-11-05 10:22 | favourite | cs2 | ex-ENCE | Noir Verse | NO Noir Verse | 5 | 0.63 | 0.59 | 0.59 | open | - |
-| 2026-11-05 07:52 | favourite | cs2 | GenOne | maybe | NO maybe | 2 | 0.76 | 0.76 | 0.76 | open | - |
-| 2026-11-05 07:52 | model-only | cs2 | Honvéd | BakS eSports | NO BakS eSports | 17 | 0.15 | 0.39 | 0.15 | open | - |
-| 2026-11-05 07:52 | favourite | cs2 | BakS eSports | Honvéd | YES BakS eSports | 5 | 0.86 | 0.85 | 0.85 | open | - |
+| 2026-11-05 07:52 | favourite | cs2 | GenOne | maybe | NO maybe | 2 | 0.76 | 0.76 | 0.76 | lost | -$1.55 |
+| 2026-11-05 07:52 | model-only | cs2 | Honvéd | BakS eSports | NO BakS eSports | 17 | 0.15 | 0.39 | 0.15 | lost | -$2.71 |
+| 2026-11-05 07:52 | favourite | cs2 | BakS eSports | Honvéd | YES BakS eSports | 5 | 0.86 | 0.85 | 0.85 | won | $0.65 |
 | 2026-11-05 07:52 | favourite | cs2 | Walczaki | HyperSpirit | NO HyperSpirit | 8 | 0.55 | 0.54 | 0.54 | open | - |
-| 2026-11-05 07:52 | model-only | cs2 | maybe | GenOne | NO GenOne | 73 | 0.25 | 0.48 | 0.24 | open | - |
+| 2026-11-05 07:52 | model-only | cs2 | maybe | GenOne | NO GenOne | 73 | 0.25 | 0.48 | 0.24 | won | $53.79 |
 | 2026-11-05 07:52 | favourite | cs2 | megoshort | Bebop | NO Bebop | 9 | 0.54 | 0.53 | 0.53 | open | - |
 | 2026-11-05 07:52 | model-only | cs2 | QUAZAR | FOKUS | YES QUAZAR | 63 | 0.29 | 0.47 | 0.29 | open | - |
 | 2026-11-05 07:52 | favourite | cs2 | FOKUS | QUAZAR | NO QUAZAR | 4 | 0.72 | 0.71 | 0.71 | open | - |
