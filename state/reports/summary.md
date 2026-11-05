@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-05 17:24 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-05 17:34 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 554 | 49 | 505 | 179 | -$45.85 | -0.8% | -0.2c (540) | $954.15 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 896 | 80 | 816 | 531 | -$477.31 | -8.8% | -1.5c (880) | $522.69 |
+| model-only | Elo win model alone (control: ignores the market) | 554 | 48 | 506 | 180 | -$43.49 | -0.8% | -0.2c (540) | $956.51 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 896 | 79 | 817 | 532 | -$474.95 | -8.8% | -1.5c (880) | $525.05 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1829 finished matches. Lower is better; the market line is the bar to beat.
+1830 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5839 | 0.2011 |
+| market | 0.5840 | 0.2011 |
 | model | 0.6507 | 0.2298 |
-| blend | 0.5842 | 0.2014 |
+| blend | 0.5843 | 0.2014 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1208 | 0.5963 | 0.6596 |
+| cs2 | 1209 | 0.5964 | 0.6595 |
 | dota2 | 289 | 0.5506 | 0.6276 |
 | ow | 111 | 0.5147 | 0.5254 |
 | lol | 91 | 0.5726 | 0.7204 |
@@ -62,8 +62,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-05 15:53 | favourite | cs2 | IMAPROBLEM | Hermine Esports Club | NO Hermine Esports Club | 8 | 0.56 | 0.52 | 0.52 | open | - |
 | 2026-11-05 15:53 | favourite | cs2 | UNiTY esports | Monkeys | NO Monkeys | 5 | 0.86 | 0.85 | 0.85 | open | - |
 | 2026-11-05 15:53 | favourite | cs2 | Vitality Academy | Growth Lab Esports | YES Vitality Academy | 8 | 0.62 | 0.59 | 0.59 | open | - |
-| 2026-11-05 15:23 | favourite | cs2 | Revise | wnT | YES Revise | 5 | 0.51 | 0.50 | 0.50 | open | - |
-| 2026-11-05 15:23 | model-only | cs2 | Revise | wnT | YES Revise | 5 | 0.51 | 0.58 | 0.50 | open | - |
+| 2026-11-05 15:23 | favourite | cs2 | Revise | wnT | YES Revise | 5 | 0.51 | 0.50 | 0.50 | won | $2.36 |
+| 2026-11-05 15:23 | model-only | cs2 | Revise | wnT | YES Revise | 5 | 0.51 | 0.58 | 0.50 | won | $2.36 |
 
 ## Backtest on real Kalshi prices
 
