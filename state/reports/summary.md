@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-05 12:38 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-05 12:53 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 541 | 39 | 502 | 179 | $13.41 | +0.2% | -0.3c (533) | $1,013.41 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 874 | 63 | 811 | 526 | -$487.61 | -9.0% | -1.5c (864) | $512.39 |
+| model-only | Elo win model alone (control: ignores the market) | 541 | 39 | 502 | 179 | $13.41 | +0.2% | -0.3c (534) | $1,013.41 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 875 | 64 | 811 | 526 | -$487.61 | -9.0% | -1.5c (866) | $512.39 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-05 12:53 | favourite | cs2 | Rebels Gaming | mellren | YES Rebels Gaming | 8 | 0.58 | 0.55 | 0.55 | open | - |
 | 2026-11-05 11:53 | favourite | dota2 | Team Lynx | Time to Sleep | YES Team Lynx | 2 | 0.84 | 0.83 | 0.83 | open | - |
 | 2026-11-05 11:53 | model-only | dota2 | Time to Sleep | Team Lynx | NO Team Lynx | 106 | 0.17 | 0.31 | 0.17 | open | - |
 | 2026-11-05 11:53 | favourite | dota2 | GamerLegion | Yellow Submarine | YES GamerLegion | 6 | 0.72 | 0.71 | 0.71 | open | - |
@@ -59,11 +60,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-04 16:50 | model-only | cs2 | BOJONG | SINQU | YES BOJONG | 45 | 0.39 | 0.60 | 0.38 | won | $26.70 |
 | 2026-11-04 15:50 | model-only | cs2 | Regnum4Games | BIG Academy | YES Regnum4Games | 80 | 0.22 | 0.46 | 0.22 | lost | -$18.57 |
 | 2026-11-04 15:50 | model-only | cs2 | Monkeys | SINNERS Legacy | NO SINNERS Legacy | 45 | 0.39 | 0.50 | 0.36 | won | $26.70 |
+| 2026-11-04 14:50 | model-only | dota2 | CyberHero | HULIGANI | YES CyberHero | 45 | 0.39 | 0.54 | 0.39 | lost | -$18.30 |
 | 2026-11-04 14:50 | favourite | cs2 | Fire Flux Esports | Spirit Academy Green | NO Spirit Academy Green | 7 | 0.61 | 0.58 | 0.58 | lost | -$4.39 |
 | 2026-11-04 14:50 | model-only | cs2 | Spirit Academy Green | Fire Flux Esports | YES Spirit Academy Green | 2 | 0.44 | 0.50 | 0.42 | won | $1.08 |
 | 2026-11-04 14:50 | model-only | dota2 | Spirit Academy | Xipto Esports | NO Xipto Esports | 1 | 0.28 | 0.32 | 0.28 | won | $0.70 |
-| 2026-11-04 14:50 | model-only | dota2 | CyberHero | HULIGANI | YES CyberHero | 45 | 0.39 | 0.54 | 0.39 | lost | -$18.30 |
-| 2026-11-04 14:20 | favourite | cs2 | HAVU | RoundsGG | YES HAVU | 6 | 0.83 | 0.82 | 0.82 | won | $0.96 |
 
 ## Backtest on real Kalshi prices
 
