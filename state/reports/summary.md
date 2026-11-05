@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-05 10:07 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-05 10:22 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-05 10:07 UTC. Model fitted 2026-11-02T19:35. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 540 | 40 | 500 | 178 | -$37.67 | -0.7% | -0.3c (533) | $962.33 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 870 | 62 | 808 | 524 | -$490.09 | -9.1% | -1.5c (862) | $509.91 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 871 | 63 | 808 | 524 | -$490.09 | -9.1% | -1.5c (862) | $509.91 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,15 +39,16 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-11-05 07:52 | favourite | cs2 | STATE | NAVI Junior | YES STATE | 8 | 0.56 | 0.55 | 0.55 | open | - |
-| 2026-11-05 07:52 | model-only | cs2 | Honvéd | BakS eSports | NO BakS eSports | 17 | 0.15 | 0.39 | 0.15 | open | - |
-| 2026-11-05 07:52 | favourite | cs2 | FOKUS | QUAZAR | NO QUAZAR | 4 | 0.72 | 0.71 | 0.71 | open | - |
-| 2026-11-05 07:52 | model-only | cs2 | QUAZAR | FOKUS | YES QUAZAR | 63 | 0.29 | 0.47 | 0.29 | open | - |
-| 2026-11-05 07:52 | favourite | cs2 | megoshort | Bebop | NO Bebop | 9 | 0.54 | 0.53 | 0.53 | open | - |
+| 2026-11-05 10:22 | favourite | cs2 | ex-ENCE | Noir Verse | NO Noir Verse | 5 | 0.63 | 0.59 | 0.59 | open | - |
 | 2026-11-05 07:52 | favourite | cs2 | GenOne | maybe | NO maybe | 2 | 0.76 | 0.76 | 0.76 | open | - |
-| 2026-11-05 07:52 | model-only | cs2 | maybe | GenOne | NO GenOne | 73 | 0.25 | 0.48 | 0.24 | open | - |
-| 2026-11-05 07:52 | favourite | cs2 | Walczaki | HyperSpirit | NO HyperSpirit | 8 | 0.55 | 0.54 | 0.54 | open | - |
 | 2026-11-05 07:52 | favourite | cs2 | BakS eSports | Honvéd | YES BakS eSports | 5 | 0.86 | 0.85 | 0.85 | open | - |
+| 2026-11-05 07:52 | favourite | cs2 | Walczaki | HyperSpirit | NO HyperSpirit | 8 | 0.55 | 0.54 | 0.54 | open | - |
+| 2026-11-05 07:52 | model-only | cs2 | maybe | GenOne | NO GenOne | 73 | 0.25 | 0.48 | 0.24 | open | - |
+| 2026-11-05 07:52 | model-only | cs2 | Honvéd | BakS eSports | NO BakS eSports | 17 | 0.15 | 0.39 | 0.15 | open | - |
+| 2026-11-05 07:52 | favourite | cs2 | megoshort | Bebop | NO Bebop | 9 | 0.54 | 0.53 | 0.53 | open | - |
+| 2026-11-05 07:52 | model-only | cs2 | QUAZAR | FOKUS | YES QUAZAR | 63 | 0.29 | 0.47 | 0.29 | open | - |
+| 2026-11-05 07:52 | favourite | cs2 | FOKUS | QUAZAR | NO QUAZAR | 4 | 0.72 | 0.71 | 0.71 | open | - |
+| 2026-11-05 07:52 | favourite | cs2 | STATE | NAVI Junior | YES STATE | 8 | 0.56 | 0.55 | 0.55 | open | - |
 | 2026-11-04 18:20 | model-only | cs2 | Al Ahli | NoTime | YES Al Ahli | 8 | 0.58 | 0.63 | 0.55 | open | - |
 | 2026-11-04 16:50 | model-only | cs2 | maybe | Prestige | YES maybe | 21 | 0.38 | 0.49 | 0.38 | won | $12.67 |
 | 2026-11-04 16:50 | model-only | cs2 | INOX Division | Johnny Speeds | YES INOX Division | 34 | 0.52 | 0.62 | 0.50 | won | $15.72 |
@@ -63,7 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-04 13:50 | favourite | cs2 | ex-Zero Tenacity | Honvéd | YES ex-Zero Tenacity | 6 | 0.79 | 0.78 | 0.78 | lost | -$4.81 |
 | 2026-11-04 13:50 | model-only | cs2 | Honvéd | ex-Zero Tenacity | NO ex-Zero Tenacity | 4 | 0.22 | 0.27 | 0.22 | won | $3.07 |
 | 2026-11-04 13:50 | favourite | cs2 | Noir Verse | KUUSAMO.gg | NO KUUSAMO.gg | 8 | 0.64 | 0.64 | 0.64 | lost | -$5.25 |
-| 2026-11-04 13:24 | favourite | dota2 | iLTW TEAM | rostikfacekid TEAM | YES iLTW TEAM | 8 | 0.65 | 0.63 | 0.63 | lost | -$5.33 |
 
 ## Backtest on real Kalshi prices
 
