@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-05 15:38 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-05 15:43 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 545 | 43 | 502 | 179 | $13.41 | +0.2% | -0.3c (537) | $1,013.41 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 882 | 70 | 812 | 527 | -$484.39 | -9.0% | -1.5c (871) | $515.61 |
+| model-only | Elo win model alone (control: ignores the market) | 545 | 42 | 503 | 179 | -$5.66 | -0.1% | -0.3c (537) | $994.34 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 882 | 69 | 813 | 528 | -$484.09 | -9.0% | -1.5c (871) | $515.91 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -51,8 +51,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-05 13:53 | model-only | cs2 | Misa Esports | BASEMENT BOYS | NO BASEMENT BOYS | 56 | 0.34 | 0.49 | 0.33 | open | - |
 | 2026-11-05 13:53 | favourite | cs2 | BASEMENT BOYS | Misa Esports | YES BASEMENT BOYS | 7 | 0.67 | 0.67 | 0.67 | open | - |
 | 2026-11-05 12:53 | favourite | cs2 | Rebels Gaming | mellren | YES Rebels Gaming | 8 | 0.58 | 0.55 | 0.55 | open | - |
-| 2026-11-05 11:53 | favourite | dota2 | Team Lynx | Time to Sleep | YES Team Lynx | 2 | 0.84 | 0.83 | 0.83 | open | - |
-| 2026-11-05 11:53 | model-only | dota2 | Time to Sleep | Team Lynx | NO Team Lynx | 106 | 0.17 | 0.31 | 0.17 | open | - |
+| 2026-11-05 11:53 | favourite | dota2 | Team Lynx | Time to Sleep | YES Team Lynx | 2 | 0.84 | 0.83 | 0.83 | won | $0.30 |
+| 2026-11-05 11:53 | model-only | dota2 | Time to Sleep | Team Lynx | NO Team Lynx | 106 | 0.17 | 0.31 | 0.17 | lost | -$19.07 |
 | 2026-11-05 11:53 | favourite | dota2 | GamerLegion | Yellow Submarine | YES GamerLegion | 6 | 0.72 | 0.71 | 0.71 | open | - |
 | 2026-11-05 10:52 | favourite | cs2 | Fire Flux Esports | ILLYRIANS | YES Fire Flux Esports | 8 | 0.58 | 0.56 | 0.56 | won | $3.22 |
 | 2026-11-05 10:22 | favourite | cs2 | ex-ENCE | Noir Verse | NO Noir Verse | 5 | 0.63 | 0.59 | 0.59 | open | - |
