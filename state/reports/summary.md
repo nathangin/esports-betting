@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-05 17:09 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-05 17:24 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 553 | 48 | 505 | 179 | -$45.85 | -0.8% | -0.3c (539) | $954.15 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 895 | 79 | 816 | 531 | -$477.31 | -8.8% | -1.6c (879) | $522.69 |
+| model-only | Elo win model alone (control: ignores the market) | 554 | 49 | 505 | 179 | -$45.85 | -0.8% | -0.2c (540) | $954.15 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 896 | 80 | 816 | 531 | -$477.31 | -8.8% | -1.5c (880) | $522.69 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-11-05 16:53 | model-only | cs2 | Spirit HU | Phantom Academy | NO Phantom Academy | 115 | 0.16 | 0.35 | 0.15 | open | - |
+| 2026-11-05 17:23 | favourite | cs2 | Gremio Esports | QUINTESSENCIA | NO QUINTESSENCIA | 1 | 0.51 | 0.51 | 0.51 | open | - |
+| 2026-11-05 17:23 | model-only | cs2 | QUINTESSENCIA | Gremio Esports | NO Gremio Esports | 22 | 0.50 | 0.64 | 0.49 | open | - |
 | 2026-11-05 16:53 | favourite | cs2 | Johnny Speeds | Drama eSports | NO Drama eSports | 7 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-05 16:53 | model-only | cs2 | The Chosen Few | BANGARANGA | NO BANGARANGA | 54 | 0.34 | 0.46 | 0.33 | open | - |
 | 2026-11-05 16:53 | favourite | cs2 | BANGARANGA | The Chosen Few | NO The Chosen Few | 7 | 0.67 | 0.67 | 0.67 | open | - |
 | 2026-11-05 16:53 | model-only | cs2 | Nordic Valor | BoyBand | NO BoyBand | 16 | 0.30 | 0.46 | 0.30 | open | - |
 | 2026-11-05 16:53 | favourite | cs2 | BoyBand | Nordic Valor | YES BoyBand | 7 | 0.71 | 0.70 | 0.70 | open | - |
-| 2026-11-05 16:53 | model-only | cs2 | Drama eSports | Johnny Speeds | YES Drama eSports | 51 | 0.36 | 0.55 | 0.35 | open | - |
 | 2026-11-05 16:53 | favourite | cs2 | Brute | GenOne | YES Brute | 1 | 0.67 | 0.66 | 0.66 | open | - |
+| 2026-11-05 16:53 | model-only | cs2 | Drama eSports | Johnny Speeds | YES Drama eSports | 51 | 0.36 | 0.55 | 0.35 | open | - |
 | 2026-11-05 16:53 | favourite | cs2 | IMAPROBLEM | Glitchtech Esports | NO Glitchtech Esports | 8 | 0.58 | 0.55 | 0.55 | open | - |
 | 2026-11-05 16:53 | model-only | cs2 | maybe | KUUSAMO.gg | NO KUUSAMO.gg | 30 | 0.62 | 0.68 | 0.61 | open | - |
 | 2026-11-05 16:53 | favourite | cs2 | maybe | KUUSAMO.gg | NO KUUSAMO.gg | 8 | 0.62 | 0.61 | 0.61 | open | - |
 | 2026-11-05 16:53 | model-only | cs2 | megoshort | Butterfly | NO Butterfly | 87 | 0.21 | 0.41 | 0.20 | open | - |
 | 2026-11-05 16:53 | favourite | cs2 | Butterfly | megoshort | YES Butterfly | 5 | 0.81 | 0.80 | 0.80 | open | - |
+| 2026-11-05 16:53 | model-only | cs2 | Spirit HU | Phantom Academy | NO Phantom Academy | 115 | 0.16 | 0.35 | 0.15 | open | - |
 | 2026-11-05 16:23 | favourite | cs2 | Al Ahli | SINQU | NO SINQU | 8 | 0.63 | 0.63 | 0.63 | open | - |
 | 2026-11-05 16:23 | model-only | cs2 | Al Ahli | SINQU | NO SINQU | 25 | 0.63 | 0.76 | 0.63 | open | - |
 | 2026-11-05 15:53 | model-only | cs2 | Monkeys | UNiTY esports | YES Monkeys | 14 | 0.15 | 0.31 | 0.14 | open | - |
-| 2026-11-05 15:53 | favourite | cs2 | IMAPROBLEM | Hermine Esports Club | NO Hermine Esports Club | 8 | 0.56 | 0.52 | 0.52 | open | - |
-| 2026-11-05 15:53 | favourite | cs2 | PARTIZAN | PENSIONERS | YES PARTIZAN | 6 | 0.58 | 0.54 | 0.54 | open | - |
 | 2026-11-05 15:53 | favourite | cs2 | 99firepower 1utility | GamersLab Esports | YES 99firepower 1utility | 7 | 0.66 | 0.65 | 0.65 | open | - |
+| 2026-11-05 15:53 | favourite | cs2 | PARTIZAN | PENSIONERS | YES PARTIZAN | 6 | 0.58 | 0.54 | 0.54 | open | - |
+| 2026-11-05 15:53 | favourite | cs2 | IMAPROBLEM | Hermine Esports Club | NO Hermine Esports Club | 8 | 0.56 | 0.52 | 0.52 | open | - |
 | 2026-11-05 15:53 | favourite | cs2 | UNiTY esports | Monkeys | NO Monkeys | 5 | 0.86 | 0.85 | 0.85 | open | - |
 | 2026-11-05 15:53 | favourite | cs2 | Vitality Academy | Growth Lab Esports | YES Vitality Academy | 8 | 0.62 | 0.59 | 0.59 | open | - |
 | 2026-11-05 15:23 | favourite | cs2 | Revise | wnT | YES Revise | 5 | 0.51 | 0.50 | 0.50 | open | - |
 | 2026-11-05 15:23 | model-only | cs2 | Revise | wnT | YES Revise | 5 | 0.51 | 0.58 | 0.50 | open | - |
-| 2026-11-05 14:53 | favourite | dota2 | Xipto Esports | Zero Tenacity | YES Xipto Esports | 9 | 0.54 | 0.53 | 0.53 | open | - |
-| 2026-11-05 14:53 | favourite | cs2 | JUMBO TEAM | RoundsGG | YES JUMBO TEAM | 7 | 0.65 | 0.62 | 0.62 | open | - |
 
 ## Backtest on real Kalshi prices
 
