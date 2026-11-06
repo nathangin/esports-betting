@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-06 07:36 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-06 07:51 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 559 | 42 | 517 | 184 | -$64.29 | -1.1% | -0.3c (552) | $935.71 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 905 | 68 | 837 | 548 | -$462.17 | -8.4% | -1.6c (896) | $537.83 |
+| model-only | Elo win model alone (control: ignores the market) | 564 | 47 | 517 | 184 | -$64.29 | -1.1% | -0.3c (552) | $935.71 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 911 | 74 | 837 | 548 | -$462.17 | -8.4% | -1.6c (897) | $537.83 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,17 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-06 07:51 | favourite | cs2 | G2 Ares | The Last Resort | NO The Last Resort | 8 | 0.59 | 0.59 | 0.59 | open | - |
+| 2026-11-06 07:51 | favourite | cs2 | BakS eSports | Fire Flux Esports | YES BakS eSports | 8 | 0.60 | 0.59 | 0.59 | open | - |
+| 2026-11-06 07:51 | model-only | cs2 | Four Magic | SAW Youngsters | YES Four Magic | 55 | 0.32 | 0.56 | 0.32 | open | - |
+| 2026-11-06 07:51 | model-only | cs2 | Bad Beavers | The Chosen Few | NO The Chosen Few | 21 | 0.42 | 0.55 | 0.42 | open | - |
+| 2026-11-06 07:51 | favourite | cs2 | The Chosen Few | Bad Beavers | NO Bad Beavers | 9 | 0.58 | 0.58 | 0.58 | open | - |
+| 2026-11-06 07:51 | model-only | cs2 | Fire Flux Esports | BakS eSports | NO BakS eSports | 43 | 0.41 | 0.47 | 0.41 | open | - |
+| 2026-11-06 07:51 | favourite | cs2 | SAW Youngsters | Four Magic | NO Four Magic | 7 | 0.69 | 0.69 | 0.69 | open | - |
+| 2026-11-06 07:51 | model-only | cs2 | NAVI Junior | FORZE Reload | NO FORZE Reload | 63 | 0.28 | 0.41 | 0.28 | open | - |
+| 2026-11-06 07:51 | favourite | cs2 | FORZE Reload | NAVI Junior | YES FORZE Reload | 7 | 0.73 | 0.72 | 0.72 | open | - |
+| 2026-11-06 07:51 | favourite | cs2 | QUAZAR | Revise | YES QUAZAR | 6 | 0.78 | 0.77 | 0.77 | open | - |
+| 2026-11-06 07:51 | model-only | cs2 | The Last Resort | G2 Ares | NO G2 Ares | 42 | 0.41 | 0.47 | 0.41 | open | - |
 | 2026-11-06 06:50 | favourite | valorant | Hoc Vien 96 | God Chosen | YES Hoc Vien 96 | 6 | 0.63 | 0.59 | 0.59 | open | - |
 | 2026-11-06 06:20 | favourite | r6 | Weibo Gaming | Virtus.pro | YES Weibo Gaming | 10 | 0.52 | 0.51 | 0.51 | open | - |
 | 2026-11-06 05:50 | favourite | dota2 | Royal Bear | Direborn | NO Direborn | 7 | 0.75 | 0.74 | 0.74 | open | - |
@@ -53,17 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-05 18:23 | favourite | cs2 | Inner Circle Prospect | aimers | NO aimers | 1 | 0.61 | 0.59 | 0.59 | won | $0.37 |
 | 2026-11-05 17:53 | model-only | cs2 | Damajuana | RED Canids Academy | YES Damajuana | 1 | 0.16 | 0.21 | 0.15 | lost | -$0.17 |
 | 2026-11-05 17:53 | model-only | cs2 | Regnum4Games | Privateer Gaming | YES Regnum4Games | 5 | 0.49 | 0.59 | 0.48 | won | $2.46 |
-| 2026-11-05 17:23 | favourite | cs2 | Gremio Esports | QUINTESSENCIA | NO QUINTESSENCIA | 1 | 0.51 | 0.51 | 0.51 | won | $0.47 |
-| 2026-11-05 17:23 | model-only | cs2 | QUINTESSENCIA | Gremio Esports | NO Gremio Esports | 22 | 0.50 | 0.64 | 0.49 | lost | -$11.39 |
-| 2026-11-05 16:53 | model-only | cs2 | Drama eSports | Johnny Speeds | YES Drama eSports | 51 | 0.36 | 0.55 | 0.35 | lost | -$19.19 |
-| 2026-11-05 16:53 | model-only | cs2 | The Chosen Few | BANGARANGA | NO BANGARANGA | 54 | 0.34 | 0.46 | 0.33 | won | $34.79 |
-| 2026-11-05 16:53 | favourite | cs2 | BANGARANGA | The Chosen Few | NO The Chosen Few | 7 | 0.67 | 0.67 | 0.67 | lost | -$4.80 |
-| 2026-11-05 16:53 | model-only | cs2 | Nordic Valor | BoyBand | NO BoyBand | 16 | 0.30 | 0.46 | 0.30 | lost | -$5.04 |
-| 2026-11-05 16:53 | favourite | cs2 | BoyBand | Nordic Valor | YES BoyBand | 7 | 0.71 | 0.70 | 0.70 | won | $1.92 |
-| 2026-11-05 16:53 | favourite | cs2 | Brute | GenOne | YES Brute | 1 | 0.67 | 0.66 | 0.66 | won | $0.31 |
-| 2026-11-05 16:53 | favourite | cs2 | Johnny Speeds | Drama eSports | NO Drama eSports | 7 | 0.66 | 0.65 | 0.65 | won | $2.27 |
-| 2026-11-05 16:53 | model-only | cs2 | maybe | KUUSAMO.gg | NO KUUSAMO.gg | 30 | 0.62 | 0.68 | 0.61 | won | $10.90 |
-| 2026-11-05 16:53 | favourite | cs2 | maybe | KUUSAMO.gg | NO KUUSAMO.gg | 8 | 0.62 | 0.61 | 0.61 | won | $2.90 |
 
 ## Backtest on real Kalshi prices
 
