@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-06 15:42 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-06 15:47 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 576 | 47 | 529 | 188 | -$109.29 | -1.9% | -0.3c (569) | $890.71 |
+| model-only | Elo win model alone (control: ignores the market) | 576 | 46 | 530 | 188 | -$117.19 | -2.0% | -0.3c (569) | $882.81 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 929 | 75 | 854 | 562 | -$446.30 | -8.0% | -1.6c (921) | $553.70 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -16,13 +16,13 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1892 finished matches. Lower is better; the market line is the bar to beat.
+1893 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5836 | 0.2009 |
+| market | 0.5835 | 0.2008 |
 | model | 0.6509 | 0.2299 |
-| blend | 0.5837 | 0.2011 |
+| blend | 0.5836 | 0.2011 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
@@ -31,7 +31,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | ow | 113 | 0.5122 | 0.5244 |
 | lol | 92 | 0.5722 | 0.7188 |
 | valorant | 84 | 0.6125 | 0.6723 |
-| r6 | 49 | 0.6060 | 0.6898 |
+| r6 | 50 | 0.6024 | 0.6878 |
 
 ## Latest bets
 
