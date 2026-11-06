@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-06 16:07 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-06 16:22 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-06 16:07 UTC. Model fitted 2026-11-02T19:35. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 576 | 46 | 530 | 188 | -$117.19 | -2.0% | -0.3c (569) | $882.81 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 930 | 73 | 857 | 564 | -$448.54 | -8.0% | -1.6c (921) | $551.46 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 930 | 72 | 858 | 565 | -$448.28 | -8.0% | -1.6c (921) | $551.72 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -44,7 +44,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-06 11:51 | favourite | dota2 | PlayTime | Zenith | YES PlayTime | 5 | 0.84 | 0.82 | 0.82 | open | - |
 | 2026-11-06 11:51 | model-only | dota2 | Zenith | PlayTime | NO PlayTime | 23 | 0.20 | 0.43 | 0.18 | open | - |
 | 2026-11-06 11:51 | favourite | dota2 | Power Rangers | potn9ki | YES Power Rangers | 1 | 0.75 | 0.71 | 0.71 | open | - |
-| 2026-11-06 11:51 | favourite | dota2 | angry birds | PuckChamp | YES angry birds | 2 | 0.86 | 0.85 | 0.85 | open | - |
+| 2026-11-06 11:51 | favourite | dota2 | angry birds | PuckChamp | YES angry birds | 2 | 0.86 | 0.85 | 0.85 | won | $0.26 |
 | 2026-11-06 11:51 | favourite | dota2 | Froglings | Nemiga Gaming | YES Froglings | 7 | 0.68 | 0.67 | 0.67 | open | - |
 | 2026-11-06 11:51 | model-only | dota2 | Nemiga Gaming | Froglings | YES Nemiga Gaming | 7 | 0.34 | 0.45 | 0.33 | open | - |
 | 2026-11-06 11:51 | favourite | cs2 | Isurus | Zetta Games | YES Isurus | 5 | 0.89 | 0.88 | 0.88 | won | $0.51 |
