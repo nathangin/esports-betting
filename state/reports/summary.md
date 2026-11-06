@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-06 05:50 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-06 06:20 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 559 | 42 | 517 | 184 | -$64.29 | -1.1% | -0.3c (550) | $935.71 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 903 | 66 | 837 | 548 | -$462.17 | -8.4% | -1.6c (893) | $537.83 |
+| model-only | Elo win model alone (control: ignores the market) | 559 | 42 | 517 | 184 | -$64.29 | -1.1% | -0.3c (551) | $935.71 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 904 | 67 | 837 | 548 | -$462.17 | -8.4% | -1.6c (894) | $537.83 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-06 06:20 | favourite | r6 | Weibo Gaming | Virtus.pro | YES Weibo Gaming | 10 | 0.52 | 0.51 | 0.51 | open | - |
 | 2026-11-06 05:50 | favourite | dota2 | Royal Bear | Direborn | NO Direborn | 7 | 0.75 | 0.74 | 0.74 | open | - |
 | 2026-11-06 05:50 | model-only | dota2 | Direborn | Royal Bear | YES Direborn | 24 | 0.27 | 0.37 | 0.26 | open | - |
 | 2026-11-06 05:20 | favourite | cs2 | Natus Vincere | PARIVISION | YES Natus Vincere | 7 | 0.71 | 0.71 | 0.71 | open | - |
@@ -63,7 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-05 16:53 | model-only | cs2 | maybe | KUUSAMO.gg | NO KUUSAMO.gg | 30 | 0.62 | 0.68 | 0.61 | won | $10.90 |
 | 2026-11-05 16:53 | favourite | cs2 | maybe | KUUSAMO.gg | NO KUUSAMO.gg | 8 | 0.62 | 0.61 | 0.61 | won | $2.90 |
 | 2026-11-05 16:53 | model-only | cs2 | megoshort | Butterfly | NO Butterfly | 87 | 0.21 | 0.41 | 0.20 | lost | -$19.29 |
-| 2026-11-05 16:53 | favourite | cs2 | Butterfly | megoshort | YES Butterfly | 5 | 0.81 | 0.80 | 0.80 | won | $0.89 |
 
 ## Backtest on real Kalshi prices
 
