@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-06 11:51 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-06 12:01 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 576 | 55 | 521 | 186 | -$71.80 | -1.2% | -0.3c (567) | $928.20 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 928 | 86 | 842 | 551 | -$465.72 | -8.4% | -1.6c (915) | $534.28 |
+| model-only | Elo win model alone (control: ignores the market) | 576 | 54 | 522 | 186 | -$90.24 | -1.6% | -0.3c (567) | $909.76 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 928 | 85 | 843 | 552 | -$463.66 | -8.4% | -1.6c (915) | $536.34 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1876 finished matches. Lower is better; the market line is the bar to beat.
+1877 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5845 | 0.2013 |
-| model | 0.6516 | 0.2303 |
-| blend | 0.5847 | 0.2015 |
+| market | 0.5846 | 0.2014 |
+| model | 0.6516 | 0.2302 |
+| blend | 0.5848 | 0.2016 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1246 | 0.5960 | 0.6598 |
+| cs2 | 1247 | 0.5962 | 0.6598 |
 | dota2 | 295 | 0.5546 | 0.6315 |
 | ow | 111 | 0.5147 | 0.5254 |
 | lol | 92 | 0.5722 | 0.7188 |
