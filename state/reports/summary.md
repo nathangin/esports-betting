@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-06 10:31 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-06 10:51 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 570 | 52 | 518 | 184 | -$82.86 | -1.4% | -0.3c (562) | $917.14 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 919 | 80 | 839 | 550 | -$458.13 | -8.3% | -1.6c (909) | $541.87 |
+| model-only | Elo win model alone (control: ignores the market) | 574 | 55 | 519 | 184 | -$100.80 | -1.7% | -0.3c (562) | $899.20 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 923 | 83 | 840 | 551 | -$454.99 | -8.3% | -1.6c (909) | $545.01 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,13 +16,13 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1873 finished matches. Lower is better; the market line is the bar to beat.
+1874 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
 | market | 0.5841 | 0.2011 |
-| model | 0.6514 | 0.2302 |
-| blend | 0.5843 | 0.2014 |
+| model | 0.6515 | 0.2302 |
+| blend | 0.5842 | 0.2014 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
@@ -30,7 +30,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | dota2 | 294 | 0.5518 | 0.6303 |
 | ow | 111 | 0.5147 | 0.5254 |
 | lol | 92 | 0.5722 | 0.7188 |
-| valorant | 82 | 0.6127 | 0.6718 |
+| valorant | 83 | 0.6117 | 0.6720 |
 | r6 | 49 | 0.6060 | 0.6898 |
 
 ## Latest bets
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
-| 2026-11-06 10:21 | favourite | cs2 | Copenhagen Wolves | Passion Academy | YES Copenhagen Wolves | 7 | 0.74 | 0.73 | 0.73 | open | - |
-| 2026-11-06 10:21 | favourite | cs2 | MOUZ NXT | Sokerorg | YES MOUZ NXT | 8 | 0.59 | 0.58 | 0.58 | open | - |
+| 2026-11-06 10:51 | favourite | dota2 | Xipto Esports | oveA | NO oveA | 2 | 0.84 | 0.83 | 0.83 | open | - |
+| 2026-11-06 10:51 | model-only | dota2 | oveA | Xipto Esports | YES oveA | 1 | 0.19 | 0.28 | 0.17 | open | - |
+| 2026-11-06 10:51 | favourite | cs2 | Sokerorg | MASONIC | NO MASONIC | 9 | 0.58 | 0.57 | 0.57 | open | - |
+| 2026-11-06 10:51 | model-only | cs2 | MASONIC | Sokerorg | NO Sokerorg | 16 | 0.43 | 0.49 | 0.42 | open | - |
+| 2026-11-06 10:51 | favourite | cs2 | GenOne | megoshort | NO megoshort | 7 | 0.74 | 0.74 | 0.74 | open | - |
+| 2026-11-06 10:51 | model-only | cs2 | megoshort | GenOne | NO GenOne | 13 | 0.27 | 0.44 | 0.26 | open | - |
+| 2026-11-06 10:51 | favourite | cs2 | ILLYRIANS | Honvéd | NO Honvéd | 8 | 0.61 | 0.60 | 0.60 | open | - |
+| 2026-11-06 10:51 | model-only | cs2 | Honvéd | ILLYRIANS | YES Honvéd | 42 | 0.41 | 0.53 | 0.40 | open | - |
 | 2026-11-06 10:21 | model-only | cs2 | Sokerorg | MOUZ NXT | NO MOUZ NXT | 9 | 0.43 | 0.58 | 0.42 | open | - |
-| 2026-11-06 08:51 | model-only | dota2 | Team Synapse | PlayTime | NO PlayTime | 38 | 0.47 | 0.70 | 0.45 | open | - |
-| 2026-11-06 08:51 | model-only | dota2 | angry birds | Nemiga Gaming | YES angry birds | 29 | 0.61 | 0.70 | 0.59 | open | - |
-| 2026-11-06 08:51 | favourite | dota2 | angry birds | Nemiga Gaming | YES angry birds | 8 | 0.61 | 0.59 | 0.59 | open | - |
-| 2026-11-06 08:51 | model-only | dota2 | Xipto Esports | Froglings | YES Xipto Esports | 5 | 0.36 | 0.57 | 0.35 | open | - |
-| 2026-11-06 08:51 | favourite | dota2 | Froglings | Xipto Esports | YES Froglings | 7 | 0.66 | 0.65 | 0.65 | open | - |
-| 2026-11-06 08:51 | favourite | dota2 | PlayTime | Team Synapse | YES PlayTime | 9 | 0.56 | 0.55 | 0.55 | open | - |
-| 2026-11-06 08:51 | model-only | dota2 | Zenith | potn9ki | NO potn9ki | 54 | 0.33 | 0.40 | 0.31 | open | - |
-| 2026-11-06 08:51 | favourite | dota2 | potn9ki | Zenith | YES potn9ki | 7 | 0.70 | 0.69 | 0.69 | open | - |
+| 2026-11-06 10:21 | favourite | cs2 | MOUZ NXT | Sokerorg | YES MOUZ NXT | 8 | 0.59 | 0.58 | 0.58 | open | - |
+| 2026-11-06 10:21 | favourite | cs2 | Copenhagen Wolves | Passion Academy | YES Copenhagen Wolves | 7 | 0.74 | 0.73 | 0.73 | open | - |
 | 2026-11-06 08:51 | favourite | valorant | An Angel Anbandonned | LPD | YES An Angel Anbandonned | 9 | 0.55 | 0.51 | 0.51 | open | - |
+| 2026-11-06 08:51 | favourite | dota2 | potn9ki | Zenith | YES potn9ki | 7 | 0.70 | 0.69 | 0.69 | open | - |
+| 2026-11-06 08:51 | model-only | dota2 | Zenith | potn9ki | NO potn9ki | 54 | 0.33 | 0.40 | 0.31 | open | - |
+| 2026-11-06 08:51 | favourite | dota2 | PlayTime | Team Synapse | YES PlayTime | 9 | 0.56 | 0.55 | 0.55 | open | - |
+| 2026-11-06 08:51 | model-only | dota2 | Team Synapse | PlayTime | NO PlayTime | 38 | 0.47 | 0.70 | 0.45 | open | - |
+| 2026-11-06 08:51 | favourite | dota2 | Froglings | Xipto Esports | YES Froglings | 7 | 0.66 | 0.65 | 0.65 | open | - |
+| 2026-11-06 08:51 | model-only | dota2 | Xipto Esports | Froglings | YES Xipto Esports | 5 | 0.36 | 0.57 | 0.35 | open | - |
+| 2026-11-06 08:51 | favourite | dota2 | angry birds | Nemiga Gaming | YES angry birds | 8 | 0.61 | 0.59 | 0.59 | open | - |
+| 2026-11-06 08:51 | model-only | dota2 | angry birds | Nemiga Gaming | YES angry birds | 29 | 0.61 | 0.70 | 0.59 | open | - |
 | 2026-11-06 08:36 | favourite | cs2 | FURIA | BetBoom Team | NO BetBoom Team | 7 | 0.66 | 0.66 | 0.66 | open | - |
 | 2026-11-06 08:36 | model-only | cs2 | BetBoom Team | FURIA | NO FURIA | 51 | 0.35 | 0.43 | 0.34 | open | - |
-| 2026-11-06 07:51 | favourite | cs2 | BakS eSports | Fire Flux Esports | YES BakS eSports | 8 | 0.60 | 0.59 | 0.59 | open | - |
 | 2026-11-06 07:51 | model-only | cs2 | Four Magic | SAW Youngsters | YES Four Magic | 55 | 0.32 | 0.56 | 0.32 | open | - |
-| 2026-11-06 07:51 | model-only | cs2 | Bad Beavers | The Chosen Few | NO The Chosen Few | 21 | 0.42 | 0.55 | 0.42 | open | - |
-| 2026-11-06 07:51 | favourite | cs2 | The Chosen Few | Bad Beavers | NO Bad Beavers | 9 | 0.58 | 0.58 | 0.58 | open | - |
-| 2026-11-06 07:51 | model-only | cs2 | Fire Flux Esports | BakS eSports | NO BakS eSports | 43 | 0.41 | 0.47 | 0.41 | open | - |
-| 2026-11-06 07:51 | favourite | cs2 | SAW Youngsters | Four Magic | NO Four Magic | 7 | 0.69 | 0.69 | 0.69 | open | - |
-| 2026-11-06 07:51 | model-only | cs2 | NAVI Junior | FORZE Reload | NO FORZE Reload | 63 | 0.28 | 0.41 | 0.28 | open | - |
-| 2026-11-06 07:51 | favourite | cs2 | QUAZAR | Revise | YES QUAZAR | 6 | 0.78 | 0.77 | 0.77 | open | - |
-| 2026-11-06 07:51 | model-only | cs2 | The Last Resort | G2 Ares | NO G2 Ares | 42 | 0.41 | 0.47 | 0.41 | open | - |
-| 2026-11-06 07:51 | favourite | cs2 | FORZE Reload | NAVI Junior | YES FORZE Reload | 7 | 0.73 | 0.72 | 0.72 | open | - |
-| 2026-11-06 07:51 | favourite | cs2 | G2 Ares | The Last Resort | NO The Last Resort | 8 | 0.59 | 0.59 | 0.59 | open | - |
+| 2026-11-06 07:51 | favourite | cs2 | BakS eSports | Fire Flux Esports | YES BakS eSports | 8 | 0.60 | 0.59 | 0.59 | open | - |
+| 2026-11-06 07:51 | favourite | cs2 | G2 Ares | The Last Resort | NO The Last Resort | 8 | 0.59 | 0.59 | 0.59 | won | $3.14 |
 
 ## Backtest on real Kalshi prices
 
