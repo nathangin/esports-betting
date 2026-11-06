@@ -1,8 +1,8 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/markets/KXCS2GAME-26NOV040430PRVMOUZ-MOUZ/candlesticks?start_ts=1793782800&end_ts=1793784660&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/markets/KXCS2GAME-26NOV050400HONBAKS-BAKS/candlesticks?start_ts=1793867400&end_ts=1793869260&period_interval=1",
  "status": 200,
  "body": {
   "candlesticks": [],
-  "ticker": "KXCS2GAME-26NOV040430PRVMOUZ-MOUZ"
+  "ticker": "KXCS2GAME-26NOV050400HONBAKS-BAKS"
  }
 }
