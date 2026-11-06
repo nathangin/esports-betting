@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-06 08:36 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-06 08:51 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 565 | 48 | 517 | 184 | -$64.29 | -1.1% | -0.3c (552) | $935.71 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 912 | 75 | 837 | 548 | -$462.17 | -8.4% | -1.6c (897) | $537.83 |
+| model-only | Elo win model alone (control: ignores the market) | 569 | 52 | 517 | 184 | -$64.29 | -1.1% | -0.3c (557) | $935.71 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 917 | 80 | 837 | 548 | -$462.17 | -8.4% | -1.5c (903) | $537.83 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,31 +39,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-06 08:51 | favourite | valorant | An Angel Anbandonned | LPD | YES An Angel Anbandonned | 9 | 0.55 | 0.51 | 0.51 | open | - |
+| 2026-11-06 08:51 | favourite | dota2 | potn9ki | Zenith | YES potn9ki | 7 | 0.70 | 0.69 | 0.69 | open | - |
+| 2026-11-06 08:51 | model-only | dota2 | Zenith | potn9ki | NO potn9ki | 54 | 0.33 | 0.40 | 0.31 | open | - |
+| 2026-11-06 08:51 | favourite | dota2 | PlayTime | Team Synapse | YES PlayTime | 9 | 0.56 | 0.55 | 0.55 | open | - |
+| 2026-11-06 08:51 | model-only | dota2 | Team Synapse | PlayTime | NO PlayTime | 38 | 0.47 | 0.70 | 0.45 | open | - |
+| 2026-11-06 08:51 | favourite | dota2 | Froglings | Xipto Esports | YES Froglings | 7 | 0.66 | 0.65 | 0.65 | open | - |
+| 2026-11-06 08:51 | model-only | dota2 | Xipto Esports | Froglings | YES Xipto Esports | 5 | 0.36 | 0.57 | 0.35 | open | - |
+| 2026-11-06 08:51 | favourite | dota2 | angry birds | Nemiga Gaming | YES angry birds | 8 | 0.61 | 0.59 | 0.59 | open | - |
+| 2026-11-06 08:51 | model-only | dota2 | angry birds | Nemiga Gaming | YES angry birds | 29 | 0.61 | 0.70 | 0.59 | open | - |
 | 2026-11-06 08:36 | favourite | cs2 | FURIA | BetBoom Team | NO BetBoom Team | 7 | 0.66 | 0.66 | 0.66 | open | - |
 | 2026-11-06 08:36 | model-only | cs2 | BetBoom Team | FURIA | NO FURIA | 51 | 0.35 | 0.43 | 0.34 | open | - |
 | 2026-11-06 07:51 | favourite | cs2 | BakS eSports | Fire Flux Esports | YES BakS eSports | 8 | 0.60 | 0.59 | 0.59 | open | - |
-| 2026-11-06 07:51 | model-only | cs2 | Four Magic | SAW Youngsters | YES Four Magic | 55 | 0.32 | 0.56 | 0.32 | open | - |
 | 2026-11-06 07:51 | favourite | cs2 | SAW Youngsters | Four Magic | NO Four Magic | 7 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-11-06 07:51 | model-only | cs2 | Bad Beavers | The Chosen Few | NO The Chosen Few | 21 | 0.42 | 0.55 | 0.42 | open | - |
-| 2026-11-06 07:51 | model-only | cs2 | Fire Flux Esports | BakS eSports | NO BakS eSports | 43 | 0.41 | 0.47 | 0.41 | open | - |
 | 2026-11-06 07:51 | favourite | cs2 | The Chosen Few | Bad Beavers | NO Bad Beavers | 9 | 0.58 | 0.58 | 0.58 | open | - |
+| 2026-11-06 07:51 | model-only | cs2 | Fire Flux Esports | BakS eSports | NO BakS eSports | 43 | 0.41 | 0.47 | 0.41 | open | - |
+| 2026-11-06 07:51 | model-only | cs2 | Four Magic | SAW Youngsters | YES Four Magic | 55 | 0.32 | 0.56 | 0.32 | open | - |
 | 2026-11-06 07:51 | model-only | cs2 | NAVI Junior | FORZE Reload | NO FORZE Reload | 63 | 0.28 | 0.41 | 0.28 | open | - |
-| 2026-11-06 07:51 | favourite | cs2 | FORZE Reload | NAVI Junior | YES FORZE Reload | 7 | 0.73 | 0.72 | 0.72 | open | - |
 | 2026-11-06 07:51 | favourite | cs2 | QUAZAR | Revise | YES QUAZAR | 6 | 0.78 | 0.77 | 0.77 | open | - |
 | 2026-11-06 07:51 | model-only | cs2 | The Last Resort | G2 Ares | NO G2 Ares | 42 | 0.41 | 0.47 | 0.41 | open | - |
 | 2026-11-06 07:51 | favourite | cs2 | G2 Ares | The Last Resort | NO The Last Resort | 8 | 0.59 | 0.59 | 0.59 | open | - |
+| 2026-11-06 07:51 | favourite | cs2 | FORZE Reload | NAVI Junior | YES FORZE Reload | 7 | 0.73 | 0.72 | 0.72 | open | - |
 | 2026-11-06 06:50 | favourite | valorant | Hoc Vien 96 | God Chosen | YES Hoc Vien 96 | 6 | 0.63 | 0.59 | 0.59 | open | - |
 | 2026-11-06 06:20 | favourite | r6 | Weibo Gaming | Virtus.pro | YES Weibo Gaming | 10 | 0.52 | 0.51 | 0.51 | open | - |
 | 2026-11-06 05:50 | favourite | dota2 | Royal Bear | Direborn | NO Direborn | 7 | 0.75 | 0.74 | 0.74 | open | - |
-| 2026-11-06 05:50 | model-only | dota2 | Direborn | Royal Bear | YES Direborn | 24 | 0.27 | 0.37 | 0.26 | open | - |
-| 2026-11-06 05:20 | favourite | cs2 | Natus Vincere | PARIVISION | YES Natus Vincere | 7 | 0.71 | 0.71 | 0.71 | open | - |
-| 2026-11-06 05:20 | model-only | cs2 | PARIVISION | Natus Vincere | YES PARIVISION | 61 | 0.29 | 0.41 | 0.29 | open | - |
-| 2026-11-06 01:24 | favourite | r6 | Weibo Gaming | Dplus | NO Dplus | 7 | 0.68 | 0.66 | 0.66 | open | - |
-| 2026-11-06 01:24 | model-only | r6 | Dplus | Weibo Gaming | NO Weibo Gaming | 21 | 0.36 | 0.44 | 0.34 | open | - |
-| 2026-11-06 00:24 | favourite | r6 | LOS | All Gamers | NO All Gamers | 6 | 0.82 | 0.81 | 0.80 | open | - |
-| 2026-11-05 20:53 | favourite | lol | Bilibili Gaming | Dplus KIA | YES Bilibili Gaming | 2 | 0.59 | 0.58 | 0.58 | won | $0.78 |
-| 2026-11-05 19:53 | favourite | cs2 | MEIA NOITE | Rush | NO Rush | 2 | 0.62 | 0.62 | 0.62 | lost | -$1.28 |
-| 2026-11-05 18:23 | favourite | cs2 | Inner Circle Prospect | aimers | NO aimers | 1 | 0.61 | 0.59 | 0.59 | won | $0.37 |
 
 ## Backtest on real Kalshi prices
 
