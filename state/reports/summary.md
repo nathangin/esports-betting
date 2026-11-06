@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-06 15:22 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-06 15:32 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 576 | 48 | 528 | 188 | -$102.13 | -1.7% | -0.3c (569) | $897.87 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 929 | 77 | 852 | 560 | -$451.16 | -8.1% | -1.6c (921) | $548.84 |
+| model-only | Elo win model alone (control: ignores the market) | 576 | 47 | 529 | 188 | -$109.29 | -1.9% | -0.3c (569) | $890.71 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 929 | 76 | 853 | 561 | -$447.54 | -8.0% | -1.6c (921) | $552.46 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -51,8 +51,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-06 10:51 | model-only | cs2 | Honvéd | ILLYRIANS | YES Honvéd | 42 | 0.41 | 0.53 | 0.40 | lost | -$17.94 |
 | 2026-11-06 10:51 | favourite | cs2 | ILLYRIANS | Honvéd | NO Honvéd | 8 | 0.61 | 0.60 | 0.60 | won | $2.98 |
 | 2026-11-06 10:51 | model-only | cs2 | megoshort | GenOne | NO GenOne | 13 | 0.27 | 0.44 | 0.26 | open | - |
-| 2026-11-06 10:51 | model-only | cs2 | MASONIC | Sokerorg | NO Sokerorg | 16 | 0.43 | 0.49 | 0.42 | open | - |
-| 2026-11-06 10:51 | favourite | cs2 | Sokerorg | MASONIC | NO MASONIC | 9 | 0.58 | 0.57 | 0.57 | open | - |
+| 2026-11-06 10:51 | model-only | cs2 | MASONIC | Sokerorg | NO Sokerorg | 16 | 0.43 | 0.49 | 0.42 | lost | -$7.16 |
+| 2026-11-06 10:51 | favourite | cs2 | Sokerorg | MASONIC | NO MASONIC | 9 | 0.58 | 0.57 | 0.57 | won | $3.62 |
 | 2026-11-06 10:51 | model-only | dota2 | oveA | Xipto Esports | YES oveA | 1 | 0.19 | 0.28 | 0.17 | lost | -$0.21 |
 | 2026-11-06 10:51 | favourite | dota2 | Xipto Esports | oveA | NO oveA | 2 | 0.84 | 0.83 | 0.83 | won | $0.30 |
 | 2026-11-06 10:21 | favourite | cs2 | Copenhagen Wolves | Passion Academy | YES Copenhagen Wolves | 7 | 0.74 | 0.73 | 0.73 | won | $1.72 |
