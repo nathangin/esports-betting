@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-06 14:42 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-06 14:52 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-06 14:42 UTC. Model fitted 2026-11-02T19:35. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 576 | 49 | 527 | 188 | -$101.92 | -1.7% | -0.3c (569) | $898.08 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 929 | 79 | 850 | 558 | -$451.97 | -8.1% | -1.6c (920) | $548.03 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 929 | 79 | 850 | 558 | -$451.97 | -8.1% | -1.6c (921) | $548.03 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1886 finished matches. Lower is better; the market line is the bar to beat.
+1887 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5842 | 0.2012 |
+| market | 0.5842 | 0.2011 |
 | model | 0.6512 | 0.2301 |
 | blend | 0.5843 | 0.2014 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1252 | 0.5959 | 0.6597 |
+| cs2 | 1253 | 0.5958 | 0.6597 |
 | dota2 | 297 | 0.5546 | 0.6308 |
 | ow | 112 | 0.5107 | 0.5224 |
 | lol | 92 | 0.5722 | 0.7188 |
