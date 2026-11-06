@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-06 00:00 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-06 00:25 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-06 00:00 UTC. Model fitted 2026-11-02T19:35. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 556 | 39 | 517 | 184 | -$64.29 | -1.1% | -0.3c (549) | $935.71 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 899 | 64 | 835 | 547 | -$461.67 | -8.4% | -1.6c (891) | $538.33 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 900 | 65 | 835 | 547 | -$461.67 | -8.4% | -1.6c (891) | $538.33 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -39,6 +39,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-06 00:24 | favourite | r6 | LOS | All Gamers | NO All Gamers | 6 | 0.82 | 0.81 | 0.80 | open | - |
 | 2026-11-05 20:53 | favourite | lol | Bilibili Gaming | Dplus KIA | YES Bilibili Gaming | 2 | 0.59 | 0.58 | 0.58 | open | - |
 | 2026-11-05 19:53 | favourite | cs2 | MEIA NOITE | Rush | NO Rush | 2 | 0.62 | 0.62 | 0.62 | open | - |
 | 2026-11-05 18:23 | favourite | cs2 | Inner Circle Prospect | aimers | NO aimers | 1 | 0.61 | 0.59 | 0.59 | won | $0.37 |
@@ -63,7 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-05 16:23 | favourite | cs2 | Al Ahli | SINQU | NO SINQU | 8 | 0.63 | 0.63 | 0.63 | open | - |
 | 2026-11-05 15:53 | favourite | cs2 | Vitality Academy | Growth Lab Esports | YES Vitality Academy | 8 | 0.62 | 0.59 | 0.59 | won | $2.90 |
 | 2026-11-05 15:53 | favourite | cs2 | UNiTY esports | Monkeys | NO Monkeys | 5 | 0.86 | 0.85 | 0.85 | won | $0.65 |
-| 2026-11-05 15:53 | model-only | cs2 | Monkeys | UNiTY esports | YES Monkeys | 14 | 0.15 | 0.31 | 0.14 | lost | -$2.23 |
 
 ## Backtest on real Kalshi prices
 
