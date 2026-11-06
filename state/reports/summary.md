@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-06 13:22 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-06 13:32 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-06 13:22 UTC. Model fitted 2026-11-02T19:35. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 576 | 52 | 524 | 186 | -$127.13 | -2.2% | -0.3c (569) | $872.87 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 928 | 83 | 845 | 554 | -$458.81 | -8.3% | -1.6c (920) | $541.19 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 928 | 81 | 847 | 556 | -$453.20 | -8.2% | -1.6c (920) | $546.80 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -54,7 +54,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-06 10:51 | favourite | cs2 | Sokerorg | MASONIC | NO MASONIC | 9 | 0.58 | 0.57 | 0.57 | open | - |
 | 2026-11-06 10:51 | model-only | dota2 | oveA | Xipto Esports | YES oveA | 1 | 0.19 | 0.28 | 0.17 | open | - |
 | 2026-11-06 10:51 | favourite | dota2 | Xipto Esports | oveA | NO oveA | 2 | 0.84 | 0.83 | 0.83 | open | - |
-| 2026-11-06 10:21 | favourite | cs2 | Copenhagen Wolves | Passion Academy | YES Copenhagen Wolves | 7 | 0.74 | 0.73 | 0.73 | open | - |
+| 2026-11-06 10:21 | favourite | cs2 | Copenhagen Wolves | Passion Academy | YES Copenhagen Wolves | 7 | 0.74 | 0.73 | 0.73 | won | $1.72 |
 | 2026-11-06 10:21 | favourite | cs2 | MOUZ NXT | Sokerorg | YES MOUZ NXT | 8 | 0.59 | 0.58 | 0.58 | open | - |
 | 2026-11-06 10:21 | model-only | cs2 | Sokerorg | MOUZ NXT | NO MOUZ NXT | 9 | 0.43 | 0.58 | 0.42 | open | - |
 | 2026-11-06 08:51 | model-only | dota2 | Team Synapse | PlayTime | NO PlayTime | 38 | 0.47 | 0.70 | 0.45 | open | - |
