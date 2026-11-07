@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-07 08:39 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-07 08:54 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 583 | 52 | 531 | 188 | -$118.88 | -2.0% | -0.3c (571) | $881.12 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 939 | 78 | 861 | 566 | -$454.33 | -8.1% | -1.6c (925) | $545.67 |
+| model-only | Elo win model alone (control: ignores the market) | 584 | 52 | 532 | 189 | -$84.32 | -1.4% | -0.3c (575) | $915.68 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 944 | 82 | 862 | 566 | -$459.27 | -8.2% | -1.6c (930) | $540.73 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1939 finished matches. Lower is better; the market line is the bar to beat.
+1940 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5841 | 0.2010 |
-| model | 0.6503 | 0.2297 |
-| blend | 0.5844 | 0.2013 |
+| market | 0.5844 | 0.2012 |
+| model | 0.6504 | 0.2297 |
+| blend | 0.5847 | 0.2015 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1270 | 0.5958 | 0.6601 |
+| cs2 | 1271 | 0.5962 | 0.6601 |
 | dota2 | 303 | 0.5477 | 0.6261 |
 | ow | 114 | 0.5147 | 0.5260 |
 | lol | 93 | 0.5681 | 0.7213 |
@@ -40,30 +40,30 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-07 08:54 | favourite | dota2 | Froglings | Zenith | NO Zenith | 1 | 0.88 | 0.87 | 0.87 | open | - |
+| 2026-11-07 08:54 | favourite | dota2 | Yellow Submarine | HULIGANI | NO HULIGANI | 8 | 0.66 | 0.66 | 0.66 | open | - |
+| 2026-11-07 08:54 | favourite | dota2 | Inner Circle | Spirit Academy | YES Inner Circle | 7 | 0.75 | 0.73 | 0.73 | open | - |
+| 2026-11-07 08:54 | model-only | dota2 | Spirit Academy | Inner Circle | NO Inner Circle | 13 | 0.30 | 0.44 | 0.27 | open | - |
+| 2026-11-07 08:54 | favourite | dota2 | Power Rangers | Xipto Esports | YES Power Rangers | 9 | 0.57 | 0.56 | 0.56 | open | - |
+| 2026-11-07 08:54 | favourite | dota2 | Nemiga Gaming | potn9ki | YES Nemiga Gaming | 7 | 0.74 | 0.73 | 0.73 | open | - |
 | 2026-11-07 08:39 | favourite | cs2 | MOUZ | BetBoom Team | NO BetBoom Team | 7 | 0.72 | 0.71 | 0.72 | open | - |
 | 2026-11-07 08:39 | model-only | cs2 | BetBoom Team | MOUZ | YES BetBoom Team | 57 | 0.29 | 0.41 | 0.28 | open | - |
 | 2026-11-07 07:54 | model-only | cs2 | maybe | Butterfly | NO Butterfly | 72 | 0.23 | 0.47 | 0.22 | open | - |
 | 2026-11-07 07:54 | model-only | cs2 | 9INE Academy | gothboiclique | YES 9INE Academy | 12 | 0.27 | 0.42 | 0.27 | open | - |
+| 2026-11-07 07:54 | favourite | cs2 | gothboiclique | 9INE Academy | YES gothboiclique | 7 | 0.73 | 0.73 | 0.73 | open | - |
 | 2026-11-07 07:54 | model-only | cs2 | ILLYRIANS | Fire Flux Esports | YES ILLYRIANS | 6 | 0.35 | 0.44 | 0.36 | open | - |
 | 2026-11-07 07:54 | favourite | cs2 | Fire Flux Esports | ILLYRIANS | NO ILLYRIANS | 1 | 0.67 | 0.64 | 0.64 | open | - |
-| 2026-11-07 07:54 | favourite | cs2 | gothboiclique | 9INE Academy | YES gothboiclique | 7 | 0.73 | 0.73 | 0.73 | open | - |
-| 2026-11-07 07:54 | favourite | cs2 | Butterfly | maybe | YES Butterfly | 3 | 0.78 | 0.78 | 0.78 | open | - |
 | 2026-11-07 07:54 | favourite | cs2 | MASONIC | Four Magic | NO Four Magic | 7 | 0.69 | 0.68 | 0.68 | open | - |
+| 2026-11-07 07:54 | favourite | cs2 | Butterfly | maybe | YES Butterfly | 3 | 0.78 | 0.78 | 0.78 | open | - |
 | 2026-11-07 07:54 | model-only | cs2 | G2 Ares | Saint Sinners | YES G2 Ares | 32 | 0.50 | 0.55 | 0.50 | open | - |
 | 2026-11-07 07:54 | favourite | cs2 | Saint Sinners | G2 Ares | NO G2 Ares | 10 | 0.51 | 0.50 | 0.50 | open | - |
-| 2026-11-07 05:24 | favourite | cs2 | Natus Vincere | TheMongolz | NO TheMongolz | 7 | 0.69 | 0.69 | 0.69 | open | - |
-| 2026-11-07 05:24 | model-only | cs2 | TheMongolz | Natus Vincere | NO Natus Vincere | 52 | 0.32 | 0.49 | 0.32 | open | - |
+| 2026-11-07 05:24 | favourite | cs2 | Natus Vincere | TheMongolz | NO TheMongolz | 7 | 0.69 | 0.69 | 0.69 | lost | -$4.94 |
+| 2026-11-07 05:24 | model-only | cs2 | TheMongolz | Natus Vincere | NO Natus Vincere | 52 | 0.32 | 0.49 | 0.32 | won | $34.56 |
 | 2026-11-07 04:23 | favourite | valorant | SCOP Gaming | FA CLUB | YES SCOP Gaming | 6 | 0.89 | 0.85 | 0.85 | lost | -$5.39 |
-| 2026-11-07 02:23 | favourite | r6 | All Gamers | TYLOO | YES All Gamers | 6 | 0.83 | 0.81 | 0.81 | won | $0.96 |
 | 2026-11-07 02:23 | model-only | r6 | TYLOO | All Gamers | NO All Gamers | 8 | 0.20 | 0.43 | 0.19 | lost | -$1.69 |
+| 2026-11-07 02:23 | favourite | r6 | All Gamers | TYLOO | YES All Gamers | 6 | 0.83 | 0.81 | 0.81 | won | $0.96 |
 | 2026-11-06 15:52 | favourite | cs2 | Thousand | SINNERS Legacy | YES Thousand | 3 | 0.52 | 0.52 | 0.52 | lost | -$1.62 |
 | 2026-11-06 13:52 | favourite | cs2 | Inner Circle Academy | Gothic | NO Gothic | 7 | 0.56 | 0.56 | 0.55 | open | - |
-| 2026-11-06 11:51 | favourite | dota2 | angry birds | PuckChamp | YES angry birds | 2 | 0.86 | 0.85 | 0.85 | won | $0.26 |
-| 2026-11-06 11:51 | favourite | cs2 | Isurus | Zetta Games | YES Isurus | 5 | 0.89 | 0.88 | 0.88 | won | $0.51 |
-| 2026-11-06 11:51 | model-only | dota2 | Nemiga Gaming | Froglings | YES Nemiga Gaming | 7 | 0.34 | 0.45 | 0.33 | open | - |
-| 2026-11-06 11:51 | favourite | dota2 | Froglings | Nemiga Gaming | YES Froglings | 7 | 0.68 | 0.67 | 0.67 | open | - |
-| 2026-11-06 11:51 | favourite | dota2 | Power Rangers | potn9ki | YES Power Rangers | 1 | 0.75 | 0.71 | 0.71 | open | - |
-| 2026-11-06 11:51 | model-only | dota2 | Zenith | PlayTime | NO PlayTime | 23 | 0.20 | 0.43 | 0.18 | open | - |
 | 2026-11-06 11:51 | favourite | dota2 | PlayTime | Zenith | YES PlayTime | 5 | 0.84 | 0.82 | 0.82 | open | - |
 
 ## Backtest on real Kalshi prices
