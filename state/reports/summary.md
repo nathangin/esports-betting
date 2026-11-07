@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-07 15:10 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-07 15:35 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-07 15:10 UTC. Model fitted 2026-11-02T19:35. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 596 | 57 | 539 | 191 | -$128.36 | -2.1% | -0.3c (586) | $871.64 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 961 | 86 | 875 | 574 | -$469.68 | -8.3% | -1.6c (952) | $530.32 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 961 | 85 | 876 | 575 | -$468.78 | -8.3% | -1.6c (952) | $531.22 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -61,7 +61,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-07 11:54 | model-only | dota2 | Ka4kanarskie cyxariki | CyberHero | NO CyberHero | 11 | 0.39 | 0.45 | 0.38 | open | - |
 | 2026-11-07 11:54 | favourite | dota2 | PlayTime | Xipto Esports | YES PlayTime | 5 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-11-07 11:54 | favourite | dota2 | Team Synapse | potn9ki | NO potn9ki | 6 | 0.80 | 0.78 | 0.78 | open | - |
-| 2026-11-07 11:54 | favourite | dota2 | Power Rangers | Zenith | YES Power Rangers | 6 | 0.84 | 0.84 | 0.84 | open | - |
+| 2026-11-07 11:54 | favourite | dota2 | Power Rangers | Zenith | YES Power Rangers | 6 | 0.84 | 0.84 | 0.84 | won | $0.90 |
 | 2026-11-07 11:54 | model-only | dota2 | potn9ki | Team Synapse | YES potn9ki | 10 | 0.24 | 0.34 | 0.22 | open | - |
 | 2026-11-07 10:54 | favourite | dota2 | Mena Warriors | oveA | YES Mena Warriors | 8 | 0.62 | 0.57 | 0.57 | lost | -$5.10 |
 | 2026-11-07 10:54 | favourite | cs2 | Johnny Speeds | Drama eSports | YES Johnny Speeds | 6 | 0.71 | 0.70 | 0.70 | lost | -$4.35 |
