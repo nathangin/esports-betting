@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-07 17:10 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-07 17:35 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 598 | 55 | 543 | 192 | -$92.02 | -1.5% | -0.3c (589) | $907.98 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 961 | 78 | 883 | 580 | -$464.35 | -8.1% | -1.6c (952) | $535.65 |
+| model-only | Elo win model alone (control: ignores the market) | 598 | 54 | 544 | 193 | -$85.50 | -1.4% | -0.3c (589) | $914.50 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 961 | 76 | 885 | 581 | -$468.92 | -8.2% | -1.6c (952) | $531.08 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1973 finished matches. Lower is better; the market line is the bar to beat.
+1974 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5841 | 0.2010 |
+| market | 0.5839 | 0.2009 |
 | model | 0.6509 | 0.2299 |
-| blend | 0.5844 | 0.2013 |
+| blend | 0.5841 | 0.2012 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1287 | 0.5942 | 0.6594 |
+| cs2 | 1288 | 0.5938 | 0.6594 |
 | dota2 | 311 | 0.5517 | 0.6297 |
 | ow | 118 | 0.5258 | 0.5321 |
 | valorant | 94 | 0.6392 | 0.6783 |
@@ -53,12 +53,12 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-07 12:54 | favourite | cs2 | aimclub | LPH Gaming | NO LPH Gaming | 8 | 0.62 | 0.60 | 0.60 | won | $2.90 |
 | 2026-11-07 12:54 | model-only | cs2 | G2 Ares | OG | YES G2 Ares | 66 | 0.25 | 0.43 | 0.25 | lost | -$17.37 |
 | 2026-11-07 12:54 | favourite | cs2 | Acend | Ryvex | NO Ryvex | 6 | 0.90 | 0.90 | 0.90 | won | $0.56 |
-| 2026-11-07 12:54 | favourite | cs2 | Alliance | maybe | YES Alliance | 6 | 0.89 | 0.88 | 0.88 | open | - |
+| 2026-11-07 12:54 | favourite | cs2 | Alliance | maybe | YES Alliance | 6 | 0.89 | 0.88 | 0.88 | won | $0.61 |
 | 2026-11-07 12:54 | model-only | cs2 | Ryvex | Acend | NO Acend | 4 | 0.10 | 0.33 | 0.10 | lost | -$0.43 |
 | 2026-11-07 12:54 | favourite | cs2 | Balkan Outlaws | The Last Resort | YES Balkan Outlaws | 9 | 0.55 | 0.54 | 0.54 | won | $3.89 |
 | 2026-11-07 11:54 | favourite | dota2 | Nemiga Gaming | PuckChamp | YES Nemiga Gaming | 6 | 0.84 | 0.83 | 0.83 | lost | -$5.10 |
-| 2026-11-07 11:54 | model-only | dota2 | Ka4kanarskie cyxariki | CyberHero | NO CyberHero | 11 | 0.39 | 0.45 | 0.38 | open | - |
-| 2026-11-07 11:54 | favourite | dota2 | CyberHero | Ka4kanarskie cyxariki | YES CyberHero | 8 | 0.63 | 0.62 | 0.62 | open | - |
+| 2026-11-07 11:54 | model-only | dota2 | Ka4kanarskie cyxariki | CyberHero | NO CyberHero | 11 | 0.39 | 0.45 | 0.38 | won | $6.52 |
+| 2026-11-07 11:54 | favourite | dota2 | CyberHero | Ka4kanarskie cyxariki | YES CyberHero | 8 | 0.63 | 0.62 | 0.62 | lost | -$5.18 |
 | 2026-11-07 11:54 | model-only | dota2 | PuckChamp | Nemiga Gaming | YES PuckChamp | 70 | 0.18 | 0.34 | 0.17 | won | $56.67 |
 | 2026-11-07 11:54 | model-only | dota2 | Xipto Esports | PlayTime | NO PlayTime | 43 | 0.39 | 0.58 | 0.38 | open | - |
 | 2026-11-07 11:54 | model-only | dota2 | potn9ki | Team Synapse | YES potn9ki | 10 | 0.24 | 0.34 | 0.22 | lost | -$2.53 |
