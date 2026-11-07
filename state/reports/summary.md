@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-07 15:55 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-07 16:05 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 596 | 55 | 541 | 191 | -$146.16 | -2.4% | -0.3c (589) | $853.84 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 961 | 81 | 880 | 579 | -$459.84 | -8.1% | -1.6c (952) | $540.16 |
+| model-only | Elo win model alone (control: ignores the market) | 596 | 54 | 542 | 192 | -$89.49 | -1.5% | -0.3c (589) | $910.51 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 961 | 80 | 881 | 579 | -$464.94 | -8.2% | -1.6c (952) | $535.06 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -56,8 +56,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-07 12:54 | favourite | cs2 | Balkan Outlaws | The Last Resort | YES Balkan Outlaws | 9 | 0.55 | 0.54 | 0.54 | won | $3.89 |
 | 2026-11-07 11:54 | model-only | dota2 | Xipto Esports | PlayTime | NO PlayTime | 43 | 0.39 | 0.58 | 0.38 | open | - |
 | 2026-11-07 11:54 | favourite | dota2 | CyberHero | Ka4kanarskie cyxariki | YES CyberHero | 8 | 0.63 | 0.62 | 0.62 | open | - |
-| 2026-11-07 11:54 | model-only | dota2 | PuckChamp | Nemiga Gaming | YES PuckChamp | 70 | 0.18 | 0.34 | 0.17 | open | - |
-| 2026-11-07 11:54 | favourite | dota2 | Nemiga Gaming | PuckChamp | YES Nemiga Gaming | 6 | 0.84 | 0.83 | 0.83 | open | - |
+| 2026-11-07 11:54 | model-only | dota2 | PuckChamp | Nemiga Gaming | YES PuckChamp | 70 | 0.18 | 0.34 | 0.17 | won | $56.67 |
+| 2026-11-07 11:54 | favourite | dota2 | Nemiga Gaming | PuckChamp | YES Nemiga Gaming | 6 | 0.84 | 0.83 | 0.83 | lost | -$5.10 |
 | 2026-11-07 11:54 | model-only | dota2 | Ka4kanarskie cyxariki | CyberHero | NO CyberHero | 11 | 0.39 | 0.45 | 0.38 | open | - |
 | 2026-11-07 11:54 | favourite | dota2 | PlayTime | Xipto Esports | YES PlayTime | 5 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-11-07 11:54 | favourite | dota2 | Team Synapse | potn9ki | NO potn9ki | 6 | 0.80 | 0.78 | 0.78 | open | - |
