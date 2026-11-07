@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-07 14:44 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-07 14:55 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 593 | 54 | 539 | 191 | -$128.36 | -2.1% | -0.3c (585) | $871.64 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 961 | 86 | 875 | 574 | -$469.68 | -8.3% | -1.6c (950) | $530.32 |
+| model-only | Elo win model alone (control: ignores the market) | 596 | 57 | 539 | 191 | -$128.36 | -2.1% | -0.3c (586) | $871.64 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 961 | 86 | 875 | 574 | -$469.68 | -8.3% | -1.6c (952) | $530.32 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,21 +16,21 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1960 finished matches. Lower is better; the market line is the bar to beat.
+1962 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5850 | 0.2014 |
+| market | 0.5848 | 0.2013 |
 | model | 0.6514 | 0.2301 |
-| blend | 0.5853 | 0.2017 |
+| blend | 0.5851 | 0.2016 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1279 | 0.5957 | 0.6602 |
+| cs2 | 1280 | 0.5956 | 0.6602 |
 | dota2 | 308 | 0.5499 | 0.6281 |
 | ow | 117 | 0.5261 | 0.5356 |
+| valorant | 94 | 0.6392 | 0.6783 |
 | lol | 93 | 0.5681 | 0.7213 |
-| valorant | 93 | 0.6419 | 0.6793 |
 | r6 | 59 | 0.5903 | 0.6778 |
 | cod | 11 | 0.5753 | 0.5483 |
 
@@ -40,31 +40,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-07 14:54 | model-only | dota2 | InterActive Philippines | PuckChamp | NO PuckChamp | 24 | 0.69 | 0.78 | 0.68 | open | - |
+| 2026-11-07 14:54 | model-only | dota2 | angry birds | Xipto Esports | YES angry birds | 40 | 0.41 | 0.51 | 0.39 | open | - |
+| 2026-11-07 14:54 | model-only | dota2 | Amaru Gaming | Yakult's Brothers | NO Yakult's Brothers | 14 | 0.26 | 0.46 | 0.24 | open | - |
 | 2026-11-07 13:54 | favourite | cs2 | SAW Youngsters | Sokerorg | YES SAW Youngsters | 1 | 0.52 | 0.50 | 0.50 | open | - |
 | 2026-11-07 13:54 | favourite | cs2 | ex-Zero Tenacity | Leo Team | YES ex-Zero Tenacity | 1 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-07 13:54 | model-only | cs2 | Leo Team | ex-Zero Tenacity | YES Leo Team | 28 | 0.35 | 0.40 | 0.35 | open | - |
-| 2026-11-07 12:54 | favourite | cs2 | Balkan Outlaws | The Last Resort | YES Balkan Outlaws | 9 | 0.55 | 0.54 | 0.54 | open | - |
-| 2026-11-07 12:54 | favourite | cs2 | Acend | Ryvex | NO Ryvex | 6 | 0.90 | 0.90 | 0.90 | open | - |
+| 2026-11-07 12:54 | favourite | cs2 | OG | G2 Ares | NO G2 Ares | 7 | 0.76 | 0.75 | 0.75 | open | - |
+| 2026-11-07 12:54 | favourite | cs2 | 9INE | 6yuBoJlbl | YES 9INE | 7 | 0.72 | 0.71 | 0.71 | open | - |
+| 2026-11-07 12:54 | favourite | cs2 | aimclub | LPH Gaming | NO LPH Gaming | 8 | 0.62 | 0.60 | 0.60 | open | - |
+| 2026-11-07 12:54 | model-only | cs2 | G2 Ares | OG | YES G2 Ares | 66 | 0.25 | 0.43 | 0.25 | open | - |
 | 2026-11-07 12:54 | model-only | cs2 | Ryvex | Acend | NO Acend | 4 | 0.10 | 0.33 | 0.10 | open | - |
 | 2026-11-07 12:54 | favourite | cs2 | Alliance | maybe | YES Alliance | 6 | 0.89 | 0.88 | 0.88 | open | - |
-| 2026-11-07 12:54 | favourite | cs2 | OG | G2 Ares | NO G2 Ares | 7 | 0.76 | 0.75 | 0.75 | open | - |
-| 2026-11-07 12:54 | model-only | cs2 | G2 Ares | OG | YES G2 Ares | 66 | 0.25 | 0.43 | 0.25 | open | - |
-| 2026-11-07 12:54 | favourite | cs2 | aimclub | LPH Gaming | NO LPH Gaming | 8 | 0.62 | 0.60 | 0.60 | open | - |
-| 2026-11-07 12:54 | favourite | cs2 | 9INE | 6yuBoJlbl | YES 9INE | 7 | 0.72 | 0.71 | 0.71 | open | - |
+| 2026-11-07 12:54 | favourite | cs2 | Acend | Ryvex | NO Ryvex | 6 | 0.90 | 0.90 | 0.90 | open | - |
+| 2026-11-07 12:54 | favourite | cs2 | Balkan Outlaws | The Last Resort | YES Balkan Outlaws | 9 | 0.55 | 0.54 | 0.54 | open | - |
 | 2026-11-07 11:54 | model-only | dota2 | Xipto Esports | PlayTime | NO PlayTime | 43 | 0.39 | 0.58 | 0.38 | open | - |
-| 2026-11-07 11:54 | model-only | dota2 | Ka4kanarskie cyxariki | CyberHero | NO CyberHero | 11 | 0.39 | 0.45 | 0.38 | open | - |
 | 2026-11-07 11:54 | favourite | dota2 | CyberHero | Ka4kanarskie cyxariki | YES CyberHero | 8 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-11-07 11:54 | model-only | dota2 | PuckChamp | Nemiga Gaming | YES PuckChamp | 70 | 0.18 | 0.34 | 0.17 | open | - |
 | 2026-11-07 11:54 | favourite | dota2 | Nemiga Gaming | PuckChamp | YES Nemiga Gaming | 6 | 0.84 | 0.83 | 0.83 | open | - |
-| 2026-11-07 11:54 | favourite | dota2 | Power Rangers | Zenith | YES Power Rangers | 6 | 0.84 | 0.84 | 0.84 | open | - |
+| 2026-11-07 11:54 | model-only | dota2 | Ka4kanarskie cyxariki | CyberHero | NO CyberHero | 11 | 0.39 | 0.45 | 0.38 | open | - |
 | 2026-11-07 11:54 | favourite | dota2 | PlayTime | Xipto Esports | YES PlayTime | 5 | 0.63 | 0.62 | 0.62 | open | - |
-| 2026-11-07 11:54 | model-only | dota2 | potn9ki | Team Synapse | YES potn9ki | 10 | 0.24 | 0.34 | 0.22 | open | - |
 | 2026-11-07 11:54 | favourite | dota2 | Team Synapse | potn9ki | NO potn9ki | 6 | 0.80 | 0.78 | 0.78 | open | - |
+| 2026-11-07 11:54 | favourite | dota2 | Power Rangers | Zenith | YES Power Rangers | 6 | 0.84 | 0.84 | 0.84 | open | - |
+| 2026-11-07 11:54 | model-only | dota2 | potn9ki | Team Synapse | YES potn9ki | 10 | 0.24 | 0.34 | 0.22 | open | - |
 | 2026-11-07 10:54 | favourite | dota2 | Mena Warriors | oveA | YES Mena Warriors | 8 | 0.62 | 0.57 | 0.57 | lost | -$5.10 |
 | 2026-11-07 10:54 | favourite | cs2 | Johnny Speeds | Drama eSports | YES Johnny Speeds | 6 | 0.71 | 0.70 | 0.70 | lost | -$4.35 |
-| 2026-11-07 10:24 | favourite | cs2 | Lunacy Team | maybe | NO maybe | 3 | 0.68 | 0.68 | 0.68 | won | $0.91 |
-| 2026-11-07 10:24 | model-only | cs2 | maybe | Lunacy Team | NO Lunacy Team | 1 | 0.33 | 0.53 | 0.32 | lost | -$0.35 |
-| 2026-11-07 10:24 | favourite | cs2 | Teletubisie | XI Esport | YES Teletubisie | 6 | 0.77 | 0.76 | 0.76 | won | $1.30 |
 
 ## Backtest on real Kalshi prices
 
