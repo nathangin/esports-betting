@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-07 16:50 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-07 17:05 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 598 | 56 | 542 | 192 | -$89.49 | -1.5% | -0.3c (589) | $910.51 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 961 | 79 | 882 | 579 | -$465.48 | -8.2% | -1.6c (952) | $534.52 |
+| model-only | Elo win model alone (control: ignores the market) | 598 | 55 | 543 | 192 | -$92.02 | -1.5% | -0.3c (589) | $907.98 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 961 | 78 | 883 | 580 | -$464.35 | -8.1% | -1.6c (952) | $535.65 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1971 finished matches. Lower is better; the market line is the bar to beat.
+1972 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5845 | 0.2012 |
-| model | 0.6512 | 0.2300 |
-| blend | 0.5849 | 0.2015 |
+| market | 0.5843 | 0.2011 |
+| model | 0.6510 | 0.2299 |
+| blend | 0.5846 | 0.2014 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1286 | 0.5946 | 0.6597 |
+| cs2 | 1287 | 0.5942 | 0.6594 |
 | dota2 | 310 | 0.5527 | 0.6304 |
 | ow | 118 | 0.5258 | 0.5321 |
 | valorant | 94 | 0.6392 | 0.6783 |
@@ -61,8 +61,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-07 11:54 | favourite | dota2 | CyberHero | Ka4kanarskie cyxariki | YES CyberHero | 8 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-11-07 11:54 | model-only | dota2 | PuckChamp | Nemiga Gaming | YES PuckChamp | 70 | 0.18 | 0.34 | 0.17 | won | $56.67 |
 | 2026-11-07 11:54 | model-only | dota2 | Xipto Esports | PlayTime | NO PlayTime | 43 | 0.39 | 0.58 | 0.38 | open | - |
-| 2026-11-07 11:54 | model-only | dota2 | potn9ki | Team Synapse | YES potn9ki | 10 | 0.24 | 0.34 | 0.22 | open | - |
-| 2026-11-07 11:54 | favourite | dota2 | Team Synapse | potn9ki | NO potn9ki | 6 | 0.80 | 0.78 | 0.78 | open | - |
+| 2026-11-07 11:54 | model-only | dota2 | potn9ki | Team Synapse | YES potn9ki | 10 | 0.24 | 0.34 | 0.22 | lost | -$2.53 |
+| 2026-11-07 11:54 | favourite | dota2 | Team Synapse | potn9ki | NO potn9ki | 6 | 0.80 | 0.78 | 0.78 | won | $1.13 |
 | 2026-11-07 11:54 | favourite | dota2 | Power Rangers | Zenith | YES Power Rangers | 6 | 0.84 | 0.84 | 0.84 | won | $0.90 |
 | 2026-11-07 11:54 | favourite | dota2 | PlayTime | Xipto Esports | YES PlayTime | 5 | 0.63 | 0.62 | 0.62 | open | - |
 
