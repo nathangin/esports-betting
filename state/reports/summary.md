@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-07 16:15 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-07 16:40 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-07 16:15 UTC. Model fitted 2026-11-02T19:35. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 596 | 54 | 542 | 192 | -$89.49 | -1.5% | -0.3c (589) | $910.51 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 961 | 80 | 881 | 579 | -$464.94 | -8.2% | -1.6c (952) | $535.06 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 961 | 79 | 882 | 579 | -$465.48 | -8.2% | -1.6c (952) | $534.52 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -43,7 +43,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-07 14:54 | model-only | dota2 | InterActive Philippines | PuckChamp | NO PuckChamp | 24 | 0.69 | 0.78 | 0.68 | open | - |
 | 2026-11-07 14:54 | model-only | dota2 | angry birds | Xipto Esports | YES angry birds | 40 | 0.41 | 0.51 | 0.39 | open | - |
 | 2026-11-07 14:54 | model-only | dota2 | Amaru Gaming | Yakult's Brothers | NO Yakult's Brothers | 14 | 0.26 | 0.46 | 0.24 | open | - |
-| 2026-11-07 13:54 | favourite | cs2 | SAW Youngsters | Sokerorg | YES SAW Youngsters | 1 | 0.52 | 0.50 | 0.50 | open | - |
+| 2026-11-07 13:54 | favourite | cs2 | SAW Youngsters | Sokerorg | YES SAW Youngsters | 1 | 0.52 | 0.50 | 0.50 | lost | -$0.54 |
 | 2026-11-07 13:54 | favourite | cs2 | ex-Zero Tenacity | Leo Team | YES ex-Zero Tenacity | 1 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-07 13:54 | model-only | cs2 | Leo Team | ex-Zero Tenacity | YES Leo Team | 28 | 0.35 | 0.40 | 0.35 | open | - |
 | 2026-11-07 12:54 | favourite | cs2 | OG | G2 Ares | NO G2 Ares | 7 | 0.76 | 0.75 | 0.75 | won | $1.59 |
