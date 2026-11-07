@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-07 15:35 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-07 15:45 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 596 | 57 | 539 | 191 | -$128.36 | -2.1% | -0.3c (586) | $871.64 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 961 | 85 | 876 | 575 | -$468.78 | -8.3% | -1.6c (952) | $531.22 |
+| model-only | Elo win model alone (control: ignores the market) | 596 | 55 | 541 | 191 | -$146.16 | -2.4% | -0.3c (586) | $853.84 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 961 | 82 | 879 | 578 | -$462.74 | -8.1% | -1.6c (952) | $537.26 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-1962 finished matches. Lower is better; the market line is the bar to beat.
+1966 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5848 | 0.2013 |
-| model | 0.6514 | 0.2301 |
-| blend | 0.5851 | 0.2016 |
+| market | 0.5842 | 0.2011 |
+| model | 0.6513 | 0.2301 |
+| blend | 0.5845 | 0.2013 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1280 | 0.5956 | 0.6602 |
-| dota2 | 308 | 0.5499 | 0.6281 |
+| cs2 | 1283 | 0.5950 | 0.6599 |
+| dota2 | 309 | 0.5487 | 0.6289 |
 | ow | 117 | 0.5261 | 0.5356 |
 | valorant | 94 | 0.6392 | 0.6783 |
 | lol | 93 | 0.5681 | 0.7213 |
@@ -46,14 +46,14 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-07 13:54 | favourite | cs2 | SAW Youngsters | Sokerorg | YES SAW Youngsters | 1 | 0.52 | 0.50 | 0.50 | open | - |
 | 2026-11-07 13:54 | favourite | cs2 | ex-Zero Tenacity | Leo Team | YES ex-Zero Tenacity | 1 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-07 13:54 | model-only | cs2 | Leo Team | ex-Zero Tenacity | YES Leo Team | 28 | 0.35 | 0.40 | 0.35 | open | - |
-| 2026-11-07 12:54 | favourite | cs2 | OG | G2 Ares | NO G2 Ares | 7 | 0.76 | 0.75 | 0.75 | open | - |
+| 2026-11-07 12:54 | favourite | cs2 | OG | G2 Ares | NO G2 Ares | 7 | 0.76 | 0.75 | 0.75 | won | $1.59 |
 | 2026-11-07 12:54 | favourite | cs2 | 9INE | 6yuBoJlbl | YES 9INE | 7 | 0.72 | 0.71 | 0.71 | open | - |
 | 2026-11-07 12:54 | favourite | cs2 | aimclub | LPH Gaming | NO LPH Gaming | 8 | 0.62 | 0.60 | 0.60 | open | - |
-| 2026-11-07 12:54 | model-only | cs2 | G2 Ares | OG | YES G2 Ares | 66 | 0.25 | 0.43 | 0.25 | open | - |
-| 2026-11-07 12:54 | model-only | cs2 | Ryvex | Acend | NO Acend | 4 | 0.10 | 0.33 | 0.10 | open | - |
+| 2026-11-07 12:54 | model-only | cs2 | G2 Ares | OG | YES G2 Ares | 66 | 0.25 | 0.43 | 0.25 | lost | -$17.37 |
+| 2026-11-07 12:54 | model-only | cs2 | Ryvex | Acend | NO Acend | 4 | 0.10 | 0.33 | 0.10 | lost | -$0.43 |
 | 2026-11-07 12:54 | favourite | cs2 | Alliance | maybe | YES Alliance | 6 | 0.89 | 0.88 | 0.88 | open | - |
-| 2026-11-07 12:54 | favourite | cs2 | Acend | Ryvex | NO Ryvex | 6 | 0.90 | 0.90 | 0.90 | open | - |
-| 2026-11-07 12:54 | favourite | cs2 | Balkan Outlaws | The Last Resort | YES Balkan Outlaws | 9 | 0.55 | 0.54 | 0.54 | open | - |
+| 2026-11-07 12:54 | favourite | cs2 | Acend | Ryvex | NO Ryvex | 6 | 0.90 | 0.90 | 0.90 | won | $0.56 |
+| 2026-11-07 12:54 | favourite | cs2 | Balkan Outlaws | The Last Resort | YES Balkan Outlaws | 9 | 0.55 | 0.54 | 0.54 | won | $3.89 |
 | 2026-11-07 11:54 | model-only | dota2 | Xipto Esports | PlayTime | NO PlayTime | 43 | 0.39 | 0.58 | 0.38 | open | - |
 | 2026-11-07 11:54 | favourite | dota2 | CyberHero | Ka4kanarskie cyxariki | YES CyberHero | 8 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-11-07 11:54 | model-only | dota2 | PuckChamp | Nemiga Gaming | YES PuckChamp | 70 | 0.18 | 0.34 | 0.17 | open | - |
