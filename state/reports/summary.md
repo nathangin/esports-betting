@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-08 06:07 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-08 06:22 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 603 | 48 | 555 | 198 | -$116.21 | -1.9% | -0.2c (596) | $883.79 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 969 | 74 | 895 | 589 | -$457.70 | -8.0% | -1.6c (960) | $542.30 |
+| model-only | Elo win model alone (control: ignores the market) | 604 | 49 | 555 | 198 | -$116.21 | -1.9% | -0.2c (596) | $883.79 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 970 | 75 | 895 | 589 | -$457.70 | -8.0% | -1.6c (960) | $542.30 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -40,6 +40,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-08 06:21 | favourite | cs2 | MOUZ | TheMongolz | NO TheMongolz | 6 | 0.79 | 0.79 | 0.79 | open | - |
+| 2026-11-08 06:21 | model-only | cs2 | TheMongolz | MOUZ | NO MOUZ | 76 | 0.22 | 0.36 | 0.21 | open | - |
 | 2026-11-08 04:51 | favourite | valorant | Oasis Gaming | Maxxing | NO Maxxing | 7 | 0.75 | 0.69 | 0.70 | open | - |
 | 2026-11-08 02:51 | favourite | cs2 | Natus Vincere | BetBoom Team | YES Natus Vincere | 8 | 0.60 | 0.60 | 0.60 | won | $3.06 |
 | 2026-11-08 02:51 | model-only | cs2 | BetBoom Team | Natus Vincere | YES BetBoom Team | 42 | 0.40 | 0.54 | 0.40 | lost | -$17.51 |
@@ -49,8 +51,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-08 01:21 | model-only | r6 | Weibo Gaming | Geekay Esports | YES Weibo Gaming | 17 | 0.43 | 0.56 | 0.42 | lost | -$7.61 |
 | 2026-11-08 01:21 | favourite | r6 | FaZe Clan | G2 Esports | YES FaZe Clan | 9 | 0.52 | 0.50 | 0.50 | won | $4.16 |
 | 2026-11-08 01:21 | model-only | r6 | FaZe Clan | G2 Esports | YES FaZe Clan | 32 | 0.52 | 0.61 | 0.50 | won | $14.80 |
-| 2026-11-08 00:21 | model-only | r6 | Sharper Esport | EDward Gaming | YES Sharper Esport | 33 | 0.50 | 0.64 | 0.50 | won | $15.92 |
 | 2026-11-08 00:21 | favourite | r6 | 100 Thieves | Cloud9 | NO Cloud9 | 9 | 0.57 | 0.57 | 0.57 | lost | -$5.29 |
+| 2026-11-08 00:21 | model-only | r6 | Sharper Esport | EDward Gaming | YES Sharper Esport | 33 | 0.50 | 0.64 | 0.50 | won | $15.92 |
 | 2026-11-08 00:21 | favourite | r6 | EDward Gaming | Sharper Esport | YES EDward Gaming | 2 | 0.51 | 0.50 | 0.50 | lost | -$1.06 |
 | 2026-11-07 17:50 | model-only | cs2 | Rcave | Spirit HU | NO Spirit HU | 2 | 0.46 | 0.53 | 0.44 | won | $1.04 |
 | 2026-11-07 16:50 | model-only | cod | Riyadh Falcons | Toronto KOI | YES Riyadh Falcons | 15 | 0.45 | 0.54 | 0.45 | lost | -$7.01 |
@@ -63,8 +65,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-07 13:54 | model-only | cs2 | Leo Team | ex-Zero Tenacity | YES Leo Team | 28 | 0.35 | 0.40 | 0.35 | lost | -$10.25 |
 | 2026-11-07 12:54 | favourite | cs2 | OG | G2 Ares | NO G2 Ares | 7 | 0.76 | 0.75 | 0.75 | won | $1.59 |
 | 2026-11-07 12:54 | favourite | cs2 | 9INE | 6yuBoJlbl | YES 9INE | 7 | 0.72 | 0.71 | 0.71 | won | $1.86 |
-| 2026-11-07 12:54 | favourite | cs2 | aimclub | LPH Gaming | NO LPH Gaming | 8 | 0.62 | 0.60 | 0.60 | won | $2.90 |
-| 2026-11-07 12:54 | model-only | cs2 | G2 Ares | OG | YES G2 Ares | 66 | 0.25 | 0.43 | 0.25 | lost | -$17.37 |
 
 ## Backtest on real Kalshi prices
 
