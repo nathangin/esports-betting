@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-08 05:27 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-08 06:02 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 603 | 49 | 554 | 198 | -$98.70 | -1.6% | -0.2c (596) | $901.30 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 969 | 75 | 894 | 588 | -$460.76 | -8.0% | -1.6c (959) | $539.24 |
+| model-only | Elo win model alone (control: ignores the market) | 603 | 48 | 555 | 198 | -$116.21 | -1.9% | -0.2c (596) | $883.79 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 969 | 74 | 895 | 589 | -$457.70 | -8.0% | -1.6c (960) | $542.30 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -41,8 +41,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-11-08 04:51 | favourite | valorant | Oasis Gaming | Maxxing | NO Maxxing | 7 | 0.75 | 0.69 | 0.70 | open | - |
-| 2026-11-08 02:51 | favourite | cs2 | Natus Vincere | BetBoom Team | YES Natus Vincere | 8 | 0.60 | 0.60 | 0.60 | open | - |
-| 2026-11-08 02:51 | model-only | cs2 | BetBoom Team | Natus Vincere | YES BetBoom Team | 42 | 0.40 | 0.54 | 0.40 | open | - |
+| 2026-11-08 02:51 | favourite | cs2 | Natus Vincere | BetBoom Team | YES Natus Vincere | 8 | 0.60 | 0.60 | 0.60 | won | $3.06 |
+| 2026-11-08 02:51 | model-only | cs2 | BetBoom Team | Natus Vincere | YES BetBoom Team | 42 | 0.40 | 0.54 | 0.40 | lost | -$17.51 |
 | 2026-11-08 02:21 | favourite | r6 | Virtus.pro | ENTERPRISE Esports | NO ENTERPRISE Esports | 6 | 0.81 | 0.76 | 0.76 | won | $1.07 |
 | 2026-11-08 02:21 | favourite | r6 | Falcons Esport | Fluxo W7M | YES Falcons Esport | 7 | 0.67 | 0.65 | 0.65 | won | $2.20 |
 | 2026-11-08 01:21 | favourite | r6 | Geekay Esports | Weibo Gaming | YES Geekay Esports | 8 | 0.59 | 0.58 | 0.58 | won | $3.14 |
