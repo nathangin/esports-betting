@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-08 04:42 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-08 04:52 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-08 04:42 UTC. Model fitted 2026-11-02T19:35. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 603 | 49 | 554 | 198 | -$98.70 | -1.6% | -0.2c (596) | $901.30 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 968 | 75 | 893 | 587 | -$461.83 | -8.0% | -1.6c (959) | $538.17 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 969 | 75 | 894 | 588 | -$460.76 | -8.0% | -1.6c (959) | $539.24 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,7 +16,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2016 finished matches. Lower is better; the market line is the bar to beat.
+2019 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
@@ -29,9 +29,9 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | cs2 | 1305 | 0.5947 | 0.6597 |
 | dota2 | 323 | 0.5580 | 0.6363 |
 | ow | 118 | 0.5258 | 0.5321 |
+| valorant | 96 | 0.6402 | 0.6786 |
 | lol | 94 | 0.5645 | 0.7179 |
-| valorant | 94 | 0.6392 | 0.6783 |
-| r6 | 65 | 0.5956 | 0.6739 |
+| r6 | 66 | 0.5930 | 0.6715 |
 | cod | 17 | 0.5127 | 0.5460 |
 
 ## Latest bets
@@ -40,17 +40,18 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-08 04:51 | favourite | valorant | Oasis Gaming | Maxxing | NO Maxxing | 7 | 0.75 | 0.69 | 0.70 | open | - |
 | 2026-11-08 02:51 | favourite | cs2 | Natus Vincere | BetBoom Team | YES Natus Vincere | 8 | 0.60 | 0.60 | 0.60 | open | - |
 | 2026-11-08 02:51 | model-only | cs2 | BetBoom Team | Natus Vincere | YES BetBoom Team | 42 | 0.40 | 0.54 | 0.40 | open | - |
-| 2026-11-08 02:21 | favourite | r6 | Virtus.pro | ENTERPRISE Esports | NO ENTERPRISE Esports | 6 | 0.81 | 0.76 | 0.76 | open | - |
+| 2026-11-08 02:21 | favourite | r6 | Virtus.pro | ENTERPRISE Esports | NO ENTERPRISE Esports | 6 | 0.81 | 0.76 | 0.76 | won | $1.07 |
 | 2026-11-08 02:21 | favourite | r6 | Falcons Esport | Fluxo W7M | YES Falcons Esport | 7 | 0.67 | 0.65 | 0.65 | won | $2.20 |
 | 2026-11-08 01:21 | favourite | r6 | Geekay Esports | Weibo Gaming | YES Geekay Esports | 8 | 0.59 | 0.58 | 0.58 | won | $3.14 |
 | 2026-11-08 01:21 | model-only | r6 | Weibo Gaming | Geekay Esports | YES Weibo Gaming | 17 | 0.43 | 0.56 | 0.42 | lost | -$7.61 |
 | 2026-11-08 01:21 | favourite | r6 | FaZe Clan | G2 Esports | YES FaZe Clan | 9 | 0.52 | 0.50 | 0.50 | won | $4.16 |
 | 2026-11-08 01:21 | model-only | r6 | FaZe Clan | G2 Esports | YES FaZe Clan | 32 | 0.52 | 0.61 | 0.50 | won | $14.80 |
+| 2026-11-08 00:21 | model-only | r6 | Sharper Esport | EDward Gaming | YES Sharper Esport | 33 | 0.50 | 0.64 | 0.50 | won | $15.92 |
 | 2026-11-08 00:21 | favourite | r6 | 100 Thieves | Cloud9 | NO Cloud9 | 9 | 0.57 | 0.57 | 0.57 | lost | -$5.29 |
 | 2026-11-08 00:21 | favourite | r6 | EDward Gaming | Sharper Esport | YES EDward Gaming | 2 | 0.51 | 0.50 | 0.50 | lost | -$1.06 |
-| 2026-11-08 00:21 | model-only | r6 | Sharper Esport | EDward Gaming | YES Sharper Esport | 33 | 0.50 | 0.64 | 0.50 | won | $15.92 |
 | 2026-11-07 17:50 | model-only | cs2 | Rcave | Spirit HU | NO Spirit HU | 2 | 0.46 | 0.53 | 0.44 | won | $1.04 |
 | 2026-11-07 16:50 | model-only | cod | Riyadh Falcons | Toronto KOI | YES Riyadh Falcons | 15 | 0.45 | 0.54 | 0.45 | lost | -$7.01 |
 | 2026-11-07 16:50 | model-only | cod | OpTic Texas | Cloud9 New York | NO Cloud9 New York | 22 | 0.80 | 0.86 | 0.79 | won | $4.15 |
@@ -60,11 +61,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-07 13:54 | favourite | cs2 | SAW Youngsters | Sokerorg | YES SAW Youngsters | 1 | 0.52 | 0.50 | 0.50 | lost | -$0.54 |
 | 2026-11-07 13:54 | favourite | cs2 | ex-Zero Tenacity | Leo Team | YES ex-Zero Tenacity | 1 | 0.66 | 0.65 | 0.65 | won | $0.32 |
 | 2026-11-07 13:54 | model-only | cs2 | Leo Team | ex-Zero Tenacity | YES Leo Team | 28 | 0.35 | 0.40 | 0.35 | lost | -$10.25 |
-| 2026-11-07 12:54 | favourite | cs2 | Alliance | maybe | YES Alliance | 6 | 0.89 | 0.88 | 0.88 | won | $0.61 |
+| 2026-11-07 12:54 | favourite | cs2 | OG | G2 Ares | NO G2 Ares | 7 | 0.76 | 0.75 | 0.75 | won | $1.59 |
 | 2026-11-07 12:54 | favourite | cs2 | 9INE | 6yuBoJlbl | YES 9INE | 7 | 0.72 | 0.71 | 0.71 | won | $1.86 |
 | 2026-11-07 12:54 | favourite | cs2 | aimclub | LPH Gaming | NO LPH Gaming | 8 | 0.62 | 0.60 | 0.60 | won | $2.90 |
 | 2026-11-07 12:54 | model-only | cs2 | G2 Ares | OG | YES G2 Ares | 66 | 0.25 | 0.43 | 0.25 | lost | -$17.37 |
-| 2026-11-07 12:54 | favourite | cs2 | OG | G2 Ares | NO G2 Ares | 7 | 0.76 | 0.75 | 0.75 | won | $1.59 |
 
 ## Backtest on real Kalshi prices
 
