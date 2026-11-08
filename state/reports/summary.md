@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-08 14:33 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-08 14:53 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-08 14:33 UTC. Model fitted 2026-11-02T19:35. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 616 | 54 | 562 | 201 | -$154.45 | -2.5% | -0.3c (609) | $845.55 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 990 | 83 | 907 | 599 | -$441.75 | -7.6% | -1.6c (980) | $558.25 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 991 | 84 | 907 | 599 | -$441.75 | -7.6% | -1.6c (981) | $558.25 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,19 +16,19 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2042 finished matches. Lower is better; the market line is the bar to beat.
+2043 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
 | market | 0.5843 | 0.2011 |
 | model | 0.6506 | 0.2298 |
-| blend | 0.5845 | 0.2014 |
+| blend | 0.5846 | 0.2014 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 1314 | 0.5945 | 0.6589 |
 | dota2 | 328 | 0.5556 | 0.6344 |
-| ow | 119 | 0.5275 | 0.5338 |
+| ow | 120 | 0.5293 | 0.5352 |
 | valorant | 97 | 0.6410 | 0.6788 |
 | lol | 94 | 0.5645 | 0.7179 |
 | r6 | 73 | 0.5876 | 0.6652 |
@@ -40,6 +40,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-08 14:53 | favourite | cs2 | RED Canids Academy | BESTIA Academy | YES RED Canids Academy | 3 | 0.66 | 0.67 | 0.67 | open | - |
 | 2026-11-08 13:53 | favourite | cs2 | SAW Youngsters | MASONIC | NO MASONIC | 3 | 0.54 | 0.54 | 0.53 | open | - |
 | 2026-11-08 12:52 | favourite | cs2 | Balkan Outlaws | The Last Resort | YES Balkan Outlaws | 5 | 0.71 | 0.70 | 0.70 | open | - |
 | 2026-11-08 12:52 | model-only | cs2 | The Last Resort | Balkan Outlaws | NO Balkan Outlaws | 3 | 0.30 | 0.40 | 0.30 | open | - |
@@ -47,10 +48,10 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-08 12:52 | model-only | cs2 | G2 Ares | PRIVATE | NO PRIVATE | 1 | 0.18 | 0.33 | 0.17 | open | - |
 | 2026-11-08 12:52 | favourite | cs2 | 9INE | 6yuBoJlbl | YES 9INE | 8 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-08 12:52 | model-only | cs2 | 6yuBoJlbl | 9INE | NO 9INE | 10 | 0.36 | 0.53 | 0.35 | open | - |
-| 2026-11-08 11:52 | model-only | dota2 | Xipto Esports | Nemiga Gaming | NO Nemiga Gaming | 26 | 0.66 | 0.71 | 0.65 | open | - |
+| 2026-11-08 11:52 | favourite | dota2 | Xipto Esports | Nemiga Gaming | NO Nemiga Gaming | 7 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-08 11:52 | model-only | cs2 | Zetta Games | MEIA NOITE | NO MEIA NOITE | 6 | 0.18 | 0.42 | 0.18 | open | - |
 | 2026-11-08 11:52 | favourite | cs2 | MEIA NOITE | Zetta Games | YES MEIA NOITE | 6 | 0.83 | 0.82 | 0.82 | open | - |
-| 2026-11-08 11:52 | favourite | dota2 | Xipto Esports | Nemiga Gaming | NO Nemiga Gaming | 7 | 0.66 | 0.65 | 0.65 | open | - |
+| 2026-11-08 11:52 | model-only | dota2 | Xipto Esports | Nemiga Gaming | NO Nemiga Gaming | 26 | 0.66 | 0.71 | 0.65 | open | - |
 | 2026-11-08 11:52 | favourite | dota2 | Froglings | potn9ki | YES Froglings | 5 | 0.89 | 0.88 | 0.88 | open | - |
 | 2026-11-08 11:52 | model-only | dota2 | Team Synapse | Power Rangers | YES Team Synapse | 27 | 0.63 | 0.82 | 0.63 | open | - |
 | 2026-11-08 11:52 | favourite | dota2 | Team Synapse | Power Rangers | YES Team Synapse | 8 | 0.63 | 0.63 | 0.63 | open | - |
@@ -61,10 +62,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-08 08:52 | favourite | dota2 | Team Synapse | Nemiga Gaming | NO Nemiga Gaming | 7 | 0.68 | 0.66 | 0.66 | won | $2.13 |
 | 2026-11-08 08:52 | model-only | dota2 | angry birds | CyberHero | YES angry birds | 35 | 0.48 | 0.58 | 0.45 | lost | -$17.42 |
 | 2026-11-08 08:52 | favourite | dota2 | CyberHero | angry birds | NO angry birds | 9 | 0.58 | 0.55 | 0.55 | won | $3.62 |
-| 2026-11-08 08:52 | model-only | dota2 | Team Synapse | Nemiga Gaming | NO Nemiga Gaming | 17 | 0.68 | 0.82 | 0.66 | won | $5.18 |
 | 2026-11-08 08:52 | favourite | dota2 | PlayTime | Power Rangers | YES PlayTime | 7 | 0.70 | 0.70 | 0.70 | won | $1.99 |
+| 2026-11-08 08:52 | model-only | dota2 | Team Synapse | Nemiga Gaming | NO Nemiga Gaming | 17 | 0.68 | 0.82 | 0.66 | won | $5.18 |
 | 2026-11-08 08:52 | model-only | dota2 | Zero Tenacity | Inner Circle | NO Inner Circle | 37 | 0.46 | 0.53 | 0.43 | lost | -$17.67 |
-| 2026-11-08 08:52 | favourite | dota2 | Inner Circle | Zero Tenacity | YES Inner Circle | 8 | 0.60 | 0.57 | 0.57 | won | $3.06 |
 
 ## Backtest on real Kalshi prices
 
