@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-08 09:22 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-08 09:52 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 609 | 54 | 555 | 198 | -$116.21 | -1.9% | -0.2c (598) | $883.79 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 979 | 83 | 896 | 590 | -$455.84 | -7.9% | -1.6c (966) | $544.16 |
+| model-only | Elo win model alone (control: ignores the market) | 609 | 54 | 555 | 198 | -$116.21 | -1.9% | -0.2c (602) | $883.79 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 979 | 83 | 896 | 590 | -$455.84 | -7.9% | -1.6c (970) | $544.16 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,13 +16,13 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2025 finished matches. Lower is better; the market line is the bar to beat.
+2026 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5848 | 0.2013 |
-| model | 0.6516 | 0.2302 |
-| blend | 0.5850 | 0.2016 |
+| market | 0.5847 | 0.2013 |
+| model | 0.6514 | 0.2302 |
+| blend | 0.5849 | 0.2015 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
@@ -31,7 +31,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | ow | 118 | 0.5258 | 0.5321 |
 | valorant | 96 | 0.6402 | 0.6786 |
 | lol | 94 | 0.5645 | 0.7179 |
-| r6 | 71 | 0.5919 | 0.6686 |
+| r6 | 72 | 0.5890 | 0.6650 |
 | cod | 17 | 0.5127 | 0.5460 |
 
 ## Latest bets
