@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-08 16:08 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-08 16:13 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 616 | 51 | 565 | 201 | -$156.75 | -2.5% | -0.3c (609) | $843.25 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 991 | 79 | 912 | 603 | -$443.42 | -7.6% | -1.6c (982) | $556.58 |
+| model-only | Elo win model alone (control: ignores the market) | 616 | 49 | 567 | 202 | -$165.78 | -2.6% | -0.3c (609) | $834.22 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 991 | 77 | 914 | 604 | -$446.33 | -7.6% | -1.6c (982) | $553.67 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -48,13 +48,13 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-08 12:52 | model-only | cs2 | G2 Ares | PRIVATE | NO PRIVATE | 1 | 0.18 | 0.33 | 0.17 | lost | -$0.20 |
 | 2026-11-08 12:52 | favourite | cs2 | 9INE | 6yuBoJlbl | YES 9INE | 8 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-08 12:52 | model-only | cs2 | 6yuBoJlbl | 9INE | NO 9INE | 10 | 0.36 | 0.53 | 0.35 | open | - |
-| 2026-11-08 11:52 | favourite | dota2 | Xipto Esports | Nemiga Gaming | NO Nemiga Gaming | 7 | 0.66 | 0.65 | 0.65 | open | - |
+| 2026-11-08 11:52 | favourite | dota2 | Xipto Esports | Nemiga Gaming | NO Nemiga Gaming | 7 | 0.66 | 0.65 | 0.65 | won | $2.27 |
 | 2026-11-08 11:52 | model-only | cs2 | Zetta Games | MEIA NOITE | NO MEIA NOITE | 6 | 0.18 | 0.42 | 0.18 | lost | -$1.15 |
 | 2026-11-08 11:52 | favourite | cs2 | MEIA NOITE | Zetta Games | YES MEIA NOITE | 6 | 0.83 | 0.82 | 0.82 | won | $0.96 |
-| 2026-11-08 11:52 | model-only | dota2 | Xipto Esports | Nemiga Gaming | NO Nemiga Gaming | 26 | 0.66 | 0.71 | 0.65 | open | - |
+| 2026-11-08 11:52 | model-only | dota2 | Xipto Esports | Nemiga Gaming | NO Nemiga Gaming | 26 | 0.66 | 0.71 | 0.65 | won | $8.43 |
 | 2026-11-08 11:52 | favourite | dota2 | Froglings | potn9ki | YES Froglings | 5 | 0.89 | 0.88 | 0.88 | won | $0.51 |
-| 2026-11-08 11:52 | model-only | dota2 | Team Synapse | Power Rangers | YES Team Synapse | 27 | 0.63 | 0.82 | 0.63 | open | - |
-| 2026-11-08 11:52 | favourite | dota2 | Team Synapse | Power Rangers | YES Team Synapse | 8 | 0.63 | 0.63 | 0.63 | open | - |
+| 2026-11-08 11:52 | model-only | dota2 | Team Synapse | Power Rangers | YES Team Synapse | 27 | 0.63 | 0.82 | 0.63 | lost | -$17.46 |
+| 2026-11-08 11:52 | favourite | dota2 | Team Synapse | Power Rangers | YES Team Synapse | 8 | 0.63 | 0.63 | 0.63 | lost | -$5.18 |
 | 2026-11-08 10:52 | favourite | cs2 | Gothic | The Last Resort | YES Gothic | 9 | 0.54 | 0.51 | 0.51 | open | - |
 | 2026-11-08 10:52 | favourite | cs2 | Prestige | KUUSAMO.gg | NO KUUSAMO.gg | 8 | 0.65 | 0.65 | 0.65 | won | $2.67 |
 | 2026-11-08 10:52 | model-only | cs2 | Prestige | KUUSAMO.gg | NO KUUSAMO.gg | 19 | 0.65 | 0.70 | 0.65 | won | $6.34 |
