@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-08 10:07 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-08 10:12 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 609 | 54 | 555 | 198 | -$116.21 | -1.9% | -0.2c (602) | $883.79 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 979 | 83 | 896 | 590 | -$455.84 | -7.9% | -1.6c (970) | $544.16 |
+| model-only | Elo win model alone (control: ignores the market) | 609 | 53 | 556 | 198 | -$133.85 | -2.2% | -0.2c (602) | $866.15 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 979 | 82 | 897 | 591 | -$454.65 | -7.9% | -1.6c (970) | $545.35 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -54,8 +54,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-08 07:51 | model-only | cs2 | Spirit Academy | BASEMENT BOYS | NO BASEMENT BOYS | 38 | 0.44 | 0.60 | 0.43 | open | - |
 | 2026-11-08 07:51 | favourite | cs2 | BASEMENT BOYS | Spirit Academy | YES BASEMENT BOYS | 9 | 0.58 | 0.57 | 0.57 | open | - |
 | 2026-11-08 07:36 | favourite | r6 | Weibo Gaming | EDward Gaming | YES Weibo Gaming | 7 | 0.72 | 0.68 | 0.68 | won | $1.86 |
-| 2026-11-08 06:21 | favourite | cs2 | MOUZ | TheMongolz | NO TheMongolz | 6 | 0.79 | 0.79 | 0.79 | open | - |
-| 2026-11-08 06:21 | model-only | cs2 | TheMongolz | MOUZ | NO MOUZ | 76 | 0.22 | 0.36 | 0.21 | open | - |
+| 2026-11-08 06:21 | favourite | cs2 | MOUZ | TheMongolz | NO TheMongolz | 6 | 0.79 | 0.79 | 0.79 | won | $1.19 |
+| 2026-11-08 06:21 | model-only | cs2 | TheMongolz | MOUZ | NO MOUZ | 76 | 0.22 | 0.36 | 0.21 | lost | -$17.64 |
 | 2026-11-08 04:51 | favourite | valorant | Oasis Gaming | Maxxing | NO Maxxing | 7 | 0.75 | 0.69 | 0.70 | open | - |
 | 2026-11-08 02:51 | favourite | cs2 | Natus Vincere | BetBoom Team | YES Natus Vincere | 8 | 0.60 | 0.60 | 0.60 | won | $3.06 |
 | 2026-11-08 02:51 | model-only | cs2 | BetBoom Team | Natus Vincere | YES BetBoom Team | 42 | 0.40 | 0.54 | 0.40 | lost | -$17.51 |
