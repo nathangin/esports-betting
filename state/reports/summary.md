@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-08 02:52 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-08 03:22 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 603 | 51 | 552 | 197 | -$105.89 | -1.7% | -0.2c (595) | $894.11 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 968 | 78 | 890 | 584 | -$471.33 | -8.2% | -1.6c (956) | $528.67 |
+| model-only | Elo win model alone (control: ignores the market) | 603 | 50 | 553 | 198 | -$91.09 | -1.5% | -0.2c (595) | $908.91 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 968 | 77 | 891 | 585 | -$467.17 | -8.1% | -1.6c (958) | $532.83 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -46,8 +46,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-08 02:21 | favourite | r6 | Falcons Esport | Fluxo W7M | YES Falcons Esport | 7 | 0.67 | 0.65 | 0.65 | open | - |
 | 2026-11-08 01:21 | favourite | r6 | Geekay Esports | Weibo Gaming | YES Geekay Esports | 8 | 0.59 | 0.58 | 0.58 | open | - |
 | 2026-11-08 01:21 | model-only | r6 | Weibo Gaming | Geekay Esports | YES Weibo Gaming | 17 | 0.43 | 0.56 | 0.42 | open | - |
-| 2026-11-08 01:21 | favourite | r6 | FaZe Clan | G2 Esports | YES FaZe Clan | 9 | 0.52 | 0.50 | 0.50 | open | - |
-| 2026-11-08 01:21 | model-only | r6 | FaZe Clan | G2 Esports | YES FaZe Clan | 32 | 0.52 | 0.61 | 0.50 | open | - |
+| 2026-11-08 01:21 | favourite | r6 | FaZe Clan | G2 Esports | YES FaZe Clan | 9 | 0.52 | 0.50 | 0.50 | won | $4.16 |
+| 2026-11-08 01:21 | model-only | r6 | FaZe Clan | G2 Esports | YES FaZe Clan | 32 | 0.52 | 0.61 | 0.50 | won | $14.80 |
 | 2026-11-08 00:21 | favourite | r6 | 100 Thieves | Cloud9 | NO Cloud9 | 9 | 0.57 | 0.57 | 0.57 | lost | -$5.29 |
 | 2026-11-08 00:21 | favourite | r6 | EDward Gaming | Sharper Esport | YES EDward Gaming | 2 | 0.51 | 0.50 | 0.50 | lost | -$1.06 |
 | 2026-11-08 00:21 | model-only | r6 | Sharper Esport | EDward Gaming | YES Sharper Esport | 33 | 0.50 | 0.64 | 0.50 | won | $15.92 |
