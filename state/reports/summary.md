@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-08 15:53 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-08 16:03 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 616 | 52 | 564 | 201 | -$156.55 | -2.5% | -0.3c (609) | $843.45 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 991 | 81 | 910 | 601 | -$444.83 | -7.6% | -1.6c (982) | $555.17 |
+| model-only | Elo win model alone (control: ignores the market) | 616 | 51 | 565 | 201 | -$156.75 | -2.5% | -0.3c (609) | $843.25 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 991 | 79 | 912 | 603 | -$443.42 | -7.6% | -1.6c (982) | $556.58 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,19 +16,19 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2047 finished matches. Lower is better; the market line is the bar to beat.
+2049 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5840 | 0.2010 |
+| market | 0.5839 | 0.2010 |
 | model | 0.6506 | 0.2298 |
-| blend | 0.5842 | 0.2013 |
+| blend | 0.5841 | 0.2012 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1317 | 0.5936 | 0.6585 |
+| cs2 | 1318 | 0.5933 | 0.6583 |
 | dota2 | 329 | 0.5572 | 0.6358 |
-| ow | 120 | 0.5293 | 0.5352 |
+| ow | 121 | 0.5304 | 0.5383 |
 | valorant | 97 | 0.6410 | 0.6788 |
 | lol | 94 | 0.5645 | 0.7179 |
 | r6 | 73 | 0.5876 | 0.6652 |
@@ -44,15 +44,15 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-08 13:53 | favourite | cs2 | SAW Youngsters | MASONIC | NO MASONIC | 3 | 0.54 | 0.54 | 0.53 | open | - |
 | 2026-11-08 12:52 | favourite | cs2 | Balkan Outlaws | The Last Resort | YES Balkan Outlaws | 5 | 0.71 | 0.70 | 0.70 | won | $1.37 |
 | 2026-11-08 12:52 | model-only | cs2 | The Last Resort | Balkan Outlaws | NO Balkan Outlaws | 3 | 0.30 | 0.40 | 0.30 | lost | -$0.95 |
-| 2026-11-08 12:52 | favourite | cs2 | PRIVATE | G2 Ares | YES PRIVATE | 6 | 0.84 | 0.83 | 0.83 | open | - |
-| 2026-11-08 12:52 | model-only | cs2 | G2 Ares | PRIVATE | NO PRIVATE | 1 | 0.18 | 0.33 | 0.17 | open | - |
+| 2026-11-08 12:52 | favourite | cs2 | PRIVATE | G2 Ares | YES PRIVATE | 6 | 0.84 | 0.83 | 0.83 | won | $0.90 |
+| 2026-11-08 12:52 | model-only | cs2 | G2 Ares | PRIVATE | NO PRIVATE | 1 | 0.18 | 0.33 | 0.17 | lost | -$0.20 |
 | 2026-11-08 12:52 | favourite | cs2 | 9INE | 6yuBoJlbl | YES 9INE | 8 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-08 12:52 | model-only | cs2 | 6yuBoJlbl | 9INE | NO 9INE | 10 | 0.36 | 0.53 | 0.35 | open | - |
 | 2026-11-08 11:52 | favourite | dota2 | Xipto Esports | Nemiga Gaming | NO Nemiga Gaming | 7 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-08 11:52 | model-only | cs2 | Zetta Games | MEIA NOITE | NO MEIA NOITE | 6 | 0.18 | 0.42 | 0.18 | lost | -$1.15 |
 | 2026-11-08 11:52 | favourite | cs2 | MEIA NOITE | Zetta Games | YES MEIA NOITE | 6 | 0.83 | 0.82 | 0.82 | won | $0.96 |
 | 2026-11-08 11:52 | model-only | dota2 | Xipto Esports | Nemiga Gaming | NO Nemiga Gaming | 26 | 0.66 | 0.71 | 0.65 | open | - |
-| 2026-11-08 11:52 | favourite | dota2 | Froglings | potn9ki | YES Froglings | 5 | 0.89 | 0.88 | 0.88 | open | - |
+| 2026-11-08 11:52 | favourite | dota2 | Froglings | potn9ki | YES Froglings | 5 | 0.89 | 0.88 | 0.88 | won | $0.51 |
 | 2026-11-08 11:52 | model-only | dota2 | Team Synapse | Power Rangers | YES Team Synapse | 27 | 0.63 | 0.82 | 0.63 | open | - |
 | 2026-11-08 11:52 | favourite | dota2 | Team Synapse | Power Rangers | YES Team Synapse | 8 | 0.63 | 0.63 | 0.63 | open | - |
 | 2026-11-08 10:52 | favourite | cs2 | Gothic | The Last Resort | YES Gothic | 9 | 0.54 | 0.51 | 0.51 | open | - |
