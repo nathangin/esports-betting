@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-08 10:52 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-08 11:02 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 610 | 54 | 556 | 198 | -$133.85 | -2.2% | -0.2c (602) | $866.15 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 982 | 84 | 898 | 591 | -$459.86 | -8.0% | -1.6c (970) | $540.14 |
+| model-only | Elo win model alone (control: ignores the market) | 610 | 53 | 557 | 199 | -$113.23 | -1.8% | -0.2c (602) | $886.77 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 982 | 83 | 899 | 591 | -$465.24 | -8.1% | -1.6c (970) | $534.76 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -52,8 +52,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-08 08:52 | model-only | dota2 | Zero Tenacity | Inner Circle | NO Inner Circle | 37 | 0.46 | 0.53 | 0.43 | open | - |
 | 2026-11-08 08:52 | favourite | dota2 | Inner Circle | Zero Tenacity | YES Inner Circle | 8 | 0.60 | 0.57 | 0.57 | open | - |
 | 2026-11-08 08:52 | model-only | dota2 | Zenith | Xipto Esports | YES Zenith | 166 | 0.10 | 0.31 | 0.10 | open | - |
-| 2026-11-08 07:51 | favourite | cs2 | BASEMENT BOYS | Spirit Academy | YES BASEMENT BOYS | 9 | 0.58 | 0.57 | 0.57 | open | - |
-| 2026-11-08 07:51 | model-only | cs2 | Spirit Academy | BASEMENT BOYS | NO BASEMENT BOYS | 38 | 0.44 | 0.60 | 0.43 | open | - |
+| 2026-11-08 07:51 | favourite | cs2 | BASEMENT BOYS | Spirit Academy | YES BASEMENT BOYS | 9 | 0.58 | 0.57 | 0.57 | lost | -$5.38 |
+| 2026-11-08 07:51 | model-only | cs2 | Spirit Academy | BASEMENT BOYS | NO BASEMENT BOYS | 38 | 0.44 | 0.60 | 0.43 | won | $20.62 |
 | 2026-11-08 07:51 | favourite | cs2 | Inner Circle Academy | G2 Ares | NO G2 Ares | 8 | 0.56 | 0.54 | 0.54 | open | - |
 | 2026-11-08 07:51 | favourite | cs2 | ILLYRIANS | Bebop | NO Bebop | 8 | 0.64 | 0.63 | 0.63 | open | - |
 | 2026-11-08 07:51 | favourite | cs2 | Esport Academy Copenhagen | BRUTE SQ | NO BRUTE SQ | 7 | 0.73 | 0.72 | 0.72 | lost | -$5.21 |
