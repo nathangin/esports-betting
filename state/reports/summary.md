@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-09 12:06 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-09 12:41 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-09 12:06 UTC. Model fitted 2026-11-02T19:35. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 628 | 59 | 569 | 202 | -$185.92 | -2.9% | -0.2c (618) | $814.08 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1011 | 89 | 922 | 609 | -$451.82 | -7.7% | -1.6c (998) | $548.18 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1011 | 88 | 923 | 609 | -$457.29 | -7.8% | -1.6c (998) | $542.71 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -63,7 +63,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-09 08:50 | model-only | dota2 | Xipto Esports | HULIGANI | NO HULIGANI | 36 | 0.43 | 0.65 | 0.42 | open | - |
 | 2026-11-09 07:50 | favourite | cs2 | Prestige | Sokerorg | YES Prestige | 9 | 0.56 | 0.55 | 0.55 | lost | -$5.20 |
 | 2026-11-09 07:50 | favourite | cs2 | FORZE Reload | maybe | YES FORZE Reload | 7 | 0.71 | 0.70 | 0.70 | open | - |
-| 2026-11-09 07:50 | favourite | cs2 | Walczaki | Noir Verse | YES Walczaki | 9 | 0.59 | 0.59 | 0.59 | open | - |
+| 2026-11-09 07:50 | favourite | cs2 | Walczaki | Noir Verse | YES Walczaki | 9 | 0.59 | 0.59 | 0.59 | lost | -$5.47 |
 | 2026-11-09 07:50 | model-only | cs2 | TheChampionGG | STATE | YES TheChampionGG | 153 | 0.10 | 0.26 | 0.08 | open | - |
 
 ## Backtest on real Kalshi prices

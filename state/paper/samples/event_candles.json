@@ -1,34 +1,53 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXOWGAME/events/KXOWGAME-26NOV070730BENJUN/candlesticks?start_ts=1794052800&end_ts=1794054660&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXDOTA2GAME/events/KXDOTA2GAME-26NOV071000RLHKR/candlesticks?start_ts=1794061800&end_ts=1794063660&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1794054660,
+  "adjusted_end_ts": 1794063660,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1794053040,
+     "end_period_ts": 1794063660,
      "open_interest_fp": "0.00",
      "price": {},
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9300",
-      "high_dollars": "0.9300",
-      "low_dollars": "0.9300",
-      "open_dollars": "0.9300"
+      "close_dollars": "0.9400",
+      "high_dollars": "0.9400",
+      "low_dollars": "0.9400",
+      "open_dollars": "0.9400"
      },
      "yes_bid": {
-      "close_dollars": "0.0500",
+      "close_dollars": "0.0600",
       "high_dollars": "0.0600",
-      "low_dollars": "0.0500",
+      "low_dollars": "0.0600",
       "open_dollars": "0.0600"
      }
     }
    ],
-   []
+   [
+    {
+     "end_period_ts": 1794063660,
+     "open_interest_fp": "0.00",
+     "price": {},
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.9400",
+      "high_dollars": "0.9400",
+      "low_dollars": "0.9400",
+      "open_dollars": "0.9400"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0400",
+      "high_dollars": "0.0500",
+      "low_dollars": "0.0400",
+      "open_dollars": "0.0500"
+     }
+    }
+   ]
   ],
   "market_tickers": [
-   "KXOWGAME-26NOV070730BENJUN-BEN",
-   "KXOWGAME-26NOV070730BENJUN-JUN"
+   "KXDOTA2GAME-26NOV071000RLHKR-RL",
+   "KXDOTA2GAME-26NOV071000RLHKR-HKR"
   ]
  }
 }
