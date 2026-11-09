@@ -1,125 +1,15 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXVALORANTGAME/events/KXVALORANTGAME-26NOV070300ANAFER/candlesticks?start_ts=1794036600&end_ts=1794038460&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXR6GAME/events/KXR6GAME-26NOV070430ALLWBG/candlesticks?start_ts=1794042000&end_ts=1794043860&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1794038460,
+  "adjusted_end_ts": 1794043860,
   "market_candlesticks": [
-   [
-    {
-     "end_period_ts": 1794037380,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.9300",
-      "high_dollars": "0.9400",
-      "low_dollars": "0.9300",
-      "open_dollars": "0.9400"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0600",
-      "high_dollars": "0.0600",
-      "low_dollars": "0.0600",
-      "open_dollars": "0.0600"
-     }
-    },
-    {
-     "end_period_ts": 1794037440,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.9300",
-      "high_dollars": "0.9300",
-      "low_dollars": "0.9300",
-      "open_dollars": "0.9300"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0700",
-      "high_dollars": "0.0700",
-      "low_dollars": "0.0600",
-      "open_dollars": "0.0600"
-     }
-    },
-    {
-     "end_period_ts": 1794038460,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.9300",
-      "high_dollars": "0.9400",
-      "low_dollars": "0.9300",
-      "open_dollars": "0.9300"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0300",
-      "high_dollars": "0.0700",
-      "low_dollars": "0.0300",
-      "open_dollars": "0.0700"
-     }
-    }
-   ],
-   [
-    {
-     "end_period_ts": 1794037380,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.9300",
-      "high_dollars": "0.9300",
-      "low_dollars": "0.9300",
-      "open_dollars": "0.9300"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0700",
-      "high_dollars": "0.0700",
-      "low_dollars": "0.0600",
-      "open_dollars": "0.0600"
-     }
-    },
-    {
-     "end_period_ts": 1794037440,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.9200",
-      "high_dollars": "0.9300",
-      "low_dollars": "0.9200",
-      "open_dollars": "0.9300"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0700",
-      "high_dollars": "0.0700",
-      "low_dollars": "0.0700",
-      "open_dollars": "0.0700"
-     }
-    },
-    {
-     "end_period_ts": 1794038460,
-     "open_interest_fp": "0.00",
-     "price": {},
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.9200",
-      "high_dollars": "0.9300",
-      "low_dollars": "0.9200",
-      "open_dollars": "0.9200"
-     },
-     "yes_bid": {
-      "close_dollars": "0.0300",
-      "high_dollars": "0.0700",
-      "low_dollars": "0.0300",
-      "open_dollars": "0.0700"
-     }
-    }
-   ]
+   [],
+   []
   ],
   "market_tickers": [
-   "KXVALORANTGAME-26NOV070300ANAFER-ANA",
-   "KXVALORANTGAME-26NOV070300ANAFER-FER"
+   "KXR6GAME-26NOV070430ALLWBG-ALL",
+   "KXR6GAME-26NOV070430ALLWBG-WBG"
   ]
  }
 }
