@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-09 04:44 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-09 04:54 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-09 04:44 UTC. Model fitted 2026-11-02T19:35. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 618 | 49 | 569 | 202 | -$185.92 | -2.9% | -0.3c (611) | $814.08 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 996 | 78 | 918 | 607 | -$442.53 | -7.5% | -1.6c (985) | $557.47 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 996 | 77 | 919 | 607 | -$447.82 | -7.6% | -1.6c (985) | $552.18 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,13 +16,13 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2088 finished matches. Lower is better; the market line is the bar to beat.
+2089 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5848 | 0.2013 |
-| model | 0.6512 | 0.2300 |
-| blend | 0.5850 | 0.2015 |
+| market | 0.5849 | 0.2014 |
+| model | 0.6513 | 0.2301 |
+| blend | 0.5852 | 0.2016 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
@@ -31,7 +31,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | ow | 121 | 0.5304 | 0.5383 |
 | valorant | 102 | 0.6397 | 0.6752 |
 | lol | 95 | 0.5646 | 0.7154 |
-| r6 | 74 | 0.5845 | 0.6660 |
+| r6 | 75 | 0.5878 | 0.6687 |
 | cod | 20 | 0.5911 | 0.6189 |
 
 ## Latest bets
@@ -42,7 +42,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-11-09 04:24 | favourite | r6 | Team Liquid | Geekay Esports | NO Geekay Esports | 1 | 0.62 | 0.60 | 0.60 | open | - |
 | 2026-11-09 04:24 | favourite | r6 | Fluxo W7M | EDward Gaming | NO EDward Gaming | 6 | 0.85 | 0.83 | 0.83 | open | - |
-| 2026-11-09 01:24 | favourite | r6 | FaZe Clan | Falcons Esport | YES FaZe Clan | 9 | 0.57 | 0.57 | 0.57 | open | - |
+| 2026-11-09 01:24 | favourite | r6 | FaZe Clan | Falcons Esport | YES FaZe Clan | 9 | 0.57 | 0.57 | 0.57 | lost | -$5.29 |
 | 2026-11-09 01:24 | favourite | r6 | 100 Thieves | ENTERPRISE Esports | NO ENTERPRISE Esports | 7 | 0.71 | 0.70 | 0.70 | won | $1.92 |
 | 2026-11-09 01:24 | model-only | r6 | ENTERPRISE Esports | 100 Thieves | YES ENTERPRISE Esports | 52 | 0.30 | 0.52 | 0.30 | lost | -$16.37 |
 | 2026-11-09 00:24 | favourite | r6 | M80 | Sharper Esport | YES M80 | 9 | 0.57 | 0.56 | 0.56 | open | - |
