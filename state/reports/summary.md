@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-09 19:07 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-09 19:11 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 636 | 50 | 586 | 208 | -$157.24 | -2.4% | -0.2c (629) | $842.76 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1024 | 82 | 942 | 621 | -$455.73 | -7.6% | -1.6c (1015) | $544.27 |
+| model-only | Elo win model alone (control: ignores the market) | 636 | 49 | 587 | 208 | -$161.27 | -2.5% | -0.2c (629) | $838.73 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1024 | 81 | 943 | 622 | -$452.59 | -7.6% | -1.6c (1015) | $547.41 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2122 finished matches. Lower is better; the market line is the bar to beat.
+2123 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
 | market | 0.5846 | 0.2013 |
-| model | 0.6516 | 0.2302 |
+| model | 0.6517 | 0.2302 |
 | blend | 0.5848 | 0.2015 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1353 | 0.5932 | 0.6581 |
+| cs2 | 1354 | 0.5932 | 0.6582 |
 | dota2 | 354 | 0.5602 | 0.6402 |
 | ow | 121 | 0.5304 | 0.5383 |
 | valorant | 102 | 0.6397 | 0.6752 |
