@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-09 17:07 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-09 17:11 UTC. Model fitted 2026-11-02T19:35. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 636 | 60 | 576 | 206 | -$136.81 | -2.1% | -0.2c (629) | $863.19 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1022 | 89 | 933 | 615 | -$458.73 | -7.7% | -1.6c (1012) | $541.27 |
+| model-only | Elo win model alone (control: ignores the market) | 636 | 59 | 577 | 207 | -$123.69 | -1.9% | -0.2c (629) | $876.31 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1022 | 87 | 935 | 617 | -$452.80 | -7.6% | -1.6c (1012) | $547.20 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -56,9 +56,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-09 13:51 | model-only | cs2 | Butterfly | Nexus | NO Nexus | 33 | 0.42 | 0.48 | 0.42 | open | - |
 | 2026-11-09 13:51 | favourite | cs2 | ILLYRIANS | Phantom Academy | NO Phantom Academy | 8 | 0.58 | 0.58 | 0.58 | open | - |
 | 2026-11-09 13:51 | model-only | cs2 | Phantom Academy | ILLYRIANS | NO ILLYRIANS | 2 | 0.42 | 0.50 | 0.42 | open | - |
-| 2026-11-09 12:51 | favourite | cs2 | FOKUS | Alliance | NO Alliance | 9 | 0.53 | 0.53 | 0.53 | open | - |
-| 2026-11-09 12:51 | model-only | cs2 | FOKUS | Alliance | NO Alliance | 29 | 0.53 | 0.71 | 0.53 | open | - |
-| 2026-11-09 12:51 | favourite | cs2 | 9INE | aimclub | YES 9INE | 7 | 0.72 | 0.71 | 0.71 | open | - |
+| 2026-11-09 12:51 | favourite | cs2 | FOKUS | Alliance | NO Alliance | 9 | 0.53 | 0.53 | 0.53 | won | $4.07 |
+| 2026-11-09 12:51 | model-only | cs2 | FOKUS | Alliance | NO Alliance | 29 | 0.53 | 0.71 | 0.53 | won | $13.12 |
+| 2026-11-09 12:51 | favourite | cs2 | 9INE | aimclub | YES 9INE | 7 | 0.72 | 0.71 | 0.71 | won | $1.86 |
 | 2026-11-09 11:51 | favourite | dota2 | Team Lynx | potn9ki | YES Team Lynx | 7 | 0.73 | 0.72 | 0.72 | open | - |
 | 2026-11-09 11:51 | model-only | dota2 | Froglings | PlayTime | YES Froglings | 30 | 0.51 | 0.58 | 0.51 | open | - |
 | 2026-11-09 11:51 | model-only | dota2 | potn9ki | Team Lynx | NO Team Lynx | 11 | 0.29 | 0.37 | 0.28 | open | - |
