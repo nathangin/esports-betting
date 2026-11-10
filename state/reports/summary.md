@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-10 11:38 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-10 11:43 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 645 | 57 | 588 | 208 | -$171.19 | -2.6% | -0.2c (635) | $828.81 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1043 | 90 | 953 | 628 | -$453.96 | -7.6% | -1.6c (1028) | $546.04 |
+| model-only | Elo win model alone (control: ignores the market) | 645 | 56 | 589 | 209 | -$138.62 | -2.1% | -0.2c (635) | $861.38 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1043 | 89 | 954 | 628 | -$458.97 | -7.6% | -1.6c (1028) | $541.03 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2155 finished matches. Lower is better; the market line is the bar to beat.
+2156 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5858 | 0.2017 |
-| model | 0.6516 | 0.2302 |
-| blend | 0.5862 | 0.2020 |
+| market | 0.5861 | 0.2019 |
+| model | 0.6517 | 0.2302 |
+| blend | 0.5865 | 0.2021 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1370 | 0.5939 | 0.6584 |
+| cs2 | 1371 | 0.5943 | 0.6585 |
 | dota2 | 361 | 0.5624 | 0.6405 |
 | ow | 121 | 0.5304 | 0.5383 |
 | valorant | 103 | 0.6402 | 0.6754 |
@@ -61,8 +61,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-10 08:53 | favourite | dota2 | Team Synapse | Zenith | YES Team Synapse | 6 | 0.87 | 0.87 | 0.87 | open | - |
 | 2026-11-10 07:53 | favourite | cs2 | NAVI Junior | Sokerorg | YES NAVI Junior | 7 | 0.72 | 0.70 | 0.70 | open | - |
 | 2026-11-10 07:53 | model-only | cs2 | Sokerorg | NAVI Junior | NO NAVI Junior | 51 | 0.31 | 0.45 | 0.30 | open | - |
-| 2026-11-10 07:53 | favourite | cs2 | Brute | ILLYRIANS | YES Brute | 7 | 0.70 | 0.69 | 0.69 | open | - |
-| 2026-11-10 07:53 | model-only | cs2 | ILLYRIANS | Brute | YES ILLYRIANS | 49 | 0.32 | 0.42 | 0.31 | open | - |
+| 2026-11-10 07:53 | favourite | cs2 | Brute | ILLYRIANS | YES Brute | 7 | 0.70 | 0.69 | 0.69 | lost | -$5.01 |
+| 2026-11-10 07:53 | model-only | cs2 | ILLYRIANS | Brute | YES ILLYRIANS | 49 | 0.32 | 0.42 | 0.31 | won | $32.57 |
 | 2026-11-10 07:53 | favourite | cs2 | Copenhagen Wolves | Bad Beavers | NO Bad Beavers | 6 | 0.81 | 0.81 | 0.80 | won | $1.07 |
 | 2026-11-10 05:23 | favourite | r6 | G2 Esports | Geekay Esports | YES G2 Esports | 6 | 0.90 | 0.86 | 0.86 | won | $0.56 |
 
