@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-10 13:23 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-10 13:43 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 647 | 57 | 590 | 209 | -$147.38 | -2.2% | -0.2c (640) | $852.62 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1047 | 90 | 957 | 631 | -$452.67 | -7.5% | -1.6c (1036) | $547.33 |
+| model-only | Elo win model alone (control: ignores the market) | 647 | 56 | 591 | 209 | -$163.86 | -2.5% | -0.2c (640) | $836.14 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1047 | 88 | 959 | 633 | -$450.29 | -7.5% | -1.6c (1036) | $549.71 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2159 finished matches. Lower is better; the market line is the bar to beat.
+2160 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5858 | 0.2017 |
-| model | 0.6515 | 0.2301 |
-| blend | 0.5861 | 0.2020 |
+| market | 0.5856 | 0.2017 |
+| model | 0.6514 | 0.2301 |
+| blend | 0.5860 | 0.2019 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1372 | 0.5942 | 0.6584 |
+| cs2 | 1373 | 0.5940 | 0.6582 |
 | dota2 | 363 | 0.5609 | 0.6399 |
 | ow | 121 | 0.5304 | 0.5383 |
 | valorant | 103 | 0.6402 | 0.6754 |
@@ -55,7 +55,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-10 10:53 | model-only | dota2 | Level Up Academy | oveA | YES Level Up Academy | 32 | 0.49 | 0.55 | 0.48 | open | - |
 | 2026-11-10 10:53 | favourite | dota2 | oveA | Level Up Academy | YES oveA | 10 | 0.52 | 0.52 | 0.52 | open | - |
 | 2026-11-10 10:23 | favourite | cs2 | The Chosen Few | Passion Academy | YES The Chosen Few | 8 | 0.60 | 0.60 | 0.60 | won | $3.06 |
-| 2026-11-10 10:23 | favourite | cs2 | FORZE Reload | MOUZ NXT | NO MOUZ NXT | 7 | 0.75 | 0.75 | 0.75 | open | - |
+| 2026-11-10 10:23 | favourite | cs2 | FORZE Reload | MOUZ NXT | NO MOUZ NXT | 7 | 0.75 | 0.75 | 0.75 | won | $1.65 |
 | 2026-11-10 08:53 | favourite | dota2 | PlayTime | Nemiga Gaming | YES PlayTime | 7 | 0.75 | 0.75 | 0.75 | won | $1.65 |
 | 2026-11-10 08:53 | favourite | dota2 | Team Allied | Time to Sleep | YES Team Allied | 7 | 0.76 | 0.75 | 0.75 | won | $1.59 |
 | 2026-11-10 08:53 | favourite | dota2 | LEGION | Yellow Submarine | YES LEGION | 9 | 0.53 | 0.53 | 0.53 | open | - |
@@ -63,8 +63,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-10 08:53 | model-only | dota2 | Yellow Submarine | LEGION | NO LEGION | 33 | 0.48 | 0.61 | 0.47 | open | - |
 | 2026-11-10 08:53 | model-only | dota2 | potn9ki | Xipto Esports | YES potn9ki | 76 | 0.14 | 0.28 | 0.14 | open | - |
 | 2026-11-10 08:53 | favourite | dota2 | Xipto Esports | potn9ki | YES Xipto Esports | 6 | 0.86 | 0.86 | 0.86 | open | - |
-| 2026-11-10 08:53 | model-only | dota2 | Zenith | Team Synapse | NO Team Synapse | 111 | 0.14 | 0.23 | 0.13 | open | - |
-| 2026-11-10 08:53 | favourite | dota2 | Team Synapse | Zenith | YES Team Synapse | 6 | 0.87 | 0.87 | 0.87 | open | - |
+| 2026-11-10 08:53 | model-only | dota2 | Zenith | Team Synapse | NO Team Synapse | 111 | 0.14 | 0.23 | 0.13 | lost | -$16.48 |
+| 2026-11-10 08:53 | favourite | dota2 | Team Synapse | Zenith | YES Team Synapse | 6 | 0.87 | 0.87 | 0.87 | won | $0.73 |
 
 ## Backtest on real Kalshi prices
 
