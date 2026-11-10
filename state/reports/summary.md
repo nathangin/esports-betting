@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-10 16:34 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-10 16:54 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 652 | 55 | 597 | 210 | -$223.93 | -3.4% | -0.2c (643) | $776.07 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1054 | 87 | 967 | 639 | -$440.80 | -7.3% | -1.6c (1043) | $559.20 |
+| model-only | Elo win model alone (control: ignores the market) | 652 | 55 | 597 | 210 | -$223.93 | -3.4% | -0.2c (644) | $776.07 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1055 | 88 | 967 | 639 | -$440.80 | -7.3% | -1.6c (1043) | $559.20 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2175 finished matches. Lower is better; the market line is the bar to beat.
+2176 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5852 | 0.2015 |
-| model | 0.6510 | 0.2299 |
-| blend | 0.5855 | 0.2017 |
+| market | 0.5850 | 0.2014 |
+| model | 0.6509 | 0.2299 |
+| blend | 0.5853 | 0.2016 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 1376 | 0.5936 | 0.6579 |
-| dota2 | 370 | 0.5588 | 0.6380 |
+| dota2 | 371 | 0.5578 | 0.6377 |
 | ow | 121 | 0.5304 | 0.5383 |
 | valorant | 108 | 0.6416 | 0.6780 |
 | lol | 97 | 0.5820 | 0.7126 |
@@ -40,6 +40,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-10 16:54 | favourite | cs2 | BoyBand | KUUSAMO.gg | YES BoyBand | 1 | 0.54 | 0.54 | 0.54 | open | - |
 | 2026-11-10 15:54 | model-only | cs2 | B8 Academy | los kogutos | YES B8 Academy | 23 | 0.27 | 0.48 | 0.24 | open | - |
 | 2026-11-10 14:54 | favourite | dota2 | Froglings | Power Rangers | YES Froglings | 4 | 0.78 | 0.78 | 0.78 | open | - |
 | 2026-11-10 14:54 | favourite | dota2 | CyberHero | InterActive Philippines | YES CyberHero | 6 | 0.87 | 0.86 | 0.86 | open | - |
@@ -48,8 +49,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-10 14:54 | model-only | cs2 | BORRACHEIROS | MEIA NOITE | YES BORRACHEIROS | 38 | 0.40 | 0.57 | 0.40 | open | - |
 | 2026-11-10 13:53 | favourite | cs2 | G2 Ares | maybe | YES G2 Ares | 9 | 0.55 | 0.55 | 0.55 | open | - |
 | 2026-11-10 13:53 | favourite | cs2 | FORZE Reload | ex-RUSTEC | NO ex-RUSTEC | 3 | 0.59 | 0.59 | 0.59 | open | - |
-| 2026-11-10 13:53 | favourite | cs2 | Butterfly | Honvéd | YES Butterfly | 7 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-11-10 13:53 | model-only | cs2 | Honvéd | Butterfly | YES Honvéd | 49 | 0.31 | 0.43 | 0.31 | open | - |
+| 2026-11-10 13:53 | favourite | cs2 | Butterfly | Honvéd | YES Butterfly | 7 | 0.69 | 0.69 | 0.69 | open | - |
 | 2026-11-10 13:53 | model-only | dota2 | Xipto Esports | Mena Warriors | NO Mena Warriors | 27 | 0.57 | 0.79 | 0.55 | open | - |
 | 2026-11-10 13:53 | favourite | dota2 | Xipto Esports | Mena Warriors | NO Mena Warriors | 9 | 0.57 | 0.55 | 0.55 | open | - |
 | 2026-11-10 13:23 | favourite | valorant | Alter Ego x Kertanegara | GAS Esports | YES Alter Ego x Kertanegara | 9 | 0.54 | 0.50 | 0.50 | open | - |
@@ -64,7 +65,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-10 10:53 | favourite | cs2 | ex-Zero Tenacity | ILLYRIANS | NO ILLYRIANS | 7 | 0.70 | 0.70 | 0.70 | won | $1.99 |
 | 2026-11-10 10:53 | favourite | cs2 | Team ACES | BakS eSports | YES Team ACES | 1 | 0.58 | 0.56 | 0.56 | lost | -$0.60 |
 | 2026-11-10 10:53 | favourite | dota2 | LenS Team | Cooman Team | YES LenS Team | 8 | 0.62 | 0.59 | 0.59 | lost | -$5.10 |
-| 2026-11-10 10:53 | model-only | dota2 | Level Up Academy | oveA | YES Level Up Academy | 32 | 0.49 | 0.55 | 0.48 | lost | -$16.24 |
 
 ## Backtest on real Kalshi prices
 
