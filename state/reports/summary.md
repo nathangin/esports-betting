@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-10 18:24 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-10 18:34 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 652 | 54 | 598 | 210 | -$239.86 | -3.6% | -0.2c (644) | $760.14 |
+| model-only | Elo win model alone (control: ignores the market) | 652 | 53 | 599 | 211 | -$221.05 | -3.3% | -0.2c (644) | $778.95 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 1055 | 84 | 971 | 642 | -$440.48 | -7.2% | -1.6c (1044) | $559.52 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2184 finished matches. Lower is better; the market line is the bar to beat.
+2185 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5844 | 0.2011 |
-| model | 0.6507 | 0.2298 |
-| blend | 0.5846 | 0.2013 |
+| market | 0.5842 | 0.2010 |
+| model | 0.6506 | 0.2297 |
+| blend | 0.5844 | 0.2012 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1380 | 0.5933 | 0.6575 |
+| cs2 | 1381 | 0.5930 | 0.6574 |
 | dota2 | 372 | 0.5574 | 0.6373 |
 | ow | 121 | 0.5304 | 0.5383 |
 | valorant | 111 | 0.6339 | 0.6780 |
@@ -54,7 +54,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-10 13:53 | model-only | dota2 | Xipto Esports | Mena Warriors | NO Mena Warriors | 27 | 0.57 | 0.79 | 0.55 | open | - |
 | 2026-11-10 13:53 | favourite | dota2 | Xipto Esports | Mena Warriors | NO Mena Warriors | 9 | 0.57 | 0.55 | 0.55 | open | - |
 | 2026-11-10 13:23 | favourite | valorant | Alter Ego x Kertanegara | GAS Esports | YES Alter Ego x Kertanegara | 9 | 0.54 | 0.50 | 0.50 | open | - |
-| 2026-11-10 11:53 | model-only | dota2 | Xipto Esports | PlayTime | YES Xipto Esports | 36 | 0.46 | 0.54 | 0.46 | open | - |
+| 2026-11-10 11:53 | model-only | dota2 | Xipto Esports | PlayTime | YES Xipto Esports | 36 | 0.46 | 0.54 | 0.46 | won | $18.81 |
 | 2026-11-10 11:53 | model-only | dota2 | PuckChamp | CyberHero | NO CyberHero | 116 | 0.14 | 0.25 | 0.13 | lost | -$17.22 |
 | 2026-11-10 11:53 | favourite | dota2 | Inner Circle | Zero Tenacity | YES Inner Circle | 7 | 0.67 | 0.66 | 0.66 | won | $2.20 |
 | 2026-11-10 11:53 | favourite | dota2 | InterActive Philippines | Yakult's Brothers | YES InterActive Philippines | 8 | 0.60 | 0.58 | 0.58 | won | $3.06 |
