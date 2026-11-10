@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-10 10:08 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-10 10:23 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-10 10:08 UTC. Model fitted 2026-11-09T19:54. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 642 | 54 | 588 | 208 | -$171.19 | -2.6% | -0.2c (635) | $828.81 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1036 | 84 | 952 | 627 | -$455.03 | -7.6% | -1.6c (1026) | $544.97 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1038 | 86 | 952 | 627 | -$455.03 | -7.6% | -1.6c (1026) | $544.97 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -40,6 +40,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-10 10:23 | favourite | cs2 | The Chosen Few | Passion Academy | YES The Chosen Few | 8 | 0.60 | 0.60 | 0.60 | open | - |
+| 2026-11-10 10:23 | favourite | cs2 | FORZE Reload | MOUZ NXT | NO MOUZ NXT | 7 | 0.75 | 0.75 | 0.75 | open | - |
 | 2026-11-10 08:53 | favourite | dota2 | Team Synapse | Zenith | YES Team Synapse | 6 | 0.87 | 0.87 | 0.87 | open | - |
 | 2026-11-10 08:53 | model-only | dota2 | Zenith | Team Synapse | NO Team Synapse | 111 | 0.14 | 0.23 | 0.13 | open | - |
 | 2026-11-10 08:53 | favourite | dota2 | Xipto Esports | potn9ki | YES Xipto Esports | 6 | 0.86 | 0.86 | 0.86 | open | - |
@@ -52,8 +54,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-10 07:53 | favourite | cs2 | Brute | ILLYRIANS | YES Brute | 7 | 0.70 | 0.69 | 0.69 | open | - |
 | 2026-11-10 07:53 | favourite | cs2 | Copenhagen Wolves | Bad Beavers | NO Bad Beavers | 6 | 0.81 | 0.81 | 0.80 | open | - |
 | 2026-11-10 07:53 | model-only | cs2 | ILLYRIANS | Brute | YES ILLYRIANS | 49 | 0.32 | 0.42 | 0.31 | open | - |
-| 2026-11-10 07:53 | model-only | cs2 | Sokerorg | NAVI Junior | NO NAVI Junior | 51 | 0.31 | 0.45 | 0.30 | open | - |
 | 2026-11-10 07:53 | favourite | cs2 | NAVI Junior | Sokerorg | YES NAVI Junior | 7 | 0.72 | 0.70 | 0.70 | open | - |
+| 2026-11-10 07:53 | model-only | cs2 | Sokerorg | NAVI Junior | NO NAVI Junior | 51 | 0.31 | 0.45 | 0.30 | open | - |
 | 2026-11-10 05:23 | favourite | r6 | G2 Esports | Geekay Esports | YES G2 Esports | 6 | 0.90 | 0.86 | 0.86 | won | $0.56 |
 | 2026-11-10 02:22 | favourite | r6 | M80 | Virtus.pro | YES M80 | 7 | 0.68 | 0.64 | 0.64 | lost | -$4.87 |
 | 2026-11-10 02:22 | favourite | r6 | DarkZero Esports | Sharper Esport | YES DarkZero Esports | 6 | 0.82 | 0.79 | 0.79 | won | $1.01 |
@@ -61,10 +63,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-09 17:51 | favourite | cs2 | Huskies eSport | Pandaric eSports | YES Huskies eSport | 1 | 0.55 | 0.55 | 0.55 | won | $0.43 |
 | 2026-11-09 17:51 | favourite | cs2 | MASONIC | EAC Extra | NO EAC Extra | 3 | 0.54 | 0.55 | 0.55 | lost | -$1.68 |
 | 2026-11-09 16:51 | favourite | cs2 | Team ACES | ex-Zero Tenacity | YES Team ACES | 1 | 0.70 | 0.68 | 0.68 | lost | -$0.72 |
-| 2026-11-09 15:51 | model-only | cs2 | TEAM GELO | MTX | NO MTX | 13 | 0.50 | 0.56 | 0.49 | lost | -$6.73 |
 | 2026-11-09 15:51 | model-only | cs2 | MASQ | STATE | YES MASQ | 168 | 0.10 | 0.26 | 0.09 | lost | -$17.86 |
 | 2026-11-09 15:51 | favourite | cs2 | Team LEISURE | Huskies eSport | NO Huskies eSport | 2 | 0.70 | 0.69 | 0.70 | won | $0.57 |
-| 2026-11-09 15:51 | model-only | cs2 | Hermine Esports Club | ZOTIX | NO ZOTIX | 9 | 0.45 | 0.54 | 0.45 | lost | -$4.21 |
 
 ## Backtest on real Kalshi prices
 
