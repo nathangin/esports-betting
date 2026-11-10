@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-10 13:13 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-10 13:23 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-10 13:13 UTC. Model fitted 2026-11-09T19:54. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 647 | 57 | 590 | 209 | -$147.38 | -2.2% | -0.2c (640) | $852.62 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1046 | 90 | 956 | 630 | -$455.73 | -7.6% | -1.6c (1036) | $544.27 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1047 | 90 | 957 | 631 | -$452.67 | -7.5% | -1.6c (1036) | $547.33 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2157 finished matches. Lower is better; the market line is the bar to beat.
+2159 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5859 | 0.2018 |
-| model | 0.6517 | 0.2302 |
-| blend | 0.5863 | 0.2021 |
+| market | 0.5858 | 0.2017 |
+| model | 0.6515 | 0.2301 |
+| blend | 0.5861 | 0.2020 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1371 | 0.5943 | 0.6585 |
-| dota2 | 362 | 0.5616 | 0.6407 |
+| cs2 | 1372 | 0.5942 | 0.6584 |
+| dota2 | 363 | 0.5609 | 0.6399 |
 | ow | 121 | 0.5304 | 0.5383 |
 | valorant | 103 | 0.6402 | 0.6754 |
 | lol | 97 | 0.5820 | 0.7126 |
@@ -40,31 +40,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-10 13:23 | favourite | valorant | Alter Ego x Kertanegara | GAS Esports | YES Alter Ego x Kertanegara | 9 | 0.54 | 0.50 | 0.50 | open | - |
 | 2026-11-10 11:53 | model-only | dota2 | Xipto Esports | PlayTime | YES Xipto Esports | 36 | 0.46 | 0.54 | 0.46 | open | - |
 | 2026-11-10 11:53 | model-only | dota2 | PuckChamp | CyberHero | NO CyberHero | 116 | 0.14 | 0.25 | 0.13 | open | - |
 | 2026-11-10 11:53 | favourite | dota2 | Inner Circle | Zero Tenacity | YES Inner Circle | 7 | 0.67 | 0.66 | 0.66 | open | - |
 | 2026-11-10 11:53 | favourite | dota2 | InterActive Philippines | Yakult's Brothers | YES InterActive Philippines | 8 | 0.60 | 0.58 | 0.58 | open | - |
 | 2026-11-10 11:53 | favourite | dota2 | HULIGANI | Amaru Gaming | NO Amaru Gaming | 6 | 0.88 | 0.85 | 0.85 | open | - |
-| 2026-11-10 10:53 | favourite | cs2 | Leo Team | PsychoFace | YES Leo Team | 8 | 0.63 | 0.62 | 0.62 | open | - |
-| 2026-11-10 10:53 | favourite | cs2 | Team ACES | BakS eSports | YES Team ACES | 1 | 0.58 | 0.56 | 0.56 | open | - |
-| 2026-11-10 10:53 | model-only | cs2 | ILLYRIANS | ex-Zero Tenacity | NO ex-Zero Tenacity | 3 | 0.30 | 0.37 | 0.30 | open | - |
 | 2026-11-10 10:53 | favourite | cs2 | ex-Zero Tenacity | ILLYRIANS | NO ILLYRIANS | 7 | 0.70 | 0.70 | 0.70 | open | - |
 | 2026-11-10 10:53 | model-only | cs2 | BakS eSports | Team ACES | NO Team ACES | 4 | 0.47 | 0.53 | 0.44 | open | - |
+| 2026-11-10 10:53 | favourite | cs2 | Team ACES | BakS eSports | YES Team ACES | 1 | 0.58 | 0.56 | 0.56 | open | - |
+| 2026-11-10 10:53 | model-only | cs2 | ILLYRIANS | ex-Zero Tenacity | NO ex-Zero Tenacity | 3 | 0.30 | 0.37 | 0.30 | open | - |
+| 2026-11-10 10:53 | favourite | cs2 | Leo Team | PsychoFace | YES Leo Team | 8 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-11-10 10:53 | favourite | dota2 | LenS Team | Cooman Team | YES LenS Team | 8 | 0.62 | 0.59 | 0.59 | open | - |
-| 2026-11-10 10:53 | favourite | dota2 | oveA | Level Up Academy | YES oveA | 10 | 0.52 | 0.52 | 0.52 | open | - |
 | 2026-11-10 10:53 | model-only | dota2 | Level Up Academy | oveA | YES Level Up Academy | 32 | 0.49 | 0.55 | 0.48 | open | - |
-| 2026-11-10 10:23 | favourite | cs2 | The Chosen Few | Passion Academy | YES The Chosen Few | 8 | 0.60 | 0.60 | 0.60 | open | - |
+| 2026-11-10 10:53 | favourite | dota2 | oveA | Level Up Academy | YES oveA | 10 | 0.52 | 0.52 | 0.52 | open | - |
+| 2026-11-10 10:23 | favourite | cs2 | The Chosen Few | Passion Academy | YES The Chosen Few | 8 | 0.60 | 0.60 | 0.60 | won | $3.06 |
 | 2026-11-10 10:23 | favourite | cs2 | FORZE Reload | MOUZ NXT | NO MOUZ NXT | 7 | 0.75 | 0.75 | 0.75 | open | - |
 | 2026-11-10 08:53 | favourite | dota2 | PlayTime | Nemiga Gaming | YES PlayTime | 7 | 0.75 | 0.75 | 0.75 | won | $1.65 |
 | 2026-11-10 08:53 | favourite | dota2 | Team Allied | Time to Sleep | YES Team Allied | 7 | 0.76 | 0.75 | 0.75 | won | $1.59 |
-| 2026-11-10 08:53 | model-only | dota2 | Yellow Submarine | LEGION | NO LEGION | 33 | 0.48 | 0.61 | 0.47 | open | - |
 | 2026-11-10 08:53 | favourite | dota2 | LEGION | Yellow Submarine | YES LEGION | 9 | 0.53 | 0.53 | 0.53 | open | - |
 | 2026-11-10 08:53 | model-only | dota2 | Nemiga Gaming | PlayTime | YES Nemiga Gaming | 32 | 0.26 | 0.31 | 0.25 | lost | -$8.76 |
-| 2026-11-10 08:53 | favourite | dota2 | Xipto Esports | potn9ki | YES Xipto Esports | 6 | 0.86 | 0.86 | 0.86 | open | - |
+| 2026-11-10 08:53 | model-only | dota2 | Yellow Submarine | LEGION | NO LEGION | 33 | 0.48 | 0.61 | 0.47 | open | - |
 | 2026-11-10 08:53 | model-only | dota2 | potn9ki | Xipto Esports | YES potn9ki | 76 | 0.14 | 0.28 | 0.14 | open | - |
+| 2026-11-10 08:53 | favourite | dota2 | Xipto Esports | potn9ki | YES Xipto Esports | 6 | 0.86 | 0.86 | 0.86 | open | - |
 | 2026-11-10 08:53 | model-only | dota2 | Zenith | Team Synapse | NO Team Synapse | 111 | 0.14 | 0.23 | 0.13 | open | - |
 | 2026-11-10 08:53 | favourite | dota2 | Team Synapse | Zenith | YES Team Synapse | 6 | 0.87 | 0.87 | 0.87 | open | - |
-| 2026-11-10 07:53 | favourite | cs2 | Brute | ILLYRIANS | YES Brute | 7 | 0.70 | 0.69 | 0.69 | lost | -$5.01 |
 
 ## Backtest on real Kalshi prices
 
