@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-10 12:08 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-10 12:33 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-10 12:08 UTC. Model fitted 2026-11-09T19:54. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 647 | 58 | 589 | 209 | -$138.62 | -2.1% | -0.2c (638) | $861.38 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1046 | 92 | 954 | 628 | -$458.97 | -7.6% | -1.6c (1033) | $541.03 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1046 | 91 | 955 | 629 | -$457.38 | -7.6% | -1.6c (1033) | $542.62 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -56,7 +56,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-10 10:23 | favourite | cs2 | The Chosen Few | Passion Academy | YES The Chosen Few | 8 | 0.60 | 0.60 | 0.60 | open | - |
 | 2026-11-10 10:23 | favourite | cs2 | FORZE Reload | MOUZ NXT | NO MOUZ NXT | 7 | 0.75 | 0.75 | 0.75 | open | - |
 | 2026-11-10 08:53 | favourite | dota2 | PlayTime | Nemiga Gaming | YES PlayTime | 7 | 0.75 | 0.75 | 0.75 | open | - |
-| 2026-11-10 08:53 | favourite | dota2 | Team Allied | Time to Sleep | YES Team Allied | 7 | 0.76 | 0.75 | 0.75 | open | - |
+| 2026-11-10 08:53 | favourite | dota2 | Team Allied | Time to Sleep | YES Team Allied | 7 | 0.76 | 0.75 | 0.75 | won | $1.59 |
 | 2026-11-10 08:53 | model-only | dota2 | Yellow Submarine | LEGION | NO LEGION | 33 | 0.48 | 0.61 | 0.47 | open | - |
 | 2026-11-10 08:53 | favourite | dota2 | LEGION | Yellow Submarine | YES LEGION | 9 | 0.53 | 0.53 | 0.53 | open | - |
 | 2026-11-10 08:53 | model-only | dota2 | Nemiga Gaming | PlayTime | YES Nemiga Gaming | 32 | 0.26 | 0.31 | 0.25 | open | - |
