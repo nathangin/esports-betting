@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-10 15:39 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-10 15:44 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 651 | 55 | 596 | 210 | -$206.71 | -3.1% | -0.2c (641) | $793.29 |
+| model-only | Elo win model alone (control: ignores the market) | 651 | 54 | 597 | 210 | -$223.93 | -3.4% | -0.2c (641) | $776.07 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 1054 | 89 | 965 | 637 | -$444.53 | -7.3% | -1.6c (1040) | $555.47 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -53,7 +53,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-10 13:53 | favourite | dota2 | Xipto Esports | Mena Warriors | NO Mena Warriors | 9 | 0.57 | 0.55 | 0.55 | open | - |
 | 2026-11-10 13:23 | favourite | valorant | Alter Ego x Kertanegara | GAS Esports | YES Alter Ego x Kertanegara | 9 | 0.54 | 0.50 | 0.50 | open | - |
 | 2026-11-10 11:53 | model-only | dota2 | Xipto Esports | PlayTime | YES Xipto Esports | 36 | 0.46 | 0.54 | 0.46 | open | - |
-| 2026-11-10 11:53 | model-only | dota2 | PuckChamp | CyberHero | NO CyberHero | 116 | 0.14 | 0.25 | 0.13 | open | - |
+| 2026-11-10 11:53 | model-only | dota2 | PuckChamp | CyberHero | NO CyberHero | 116 | 0.14 | 0.25 | 0.13 | lost | -$17.22 |
 | 2026-11-10 11:53 | favourite | dota2 | Inner Circle | Zero Tenacity | YES Inner Circle | 7 | 0.67 | 0.66 | 0.66 | open | - |
 | 2026-11-10 11:53 | favourite | dota2 | InterActive Philippines | Yakult's Brothers | YES InterActive Philippines | 8 | 0.60 | 0.58 | 0.58 | open | - |
 | 2026-11-10 11:53 | favourite | dota2 | HULIGANI | Amaru Gaming | NO Amaru Gaming | 6 | 0.88 | 0.85 | 0.85 | open | - |
