@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-11 02:56 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-11 03:21 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 653 | 52 | 601 | 211 | -$237.05 | -3.5% | -0.2c (644) | $762.95 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1058 | 82 | 976 | 645 | -$440.70 | -7.2% | -1.6c (1046) | $559.30 |
+| model-only | Elo win model alone (control: ignores the market) | 654 | 53 | 601 | 211 | -$237.05 | -3.5% | -0.2c (645) | $762.95 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1059 | 83 | 976 | 645 | -$440.70 | -7.2% | -1.6c (1047) | $559.30 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,12 +16,12 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2207 finished matches. Lower is better; the market line is the bar to beat.
+2208 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
 | market | 0.5847 | 0.2013 |
-| model | 0.6508 | 0.2298 |
+| model | 0.6509 | 0.2299 |
 | blend | 0.5849 | 0.2015 |
 
 | Game | Matches | Market log loss | Model log loss |
@@ -31,7 +31,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | ow | 121 | 0.5304 | 0.5383 |
 | valorant | 112 | 0.6294 | 0.6734 |
 | lol | 97 | 0.5820 | 0.7126 |
-| r6 | 83 | 0.5710 | 0.6597 |
+| r6 | 84 | 0.5712 | 0.6603 |
 | cod | 20 | 0.5911 | 0.6189 |
 
 ## Latest bets
@@ -40,31 +40,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-11 03:20 | favourite | cs2 | Vitality | Team Falcons | NO Team Falcons | 1 | 0.69 | 0.69 | 0.70 | open | - |
+| 2026-11-11 03:20 | model-only | cs2 | Team Falcons | Vitality | NO Vitality | 48 | 0.30 | 0.40 | 0.30 | open | - |
 | 2026-11-11 02:20 | favourite | r6 | DarkZero Esports | Weibo Gaming | YES DarkZero Esports | 8 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-11 02:20 | model-only | r6 | Weibo Gaming | DarkZero Esports | YES Weibo Gaming | 41 | 0.35 | 0.52 | 0.35 | open | - |
 | 2026-11-11 00:50 | favourite | cs2 | FURIA | Legacy | YES FURIA | 7 | 0.72 | 0.71 | 0.71 | open | - |
 | 2026-11-10 20:50 | favourite | cs2 | QUINTESSENCIA | Rush | YES QUINTESSENCIA | 2 | 0.58 | 0.56 | 0.56 | lost | -$1.20 |
 | 2026-11-10 16:54 | favourite | cs2 | BoyBand | KUUSAMO.gg | YES BoyBand | 1 | 0.54 | 0.54 | 0.54 | won | $0.44 |
 | 2026-11-10 15:54 | model-only | cs2 | B8 Academy | los kogutos | YES B8 Academy | 23 | 0.27 | 0.48 | 0.24 | open | - |
-| 2026-11-10 14:54 | favourite | dota2 | Froglings | Power Rangers | YES Froglings | 4 | 0.78 | 0.78 | 0.78 | lost | -$3.17 |
-| 2026-11-10 14:54 | favourite | dota2 | CyberHero | InterActive Philippines | YES CyberHero | 6 | 0.87 | 0.86 | 0.86 | won | $0.73 |
-| 2026-11-10 14:54 | model-only | dota2 | InterActive Philippines | CyberHero | NO CyberHero | 1 | 0.15 | 0.35 | 0.14 | lost | -$0.16 |
 | 2026-11-10 14:54 | favourite | cs2 | MEIA NOITE | BORRACHEIROS | NO BORRACHEIROS | 8 | 0.61 | 0.60 | 0.60 | won | $2.98 |
 | 2026-11-10 14:54 | model-only | cs2 | BORRACHEIROS | MEIA NOITE | YES BORRACHEIROS | 38 | 0.40 | 0.57 | 0.40 | lost | -$15.84 |
-| 2026-11-10 13:53 | favourite | cs2 | Butterfly | Honvéd | YES Butterfly | 7 | 0.69 | 0.69 | 0.69 | won | $2.06 |
-| 2026-11-10 13:53 | favourite | cs2 | FORZE Reload | ex-RUSTEC | NO ex-RUSTEC | 3 | 0.59 | 0.59 | 0.59 | won | $1.17 |
-| 2026-11-10 13:53 | model-only | cs2 | Honvéd | Butterfly | YES Honvéd | 49 | 0.31 | 0.43 | 0.31 | lost | -$15.93 |
+| 2026-11-10 14:54 | model-only | dota2 | InterActive Philippines | CyberHero | NO CyberHero | 1 | 0.15 | 0.35 | 0.14 | lost | -$0.16 |
+| 2026-11-10 14:54 | favourite | dota2 | CyberHero | InterActive Philippines | YES CyberHero | 6 | 0.87 | 0.86 | 0.86 | won | $0.73 |
+| 2026-11-10 14:54 | favourite | dota2 | Froglings | Power Rangers | YES Froglings | 4 | 0.78 | 0.78 | 0.78 | lost | -$3.17 |
+| 2026-11-10 13:53 | favourite | dota2 | Xipto Esports | Mena Warriors | NO Mena Warriors | 9 | 0.57 | 0.55 | 0.55 | open | - |
 | 2026-11-10 13:53 | model-only | dota2 | Xipto Esports | Mena Warriors | NO Mena Warriors | 27 | 0.57 | 0.79 | 0.55 | open | - |
 | 2026-11-10 13:53 | favourite | cs2 | G2 Ares | maybe | YES G2 Ares | 9 | 0.55 | 0.55 | 0.55 | lost | -$5.11 |
-| 2026-11-10 13:53 | favourite | dota2 | Xipto Esports | Mena Warriors | NO Mena Warriors | 9 | 0.57 | 0.55 | 0.55 | open | - |
+| 2026-11-10 13:53 | favourite | cs2 | Butterfly | Honvéd | YES Butterfly | 7 | 0.69 | 0.69 | 0.69 | won | $2.06 |
+| 2026-11-10 13:53 | model-only | cs2 | Honvéd | Butterfly | YES Honvéd | 49 | 0.31 | 0.43 | 0.31 | lost | -$15.93 |
+| 2026-11-10 13:53 | favourite | cs2 | FORZE Reload | ex-RUSTEC | NO ex-RUSTEC | 3 | 0.59 | 0.59 | 0.59 | won | $1.17 |
 | 2026-11-10 13:23 | favourite | valorant | Alter Ego x Kertanegara | GAS Esports | YES Alter Ego x Kertanegara | 9 | 0.54 | 0.50 | 0.50 | open | - |
-| 2026-11-10 11:53 | model-only | dota2 | Xipto Esports | PlayTime | YES Xipto Esports | 36 | 0.46 | 0.54 | 0.46 | won | $18.81 |
-| 2026-11-10 11:53 | model-only | dota2 | PuckChamp | CyberHero | NO CyberHero | 116 | 0.14 | 0.25 | 0.13 | lost | -$17.22 |
 | 2026-11-10 11:53 | favourite | dota2 | Inner Circle | Zero Tenacity | YES Inner Circle | 7 | 0.67 | 0.66 | 0.66 | won | $2.20 |
 | 2026-11-10 11:53 | favourite | dota2 | InterActive Philippines | Yakult's Brothers | YES InterActive Philippines | 8 | 0.60 | 0.58 | 0.58 | won | $3.06 |
 | 2026-11-10 11:53 | favourite | dota2 | HULIGANI | Amaru Gaming | NO Amaru Gaming | 6 | 0.88 | 0.85 | 0.85 | won | $0.67 |
-| 2026-11-10 10:53 | favourite | cs2 | ex-Zero Tenacity | ILLYRIANS | NO ILLYRIANS | 7 | 0.70 | 0.70 | 0.70 | won | $1.99 |
-| 2026-11-10 10:53 | model-only | cs2 | BakS eSports | Team ACES | NO Team ACES | 4 | 0.47 | 0.53 | 0.44 | won | $2.05 |
+| 2026-11-10 11:53 | model-only | dota2 | PuckChamp | CyberHero | NO CyberHero | 116 | 0.14 | 0.25 | 0.13 | lost | -$17.22 |
+| 2026-11-10 11:53 | model-only | dota2 | Xipto Esports | PlayTime | YES Xipto Esports | 36 | 0.46 | 0.54 | 0.46 | won | $18.81 |
 
 ## Backtest on real Kalshi prices
 
