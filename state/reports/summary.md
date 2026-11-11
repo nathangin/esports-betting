@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-11 17:37 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-11 17:43 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 671 | 60 | 611 | 213 | -$310.54 | -4.5% | -0.3c (662) | $689.46 |
+| model-only | Elo win model alone (control: ignores the market) | 671 | 59 | 612 | 213 | -$311.12 | -4.6% | -0.3c (662) | $688.88 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 1086 | 89 | 997 | 659 | -$456.80 | -7.4% | -1.5c (1075) | $543.20 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -54,7 +54,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-11 13:52 | model-only | cs2 | MASONIC | FORZE Reload | NO FORZE Reload | 83 | 0.16 | 0.33 | 0.16 | lost | -$14.07 |
 | 2026-11-11 13:52 | favourite | cs2 | BBL | 33 | YES BBL | 8 | 0.66 | 0.64 | 0.64 | open | - |
 | 2026-11-11 13:52 | favourite | cs2 | BakS eSports | Nexus | YES BakS eSports | 9 | 0.57 | 0.57 | 0.57 | open | - |
-| 2026-11-11 11:51 | model-only | dota2 | PuckChamp | HULIGANI | YES PuckChamp | 3 | 0.18 | 0.40 | 0.19 | open | - |
+| 2026-11-11 11:51 | model-only | dota2 | PuckChamp | HULIGANI | YES PuckChamp | 3 | 0.18 | 0.40 | 0.19 | lost | -$0.58 |
 | 2026-11-11 11:51 | model-only | dota2 | Zero Tenacity | CyberHero | NO CyberHero | 6 | 0.13 | 0.23 | 0.12 | open | - |
 | 2026-11-11 10:51 | favourite | cs2 | Nexus | MOUZ NXT | YES Nexus | 3 | 0.78 | 0.78 | 0.78 | won | $0.62 |
 | 2026-11-11 10:51 | model-only | cs2 | MOUZ NXT | Nexus | NO Nexus | 59 | 0.23 | 0.31 | 0.22 | lost | -$14.31 |
