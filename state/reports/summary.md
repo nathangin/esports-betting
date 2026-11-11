@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-11 03:36 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-11 04:11 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-11 03:36 UTC. Model fitted 2026-11-09T19:54. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 654 | 53 | 601 | 211 | -$237.05 | -3.5% | -0.2c (645) | $762.95 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1059 | 83 | 976 | 645 | -$440.70 | -7.2% | -1.6c (1047) | $559.30 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1059 | 82 | 977 | 646 | -$438.84 | -7.2% | -1.6c (1047) | $561.16 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -44,7 +44,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-11 03:20 | model-only | cs2 | Team Falcons | Vitality | NO Vitality | 48 | 0.30 | 0.40 | 0.30 | open | - |
 | 2026-11-11 02:20 | favourite | r6 | DarkZero Esports | Weibo Gaming | YES DarkZero Esports | 8 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-11 02:20 | model-only | r6 | Weibo Gaming | DarkZero Esports | YES Weibo Gaming | 41 | 0.35 | 0.52 | 0.35 | open | - |
-| 2026-11-11 00:50 | favourite | cs2 | FURIA | Legacy | YES FURIA | 7 | 0.72 | 0.71 | 0.71 | open | - |
+| 2026-11-11 00:50 | favourite | cs2 | FURIA | Legacy | YES FURIA | 7 | 0.72 | 0.71 | 0.71 | won | $1.86 |
 | 2026-11-10 20:50 | favourite | cs2 | QUINTESSENCIA | Rush | YES QUINTESSENCIA | 2 | 0.58 | 0.56 | 0.56 | lost | -$1.20 |
 | 2026-11-10 16:54 | favourite | cs2 | BoyBand | KUUSAMO.gg | YES BoyBand | 1 | 0.54 | 0.54 | 0.54 | won | $0.44 |
 | 2026-11-10 15:54 | model-only | cs2 | B8 Academy | los kogutos | YES B8 Academy | 23 | 0.27 | 0.48 | 0.24 | open | - |
