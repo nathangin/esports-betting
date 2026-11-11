@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-11 17:07 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-11 17:22 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 671 | 61 | 610 | 213 | -$296.47 | -4.4% | -0.3c (662) | $703.53 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1086 | 91 | 995 | 657 | -$459.02 | -7.4% | -1.5c (1075) | $540.98 |
+| model-only | Elo win model alone (control: ignores the market) | 671 | 60 | 611 | 213 | -$310.54 | -4.5% | -0.3c (662) | $689.46 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1086 | 89 | 997 | 659 | -$456.80 | -7.4% | -1.5c (1075) | $543.20 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,21 +16,21 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2237 finished matches. Lower is better; the market line is the bar to beat.
+2239 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5839 | 0.2009 |
-| model | 0.6514 | 0.2301 |
-| blend | 0.5840 | 0.2011 |
+| market | 0.5837 | 0.2008 |
+| model | 0.6515 | 0.2301 |
+| blend | 0.5838 | 0.2010 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 1405 | 0.5929 | 0.6578 |
-| dota2 | 387 | 0.5614 | 0.6400 |
+| dota2 | 388 | 0.5614 | 0.6398 |
 | ow | 125 | 0.5158 | 0.5392 |
 | valorant | 117 | 0.6348 | 0.6795 |
-| lol | 97 | 0.5820 | 0.7126 |
+| lol | 98 | 0.5786 | 0.7152 |
 | r6 | 86 | 0.5672 | 0.6601 |
 | cod | 20 | 0.5911 | 0.6189 |
 
@@ -50,8 +50,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-11 14:22 | favourite | cs2 | KUUSAMO.gg | SINQU | YES KUUSAMO.gg | 8 | 0.61 | 0.60 | 0.60 | open | - |
 | 2026-11-11 14:22 | model-only | cs2 | SINQU | KUUSAMO.gg | NO KUUSAMO.gg | 3 | 0.40 | 0.49 | 0.40 | open | - |
 | 2026-11-11 13:52 | favourite | cs2 | 33 | ex-INOX Division | NO ex-INOX Division | 10 | 0.53 | 0.53 | 0.53 | open | - |
-| 2026-11-11 13:52 | favourite | cs2 | FORZE Reload | MASONIC | YES FORZE Reload | 6 | 0.85 | 0.84 | 0.84 | open | - |
-| 2026-11-11 13:52 | model-only | cs2 | MASONIC | FORZE Reload | NO FORZE Reload | 83 | 0.16 | 0.33 | 0.16 | open | - |
+| 2026-11-11 13:52 | favourite | cs2 | FORZE Reload | MASONIC | YES FORZE Reload | 6 | 0.85 | 0.84 | 0.84 | won | $0.84 |
+| 2026-11-11 13:52 | model-only | cs2 | MASONIC | FORZE Reload | NO FORZE Reload | 83 | 0.16 | 0.33 | 0.16 | lost | -$14.07 |
 | 2026-11-11 13:52 | favourite | cs2 | BBL | 33 | YES BBL | 8 | 0.66 | 0.64 | 0.64 | open | - |
 | 2026-11-11 13:52 | favourite | cs2 | BakS eSports | Nexus | YES BakS eSports | 9 | 0.57 | 0.57 | 0.57 | open | - |
 | 2026-11-11 11:51 | model-only | dota2 | PuckChamp | HULIGANI | YES PuckChamp | 3 | 0.18 | 0.40 | 0.19 | open | - |
