@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-11 13:07 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-11 13:12 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 665 | 60 | 605 | 212 | -$268.32 | -4.0% | -0.3c (657) | $731.68 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1078 | 95 | 983 | 650 | -$445.75 | -7.3% | -1.5c (1067) | $554.25 |
+| model-only | Elo win model alone (control: ignores the market) | 665 | 59 | 606 | 212 | -$282.40 | -4.2% | -0.3c (657) | $717.60 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1078 | 93 | 985 | 652 | -$440.80 | -7.2% | -1.5c (1067) | $559.20 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -49,8 +49,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-11 10:51 | favourite | cs2 | Ducks | ex-Sashi Academy | NO ex-Sashi Academy | 2 | 0.63 | 0.62 | 0.62 | open | - |
 | 2026-11-11 10:51 | favourite | cs2 | Phantom | Drama eSports | YES Phantom | 6 | 0.83 | 0.83 | 0.83 | open | - |
 | 2026-11-11 10:51 | model-only | cs2 | Drama eSports | Phantom | NO Phantom | 75 | 0.18 | 0.41 | 0.17 | open | - |
-| 2026-11-11 10:21 | favourite | cs2 | EYEBALLERS | Esport Academy Copenhagen | NO Esport Academy Copenhagen | 8 | 0.69 | 0.69 | 0.69 | open | - |
-| 2026-11-11 10:21 | model-only | cs2 | Esport Academy Copenhagen | EYEBALLERS | YES Esport Academy Copenhagen | 42 | 0.32 | 0.46 | 0.32 | open | - |
+| 2026-11-11 10:21 | favourite | cs2 | EYEBALLERS | Esport Academy Copenhagen | NO Esport Academy Copenhagen | 8 | 0.69 | 0.69 | 0.69 | won | $2.36 |
+| 2026-11-11 10:21 | model-only | cs2 | Esport Academy Copenhagen | EYEBALLERS | YES Esport Academy Copenhagen | 42 | 0.32 | 0.46 | 0.32 | lost | -$14.08 |
 | 2026-11-11 10:21 | favourite | cs2 | Lunacy Team | G2 Ares | YES Lunacy Team | 9 | 0.58 | 0.57 | 0.57 | open | - |
 | 2026-11-11 08:51 | favourite | dota2 | InterActive Philippines | Zero Tenacity | NO Zero Tenacity | 9 | 0.60 | 0.60 | 0.60 | open | - |
 | 2026-11-11 08:51 | favourite | dota2 | HULIGANI | Yakult's Brothers | YES HULIGANI | 6 | 0.87 | 0.85 | 0.85 | open | - |
@@ -58,7 +58,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-11 08:51 | favourite | dota2 | PlayTime | Team Synapse | YES PlayTime | 7 | 0.79 | 0.77 | 0.77 | open | - |
 | 2026-11-11 08:51 | favourite | dota2 | PuckChamp | Spirit Academy | NO Spirit Academy | 10 | 0.53 | 0.53 | 0.53 | lost | -$5.48 |
 | 2026-11-11 08:51 | model-only | dota2 | Spirit Academy | PuckChamp | NO PuckChamp | 28 | 0.49 | 0.59 | 0.47 | won | $13.79 |
-| 2026-11-11 08:51 | favourite | dota2 | LEGION | Xipto Esports | YES LEGION | 8 | 0.66 | 0.65 | 0.65 | open | - |
+| 2026-11-11 08:51 | favourite | dota2 | LEGION | Xipto Esports | YES LEGION | 8 | 0.66 | 0.65 | 0.65 | won | $2.59 |
 | 2026-11-11 08:51 | favourite | dota2 | CyberHero | Inner Circle | YES CyberHero | 8 | 0.65 | 0.65 | 0.65 | open | - |
 | 2026-11-11 08:21 | favourite | cs2 | MOUZ | G2 | NO G2 | 7 | 0.78 | 0.78 | 0.78 | lost | -$5.55 |
 | 2026-11-11 07:51 | model-only | cs2 | 9INE Academy | Teletubisie | NO Teletubisie | 3 | 0.15 | 0.32 | 0.15 | open | - |
