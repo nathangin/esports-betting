@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-11 15:07 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-11 15:22 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 670 | 60 | 610 | 213 | -$296.47 | -4.4% | -0.3c (658) | $703.53 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1086 | 93 | 993 | 656 | -$458.96 | -7.4% | -1.5c (1071) | $541.04 |
+| model-only | Elo win model alone (control: ignores the market) | 670 | 60 | 610 | 213 | -$296.47 | -4.4% | -0.3c (659) | $703.53 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1086 | 92 | 994 | 656 | -$460.26 | -7.4% | -1.5c (1072) | $539.74 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -59,7 +59,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-11 10:51 | model-only | cs2 | MOUZ NXT | Nexus | NO Nexus | 59 | 0.23 | 0.31 | 0.22 | lost | -$14.31 |
 | 2026-11-11 10:51 | favourite | cs2 | GenOne | Inner Circle Academy | NO Inner Circle Academy | 10 | 0.54 | 0.54 | 0.54 | lost | -$5.58 |
 | 2026-11-11 10:51 | model-only | cs2 | Inner Circle Academy | GenOne | NO GenOne | 29 | 0.47 | 0.54 | 0.46 | won | $14.86 |
-| 2026-11-11 10:51 | favourite | cs2 | Ducks | ex-Sashi Academy | NO ex-Sashi Academy | 2 | 0.63 | 0.62 | 0.62 | open | - |
+| 2026-11-11 10:51 | favourite | cs2 | Ducks | ex-Sashi Academy | NO ex-Sashi Academy | 2 | 0.63 | 0.62 | 0.62 | lost | -$1.30 |
 | 2026-11-11 10:51 | favourite | cs2 | Phantom | Drama eSports | YES Phantom | 6 | 0.83 | 0.83 | 0.83 | won | $0.96 |
 | 2026-11-11 10:51 | model-only | cs2 | Drama eSports | Phantom | NO Phantom | 75 | 0.18 | 0.41 | 0.17 | lost | -$14.28 |
 | 2026-11-11 10:21 | favourite | cs2 | Lunacy Team | G2 Ares | YES Lunacy Team | 9 | 0.58 | 0.57 | 0.57 | lost | -$5.38 |
