@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-11 13:52 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-11 14:02 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-11 13:52 UTC. Model fitted 2026-11-09T19:54. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 666 | 56 | 610 | 213 | -$296.47 | -4.4% | -0.3c (657) | $703.53 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1082 | 92 | 990 | 655 | -$449.40 | -7.3% | -1.5c (1067) | $550.60 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1082 | 89 | 993 | 656 | -$458.96 | -7.4% | -1.5c (1067) | $541.04 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2222 finished matches. Lower is better; the market line is the bar to beat.
+2226 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5838 | 0.2009 |
-| model | 0.6510 | 0.2299 |
-| blend | 0.5839 | 0.2011 |
+| market | 0.5833 | 0.2007 |
+| model | 0.6508 | 0.2298 |
+| blend | 0.5835 | 0.2009 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1399 | 0.5931 | 0.6580 |
-| dota2 | 383 | 0.5625 | 0.6395 |
+| cs2 | 1402 | 0.5927 | 0.6577 |
+| dota2 | 384 | 0.5614 | 0.6391 |
 | ow | 125 | 0.5158 | 0.5392 |
 | valorant | 112 | 0.6294 | 0.6734 |
 | lol | 97 | 0.5820 | 0.7126 |
@@ -54,17 +54,17 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-11 10:51 | favourite | cs2 | GenOne | Inner Circle Academy | NO Inner Circle Academy | 10 | 0.54 | 0.54 | 0.54 | lost | -$5.58 |
 | 2026-11-11 10:51 | model-only | cs2 | MOUZ NXT | Nexus | NO Nexus | 59 | 0.23 | 0.31 | 0.22 | lost | -$14.31 |
 | 2026-11-11 10:51 | favourite | cs2 | Nexus | MOUZ NXT | YES Nexus | 3 | 0.78 | 0.78 | 0.78 | won | $0.62 |
-| 2026-11-11 10:21 | favourite | cs2 | Lunacy Team | G2 Ares | YES Lunacy Team | 9 | 0.58 | 0.57 | 0.57 | open | - |
+| 2026-11-11 10:21 | favourite | cs2 | Lunacy Team | G2 Ares | YES Lunacy Team | 9 | 0.58 | 0.57 | 0.57 | lost | -$5.38 |
 | 2026-11-11 10:21 | favourite | cs2 | EYEBALLERS | Esport Academy Copenhagen | NO Esport Academy Copenhagen | 8 | 0.69 | 0.69 | 0.69 | won | $2.36 |
 | 2026-11-11 10:21 | model-only | cs2 | Esport Academy Copenhagen | EYEBALLERS | YES Esport Academy Copenhagen | 42 | 0.32 | 0.46 | 0.32 | lost | -$14.08 |
-| 2026-11-11 08:51 | favourite | dota2 | PlayTime | Team Synapse | YES PlayTime | 7 | 0.79 | 0.77 | 0.77 | open | - |
+| 2026-11-11 08:51 | favourite | dota2 | PlayTime | Team Synapse | YES PlayTime | 7 | 0.79 | 0.77 | 0.77 | won | $1.38 |
 | 2026-11-11 08:51 | favourite | dota2 | LEGION | Xipto Esports | YES LEGION | 8 | 0.66 | 0.65 | 0.65 | won | $2.59 |
 | 2026-11-11 08:51 | model-only | dota2 | Spirit Academy | PuckChamp | NO PuckChamp | 28 | 0.49 | 0.59 | 0.47 | won | $13.79 |
 | 2026-11-11 08:51 | favourite | dota2 | PuckChamp | Spirit Academy | NO Spirit Academy | 10 | 0.53 | 0.53 | 0.53 | lost | -$5.48 |
 | 2026-11-11 08:51 | favourite | dota2 | CyberHero | Inner Circle | YES CyberHero | 8 | 0.65 | 0.65 | 0.65 | lost | -$5.33 |
 | 2026-11-11 08:51 | model-only | dota2 | Yakult's Brothers | HULIGANI | YES Yakult's Brothers | 2 | 0.16 | 0.39 | 0.15 | lost | -$0.34 |
 | 2026-11-11 08:51 | favourite | dota2 | HULIGANI | Yakult's Brothers | YES HULIGANI | 6 | 0.87 | 0.85 | 0.85 | won | $0.73 |
-| 2026-11-11 08:51 | favourite | dota2 | InterActive Philippines | Zero Tenacity | NO Zero Tenacity | 9 | 0.60 | 0.60 | 0.60 | open | - |
+| 2026-11-11 08:51 | favourite | dota2 | InterActive Philippines | Zero Tenacity | NO Zero Tenacity | 9 | 0.60 | 0.60 | 0.60 | lost | -$5.56 |
 
 ## Backtest on real Kalshi prices
 
