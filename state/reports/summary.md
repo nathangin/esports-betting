@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-11 06:51 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-11 07:01 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 655 | 52 | 603 | 211 | -$267.17 | -4.0% | -0.3c (647) | $732.83 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1061 | 82 | 979 | 648 | -$435.96 | -7.1% | -1.6c (1050) | $564.04 |
+| model-only | Elo win model alone (control: ignores the market) | 655 | 51 | 604 | 211 | -$282.11 | -4.2% | -0.3c (647) | $717.89 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1061 | 81 | 980 | 649 | -$435.68 | -7.1% | -1.6c (1050) | $564.32 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -41,8 +41,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-11-11 05:50 | favourite | cs2 | Spirit | FUT Esports | NO FUT Esports | 6 | 0.83 | 0.82 | 0.82 | open | - |
-| 2026-11-11 05:20 | favourite | r6 | Geekay Esports | LOS | NO LOS | 1 | 0.70 | 0.69 | 0.69 | open | - |
-| 2026-11-11 05:20 | model-only | r6 | LOS | Geekay Esports | YES LOS | 42 | 0.34 | 0.44 | 0.31 | open | - |
+| 2026-11-11 05:20 | favourite | r6 | Geekay Esports | LOS | NO LOS | 1 | 0.70 | 0.69 | 0.69 | won | $0.28 |
+| 2026-11-11 05:20 | model-only | r6 | LOS | Geekay Esports | YES LOS | 42 | 0.34 | 0.44 | 0.31 | lost | -$14.94 |
 | 2026-11-11 03:20 | favourite | cs2 | Vitality | Team Falcons | NO Team Falcons | 1 | 0.69 | 0.69 | 0.70 | won | $0.29 |
 | 2026-11-11 03:20 | model-only | cs2 | Team Falcons | Vitality | NO Vitality | 48 | 0.30 | 0.40 | 0.30 | lost | -$15.11 |
 | 2026-11-11 02:20 | favourite | r6 | DarkZero Esports | Weibo Gaming | YES DarkZero Esports | 8 | 0.66 | 0.65 | 0.65 | won | $2.59 |
