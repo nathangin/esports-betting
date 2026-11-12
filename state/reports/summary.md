@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-12 21:51 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-12 22:21 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-12 21:51 UTC. Model fitted 2026-11-09T19:54. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 691 | 54 | 637 | 219 | -$322.81 | -4.6% | -0.2c (683) | $677.19 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1106 | 88 | 1018 | 669 | -$487.05 | -7.8% | -1.6c (1095) | $512.95 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1106 | 87 | 1019 | 670 | -$486.71 | -7.7% | -1.6c (1095) | $513.29 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -41,7 +41,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-11-12 18:20 | favourite | cs2 | eSuba | NoTime | NO NoTime | 1 | 0.53 | 0.52 | 0.52 | lost | -$0.55 |
-| 2026-11-12 17:50 | favourite | cs2 | tao toma | Procyon Gaming | YES tao toma | 1 | 0.64 | 0.64 | 0.64 | open | - |
+| 2026-11-12 17:50 | favourite | cs2 | tao toma | Procyon Gaming | YES tao toma | 1 | 0.64 | 0.64 | 0.64 | won | $0.34 |
 | 2026-11-12 17:35 | favourite | cs2 | Team Bratishkin | Team Recrent | YES Team Bratishkin | 8 | 0.58 | 0.57 | 0.57 | won | $3.22 |
 | 2026-11-12 16:50 | model-only | cs2 | Spirit Academy | ex-RUSTEC | YES Spirit Academy | 7 | 0.55 | 0.60 | 0.55 | lost | -$3.98 |
 | 2026-11-12 16:50 | model-only | cs2 | maybe | Team ACES | NO Team ACES | 1 | 0.26 | 0.41 | 0.25 | open | - |
