@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-12 12:25 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-12 12:35 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 685 | 62 | 623 | 215 | -$353.27 | -5.1% | -0.2c (673) | $646.73 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1099 | 90 | 1009 | 665 | -$476.74 | -7.6% | -1.6c (1087) | $523.26 |
+| model-only | Elo win model alone (control: ignores the market) | 685 | 60 | 625 | 215 | -$375.94 | -5.4% | -0.2c (673) | $624.06 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1099 | 88 | 1011 | 666 | -$480.17 | -7.7% | -1.6c (1087) | $519.83 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2282 finished matches. Lower is better; the market line is the bar to beat.
+2284 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5819 | 0.2001 |
-| model | 0.6513 | 0.2301 |
+| market | 0.5820 | 0.2001 |
+| model | 0.6514 | 0.2301 |
 | blend | 0.5819 | 0.2003 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1431 | 0.5922 | 0.6577 |
+| cs2 | 1433 | 0.5922 | 0.6578 |
 | dota2 | 400 | 0.5592 | 0.6401 |
 | ow | 128 | 0.5051 | 0.5379 |
 | valorant | 118 | 0.6346 | 0.6783 |
@@ -51,13 +51,13 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-12 10:54 | model-only | cs2 | Leo Team | GenOne | NO GenOne | 3 | 0.48 | 0.57 | 0.48 | open | - |
 | 2026-11-12 10:54 | favourite | cs2 | FORZE Reload | Butterfly | NO Butterfly | 9 | 0.57 | 0.56 | 0.56 | open | - |
 | 2026-11-12 08:24 | model-only | cs2 | G2 | Spirit | NO Spirit | 16 | 0.27 | 0.32 | 0.27 | open | - |
-| 2026-11-12 07:54 | model-only | cs2 | NAVI Junior | MOUZ NXT | NO MOUZ NXT | 22 | 0.57 | 0.68 | 0.57 | open | - |
-| 2026-11-12 07:54 | model-only | cs2 | DNK | Ducks | YES DNK | 32 | 0.29 | 0.35 | 0.28 | open | - |
-| 2026-11-12 07:54 | favourite | cs2 | Ducks | DNK | NO DNK | 7 | 0.72 | 0.71 | 0.72 | open | - |
+| 2026-11-12 07:54 | model-only | cs2 | NAVI Junior | MOUZ NXT | NO MOUZ NXT | 22 | 0.57 | 0.68 | 0.57 | lost | -$12.92 |
+| 2026-11-12 07:54 | model-only | cs2 | DNK | Ducks | YES DNK | 32 | 0.29 | 0.35 | 0.28 | lost | -$9.75 |
+| 2026-11-12 07:54 | favourite | cs2 | Ducks | DNK | NO DNK | 7 | 0.72 | 0.71 | 0.72 | won | $1.86 |
 | 2026-11-12 07:54 | model-only | cs2 | ILLYRIANS | Phantom | NO Phantom | 1 | 0.21 | 0.45 | 0.21 | lost | -$0.23 |
 | 2026-11-12 07:54 | favourite | cs2 | Phantom | ILLYRIANS | NO ILLYRIANS | 6 | 0.79 | 0.79 | 0.79 | won | $1.19 |
 | 2026-11-12 07:54 | favourite | cs2 | NAVI Junior | TheChampionGG | YES NAVI Junior | 1 | 0.80 | 0.79 | 0.79 | open | - |
-| 2026-11-12 07:54 | favourite | cs2 | NAVI Junior | MOUZ NXT | NO MOUZ NXT | 9 | 0.57 | 0.57 | 0.57 | open | - |
+| 2026-11-12 07:54 | favourite | cs2 | NAVI Junior | MOUZ NXT | NO MOUZ NXT | 9 | 0.57 | 0.57 | 0.57 | lost | -$5.29 |
 | 2026-11-12 07:54 | favourite | cs2 | MASONIC | The Last Resort | YES MASONIC | 8 | 0.60 | 0.59 | 0.59 | lost | -$4.94 |
 | 2026-11-12 07:54 | model-only | cs2 | TheChampionGG | NAVI Junior | NO NAVI Junior | 56 | 0.22 | 0.36 | 0.21 | open | - |
 | 2026-11-12 07:54 | favourite | dota2 | angry birds | Zero Tenacity | YES angry birds | 4 | 0.63 | 0.61 | 0.61 | lost | -$2.59 |
