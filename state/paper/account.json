@@ -5,10 +5,10 @@
  },
  "model-only": {
   "start": 1000.0,
-  "cash": 42.64
+  "cash": 0.17
  },
  "favourite": {
   "start": 1000.0,
-  "cash": 1.26
+  "cash": 0.62
  }
 }
