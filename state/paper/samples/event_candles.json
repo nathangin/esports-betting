@@ -1,36 +1,15 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXDOTA2GAME/events/KXDOTA2GAME-26NOV101000MENXE/candlesticks?start_ts=1794321000&end_ts=1794322860&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/events/KXCS2GAME-26NOV101300MINLEO/candlesticks?start_ts=1794331800&end_ts=1794333660&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1794322860,
+  "adjusted_end_ts": 1794333660,
   "market_candlesticks": [
    [],
-   [
-    {
-     "end_period_ts": 1794322860,
-     "open_interest_fp": "2578.33",
-     "price": {
-      "previous_dollars": "0.5800"
-     },
-     "volume_fp": "0.00",
-     "yes_ask": {
-      "close_dollars": "0.7300",
-      "high_dollars": "0.7300",
-      "low_dollars": "0.7300",
-      "open_dollars": "0.7300"
-     },
-     "yes_bid": {
-      "close_dollars": "0.5800",
-      "high_dollars": "0.5800",
-      "low_dollars": "0.5800",
-      "open_dollars": "0.5800"
-     }
-    }
-   ]
+   []
   ],
   "market_tickers": [
-   "KXDOTA2GAME-26NOV101000MENXE-MEN",
-   "KXDOTA2GAME-26NOV101000MENXE-XE"
+   "KXCS2GAME-26NOV101300MINLEO-MIN",
+   "KXCS2GAME-26NOV101300MINLEO-LEO"
   ]
  }
 }
