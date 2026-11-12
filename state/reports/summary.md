@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-12 08:09 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-12 08:24 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 678 | 57 | 621 | 215 | -$340.44 | -4.9% | -0.3c (666) | $659.56 |
+| model-only | Elo win model alone (control: ignores the market) | 679 | 58 | 621 | 215 | -$340.44 | -4.9% | -0.3c (666) | $659.56 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 1095 | 90 | 1005 | 663 | -$471.36 | -7.6% | -1.5c (1078) | $528.64 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -40,6 +40,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-12 08:24 | model-only | cs2 | G2 | Spirit | NO Spirit | 16 | 0.27 | 0.32 | 0.27 | open | - |
 | 2026-11-12 07:54 | favourite | dota2 | angry birds | Zero Tenacity | YES angry birds | 4 | 0.63 | 0.61 | 0.61 | open | - |
 | 2026-11-12 07:54 | favourite | cs2 | NAVI Junior | TheChampionGG | YES NAVI Junior | 1 | 0.80 | 0.79 | 0.79 | open | - |
 | 2026-11-12 07:54 | model-only | cs2 | TheChampionGG | NAVI Junior | NO NAVI Junior | 56 | 0.22 | 0.36 | 0.21 | open | - |
@@ -52,8 +53,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-12 07:54 | model-only | cs2 | DNK | Ducks | YES DNK | 32 | 0.29 | 0.35 | 0.28 | open | - |
 | 2026-11-12 05:54 | favourite | cs2 | MOUZ | FUT Esports | YES MOUZ | 6 | 0.83 | 0.83 | 0.83 | open | - |
 | 2026-11-12 05:54 | model-only | cs2 | FUT Esports | MOUZ | YES FUT Esports | 70 | 0.17 | 0.34 | 0.17 | open | - |
-| 2026-11-12 03:23 | favourite | cs2 | Vitality | FURIA | NO FURIA | 7 | 0.68 | 0.68 | 0.68 | lost | -$4.87 |
 | 2026-11-12 03:23 | model-only | cs2 | FURIA | Vitality | YES FURIA | 37 | 0.33 | 0.44 | 0.33 | won | $24.21 |
+| 2026-11-12 03:23 | favourite | cs2 | Vitality | FURIA | NO FURIA | 7 | 0.68 | 0.68 | 0.68 | lost | -$4.87 |
 | 2026-11-12 00:53 | favourite | cs2 | Team Falcons | Legacy | YES Team Falcons | 7 | 0.70 | 0.70 | 0.70 | won | $1.99 |
 | 2026-11-12 00:53 | model-only | cs2 | Legacy | Team Falcons | YES Legacy | 39 | 0.30 | 0.37 | 0.30 | lost | -$12.28 |
 | 2026-11-11 16:52 | model-only | cs2 | BoyBand | HAVU | YES BoyBand | 4 | 0.33 | 0.56 | 0.34 | lost | -$1.39 |
@@ -64,7 +65,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-11 14:52 | model-only | cs2 | underw0rld | QUINTESSENCIA | NO QUINTESSENCIA | 6 | 0.23 | 0.46 | 0.22 | lost | -$1.46 |
 | 2026-11-11 14:52 | favourite | cs2 | Fire Flux Esports | RoundsGG | YES Fire Flux Esports | 6 | 0.78 | 0.76 | 0.76 | won | $1.24 |
 | 2026-11-11 14:22 | favourite | cs2 | KUUSAMO.gg | SINQU | YES KUUSAMO.gg | 8 | 0.61 | 0.60 | 0.60 | lost | -$5.02 |
-| 2026-11-11 14:22 | model-only | cs2 | SINQU | KUUSAMO.gg | NO KUUSAMO.gg | 3 | 0.40 | 0.49 | 0.40 | won | $1.74 |
 
 ## Backtest on real Kalshi prices
 
