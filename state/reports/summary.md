@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-12 03:18 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-12 03:23 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 672 | 53 | 619 | 214 | -$352.37 | -5.1% | -0.3c (664) | $647.63 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1087 | 84 | 1003 | 662 | -$468.48 | -7.5% | -1.5c (1076) | $531.52 |
+| model-only | Elo win model alone (control: ignores the market) | 673 | 54 | 619 | 214 | -$352.37 | -5.1% | -0.3c (664) | $647.63 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1088 | 85 | 1003 | 662 | -$468.48 | -7.5% | -1.5c (1076) | $531.52 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -40,31 +40,31 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-12 03:23 | favourite | cs2 | Vitality | FURIA | NO FURIA | 7 | 0.68 | 0.68 | 0.68 | open | - |
+| 2026-11-12 03:23 | model-only | cs2 | FURIA | Vitality | YES FURIA | 37 | 0.33 | 0.44 | 0.33 | open | - |
 | 2026-11-12 00:53 | favourite | cs2 | Team Falcons | Legacy | YES Team Falcons | 7 | 0.70 | 0.70 | 0.70 | open | - |
 | 2026-11-12 00:53 | model-only | cs2 | Legacy | Team Falcons | YES Legacy | 39 | 0.30 | 0.37 | 0.30 | open | - |
 | 2026-11-11 16:52 | model-only | cs2 | BoyBand | HAVU | YES BoyBand | 4 | 0.33 | 0.56 | 0.34 | lost | -$1.39 |
-| 2026-11-11 14:52 | model-only | dota2 | Xipto Esports | Froglings | NO Froglings | 34 | 0.39 | 0.56 | 0.39 | lost | -$13.83 |
-| 2026-11-11 14:52 | favourite | dota2 | angry birds | Power Rangers | YES angry birds | 8 | 0.58 | 0.57 | 0.57 | lost | -$4.78 |
 | 2026-11-11 14:52 | model-only | dota2 | angry birds | Power Rangers | YES angry birds | 23 | 0.58 | 0.68 | 0.57 | lost | -$13.74 |
-| 2026-11-11 14:52 | favourite | cs2 | QUINTESSENCIA | underw0rld | YES QUINTESSENCIA | 1 | 0.78 | 0.78 | 0.78 | won | $0.20 |
 | 2026-11-11 14:52 | model-only | cs2 | underw0rld | QUINTESSENCIA | NO QUINTESSENCIA | 6 | 0.23 | 0.46 | 0.22 | lost | -$1.46 |
+| 2026-11-11 14:52 | favourite | cs2 | QUINTESSENCIA | underw0rld | YES QUINTESSENCIA | 1 | 0.78 | 0.78 | 0.78 | won | $0.20 |
 | 2026-11-11 14:52 | favourite | cs2 | Fire Flux Esports | RoundsGG | YES Fire Flux Esports | 6 | 0.78 | 0.76 | 0.76 | won | $1.24 |
+| 2026-11-11 14:52 | favourite | dota2 | angry birds | Power Rangers | YES angry birds | 8 | 0.58 | 0.57 | 0.57 | lost | -$4.78 |
+| 2026-11-11 14:52 | model-only | dota2 | Xipto Esports | Froglings | NO Froglings | 34 | 0.39 | 0.56 | 0.39 | lost | -$13.83 |
 | 2026-11-11 14:22 | favourite | cs2 | KUUSAMO.gg | SINQU | YES KUUSAMO.gg | 8 | 0.61 | 0.60 | 0.60 | lost | -$5.02 |
 | 2026-11-11 14:22 | model-only | cs2 | SINQU | KUUSAMO.gg | NO KUUSAMO.gg | 3 | 0.40 | 0.49 | 0.40 | won | $1.74 |
-| 2026-11-11 13:52 | model-only | cs2 | MASONIC | FORZE Reload | NO FORZE Reload | 83 | 0.16 | 0.33 | 0.16 | lost | -$14.07 |
-| 2026-11-11 13:52 | favourite | cs2 | BakS eSports | Nexus | YES BakS eSports | 9 | 0.57 | 0.57 | 0.57 | lost | -$5.29 |
-| 2026-11-11 13:52 | favourite | cs2 | BBL | 33 | YES BBL | 8 | 0.66 | 0.64 | 0.64 | won | $2.59 |
-| 2026-11-11 13:52 | favourite | cs2 | FORZE Reload | MASONIC | YES FORZE Reload | 6 | 0.85 | 0.84 | 0.84 | won | $0.84 |
 | 2026-11-11 13:52 | favourite | cs2 | 33 | ex-INOX Division | NO ex-INOX Division | 10 | 0.53 | 0.53 | 0.53 | open | - |
+| 2026-11-11 13:52 | favourite | cs2 | FORZE Reload | MASONIC | YES FORZE Reload | 6 | 0.85 | 0.84 | 0.84 | won | $0.84 |
+| 2026-11-11 13:52 | model-only | cs2 | MASONIC | FORZE Reload | NO FORZE Reload | 83 | 0.16 | 0.33 | 0.16 | lost | -$14.07 |
+| 2026-11-11 13:52 | favourite | cs2 | BBL | 33 | YES BBL | 8 | 0.66 | 0.64 | 0.64 | won | $2.59 |
+| 2026-11-11 13:52 | favourite | cs2 | BakS eSports | Nexus | YES BakS eSports | 9 | 0.57 | 0.57 | 0.57 | lost | -$5.29 |
 | 2026-11-11 11:51 | model-only | dota2 | Zero Tenacity | CyberHero | NO CyberHero | 6 | 0.13 | 0.23 | 0.12 | lost | -$0.83 |
 | 2026-11-11 11:51 | model-only | dota2 | PuckChamp | HULIGANI | YES PuckChamp | 3 | 0.18 | 0.40 | 0.19 | lost | -$0.58 |
-| 2026-11-11 10:51 | favourite | cs2 | Nexus | MOUZ NXT | YES Nexus | 3 | 0.78 | 0.78 | 0.78 | won | $0.62 |
-| 2026-11-11 10:51 | model-only | cs2 | MOUZ NXT | Nexus | NO Nexus | 59 | 0.23 | 0.31 | 0.22 | lost | -$14.31 |
-| 2026-11-11 10:51 | favourite | cs2 | GenOne | Inner Circle Academy | NO Inner Circle Academy | 10 | 0.54 | 0.54 | 0.54 | lost | -$5.58 |
 | 2026-11-11 10:51 | model-only | cs2 | Inner Circle Academy | GenOne | NO GenOne | 29 | 0.47 | 0.54 | 0.46 | won | $14.86 |
-| 2026-11-11 10:51 | favourite | cs2 | Ducks | ex-Sashi Academy | NO ex-Sashi Academy | 2 | 0.63 | 0.62 | 0.62 | lost | -$1.30 |
 | 2026-11-11 10:51 | favourite | cs2 | Phantom | Drama eSports | YES Phantom | 6 | 0.83 | 0.83 | 0.83 | won | $0.96 |
+| 2026-11-11 10:51 | favourite | cs2 | Ducks | ex-Sashi Academy | NO ex-Sashi Academy | 2 | 0.63 | 0.62 | 0.62 | lost | -$1.30 |
 | 2026-11-11 10:51 | model-only | cs2 | Drama eSports | Phantom | NO Phantom | 75 | 0.18 | 0.41 | 0.17 | lost | -$14.28 |
+| 2026-11-11 10:51 | favourite | cs2 | GenOne | Inner Circle Academy | NO Inner Circle Academy | 10 | 0.54 | 0.54 | 0.54 | lost | -$5.58 |
 
 ## Backtest on real Kalshi prices
 
