@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-12 15:50 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-12 16:05 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 688 | 58 | 630 | 217 | -$389.43 | -5.6% | -0.2c (680) | $610.57 |
+| model-only | Elo win model alone (control: ignores the market) | 688 | 57 | 631 | 218 | -$292.29 | -4.2% | -0.3c (680) | $707.71 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 1103 | 89 | 1014 | 667 | -$485.82 | -7.8% | -1.6c (1090) | $514.18 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -16,18 +16,18 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2296 finished matches. Lower is better; the market line is the bar to beat.
+2298 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5820 | 0.2002 |
-| model | 0.6510 | 0.2299 |
-| blend | 0.5819 | 0.2003 |
+| market | 0.5818 | 0.2001 |
+| model | 0.6513 | 0.2301 |
+| blend | 0.5817 | 0.2002 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1440 | 0.5923 | 0.6576 |
-| dota2 | 403 | 0.5588 | 0.6386 |
+| cs2 | 1441 | 0.5919 | 0.6575 |
+| dota2 | 404 | 0.5591 | 0.6402 |
 | ow | 128 | 0.5051 | 0.5379 |
 | valorant | 120 | 0.6349 | 0.6783 |
 | lol | 99 | 0.5729 | 0.7176 |
@@ -47,7 +47,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-12 13:54 | model-only | cs2 | The Last Resort | BakS eSports | NO BakS eSports | 1 | 0.16 | 0.27 | 0.16 | open | - |
 | 2026-11-12 12:54 | favourite | cs2 | 6yuBoJlbl | Drama eSports | NO Drama eSports | 4 | 0.59 | 0.58 | 0.58 | open | - |
 | 2026-11-12 12:54 | favourite | cs2 | Lavked | DNK | NO DNK | 6 | 0.77 | 0.77 | 0.77 | open | - |
-| 2026-11-12 11:54 | model-only | dota2 | Team Allied | CyberHero | YES Team Allied | 110 | 0.11 | 0.25 | 0.11 | open | - |
+| 2026-11-12 11:54 | model-only | dota2 | Team Allied | CyberHero | YES Team Allied | 110 | 0.11 | 0.25 | 0.11 | won | $97.14 |
 | 2026-11-12 11:54 | model-only | cs2 | MEIA NOITE | Axorfy Gaming | NO Axorfy Gaming | 14 | 0.42 | 0.52 | 0.40 | open | - |
 | 2026-11-12 11:54 | favourite | cs2 | Axorfy Gaming | MEIA NOITE | YES Axorfy Gaming | 1 | 0.62 | 0.60 | 0.60 | open | - |
 | 2026-11-12 11:54 | model-only | dota2 | GamerLegion | Aurora | NO Aurora | 41 | 0.30 | 0.53 | 0.29 | open | - |
