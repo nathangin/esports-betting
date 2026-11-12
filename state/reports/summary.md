@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-12 12:55 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-12 13:10 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 685 | 60 | 625 | 215 | -$375.94 | -5.4% | -0.3c (677) | $624.06 |
+| model-only | Elo win model alone (control: ignores the market) | 685 | 60 | 625 | 215 | -$375.94 | -5.4% | -0.2c (677) | $624.06 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 1101 | 90 | 1011 | 666 | -$480.17 | -7.7% | -1.6c (1088) | $519.83 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2285 finished matches. Lower is better; the market line is the bar to beat.
+2286 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
 | market | 0.5819 | 0.2001 |
-| model | 0.6512 | 0.2301 |
+| model | 0.6512 | 0.2300 |
 | blend | 0.5818 | 0.2002 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1433 | 0.5922 | 0.6578 |
+| cs2 | 1434 | 0.5922 | 0.6578 |
 | dota2 | 401 | 0.5590 | 0.6392 |
 | ow | 128 | 0.5051 | 0.5379 |
 | valorant | 118 | 0.6346 | 0.6783 |
