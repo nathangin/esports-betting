@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-13 02:22 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-13 02:42 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-13 02:22 UTC. Model fitted 2026-11-09T19:54. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 692 | 54 | 638 | 219 | -$328.93 | -4.7% | -0.2c (683) | $671.07 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1108 | 88 | 1020 | 671 | -$486.35 | -7.7% | -1.6c (1096) | $513.65 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1108 | 87 | 1021 | 672 | -$483.05 | -7.7% | -1.6c (1096) | $516.95 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -42,7 +42,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
 | 2026-11-13 02:21 | favourite | r6 | Team Liquid | DarkZero Esports | NO DarkZero Esports | 7 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-13 02:21 | model-only | r6 | DarkZero Esports | Team Liquid | YES DarkZero Esports | 35 | 0.36 | 0.49 | 0.35 | open | - |
-| 2026-11-12 23:21 | favourite | r6 | Virtus.pro | M80 | NO M80 | 8 | 0.57 | 0.56 | 0.56 | open | - |
+| 2026-11-12 23:21 | favourite | r6 | Virtus.pro | M80 | NO M80 | 8 | 0.57 | 0.56 | 0.56 | won | $3.30 |
 | 2026-11-12 18:20 | favourite | cs2 | eSuba | NoTime | NO NoTime | 1 | 0.53 | 0.52 | 0.52 | lost | -$0.55 |
 | 2026-11-12 17:50 | favourite | cs2 | tao toma | Procyon Gaming | YES tao toma | 1 | 0.64 | 0.64 | 0.64 | won | $0.34 |
 | 2026-11-12 17:35 | favourite | cs2 | Team Bratishkin | Team Recrent | YES Team Bratishkin | 8 | 0.58 | 0.57 | 0.57 | won | $3.22 |
