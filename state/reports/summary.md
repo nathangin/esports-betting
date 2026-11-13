@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-13 08:07 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-13 08:22 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 697 | 58 | 639 | 220 | -$307.10 | -4.3% | -0.3c (686) | $692.90 |
+| model-only | Elo win model alone (control: ignores the market) | 698 | 59 | 639 | 220 | -$307.10 | -4.3% | -0.2c (687) | $692.90 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 1111 | 89 | 1022 | 672 | -$487.78 | -7.8% | -1.5c (1100) | $512.22 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -40,6 +40,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-13 08:22 | model-only | r6 | G2 Esports | FaZe Clan | NO FaZe Clan | 31 | 0.36 | 0.42 | 0.36 | open | - |
 | 2026-11-13 07:52 | model-only | cs2 | Brute | 33 | YES Brute | 26 | 0.50 | 0.64 | 0.49 | open | - |
 | 2026-11-13 07:52 | model-only | cs2 | gothboiclique | NAVI Junior | YES gothboiclique | 31 | 0.42 | 0.52 | 0.38 | open | - |
 | 2026-11-13 07:21 | model-only | valorant | XJG | Havoc & Yonder | NO Havoc & Yonder | 29 | 0.31 | 0.50 | 0.29 | open | - |
@@ -64,7 +65,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-12 13:54 | model-only | cs2 | The Last Resort | BakS eSports | NO BakS eSports | 1 | 0.16 | 0.27 | 0.16 | lost | -$0.17 |
 | 2026-11-12 12:54 | favourite | cs2 | 6yuBoJlbl | Drama eSports | NO Drama eSports | 4 | 0.59 | 0.58 | 0.58 | open | - |
 | 2026-11-12 12:54 | favourite | cs2 | Lavked | DNK | NO DNK | 6 | 0.77 | 0.77 | 0.77 | won | $1.30 |
-| 2026-11-12 11:54 | favourite | cs2 | Axorfy Gaming | MEIA NOITE | YES Axorfy Gaming | 1 | 0.62 | 0.60 | 0.60 | won | $0.36 |
 
 ## Backtest on real Kalshi prices
 
