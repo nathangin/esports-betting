@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-13 05:22 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-13 05:57 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-13 05:22 UTC. Model fitted 2026-11-09T19:54. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 693 | 55 | 638 | 219 | -$328.93 | -4.7% | -0.3c (684) | $671.07 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1111 | 90 | 1021 | 672 | -$483.05 | -7.7% | -1.6c (1097) | $516.95 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1111 | 90 | 1021 | 672 | -$483.05 | -7.7% | -1.5c (1099) | $516.95 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,7 +16,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2339 finished matches. Lower is better; the market line is the bar to beat.
+2340 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
@@ -26,7 +26,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1469 | 0.5928 | 0.6588 |
+| cs2 | 1470 | 0.5928 | 0.6587 |
 | dota2 | 414 | 0.5679 | 0.6454 |
 | ow | 128 | 0.5051 | 0.5379 |
 | valorant | 122 | 0.6357 | 0.6769 |
