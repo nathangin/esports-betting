@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-13 14:23 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-13 14:38 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -16,20 +16,20 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2365 finished matches. Lower is better; the market line is the bar to beat.
+2367 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5840 | 0.2010 |
-| model | 0.6526 | 0.2307 |
-| blend | 0.5840 | 0.2011 |
+| market | 0.5841 | 0.2010 |
+| model | 0.6528 | 0.2307 |
+| blend | 0.5841 | 0.2011 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1479 | 0.5930 | 0.6584 |
+| cs2 | 1480 | 0.5930 | 0.6582 |
 | dota2 | 418 | 0.5670 | 0.6453 |
 | ow | 131 | 0.5138 | 0.5398 |
-| valorant | 127 | 0.6268 | 0.6812 |
+| valorant | 128 | 0.6275 | 0.6852 |
 | lol | 100 | 0.5725 | 0.7120 |
 | r6 | 90 | 0.5686 | 0.6571 |
 | cod | 20 | 0.5911 | 0.6189 |
