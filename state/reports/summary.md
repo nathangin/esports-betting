@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-13 02:42 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-13 03:17 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 692 | 54 | 638 | 219 | -$328.93 | -4.7% | -0.2c (683) | $671.07 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1108 | 87 | 1021 | 672 | -$483.05 | -7.7% | -1.6c (1096) | $516.95 |
+| model-only | Elo win model alone (control: ignores the market) | 692 | 54 | 638 | 219 | -$328.93 | -4.7% | -0.2c (684) | $671.07 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1108 | 87 | 1021 | 672 | -$483.05 | -7.7% | -1.6c (1097) | $516.95 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -16,7 +16,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2338 finished matches. Lower is better; the market line is the bar to beat.
+2339 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
@@ -31,7 +31,7 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 | ow | 128 | 0.5051 | 0.5379 |
 | valorant | 122 | 0.6357 | 0.6769 |
 | lol | 99 | 0.5729 | 0.7176 |
-| r6 | 86 | 0.5672 | 0.6601 |
+| r6 | 87 | 0.5673 | 0.6591 |
 | cod | 20 | 0.5911 | 0.6189 |
 
 ## Latest bets
