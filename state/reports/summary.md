@@ -1,6 +1,6 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-13 04:47 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-13 04:52 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
@@ -8,7 +8,7 @@ Updated 2026-11-13 04:47 UTC. Model fitted 2026-11-09T19:54. Every bet below is 
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
 | model-only | Elo win model alone (control: ignores the market) | 692 | 54 | 638 | 219 | -$328.93 | -4.7% | -0.3c (684) | $671.07 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1108 | 87 | 1021 | 672 | -$483.05 | -7.7% | -1.6c (1097) | $516.95 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1110 | 89 | 1021 | 672 | -$483.05 | -7.7% | -1.6c (1097) | $516.95 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -40,6 +40,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-13 04:51 | favourite | valorant | Young Gaming | LGD Gaming | YES Young Gaming | 1 | 0.53 | 0.53 | 0.53 | open | - |
+| 2026-11-13 04:51 | favourite | valorant | TEC Esports | Ambitious Legend Gaming | YES TEC Esports | 6 | 0.75 | 0.76 | 0.76 | open | - |
 | 2026-11-13 02:21 | favourite | r6 | Team Liquid | DarkZero Esports | NO DarkZero Esports | 7 | 0.66 | 0.65 | 0.65 | open | - |
 | 2026-11-13 02:21 | model-only | r6 | DarkZero Esports | Team Liquid | YES DarkZero Esports | 35 | 0.36 | 0.49 | 0.35 | open | - |
 | 2026-11-12 23:21 | favourite | r6 | Virtus.pro | M80 | NO M80 | 8 | 0.57 | 0.56 | 0.56 | won | $3.30 |
@@ -62,8 +64,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-12 11:54 | favourite | cs2 | Axorfy Gaming | MEIA NOITE | YES Axorfy Gaming | 1 | 0.62 | 0.60 | 0.60 | won | $0.36 |
 | 2026-11-12 11:54 | model-only | cs2 | MEIA NOITE | Axorfy Gaming | NO Axorfy Gaming | 14 | 0.42 | 0.52 | 0.40 | lost | -$6.12 |
 | 2026-11-12 11:24 | favourite | cs2 | Team Buster | Team korya_mc | YES Team Buster | 9 | 0.56 | 0.54 | 0.54 | lost | -$5.20 |
-| 2026-11-12 10:54 | favourite | cs2 | FORZE Reload | Butterfly | NO Butterfly | 9 | 0.57 | 0.56 | 0.56 | lost | -$5.29 |
-| 2026-11-12 10:54 | model-only | dota2 | old blood | Xipto Esports | NO Xipto Esports | 110 | 0.11 | 0.26 | 0.08 | lost | -$12.86 |
 | 2026-11-12 10:54 | favourite | cs2 | GenOne | Leo Team | NO Leo Team | 1 | 0.52 | 0.52 | 0.52 | lost | -$0.54 |
 
 ## Backtest on real Kalshi prices
