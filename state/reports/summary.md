@@ -1,14 +1,14 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-13 06:07 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-13 06:32 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 693 | 55 | 638 | 219 | -$328.93 | -4.7% | -0.3c (684) | $671.07 |
-| favourite | 1% flat on the market favourite (no-skill baseline) | 1111 | 90 | 1021 | 672 | -$483.05 | -7.7% | -1.5c (1099) | $516.95 |
+| model-only | Elo win model alone (control: ignores the market) | 693 | 54 | 639 | 220 | -$307.10 | -4.3% | -0.3c (685) | $692.90 |
+| favourite | 1% flat on the market favourite (no-skill baseline) | 1111 | 89 | 1022 | 672 | -$487.78 | -7.8% | -1.5c (1100) | $512.22 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
 
@@ -44,8 +44,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-13 05:21 | model-only | r6 | Geekay Esports | Falcons Esport | NO Falcons Esport | 44 | 0.29 | 0.41 | 0.28 | open | - |
 | 2026-11-13 04:51 | favourite | valorant | Young Gaming | LGD Gaming | YES Young Gaming | 1 | 0.53 | 0.53 | 0.53 | open | - |
 | 2026-11-13 04:51 | favourite | valorant | TEC Esports | Ambitious Legend Gaming | YES TEC Esports | 6 | 0.75 | 0.76 | 0.76 | open | - |
-| 2026-11-13 02:21 | favourite | r6 | Team Liquid | DarkZero Esports | NO DarkZero Esports | 7 | 0.66 | 0.65 | 0.65 | open | - |
-| 2026-11-13 02:21 | model-only | r6 | DarkZero Esports | Team Liquid | YES DarkZero Esports | 35 | 0.36 | 0.49 | 0.35 | open | - |
+| 2026-11-13 02:21 | favourite | r6 | Team Liquid | DarkZero Esports | NO DarkZero Esports | 7 | 0.66 | 0.65 | 0.65 | lost | -$4.73 |
+| 2026-11-13 02:21 | model-only | r6 | DarkZero Esports | Team Liquid | YES DarkZero Esports | 35 | 0.36 | 0.49 | 0.35 | won | $21.83 |
 | 2026-11-12 23:21 | favourite | r6 | Virtus.pro | M80 | NO M80 | 8 | 0.57 | 0.56 | 0.56 | won | $3.30 |
 | 2026-11-12 18:20 | favourite | cs2 | eSuba | NoTime | NO NoTime | 1 | 0.53 | 0.52 | 0.52 | lost | -$0.55 |
 | 2026-11-12 17:50 | favourite | cs2 | tao toma | Procyon Gaming | YES tao toma | 1 | 0.64 | 0.64 | 0.64 | won | $0.34 |
