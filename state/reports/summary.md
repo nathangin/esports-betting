@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-13 11:07 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-13 11:12 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 704 | 63 | 641 | 221 | -$304.22 | -4.3% | -0.3c (692) | $695.78 |
+| model-only | Elo win model alone (control: ignores the market) | 704 | 61 | 643 | 222 | -$301.11 | -4.2% | -0.3c (692) | $698.89 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 1114 | 89 | 1025 | 675 | -$484.89 | -7.7% | -1.5c (1103) | $515.11 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -16,20 +16,20 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2348 finished matches. Lower is better; the market line is the bar to beat.
+2349 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5841 | 0.2010 |
+| market | 0.5840 | 0.2010 |
 | model | 0.6525 | 0.2306 |
-| blend | 0.5841 | 0.2012 |
+| blend | 0.5840 | 0.2011 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 1471 | 0.5930 | 0.6587 |
 | dota2 | 414 | 0.5679 | 0.6454 |
 | ow | 130 | 0.5060 | 0.5359 |
-| valorant | 124 | 0.6329 | 0.6779 |
+| valorant | 125 | 0.6306 | 0.6780 |
 | lol | 100 | 0.5725 | 0.7120 |
 | r6 | 89 | 0.5700 | 0.6583 |
 | cod | 20 | 0.5911 | 0.6189 |
@@ -50,9 +50,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-13 08:52 | favourite | cs2 | Team Bratishkin | Team Jerry | YES Team Bratishkin | 9 | 0.51 | 0.50 | 0.50 | open | - |
 | 2026-11-13 08:52 | model-only | cs2 | Team Bratishkin | Team Jerry | YES Team Bratishkin | 25 | 0.51 | 0.60 | 0.50 | open | - |
 | 2026-11-13 08:22 | model-only | r6 | G2 Esports | FaZe Clan | NO FaZe Clan | 31 | 0.36 | 0.42 | 0.36 | open | - |
-| 2026-11-13 07:52 | model-only | cs2 | Brute | 33 | YES Brute | 26 | 0.50 | 0.64 | 0.49 | open | - |
+| 2026-11-13 07:52 | model-only | cs2 | Brute | 33 | YES Brute | 26 | 0.50 | 0.64 | 0.49 | won | $12.54 |
 | 2026-11-13 07:52 | model-only | cs2 | gothboiclique | NAVI Junior | YES gothboiclique | 31 | 0.42 | 0.52 | 0.38 | open | - |
-| 2026-11-13 07:21 | model-only | valorant | XJG | Havoc & Yonder | NO Havoc & Yonder | 29 | 0.31 | 0.50 | 0.29 | open | - |
+| 2026-11-13 07:21 | model-only | valorant | XJG | Havoc & Yonder | NO Havoc & Yonder | 29 | 0.31 | 0.50 | 0.29 | lost | -$9.43 |
 | 2026-11-13 06:51 | model-only | cs2 | MOUZ | Vitality | YES MOUZ | 30 | 0.44 | 0.54 | 0.43 | won | $16.28 |
 | 2026-11-13 05:21 | favourite | r6 | Falcons Esport | Geekay Esports | YES Falcons Esport | 4 | 0.73 | 0.72 | 0.72 | won | $1.02 |
 | 2026-11-13 05:21 | model-only | r6 | Geekay Esports | Falcons Esport | NO Falcons Esport | 44 | 0.29 | 0.41 | 0.28 | lost | -$13.40 |
