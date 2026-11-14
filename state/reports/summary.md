@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-14 10:45 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-14 10:50 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 712 | 57 | 655 | 225 | -$336.86 | -4.7% | -0.3c (704) | $663.14 |
+| model-only | Elo win model alone (control: ignores the market) | 715 | 60 | 655 | 225 | -$336.86 | -4.7% | -0.3c (704) | $663.14 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 1119 | 86 | 1033 | 678 | -$496.26 | -7.9% | -1.5c (1108) | $503.74 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -40,6 +40,9 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-14 10:50 | model-only | cs2 | ILLYRIANS | Team ACES | YES ILLYRIANS | 4 | 0.31 | 0.50 | 0.28 | open | - |
+| 2026-11-14 10:50 | model-only | cs2 | BakS eSports | Virtus.pro | YES BakS eSports | 36 | 0.35 | 0.44 | 0.34 | open | - |
+| 2026-11-14 10:50 | model-only | cs2 | ASTRON | ABT Esports | YES ASTRON | 1 | 0.47 | 0.55 | 0.45 | open | - |
 | 2026-11-14 09:20 | model-only | cs2 | FURIA | Team Falcons | NO Team Falcons | 22 | 0.52 | 0.57 | 0.52 | open | - |
 | 2026-11-14 08:50 | model-only | dota2 | Spirit Academy | Zero Tenacity | YES Spirit Academy | 26 | 0.50 | 0.59 | 0.51 | open | - |
 | 2026-11-14 07:50 | model-only | cs2 | KAMUI | eSuba | NO eSuba | 11 | 0.56 | 0.63 | 0.54 | open | - |
@@ -62,9 +65,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-13 08:52 | favourite | dota2 | GamerLegion | CyberHero | YES GamerLegion | 6 | 0.75 | 0.76 | 0.76 | won | $1.42 |
 | 2026-11-13 08:52 | favourite | cs2 | Team Bratishkin | Team Jerry | YES Team Bratishkin | 9 | 0.51 | 0.50 | 0.50 | lost | -$4.75 |
 | 2026-11-13 08:52 | model-only | cs2 | Team Bratishkin | Team Jerry | YES Team Bratishkin | 25 | 0.51 | 0.60 | 0.50 | lost | -$13.19 |
-| 2026-11-13 08:22 | model-only | r6 | G2 Esports | FaZe Clan | NO FaZe Clan | 31 | 0.36 | 0.42 | 0.36 | lost | -$11.66 |
-| 2026-11-13 07:52 | model-only | cs2 | Brute | 33 | YES Brute | 26 | 0.50 | 0.64 | 0.49 | won | $12.54 |
-| 2026-11-13 07:52 | model-only | cs2 | gothboiclique | NAVI Junior | YES gothboiclique | 31 | 0.42 | 0.52 | 0.38 | won | $17.45 |
 
 ## Backtest on real Kalshi prices
 
