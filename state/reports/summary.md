@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-14 17:56 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-14 18:01 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 726 | 64 | 662 | 229 | -$347.47 | -4.8% | -0.2c (715) | $652.53 |
+| model-only | Elo win model alone (control: ignores the market) | 726 | 63 | 663 | 229 | -$348.57 | -4.8% | -0.2c (715) | $651.43 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 1119 | 86 | 1033 | 678 | -$496.26 | -7.9% | -1.5c (1108) | $503.74 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -46,7 +46,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-14 16:51 | model-only | cs2 | ILLYRIANS | BakS eSports | NO BakS eSports | 39 | 0.32 | 0.47 | 0.31 | open | - |
 | 2026-11-14 16:51 | model-only | cs2 | GenOne | 33 | YES GenOne | 1 | 0.28 | 0.40 | 0.27 | open | - |
 | 2026-11-14 16:51 | model-only | cs2 | ex-Zero Tenacity | WW Team | NO WW Team | 18 | 0.70 | 0.79 | 0.70 | open | - |
-| 2026-11-14 15:50 | model-only | cs2 | DINERO | Young TigeRES | NO Young TigeRES | 4 | 0.26 | 0.31 | 0.24 | open | - |
+| 2026-11-14 15:50 | model-only | cs2 | DINERO | Young TigeRES | NO Young TigeRES | 4 | 0.26 | 0.31 | 0.24 | lost | -$1.10 |
 | 2026-11-14 13:50 | model-only | cs2 | Spirit Academy | LUNTIKI | NO LUNTIKI | 30 | 0.43 | 0.68 | 0.43 | open | - |
 | 2026-11-14 13:50 | model-only | cs2 | Honvéd | ex-RUSTEC | YES Honvéd | 42 | 0.31 | 0.41 | 0.31 | lost | -$13.65 |
 | 2026-11-14 13:50 | model-only | cs2 | FORZE Reload | Iberian Soul | NO Iberian Soul | 25 | 0.41 | 0.56 | 0.41 | open | - |
