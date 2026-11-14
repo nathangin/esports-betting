@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-14 07:20 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-14 07:50 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 708 | 54 | 654 | 225 | -$325.91 | -4.5% | -0.3c (699) | $674.09 |
+| model-only | Elo win model alone (control: ignores the market) | 710 | 56 | 654 | 225 | -$325.91 | -4.5% | -0.3c (700) | $674.09 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 1119 | 86 | 1033 | 678 | -$496.26 | -7.9% | -1.5c (1108) | $503.74 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -16,20 +16,20 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2415 finished matches. Lower is better; the market line is the bar to beat.
+2416 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5851 | 0.2014 |
+| market | 0.5850 | 0.2013 |
 | model | 0.6540 | 0.2313 |
-| blend | 0.5852 | 0.2015 |
+| blend | 0.5850 | 0.2014 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
 | cs2 | 1513 | 0.5937 | 0.6600 |
 | dota2 | 426 | 0.5701 | 0.6459 |
+| valorant | 133 | 0.6217 | 0.6865 |
 | ow | 132 | 0.5132 | 0.5386 |
-| valorant | 132 | 0.6254 | 0.6859 |
 | lol | 100 | 0.5725 | 0.7120 |
 | r6 | 92 | 0.5714 | 0.6564 |
 | cod | 20 | 0.5911 | 0.6189 |
@@ -40,6 +40,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-14 07:50 | model-only | cs2 | KAMUI | eSuba | NO eSuba | 11 | 0.56 | 0.63 | 0.54 | open | - |
+| 2026-11-14 07:50 | model-only | cs2 | Balkan Outlaws | GenOne | YES Balkan Outlaws | 3 | 0.39 | 0.55 | 0.40 | open | - |
 | 2026-11-14 06:50 | model-only | cs2 | MOUZ | Spirit | YES MOUZ | 20 | 0.53 | 0.58 | 0.53 | open | - |
 | 2026-11-14 00:09 | favourite | r6 | Virtus.pro | DarkZero Esports | NO DarkZero Esports | 2 | 0.51 | 0.51 | 0.51 | lost | -$1.06 |
 | 2026-11-13 20:53 | favourite | cs2 | BARCA | BORRACHEIROS | YES BARCA | 1 | 0.87 | 0.86 | 0.86 | won | $0.12 |
@@ -49,22 +51,20 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-13 12:52 | model-only | cs2 | Drama eSports | 6yuBoJlbl | YES Drama eSports | 25 | 0.39 | 0.52 | 0.38 | lost | -$10.17 |
 | 2026-11-13 12:52 | model-only | cs2 | Balkan Outlaws | Saint Sinners | YES Balkan Outlaws | 26 | 0.51 | 0.61 | 0.51 | lost | -$13.72 |
 | 2026-11-13 11:52 | model-only | dota2 | 4ikibamboni | Spirit Academy | YES 4ikibamboni | 1 | 0.39 | 0.48 | 0.39 | lost | -$0.41 |
-| 2026-11-13 10:52 | model-only | cs2 | GenOne | Team ACES | NO Team ACES | 26 | 0.34 | 0.39 | 0.34 | lost | -$9.25 |
-| 2026-11-13 10:52 | model-only | cs2 | Butterfly | PRIVATE | YES Butterfly | 1 | 0.36 | 0.57 | 0.35 | lost | -$0.38 |
 | 2026-11-13 10:52 | model-only | cs2 | ex-Zero Tenacity | BakS eSports | YES ex-Zero Tenacity | 26 | 0.51 | 0.60 | 0.51 | won | $12.28 |
+| 2026-11-13 10:52 | model-only | cs2 | Butterfly | PRIVATE | YES Butterfly | 1 | 0.36 | 0.57 | 0.35 | lost | -$0.38 |
+| 2026-11-13 10:52 | model-only | cs2 | GenOne | Team ACES | NO Team ACES | 26 | 0.34 | 0.39 | 0.34 | lost | -$9.25 |
 | 2026-11-13 10:22 | model-only | cs2 | ex-ENCE | Noir Verse | YES ex-ENCE | 31 | 0.41 | 0.47 | 0.40 | won | $17.76 |
-| 2026-11-13 08:52 | favourite | dota2 | GamerLegion | CyberHero | YES GamerLegion | 6 | 0.75 | 0.76 | 0.76 | won | $1.42 |
-| 2026-11-13 08:52 | model-only | cs2 | Team Bratishkin | Team Jerry | YES Team Bratishkin | 25 | 0.51 | 0.60 | 0.50 | lost | -$13.19 |
-| 2026-11-13 08:52 | favourite | cs2 | Team Bratishkin | Team Jerry | YES Team Bratishkin | 9 | 0.51 | 0.50 | 0.50 | lost | -$4.75 |
 | 2026-11-13 08:52 | favourite | dota2 | PlayTime | HULIGANI | YES PlayTime | 3 | 0.57 | 0.57 | 0.57 | lost | -$1.77 |
 | 2026-11-13 08:52 | model-only | dota2 | PlayTime | HULIGANI | YES PlayTime | 23 | 0.57 | 0.63 | 0.57 | lost | -$13.51 |
+| 2026-11-13 08:52 | favourite | dota2 | GamerLegion | CyberHero | YES GamerLegion | 6 | 0.75 | 0.76 | 0.76 | won | $1.42 |
+| 2026-11-13 08:52 | favourite | cs2 | Team Bratishkin | Team Jerry | YES Team Bratishkin | 9 | 0.51 | 0.50 | 0.50 | lost | -$4.75 |
+| 2026-11-13 08:52 | model-only | cs2 | Team Bratishkin | Team Jerry | YES Team Bratishkin | 25 | 0.51 | 0.60 | 0.50 | lost | -$13.19 |
 | 2026-11-13 08:22 | model-only | r6 | G2 Esports | FaZe Clan | NO FaZe Clan | 31 | 0.36 | 0.42 | 0.36 | lost | -$11.66 |
 | 2026-11-13 07:52 | model-only | cs2 | Brute | 33 | YES Brute | 26 | 0.50 | 0.64 | 0.49 | won | $12.54 |
 | 2026-11-13 07:52 | model-only | cs2 | gothboiclique | NAVI Junior | YES gothboiclique | 31 | 0.42 | 0.52 | 0.38 | won | $17.45 |
 | 2026-11-13 07:21 | model-only | valorant | XJG | Havoc & Yonder | NO Havoc & Yonder | 29 | 0.31 | 0.50 | 0.29 | lost | -$9.43 |
 | 2026-11-13 06:51 | model-only | cs2 | MOUZ | Vitality | YES MOUZ | 30 | 0.44 | 0.54 | 0.43 | won | $16.28 |
-| 2026-11-13 05:21 | favourite | r6 | Falcons Esport | Geekay Esports | YES Falcons Esport | 4 | 0.73 | 0.72 | 0.72 | won | $1.02 |
-| 2026-11-13 05:21 | model-only | r6 | Geekay Esports | Falcons Esport | NO Falcons Esport | 44 | 0.29 | 0.41 | 0.28 | lost | -$13.40 |
 
 ## Backtest on real Kalshi prices
 
