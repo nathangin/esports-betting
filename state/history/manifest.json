@@ -1,5 +1,5 @@
 {
- "started": "2026-11-13T17:15:59.079946+00:00",
+ "started": "2026-11-14T15:52:13.521455+00:00",
  "errors": [],
  "args": {
   "days": 14,
@@ -7,41 +7,41 @@
  },
  "series": 147,
  "markets": {
-  "rows": 34473,
-  "events": 17138,
+  "rows": 34599,
+  "events": 17201,
   "by_game": {
    "cod": 334,
-   "cs2": 8659,
-   "dota2": 2087,
+   "cs2": 8701,
+   "dota2": 2100,
    "lol": 2945,
    "ow": 499,
-   "r6": 769,
+   "r6": 771,
    "rl": 109,
-   "valorant": 1736
+   "valorant": 1742
   }
  },
  "matches": {
-  "rows": 16941,
+  "rows": 17004,
   "by_game": {
    "cod": 334,
-   "cs2": 8658,
-   "dota2": 1920,
+   "cs2": 8700,
+   "dota2": 1933,
    "lol": 2917,
    "ow": 499,
-   "r6": 769,
+   "r6": 771,
    "rl": 109,
-   "valorant": 1735
+   "valorant": 1741
   },
   "first": "2026-02-20 21:00:00+00:00",
   "last": "2026-11-14 19:00:00+00:00",
-  "decided": 16120
+  "decided": 16176
  },
  "candles": {
-  "rows": 3080746,
-  "events": 11316,
-  "fetched_now": 84,
-  "empty": 6
+  "rows": 3094260,
+  "events": 11368,
+  "fetched_now": 59,
+  "empty": 7
  },
- "finished": "2026-11-13T17:16:45.129292+00:00",
- "http_calls": 138
+ "finished": "2026-11-14T15:52:59.397266+00:00",
+ "http_calls": 113
 }
