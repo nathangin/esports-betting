@@ -1,57 +1,57 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXOWGAME/events/KXOWGAME-26NOV120445EF36CR/candlesticks?start_ts=1794474900&end_ts=1794476760&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXCS2GAME/events/KXCS2GAME-26NOV120500KORWOR/candlesticks?start_ts=1794475800&end_ts=1794477660&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1794476760,
+  "adjusted_end_ts": 1794477660,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1794476760,
-     "open_interest_fp": "338.39",
+     "end_period_ts": 1794477660,
+     "open_interest_fp": "0.18",
      "price": {
-      "previous_dollars": "0.0600"
+      "previous_dollars": "0.5200"
      },
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.0600",
-      "high_dollars": "0.0600",
-      "low_dollars": "0.0600",
-      "open_dollars": "0.0600"
+      "close_dollars": "0.5800",
+      "high_dollars": "0.5800",
+      "low_dollars": "0.5000",
+      "open_dollars": "0.5800"
      },
      "yes_bid": {
-      "close_dollars": "0.0500",
-      "high_dollars": "0.0500",
-      "low_dollars": "0.0500",
-      "open_dollars": "0.0500"
+      "close_dollars": "0.1200",
+      "high_dollars": "0.2700",
+      "low_dollars": "0.1200",
+      "open_dollars": "0.1200"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1794476760,
-     "open_interest_fp": "52.95",
+     "end_period_ts": 1794477660,
+     "open_interest_fp": "2.64",
      "price": {
-      "previous_dollars": "0.9500"
+      "previous_dollars": "0.7800"
      },
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9600",
-      "high_dollars": "0.9600",
-      "low_dollars": "0.9500",
-      "open_dollars": "0.9500"
+      "close_dollars": "0.6400",
+      "high_dollars": "0.6400",
+      "low_dollars": "0.6100",
+      "open_dollars": "0.6400"
      },
      "yes_bid": {
-      "close_dollars": "0.9300",
-      "high_dollars": "0.9300",
-      "low_dollars": "0.9300",
-      "open_dollars": "0.9300"
+      "close_dollars": "0.4500",
+      "high_dollars": "0.4500",
+      "low_dollars": "0.4500",
+      "open_dollars": "0.4500"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXOWGAME-26NOV120445EF36CR-EF36",
-   "KXOWGAME-26NOV120445EF36CR-CR"
+   "KXCS2GAME-26NOV120500KORWOR-KOR",
+   "KXCS2GAME-26NOV120500KORWOR-WOR"
   ]
  }
 }
