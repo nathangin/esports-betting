@@ -1,77 +1,127 @@
 {
- "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXDOTA2GAME/events/KXDOTA2GAME-26NOV120700XEOLD/candlesticks?start_ts=1794483000&end_ts=1794484860&period_interval=1",
+ "url": "https://api.elections.kalshi.com/trade-api/v2/series/KXVALORANTGAME/events/KXVALORANTGAME-26NOV120900NONSPE/candlesticks?start_ts=1794490200&end_ts=1794492060&period_interval=1",
  "status": 200,
  "body": {
-  "adjusted_end_ts": 1794484860,
+  "adjusted_end_ts": 1794492060,
   "market_candlesticks": [
    [
     {
-     "end_period_ts": 1794483180,
-     "open_interest_fp": "11.68",
+     "end_period_ts": 1794491280,
+     "open_interest_fp": "2721.05",
      "price": {
-      "previous_dollars": "0.9000"
+      "close_dollars": "0.0900",
+      "high_dollars": "0.0900",
+      "low_dollars": "0.0100",
+      "mean_dollars": "0.0665",
+      "open_dollars": "0.0100",
+      "previous_dollars": "0.0100"
      },
-     "volume_fp": "0.00",
+     "volume_fp": "141.09",
      "yes_ask": {
-      "close_dollars": "0.9300",
-      "high_dollars": "0.9300",
-      "low_dollars": "0.9300",
-      "open_dollars": "0.9300"
+      "close_dollars": "0.0500",
+      "high_dollars": "0.2500",
+      "low_dollars": "0.0100",
+      "open_dollars": "0.0100"
      },
      "yes_bid": {
-      "close_dollars": "0.8900",
-      "high_dollars": "0.8900",
-      "low_dollars": "0.8900",
-      "open_dollars": "0.8900"
+      "close_dollars": "0.0000",
+      "high_dollars": "0.0000",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
      }
     },
     {
-     "end_period_ts": 1794484860,
-     "open_interest_fp": "11.68",
+     "end_period_ts": 1794491340,
+     "open_interest_fp": "2721.05",
      "price": {
-      "previous_dollars": "0.9000"
+      "previous_dollars": "0.0900"
      },
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.9400",
-      "high_dollars": "0.9400",
-      "low_dollars": "0.9300",
-      "open_dollars": "0.9300"
+      "close_dollars": "0.0500",
+      "high_dollars": "0.0500",
+      "low_dollars": "0.0500",
+      "open_dollars": "0.0500"
      },
      "yes_bid": {
-      "close_dollars": "0.8900",
-      "high_dollars": "0.8900",
-      "low_dollars": "0.8900",
-      "open_dollars": "0.8900"
+      "close_dollars": "0.0000",
+      "high_dollars": "0.0000",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
+     }
+    },
+    {
+     "end_period_ts": 1794492060,
+     "open_interest_fp": "2721.05",
+     "price": {
+      "previous_dollars": "0.0900"
+     },
+     "volume_fp": "0.00",
+     "yes_ask": {
+      "close_dollars": "0.0400",
+      "high_dollars": "0.0500",
+      "low_dollars": "0.0400",
+      "open_dollars": "0.0500"
+     },
+     "yes_bid": {
+      "close_dollars": "0.0000",
+      "high_dollars": "0.0000",
+      "low_dollars": "0.0000",
+      "open_dollars": "0.0000"
      }
     }
    ],
    [
     {
-     "end_period_ts": 1794484860,
-     "open_interest_fp": "6.84",
+     "end_period_ts": 1794490380,
+     "open_interest_fp": "18824.18",
      "price": {
-      "previous_dollars": "0.1100"
+      "previous_dollars": "0.9900"
      },
      "volume_fp": "0.00",
      "yes_ask": {
-      "close_dollars": "0.0800",
-      "high_dollars": "0.0800",
-      "low_dollars": "0.0800",
-      "open_dollars": "0.0800"
+      "close_dollars": "1.0000",
+      "high_dollars": "1.0000",
+      "low_dollars": "1.0000",
+      "open_dollars": "1.0000"
      },
      "yes_bid": {
-      "close_dollars": "0.0700",
-      "high_dollars": "0.0700",
-      "low_dollars": "0.0700",
-      "open_dollars": "0.0700"
+      "close_dollars": "0.9900",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.9900",
+      "open_dollars": "0.9900"
+     }
+    },
+    {
+     "end_period_ts": 1794491280,
+     "open_interest_fp": "18828.18",
+     "price": {
+      "close_dollars": "0.9900",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.9900",
+      "mean_dollars": "0.9900",
+      "open_dollars": "0.9900",
+      "previous_dollars": "0.9900"
+     },
+     "volume_fp": "4.00",
+     "yes_ask": {
+      "close_dollars": "1.0000",
+      "high_dollars": "1.0000",
+      "low_dollars": "1.0000",
+      "open_dollars": "1.0000"
+     },
+     "yes_bid": {
+      "close_dollars": "0.9900",
+      "high_dollars": "0.9900",
+      "low_dollars": "0.9900",
+      "open_dollars": "0.9900"
      }
     }
    ]
   ],
   "market_tickers": [
-   "KXDOTA2GAME-26NOV120700XEOLD-XE",
-   "KXDOTA2GAME-26NOV120700XEOLD-OLD"
+   "KXVALORANTGAME-26NOV120900NONSPE-NON",
+   "KXVALORANTGAME-26NOV120900NONSPE-SPE"
   ]
  }
 }
