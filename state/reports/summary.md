@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-15 15:09 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-15 15:14 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 749 | 65 | 684 | 241 | -$204.96 | -2.7% | -0.2c (740) | $795.04 |
+| model-only | Elo win model alone (control: ignores the market) | 749 | 64 | 685 | 242 | -$203.28 | -2.7% | -0.2c (740) | $796.72 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 1119 | 86 | 1033 | 678 | -$496.26 | -7.9% | -1.5c (1108) | $503.74 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -16,17 +16,17 @@ Each book started with $1,000 of fake money. ROI is P&L over money staked on set
 
 ## Forecast scoring on the matches the trader looked at
 
-2496 finished matches. Lower is better; the market line is the bar to beat.
+2497 finished matches. Lower is better; the market line is the bar to beat.
 
 | Forecast | Log loss | Brier |
 |---|---:|---:|
-| market | 0.5869 | 0.2021 |
+| market | 0.5871 | 0.2022 |
 | model | 0.6550 | 0.2318 |
-| blend | 0.5870 | 0.2023 |
+| blend | 0.5872 | 0.2023 |
 
 | Game | Matches | Market log loss | Model log loss |
 |---|---:|---:|---:|
-| cs2 | 1561 | 0.5963 | 0.6610 |
+| cs2 | 1562 | 0.5965 | 0.6610 |
 | dota2 | 445 | 0.5716 | 0.6466 |
 | valorant | 144 | 0.6185 | 0.6876 |
 | ow | 132 | 0.5132 | 0.5386 |
@@ -53,7 +53,7 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-15 10:53 | model-only | cs2 | Eternal Fire | 100 Thieves | YES Eternal Fire | 29 | 0.46 | 0.54 | 0.46 | open | - |
 | 2026-11-15 10:53 | model-only | cs2 | The Last Resort | Leo Team | NO Leo Team | 60 | 0.19 | 0.35 | 0.18 | won | $47.95 |
 | 2026-11-15 10:53 | model-only | dota2 | potn9ki | Xipto Esports | YES potn9ki | 34 | 0.20 | 0.24 | 0.17 | lost | -$7.19 |
-| 2026-11-15 10:23 | model-only | cs2 | G2 Ares | WW Team | YES G2 Ares | 3 | 0.42 | 0.53 | 0.41 | open | - |
+| 2026-11-15 10:23 | model-only | cs2 | G2 Ares | WW Team | YES G2 Ares | 3 | 0.42 | 0.53 | 0.41 | won | $1.68 |
 | 2026-11-15 08:53 | model-only | dota2 | GamerLegion | PARIVISION | YES GamerLegion | 101 | 0.13 | 0.37 | 0.12 | lost | -$13.93 |
 | 2026-11-15 08:53 | model-only | cs2 | Team cutierover | Team Jerry | NO Team Jerry | 4 | 0.30 | 0.55 | 0.30 | won | $2.74 |
 | 2026-11-15 07:52 | model-only | cs2 | The Chosen Few | NAVI Junior | NO NAVI Junior | 10 | 0.21 | 0.40 | 0.20 | lost | -$2.22 |
