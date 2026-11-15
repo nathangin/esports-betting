@@ -1,13 +1,13 @@
 # Esports paper trading (fake money)
 
-Updated 2026-11-15 08:38 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
+Updated 2026-11-15 08:53 UTC. Model fitted 2026-11-09T19:54. Every bet below is simulated: the trader only reads Kalshi's public market data and never places orders.
 
 ## Books
 
 | Book | What it does | Bets | Open | Settled | Won | P&L | ROI | Closing-line value | Equity |
 |---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | blend | model + market blend (the strategy under test) | 1 | 0 | 1 | 1 | $10.02 | +50.2% | +4.0c (1) | $1,010.02 |
-| model-only | Elo win model alone (control: ignores the market) | 733 | 62 | 671 | 233 | -$301.66 | -4.1% | -0.2c (720) | $698.34 |
+| model-only | Elo win model alone (control: ignores the market) | 735 | 64 | 671 | 233 | -$301.66 | -4.1% | -0.2c (725) | $698.34 |
 | favourite | 1% flat on the market favourite (no-skill baseline) | 1119 | 86 | 1033 | 678 | -$496.26 | -7.9% | -1.5c (1108) | $503.74 |
 
 Each book started with $1,000 of fake money. ROI is P&L over money staked on settled bets. Closing-line value is the market's probability of the backed team near the start minus the price paid (bets with a snapshot); it shows skill long before P&L can.
@@ -40,6 +40,8 @@ Prob is the book's probability that the backed team wins; Market is the market's
 
 | Placed (UTC) | Book | Game | Backs | vs | Side | Qty | Price | Prob | Market | Status | P&L |
 |---|---|---|---|---|---|---:|---:|---:|---:|---|---:|
+| 2026-11-15 08:53 | model-only | dota2 | GamerLegion | PARIVISION | YES GamerLegion | 101 | 0.13 | 0.37 | 0.12 | open | - |
+| 2026-11-15 08:53 | model-only | cs2 | Team cutierover | Team Jerry | NO Team Jerry | 4 | 0.30 | 0.55 | 0.30 | open | - |
 | 2026-11-15 07:52 | model-only | cs2 | The Chosen Few | NAVI Junior | NO NAVI Junior | 10 | 0.21 | 0.40 | 0.20 | open | - |
 | 2026-11-15 07:52 | model-only | cs2 | Virtus.pro | Hype Tech | NO Hype Tech | 1 | 0.63 | 0.69 | 0.63 | open | - |
 | 2026-11-15 07:52 | model-only | cs2 | FORZE Reload | PRIVATE | YES FORZE Reload | 34 | 0.39 | 0.52 | 0.39 | open | - |
@@ -63,8 +65,6 @@ Prob is the book's probability that the backed team wins; Market is the market's
 | 2026-11-14 10:50 | model-only | cs2 | ASTRON | ABT Esports | YES ASTRON | 1 | 0.47 | 0.55 | 0.45 | open | - |
 | 2026-11-14 09:20 | model-only | cs2 | FURIA | Team Falcons | NO Team Falcons | 22 | 0.52 | 0.57 | 0.52 | won | $10.17 |
 | 2026-11-14 08:50 | model-only | dota2 | Spirit Academy | Zero Tenacity | YES Spirit Academy | 26 | 0.50 | 0.59 | 0.51 | won | $12.54 |
-| 2026-11-14 07:50 | model-only | cs2 | KAMUI | eSuba | NO eSuba | 11 | 0.56 | 0.63 | 0.54 | won | $4.65 |
-| 2026-11-14 07:50 | model-only | cs2 | Balkan Outlaws | GenOne | YES Balkan Outlaws | 3 | 0.39 | 0.55 | 0.40 | won | $1.78 |
 
 ## Backtest on real Kalshi prices
 
